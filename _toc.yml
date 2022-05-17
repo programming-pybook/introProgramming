@@ -7,6 +7,6 @@ options:
   numbered: true
 chapters:
 # - file: markdown
-- file: notebooks
+# - file: notebooks
 - file: chapters/01_programs.ipynb
-- file: markdown-notebooks
+# - file: markdown-notebooks
