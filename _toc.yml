@@ -9,4 +9,5 @@ chapters:
 # - file: markdown
 # - file: notebooks
 - file: chapters/01_programs.ipynb
+- file: chapters/02_assignments.ipynb
 # - file: markdown-notebooks
