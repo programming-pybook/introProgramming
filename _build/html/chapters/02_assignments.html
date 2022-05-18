@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -51,11 +51,13 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="1. Programs" href="01_programs.html" />
+    <link rel="prev" title="1. Introduction" href="01_programs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -100,7 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_programs.html">
-   1. Programs
+   1. Introduction
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -285,7 +287,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Variables, expressions and assignments</h1>
+                <h1>Variables, expressions and assignments </h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -365,8 +367,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="variables-expressions-and-assignments">
-<h1><span class="section-number">2. </span>Variables, expressions and assignments<a class="headerlink" href="#variables-expressions-and-assignments" title="Permalink to this headline">¶</a></h1>
-<p>This Jupyter Notebook is based on Chapter 2 of the books Python for Everybody <span id="id1">[<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Sev16</a>]</span> and Think Python (Sections 5.1, 7.1, 7.2, and 5.12) <span id="id2">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
+<h1><span class="section-number">2. </span>Variables, expressions and assignments <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#variables-expressions-and-assignments" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="values-and-types">
 <h2><span class="section-number">2.1. </span>Values and Types<a class="headerlink" href="#values-and-types" title="Permalink to this headline">¶</a></h2>
 <p>A <strong>value</strong> is the basic unit used in a program. It may be, for instance, a number respresenting temperature. It may be a string representing a word.</p>
@@ -452,9 +453,15 @@ for future use.</p>
 </div>
 </div>
 <p>The example in the previous box contains three assignments. The first assign the value of the expression <code class="docutils literal notranslate"><span class="pre">40+2</span></code> to a new variable called <code class="docutils literal notranslate"><span class="pre">magicnumber</span></code>, the second assigns the value of π to the variable <code class="docutils literal notranslate"><span class="pre">pi</span></code>, and the last assignment assigns a string to the variable <code class="docutils literal notranslate"><span class="pre">message</span></code>.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>The type of the new variable is automatically derived from the expression in the left hand side. In contrast to other languages, Python does not offer a way of declaring the type of a variable explicitly. It may be good practice to add the types explicitly as comments.</p>
+</div>
+</div>
 <p>Programmers generally choose names for their variables that are meaningful—they document
 what the variable is used for.</p>
-<p><strong>[EXTRA]</strong> The type of the new variable is automatically derived from the expression in the left hand side. In contrast to other languages, Python does not offer a way of declaring the type of a variable explicitly. It may be good practice to add the types explicitly as comments.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">magicnumber</span> <span class="o">=</span> <span class="mi">40</span> <span class="o">+</span> <span class="mi">2</span>   <span class="c1"># An integer</span>
@@ -464,20 +471,22 @@ what the variable is used for.</p>
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Let's compute the volume of a cube if side $s = 5$. Remember that the volume of a cube is defined as $v = s^3$. Assign the value to a variable called `volume`.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Let’s compute the volume of a cube if side <span class="math notranslate nohighlight">\(s = 5\)</span>. Remember that the volume of a cube is defined as <span class="math notranslate nohighlight">\(v = s^3\)</span>. Assign the value to a variable called <code class="docutils literal notranslate"><span class="pre">volume</span></code>.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Well done! Now, why don't you print the result in a message? It can say something like "The volume of the cube of side 5 is $volume$".
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Well done! Now, why don’t you print the result in a message? It can say something like “The volume of the cube of side 5 is <span class="math notranslate nohighlight">\(volume\)</span>”.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -516,12 +525,16 @@ It is often used in names with multiple words, such as <code class="docutils lit
 <p>Some programmers prefer <code class="docutils literal notranslate"><span class="pre">doSomething</span></code>, others use <code class="docutils literal notranslate"><span class="pre">do_something</span></code>, and yet another group
 may use <code class="docutils literal notranslate"><span class="pre">dosomething</span></code>. It is important to be consistent in your naming convention, do not mix conventions, use the same naming convention for <em>variables</em> and <em>function names</em> (to be discuss later).</p>
 <p>If you use illegal variable names you will get a syntax error.</p>
-<p><strong>[EXTRA]</strong> If you are developing software in a team, which will be very likely in the future,
-it makes sense to agree upon a number of basic principles. One of them is the <strong>naming convention</strong> principle.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>If you are developing software in a team, which will be very likely in the future, it makes sense to agree upon a number of basic principles. One of them is the <strong>naming convention</strong> principle.</p>
+</div>
+</div>
 <p>These basic development principles are sometimes called <strong>architectural rules</strong>.
 By defining and agreeing upon architectural rules you make it easier for you and your fellow developers to understand and modify your code.</p>
-<p>If you want to read more on this, please have a look at <strong>Code complete</strong> a book by
-<strong>Steven McConnell</strong>.</p>
+<p>If you want to read more on this, please have a look at <strong>Code complete</strong> a book by <strong>Steven McConnell</strong> <span id="id2">[<a class="reference internal" href="../intro.html#id9" title="Steve McConnell. Code Complete, Second Edition. Microsoft Press, USA, 2004. ISBN 0735619670.">McConnell, 2004</a>]</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">99</span><span class="n">ballons</span> <span class="o">=</span> <span class="s1">&#39;Nena&#39;</span>
@@ -529,7 +542,7 @@ By defining and agreeing upon architectural rules you make it easier for you and
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_1182/72142339.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_11819/72142339.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
 <span class="g g-Whitespace">    </span><span class="mi">99</span><span class="n">ballons</span> <span class="o">=</span> <span class="s1">&#39;Nena&#39;</span>
       <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -673,18 +686,22 @@ with more than a few lines of code, it can be clumsy.</p>
 <p>Expressions may contain multiple operators.</p>
 <p>The order of evaluation depends on the <strong>priorities of the operators</strong> also known as <strong>rules of precedence</strong>.</p>
 <p>For mathematical operators, Python follows mathematical
-convention. The acronym PEMDAS is a useful way to remember the rules:</p>
+convention. The acronym <a class="reference external" href="https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-arithmetic-operations/cc-6th-order-of-operations/a/order-of-operations-review">PEMDAS</a> is a useful way to remember the rules:</p>
 <ul class="simple">
 <li><p><strong>Parentheses</strong> have the highest precedence and can be used to force an expression to evaluate in the order you want. Since expressions in parentheses are evaluated first, <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">(3</span> <span class="pre">-</span> <span class="pre">1)</span></code> is <code class="docutils literal notranslate"><span class="pre">4</span></code>, and <code class="docutils literal notranslate"><span class="pre">(1</span> <span class="pre">+</span> <span class="pre">1)**(5</span> <span class="pre">-</span> <span class="pre">2)</span></code> is <code class="docutils literal notranslate"><span class="pre">8</span></code>. You can also use parentheses to make an expression easier to read, even if it does not change the result.</p></li>
 <li><p><strong>Exponentiation</strong> has the next highest precedence, so <code class="docutils literal notranslate"><span class="pre">1</span> <span class="pre">+</span> <span class="pre">2**3</span></code> is <code class="docutils literal notranslate"><span class="pre">9</span></code>, not <code class="docutils literal notranslate"><span class="pre">27</span></code>, and <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">3**2</span></code> is <code class="docutils literal notranslate"><span class="pre">18</span></code>, not <code class="docutils literal notranslate"><span class="pre">36</span></code>.</p></li>
 <li><p><strong>Multiplication</strong> and <strong>Division</strong> have higher precedence than <strong>Addition</strong> and <strong>Subtraction</strong>. So <code class="docutils literal notranslate"><span class="pre">2</span> <span class="pre">*</span> <span class="pre">3</span> <span class="pre">-</span> <span class="pre">1</span></code> is <code class="docutils literal notranslate"><span class="pre">5</span></code>, not <code class="docutils literal notranslate"><span class="pre">4</span></code>, and <code class="docutils literal notranslate"><span class="pre">6</span> <span class="pre">+</span> <span class="pre">4</span> <span class="pre">/</span> <span class="pre">2</span></code> is <code class="docutils literal notranslate"><span class="pre">8</span></code>, not <code class="docutils literal notranslate"><span class="pre">5</span></code>.</p></li>
 <li><p>Operators with the same precedence are evaluated from left to right (except exponentiation). So in the expression <code class="docutils literal notranslate"><span class="pre">degrees</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">pi</span></code>, the division happens first and the result is multiplied by <code class="docutils literal notranslate"><span class="pre">pi</span></code>. To divide by 2π, you can use parentheses or write: <code class="docutils literal notranslate"><span class="pre">degrees</span> <span class="pre">/</span> <span class="pre">2</span> <span class="pre">/</span> <span class="pre">pi</span></code>.</p></li>
 </ul>
+<div class="margin admonition tip">
+<p class="admonition-title">Tip</p>
 <p>In case of doubt, <em>use parentheses!</em></p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Let's see what happens when we evaluate the previous expressions. Just run the cell to check the resulting value.
-</div><div class="cell docutils container">
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Let’s see what happens when we evaluate the previous expressions. Just run the cell to check the resulting value.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parentheses 1</span>
 <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> 
@@ -801,10 +818,11 @@ convention. The acronym PEMDAS is a useful way to remember the rules:</p>
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    You spoend around 225 minutes every week on programming activities. You want to know around how many hours you invest to this activity during a month. Use the $//$ operator to give the answer.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>You spoend around 225 minutes every week on programming activities. You want to know around how many hours you invest to this activity during a month. Use the <span class="math notranslate nohighlight">\(//\)</span> operator to give the answer.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -827,10 +845,11 @@ convention. The acronym PEMDAS is a useful way to remember the rules:</p>
 </div>
 <p>The modulus operator is more useful than it seems.</p>
 <p>For example, you can check whether one number is divisible by another—if <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">%</span> <span class="pre">y</span></code> is zero, then <code class="docutils literal notranslate"><span class="pre">x</span></code> is divisible by <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    A child asks you the time. You check your digital clock and it says 17. The child does not understand what it means. Can you tell him what hour it is by using a number between 1 and 12? Use the % operator to solve this problem.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>A child asks you the time. You check your digital clock and it says 17. The child does not understand what it means. Can you tell him what hour it is by using a number between 1 and 12? Use the % operator to solve this problem.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -888,10 +907,11 @@ convention. The acronym PEMDAS is a useful way to remember the rules:</p>
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Speedy Gonzales is a cartoon known to be the <i>fastest mouse in all Mexico</i>. He is also famous for saying "Arriba Arriba Andale Arriba Arriba Yepa". Can you use the following variables, namely <i>arriba</i>, <i>andale</i> and <i>yepa</i> to print the mentioned expression? Don't forget to use the string operators.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Speedy Gonzales is a cartoon known to be the <i>fastest mouse in all Mexico</i>. He is also famous for saying “Arriba Arriba Andale Arriba Arriba Yepa”. Can you use the following variables, namely <i>arriba</i>, <i>andale</i> and <i>yepa</i> to print the mentioned expression? Don’t forget to use the string operators.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arriba</span> <span class="o">=</span> <span class="s2">&quot;Arriba&quot;</span>
 <span class="n">andale</span> <span class="o">=</span> <span class="s2">&quot;Andale&quot;</span>
@@ -926,8 +946,13 @@ convention. The acronym PEMDAS is a useful way to remember the rules:</p>
 </div>
 </div>
 <p>You can also print a message to clarify the purpose of the required input as follows.</p>
-<p><strong>[EXTRA]</strong> The sequence <code class="docutils literal notranslate"><span class="pre">\n</span></code> at the end of the prompt represents a newline, which is a special character
-that causes a line break. That’s why the user’s input appears below the prompt.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>The sequence <code class="docutils literal notranslate"><span class="pre">\n</span></code> at the end of the prompt represents a newline, which is a special character that causes a line break. That’s why the user’s input appears below the prompt.</p>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">food</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your favourite food? </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
@@ -964,10 +989,11 @@ that causes a line break. That’s why the user’s input appears below the prom
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    We want to know the name of a user so we can display a welcome message in our program. The message should say something like "Hello $name$, welcome to our hello world program!".
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>We want to know the name of a user so we can display a welcome message in our program. The message should say something like “Hello <span class="math notranslate nohighlight">\(name\)</span>, welcome to our hello world program!”.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -1069,12 +1095,25 @@ b = 42
 </div>
 </div>
 </div>
-<p><strong>[EXTRA]</strong> Reassigning variables is useful but one should take care. It may hinder understandability of the software.</p>
-<p><strong>[EXTRA]</strong> As pointed out earlier, the type of the reassigned value does not need to have the same type of the original value.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    You have a variable <i>salary</i> that shows the weekly salary of an employee. However, you want to compute the monthly salary. Can you reassign the value to the <i>salary</i> variable according to the instruction?
-</div><div class="cell docutils container">
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Reassigning variables is useful but one should take care. It may hinder understandability of the software.</p>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>As pointed out earlier, the type of the reassigned value does not need to have the same type of the original value.</p>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>You have a variable <i>salary</i> that shows the weekly salary of an employee. However, you want to compute the monthly salary. Can you reassign the value to the <i>salary</i> variable according to the instruction?</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -1123,11 +1162,18 @@ b = 42
 </div>
 </div>
 <p>Before you can update a variable, you have to initialize it, usually with a simple assignment.</p>
-<p><strong>[EXTRA]</strong> It is a good practice whenever you <em>declare</em> a variable to initialize it and to add <em>comment</em> with the type of the variable.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Do you remeber the salary excercise of the previous section (cf. 13. Reassignments)? Well, if you have not done it yet, update the <i>salary</i> variable by using its previous value.
-</div><div class="cell docutils container">
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>It is a good practice whenever you <em>declare</em> a variable to initialize it and to add <em>comment</em> with the type of the variable.</p>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Do you remeber the salary excercise of the previous section (cf. 13. Reassignments)? Well, if you have not done it yet, update the <i>salary</i> variable by using its previous value.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -1171,6 +1217,12 @@ b = 42
 </div>
 </div>
 </div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 2 of the books Python for Everybody <span id="id3">[<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Severance, 2016</a>]</span> and Think Python (Sections 5.1, 7.1, 7.2, and 5.12) <span id="id4">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Downey, 2015</a>]</span>.</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -1203,7 +1255,7 @@ b = 42
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">1. </span>Programs</p>
+            <p class="prev-next-title"><span class="section-number">1. </span>Introduction</p>
         </div>
     </a>
 </div>
@@ -1213,9 +1265,7 @@ b = 42
     <footer class="footer">
   <p>
     
-      By Eindhoven University of Technology & Vrije Universiteit Amsterdam<br/>
-    
-        &copy; Copyright 2022.<br/>
+        &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
   </p>
 </footer>
 </main>

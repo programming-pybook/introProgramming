@@ -2,8 +2,8 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Introduction to Programming in Python
-author: Eindhoven University of Technology & Vrije Universiteit Amsterdam
-copyright: "2022" 
+author: 
+copyright: "2022. Eindhoven University of Technology & Vrije Universiteit Amsterdam" 
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
@@ -38,3 +38,8 @@ launch_buttons:
   # jupyterhub_url            : ""  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
   thebe                     : true  # Add a thebe button to pages (requires the repository to run on Binder)
   # colab_url                 : "" # The URL of Google Colab (https://colab.research.google.com)
+
+sphinx:
+  config:
+    bibtex_reference_style: author_year
+    language: en
