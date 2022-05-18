@@ -1,11 +1,11 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>1. Programs &#8212; Introduction to Programming in Python</title>
+    <title>1. Introduction &#8212; Introduction to Programming in Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -51,12 +51,14 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Variables, expressions and assignments" href="02_assignments.html" />
     <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="None">
+    <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
@@ -101,7 +103,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   1. Programs
+   1. Introduction
   </a>
  </li>
  <li class="toctree-l1">
@@ -217,50 +219,43 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-to-these-notebooks-a-class-anchor-id-introduction-a">
-   1.1. Introduction to These Notebooks
-   <a class="anchor" id="introduction">
-   </a>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-program-a-class-anchor-id-program-a">
-   1.2. What is a Program?
+   1.1. What is a Program?
    <a class="anchor" id="program">
    </a>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#interpreters-and-compilers-a-class-anchor-id-interpreters-compilers-a">
-   1.3. Interpreters and Compilers
+   1.2. Interpreters and Compilers
    <a class="anchor" id="interpreters-compilers">
    </a>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#running-python-a-class-anchor-id-python-a">
-   1.4. Running Python
+   1.3. Running Python
    <a class="anchor" id="python">
    </a>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#our-first-program-a-class-anchor-id-first-program-a">
-   1.5. Our First Program
+   1.4. Our First Program
    <a class="anchor" id="first-program">
    </a>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arithmetic-operators-a-class-anchor-id-arithmetic-operators-a">
-   1.6. Arithmetic Operators
+   1.5. Arithmetic Operators
    <a class="anchor" id="arithmetic-operators">
    </a>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-can-go-wrong-a-class-anchor-id-wrong-a">
-   1.7. What Can Go Wrong
+   1.6. What Can Go Wrong
    <a class="anchor" id="wrong">
    </a>
   </a>
@@ -275,7 +270,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Programs</h1>
+                <h1>Introduction</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -286,50 +281,43 @@ const thebe_selector_output = ".output, .cell_output"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduction-to-these-notebooks-a-class-anchor-id-introduction-a">
-   1.1. Introduction to These Notebooks
-   <a class="anchor" id="introduction">
-   </a>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-program-a-class-anchor-id-program-a">
-   1.2. What is a Program?
+   1.1. What is a Program?
    <a class="anchor" id="program">
    </a>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#interpreters-and-compilers-a-class-anchor-id-interpreters-compilers-a">
-   1.3. Interpreters and Compilers
+   1.2. Interpreters and Compilers
    <a class="anchor" id="interpreters-compilers">
    </a>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#running-python-a-class-anchor-id-python-a">
-   1.4. Running Python
+   1.3. Running Python
    <a class="anchor" id="python">
    </a>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#our-first-program-a-class-anchor-id-first-program-a">
-   1.5. Our First Program
+   1.4. Our First Program
    <a class="anchor" id="first-program">
    </a>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#arithmetic-operators-a-class-anchor-id-arithmetic-operators-a">
-   1.6. Arithmetic Operators
+   1.5. Arithmetic Operators
    <a class="anchor" id="arithmetic-operators">
    </a>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-can-go-wrong-a-class-anchor-id-wrong-a">
-   1.7. What Can Go Wrong
+   1.6. What Can Go Wrong
    <a class="anchor" id="wrong">
    </a>
   </a>
@@ -343,29 +331,24 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="programs">
-<h1><span class="section-number">1. </span>Programs<a class="headerlink" href="#programs" title="Permalink to this headline">¶</a></h1>
-<p>This Jupyter Notebook is based on Chapter 1 of the books Python for Everybody <span id="id1">[<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Sev16</a>]</span> and Think Python <span id="id2">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
-<div class="section" id="introduction-to-these-notebooks-a-class-anchor-id-introduction-a">
-<h2><span class="section-number">1.1. </span>Introduction to These Notebooks <a class="anchor" id="introduction"></a><a class="headerlink" href="#introduction-to-these-notebooks-a-class-anchor-id-introduction-a" title="Permalink to this headline">¶</a></h2>
-<p>This file is a Jupyter notebook.
-Its content is organized to accompany the books <strong>Python for Everybody</strong> by Charles Severance and <strong>Think Python (2nd edition)</strong> by <strong>Allen Downey</strong>.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
+<h1><span class="section-number">1. </span>Introduction<a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<!-- ## Introduction to These Lecture Notes <a class="anchor" id="introduction"></a> -->
+<p>The content of these notes is organized to accompany the books <strong>Python for Everybody</strong> by Charles Severance<span id="id2">[<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Severance, 2016</a>]</span> and <strong>Think Python (2nd edition)</strong> by <strong>Allen Downey</strong><span id="id3">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Downey, 2015</a>]</span>.</p>
 <p>The code fragments have mostly been taken from the books and adapted in some cases.</p>
-<p>We will use <strong>Jupyter</strong> Notebooks in JBI010 (Programming for Data Science).</p>
+<p><strike>We will use <strong>Jupyter</strong> Notebooks in JBI010 (Programming for Data Science</strike></p>
 <p>You are encouraged to <strong>play along</strong> in this file as you read the book. The more you practice programming the better your skills will become!</p>
-<p>To evaluate a cell, select it by clicking on it, and then click the <em>Run cell</em> button in the toolbar at the top,
-or press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code>.</p>
-<p>If this is your first use of Jupyter, then take the <strong>User Interface Tour</strong>
+<p>To evaluate a cell, select it by clicking on it, and then click the <em>Run</em> button below the code cell, or press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> within the cell.</p>
+<p><strike>If this is your first use of Jupyter, then take the <strong>User Interface Tour</strong>
 (see the Help menu).
-See <em>Help &gt; Notebook Help</em> for more details, such as how to format Markdown cells.</p>
-<p>To find out about <strong>keyboard shortcuts</strong> for Jupyter commands,
+See <em>Help &gt; Notebook Help</em> for more details, such as how to format Markdown cells.</strike></p>
+<p><strike>To find out about <strong>keyboard shortcuts</strong> for Jupyter commands,
 see <em>Help &gt; Keyboard</em> Shortcuts.
 Pressing <code class="docutils literal notranslate"><span class="pre">Cmd</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">P</span></code> (MacOS) / <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">P</span></code> (Windows, Linux)
-shows an overview of all commands.</p>
+shows an overview of all commands.</strike></p>
 <p>Occasionally, we have added a bit of extra information. This is marked as <strong>[EXTRA]</strong>.</p>
-</div>
 <div class="section" id="what-is-a-program-a-class-anchor-id-program-a">
-<h2><span class="section-number">1.2. </span>What is a Program? <a class="anchor" id="program"></a><a class="headerlink" href="#what-is-a-program-a-class-anchor-id-program-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.1. </span>What is a Program? <a class="anchor" id="program"></a><a class="headerlink" href="#what-is-a-program-a-class-anchor-id-program-a" title="Permalink to this headline">¶</a></h2>
 <p>A program is a sequence of instructions to perform a computation, such as finding a name in a database,
 drawing a picture, etc.</p>
 <p>Programming is part of <strong>Software Engineering</strong>. Software Engineering is the discipline of solving
@@ -381,26 +364,39 @@ about every language:</p>
 <p>There is a lot more to tell about Software Engineering but for the moment this is suffient. Actually, Software Engineering is an entire research field and most of the people educated at universities will become software engineers in the future careers.</p>
 </div>
 <div class="section" id="interpreters-and-compilers-a-class-anchor-id-interpreters-compilers-a">
-<h2><span class="section-number">1.3. </span>Interpreters and Compilers <a class="anchor" id="interpreters-compilers"></a><a class="headerlink" href="#interpreters-and-compilers-a-class-anchor-id-interpreters-compilers-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.2. </span>Interpreters and Compilers <a class="anchor" id="interpreters-compilers"></a><a class="headerlink" href="#interpreters-and-compilers-a-class-anchor-id-interpreters-compilers-a" title="Permalink to this headline">¶</a></h2>
 <p>Computers only understand machine language. This language is written exclusively in zeros and ones, so it looks somehow like this:</p>
-<p>0011101000111010<br />
-1011010100001010</p>
-<p>It is cumbersome for programmers to write programs in such language. That is why we need translators that map <em>high-level laguages</em> like Python to machine language. A high-level language is a programming language designed to be used by humans in an intuitive way. These translators can be either <em>interpreters</em> or <em>compilers</em>.</p>
+<p style="text-align: center;">
+0011101000111010  
+1011010100001010
+</p><p>It is cumbersome for programmers to write programs in such language. That is why we need translators that map <em>high-level laguages</em> like Python to machine language. A high-level language is a programming language designed to be used by humans in an intuitive way. These translators can be either <em>interpreters</em> or <em>compilers</em>.</p>
 <p><strong>interpreter:</strong> it reads the source code of a program written by a human, parses it and translates it on the fly. Python is an example of an interpreter.</p>
 <p><strong>compiler:</strong> it takes the whole program written in a high-level language and translates it into machine language. This translation is saved in an independent file that can be later used for execution. An executable file is usually labelled with the <em>.exe</em> or <em>.dll</em> extensions in Windows. There is no unique suffix for Mac or Linux. If you open a file like this in a text editor it will look somehow like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>äE�Lâ˜ËÙìJ�Hã{(HÖˇtæË*íJ�Î∑LâΩ˚ˇˇHãΩ˚ˇˇËíJ�ÉΩà˝ˇˇÖ0��HãΩ®˝ˇˇË,íJ�H«Ö˚ˇˇ����H∏����ˇˇˇˇHâÖ˚ˇˇ1ˆ1“LâÔË‘∂ˇˇHãÖ†˝ˇˇLãpXMÖˆttAˇunIã~@HÖˇt	Iâ~HË≤ëJ�Mã~ MÖˇt9IãF(L9¯t$HçX–HãxËHÖˇt	HâxËäëJ�HâÿI9ﬂu‚Iã~ ÎLâˇMâ~(ËpëJ�Iã~HÖˇt	Iâ~Ë^ëJ�Lâ˜ËVëJ�foÖ˚ˇˇHãÖ†˝ˇˇÛ@XfÔ…ÛHhHâ«HÉ«xfI~∆1ˆ1“ËûπˇˇMÖˆttAˇunIã~@HÖˇt	Iâ~HËëJ�Mã~ MÖˇt9IãF(L9¯t$HçX–HãxËHÖˇt	HâxËﬂêJ�HâÿI9ﬂu‚Iã~ ÎLâˇMâ~(Ë≈êJ�Iã~HÖˇt	Iâ~Ë≥êJ�Lâ˜Ë´êJ�Ë÷êJ�Lã≠x˝ˇˇHãù0˝ˇˇLãΩÄ˝ˇˇÈÅﬂˇˇHãµx˝ˇˇË ≈ˇˇH9¬LãΩ–¸ˇˇLã≠p˝ˇˇÜô���Hâ”Lçµ˚ˇˇfÑ�����HâÖ˚ˇˇHâù˚ˇˇIãEHâÖ ˚ˇˇH«Ö(˚ˇˇ����IãGI;Gt2Hãç(˚ˇˇHâHHãç ˚ˇˇHâHHãç˚ˇˇHãï˚ˇˇHâPHâIÉG Î
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+äE�Lâ˜ËÙìJ�Hã{(HÖˇtæË*íJ�Î∑LâΩ˚ˇˇHãΩ˚ˇˇËíJ�ÉΩà˝ˇˇÖ0��HãΩ®˝ˇˇË,íJ�H«Ö˚ˇˇ����H∏����ˇˇˇˇHâÖ˚ˇˇ1ˆ1“LâÔË‘∂ˇˇHãÖ†˝ˇˇLãpXMÖˆttAˇunIã~@HÖˇt	Iâ~HË≤ëJ�Mã~ MÖˇt9IãF(L9¯t$HçX–HãxËHÖˇt	HâxËäëJ�HâÿI9ﬂu‚Iã~ ÎLâˇMâ~(ËpëJ�Iã~HÖˇt	Iâ~Ë^ëJ�Lâ˜ËVëJ�foÖ˚ˇˇHãÖ†˝ˇˇÛ@XfÔ…ÛHhHâ«HÉ«xfI~∆1ˆ1“ËûπˇˇMÖˆttAˇunIã~@HÖˇt	Iâ~HËëJ�Mã~ MÖˇt9IãF(L9¯t$HçX–HãxËHÖˇt	HâxËﬂêJ�HâÿI9ﬂu‚Iã~ ÎLâˇMâ~(Ë≈êJ�Iã~HÖˇt	Iâ~Ë≥êJ�Lâ˜Ë´êJ�Ë÷êJ�Lã≠x˝ˇˇHãù0˝ˇˇLãΩÄ˝ˇˇÈÅﬂˇˇHãµx˝ˇˇË ≈ˇˇH9¬LãΩ–¸ˇˇLã≠p˝ˇˇÜô���Hâ”Lçµ˚ˇˇfÑ�����HâÖ˚ˇˇHâù˚ˇˇIãEHâÖ ˚ˇˇH«Ö(˚ˇˇ����IãGI;Gt2Hãç(˚ˇˇHâHHãç ˚ˇˇHâHHãç˚ˇˇHãï˚ˇˇHâPHâIÉG Î
+
 
 </pre></div>
 </div>
 </div>
 <div class="section" id="running-python-a-class-anchor-id-python-a">
-<h2><span class="section-number">1.4. </span>Running Python <a class="anchor" id="python"></a><a class="headerlink" href="#running-python-a-class-anchor-id-python-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.3. </span>Running Python <a class="anchor" id="python"></a><a class="headerlink" href="#running-python-a-class-anchor-id-python-a" title="Permalink to this headline">¶</a></h2>
 <p><strong>Installation of Python</strong></p>
-<p>For the installation and testing of the installation see Assignment Week 1.</p>
+<p><strike>For the installation and testing of the installation see Assignment Week 1.</strike></p>
+<div class="attention admonition">
+<p class="admonition-title">TODO</p>
+<p>Include this to the book</p>
+</div>
 <p><strong>Running Python</strong></p>
 <p>The Python interpreter is a program that reads and executes Python code.</p>
 <p>The Python interpreter can be used to evaluate simple expressions as well.</p>
-<p><strong>[EXTRA]</strong> Place the cursor in a cell, for instance the cell after the next one, and click the <em>Run cell</em> button in the toolbar, or press <code class="docutils literal notranslate"><span class="pre">Shift+Enter</span></code></p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Place the cursor in a cell, for instance the cell on the left, and click the <em>Run</em> button, or press <code class="docutils literal notranslate"><span class="pre">Shift+Enter</span></code>.</p>
+</div>
+</div>
 <p>How fast can you calculate the value of the expression in the cell below? And what is the value?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -429,7 +425,7 @@ about every language:</p>
 </div>
 </div>
 <div class="section" id="our-first-program-a-class-anchor-id-first-program-a">
-<h2><span class="section-number">1.5. </span>Our First Program <a class="anchor" id="first-program"></a><a class="headerlink" href="#our-first-program-a-class-anchor-id-first-program-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.4. </span>Our First Program <a class="anchor" id="first-program"></a><a class="headerlink" href="#our-first-program-a-class-anchor-id-first-program-a" title="Permalink to this headline">¶</a></h2>
 <p><strong>A program is more than just a list of instructions.</strong></p>
 <p>A program is a list of <em>instructions</em> or, sometimes also called <em>statements</em> to instruct the computer how to perform a calculation.</p>
 <p>The first statement you normally write is “Hello World!”, however I took the liberty to change this boring first program a bit.</p>
@@ -445,9 +441,14 @@ about every language:</p>
 </div>
 </div>
 </div>
-<p><strong>[EXTRA]</strong>
-Actually, in a Jupyter notebook, you do not need to use <code class="docutils literal notranslate"><span class="pre">print</span></code> to see the value of an expression (when it appears at the end of the cell).
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>In Jupyter notebooks, you do not need to use <code class="docutils literal notranslate"><span class="pre">print</span></code> to see the value of an expression (when it appears at the end of the cell).
 In the remainder, we will often omit <code class="docutils literal notranslate"><span class="pre">print</span></code> when playing with expressions (or variables).</p>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello Data Scientists!&quot;</span>
@@ -460,10 +461,11 @@ In the remainder, we will often omit <code class="docutils literal notranslate">
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Can you print the text "Hello Programming!"?
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Can you print the text “Hello Programming!”?</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -472,7 +474,7 @@ In the remainder, we will often omit <code class="docutils literal notranslate">
 </div>
 </div>
 <div class="section" id="arithmetic-operators-a-class-anchor-id-arithmetic-operators-a">
-<h2><span class="section-number">1.6. </span>Arithmetic Operators <a class="anchor" id="arithmetic-operators"></a><a class="headerlink" href="#arithmetic-operators-a-class-anchor-id-arithmetic-operators-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.5. </span>Arithmetic Operators <a class="anchor" id="arithmetic-operators"></a><a class="headerlink" href="#arithmetic-operators-a-class-anchor-id-arithmetic-operators-a" title="Permalink to this headline">¶</a></h2>
 <p>The fact that Python interprets its programs allows us to immediately execute Python statements/expressions, such as the print statement for “Hello Data Scientists!”.</p>
 <p>The arithmetic operators <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code> perform addition, subtraction, and multiplication, as demonstrated in the following cells.</p>
 <div class="cell docutils container">
@@ -523,10 +525,11 @@ In the remainder, we will often omit <code class="docutils literal notranslate">
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Can you add 40 to 25, then multiply it by 2, and finally substracting 5? 
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Can you add 40 to 25, then multiply it by 2, and finally substracting 5?</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -584,10 +587,11 @@ The operator <code class="docutils literal notranslate"><span class="pre">/</spa
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Let's compute the area of a circle of radius $r = 10$. Remember that the area of a circle is computed as $a = \pi r^2$.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Let’s compute the area of a circle of radius <span class="math notranslate nohighlight">\(r = 10\)</span>. Remember that the area of a circle is computed as <span class="math notranslate nohighlight">\(a = \pi r^2\)</span>.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -596,7 +600,7 @@ The operator <code class="docutils literal notranslate"><span class="pre">/</spa
 </div>
 </div>
 <div class="section" id="what-can-go-wrong-a-class-anchor-id-wrong-a">
-<h2><span class="section-number">1.7. </span>What Can Go Wrong <a class="anchor" id="wrong"></a><a class="headerlink" href="#what-can-go-wrong-a-class-anchor-id-wrong-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">1.6. </span>What Can Go Wrong <a class="anchor" id="wrong"></a><a class="headerlink" href="#what-can-go-wrong-a-class-anchor-id-wrong-a" title="Permalink to this headline">¶</a></h2>
 <p>While writing your program you will introduce errors, and it is completely normal. However, it will be easier to fix them if you know the three types of errors that you will find.</p>
 <p><strong>syntax errors:</strong> “Syntax” refers to the structure of a program and the rules about that structure. For example, in English the construct “She all night” has a syntax error because there is no verb that completes the sentence. To fix this issue you should add a verb like “She studies all night”. Now, if you run the following cell you will get a syntax error in Python.</p>
 <div class="cell docutils container">
@@ -606,7 +610,7 @@ The operator <code class="docutils literal notranslate"><span class="pre">/</spa
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_1177/1147586275.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_11811/1147586275.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello Data Scientists!&#39;</span>
                                   <span class="o">^</span>
 <span class="ne">SyntaxError</span>: unexpected EOF while parsing
@@ -630,10 +634,19 @@ The operator <code class="docutils literal notranslate"><span class="pre">/</spa
 <p><strong>Logic errors:</strong> they appear when there is an invalid order in your program. For instance, in English the construct “She sleeps, goes to bed, and takes a shower” has logic errors. It would make more sense if we say “She takes a shower, goes to bed, and sleeps”.</p>
 <p><strong>Semantic errors:</strong> “Semantic” refers to meaning. These errors appear when the program does not do what it is supposed to do. If there is a semantic error in your program, it will run without generating error
 messages, but it will not do the right thing. It will do something else. Specifically, it will do what you told it to do. For example, you compute the addition between two numbers but the program was supposed to compute the difference.</p>
-<p><strong>[EXTRA]</strong> Semantic errors are often related to not fully understanding the problem.</p>
-<p>An important step in developing software is the <strong>requirements engineering</strong>, identifying
-the problem of a customer.</p>
-<p>Sometimes this is also formulated as: “Building the software right vs building the right software”.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Semantic errors are often related to not fully understanding the problem.</p>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 1 of the books Python for Everybody by <span id="id4">Severance [<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">2016</a>]</span> and Think Python by <span id="id5">Downey [<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">2015</a>]</span>.</p>
+</dd>
+</dl>
 </div>
 </div>
 
@@ -672,7 +685,7 @@ the problem of a customer.</p>
     <a class='right-next' id="next-link" href="02_assignments.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Variables, expressions and assignments</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Variables, expressions and assignments </p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -683,9 +696,7 @@ the problem of a customer.</p>
     <footer class="footer">
   <p>
     
-      By Eindhoven University of Technology & Vrije Universiteit Amsterdam<br/>
-    
-        &copy; Copyright 2022.<br/>
+        &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
   </p>
 </footer>
 </main>
