@@ -1,4 +1,4 @@
-# Welcome to your Jupyter Book
+# Introduction to Programming in Python
 
 This is a small sample book to give you a feel for how book content is
 structured.
