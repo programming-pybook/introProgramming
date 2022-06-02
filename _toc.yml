@@ -10,4 +10,5 @@ chapters:
 # - file: notebooks
 - file: chapters/01_programs.ipynb
 - file: chapters/02_assignments.ipynb
+- file: chapters/03_conditionals_iteration.ipynb
 # - file: markdown-notebooks
