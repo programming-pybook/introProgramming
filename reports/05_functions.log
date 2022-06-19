@@ -17,13 +17,14 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-99ballons = 'Nena'
+int('Integer')
 ------------------
 
-[0;36m  File [0;32m"/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_8753/72142339.py"[0;36m, line [0;32m1[0m
-[0;31m    99ballons = 'Nena'[0m
-[0m      ^[0m
-[0;31mSyntaxError[0m[0;31m:[0m invalid syntax
-
-SyntaxError: invalid syntax (72142339.py, line 1)
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mValueError[0m                                Traceback (most recent call last)
+[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_8791/2182709609.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mint[0m[0;34m([0m[0;34m'Integer'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m
+[0;31mValueError[0m: invalid literal for int() with base 10: 'Integer'
+ValueError: invalid literal for int() with base 10: 'Integer'
 

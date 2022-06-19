@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Computational Thinking &#8212; Introduction to Programming in Python</title>
+    <title>4. Computational Thinking &#8212; Introduction to Programming in Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,6 +55,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Functions" href="05_functions.html" />
+    <link rel="prev" title="3. Conditionals and Iteration" href="03_conditionals_iteration.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -98,7 +100,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_programs.html">
    1. Introduction
@@ -112,6 +114,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="03_conditionals_iteration.html">
    3. Conditionals and Iteration
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   4. Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_functions.html">
+   5. Functions
   </a>
  </li>
 </ul>
@@ -221,170 +233,146 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Computational Thinking
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logic-a-class-anchor-id-logic-a">
+   4.1. Logic
+   <a class="anchor" id="logic">
+   </a>
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#table-of-contents">
-     Table of Contents
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction-a-class-anchor-id-introduction-a">
-     1. Introduction
-     <a class="anchor" id="introduction">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#logic-a-class-anchor-id-logic-a">
-     2. Logic
-     <a class="anchor" id="logic">
-     </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-of-arguments">
+     4.1.1. Types of Arguments
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#types-of-arguments">
-       Types of Arguments
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deductive-arguments">
+       4.1.1.1. Deductive Arguments
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#deductive-arguments">
-         Deductive Arguments
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#inductive-arguments">
-         Inductive Arguments
-        </a>
-       </li>
-      </ul>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#boolean-logic">
-       Boolean Logic
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inductive-arguments">
+       4.1.1.2. Inductive Arguments
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#logical-operators">
-         Logical Operators
-        </a>
-       </li>
-      </ul>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#algorithms-a-class-anchor-id-algorithms-a">
-     3. Algorithms
-     <a class="anchor" id="algorithms">
-     </a>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boolean-logic">
+     4.1.2. Boolean Logic
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#appeltaart-algorithm">
-       Appeltaart Algorithm
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#problem">
-         Problem
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#inputs-ingredients">
-         Inputs (Ingredients)
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#output-dish">
-         Output (Dish)
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#algorithm-recipe">
-         Algorithm (Recipe)
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#language">
-       Language
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#programming-languages">
-         Programming Languages
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#the-zen-of-python">
-         The Zen of Python
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#decomposition-a-class-anchor-id-decomposition-a">
-     4. Decomposition
-     <a class="anchor" id="decomposition">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#abstraction-generalization-a-class-anchor-id-generalisation-a">
-     5. Abstraction &amp; Generalization
-     <a class="anchor" id="generalisation">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelling-a-class-anchor-id-modelling-a">
-     6. Modelling
-     <a class="anchor" id="modelling">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-alice-s-adventures-in-wonderland-a-class-anchor-id-alicia-a">
-     7. Example: Alice’s Adventures in Wonderland
-     <a class="anchor" id="alicia">
-     </a>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#understanding-the-problem">
-       Understanding the Problem
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#identifying-the-inputs">
-       Identifying the Inputs
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#identifying-the-expected-output">
-       Identifying the Expected Output
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#designing-the-algorithm">
-       Designing the Algorithm
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#logical-operators">
+       4.1.2.1. Logical Operators
       </a>
      </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#end-of-notebook">
-   (End of Notebook)
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithms-a-class-anchor-id-algorithms-a">
+   4.2. Algorithms
+   <a class="anchor" id="algorithms">
+   </a>
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#appeltaart-algorithm">
+     4.2.1. Appeltaart Algorithm
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem">
+       4.2.1.1. Problem
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inputs-ingredients">
+       4.2.1.2. Inputs (Ingredients)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#output-dish">
+       4.2.1.3. Output (Dish)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#algorithm-recipe">
+       4.2.1.4. Algorithm (Recipe)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#language">
+     4.2.2. Language
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#programming-languages">
+       4.2.2.1. Programming Languages
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-zen-of-python">
+       4.2.2.2. The Zen of Python
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decomposition-a-class-anchor-id-decomposition-a">
+   4.3. Decomposition
+   <a class="anchor" id="decomposition">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstraction-generalization-a-class-anchor-id-generalisation-a">
+   4.4. Abstraction &amp; Generalization
+   <a class="anchor" id="generalisation">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-a-class-anchor-id-modelling-a">
+   4.5. Modelling
+   <a class="anchor" id="modelling">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-alice-s-adventures-in-wonderland-a-class-anchor-id-alicia-a">
+   4.6. Example: Alice’s Adventures in Wonderland
+   <a class="anchor" id="alicia">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#understanding-the-problem">
+     4.6.1. Understanding the Problem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identifying-the-inputs">
+     4.6.2. Identifying the Inputs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identifying-the-expected-output">
+     4.6.3. Identifying the Expected Output
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#designing-the-algorithm">
+     4.6.4. Designing the Algorithm
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -396,7 +384,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Computational Thinking</h1>
+                <h1>Computational Thinking </h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -406,170 +394,146 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   Computational Thinking
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logic-a-class-anchor-id-logic-a">
+   4.1. Logic
+   <a class="anchor" id="logic">
+   </a>
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#table-of-contents">
-     Table of Contents
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction-a-class-anchor-id-introduction-a">
-     1. Introduction
-     <a class="anchor" id="introduction">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#logic-a-class-anchor-id-logic-a">
-     2. Logic
-     <a class="anchor" id="logic">
-     </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-of-arguments">
+     4.1.1. Types of Arguments
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#types-of-arguments">
-       Types of Arguments
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#deductive-arguments">
+       4.1.1.1. Deductive Arguments
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#deductive-arguments">
-         Deductive Arguments
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#inductive-arguments">
-         Inductive Arguments
-        </a>
-       </li>
-      </ul>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#boolean-logic">
-       Boolean Logic
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inductive-arguments">
+       4.1.1.2. Inductive Arguments
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#logical-operators">
-         Logical Operators
-        </a>
-       </li>
-      </ul>
      </li>
     </ul>
    </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#algorithms-a-class-anchor-id-algorithms-a">
-     3. Algorithms
-     <a class="anchor" id="algorithms">
-     </a>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#boolean-logic">
+     4.1.2. Boolean Logic
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#appeltaart-algorithm">
-       Appeltaart Algorithm
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#problem">
-         Problem
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#inputs-ingredients">
-         Inputs (Ingredients)
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#output-dish">
-         Output (Dish)
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#algorithm-recipe">
-         Algorithm (Recipe)
-        </a>
-       </li>
-      </ul>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#language">
-       Language
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#programming-languages">
-         Programming Languages
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#the-zen-of-python">
-         The Zen of Python
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#decomposition-a-class-anchor-id-decomposition-a">
-     4. Decomposition
-     <a class="anchor" id="decomposition">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#abstraction-generalization-a-class-anchor-id-generalisation-a">
-     5. Abstraction &amp; Generalization
-     <a class="anchor" id="generalisation">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#modelling-a-class-anchor-id-modelling-a">
-     6. Modelling
-     <a class="anchor" id="modelling">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example-alice-s-adventures-in-wonderland-a-class-anchor-id-alicia-a">
-     7. Example: Alice’s Adventures in Wonderland
-     <a class="anchor" id="alicia">
-     </a>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#understanding-the-problem">
-       Understanding the Problem
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#identifying-the-inputs">
-       Identifying the Inputs
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#identifying-the-expected-output">
-       Identifying the Expected Output
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#designing-the-algorithm">
-       Designing the Algorithm
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#logical-operators">
+       4.1.2.1. Logical Operators
       </a>
      </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#end-of-notebook">
-   (End of Notebook)
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#algorithms-a-class-anchor-id-algorithms-a">
+   4.2. Algorithms
+   <a class="anchor" id="algorithms">
+   </a>
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#appeltaart-algorithm">
+     4.2.1. Appeltaart Algorithm
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem">
+       4.2.1.1. Problem
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#inputs-ingredients">
+       4.2.1.2. Inputs (Ingredients)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#output-dish">
+       4.2.1.3. Output (Dish)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#algorithm-recipe">
+       4.2.1.4. Algorithm (Recipe)
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#language">
+     4.2.2. Language
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#programming-languages">
+       4.2.2.1. Programming Languages
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#the-zen-of-python">
+       4.2.2.2. The Zen of Python
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decomposition-a-class-anchor-id-decomposition-a">
+   4.3. Decomposition
+   <a class="anchor" id="decomposition">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#abstraction-generalization-a-class-anchor-id-generalisation-a">
+   4.4. Abstraction &amp; Generalization
+   <a class="anchor" id="generalisation">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modelling-a-class-anchor-id-modelling-a">
+   4.5. Modelling
+   <a class="anchor" id="modelling">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-alice-s-adventures-in-wonderland-a-class-anchor-id-alicia-a">
+   4.6. Example: Alice’s Adventures in Wonderland
+   <a class="anchor" id="alicia">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#understanding-the-problem">
+     4.6.1. Understanding the Problem
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identifying-the-inputs">
+     4.6.2. Identifying the Inputs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#identifying-the-expected-output">
+     4.6.3. Identifying the Expected Output
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#designing-the-algorithm">
+     4.6.4. Designing the Algorithm
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -581,23 +545,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="computational-thinking">
-<h1>Computational Thinking<a class="headerlink" href="#computational-thinking" title="Permalink to this headline">¶</a></h1>
-<p>This Jupyter Notebook is based on Chapter 1 of the book “Computational Thinking: A Beginner’s Guide to Problem-solving” by Karl Beecher and Chapter 1, 8, and 10 of the book “Once Upon an Algorithm” by Martin Erwig.</p>
-<p><em>(c) 2021, Lina Ochoa Venegas, Eindhoven University of Technology</em></p>
-<div class="section" id="table-of-contents">
-<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="#introduction">1. Introduction</a></p></li>
-<li><p><a class="reference external" href="#logic">2. Logic</a></p></li>
-<li><p><a class="reference external" href="#algorithms">3. Algorithms</a></p></li>
-<li><p><a class="reference external" href="#decomposition">4. Decomposition</a></p></li>
-<li><p><a class="reference external" href="#generalisation">5. Abstraction &amp; Generalisation</a></p></li>
-<li><p><a class="reference external" href="#modelling">6. Modelling</a></p></li>
-<li><p><a class="reference external" href="#alicia">7. Example: Alice’s Adventures in Wonderland</a></p></li>
-</ul>
-</div>
-<div class="section" id="introduction-a-class-anchor-id-introduction-a">
-<h2>1. Introduction <a class="anchor" id="introduction"></a><a class="headerlink" href="#introduction-a-class-anchor-id-introduction-a" title="Permalink to this headline">¶</a></h2>
+<h1><span class="section-number">4. </span>Computational Thinking <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#computational-thinking" title="Permalink to this headline">¶</a></h1>
 <p>Finding the one definition of <strong>Computational Thinking (CT)</strong> is a task doomed to failure, mainly because it is hard to have a consensus on what CT means to everyone. To ease the communication and have a shared meaning, we consider CT as an approach to “solve problems using computers as tools” (Beecher, 2017). Notice that CT is not exclusively considered in computer science. On the contrary, CT impacts a wide range of subject areas such as mathematics, engineering, and science in general.</p>
 <p>There is a misunderstanding regarding the relationship between CT, computer science, and programming. Some people use them interchangeably, but the three terms are not equivalent. <strong>Computer science</strong> aims at building and understanding the principles of mathematical computation; while <strong>programming</strong>–which happens to be a subfield of computer science–focuses on high-quality program writing. Although the three terms are related and might intersect in many points, CT should be seen as a <em>method of problem-solving</em> that is frequently (but not exclusively) used in programming. In essence, problem-solving is a <em>creative</em> process.</p>
 <p>Some of the core concepts behind CT are:</p>
@@ -610,13 +558,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Modeling</p></li>
 </ul>
 <p>Hereafter, we will explore what these concepts mean and how they can help you when solving a problem.</p>
-<div class="alert alert-info">
-    <b>Computational thinking</b><br>
-    <q>Computational thinking is an approach to problem-solving that involves using a set of practices and principles from computer science to formulate a solution that’s executable by a computer.</q> (Beecher, 2017)
-</div></div>
+<div class="alert alert-info admonition">
+<p class="admonition-title">Computational thinking</p>
+<p>Computational thinking is an approach to problem-solving that involves using a set of practices and principles from computer science to formulate a solution that’s executable by a computer. <span id="id2">[<a class="reference internal" href="../intro.html#id10" title="Karl Beecher. Computational Thinking: A Beginner’s Guide to Problem-solving. BCS Learning &amp; Development Limited, USA, 2007. ISBN 9781780173641.">Beecher, 2007</a>]</span></p>
+</div>
 <div class="section" id="logic-a-class-anchor-id-logic-a">
-<h2>2. Logic <a class="anchor" id="logic"></a><a class="headerlink" href="#logic-a-class-anchor-id-logic-a" title="Permalink to this headline">¶</a></h2>
-<p><strong>Logic</strong> is the study of the formal principles of reasoning. These principles determine what can be considered a correct or incorrect argument. An <strong>argument</strong> is “a change of reasoning that ends up in a conclusion” (Beecher, 2017). Every statement within an argument is called a <strong>proposition</strong>, and it has a <strong>truth value</strong>. That is, it is either <strong>true</strong> or <strong>false</strong>. Thus, certain expressions like questions (e.g. “are you hungry?”) or commands (e.g. “clean your bedroom!”) cannot be propositions given that they do not have a truth value.</p>
+<h2><span class="section-number">4.1. </span>Logic <a class="anchor" id="logic"></a><a class="headerlink" href="#logic-a-class-anchor-id-logic-a" title="Permalink to this headline">¶</a></h2>
+<p><strong>Logic</strong> is the study of the formal principles of reasoning. These principles determine what can be considered a correct or incorrect argument. An <strong>argument</strong> is “a change of reasoning that ends up in a conclusion” <span id="id3">[<a class="reference internal" href="../intro.html#id10" title="Karl Beecher. Computational Thinking: A Beginner’s Guide to Problem-solving. BCS Learning &amp; Development Limited, USA, 2007. ISBN 9781780173641.">Beecher, 2007</a>]</span>. Every statement within an argument is called a <strong>proposition</strong>, and it has a <strong>truth value</strong>. That is, it is either <strong>true</strong> or <strong>false</strong>. Thus, certain expressions like questions (e.g. “are you hungry?”) or commands (e.g. “clean your bedroom!”) cannot be propositions given that they do not have a truth value.</p>
 <p>Below we present a very famous argument in the logic field:</p>
 <ol class="simple">
 <li><p>Socrates is a man.</p></li>
@@ -624,14 +572,15 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p>Therefore, Socrates is mortal.</p></li>
 </ol>
 <p>This argument is composed of three propositions (each one is enumerated). These statements are propositions because all of them have a truth value. However, you can notice that some of these statements are used to arrive at a conclusion. The propositions that form the basis of an argument are known as <strong>premises</strong>. In our example, propositions 1 and 2 are premises. Lastly, the proposition that is derived from a set of premises is known as a <strong>conclusion</strong>.</p>
-<div class="alert alert-info">
-    <b>Logic</b><br>
-    <p>Logic studies the formal principles of reasoning, which determine if an argument is correct or not. An argument is a sequence of premises. Each premise is a statement that has a truth value (i.e. true or false).</p>
-</div><div class="section" id="types-of-arguments">
-<h3>Types of Arguments<a class="headerlink" href="#types-of-arguments" title="Permalink to this headline">¶</a></h3>
+<div class="alert alert-info admonition">
+<p class="admonition-title">Logic</p>
+<p>Logic studies the formal principles of reasoning, which determine if an argument is correct or not. An argument is a sequence of premises. Each premise is a statement that has a truth value (i.e. true or false).</p>
+</div>
+<div class="section" id="types-of-arguments">
+<h3><span class="section-number">4.1.1. </span>Types of Arguments<a class="headerlink" href="#types-of-arguments" title="Permalink to this headline">¶</a></h3>
 <p>Arguments can either be deductive or inductive.</p>
 <div class="section" id="deductive-arguments">
-<h4>Deductive Arguments<a class="headerlink" href="#deductive-arguments" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.1.1.1. </span>Deductive Arguments<a class="headerlink" href="#deductive-arguments" title="Permalink to this headline">¶</a></h4>
 <p><strong>Deductive</strong> arguments are considered a strong form of reasoning because the conclusion is derived from previous premises. However, deductive arguments can fail in two different scenarios:</p>
 <ul class="simple">
 <li><p><strong>False premises:</strong> One of the premises turns to be false. For example:</p>
@@ -653,7 +602,7 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 </ul>
 </div>
 <div class="section" id="inductive-arguments">
-<h4>Inductive Arguments<a class="headerlink" href="#inductive-arguments" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.1.1.2. </span>Inductive Arguments<a class="headerlink" href="#inductive-arguments" title="Permalink to this headline">¶</a></h4>
 <p>Although deductive arguments are strong, they follow very stern standards that make them difficult to build. Additionally, the real world usually cannot be seen just in black and white–there are many shades in between. This is where inductive arguments play an important role. <strong>Inductive</strong> arguments do not have an unquestionable truth value. Instead, they deal with <em>probabilities</em> to express the level of confidence in them. Thus, the conclusion of the argument cannot be guaranteed to be true, but you can have a certain confidence in it. An example of an inductive argument comes as follows:</p>
 <ol class="simple">
 <li><p>Every time I go out home it is raining.</p></li>
@@ -661,23 +610,24 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 <li><p>Tomorrow it will be raining.</p></li>
 </ol>
 <p>There is no way you can be certain that tomorrow will rain, but given the evidence, there is a high chance that it will be the case. (The chance might be even higher if we mention that we are living in the Netherlands!)</p>
-<div class="alert alert-info">
-    <b>Deductive and inductive arguments</b><br>
-    <p>Arguments can be either deductive or inductive. On the one hand, deductive arguments have premises that have a clear truth value. On the other hand, inductive arguments have premises associated with a level of confidence in them.</p>
-</div></div>
+<div class="alert alert-info admonition">
+<p class="admonition-title">Deductive and inductive arguments</p>
+<p>Arguments can be either deductive or inductive. On the one hand, deductive arguments have premises that have a clear truth value. On the other hand, inductive arguments have premises associated with a level of confidence in them.</p>
+</div>
+</div>
 </div>
 <div class="section" id="boolean-logic">
-<h3>Boolean Logic<a class="headerlink" href="#boolean-logic" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.1.2. </span>Boolean Logic<a class="headerlink" href="#boolean-logic" title="Permalink to this headline">¶</a></h3>
 <p>Given their binary nature, computers are well suited to deal with deductive reasoning (rather than inductive). To allow them to reason about the correctness of an argument, we use Boolean logic. <strong>Boolean logic</strong> is a form of logic that deals with deductive arguments–that is, arguments having propositions with a truth value that is either true or false. Boolean logic or Boolean algebra was introduced by George Boole (that is why it is called Boolean) in his book “The Mathematical Analysis of Logic” in 1847. It deals with <strong>binary variables</strong> (with true or false values) representing propositions and logical operations on them.</p>
 <div class="section" id="logical-operators">
-<h4>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.1.2.1. </span>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h4>
 <p>The main logical operators used in Boolean logic to connect propositions are:</p>
 <ol class="simple">
 <li><p><strong>And</strong> operator: It is also known as the <em>conjunction</em> operator. It chains premises in such a way that <em>all</em> of them must be true for the conclusion to be true.</p></li>
 <li><p><strong>Or</strong> operator: It is also known as the <em>disjunction</em> operator. It connects premises in such a way that <em>at least one</em> of them must be true for the conclusion to be true.</p></li>
 <li><p><strong>Not</strong> operator: It is also known as the <em>negation</em> operator. It modifies the value of a proposition by <em>flipping</em> its truth value.</p></li>
 </ol>
-<img src="assets/logical-operators.jpeg" alt="Venn diagrams of logical operators" width="600"/>
+<a class="reference internal image-reference" href="../_images/logical-operators.jpeg"><img alt="Venn diagrams of logical operators" class="align-center" src="../_images/logical-operators.jpeg" style="width: 600px;" /></a>
 <div style="text-align:center">
     <span style="font-size:0.9em; font-weight: bold;">Venn diagrams of the <em>and</em>, <em>or</em>, and <em>not</em> logical operators.</span>
 </div>
@@ -761,7 +711,7 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 </div>
 </div>
 <div class="section" id="algorithms-a-class-anchor-id-algorithms-a">
-<h2>3. Algorithms <a class="anchor" id="algorithms"></a><a class="headerlink" href="#algorithms-a-class-anchor-id-algorithms-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.2. </span>Algorithms <a class="anchor" id="algorithms"></a><a class="headerlink" href="#algorithms-a-class-anchor-id-algorithms-a" title="Permalink to this headline">¶</a></h2>
 <p>We can use logic to solve everyday life problems. To do so, we rely on the so-called algorithms. Logic and algorithms are not equivalent. On the contrary, an algorithm uses logic to make decisions for it to solve a well-defined problem. In short, an <strong>algorithm</strong> is a finite sequence of well-defined instructions that are used to provide a solution to a problem. According to this definition, it seems that algorithms are what we create, refine, and execute every single day of our lives, isn’t it? Think for instance about the algorithm to dress up in the morning or the algorithm (or sequence of steps) that you follow to bake a cake or cook a specific recipe. Those are also algorithms that we have internalized and follow unconsciously.</p>
 <p>To design an algorithm, we usually first need to specify the following set of elements:</p>
 <ol class="simple">
@@ -771,23 +721,24 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 <li><p>the <strong>algorithm</strong> or sequence of steps that you will follow to come up with an answer.</p></li>
 </ol>
 <p>Without having a clear picture of your problem, and the expected inputs and output to solve that problem, it will be unlikely that you will be able to come up with a proper algorithm. Furthermore, beware that for algorithms to be useful, they should <strong>terminate</strong> at some point (they cannot just run forever without providing a solution!) and output a correct result. An algorithm is <strong>correct</strong> if it outputs the right solution to every possible input. Proving this might be unfeasible, which is why testing your algorithm (maybe after implementing a program) is crucial.</p>
-<div class="alert alert-info">
-    <b>Algorithm</b><br>
-    <p> An algorithm is a finite sequence of clearly defined instructions used to solve a specific problem.<p>
-</div><div class="section" id="appeltaart-algorithm">
-<h3>Appeltaart Algorithm<a class="headerlink" href="#appeltaart-algorithm" title="Permalink to this headline">¶</a></h3>
+<div class="alert alert-info admonition">
+<p class="admonition-title">Algorithm</p>
+<p>An algorithm is a finite sequence of clearly defined instructions used to solve a specific problem.</p>
+</div>
+<div class="section" id="appeltaart-algorithm">
+<h3><span class="section-number">4.2.1. </span>Appeltaart Algorithm<a class="headerlink" href="#appeltaart-algorithm" title="Permalink to this headline">¶</a></h3>
 <p>To be conscious about the process of designing an algorithm, let us create an algorithm to prepare the famous Dutch <em>Appeltaart</em>. The recipe has been taken from the <a class="reference external" href="https://heelhollandbakt.omroepmax.nl/recepten/details/klassieke-appeltaart/">Heel Holland Bakt website</a>.</p>
-<img src="assets/appeltaart.jpeg" alt="Dutch Appeltaart" width="400"/>
+<a class="reference internal image-reference" href="../_images/appeltaart.jpeg"><img alt="Dutch Appeltaart" class="align-center" src="../_images/appeltaart.jpeg" style="width: 400px;" /></a>
 <div style="text-align:center">
     <span style="font-size:0.9em; font-weight: bold;">Dutch Appeltaart.</span>
 </div>
 <div class="section" id="problem">
-<h4>Problem<a class="headerlink" href="#problem" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.2.1.1. </span>Problem<a class="headerlink" href="#problem" title="Permalink to this headline">¶</a></h4>
 <p>We will start by defining the problem we want to solve. In our case, we want to <em>prepare a classical Dutch Appeltaart</em>.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="inputs-ingredients">
-<h4>Inputs (Ingredients)<a class="headerlink" href="#inputs-ingredients" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.2.1.2. </span>Inputs (Ingredients)<a class="headerlink" href="#inputs-ingredients" title="Permalink to this headline">¶</a></h4>
 <p>The inputs to our algorithm correspond to the ingredients needed to prepare the pie. We list them below:</p>
 <p><strong>Dough</strong></p>
 <ul class="simple">
@@ -816,12 +767,12 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 </div>
 <hr class="docutils" />
 <div class="section" id="output-dish">
-<h4>Output (Dish)<a class="headerlink" href="#output-dish" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.2.1.3. </span>Output (Dish)<a class="headerlink" href="#output-dish" title="Permalink to this headline">¶</a></h4>
 <p>The expected output of our algorithm is a delicious and well-prepared Dutch Appeltaart.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="algorithm-recipe">
-<h4>Algorithm (Recipe)<a class="headerlink" href="#algorithm-recipe" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.2.1.4. </span>Algorithm (Recipe)<a class="headerlink" href="#algorithm-recipe" title="Permalink to this headline">¶</a></h4>
 <p><strong>Preparation</strong></p>
 <ol class="simple">
 <li><p>Grease a round pan and dust with flour.</p></li>
@@ -854,7 +805,7 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 </ol></div>
 </div>
 <div class="section" id="language">
-<h3>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.2.2. </span>Language<a class="headerlink" href="#language" title="Permalink to this headline">¶</a></h3>
 <blockquote>
 <div><p>“The limits of my language mean the limits of my world.” - Ludwig Wittgenstein</p>
 </div></blockquote>
@@ -870,10 +821,10 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 <li><p><strong>Formal languages</strong> are languages designed by humans for specific domains or purposes. They usually are simplified models of natural language. Examples of formal languages are the mathematical, chemical, or staff (standard music notation) notations. There is also a very important example that interests us the most: programming languages.</p></li>
 </ul>
 <div class="section" id="programming-languages">
-<h4>Programming Languages<a class="headerlink" href="#programming-languages" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.2.2.1. </span>Programming Languages<a class="headerlink" href="#programming-languages" title="Permalink to this headline">¶</a></h4>
 <p><strong>Programming languages</strong> are formal languages with very strict <em>syntax</em> and <em>semantics</em>. These languages are used to write down algorithms. A <strong>program</strong> is, then, an algorithm implemented using a programming language. To this point, we can make some connections with previous concepts: <em>CT</em> is a method of <em>problem-solving</em> where problems are solved by reusing or designing a new <em>algorithm</em>. This algorithm might later be written down as a program to compute a solution to the original problem.</p>
 <p><strong>Python</strong> is an example of a programming language. It was conceptualized in 1989 by Guido van Rossum when working at the Centrum Wiskunde &amp; Informatica (CWI), in Amsterdam. Python saw its beginnings in the ABC language. Its name–referring to this monumental sort of snake–actually comes from an old BBC series called Monty Python’s Flying Circus. Guido was reading the scripts of the series and he found out that Python sounded “short, unique, and slightly mysterious”, which is why he decided to adopt the name.</p>
-<img src="assets/guido-van-rossum.jpeg" alt="Guido van Rossum" width="400"/>
+<a class="reference internal image-reference" href="../_images/guido-van-rossum.jpeg"><img alt="Guido van Rossum" class="align-center" src="../_images/guido-van-rossum.jpeg" style="width: 400px;" /></a>
 <div style="text-align:center">
     <span style="font-size:0.9em; font-weight: bold;">Guido van Rossum, creator of the Python programming language.</span>
 </div>
@@ -881,7 +832,7 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 <p>It maybe the case that to solve a problem you apply a known algorithm, think of sorting words, but it may also be the case that to solve the problem you have to come up with a new algorithm.</p>
 </div>
 <div class="section" id="the-zen-of-python">
-<h4>The Zen of Python<a class="headerlink" href="#the-zen-of-python" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">4.2.2.2. </span>The Zen of Python<a class="headerlink" href="#the-zen-of-python" title="Permalink to this headline">¶</a></h4>
 <p>In 1999, Tim Peters–one of Python’s main contributors– wrote a collection of 19 principles that influence the design of the Python programming language. This collection is now known as the Zen of Python. Peters mentioned that the 20<span class="math notranslate nohighlight">\(^{th}\)</span> principle is meant to be filled in by Guido in the years to come. Have a look at the principles. You can consider them as guidelines for the construction of your own programs.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Beautiful</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">ugly</span><span class="o">.</span>
 <span class="n">Explicit</span> <span class="ow">is</span> <span class="n">better</span> <span class="n">than</span> <span class="n">implicit</span><span class="o">.</span>
@@ -904,22 +855,24 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 <span class="n">Namespaces</span> <span class="n">are</span> <span class="n">one</span> <span class="n">honking</span> <span class="n">great</span> <span class="n">idea</span> <span class="o">--</span> <span class="n">let</span><span class="s1">&#39;s do more of those! </span>
 </pre></div>
 </div>
-<div class="alert alert-info">
-    <b>Language</b><br>
-    <p>A language is a system of communication, that has syntax and semantics. The syntax describes the form of the language, while the semantics describes its meaning. A language can be either natural (evolves naturally) or formal (designed for a specific domain or purpose). Programming languages are a sort of formal languages and are used to allow communication between humans and computers.<p>
-</div></div>
+<div class="alert alert-info admonition">
+<p class="admonition-title">Language</p>
+<p>A language is a system of communication, that has syntax and semantics. The syntax describes the form of the language, while the semantics describes its meaning. A language can be either natural (evolves naturally) or formal (designed for a specific domain or purpose). Programming languages are a sort of formal languages and are used to allow communication between humans and computers.</p>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="decomposition-a-class-anchor-id-decomposition-a">
-<h2>4. Decomposition <a class="anchor" id="decomposition"></a><a class="headerlink" href="#decomposition-a-class-anchor-id-decomposition-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.3. </span>Decomposition <a class="anchor" id="decomposition"></a><a class="headerlink" href="#decomposition-a-class-anchor-id-decomposition-a" title="Permalink to this headline">¶</a></h2>
 <p>In 1945 (in the year that the II World War ended), George Pólya, a Hungarian mathematician, wrote a book called “How to Solve It”. The book presents a systematic method of problem-solving that is still relevant today. In particular, he introduced problem-solving techniques known as <em>heuristics</em>. A <strong>heuristic</strong> is a strategy to solve a specific problem by yielding a good enough solution, but not necessarily an optimal one. There is one important type of heuristic known as <em>decomposition</em>. <strong>Decomposition</strong> is a divide-and-conquer approach that breaks complex problems into smaller and simpler subproblems, so we can deal with them more efficiently.</p>
 <p>In programming, we have diverse constructs that will ease the implementation of decomposition. In particular, <em>classes</em> and <em>functions</em> (or <em>methods</em>) are a means to divide a complex solution to a complex problem into smaller chunks of code. We will cover these topics later in the course.</p>
-<div class="alert alert-info">
-    <b>Decomposition</b><br>
-    <p>Decomposition is a divide-and-conquer approach that breaks complex problems into smaller and simpler subproblems.<p>
-</div></div>
+<div class="alert alert-info admonition">
+<p class="admonition-title">Decomposition</p>
+<p>Decomposition is a divide-and-conquer approach that breaks complex problems into smaller and simpler subproblems.</p>
+</div>
+</div>
 <div class="section" id="abstraction-generalization-a-class-anchor-id-generalisation-a">
-<h2>5. Abstraction &amp; Generalization <a class="anchor" id="generalisation"></a><a class="headerlink" href="#abstraction-generalization-a-class-anchor-id-generalisation-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.4. </span>Abstraction &amp; Generalization <a class="anchor" id="generalisation"></a><a class="headerlink" href="#abstraction-generalization-a-class-anchor-id-generalisation-a" title="Permalink to this headline">¶</a></h2>
 <p><strong>Abstraction</strong> is the process of hiding irrelevant details in a given context and preserving only the important information. Abstraction is required when generalizing. In fact, <strong>generalization</strong> is the process of defining general concepts by <em>abstracting</em> common properties from a set of instances. In other words, generalization allows you to formulate a unique concept out of similar but not necessarily identical entities. When generalizing a solution, it becomes simpler because there are fewer concepts to deal with. The solution also becomes more powerful in the sense that it can be applied to more problems of similar nature.</p>
 <p>To be able to generalize a solution or algorithm, you need to start developing your ability to recognize patterns. For instance:</p>
 <ul class="simple">
@@ -927,12 +880,13 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 <li><p>Specialized instructions that are employed more than once in different scenarios can be encapsulated in <em>subroutines</em> or <em>functions</em>.</p></li>
 <li><p>Constraints that determine the flow of execution of your algorithm can be generalized in <em>conditionals</em>.</p></li>
 </ul>
-<div class="alert alert-info">
-    <b>Abstraction and generalization</b><br>
-    <p>Abstraction is the process of preserving relevant information in a given context and hiding irrelevant details. In addition, generalization is the process of defining general concepts by abstracting common properties from a set of instances.<p>
-</div></div>
+<div class="alert alert-info admonition">
+<p class="admonition-title">Abstraction and generalization</p>
+<p>Abstraction is the process of preserving relevant information in a given context and hiding irrelevant details. In addition, generalization is the process of defining general concepts by abstracting common properties from a set of instances.</p>
+</div>
+</div>
 <div class="section" id="modelling-a-class-anchor-id-modelling-a">
-<h2>6. Modelling <a class="anchor" id="modelling"></a><a class="headerlink" href="#modelling-a-class-anchor-id-modelling-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">4.5. </span>Modelling <a class="anchor" id="modelling"></a><a class="headerlink" href="#modelling-a-class-anchor-id-modelling-a" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><p>All models are wrong, but some are useful. (Box, 1987)</p>
 </div></blockquote>
@@ -953,13 +907,14 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 <li><p>The level of <em>accuracy</em> of your model is acceptable to solve the problem (i.e. you keep the strictly needed information).</p></li>
 <li><p>You have defined the level of <em>precision</em> at which you represent your model (especially when dealing with decimal numbers; how many decimal points are required?).</p></li>
 </ul>
-<div class="alert alert-info">
-    <b>Model</b><br>
-    <p>A model is a representation of an entity. It is a type of abstraction.<p>
-</div></div>
+<div class="alert alert-info admonition">
+<p class="admonition-title">Model</p>
+<p>A model is a representation of an entity. It is a type of abstraction.</p>
+</div>
+</div>
 <div class="section" id="example-alice-s-adventures-in-wonderland-a-class-anchor-id-alicia-a">
-<h2>7. Example: Alice’s Adventures in Wonderland <a class="anchor" id="alicia"></a><a class="headerlink" href="#example-alice-s-adventures-in-wonderland-a-class-anchor-id-alicia-a" title="Permalink to this headline">¶</a></h2>
-<p>In this section, we will apply computational thinking to solve a problem from Alice’s Adventures in Wonderland, written by Lewis Caroll. In chapter I “Down the Rabbit Hole”, Alice found herself falling down into a rabbit hole. She finally reached the ground, coming upon “a heap of sticks and dry leaves”. Alice found herself in a “long, low hall, which was lit up by a row of lamps hanging from the roof”.</p>
+<h2><span class="section-number">4.6. </span>Example: Alice’s Adventures in Wonderland <a class="anchor" id="alicia"></a><a class="headerlink" href="#example-alice-s-adventures-in-wonderland-a-class-anchor-id-alicia-a" title="Permalink to this headline">¶</a></h2>
+<p>In this section, we will apply computational thinking to solve a problem from Alice’s Adventures in Wonderland, written by Lewis Caroll. In chapter I, “Down the Rabbit Hole”, Alice found herself falling down into a rabbit hole. She finally reached the ground, coming upon “a heap of sticks and dry leaves”. Alice found herself in a “long, low hall, which was lit up by a row of lamps hanging from the roof”.</p>
 <p>“There were doors all around the hall, but they were all locked”. She started “wondering how she was ever to get out again”. She suddenly discovered a tiny golden key on a little three-legged table, all made of solid glass. After looking around, “she came upon a low curtain she had not noticed before, and behind it was a little door about fifteen inches high: she tried the little golden key in the lock, and to her great delight it fitted!” But she was not able to go through it; the doorway was too small.</p>
 <p>Later in the chapter, we find out that there was a bottle with a ‘DRINK ME’ label that makes shorter anyone drinking its content. There was also a very small cake with the words ‘EAT ME’ beautifully marked in currant. Anyone eating the cake will grow larger. <strong>How can we help Alice go out of the hall through the small doorway behind the curtain?</strong></p>
 <p>To solve this problem, assume that:</p>
@@ -972,17 +927,17 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 <li><p>Alice can only have a bite of the cake at a point in time, and;</p></li>
 <li><p>Alice cannot sip from the bottle and a bite of the cake at the same time.</p></li>
 </ul>
-<img src="assets/alice.jpeg" alt="Alice holding the ‘DRINK ME’ bottle" width="200"/>
+<a class="reference internal image-reference" href="../_images/alice.jpeg"><img alt="Alice holding the ‘DRINK ME’ bottle" class="align-center" src="../_images/alice.jpeg" style="width: 200px;" /></a>
 <div style="text-align:center">
     <span style="font-size:0.9em; font-weight: bold;">Illustration from Alice's Adventures in Wonderland by John Tenniel. Alice holding the ‘DRINK ME’ bottle.</span>
 </div><hr class="docutils" />
 <div class="section" id="understanding-the-problem">
-<h3>Understanding the Problem<a class="headerlink" href="#understanding-the-problem" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.6.1. </span>Understanding the Problem<a class="headerlink" href="#understanding-the-problem" title="Permalink to this headline">¶</a></h3>
 <p><strong>Problem:</strong> Alice wants to go out of the hall. To do so, she needs to go through the doorway behind the curtain, but she is too tall to go through it.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="identifying-the-inputs">
-<h3>Identifying the Inputs<a class="headerlink" href="#identifying-the-inputs" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.6.2. </span>Identifying the Inputs<a class="headerlink" href="#identifying-the-inputs" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>inputs</strong> we have at hand are:</p>
 <ul class="simple">
 <li><p>Alice’s height (i.e. 60 inches)</p></li>
@@ -1012,13 +967,13 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 </div>
 <hr class="docutils" />
 <div class="section" id="identifying-the-expected-output">
-<h3>Identifying the Expected Output<a class="headerlink" href="#identifying-the-expected-output" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.6.3. </span>Identifying the Expected Output<a class="headerlink" href="#identifying-the-expected-output" title="Permalink to this headline">¶</a></h3>
 <p>As a solution to our problem, we want Alice to go out from the hall through the doorway. To do so, her height should be greater than 10 inches and less than or equal to 15 inches.</p>
 <p><strong>Output:</strong> Alice’s height should be greater than 10 inches and less than or equal to 15 inches.</p>
 </div>
 <hr class="docutils" />
 <div class="section" id="designing-the-algorithm">
-<h3>Designing the Algorithm<a class="headerlink" href="#designing-the-algorithm" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">4.6.4. </span>Designing the Algorithm<a class="headerlink" href="#designing-the-algorithm" title="Permalink to this headline">¶</a></h3>
 <p>To solve the problem we know that:</p>
 <ol class="simple">
 <li><p>Alice must go out from the hall through the doorway if she is larger than 10 inches and shorter or exactly 15 inches.</p></li>
@@ -1075,12 +1030,12 @@ Alice is 9 inches. Take a bite from the &quot;EAT ME&quot; cake!
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_2866</span><span class="o">/</span><span class="mf">137871590.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Alice is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">alice</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; inches. Take a bite from the &quot;EAT ME&quot; cake!&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>         <span class="n">alice</span> <span class="o">=</span> <span class="n">alice</span> <span class="o">+</span> <span class="n">eat</span>
-<span class="ne">---&gt; </span><span class="mi">17</span>     <span class="k">elif</span> <span class="n">alice</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Alice is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">alice</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; inches. Take a sip from the &quot;DRINK ME&quot; bottle!&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>         <span class="n">alice</span> <span class="o">=</span> <span class="n">alice</span> <span class="o">-</span> <span class="n">drink</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_9303</span><span class="o">/</span><span class="mf">137871590.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># Algorithm</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">11</span>     <span class="k">if</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="n">alice</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Alice is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">alice</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; inches. She can go out of the hall through the doorway!&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>         <span class="k">break</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
 </pre></div>
@@ -1118,13 +1073,15 @@ Alice is 9 inches. Take a bite from the &quot;EAT ME&quot; cake!
 </div>
 </div>
 <p>Well done! We have applied computational thinking to design a solution to Alice’s problem.</p>
+<p><em>(c) 2021, Lina Ochoa Venegas, Eindhoven University of Technology</em></p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 1 of <span id="id4">[<a class="reference internal" href="../intro.html#id10" title="Karl Beecher. Computational Thinking: A Beginner’s Guide to Problem-solving. BCS Learning &amp; Development Limited, USA, 2007. ISBN 9781780173641.">Beecher, 2007</a>]</span> and Chapter 1, 8, and 10 of <span id="id5">[<a class="reference internal" href="../intro.html#id11" title="Martin Erwig. Once Upon an Algorithm: How Stories Explain Computing. The MIT Press, 2017. ISBN 0262036630.">Erwig, 2017</a>]</span>.</p>
+</dd>
+</dl>
 </div>
 </div>
-</div>
-<hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="end-of-notebook">
-<h1>(End of Notebook)<a class="headerlink" href="#end-of-notebook" title="Permalink to this headline">¶</a></h1>
-<p>© 2021-2022 - <strong>TU/e</strong> - Eindhoven University of Technology</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1151,7 +1108,21 @@ Alice is 9 inches. Take a bite from the &quot;EAT ME&quot; cake!
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="03_conditionals_iteration.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">3. </span>Conditionals and Iteration </p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="05_functions.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Functions </p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
             
         </div>
