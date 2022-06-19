@@ -20,7 +20,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 print('Hello Data Scientists!'
 ------------------
 
-[0;36m  File [0;32m"/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_2836/1147586275.py"[0;36m, line [0;32m1[0m
+[0;36m  File [0;32m"/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_8738/1147586275.py"[0;36m, line [0;32m1[0m
 [0;31m    print('Hello Data Scientists!'[0m
 [0m                                  ^[0m
 [0;31mSyntaxError[0m[0;31m:[0m unexpected EOF while parsing

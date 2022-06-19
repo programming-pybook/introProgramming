@@ -11,4 +11,6 @@ chapters:
 - file: chapters/01_programs.ipynb
 - file: chapters/02_assignments.ipynb
 - file: chapters/03_conditionals_iteration.ipynb
+- file: chapters/04_computational_thinking.ipynb
+- file: chapters/05_functions.ipynb
 # - file: markdown-notebooks
