@@ -8,8 +8,8 @@ It does not go in-depth into any particular topic - check out [the Jupyter Book 
 Check out the content pages bundled with this sample book to see more.
 
 ## Contributors
-* Mark van den Brand (TU/e)
-* Mauricio Verano Merino (VU Amsterdam)
+* [Mark van den Brand](https://www.tue.nl/en/research/researchers/mark-van-den-brand/) (TU/e)
+* [Mauricio Verano Merino](https://maveme.github.io) (VU Amsterdam)
 * Lina María Ochoa (TU/e)
 * Tom Verhoeff (TU/e)
 
