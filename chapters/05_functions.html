@@ -55,6 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="6. Strings" href="06_strings.html" />
     <link rel="prev" title="4. Computational Thinking" href="04_computational_thinking.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -123,6 +124,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    5. Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_strings.html">
+   6. Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_eda.html">
+   7. Exploratory Data Analysis (EDA)
   </a>
  </li>
 </ul>
@@ -546,7 +557,7 @@ is called the <strong>return value</strong>.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_8791</span><span class="o">/</span><span class="mf">2182709609.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_2436</span><span class="o">/</span><span class="mf">2182709609.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;Integer&#39;</span><span class="p">)</span>
 
 <span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;Integer&#39;
@@ -645,10 +656,16 @@ fraction part:</p>
 <div class="section" id="math-functions">
 <h2><span class="section-number">5.3. </span>Math Functions<a class="headerlink" href="#math-functions" title="Permalink to this headline">¶</a></h2>
 <p>The functions presented in the previous section are built-in functions. Every Python implementation will provide these functions.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>A <strong>module</strong> is yet another mechanism to structure your software, frequently used functions, such as Math functions, can be group together in a <strong>module</strong>.</p>
+</div>
+</div>
 <p>Another way of providing predefined functions is via <strong>modules</strong>.</p>
 <p>Python has a <em>math module</em> that provides most of the familiar mathematical functions. A
 <strong>module</strong> is a file that contains a collection of related functions.</p>
-<p><strong>[EXTRA]</strong> A <strong>module</strong> is yet another mechanism to structure your software, frequently used functions, such as Math functions, can be group together in a <strong>module</strong>.</p>
 <p>Before we can use the functions in a module, we have to import it with an import statement:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -706,12 +723,28 @@ function, separated by a dot (also known as a period). This format is called <st
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Use the <i>math</i> module to compute the square root of 361.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Use the <i>math</i> module to compute the square root of 361.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="n">Jupyter</span> <span class="n">cannot</span> <span class="n">be</span> <span class="n">started</span><span class="o">.</span> <span class="n">Error</span> <span class="n">attempting</span> <span class="n">to</span> <span class="n">locate</span> <span class="n">jupyter</span><span class="p">:</span> <span class="n">Running</span> <span class="n">cells</span> <span class="k">with</span> <span class="s1">&#39;Python 3.8.9 64-bit&#39;</span> <span class="n">requires</span> <span class="n">jupyter</span> <span class="ow">and</span> <span class="n">notebook</span> <span class="n">package</span><span class="o">.</span>
+
+<span class="n">Run</span> <span class="n">the</span> <span class="n">following</span> <span class="n">command</span> <span class="n">to</span> <span class="n">install</span> <span class="s1">&#39;jupyter and notebook&#39;</span> <span class="n">into</span> <span class="n">the</span> <span class="n">Python</span> <span class="n">environment</span><span class="o">.</span> 
+
+<span class="ne">Command</span>: &#39;python -m pip install jupyter notebook -U
+
+<span class="ow">or</span>
+
+<span class="n">conda</span> <span class="n">install</span> <span class="n">jupyter</span> <span class="n">notebook</span> <span class="o">-</span><span class="sa">U</span><span class="s1">&#39;</span>
+
+<span class="n">Click</span> <span class="o">&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s1">&#39;https://aka.ms/installJupyterForVSCode&#39;</span><span class="o">&gt;</span><span class="n">here</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">info</span><span class="o">.</span>
 </pre></div>
 </div>
 </div>
@@ -747,10 +780,11 @@ function, separated by a dot (also known as a period). This format is called <st
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Use the `randint` function to generate 10 random integers between 20 and 80.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">randint</span></code> function to generate 10 random integers between 20 and 80.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -836,10 +870,11 @@ functions are evaluated before the function is called.</p>
 from left to right.</p>
 <p>If in the arguments arithmetic operators, they are evaluated taking
 the priorities (PEDMAS) into consideration.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Re-write the program presented in the first cell of this section. Use functions composition to this aim.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Re-write the program presented in the first cell of this section. Use functions composition to this aim.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -877,8 +912,13 @@ sequence of statements that run when the function is called.</p>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">def</span></code> is the keyword that indicates that you defined a new function.</p>
 <p>The name of the new function, in this case, is <code class="docutils literal notranslate"><span class="pre">print_hello</span></code>.</p>
-<p><strong>[EXTRA]</strong> The rules for function names are the same as for variable names: letters,
-numbers and underscore are legal, but the first character cannot be a number.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>The rules for function names are the same as for variable names: letters, numbers and underscore are legal, but the first character cannot be a number.</p>
+</div>
+</div>
 <p>You cannot use a keyword as the name of a function, and you should avoid having a variable and a function
 with the same name.</p>
 <p>The empty parentheses after the name indicate that this function does not take any arguments.</p>
@@ -962,10 +1002,11 @@ Data Scientists
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Define the function <i>compute_area()</i> that computes the area of a circle. It takes an integer representing the radio of a circle as argument. The return value is the area of the circle.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Define the function <code class="docutils literal notranslate"><span class="pre">compute_area()</span></code> that computes the area of a circle. It takes an integer representing the radio of a circle as argument. The return value is the area of the circle.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -1056,14 +1097,22 @@ of your functions, maybe the interface could be improved.</p>
 <p>The statements inside the function do not run until the function is called, and the
 function definition generates no output.</p>
 <p>You need to define a function before you can run it.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Define a new function <i>print_bye()</i> that prints the word "Bye". Then define another function <i>print_all()</i> that uses twice the <i>print_hello()</i> function, once the <i>print_data_scientists()</i> function, and twice the <i>print_bye</i> function in that order.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Define a new function <code class="docutils literal notranslate"><span class="pre">print_bye()</span></code> that prints the word “Bye”. Then define another function <code class="docutils literal notranslate"><span class="pre">print_all()</span></code> that uses twice the <code class="docutils literal notranslate"><span class="pre">print_hello()</span></code> function, once the <code class="docutils literal notranslate"><span class="pre">print_data_scientists()</span></code> function, and twice the <code class="docutils literal notranslate"><span class="pre">print_bye</span></code> function in that order.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>This is also the case in the Jupyter notebooks. If you forget to execute a <em>cell</em> than variables and functions defined in that cell are not available in later cells.</p>
 </div>
 </div>
 </div>
@@ -1075,7 +1124,6 @@ not introduced in the left hand side of a preceding assignment.</p>
 <p>The execution of a Python script/progam always starts with the first statement of
 the program, this is also called the <em>flow of execution</em>.</p>
 <p>Statements are run one at a time (<em>sequential</em>), from top to bottom.</p>
-<p><strong>[EXTRA]</strong> This is also the case in the Jupyter notebooks. If you forget to execute a <em>cell</em> than variables and functions defined in that cell are not available in later cells.</p>
 <p>Function definitions do not alter the flow of execution of the program, but remember that
 statements inside the function do not run until the function is called.</p>
 <p>You could consider a function call as a <em>detour</em> in the flow of execution of a program.</p>
@@ -1093,7 +1141,13 @@ function.</p>
 <p>Some of the functions require arguments. For instance, <code class="docutils literal notranslate"><span class="pre">math.sin</span></code> requires a number as argument.</p>
 <p>Some functions take more than one argument. For instance, <code class="docutils literal notranslate"><span class="pre">math.pow</span></code> takes the base and exponent as arguments.</p>
 <p>Inside the function, the arguments are assigned to variables called <strong>parameters</strong>.</p>
-<p><strong>[EXTRA]</strong> Python is a <em>dynamically typed language</em>, this means that the Python interpreter computes the types of variables and arguments.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Python is a <em>dynamically typed language</em>, this means that the Python interpreter computes the types of variables and arguments.</p>
+</div>
+</div>
 <p>Python does not require to add types to the function arguments.</p>
 <p>In this course, you are <strong>required</strong> to provide the types of the arguments of a function explicitly by means of <em>type hints</em> when they are known in advance!</p>
 <div class="cell docutils container">
@@ -1316,10 +1370,11 @@ Artifial Intelligence
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Identify the fruitful and the void function.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Identify the fruitful and the void function.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
@@ -1403,10 +1458,11 @@ Artifial Intelligence
 </div>
 </div>
 <p>It is not neccesary to have to write the conditional expression as <code class="docutils literal notranslate"><span class="pre">is_divisible(x,</span> <span class="pre">y)</span> <span class="pre">==</span> <span class="pre">True</span></code>.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Create a function that checks if a number is greater than another number. Use it in an if statement. If the number is greater print the message "<i>num1</i> is greater than <i>num2</i>", otherwise print "<i>num1</i> is equal or less than <i>num2</i>".
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create a function that checks if a number is greater than another number. Use it in an if statement. If the number is greater print the message “<em>num1</em> is greater than <em>num2</em>”, otherwise print “<em>num1</em> is equal or less than <em>num2</em>”.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -1465,7 +1521,13 @@ complicated, so we could have written this function more concisely:</p>
 </div>
 </div>
 </div>
-<p><strong>[EXTRA]</strong> <strong>Temporary variables</strong> makes debugging a function more easy. You can print intermediate results.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p><strong>Temporary variables</strong> makes debugging a function more easy. You can print intermediate results.</p>
+</div>
+</div>
 <p>Sometimes it is useful to have multiple return statements, one in each branch of a conditional.</p>
 <p>Some programmers, and I am one of them, have a different opinion, they claim that for understandability it is better to have just one <code class="docutils literal notranslate"><span class="pre">return</span></code> statement in a function.</p>
 <div class="cell docutils container">
@@ -1624,12 +1686,18 @@ Data science is more important
 <li><p>facilitates re-use.</p></li>
 </ol>
 <p>It is more concise to call a function multiple times than to <strong>copy-and-paste</strong> the code fragment of body multiple times!</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>At this point we are going to be more strict than the books of the course.
+We are going to define explicitly the type of the arguments, in case of <code class="docutils literal notranslate"><span class="pre">important_message</span></code> the type of the argument is an <code class="docutils literal notranslate"><span class="pre">integer</span></code> value and therefor we use the type <code class="docutils literal notranslate"><span class="pre">int</span></code>. If the function returns a result, so we are dealing with <em>fruitful functions</em>, then we define the type of the result of the function by means of <code class="docutils literal notranslate"><span class="pre">-&gt;</span> <span class="pre">type</span></code>. In case of <code class="docutils literal notranslate"><span class="pre">important_message</span></code> no value is returned. In this case we use <code class="docutils literal notranslate"><span class="pre">-&gt;</span> <span class="pre">None</span></code>.</p>
+</div>
+</div>
 </div>
 <div class="section" id="generalization">
 <h2><span class="section-number">5.17. </span>Generalization<a class="headerlink" href="#generalization" title="Permalink to this headline">¶</a></h2>
 <p>Suppose we want to re-use the function <code class="docutils literal notranslate"><span class="pre">important_message</span></code>, but with a different number of printed messages.</p>
-<p><strong>[EXTRA]</strong> At this point we are going to be more strict than the books of the course.
-We are going to define explicitly the type of the arguments, in case of <code class="docutils literal notranslate"><span class="pre">important_message</span></code> the type of the argument is an <code class="docutils literal notranslate"><span class="pre">integer</span></code> value and therefor we use the type <code class="docutils literal notranslate"><span class="pre">int</span></code>. If the function returns a result, so we are dealing with <em>fruitful functions</em>, then we define the type of the result of the function by means of <code class="docutils literal notranslate"><span class="pre">-&gt;</span> <span class="pre">type</span></code>. In case of <code class="docutils literal notranslate"><span class="pre">important_message</span></code> no value is returned. In this case we use <code class="docutils literal notranslate"><span class="pre">-&gt;</span> <span class="pre">None</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_important_message</span><span class="p">(</span><span class="n">freq</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -2076,6 +2144,13 @@ make the program difficult to read.</p></li>
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title"><span class="section-number">4. </span>Computational Thinking </p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="06_strings.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>Strings </p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
