@@ -10,8 +10,8 @@ Check out the content pages bundled with this sample book to see more.
 ## Contributors
 * [Mark van den Brand](https://www.tue.nl/en/research/researchers/mark-van-den-brand/) (TU/e)
 * [Mauricio Verano Merino](https://maveme.github.io) (VU Amsterdam)
-* Lina María Ochoa (TU/e)
-* Tom Verhoeff (TU/e)
+* [Lina María Ochoa](https://lmove.github.io) (TU/e)
+* [Tom Verhoeff](https://www.win.tue.nl/~wstomv/) (TU/e)
 
 This book's content has been developed during the last five years, and it has been used for teaching different introductory courses for different academic programs such as Computer Science, Data Science, and Artificial Intelligence.
 
