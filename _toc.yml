@@ -13,4 +13,6 @@ chapters:
 - file: chapters/03_conditionals_iteration.ipynb
 - file: chapters/04_computational_thinking.ipynb
 - file: chapters/05_functions.ipynb
+- file: chapters/06_strings.ipynb
+- file: chapters/07_eda.ipynb
 # - file: markdown-notebooks
