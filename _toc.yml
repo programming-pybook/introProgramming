@@ -15,4 +15,8 @@ chapters:
 - file: chapters/05_functions.ipynb
 - file: chapters/06_strings.ipynb
 - file: chapters/07_eda.ipynb
+- file: chapters/08_files.ipynb
+- file: chapters/09_lists.ipynb
+- file: chapters/10_dictionaries.ipynb
+- file: chapters/11_data_preparation.ipynb
 # - file: markdown-notebooks
