@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="12. Data Preparation" href="11_data_preparation.html" />
+    <link rel="next" title="11. Data Preparation" href="11_data_preparation.html" />
     <link rel="prev" title="9. Lists" href="09_lists.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -151,7 +151,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="11_data_preparation.html">
-   12. Data Preparation
+   11. Data Preparation
   </a>
  </li>
 </ul>
@@ -261,56 +261,39 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   10. Dictionaries
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-dictionary-is-a-mapping">
+   10.1. A Dictionary is a Mapping
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#table-of-contents">
-     10.1. Table of Contents
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-dictionary-is-a-mapping">
-     10.2. 1. A Dictionary is a Mapping
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dictionary-as-a-set-of-counters">
-     10.3. 2. Dictionary as a Set of Counters
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dictionaries-and-files">
-     10.4. 3. Dictionaries and Files
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dictionaries-and-lists">
-     10.5. 4. Dictionaries and Lists
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#looping-and-dictionaries">
-     10.6. 5. Looping and Dictionaries
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reverse-lookup">
-     10.7. 6. Reverse Lookup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#global-variables">
-     10.8. 7. Global Variables
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#end-of-notebook">
-   11. (End of Notebook)
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionary-as-a-set-of-counters">
+   10.2. Dictionary as a Set of Counters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries-and-files">
+   10.3. Dictionaries and Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries-and-lists">
+   10.4. Dictionaries and Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#looping-and-dictionaries">
+   10.5. Looping and Dictionaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reverse-lookup">
+   10.6. Reverse Lookup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#global-variables">
+   10.7. Global Variables
   </a>
  </li>
 </ul>
@@ -323,7 +306,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Dictionaries</h1>
+                <h1>Dictionaries </h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -333,56 +316,39 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   10. Dictionaries
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-dictionary-is-a-mapping">
+   10.1. A Dictionary is a Mapping
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#table-of-contents">
-     10.1. Table of Contents
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#a-dictionary-is-a-mapping">
-     10.2. 1. A Dictionary is a Mapping
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dictionary-as-a-set-of-counters">
-     10.3. 2. Dictionary as a Set of Counters
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dictionaries-and-files">
-     10.4. 3. Dictionaries and Files
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#dictionaries-and-lists">
-     10.5. 4. Dictionaries and Lists
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#looping-and-dictionaries">
-     10.6. 5. Looping and Dictionaries
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#reverse-lookup">
-     10.7. 6. Reverse Lookup
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#global-variables">
-     10.8. 7. Global Variables
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#end-of-notebook">
-   11. (End of Notebook)
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionary-as-a-set-of-counters">
+   10.2. Dictionary as a Set of Counters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries-and-files">
+   10.3. Dictionaries and Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries-and-lists">
+   10.4. Dictionaries and Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#looping-and-dictionaries">
+   10.5. Looping and Dictionaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reverse-lookup">
+   10.6. Reverse Lookup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#global-variables">
+   10.7. Global Variables
   </a>
  </li>
 </ul>
@@ -395,38 +361,9 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="dictionaries">
-<h1><span class="section-number">10. </span>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h1>
-<p>This Jupyter Notebook is based on Chapter 9 of the book Python for Everybody and Chapter 11 of the book Think Python.</p>
-<p><em>(c) 2021, Mark van den Brand, Eindhoven University of Technology</em></p>
-<div class="section" id="table-of-contents">
-<h2><span class="section-number">10.1. </span>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
-<div class="toc" style="margin-top: 1em;">
-    <ul class="toc-item">
-        <li>
-            <span><a href="#1.-A-Dictionary-is-a-Mapping" data-toc-modified-id="1.-A-Dictionary-is-a-Mapping">1. A Dictionary is a Mapping</a></span>
-        </li>
-        <li>
-            <span><a href="#2.-Dictionary-as-a-Set-of-Counters" data-toc-modified-id="2.-Dictionary-as-a-Set-of-Counters">2. Dictionary as a Set of Counters</a></span>
-        </li>
-        <li>
-            <span><a href="#3.-Dictionaries-and-Files" data-toc-modified-id="3.-Dictionaries-and-Files">3. Dictionaries and Files</a></span>
-        </li>
-        <li>
-            <span><a href="#4.-Dictionaries-and-Lists" data-toc-modified-id="4.-Dictionaries-and-Lists">4. Dictionaries and Lists</a></span>
-        </li>
-        <li>
-            <span><a href="#5.-Looping-and-Dictionaries" data-toc-modified-id="5.-Looping-and-Dictionaries">5. Looping and Dictionaries</a></span>
-        </li>
-        <li>
-            <span><a href="#6.-Reverse-Lookup" data-toc-modified-id="6.-Reverse-Lookup">6. Reverse Lookup</a></span>
-        </li>
-        <li>
-            <span><a href="#7.-Global-Variables" data-toc-modified-id="7.-Global-Variables">7. Global Variables</a></span>
-        </li>
-    </ul>
-</div></div>
+<h1><span class="section-number">10. </span>Dictionaries <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="a-dictionary-is-a-mapping">
-<h2><span class="section-number">10.2. </span>1. A Dictionary is a Mapping<a class="headerlink" href="#a-dictionary-is-a-mapping" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.1. </span>A Dictionary is a Mapping<a class="headerlink" href="#a-dictionary-is-a-mapping" title="Permalink to this headline">¶</a></h2>
 <p>We know the concept of a dictionary already since our childhood, a dictionary is a list of (alphabet) list of words with, among others, their meaning or translation.</p>
 <p>The <strong>dictionary</strong> data type in Python is similar to a list, but quite different from
 the dictionaries we know from daily life.</p>
@@ -498,10 +435,11 @@ can also say that each key “maps to” a value.</p>
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Create a dictionary <i>capitals</i> that maps countries to capital cities. Use the country as key of the pair. Include the following: The Netherlands - Amsterdam, Brazil - Brasilia, Australia - Canberra, Cuba - Havana, Kenya - Nairobi, Canada - Ottawa, Japan - Tokyo.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create a dictionary <i>capitals</i> that maps countries to capital cities. Use the country as key of the pair. Include the following: The Netherlands - Amsterdam, Brazil - Brasilia, Australia - Canberra, Cuba - Havana, Kenya - Nairobi, Canada - Ottawa, Japan - Tokyo.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -522,10 +460,11 @@ can also say that each key “maps to” a value.</p>
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Add two new pairs to the dictionary <i>capitals</i>.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Add two new pairs to the dictionary <code class="docutils literal notranslate"><span class="pre">capitals</span></code>.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -557,7 +496,7 @@ can also say that each key “maps to” a value.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3955</span><span class="o">/</span><span class="mf">1093986632.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_5677</span><span class="o">/</span><span class="mf">1093986632.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">eng2dut</span><span class="p">[</span><span class="s1">&#39;six&#39;</span><span class="p">]</span>
 
 <span class="ne">KeyError</span>: &#39;six&#39;
@@ -603,10 +542,11 @@ can also say that each key “maps to” a value.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> uses a different algorithm to find the elements in a list or dictionary.</p>
 <p>In a list, it uses a linear search algorithm: the longer the list gets the more time it will cost.</p>
 <p>In a dictionary, a <strong>hash table</strong> is used: the <code class="docutils literal notranslate"><span class="pre">in</span></code> operator takes about the same amount of time no matter how many items are in the dictionary. This property makes dictionaries a very powerful data structure when storing large amounts of data.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Check if the <i>capitals</i> dictionary contains the key <i>Mexico</i>.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Check if the <code class="docutils literal notranslate"><span class="pre">capitals</span></code> dictionary contains the key <i>Mexico</i>.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -615,7 +555,7 @@ can also say that each key “maps to” a value.</p>
 </div>
 </div>
 <div class="section" id="dictionary-as-a-set-of-counters">
-<h2><span class="section-number">10.3. </span>2. Dictionary as a Set of Counters<a class="headerlink" href="#dictionary-as-a-set-of-counters" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.2. </span>Dictionary as a Set of Counters<a class="headerlink" href="#dictionary-as-a-set-of-counters" title="Permalink to this headline">¶</a></h2>
 <p>Suppose you are given a string and you want to count how many times each letter appears, the so-called letter frequency.</p>
 <p>It is not hard to imagine that this type of exercise is useful, but you will have to do more often in the future, think of the frequency of words in a text, names in an archive, purchases per customer, etc.</p>
 <p>We are computing a <strong>histogram</strong>, which is a statistical term for a set of frequencies.</p>
@@ -694,7 +634,13 @@ make room for the letters that do appear.</p>
 </div>
 </div>
 </div>
-<p><strong>[EXTRA]</strong> Now we can use some useful Python libraries to plot our histogram.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Now we can use some useful Python libraries to plot our histogram.</p>
+</div>
+</div>
 <p>In this case we use <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> libraries.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -712,10 +658,11 @@ make room for the letters that do appear.</p>
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Call the <i>histogram</i> function with different inputs and print it to see how the histogram changes from case to case.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Call the <code class="docutils literal notranslate"><span class="pre">histogram</span></code> function with different inputs and print it to see how the histogram changes from case to case.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -724,7 +671,7 @@ make room for the letters that do appear.</p>
 </div>
 </div>
 <div class="section" id="dictionaries-and-files">
-<h2><span class="section-number">10.4. </span>3. Dictionaries and Files<a class="headerlink" href="#dictionaries-and-files" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.3. </span>Dictionaries and Files<a class="headerlink" href="#dictionaries-and-files" title="Permalink to this headline">¶</a></h2>
 <p>Now we want to count the occurrence of words in a file.</p>
 <p>For this task we will consider a piece of text taken from <em>Romeo and Julliet</em> by William Shakespeare. This text has been altered in the sense that it does not include any punctuation.</p>
 <div class="cell docutils container">
@@ -794,7 +741,7 @@ make room for the letters that do appear.</p>
 </div>
 </div>
 <div class="section" id="dictionaries-and-lists">
-<h2><span class="section-number">10.5. </span>4. Dictionaries and Lists<a class="headerlink" href="#dictionaries-and-lists" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.4. </span>Dictionaries and Lists<a class="headerlink" href="#dictionaries-and-lists" title="Permalink to this headline">¶</a></h2>
 <p>Lists can be used as values in a dictionary.</p>
 <p>Suppose you want to create a dictionary where the frequency of the letters is the key and the value is a list of letters with that frequency.</p>
 <p>In fact, you invert the dictionary, creating a dictionary that maps frequencies to letters.</p>
@@ -848,10 +795,11 @@ would go to a different location.</p>
 <p>In that case you might have two entries for the same key,
 or you might not be able to find a key.</p>
 <p>So, dictionaries themselves are not suitable for hashing, because they are mutable as well.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Use the <i>invert_dict</i> function to invert the <i>romeo_dict</i> dictionary.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">invert_dict</span></code> function to invert the <code class="docutils literal notranslate"><span class="pre">romeo_dict</span></code> dictionary.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -860,7 +808,7 @@ or you might not be able to find a key.</p>
 </div>
 </div>
 <div class="section" id="looping-and-dictionaries">
-<h2><span class="section-number">10.6. </span>5. Looping and Dictionaries<a class="headerlink" href="#looping-and-dictionaries" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.5. </span>Looping and Dictionaries<a class="headerlink" href="#looping-and-dictionaries" title="Permalink to this headline">¶</a></h2>
 <p>If you use a dictionary in a <code class="docutils literal notranslate"><span class="pre">for</span></code> statements, the keys are used for traversing.</p>
 <p>Consider the following <code class="docutils literal notranslate"><span class="pre">print_histogram</span></code> function.</p>
 <div class="cell docutils container">
@@ -892,10 +840,11 @@ or you might not be able to find a key.</p>
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Sort the keys of the <i>capitals</i> dictionary, and print each pair.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Sort the keys of the <i>capitals</i> dictionary, and print each pair.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -904,7 +853,7 @@ or you might not be able to find a key.</p>
 </div>
 </div>
 <div class="section" id="reverse-lookup">
-<h2><span class="section-number">10.7. </span>6. Reverse Lookup<a class="headerlink" href="#reverse-lookup" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.6. </span>Reverse Lookup<a class="headerlink" href="#reverse-lookup" title="Permalink to this headline">¶</a></h2>
 <p>Given a key it is easy to find the corresponding value, this is a so called <strong>lookup</strong>.</p>
 <p>Suppose you have a value and you want to find the corresponding key.</p>
 <p>There are two challenges:</p>
@@ -967,10 +916,11 @@ traceback and an error message.</p>
 </pre></div>
 </div>
 <p>Beware that the reverse lookup is not efficient, in case of a large dictionary your program may become slow.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Use the <i>reverse_lookup</i> function to look for existing and non-existing keys in the <i>capitals</i> dictionary.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">reverse_lookup</span></code> function to look for existing and non-existing keys in the <code class="docutils literal notranslate"><span class="pre">capitals</span></code> dictionary.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -979,7 +929,7 @@ traceback and an error message.</p>
 </div>
 </div>
 <div class="section" id="global-variables">
-<h2><span class="section-number">10.8. </span>7. Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">10.7. </span>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h2>
 <p>Variables that are created outside functions belong to the special frame called <strong><strong>main</strong></strong> and they are called <strong>global</strong>.</p>
 <p>They can be accessed from any function.</p>
 <p>Unlike local variables, which disappear when their
@@ -1112,13 +1062,20 @@ you use it.</p>
 </div>
 </div>
 <p>When working with variables that are mutable, you are allowed to change the values in the dictionary.</p>
-<p><strong>[EXTRA]</strong> Global variables can be useful, but if you have a lot of them, and you modify them frequently, they can make your programs hard to debug.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Global variables can be useful, but if you have a lot of them, and you modify them frequently, they can make your programs hard to debug.</p>
 </div>
 </div>
-<hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="end-of-notebook">
-<h1><span class="section-number">11. </span>(End of Notebook)<a class="headerlink" href="#end-of-notebook" title="Permalink to this headline">¶</a></h1>
-<p>© 2021-2022 - <strong>TU/e</strong> - Eindhoven University of Technology</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 9 of <span id="id2">[<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Severance, 2016</a>]</span> and Chapter 11 of <span id="id3">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Downey, 2015</a>]</span>.</p>
+</dd>
+</dl>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1156,7 +1113,7 @@ you use it.</p>
     <a class='right-next' id="next-link" href="11_data_preparation.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">12. </span>Data Preparation</p>
+        <p class="prev-next-title"><span class="section-number">11. </span>Data Preparation</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

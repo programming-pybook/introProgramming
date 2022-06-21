@@ -22,7 +22,7 @@ eng2dut['six']
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mKeyError[0m                                  Traceback (most recent call last)
-[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_3955/1093986632.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_5677/1093986632.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0meng2dut[0m[0;34m[[0m[0;34m'six'[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mKeyError[0m: 'six'
