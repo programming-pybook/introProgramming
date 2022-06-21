@@ -19,4 +19,5 @@ chapters:
 - file: chapters/09_lists.ipynb
 - file: chapters/10_dictionaries.ipynb
 - file: chapters/11_data_preparation.ipynb
+- file: chapters/12_tuples_sets.ipynb
 # - file: markdown-notebooks

@@ -1,0 +1,1357 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expressions &#8212; Introduction to Programming in Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction to Programming in Python
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_programs.html">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_assignments.html">
+   2. Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_conditionals_iteration.html">
+   3. Conditionals and Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_computational_thinking.html">
+   4. Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_functions.html">
+   5. Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_strings.html">
+   6. Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_eda.html">
+   7. Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_files.html">
+   8. Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_lists.html">
+   9. Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_dictionaries.html">
+   10. Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_data_preparation.html">
+   11. Data Preparation
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/14_regular_expressions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/maveme/introProgramming.git"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/maveme/introProgramming.git/issues/new?title=Issue%20on%20page%20%2Fchapters/14_regular_expressions.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/maveme/introProgramming.git/master/v2/gh/maveme/introProgramming.git/master?urlpath=lab/tree/# Optional path to your book, relative to the repository root/chapters/14_regular_expressions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#character-matching">
+   2. Character Matching
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extracting-data">
+   3. Extracting Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combining-searching-and-extracting">
+   4. Combining Searching and Extracting
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#escape-character">
+   5. Escape Character
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regular-expressions-cheat-sheet">
+   6. Regular Expressions Cheat Sheet
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#special-characters">
+     Special Characters
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#character-classes">
+     Character Classes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sets">
+     Sets
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#common-re-methods">
+     Common
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       re
+      </span>
+     </code>
+     Methods
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#end-of-notebook">
+   (End of Notebook)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Regular Expressions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction">
+   1. Introduction
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#character-matching">
+   2. Character Matching
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#extracting-data">
+   3. Extracting Data
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#combining-searching-and-extracting">
+   4. Combining Searching and Extracting
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#escape-character">
+   5. Escape Character
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#regular-expressions-cheat-sheet">
+   6. Regular Expressions Cheat Sheet
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#special-characters">
+     Special Characters
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#character-classes">
+     Character Classes
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sets">
+     Sets
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#common-re-methods">
+     Common
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       re
+      </span>
+     </code>
+     Methods
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#end-of-notebook">
+   (End of Notebook)
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="regular-expressions">
+<h1>Regular Expressions<a class="headerlink" href="#regular-expressions" title="Permalink to this headline">¶</a></h1>
+<p>This Jupyter Notebook is based on Chapter 11 of the book Python for Everybody.</p>
+<p><em>(c) 2020, Mark van den Brand, Eindhoven University of Technology</em></p>
+</div>
+<div class="section" id="table-of-contents">
+<h1>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h1>
+<div class="toc" style="margin-top: 1em;">
+    <ul class="toc-item">
+        <li>
+            <span><a href="#1.-Introduction" data-toc-modified-id="1.-Introduction">1. Introduction</a></span>
+        </li>
+        <li>
+            <span><a href="#2.-Character-Matching" data-toc-modified-id="2.-Character-Matching">2. Character Matching</a></span>
+        </li>
+        <li>
+            <span><a href="#3.-Extracting-Data" data-toc-modified-id="3.-Extracting-Data">3. Extracting Data</a></span>
+        </li>
+        <li>
+            <span><a href="#4.-Combining-Searching-and-Extracting" data-toc-modified-id="4.-Combining-Searching-and-Extracting">4. Combining Searching and Extracting</a></span>
+        </li>
+        <li>
+            <span><a href="#5.-Escape-Character" data-toc-modified-id="5.-Escape-Character">5. Escape Character</a></span>
+        </li>
+        <li>
+            <span><a href="#6.-Regular-Expressions-Cheat-Sheet" data-toc-modified-id="6.-Regular-Expressions-Cheat-Sheet">6. Regular Expressions Cheat Sheet</a></span>
+        </li>
+        <li>
+            <span><a href="#7.-Debugging" data-toc-modified-id="7.-Debugging">7. Debugging</a></span>
+        </li>
+    </ul>
+</div></div>
+<div class="section" id="introduction">
+<h1>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p>To extract information from strings, we have been using string methods such as <code class="docutils literal notranslate"><span class="pre">split()</span></code> and <code class="docutils literal notranslate"><span class="pre">find()</span></code>, and lists and string slicing.
+However, the task of extracting data is so common that Python provides a library dedicated to handle these tasks in a more elegant manner.
+The library is called <code class="docutils literal notranslate"><span class="pre">re</span></code> (regular expressions) and it should be imported before you can start using it.</p>
+<p><strong>Regular expressions</strong> are like a little programming language created for searching and parsing strings.</p>
+<p>There are general libraries, not Python specific, that offer this functionality as well (e.g. <code class="docutils literal notranslate"><span class="pre">grep</span></code>).</p>
+<p>One of the simplest uses of the <code class="docutils literal notranslate"><span class="pre">re</span></code> library is the <code class="docutils literal notranslate"><span class="pre">search()</span></code> function, which verifies if a string is part of another string.
+Let us see an example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_7048</span><span class="o">/</span><span class="mf">77165198.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;datasets/mbox-short.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+
+<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Author:&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Author: stephen.marquard@uct.ac.za
+Author: louis@media.berkeley.edu
+Author: zqian@umich.edu
+Author: rjlowe@iupui.edu
+Author: zqian@umich.edu
+Author: rjlowe@iupui.edu
+Author: cwen@iupui.edu
+Author: cwen@iupui.edu
+Author: gsilver@umich.edu
+Author: gsilver@umich.edu
+Author: zqian@umich.edu
+Author: gsilver@umich.edu
+Author: wagnermr@iupui.edu
+Author: zqian@umich.edu
+Author: antranig@caret.cam.ac.uk
+Author: gopal.ramasammycook@gmail.com
+Author: david.horwitz@uct.ac.za
+Author: david.horwitz@uct.ac.za
+Author: david.horwitz@uct.ac.za
+Author: david.horwitz@uct.ac.za
+Author: stephen.marquard@uct.ac.za
+Author: louis@media.berkeley.edu
+Author: louis@media.berkeley.edu
+Author: ray@media.berkeley.edu
+Author: cwen@iupui.edu
+Author: cwen@iupui.edu
+Author: cwen@iupui.edu
+</pre></div>
+</div>
+</div>
+</div>
+<p>The previous program prints all the lines that have the word <code class="docutils literal notranslate"><span class="pre">'Author'</span></code>.</p>
+<p>As you might have noticed, we could implement this same program with the use of the <code class="docutils literal notranslate"><span class="pre">find()</span></code> method.</p>
+<p>The power of the regular expressions comes when we add special characters to
+the search string, which allows us to more precisely control which lines match the
+string.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^Author:&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We modified our previous program, so it only prints the lines that start with the <code class="docutils literal notranslate"><span class="pre">'Author'</span></code> string.
+This is done thanks to the use of the caret character (<code class="docutils literal notranslate"><span class="pre">^</span></code>), which is used in regular expressions to match the beginning of a line.</p>
+<p>Still, this example can also work with the use of the <code class="docutils literal notranslate"><span class="pre">startswith()</span></code> method, but along this chapter we will try to convince you that in some cases using regular expressions eases our lives.</p>
+<div class="alert alert-success">
+    <b>Do It Yourself!</b><br>
+    Add all lines that start by 'Details:' to a list. Use the <i>search</i> function.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="character-matching">
+<h1>2. Character Matching<a class="headerlink" href="#character-matching" title="Permalink to this headline">¶</a></h1>
+<p>There are other characters that help us build powerful regular expressions.
+For instance, the <strong>period</strong> or <strong>full stop</strong> character matches any character within a string.</p>
+<p>The regular expression <code class="docutils literal notranslate"><span class="pre">s..r</span></code> can match any 4-letter word that starts with <code class="docutils literal notranslate"><span class="pre">s</span></code> and ends with <code class="docutils literal notranslate"><span class="pre">r</span></code>, like <code class="docutils literal notranslate"><span class="pre">scar</span></code>, <code class="docutils literal notranslate"><span class="pre">sear</span></code>, <code class="docutils literal notranslate"><span class="pre">slur</span></code>, and <code class="docutils literal notranslate"><span class="pre">soar</span></code>.</p>
+<p>Let us now print all lines that start by <code class="docutils literal notranslate"><span class="pre">X-</span></code> followed by four characters and ending with <code class="docutils literal notranslate"><span class="pre">M</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^X-....M&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This can be simplified by indicating that a character can be repeated multiple times.
+To do so, we use the <code class="docutils literal notranslate"><span class="pre">*</span></code> and the <code class="docutils literal notranslate"><span class="pre">+</span></code> <strong>wildcard characters</strong>.</p>
+<p>The <strong>asterisk</strong> means that we need to match zero-or-more characters; while the <strong>plus</strong> sign states that we need to match one-or-more characters. The <code class="docutils literal notranslate"><span class="pre">*</span></code> or <code class="docutils literal notranslate"><span class="pre">+</span></code> applies to the single character placed immediately to their left.</p>
+<p>The use of <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">+</span></code> results into a <strong>greedy</strong> match.
+A greedy match indicates that we match the longest possible string.</p>
+<p>Let’s now print all lines that start with <code class="docutils literal notranslate"><span class="pre">X-</span></code>, that are followed by one-or-more characters and that then have the <code class="docutils literal notranslate"><span class="pre">Result</span></code> word.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^X-.+Result&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-success">
+    <b>Do It Yourself!</b><br>
+    Print all lines that start by 'Received:', followed by zero-or-more charcaters, and that have the word 'nakamura'.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="extracting-data">
+<h1>3. Extracting Data<a class="headerlink" href="#extracting-data" title="Permalink to this headline">¶</a></h1>
+<p>We can also extract data from a string if we use the <code class="docutils literal notranslate"><span class="pre">findall()</span></code> method.
+This method will extract all substrings that match a given regular expression.</p>
+<p>For instance, the <code class="docutils literal notranslate"><span class="pre">findall()</span></code> method is quite handy if we want to get all email addresses on the file, regardless of the format of the line where they are found.
+In this way, we do not need to write code for each type of line.</p>
+<p>Let us see a small example before we create the whole program.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Einstein einstein@uni.edu sent an email to Ada ada@otheruni.edu about life @10&#39;</span>
+<span class="n">emails</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;\S+@\S+&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">findall()</span></code> method returns a list of strings with all the words that match the regular expression <code class="docutils literal notranslate"><span class="pre">\S+&#64;\S+</span></code>.
+<code class="docutils literal notranslate"><span class="pre">\S</span></code> matches a non-whitespace character.</p>
+<p>Thus, the <code class="docutils literal notranslate"><span class="pre">\S+&#64;\S+</span></code> expression can be read as: one-or-more non-whitespace characters, followed by an <code class="docutils literal notranslate"><span class="pre">&#64;</span></code> character (at), followed by one-or-more non-whitespace characters.</p>
+<p>Now, we are ready to create a program to gather all emails within the <code class="docutils literal notranslate"><span class="pre">mbox-short.txt</span></code> file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+<span class="n">emails</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="n">line_emails</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;\S+@\S+&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">emails</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">line_emails</span><span class="p">)</span>
+    
+<span class="n">emails</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As you have noticed, some of the emails have additional characters that we would like to exclude (e.g. <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">;</span></code>).
+We only want to extract the email.</p>
+<p>To do so, we need to be more explicit when defining our regular expression.
+Thus, we will use <strong>square brackets</strong> to define the set of characters that we want to match at the beginning and end of the email.</p>
+<p>The new regular expression looks like this: <code class="docutils literal notranslate"><span class="pre">[a-zA-Z0-9]\S*&#64;\S*[a-zA-Z]</span></code></p>
+<ul class="simple">
+<li><p>The <code class="docutils literal notranslate"><span class="pre">[a-zA-Z0-9]</span></code> indicates that we are expecting one alphanumeric value (a letter between a-z or A-Z or a number between 0-9). We do not care if it is a capital or lower-case letter, that is why we add both <code class="docutils literal notranslate"><span class="pre">a-z</span></code> (for lower-case letters) and <code class="docutils literal notranslate"><span class="pre">A-Z</span></code> (for capital letters).</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">[a-zA-Z]</span></code> indicates that we will only match a lower-case or capital letter at the end of the string.</p></li>
+<li><p>We switch to <code class="docutils literal notranslate"><span class="pre">\S*</span></code> because we already consider the need to match at least one character with the inclusion of both <code class="docutils literal notranslate"><span class="pre">[a-zA-Z0-9]</span></code> and <code class="docutils literal notranslate"><span class="pre">[a-zA-Z]</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+<span class="n">emails</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="n">line_emails</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;[a-zA-Z0-9]\S*@[a-zA-Z.]+&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    <span class="n">emails</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">line_emails</span><span class="p">)</span>
+    
+<span class="n">emails</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;stephen.marquard@uct.ac.za&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801051412.m05ECIaH010327@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;stephen.marquard@uct.ac.za&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;stephen.marquard@uct.ac.za&#39;,
+ &#39;stephen.marquard@uct.ac.za&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801042308.m04N8v6O008125@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801042109.m04L92hb007923@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;rjlowe@iupui.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801042044.m04Kiem3007881@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;rjlowe@iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;rjlowe@iupui.edu&#39;,
+ &#39;rjlowe@iupui.edu&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801042001.m04K1cO0007738@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;rjlowe@iupui.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041948.m04JmdwO007705@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;rjlowe@iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;rjlowe@iupui.edu&#39;,
+ &#39;rjlowe@iupui.edu&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041635.m04GZQGZ007313@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;hu2@iupui.edu&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041633.m04GX6eG007292@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;hu2@iupui.edu&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041611.m04GB1Lb007221@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041610.m04GA5KP007209@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041609.m04G9EuX007197@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041608.m04G8d7w007184@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;gsilver@umich.edu&#39;,
+ &#39;wagnermr@iupui.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041537.m04Fb6Ci007092@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;wagnermr@iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;wagnermr@iupui.edu&#39;,
+ &#39;wagnermr@iupui.edu&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041515.m04FFv42007050@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;zqian@umich.edu&#39;,
+ &#39;antranig@caret.cam.ac.uk&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041502.m04F21Jo007031@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;antranig@caret.cam.ac.uk&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;antranig@caret.cam.ac.uk&#39;,
+ &#39;antranig@caret.cam.ac.uk&#39;,
+ &#39;gopal.ramasammycook@gmail.com&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041403.m04E3psW006926@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;gopal.ramasammycook@gmail.com&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;gopal.ramasammycook@gmail.com&#39;,
+ &#39;gopal.ramasammycook@gmail.com&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041200.m04C0gfK006793@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;dhorwitz@david&#39;,
+ &#39;dhorwitz@david&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801041106.m04B6lK3006677@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801040947.m049lUxo006517@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;josrodri@iupui.edu&#39;,
+ &#39;dhorwitz@david&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801040932.m049W2i5006493@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;david.horwitz@uct.ac.za&#39;,
+ &#39;josrodri@iupui.edu&#39;,
+ &#39;dhorwitz@david&#39;,
+ &#39;stephen.marquard@uct.ac.za&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801040905.m0495rWB006420@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;stephen.marquard@uct.ac.za&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;stephen.marquard@uct.ac.za&#39;,
+ &#39;stephen.marquard@uct.ac.za&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801040023.m040NpCc005473@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801032216.m03MGhDa005292@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;louis@media.berkeley.edu&#39;,
+ &#39;ray@media.berkeley.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801032205.m03M5Ea7005273@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;ray@media.berkeley.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;ray@media.berkeley.edu&#39;,
+ &#39;ray@media.berkeley.edu&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801032133.m03LX3gG005191@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801032127.m03LRUqH005177@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;wagnermr@iupui.edu&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;postmaster@collab.sakaiproject.org&#39;,
+ &#39;200801032122.m03LMFo4005148@nakamura.uits.iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;apache@localhost&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;source@collab.sakaiproject.org&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;cwen@iupui.edu&#39;,
+ &#39;wagnermr@iupui.edu&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-success">
+    <b>Do It Yourself!</b><br>
+    Use regular expressions to count all the times that the email 'cwen@iupui.edu' appears on the file regardles of the line where it is placed.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="combining-searching-and-extracting">
+<h1>4. Combining Searching and Extracting<a class="headerlink" href="#combining-searching-and-extracting" title="Permalink to this headline">¶</a></h1>
+<p>Let us imagine that now we want to extract all the numbers that follow an <code class="docutils literal notranslate"><span class="pre">X-Something:</span></code> header, such as:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">X</span><span class="o">-</span><span class="n">DSPAM</span><span class="o">-</span><span class="n">Confidence</span><span class="p">:</span> <span class="mf">0.8475</span>
+<span class="n">X</span><span class="o">-</span><span class="n">DSPAM</span><span class="o">-</span><span class="n">Probability</span><span class="p">:</span> <span class="mf">0.0000</span>
+</pre></div>
+</div>
+<p>To do so, we can define the following regular expression:</p>
+<p><code class="docutils literal notranslate"><span class="pre">^X-.*:</span> <span class="pre">[0-9.]+</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">^X-</span></code> indicates that the line should start with ‘X-‘. Then, it must be followed by zero-or-more characters (<code class="docutils literal notranslate"><span class="pre">.*</span></code>), followed then by a colon and a space (<code class="docutils literal notranslate"><span class="pre">:</span> </code>). Finally, the string should be followed by a one-or-more numbers <code class="docutils literal notranslate"><span class="pre">0-9</span></code> that can have points <code class="docutils literal notranslate"><span class="pre">.</span></code> (<code class="docutils literal notranslate"><span class="pre">[0-9.]+</span></code>). Notice that when we use the <code class="docutils literal notranslate"><span class="pre">.</span></code> inside square brackets, it does not match any character but instead it matches <strong>literally</strong> the point character.</p>
+<p>Before extracting the numbers, let us just print the lines that match our regular expression.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    
+    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^X-.*: [0-9.]+&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    
+<span class="n">emails</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We should use <code class="docutils literal notranslate"><span class="pre">split()</span></code> to actually get the decimal number out of our target lines.
+However, we will use regular expressions to achieve the same goal.</p>
+<p>We introduce now the use of parentheses <code class="docutils literal notranslate"><span class="pre">()</span></code>.
+When you use parentheses in regular expressions, they are just completely ignored.
+You usually use them to group terms in your expression.</p>
+<p>Nevertheless, if you use <code class="docutils literal notranslate"><span class="pre">()</span></code> in a regular expression inside the <code class="docutils literal notranslate"><span class="pre">findall()</span></code> method, they serve a different purpose:
+they indicate that you are interested in extracting only a portion of the string that matches the expression.</p>
+<p>So, we modify our expression as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">^X-.*:</span> <span class="pre">([0-9.]+)</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="n">match</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;^X-.*: ([0-9.]+)&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">match</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">match</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let us explore another example.
+The <code class="docutils literal notranslate"><span class="pre">mbox-short.txt</span></code> file also has the following type of lines:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Details:</span> <span class="pre">http://source.sakaiproject.org/viewsvn/?view=rev&amp;rev=39771</span></code></p>
+<p>We would like to extract the revision number placed at the end of the string after <code class="docutils literal notranslate"><span class="pre">rev=</span></code>.
+In this example the revision number is <code class="docutils literal notranslate"><span class="pre">39771</span></code>.</p>
+<p>We will now extract these numbers all along the file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+    <span class="n">revision</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;^Details:.*rev=([0-9.]+)&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">revision</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">revision</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We used the regular expression <code class="docutils literal notranslate"><span class="pre">^Details:.*rev=([0-9.]+)</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">^Details:</span></code> indicates that the line should start by the word <code class="docutils literal notranslate"><span class="pre">Details:</span></code>; it will be then followed by zero-or-more characters (<code class="docutils literal notranslate"><span class="pre">.*</span></code>); and then it will find the <code class="docutils literal notranslate"><span class="pre">rev=</span></code> string.
+After the latter, we want to only extract the number that follows, which is composed by one-or-more numbers and points <code class="docutils literal notranslate"><span class="pre">([0-9.]+)</span></code>.</p>
+<p>Remember that the <code class="docutils literal notranslate"><span class="pre">[0-9]+</span></code> is <em>greedy</em> and it tries to make as large a string of
+digits as possible before extracting those digits. Because of this behaviour, we
+get all five digits for each number.</p>
+<div class="alert alert-success">
+    <b>Do It Yourself!</b><br>
+    Use regular expressions to extract the IP numbers of lines with the following format (the IP number is the number that you find between the square brackets at the end of the string, e.g. 141.211.14.46):
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Received: from murder (mail.umich.edu [141.211.14.46])
+</pre></div>
+</div>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="escape-character">
+<h1>5. Escape Character<a class="headerlink" href="#escape-character" title="Permalink to this headline">¶</a></h1>
+<p>We need a way to use special characters within regular expressions in a normal or <strong>literal</strong> way.
+For instance, there might be cases where we want to match the caret <code class="docutils literal notranslate"><span class="pre">^</span></code> character, and not just use it to denote the start of a line.
+To do so, we use the escape character <code class="docutils literal notranslate"><span class="pre">\</span></code> before we type the character we want to match (e.g. <code class="docutils literal notranslate"><span class="pre">\^</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;This is how you write 2 to the power of 2 in Java: 2^2&#39;</span>
+<span class="n">matches</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;[0-9]+\^[0-9]+&#39;</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span>
+<span class="n">matches</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Remember that if you write special characters inside square brackets, characters are taken as literals.
+If we write <code class="docutils literal notranslate"><span class="pre">[0-9.^]</span></code> it literally means that we want to match digits (<code class="docutils literal notranslate"><span class="pre">0-9</span></code>) or the dot (<code class="docutils literal notranslate"><span class="pre">.</span></code>) or the caret character (<code class="docutils literal notranslate"><span class="pre">^</span></code>).</p>
+<div class="alert alert-success">
+    <b>Do It Yourself!</b><br>
+    Match all prices with the <i>receipt</i> string and return the sum of them all.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">receipt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Chocolate $2.0, Soap $10.0, Bread $1.4, Milk $2.4&quot;</span>
+
+<span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="regular-expressions-cheat-sheet">
+<h1>6. Regular Expressions Cheat Sheet<a class="headerlink" href="#regular-expressions-cheat-sheet" title="Permalink to this headline">¶</a></h1>
+<p>In this section, we introduce some of the characters you can use when creating your regular expressions.</p>
+<div class="section" id="special-characters">
+<h2>Special Characters<a class="headerlink" href="#special-characters" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Character</p></th>
+<th class="text-align:left head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">^</span></code></p></td>
+<td class="text-align:left"><p>Matches the start of a string</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">$</span></code></p></td>
+<td class="text-align:left"><p>Matches the end of a string</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">.</span></code></p></td>
+<td class="text-align:left"><p>Matches any character except new line characters (e.g. <code class="docutils literal notranslate"><span class="pre">\n</span></code>)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\</span></code></p></td>
+<td class="text-align:left"><p>Escapes special characters</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">A|B</span></code></p></td>
+<td class="text-align:left"><p>Matches expression A or B</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">+</span></code></p></td>
+<td class="text-align:left"><p>Greedy match of one-or-more characters</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td class="text-align:left"><p>Greedy match of zero-or-more characters</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">?</span></code></p></td>
+<td class="text-align:left"><p>Greedy match of zero-or-one character. If added after a qualifier (i.e. <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">?</span></code>) performs non-greedy (or lazy) matches</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">{n}</span></code></p></td>
+<td class="text-align:left"><p>Matches an expression <code class="docutils literal notranslate"><span class="pre">n</span></code> times</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">{n,</span> <span class="pre">m}</span></code></p></td>
+<td class="text-align:left"><p>Matches an expression from <code class="docutils literal notranslate"><span class="pre">n</span></code> to <code class="docutils literal notranslate"><span class="pre">m</span></code> times</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="character-classes">
+<h2>Character Classes<a class="headerlink" href="#character-classes" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Character</p></th>
+<th class="text-align:left head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\w</span></code></p></td>
+<td class="text-align:left"><p>Matches alphanumeric characters (i.e. a-z, A-Z, 0-9 and _)</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\d</span></code></p></td>
+<td class="text-align:left"><p>Matches digits (i.e. 0-9)</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\D</span></code></p></td>
+<td class="text-align:left"><p>Matches non-digits</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\s</span></code></p></td>
+<td class="text-align:left"><p>Matches whitespace characters (e.g. \t, \n, \r)</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\S</span></code></p></td>
+<td class="text-align:left"><p>Matches non-whitespace characters</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\b</span></code></p></td>
+<td class="text-align:left"><p>Matches the empty string, but only at the start or end of a word</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">\B</span></code></p></td>
+<td class="text-align:left"><p>Matches the empty string, but not at the start or end of a word</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="sets">
+<h2>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Character</p></th>
+<th class="text-align:left head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">]</span></code></p></td>
+<td class="text-align:left"><p>Contains characters to match</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[ab]</span></code></p></td>
+<td class="text-align:left"><p>Matches character <code class="docutils literal notranslate"><span class="pre">a</span></code> or <code class="docutils literal notranslate"><span class="pre">b</span></code>, not <code class="docutils literal notranslate"><span class="pre">ab</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[a-z]</span></code></p></td>
+<td class="text-align:left"><p>Matches a lower-case letter from <code class="docutils literal notranslate"><span class="pre">a</span></code> to <code class="docutils literal notranslate"><span class="pre">z</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[A-Z]</span></code></p></td>
+<td class="text-align:left"><p>Matches a capital letter from <code class="docutils literal notranslate"><span class="pre">A</span></code> to <code class="docutils literal notranslate"><span class="pre">Z</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[0-9]</span></code></p></td>
+<td class="text-align:left"><p>Matches a digit from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">9</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[a-zA-Z0-9]</span></code></p></td>
+<td class="text-align:left"><p>Matches alphanumeric characters</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[+*().]</span></code></p></td>
+<td class="text-align:left"><p>Matches special characters as literals</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">[^ab]</span></code></p></td>
+<td class="text-align:left"><p>Matches any character except <code class="docutils literal notranslate"><span class="pre">a</span></code> and <code class="docutils literal notranslate"><span class="pre">b</span></code></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="common-re-methods">
+<h2>Common <code class="docutils literal notranslate"><span class="pre">re</span></code> Methods<a class="headerlink" href="#common-re-methods" title="Permalink to this headline">¶</a></h2>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p>Method</p></th>
+<th class="text-align:left head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">re.findall(exp,</span> <span class="pre">string)</span></code></p></td>
+<td class="text-align:left"><p>Matches substrings in <code class="docutils literal notranslate"><span class="pre">string</span></code> that match expression <code class="docutils literal notranslate"><span class="pre">exp</span></code>, and returns them on a list.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">re.search(exp,</span> <span class="pre">string)</span></code></p></td>
+<td class="text-align:left"><p>Matches the first substring in <code class="docutils literal notranslate"><span class="pre">string</span></code> that matches expression <code class="docutils literal notranslate"><span class="pre">exp</span></code>, and returns it as a match object.</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">re.split(exp,</span> <span class="pre">string)</span></code></p></td>
+<td class="text-align:left"><p>Splits <code class="docutils literal notranslate"><span class="pre">string</span></code> into a list by means of using expression <code class="docutils literal notranslate"><span class="pre">exp</span></code> as delimiter.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p><code class="docutils literal notranslate"><span class="pre">re.sub(exp1,</span> <span class="pre">exp2,</span> <span class="pre">string)</span></code></p></td>
+<td class="text-align:left"><p>Replaces all matches of expression <code class="docutils literal notranslate"><span class="pre">exp1</span></code> with <code class="docutils literal notranslate"><span class="pre">exp2</span></code> in the <code class="docutils literal notranslate"><span class="pre">string</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="alert alert-success">
+    <b>Do It Yourself!</b><br>
+    Write a program to look for lines of the form: 'New Revision: 39772'. Then, extract all numers and add them up.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<div class="tex2jax_ignore mathjax_ignore section" id="end-of-notebook">
+<h1>(End of Notebook)<a class="headerlink" href="#end-of-notebook" title="Permalink to this headline">¶</a></h1>
+<p>© 2020-2021 - <strong>TU/e</strong> - Eindhoven University of Technology</p>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming.git",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+        &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
