@@ -26,7 +26,7 @@ for line in file:
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_7048/77165198.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_8152/77165198.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mfile[0m [0;34m=[0m [0mopen[0m[0;34m([0m[0;34m'datasets/mbox-short.txt'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m[1;32m      2[0m [0;34m[0m[0m
 [1;32m      3[0m [0;32mfor[0m [0mline[0m [0;32min[0m [0mfile[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m

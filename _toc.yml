@@ -21,4 +21,5 @@ chapters:
 - file: chapters/11_data_preparation.ipynb
 - file: chapters/12_tuples_sets.ipynb
 - file: chapters/13_comprehensions_generators.ipynb
+- file: chapters/14_regular_expressions.ipynb
 # - file: markdown-notebooks
