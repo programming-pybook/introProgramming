@@ -17,14 +17,22 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-letter = bike[1.5]
+file = open('datasets/mbox-short.txt')
+
+for line in file:
+    line: str = line.rstrip()
+    print(line)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mTypeError[0m                                 Traceback (most recent call last)
-[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_3245/2702017940.py[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mletter[0m [0;34m=[0m [0mbike[0m[0;34m[[0m[0;36m1.5[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;31mTypeError[0m: string indices must be integers
-TypeError: string indices must be integers
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_8152/77165198.py[0m in [0;36m<module>[0;34m[0m
+[0;32m----> 1[0;31m [0mfile[0m [0;34m=[0m [0mopen[0m[0;34m([0m[0;34m'datasets/mbox-short.txt'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      2[0m [0;34m[0m[0m
+[1;32m      3[0m [0;32mfor[0m [0mline[0m [0;32min[0m [0mfile[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      4[0m     [0mline[0m[0;34m:[0m [0mstr[0m [0;34m=[0m [0mline[0m[0;34m.[0m[0mrstrip[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      5[0m     [0mprint[0m[0;34m([0m[0mline[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'datasets/mbox-short.txt'
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/mbox-short.txt'
 

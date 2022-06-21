@@ -17,14 +17,20 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-letter = bike[1.5]
+ns_list : list = [3, 5, 2, 7, 'abc', 1, 'xyz']
+ns_list.sort()
+
+ns_list
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mTypeError[0m                                 Traceback (most recent call last)
-[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_3245/2702017940.py[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mletter[0m [0;34m=[0m [0mbike[0m[0;34m[[0m[0;36m1.5[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;31mTypeError[0m: string indices must be integers
-TypeError: string indices must be integers
+[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_5669/1551801728.py[0m in [0;36m<module>[0;34m[0m
+[1;32m      1[0m [0mns_list[0m [0;34m:[0m [0mlist[0m [0;34m=[0m [0;34m[[0m[0;36m3[0m[0;34m,[0m [0;36m5[0m[0;34m,[0m [0;36m2[0m[0;34m,[0m [0;36m7[0m[0;34m,[0m [0;34m'abc'[0m[0;34m,[0m [0;36m1[0m[0;34m,[0m [0;34m'xyz'[0m[0;34m][0m[0;34m[0m[0;34m[0m[0m
+[0;32m----> 2[0;31m [0mns_list[0m[0;34m.[0m[0msort[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      3[0m [0;34m[0m[0m
+[1;32m      4[0m [0mns_list[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mTypeError[0m: '<' not supported between instances of 'str' and 'int'
+TypeError: '<' not supported between instances of 'str' and 'int'
 
