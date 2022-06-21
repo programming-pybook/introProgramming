@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="18. Classes and Functions" href="17_classes_functions.html" />
+    <link rel="next" title="17. Classes and Functions" href="17_classes_functions.html" />
     <link rel="prev" title="15. Version Control Systems &amp; Git" href="15_vcs.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -183,7 +183,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="17_classes_functions.html">
-   18. Classes and Functions
+   17. Classes and Functions
   </a>
  </li>
 </ul>
@@ -293,72 +293,50 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   16. Classes and Objects
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programmer-defined-types">
+   16.1. 2. Programmer-defined Types
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#table-of-contents">
-     16.1. Table of Contents
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     16.2. 1. Introduction
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#programmer-defined-types">
-     16.3. 2. Programmer-defined Types
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#attributes">
-     16.4. 3. Attributes
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-init-method">
-     16.5. 4. The
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       init
-      </span>
-     </code>
-     Method
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rectangles">
-     16.6. 5. Rectangles
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     16.7. 5. Classes and Objects
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#instances-as-return-values">
-     16.8. 6. Instances as Return Values
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#objects-are-mutable">
-     16.9. 7. Objects are Mutable
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copying">
-     16.10. 8. Copying
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#end-of-notebook">
-   17. (End of Notebook)
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   16.2. Attributes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-init-method">
+   16.3. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     init
+    </span>
+   </code>
+   Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rectangles">
+   16.4. Rectangles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   16.5. Classes and Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instances-as-return-values">
+   16.6. Instances as Return Values
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objects-are-mutable">
+   16.7. Objects are Mutable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copying">
+   16.8. Copying
   </a>
  </li>
 </ul>
@@ -371,7 +349,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Classes and Objects</h1>
+                <h1>Classes and Objects </h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -381,72 +359,50 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   16. Classes and Objects
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programmer-defined-types">
+   16.1. 2. Programmer-defined Types
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#table-of-contents">
-     16.1. Table of Contents
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction">
-     16.2. 1. Introduction
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#programmer-defined-types">
-     16.3. 2. Programmer-defined Types
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#attributes">
-     16.4. 3. Attributes
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-init-method">
-     16.5. 4. The
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       init
-      </span>
-     </code>
-     Method
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#rectangles">
-     16.6. 5. Rectangles
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     16.7. 5. Classes and Objects
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#instances-as-return-values">
-     16.8. 6. Instances as Return Values
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#objects-are-mutable">
-     16.9. 7. Objects are Mutable
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#copying">
-     16.10. 8. Copying
-    </a>
-   </li>
-  </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#end-of-notebook">
-   17. (End of Notebook)
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   16.2. Attributes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-init-method">
+   16.3. The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     init
+    </span>
+   </code>
+   Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rectangles">
+   16.4. Rectangles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   16.5. Classes and Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instances-as-return-values">
+   16.6. Instances as Return Values
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objects-are-mutable">
+   16.7. Objects are Mutable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copying">
+   16.8. Copying
   </a>
  </li>
 </ul>
@@ -459,49 +415,14 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="classes-and-objects">
-<h1><span class="section-number">16. </span>Classes and Objects<a class="headerlink" href="#classes-and-objects" title="Permalink to this headline">¶</a></h1>
-<p>This Jupyter Notebook is based on Chapter 15 of the book Think Python.</p>
-<p><em>(c) 2020, Mark van den Brand, Eindhoven University of Technology</em></p>
-<div class="section" id="table-of-contents">
-<h2><span class="section-number">16.1. </span>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
-<div class="toc" style="margin-top: 1em;">
-    <ul class="toc-item">
-        <li>
-            <span><a href="#1.-Introduction" data-toc-modified-id="1.-Introduction">1. Introduction</a></span>
-        </li>
-        <li>
-            <span><a href="#2.-Programmer-defined-Types" data-toc-modified-id="2.-Programmer-defined-Types">2. Programmer-defined Types</a></span>
-        </li>
-        <li>
-            <span><a href="#3.-Attributes" data-toc-modified-id="3.-Attributes">3. Attributes</a></span>
-        </li>
-        <li>
-            <span><a href="#4.-Rectangles" data-toc-modified-id="4.-Rectangles">4. Rectangles</a></span>
-        </li>
-        <li>
-            <span><a href="#5.-Classes-and-Objects" data-toc-modified-id="5.-Classes-and-Objects">5. Classes and Objects</a></span>
-        </li>
-        <li>
-            <span><a href="#6.-Instances-as-Return-Values" data-toc-modified-id="6.-Instances-as-Return-Values">6. Instances as Return Values</a></span>
-        </li>
-        <li>
-            <span><a href="#7.-Objects-are-Mutable" data-toc-modified-id="7.-Objects-are-Mutable">7. Objects are Mutable</a></span>
-        </li>
-        <li>
-            <span><a href="#8.-Copying" data-toc-modified-id="8.-Copying">8. Copying</a></span>
-        </li>
-    </ul>
-</div></div>
-<div class="section" id="introduction">
-<h2><span class="section-number">16.2. </span>1. Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<h1><span class="section-number">16. </span>Classes and Objects <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#classes-and-objects" title="Permalink to this headline">¶</a></h1>
 <p>There are multiple programming paradigms: <strong>imperative</strong>, <strong>logical</strong>, <strong>functional</strong>, and <strong>object-oriented</strong>, the logical and functional way of programming is sometimes called <strong>declarative</strong>.</p>
 <p>So far, we have seen the imperative way of programming; creating data structures, and developing functions that manipulate the data structures.</p>
 <p>We will graduately introduce concepts from <strong>object-oriented</strong> programming.</p>
 <p>The idea of object-oriented programming is to bring code and data closer together; this will increase the level of abstraction and facilitates encapsulation of data.</p>
 <p>Object-oriented (OO) paradigm enables information hiding, the underlying structure is invisible and the programmer can use, among others, so-called <em>getters</em> and <em>setters</em> to manipulate the data.</p>
-</div>
 <div class="section" id="programmer-defined-types">
-<h2><span class="section-number">16.3. </span>2. Programmer-defined Types<a class="headerlink" href="#programmer-defined-types" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.1. </span>2. Programmer-defined Types<a class="headerlink" href="#programmer-defined-types" title="Permalink to this headline">¶</a></h2>
 <p>We have seen and used a number of built-in types of Python.</p>
 <p>We are now going to define our own types.</p>
 <p>We will start by creating a type called <code class="docutils literal notranslate"><span class="pre">Point</span></code> that represents a point in a two-dimensional space.</p>
@@ -526,10 +447,11 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 </div>
 </div>
 <p>A new class <code class="docutils literal notranslate"><span class="pre">Point</span></code> has been introduced.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Define the class <i>Dog</i>, which represents a dog (obviously). Include a docstring with the description of the class.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Define the class <em>Dog</em>, which represents a dog (obviously). Include a docstring with the description of the class.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -562,7 +484,7 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f9aa02662b0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fa5f0286be0&gt;
 </pre></div>
 </div>
 </div>
@@ -571,10 +493,11 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 <p>Creating a new object is called <strong>instantiation</strong>, and the object is an <strong>instance</strong> of the class.</p>
 <p>When you print an instance, Python tells you what class it belongs to and where it is stored in memory.</p>
 <p>Every object is an instance of some class, so “object” and “instance” are interchangeable.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Create an instance of a Dog and assign its value to a the variable <i>doggy</i>.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create an instance of a Dog and assign its value to a the variable <code class="docutils literal notranslate"><span class="pre">doggy</span></code>.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -583,7 +506,7 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 </div>
 </div>
 <div class="section" id="attributes">
-<h2><span class="section-number">16.4. </span>3. Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.2. </span>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
 <p>The class <code class="docutils literal notranslate"><span class="pre">Point</span></code> we have created in the previous section is not really useful.</p>
 <p>The next step is to assign values to an instance of the class <code class="docutils literal notranslate"><span class="pre">Point</span></code>.</p>
 <div class="cell docutils container">
@@ -614,7 +537,13 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 </table>
 <p>The variable <code class="docutils literal notranslate"><span class="pre">pnt</span></code> refers to a Point object, which contains two attributes.</p>
 <p>Each attribute refers to a floating-point number.</p>
-<p><strong>[EXTRA]</strong> Python is a dynamically typed language. This means you do not need to define the types of variables explicitly, Python will deduced them for you and report if there are inconsistencies. The <strong>attributes</strong> of a class do not need to be declared explicitly when creating a class.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Python is a dynamically typed language. This means you do not need to define the types of variables explicitly, Python will deduced them for you and report if there are inconsistencies. The <strong>attributes</strong> of a class do not need to be declared explicitly when creating a class.</p>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pnt</span><span class="o">.</span><span class="n">z</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">5.0</span>
@@ -622,10 +551,11 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Add the attributes <i>name</i> and <i>breed</i> to the object doggy refers to. Set the values you prefer.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Add the attributes <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">breed</span></code> to the object doggy refers to. Set the values you prefer.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -705,10 +635,11 @@ they live in 2 different worlds.</p>
 </div>
 </div>
 <p>Inside the function, <code class="docutils literal notranslate"><span class="pre">p</span></code> is an alias for <code class="docutils literal notranslate"><span class="pre">pnt</span></code>, so if the function modifies <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">pnt</span></code> changes.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Create a function <i>print_dog(dog: Dog) -> None</i> that prints a message with the attributes of the dog. Use the dot notation to access the attributes of the dog object. Print a message that says: "This dog is called <i>name</i> and it is a <i>breed</i>". Use the doggy variable to verify the effect of your function.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create a function <code class="docutils literal notranslate"><span class="pre">print_dog(dog:</span> <span class="pre">Dog)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></code> that prints a message with the attributes of the dog. Use the dot notation to access the attributes of the dog object. Print a message that says: “This dog is called <i>name</i> and it is a <i>breed</i>”. Use the doggy variable to verify the effect of your function.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -717,7 +648,7 @@ they live in 2 different worlds.</p>
 </div>
 </div>
 <div class="section" id="the-init-method">
-<h2><span class="section-number">16.5. </span>4. The <code class="docutils literal notranslate"><span class="pre">init</span></code> Method<a class="headerlink" href="#the-init-method" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.3. </span>The <code class="docutils literal notranslate"><span class="pre">init</span></code> Method<a class="headerlink" href="#the-init-method" title="Permalink to this headline">¶</a></h2>
 <p>The init method (short for “initialization”) is a special method that gets invoked when an
 object is created. Its full name is <code class="docutils literal notranslate"><span class="pre">__init__</span></code> (two underscore characters, followed by
 init, and then two more underscores).</p>
@@ -740,7 +671,7 @@ init, and then two more underscores).</p>
 </div>
 </div>
 <div class="section" id="rectangles">
-<h2><span class="section-number">16.6. </span>5. Rectangles<a class="headerlink" href="#rectangles" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.4. </span>Rectangles<a class="headerlink" href="#rectangles" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes it is obvious what the attributes of an object should be, but other times you have to make decisions.</p>
 <p>For example, imagine you are designing a class to represent rectangles.</p>
 <p>What attributes would you use to specify the location and size of a rectangle?</p>
@@ -771,11 +702,18 @@ init, and then two more underscores).</p>
 </div>
 </div>
 <p>The docstring lists the attributes: <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> are numbers; <code class="docutils literal notranslate"><span class="pre">corner</span></code> is a <code class="docutils literal notranslate"><span class="pre">Point</span></code> object that specifies the lower-left corner.</p>
-<p><strong>[EXTRA]</strong> Remember that Python is dynamically typed, the mentioning of the attributes in the docstring is not same as declaring them.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Declare a new class called <i>DogOwner</i>. This class will have the following attributes: name, last_name, age, and dog. Include the docstring that describes this class.
-</div><div class="cell docutils container">
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Remember that Python is dynamically typed, the mentioning of the attributes in the docstring is not same as declaring them.</p>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Declare a new class called <i>DogOwner</i>. This class will have the following attributes: name, last_name, age, and dog. Include the docstring that describes this class.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -824,10 +762,11 @@ init, and then two more underscores).</p>
 </table>
 <p>The figure shows the layout of this object.</p>
 <p>An object that is an attribute of another object is <strong>embedded</strong>.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Create a new dog owner and assign values to all of its attributes. Do not forget to assign values to his or her dog attributes!
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create a new dog owner and assign values to all of its attributes. Do not forget to assign values to his or her dog attributes!</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -835,8 +774,8 @@ init, and then two more underscores).</p>
 </div>
 </div>
 </div>
-<div class="section" id="id1">
-<h2><span class="section-number">16.7. </span>5. Classes and Objects<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id2">
+<h2><span class="section-number">16.5. </span>Classes and Objects<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Every class in Python is <em>derived</em> from the class <code class="docutils literal notranslate"><span class="pre">object</span></code>, so every <em>instance</em> of every class is an <code class="docutils literal notranslate"><span class="pre">object</span></code>.</p>
 <p>The class <code class="docutils literal notranslate"><span class="pre">object</span></code> is a <em>superclass</em> of class <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>, and class <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> is a <em>subclass</em> of class <code class="docutils literal notranslate"><span class="pre">object</span></code>.</p>
 <p>Class <code class="docutils literal notranslate"><span class="pre">object</span></code> has the following <em>attributes</em> (attributes are elements inside a class that refer to methods, functions, variables, or even other classes).</p>
@@ -946,10 +885,11 @@ class Rectangle(builtins.object)
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Use the function <i>help()</i> to display the documentation of the class DogOwner.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Use the function <code class="docutils literal notranslate"><span class="pre">help()</span></code> to display the documentation of the class DogOwner.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -958,7 +898,7 @@ class Rectangle(builtins.object)
 </div>
 </div>
 <div class="section" id="instances-as-return-values">
-<h2><span class="section-number">16.8. </span>6. Instances as Return Values<a class="headerlink" href="#instances-as-return-values" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.6. </span>Instances as Return Values<a class="headerlink" href="#instances-as-return-values" title="Permalink to this headline">¶</a></h2>
 <p>Functions can return instances.</p>
 <p>The function <code class="docutils literal notranslate"><span class="pre">find_center</span></code> takes a <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> as an argument
 and returns a <code class="docutils literal notranslate"><span class="pre">Point</span></code> that contains the coordinates of the center of the Rectangle.</p>
@@ -990,10 +930,11 @@ and returns a <code class="docutils literal notranslate"><span class="pre">Point
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Create the function `add_dog_lastname(owner: DogOwner) -> Dog`, which modifies the name of the dog by concatenating the last name of the owner to it. For example, if the dog's name is "Scooby" and the owner's last name is "Doo", the new name of the dog should be "Scooby Doo". Return the modified instance of the dog.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create the function <code class="docutils literal notranslate"><span class="pre">add_dog_lastname(owner:</span> <span class="pre">DogOwner)</span> <span class="pre">-&gt;</span> <span class="pre">Dog</span></code>, which modifies the name of the dog by concatenating the last name of the owner to it. For example, if the dog’s name is “Scooby” and the owner’s last name is “Doo”, the new name of the dog should be “Scooby Doo”. Return the modified instance of the dog.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -1002,7 +943,7 @@ and returns a <code class="docutils literal notranslate"><span class="pre">Point
 </div>
 </div>
 <div class="section" id="objects-are-mutable">
-<h2><span class="section-number">16.9. </span>7. Objects are Mutable<a class="headerlink" href="#objects-are-mutable" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.7. </span>Objects are Mutable<a class="headerlink" href="#objects-are-mutable" title="Permalink to this headline">¶</a></h2>
 <p>You can change the state of an object by making an assignment to one of its attributes.</p>
 <p>It is possible to change the size of a rectangle without changing its position.</p>
 <p>In the cell below, the <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> are adapted.</p>
@@ -1052,10 +993,11 @@ height =  400.0
 </div>
 <p>Because <code class="docutils literal notranslate"><span class="pre">rect</span></code> is an alias for <code class="docutils literal notranslate"><span class="pre">box</span></code>, so if the function modifies <code class="docutils literal notranslate"><span class="pre">rect</span></code>, <code class="docutils literal notranslate"><span class="pre">box</span></code>
 changes as well.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Create the function `celebrate_birthday(owner : DogOwner)`, which adds 1 year to the age of the dog's owner. Do not return the new owner. Call the function and pass an instance of a DogOwner. Use the <i>print()</i> function to see how the attributes of the object have changes.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create the function <code class="docutils literal notranslate"><span class="pre">celebrate_birthday(owner</span> <span class="pre">:</span> <span class="pre">DogOwner)</span></code>, which adds 1 year to the age of the dog’s owner. Do not return the new owner. Call the function and pass an instance of a DogOwner. Use the <i>print()</i> function to see how the attributes of the object have changes.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -1064,7 +1006,7 @@ changes as well.</p>
 </div>
 </div>
 <div class="section" id="copying">
-<h2><span class="section-number">16.10. </span>8. Copying<a class="headerlink" href="#copying" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">16.8. </span>Copying<a class="headerlink" href="#copying" title="Permalink to this headline">¶</a></h2>
 <p>Aliasing can make a program difficult to read, it may even be dangerous, because changes in one place might have unexpected effects in another place.</p>
 <p>It is hard to keep track of all the variables that might
 refer to a given object and being changed unindented.</p>
@@ -1220,7 +1162,7 @@ objects.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_8727/1791905913.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_9048/1791905913.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="nd">@Mark</span><span class="p">:</span> <span class="n">make</span> <span class="n">a</span> <span class="n">view</span> <span class="n">cells</span> <span class="n">on</span> <span class="n">the</span> <span class="n">effect</span> <span class="n">of</span> <span class="n">changing</span> <span class="n">copies</span><span class="o">.</span>
          <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -1228,22 +1170,24 @@ objects.</p>
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Create a dog owner instance, then create two copies of it: i) a shallow copy; and ii) a deep copy. Compare the dogs of the copies against the original dog with the <i>is</i> operator. What is the difference between both cases?
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create a dog owner instance, then create two copies of it: i) a shallow copy; and ii) a deep copy. Compare the dogs of the copies against the original dog with the <i>is</i> operator. What is the difference between both cases?</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 15 of <span id="id3">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Downey, 2015</a>]</span>.</p>
+</dd>
+</dl>
 </div>
-</div>
-<hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="end-of-notebook">
-<h1><span class="section-number">17. </span>(End of Notebook)<a class="headerlink" href="#end-of-notebook" title="Permalink to this headline">¶</a></h1>
-<p>© 2020-2021 - <strong>TU/e</strong> - Eindhoven University of Technology</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -1281,7 +1225,7 @@ objects.</p>
     <a class='right-next' id="next-link" href="17_classes_functions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">18. </span>Classes and Functions</p>
+        <p class="prev-next-title"><span class="section-number">17. </span>Classes and Functions</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
