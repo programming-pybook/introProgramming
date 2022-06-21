@@ -260,209 +260,185 @@ const thebe_selector_output = ".output, .cell_output"
             </div>
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   11. Data Preparation
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access-a-class-anchor-id-access-a">
+   11.1. Data Access
+   <a class="anchor" id="access">
+   </a>
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#table-of-contents">
-     11.1. Table of Contents
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction-a-class-anchor-id-introduction-a">
-     11.2. 1. Introduction
-     <a class="anchor" id="introduction">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-access-a-class-anchor-id-access-a">
-     11.3. 2. Data Access
-     <a class="anchor" id="access">
-     </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-formats">
+     11.1.1. File Formats
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#file-formats">
-       11.3.1. File Formats
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#plain-text">
-         11.3.1.1. Plain Text
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#comma-separated-values-csv">
-         11.3.1.2. Comma-Separated Values (CSV)
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#javascript-object-notation-json">
-         11.3.1.3. JavaScript Object Notation (JSON)
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#extensible-markup-language-xml">
-         11.3.1.4. Extensible Markup Language (XML)
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-cleanse-a-class-anchor-id-cleanse-a">
-     11.4. 3. Data Cleanse
-     <a class="anchor" id="cleanse">
-     </a>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#erroneous-data">
-       11.4.1. Erroneous Data
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plain-text">
+       11.1.1.1. Plain Text
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#missing-values">
-       11.4.2. Missing Values
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#comma-separated-values-csv">
+       11.1.1.2. Comma-Separated Values (CSV)
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#value-formats">
-       11.4.3. Value Formats
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#javascript-object-notation-json">
+       11.1.1.3. JavaScript Object Notation (JSON)
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sensitive-data">
-       11.4.4. Sensitive Data
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#extensible-markup-language-xml">
+       11.1.1.4. Extensible Markup Language (XML)
       </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-integration-a-class-anchor-id-integration-a">
-     11.5. 4. Data Integration
-     <a class="anchor" id="integration">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-transformation-a-class-anchor-id-transformation-a">
-     11.6. 5. Data Transformation
-     <a class="anchor" id="transformation">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-airbnb-case-a-class-anchor-id-airbnb-a">
-     11.7. 6. The Airbnb Case
-     <a class="anchor" id="airbnb">
-     </a>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       11.7.1. Data Preparation
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r1-access-the-listings-csv-file">
-         11.7.1.1. R1. Access the
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           listings.csv
-          </span>
-         </code>
-         file
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r2-access-the-reviews-csv-file">
-         11.7.1.2. R2. Access the
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           reviews.csv
-          </span>
-         </code>
-         file
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r3-represent-the-listings-dataset-as-a-dictionary-of-dictionaries">
-         11.7.1.3. R3. Represent the listings dataset as a dictionary of dictionaries
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r4-count-the-number-of-reviews-of-a-listing">
-         11.7.1.4. R4. Count the number of reviews of a listing
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r5-add-the-number-of-reviews-variable-to-the-listings-dataset">
-         11.7.1.5. R5. Add the number of reviews variable to the listings dataset
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r6-remove-non-reviewed-listings">
-         11.7.1.6. R6. Remove non-reviewed listings
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r7-replace-empty-rating-values-by-1">
-         11.7.1.7. R7. Replace empty rating values by -1
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r8-change-the-data-types-of-the-accommodates-price-and-review-scores-rating-to-numeric">
-         11.7.1.8. R8. Change the data types of the
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           accommodates
-          </span>
-         </code>
-         ,
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           price
-          </span>
-         </code>
-         , and
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           review_scores_rating
-          </span>
-         </code>
-         to numeric
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r9-remove-the-district-variable">
-         11.7.1.9. R9. Remove the district variable
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#apply-r7-r8-and-r9">
-         11.7.1.10. Apply R7, R8, and R9
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r10-store-the-prepared-dataset">
-         11.7.1.11. R10. Store the prepared dataset
-        </a>
-       </li>
-      </ul>
      </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#end-of-notebook">
-   12. (End of Notebook)
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-cleanse-a-class-anchor-id-cleanse-a">
+   11.2. Data Cleanse
+   <a class="anchor" id="cleanse">
+   </a>
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#erroneous-data">
+     11.2.1. Erroneous Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#missing-values">
+     11.2.2. Missing Values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#value-formats">
+     11.2.3. Value Formats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sensitive-data">
+     11.2.4. Sensitive Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-integration-a-class-anchor-id-integration-a">
+   11.3. Data Integration
+   <a class="anchor" id="integration">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-transformation-a-class-anchor-id-transformation-a">
+   11.4. Data Transformation
+   <a class="anchor" id="transformation">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-airbnb-case-a-class-anchor-id-airbnb-a">
+   11.5. The Airbnb Case
+   <a class="anchor" id="airbnb">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     11.5.1. Data Preparation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r1-access-the-listings-csv-file">
+       11.5.1.1. R1. Access the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         listings.csv
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r2-access-the-reviews-csv-file">
+       11.5.1.2. R2. Access the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         reviews.csv
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r3-represent-the-listings-dataset-as-a-dictionary-of-dictionaries">
+       11.5.1.3. R3. Represent the listings dataset as a dictionary of dictionaries
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r4-count-the-number-of-reviews-of-a-listing">
+       11.5.1.4. R4. Count the number of reviews of a listing
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r5-add-the-number-of-reviews-variable-to-the-listings-dataset">
+       11.5.1.5. R5. Add the number of reviews variable to the listings dataset
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r6-remove-non-reviewed-listings">
+       11.5.1.6. R6. Remove non-reviewed listings
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r7-replace-empty-rating-values-by-1">
+       11.5.1.7. R7. Replace empty rating values by -1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r8-change-the-data-types-of-the-accommodates-price-and-review-scores-rating-to-numeric">
+       11.5.1.8. R8. Change the data types of the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         accommodates
+        </span>
+       </code>
+       ,
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         price
+        </span>
+       </code>
+       , and
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         review_scores_rating
+        </span>
+       </code>
+       to numeric
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r9-remove-the-district-variable">
+       11.5.1.9. R9. Remove the district variable
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#apply-r7-r8-and-r9">
+       11.5.1.10. Apply R7, R8, and R9
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r10-store-the-prepared-dataset">
+       11.5.1.11. R10. Store the prepared dataset
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -474,7 +450,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Data Preparation</h1>
+                <h1>Data Preparation </h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -484,209 +460,185 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#">
-   11. Data Preparation
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access-a-class-anchor-id-access-a">
+   11.1. Data Access
+   <a class="anchor" id="access">
+   </a>
   </a>
-  <ul class="visible nav section-nav flex-column">
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#table-of-contents">
-     11.1. Table of Contents
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#introduction-a-class-anchor-id-introduction-a">
-     11.2. 1. Introduction
-     <a class="anchor" id="introduction">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-access-a-class-anchor-id-access-a">
-     11.3. 2. Data Access
-     <a class="anchor" id="access">
-     </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-formats">
+     11.1.1. File Formats
     </a>
     <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#file-formats">
-       11.3.1. File Formats
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#plain-text">
-         11.3.1.1. Plain Text
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#comma-separated-values-csv">
-         11.3.1.2. Comma-Separated Values (CSV)
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#javascript-object-notation-json">
-         11.3.1.3. JavaScript Object Notation (JSON)
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#extensible-markup-language-xml">
-         11.3.1.4. Extensible Markup Language (XML)
-        </a>
-       </li>
-      </ul>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-cleanse-a-class-anchor-id-cleanse-a">
-     11.4. 3. Data Cleanse
-     <a class="anchor" id="cleanse">
-     </a>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#erroneous-data">
-       11.4.1. Erroneous Data
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plain-text">
+       11.1.1.1. Plain Text
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#missing-values">
-       11.4.2. Missing Values
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#comma-separated-values-csv">
+       11.1.1.2. Comma-Separated Values (CSV)
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#value-formats">
-       11.4.3. Value Formats
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#javascript-object-notation-json">
+       11.1.1.3. JavaScript Object Notation (JSON)
       </a>
      </li>
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#sensitive-data">
-       11.4.4. Sensitive Data
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#extensible-markup-language-xml">
+       11.1.1.4. Extensible Markup Language (XML)
       </a>
-     </li>
-    </ul>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-integration-a-class-anchor-id-integration-a">
-     11.5. 4. Data Integration
-     <a class="anchor" id="integration">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#data-transformation-a-class-anchor-id-transformation-a">
-     11.6. 5. Data Transformation
-     <a class="anchor" id="transformation">
-     </a>
-    </a>
-   </li>
-   <li class="toc-h2 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-airbnb-case-a-class-anchor-id-airbnb-a">
-     11.7. 6. The Airbnb Case
-     <a class="anchor" id="airbnb">
-     </a>
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#id1">
-       11.7.1. Data Preparation
-      </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r1-access-the-listings-csv-file">
-         11.7.1.1. R1. Access the
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           listings.csv
-          </span>
-         </code>
-         file
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r2-access-the-reviews-csv-file">
-         11.7.1.2. R2. Access the
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           reviews.csv
-          </span>
-         </code>
-         file
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r3-represent-the-listings-dataset-as-a-dictionary-of-dictionaries">
-         11.7.1.3. R3. Represent the listings dataset as a dictionary of dictionaries
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r4-count-the-number-of-reviews-of-a-listing">
-         11.7.1.4. R4. Count the number of reviews of a listing
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r5-add-the-number-of-reviews-variable-to-the-listings-dataset">
-         11.7.1.5. R5. Add the number of reviews variable to the listings dataset
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r6-remove-non-reviewed-listings">
-         11.7.1.6. R6. Remove non-reviewed listings
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r7-replace-empty-rating-values-by-1">
-         11.7.1.7. R7. Replace empty rating values by -1
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r8-change-the-data-types-of-the-accommodates-price-and-review-scores-rating-to-numeric">
-         11.7.1.8. R8. Change the data types of the
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           accommodates
-          </span>
-         </code>
-         ,
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           price
-          </span>
-         </code>
-         , and
-         <code class="docutils literal notranslate">
-          <span class="pre">
-           review_scores_rating
-          </span>
-         </code>
-         to numeric
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r9-remove-the-district-variable">
-         11.7.1.9. R9. Remove the district variable
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#apply-r7-r8-and-r9">
-         11.7.1.10. Apply R7, R8, and R9
-        </a>
-       </li>
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#r10-store-the-prepared-dataset">
-         11.7.1.11. R10. Store the prepared dataset
-        </a>
-       </li>
-      </ul>
      </li>
     </ul>
    </li>
   </ul>
  </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#end-of-notebook">
-   12. (End of Notebook)
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-cleanse-a-class-anchor-id-cleanse-a">
+   11.2. Data Cleanse
+   <a class="anchor" id="cleanse">
+   </a>
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#erroneous-data">
+     11.2.1. Erroneous Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#missing-values">
+     11.2.2. Missing Values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#value-formats">
+     11.2.3. Value Formats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sensitive-data">
+     11.2.4. Sensitive Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-integration-a-class-anchor-id-integration-a">
+   11.3. Data Integration
+   <a class="anchor" id="integration">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-transformation-a-class-anchor-id-transformation-a">
+   11.4. Data Transformation
+   <a class="anchor" id="transformation">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-airbnb-case-a-class-anchor-id-airbnb-a">
+   11.5. The Airbnb Case
+   <a class="anchor" id="airbnb">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     11.5.1. Data Preparation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r1-access-the-listings-csv-file">
+       11.5.1.1. R1. Access the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         listings.csv
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r2-access-the-reviews-csv-file">
+       11.5.1.2. R2. Access the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         reviews.csv
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r3-represent-the-listings-dataset-as-a-dictionary-of-dictionaries">
+       11.5.1.3. R3. Represent the listings dataset as a dictionary of dictionaries
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r4-count-the-number-of-reviews-of-a-listing">
+       11.5.1.4. R4. Count the number of reviews of a listing
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r5-add-the-number-of-reviews-variable-to-the-listings-dataset">
+       11.5.1.5. R5. Add the number of reviews variable to the listings dataset
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r6-remove-non-reviewed-listings">
+       11.5.1.6. R6. Remove non-reviewed listings
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r7-replace-empty-rating-values-by-1">
+       11.5.1.7. R7. Replace empty rating values by -1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r8-change-the-data-types-of-the-accommodates-price-and-review-scores-rating-to-numeric">
+       11.5.1.8. R8. Change the data types of the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         accommodates
+        </span>
+       </code>
+       ,
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         price
+        </span>
+       </code>
+       , and
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         review_scores_rating
+        </span>
+       </code>
+       to numeric
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r9-remove-the-district-variable">
+       11.5.1.9. R9. Remove the district variable
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#apply-r7-r8-and-r9">
+       11.5.1.10. Apply R7, R8, and R9
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r10-store-the-prepared-dataset">
+       11.5.1.11. R10. Store the prepared dataset
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -698,28 +650,8 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="data-preparation">
-<h1><span class="section-number">11. </span>Data Preparation<a class="headerlink" href="#data-preparation" title="Permalink to this headline">¶</a></h1>
-<p>This Jupyter Notebook is based on Chapter 3 of the book “Data Preparation for Data Mining” by Dorian Pyle.</p>
-<p>Other relevant references:</p>
-<ul class="simple">
-<li><p>Kwak, S. K., &amp; Kim, J. H. (2017). <em>Statistical Data Preparation: Management of Missing Values and Outliers</em>. Korean journal of anesthesiology, 70(4), 407–411. DOI: 10.4097/kjae.2017.70.4.407. Find it <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5548942/pdf/kjae-70-407.pdf">here</a>.</p></li>
-<li><p>Saluja, C. (2018). <em>Data Preparation — A Crucial Step in Data Mining</em>. Medium. Find it <a class="reference external" href="https://medium.com/&#64;chhavi.saluja1401/data-preparation-a-crucial-step-in-data-mining-dba35772f281">here</a>.</p></li>
-<li><p>Tachepun, C. and Thammaboosadee, S. (2020). <em>A Data Masking Guideline for Optimizing Insights and Privacy Under GDPR Compliance</em>. In the 11th International Conference on Advances in Information Technology. ACM, New York, Article 22, 1–9. DOI: 10.1145/3406601.3406627. Find it <a class="reference external" href="https://dl.acm.org/doi/abs/10.1145/3406601.3406627">here</a>.</p></li>
-</ul>
+<h1><span class="section-number">11. </span>Data Preparation <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#data-preparation" title="Permalink to this headline">¶</a></h1>
 <p><em>(c) 2021, Lina Ochoa Venegas, Eindhoven University of Technology</em></p>
-<div class="section" id="table-of-contents">
-<h2><span class="section-number">11.1. </span>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="#introduction">1. Introduction</a></p></li>
-<li><p><a class="reference external" href="#access">2. Data Access</a></p></li>
-<li><p><a class="reference external" href="#cleanse">3. Data Cleanse</a></p></li>
-<li><p><a class="reference external" href="#integration">4. Data Integration</a></p></li>
-<li><p><a class="reference external" href="#transformation">5. Data Transformation</a></p></li>
-<li><p><a class="reference external" href="#airbnb">6. The Airbnb Case</a></p></li>
-</ul>
-</div>
-<div class="section" id="introduction-a-class-anchor-id-introduction-a">
-<h2><span class="section-number">11.2. </span>1. Introduction <a class="anchor" id="introduction"></a><a class="headerlink" href="#introduction-a-class-anchor-id-introduction-a" title="Permalink to this headline">¶</a></h2>
 <p>In the Exploratory Data Analysis (EDA) chapter, we mentioned the two main stages considered in a data science project. In this notebook, we will extend this workflow by adding a new stage, namely the <em>data preparation</em> stage. <strong>Data preparation</strong> is a critical stage within the data analysis process given that data should be structure in such a way that it eases the extraction of information and does not alter the expected results. It is required because there might be missing values, missing variables<sup>1</sup> that must be computed based on existing features, discrepancies in the levels of categorical variables, wrong data formats, erroneous observations, to name but a few. Thus, when analyzing data, we consider the following stages:</p>
 <ol class="simple">
 <li><p><strong>Data preparation:</strong> raw data is manipulated and transformed so further analysis can be performed atop of it to solve a domain problem.</p></li>
@@ -739,9 +671,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li><p><strong>Data transformation:</strong> normalizing, enriching, generalizing, or reducing the data.</p></li>
 </ul>
 <p>The application of each subprocess in a dataset will depend on the nature of the data and the domain problem to solve.</p>
-</div>
 <div class="section" id="data-access-a-class-anchor-id-access-a">
-<h2><span class="section-number">11.3. </span>2. Data Access <a class="anchor" id="access"></a><a class="headerlink" href="#data-access-a-class-anchor-id-access-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.1. </span>Data Access <a class="anchor" id="access"></a><a class="headerlink" href="#data-access-a-class-anchor-id-access-a" title="Permalink to this headline">¶</a></h2>
 <p>The data preparation stage begins with accessing and discovering the data. Evaluating if the data is correct and enough is part of the duties of a good data scientist. It must be clear:</p>
 <ul class="simple">
 <li><p>what was the <em>methodology</em> used to extract the data;</p></li>
@@ -755,10 +686,10 @@ const thebe_selector_output = ".output, .cell_output"
     <b>Data access</b><br>
     <p>Subprocess within the data analysis stage that focuses on accessing and discovering the data.<p>
 </div><div class="section" id="file-formats">
-<h3><span class="section-number">11.3.1. </span>File Formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.1.1. </span>File Formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">¶</a></h3>
 <p>There are a plethora of formats used to store both structured and unstructured data. Some of the most popular formats are <em>plain text (txt)</em>, <em>Comma-Separated Values (CSV)</em>, <em>JavaScript Object Notation (JSON)</em>, and <em>Extensible Markup Language (XML)</em>.</p>
 <div class="section" id="plain-text">
-<h4><span class="section-number">11.3.1.1. </span>Plain Text<a class="headerlink" href="#plain-text" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.1.1.1. </span>Plain Text<a class="headerlink" href="#plain-text" title="Permalink to this headline">¶</a></h4>
 <p>In the Files chapter, you had the opportunity to interact with <strong>plain text</strong> files–with the <code class="docutils literal notranslate"><span class="pre">.txt</span></code> extension–, representing characters written using a specific encoding such as ASCII or Unicode. An <strong>encoding</strong> is a system that represents each character as a number for digital representation. (Have a look at the <code class="docutils literal notranslate"><span class="pre">logs.txt</span></code> file.)</p>
 <p>You can use the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function and <code class="docutils literal notranslate"><span class="pre">with</span></code> statement in Python to interact with these types of files. The <code class="docutils literal notranslate"><span class="pre">with</span></code> statement simplifies and encapsulates the use of try-except-finally patterns–that -s, you do not need to write them explicitly, the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement does that for you! For more examples, check the Files chapter.</p>
 <div class="cell docutils container">
@@ -773,7 +704,7 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_3960</span><span class="o">/</span><span class="mf">1053339526.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_6797</span><span class="o">/</span><span class="mf">1053339526.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Read the first line of the log.txt file</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> 
 <span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
@@ -786,7 +717,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="comma-separated-values-csv">
-<h4><span class="section-number">11.3.1.2. </span>Comma-Separated Values (CSV)<a class="headerlink" href="#comma-separated-values-csv" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.1.1.2. </span>Comma-Separated Values (CSV)<a class="headerlink" href="#comma-separated-values-csv" title="Permalink to this headline">¶</a></h4>
 <p>The <strong>Comma-Separated Values (CSV)</strong> format–with the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> extension–uses a comma, semicolon, or another character to separate values in a file. Each line in the file reports a case or record, and each value within the record is an observation for a given variable. Each record should have the same number of observations. CSV files usually store rectangular data in plain text and they look as follows. (Also have a look at the <code class="docutils literal notranslate"><span class="pre">logs.csv</span></code> file.)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variable_1</span><span class="p">,</span> <span class="n">variable_2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">variable_n</span>
 <span class="n">row_1_value_1</span><span class="p">,</span> <span class="n">row_1_value_2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">row_1_value_n</span>
@@ -836,7 +767,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="javascript-object-notation-json">
-<h4><span class="section-number">11.3.1.3. </span>JavaScript Object Notation (JSON)<a class="headerlink" href="#javascript-object-notation-json" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.1.1.3. </span>JavaScript Object Notation (JSON)<a class="headerlink" href="#javascript-object-notation-json" title="Permalink to this headline">¶</a></h4>
 <p>The <strong>JavaScript Object Notation (JSON)</strong> is a file format–with the <code class="docutils literal notranslate"><span class="pre">.json</span></code> extension–used to store data objects represented as attribute-value pairs. We can think of it as an object that usually contains data in the form of lists and dictionaries. This format is specially popular when there is data transfer between web applications and servers. JSON files look as follows. (Also have a look at the <code class="docutils literal notranslate"><span class="pre">logs.json</span></code> file.)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="s2">&quot;key_1&quot;</span> <span class="p">:</span> <span class="p">{</span>
@@ -877,7 +808,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="extensible-markup-language-xml">
-<h4><span class="section-number">11.3.1.4. </span>Extensible Markup Language (XML)<a class="headerlink" href="#extensible-markup-language-xml" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.1.1.4. </span>Extensible Markup Language (XML)<a class="headerlink" href="#extensible-markup-language-xml" title="Permalink to this headline">¶</a></h4>
 <p>The Extensible Markup Language (XML) is a markup language and data format used to represent and store arbitrary data structures. The XML language was formalized in the World Wide Web Consortium’s XML 1.0 Specification of 1998. It consists of a set of structured <em>tags</em>, each one with zero or more <em>attributes</em>, and an <em>element</em> (characters in between the opening and ending tags). XML files look as follows. (Also have a look at the <code class="docutils literal notranslate"><span class="pre">logs.xml</span></code> file.)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">tag_1</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="n">tag_1_1</span> <span class="n">attr_1</span><span class="o">=</span><span class="s2">&quot;value_1&quot;</span> <span class="n">attr_2</span><span class="o">=</span><span class="s2">&quot;value_2&quot;</span> <span class="o">...&gt;</span>
@@ -908,7 +839,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="data-cleanse-a-class-anchor-id-cleanse-a">
-<h2><span class="section-number">11.4. </span>3. Data Cleanse <a class="anchor" id="cleanse"></a><a class="headerlink" href="#data-cleanse-a-class-anchor-id-cleanse-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.2. </span>Data Cleanse <a class="anchor" id="cleanse"></a><a class="headerlink" href="#data-cleanse-a-class-anchor-id-cleanse-a" title="Permalink to this headline">¶</a></h2>
 <p>The <strong>data cleanse</strong> stage is one of the most important parts of the data preparation process, mainly because is at this moment where faulty data and inconsistencies should be treated. If done incorrectly, the subsequent analysis might result in biased or inaccurate results. Some of the main tasks that should be carried on during the data cleanse stage include:</p>
 <ul class="simple">
 <li><p>removing <em>erroneous data</em>;</p></li>
@@ -921,7 +852,7 @@ const thebe_selector_output = ".output, .cell_output"
     <b>Data cleanse</b><br>
     <p>Subprocess within the data analysis stage that focuses on cleaning the data by treating faulty and inconsistent data.<p>
 </div><div class="section" id="erroneous-data">
-<h3><span class="section-number">11.4.1. </span>Erroneous Data<a class="headerlink" href="#erroneous-data" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.2.1. </span>Erroneous Data<a class="headerlink" href="#erroneous-data" title="Permalink to this headline">¶</a></h3>
 <p>When accessing your data, you might encounter noisy or wrong values, duplicated records, or even irrelevant observations.</p>
 <ul class="simple">
 <li><p><strong>Noisy or wrong values</strong> can be detected by checking that all values of a given variable are contained within the accepted <em>domain</em> of that variable. If not, you need to isolate and analyze these cases. Which values do they have? Do you need to redefine the domain of the variable? Or on the contrary, do you need to remove the record because the data is erroneous? Can you still keep the record and replace the faulty value with a default value, so you do not lose information relevant to other variables? All these questions and many more must be considered when deciding how to deal with noisy or wrong values in your data. Additionally, some outliers might be placed in this category. But beware! Not all outliers are faulty data. You need to further analyze them to draw a valid conclusion.</p></li>
@@ -930,15 +861,15 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 </div>
 <div class="section" id="missing-values">
-<h3><span class="section-number">11.4.2. </span>Missing Values<a class="headerlink" href="#missing-values" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.2.2. </span>Missing Values<a class="headerlink" href="#missing-values" title="Permalink to this headline">¶</a></h3>
 <p>Information loss and dropouts or nonresponses are typical causes of missing values. The former usually happens as a consequence of varying accuracy and precision of the different data sources used to extract the dataset; the latter appears when conducting studies that involve surveys or interviews. It is not rare to face cases where certain values are missed in the process of measuring and formatting data. It is up to you as a data scientist to decide how to deal with these cases. The options are pretty similar to the ones you have when dealing with noisy or wrong values; you can decide to ignore these observations and remove them from the dataset or replace them with a default value. If you opt for the latter, you need to carefully decide which is the default value you will be using, is it the mean, the median, a prediction, or a flag (like <code class="docutils literal notranslate"><span class="pre">-1</span></code> or <code class="docutils literal notranslate"><span class="pre">NaN</span></code>) that indicates that the value is missing?</p>
 </div>
 <div class="section" id="value-formats">
-<h3><span class="section-number">11.4.3. </span>Value Formats<a class="headerlink" href="#value-formats" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.2.3. </span>Value Formats<a class="headerlink" href="#value-formats" title="Permalink to this headline">¶</a></h3>
 <p>It is not rare to face observations containing the right data but the wrong format. This is particularly frequent when dealing with dates or timestamps: the format might be different among different records. To properly process this data you will need to define a standard and modify all values accordingly. Each variable must have a specific format, and all values within that variable should comply with it. Be as meticulous as possible when dealing with these cases; even forgetting about capitalizing a word or adding an extra space that does not comply with your format will make you lose a lot of time and effort!</p>
 </div>
 <div class="section" id="sensitive-data">
-<h3><span class="section-number">11.4.4. </span>Sensitive Data<a class="headerlink" href="#sensitive-data" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">11.2.4. </span>Sensitive Data<a class="headerlink" href="#sensitive-data" title="Permalink to this headline">¶</a></h3>
 <p>As a data scientist, you have a big responsibility when dealing with private data. During the last decades, we have witnessed the rise of international regulations–such as the General Data Protection Regulation (<a class="reference external" href="https://gdpr.eu/what-is-gdpr/">GDPR</a>)–that enforces certain security practices to protect the rights and privacy of people involved in data gathering studies. Therefore, sensitive data should be masked in your dataset. <strong>Data masking</strong> is the process of hiding data in the original dataset. It can be performed using <strong>pseudonymization</strong> or <strong>anonymization</strong> (Tachepun, 2020). In the former, data is kept private by transforming it into another form. Some of the techniques used to pseudonymize data are:</p>
 <ul class="simple">
 <li><p><strong>Encryption:</strong> plain text data is encoded in ciphertext format. To do so a key and algorithm are used.</p></li>
@@ -954,7 +885,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="data-integration-a-class-anchor-id-integration-a">
-<h2><span class="section-number">11.5. </span>4. Data Integration <a class="anchor" id="integration"></a><a class="headerlink" href="#data-integration-a-class-anchor-id-integration-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.3. </span>Data Integration <a class="anchor" id="integration"></a><a class="headerlink" href="#data-integration-a-class-anchor-id-integration-a" title="Permalink to this headline">¶</a></h2>
 <p>The <strong>data integration</strong> stage is required when dealing with multiple data sources. These independent data sources can be merged or joined together. The main issues faced during this stage involve dealing with:</p>
 <ul class="simple">
 <li><p><strong>Schema integration:</strong> you should be able to merge the schemas of the different data sources into one schema.</p></li>
@@ -966,7 +897,7 @@ const thebe_selector_output = ".output, .cell_output"
     <p>Subprocess within the data analysis stage that focuses on merging or joining multiple data sources.<p>
 </div></div>
 <div class="section" id="data-transformation-a-class-anchor-id-transformation-a">
-<h2><span class="section-number">11.6. </span>5. Data Transformation <a class="anchor" id="transformation"></a><a class="headerlink" href="#data-transformation-a-class-anchor-id-transformation-a" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">11.4. </span>Data Transformation <a class="anchor" id="transformation"></a><a class="headerlink" href="#data-transformation-a-class-anchor-id-transformation-a" title="Permalink to this headline">¶</a></h2>
 <p>The <strong>data transformation</strong> stage involves modifying the existing data to <em>normalize</em>, <em>enrich</em>, <em>generalize</em>, or <em>reduce</em> it.</p>
 <ul class="simple">
 <li><p><strong>Data normalization:</strong> mapping values in the original range of a variable into an output range. Beware that depending on the chosen method distortion or bias might be introduced in the data.</p></li>
@@ -979,8 +910,8 @@ const thebe_selector_output = ".output, .cell_output"
     <p>Subprocess within the data analysis stage that normalizes, enriches, generalizes, or reduces the data at hand.<p>
 </div></div>
 <div class="section" id="the-airbnb-case-a-class-anchor-id-airbnb-a">
-<h2><span class="section-number">11.7. </span>6. The Airbnb Case <a class="anchor" id="airbnb"></a><a class="headerlink" href="#the-airbnb-case-a-class-anchor-id-airbnb-a" title="Permalink to this headline">¶</a></h2>
-<img src="assets/airbnb.jpeg" alt="Airbnb" width="500"/>
+<h2><span class="section-number">11.5. </span>The Airbnb Case <a class="anchor" id="airbnb"></a><a class="headerlink" href="#the-airbnb-case-a-class-anchor-id-airbnb-a" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="../_images/airbnb.jpeg"><img alt="Airbnb" class="align-center" src="../_images/airbnb.jpeg" style="width: 500px;" /></a>
 <div style="text-align:center">
     <span style="font-size:0.9em; font-weight: bold;">The Airbnb case.</span>
 </div>
@@ -1047,8 +978,8 @@ const thebe_selector_output = ".output, .cell_output"
 </tr>
 </tbody>
 </table>
-<div class="section" id="id1">
-<h3><span class="section-number">11.7.1. </span>Data Preparation<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3><span class="section-number">11.5.1. </span>Data Preparation<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>In this opportunity, we are in charge of preparing the data for the coming data analysis stages. To do so, we have identified some requirements defined as follows.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1113,7 +1044,7 @@ const thebe_selector_output = ".output, .cell_output"
 </table>
 <p>Hereafter, we will use Python to address each of these requirements.</p>
 <div class="section" id="r1-access-the-listings-csv-file">
-<h4><span class="section-number">11.7.1.1. </span>R1. Access the <code class="docutils literal notranslate"><span class="pre">listings.csv</span></code> file<a class="headerlink" href="#r1-access-the-listings-csv-file" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.5.1.1. </span>R1. Access the <code class="docutils literal notranslate"><span class="pre">listings.csv</span></code> file<a class="headerlink" href="#r1-access-the-listings-csv-file" title="Permalink to this headline">¶</a></h4>
 <p>We open the <code class="docutils literal notranslate"><span class="pre">listings.csv</span></code> file and we print its header and the first two rows to see its content.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1126,7 +1057,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="r2-access-the-reviews-csv-file">
-<h4><span class="section-number">11.7.1.2. </span>R2. Access the <code class="docutils literal notranslate"><span class="pre">reviews.csv</span></code> file<a class="headerlink" href="#r2-access-the-reviews-csv-file" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.5.1.2. </span>R2. Access the <code class="docutils literal notranslate"><span class="pre">reviews.csv</span></code> file<a class="headerlink" href="#r2-access-the-reviews-csv-file" title="Permalink to this headline">¶</a></h4>
 <p>As we did before, we open now the <code class="docutils literal notranslate"><span class="pre">reviews.csv</span></code> file and we print its header and the first two rows to see its content.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1139,7 +1070,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="r3-represent-the-listings-dataset-as-a-dictionary-of-dictionaries">
-<h4><span class="section-number">11.7.1.3. </span>R3. Represent the listings dataset as a dictionary of dictionaries<a class="headerlink" href="#r3-represent-the-listings-dataset-as-a-dictionary-of-dictionaries" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.5.1.3. </span>R3. Represent the listings dataset as a dictionary of dictionaries<a class="headerlink" href="#r3-represent-the-listings-dataset-as-a-dictionary-of-dictionaries" title="Permalink to this headline">¶</a></h4>
 <p>After reading the CVS file we will transform it into a dictionary of dictionaries. The keys of the parent dictionary will be the listing IDs. Regarding the keys of the nested dictionaries, they will be named as the remaining variables of the dataset. The file has some strange characters that cannot be read properly, that is why we have added the <code class="docutils literal notranslate"><span class="pre">encoding='utf8',</span> <span class="pre">errors='ignore'</span></code> arguments to the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function; all erroneous characters will be ignored.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1176,7 +1107,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="r4-count-the-number-of-reviews-of-a-listing">
-<h4><span class="section-number">11.7.1.4. </span>R4. Count the number of reviews of a listing<a class="headerlink" href="#r4-count-the-number-of-reviews-of-a-listing" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.5.1.4. </span>R4. Count the number of reviews of a listing<a class="headerlink" href="#r4-count-the-number-of-reviews-of-a-listing" title="Permalink to this headline">¶</a></h4>
 <p>We want to aggregate the data of the reviews–that is, we want to count the total number of reviews for each listing. For that, we create the function <code class="docutils literal notranslate"><span class="pre">agggregate_reviews()</span></code> with takes the <code class="docutils literal notranslate"><span class="pre">reviews.csv</span></code> path as a parameter and returns a dictionary where the key represents the listing ID and the value represents the number of reviews.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1205,11 +1136,11 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="r5-add-the-number-of-reviews-variable-to-the-listings-dataset">
-<h4><span class="section-number">11.7.1.5. </span>R5. Add the number of reviews variable to the listings dataset<a class="headerlink" href="#r5-add-the-number-of-reviews-variable-to-the-listings-dataset" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.5.1.5. </span>R5. Add the number of reviews variable to the listings dataset<a class="headerlink" href="#r5-add-the-number-of-reviews-variable-to-the-listings-dataset" title="Permalink to this headline">¶</a></h4>
 <p>We will enrich the listings dataset with the aggregated reviews–that is, we will add a new key (a.k.a <code class="docutils literal notranslate"><span class="pre">reviews</span></code>) to the nested dictionaries. This new item will display the number of reviews associated with the listing.</p>
 </div>
 <div class="section" id="r6-remove-non-reviewed-listings">
-<h4><span class="section-number">11.7.1.6. </span>R6. Remove non-reviewed listings<a class="headerlink" href="#r6-remove-non-reviewed-listings" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.5.1.6. </span>R6. Remove non-reviewed listings<a class="headerlink" href="#r6-remove-non-reviewed-listings" title="Permalink to this headline">¶</a></h4>
 <p>We only care about listings with reviews. The other observations will be excluded in the data analysis stages. Thus, we need to remove all these cases from the data.</p>
 <p><strong>Note:</strong> to favor performance, we will comply with both requirements (R5 and R6) in the following code cell.</p>
 <div class="cell docutils container">
@@ -1246,7 +1177,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="r7-replace-empty-rating-values-by-1">
-<h4><span class="section-number">11.7.1.7. </span>R7. Replace empty rating values by -1<a class="headerlink" href="#r7-replace-empty-rating-values-by-1" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.5.1.7. </span>R7. Replace empty rating values by -1<a class="headerlink" href="#r7-replace-empty-rating-values-by-1" title="Permalink to this headline">¶</a></h4>
 <p>Given a nested listing dictionary, we aim at replacing all empty rating values with -1. For that purpose, we define the function <code class="docutils literal notranslate"><span class="pre">replace_empty_rating()</span></code>, which takes a nested listing dictionary and modifies it accordingly. This function will be used later.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1266,7 +1197,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="r8-change-the-data-types-of-the-accommodates-price-and-review-scores-rating-to-numeric">
-<h4><span class="section-number">11.7.1.8. </span>R8. Change the data types of the <code class="docutils literal notranslate"><span class="pre">accommodates</span></code>, <code class="docutils literal notranslate"><span class="pre">price</span></code>, and <code class="docutils literal notranslate"><span class="pre">review_scores_rating</span></code> to numeric<a class="headerlink" href="#r8-change-the-data-types-of-the-accommodates-price-and-review-scores-rating-to-numeric" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.5.1.8. </span>R8. Change the data types of the <code class="docutils literal notranslate"><span class="pre">accommodates</span></code>, <code class="docutils literal notranslate"><span class="pre">price</span></code>, and <code class="docutils literal notranslate"><span class="pre">review_scores_rating</span></code> to numeric<a class="headerlink" href="#r8-change-the-data-types-of-the-accommodates-price-and-review-scores-rating-to-numeric" title="Permalink to this headline">¶</a></h4>
 <p>Now, we would like to modify the types of the <code class="docutils literal notranslate"><span class="pre">accommodates</span></code>, <code class="docutils literal notranslate"><span class="pre">price</span></code>, and <code class="docutils literal notranslate"><span class="pre">review_scores_rating</span></code> to integer values. Thus, we define the function <code class="docutils literal notranslate"><span class="pre">change_data_types()</span></code>, which takes a nested listing dictionary and modifies it accordingly. This function will be used later.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1285,7 +1216,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="r9-remove-the-district-variable">
-<h4><span class="section-number">11.7.1.9. </span>R9. Remove the district variable<a class="headerlink" href="#r9-remove-the-district-variable" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.5.1.9. </span>R9. Remove the district variable<a class="headerlink" href="#r9-remove-the-district-variable" title="Permalink to this headline">¶</a></h4>
 <p>Lastly, we have seen that the <code class="docutils literal notranslate"><span class="pre">district</span></code> variable is error-prone–it has many empty values. We do not consider that this variable is relevant for our analysis. Therefore, we will remove it from the nested dictionaries. We define then the <code class="docutils literal notranslate"><span class="pre">remove_district_var()</span></code>, which modifies a nested listing accordingly. The function will be used later.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1300,7 +1231,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="apply-r7-r8-and-r9">
-<h4><span class="section-number">11.7.1.10. </span>Apply R7, R8, and R9<a class="headerlink" href="#apply-r7-r8-and-r9" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.5.1.10. </span>Apply R7, R8, and R9<a class="headerlink" href="#apply-r7-r8-and-r9" title="Permalink to this headline">¶</a></h4>
 <p>We will now use the functions defined previously to clean and transform our dataset.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1331,7 +1262,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="r10-store-the-prepared-dataset">
-<h4><span class="section-number">11.7.1.11. </span>R10. Store the prepared dataset<a class="headerlink" href="#r10-store-the-prepared-dataset" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">11.5.1.11. </span>R10. Store the prepared dataset<a class="headerlink" href="#r10-store-the-prepared-dataset" title="Permalink to this headline">¶</a></h4>
 <p>Finally, we will store the resulting dataset in a new CSV file, so we avoid performing the same cleaning every time we need to analyze the data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1363,14 +1294,15 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <p>We made it! The data is ready to be used for the EDA and confirmatory data analysis stages.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 3 of <span id="id3">[<a class="reference internal" href="../intro.html#id15" title="Dorian Pyle. Data Preparation for Data Mining. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edition, 1999. ISBN 1558605290.">Pyle, 1999</a>]</span>. <br> <strong>Relevant references:</strong> <br> Kwak, S. K., &amp; Kim, J. H. (2017). <em>Statistical Data Preparation: Management of Missing Values and Outliers</em>. Korean journal of anesthesiology, 70(4), 407–411. DOI: 10.4097/kjae.2017.70.4.407. Find it <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5548942/pdf/kjae-70-407.pdf">here</a>. <br> Saluja, C. (2018). <em>Data Preparation — A Crucial Step in Data Mining</em>. Medium. Find it <a class="reference external" href="https://medium.com/&#64;chhavi.saluja1401/data-preparation-a-crucial-step-in-data-mining-dba35772f281">here</a>.<br> Tachepun, C. and Thammaboosadee, S. (2020). <em>A Data Masking Guideline for Optimizing Insights and Privacy Under GDPR Compliance</em>. In the 11th International Conference on Advances in Information Technology. ACM, New York, Article 22, 1–9. DOI: 10.1145/3406601.3406627. Find it <a class="reference external" href="https://dl.acm.org/doi/abs/10.1145/3406601.3406627">here</a>.</p>
+</dd>
+</dl>
 </div>
 </div>
 </div>
-</div>
-<hr class="docutils" />
-<div class="tex2jax_ignore mathjax_ignore section" id="end-of-notebook">
-<h1><span class="section-number">12. </span>(End of Notebook)<a class="headerlink" href="#end-of-notebook" title="Permalink to this headline">¶</a></h1>
-<p>© 2021-2022 - <strong>TU/e</strong> - Eindhoven University of Technology</p>
 </div>
 
     <script type="text/x-thebe-config">
