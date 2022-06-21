@@ -20,4 +20,5 @@ chapters:
 - file: chapters/10_dictionaries.ipynb
 - file: chapters/11_data_preparation.ipynb
 - file: chapters/12_tuples_sets.ipynb
+- file: chapters/13_comprehensions_generators.ipynb
 # - file: markdown-notebooks
