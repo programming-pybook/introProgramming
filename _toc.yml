@@ -25,4 +25,6 @@ chapters:
 - file: chapters/15_vcs.ipynb
 - file: chapters/16_classes_objects.ipynb
 - file: chapters/17_classes_functions.ipynb
+- file: chapters/18_classes_methods.ipynb
+- file: chapters/19_inheritance.ipynb
 # - file: markdown-notebooks
