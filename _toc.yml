@@ -22,4 +22,7 @@ chapters:
 - file: chapters/12_tuples_sets.ipynb
 - file: chapters/13_comprehensions_generators.ipynb
 - file: chapters/14_regular_expressions.ipynb
+- file: chapters/15_vcs.ipynb
+- file: chapters/16_classes_objects.ipynb
+- file: chapters/17_classes_functions.ipynb
 # - file: markdown-notebooks
