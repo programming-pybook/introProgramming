@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inheritance &#8212; Introduction to Programming in Python</title>
+    <title>19. Inheritance &#8212; Introduction to Programming in Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,6 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="18. Classes and Methods" href="18_classes_methods.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -98,7 +99,7 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_programs.html">
    1. Introduction
@@ -182,6 +183,16 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="17_classes_functions.html">
    17. Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18_classes_methods.html">
+   18. Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   19. Inheritance
   </a>
  </li>
 </ul>
@@ -293,72 +304,72 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dish-objects">
-   Dish Objects
+   19.1. Dish Objects
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-attributes">
-   Class Attributes
+   19.2. Class Attributes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparing-dishes">
-   Comparing Dishes
+   19.3. Comparing Dishes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#meals">
-   Meals
+   19.4. Meals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#printing-a-meal">
-   Printing a Meal
+   19.5. Printing a Meal
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-remove-unique-and-surprise-me">
-   Add, Remove, Unique, and Surprise Me
+   19.6. Add, Remove, Unique, and Surprise Me
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   Inheritance
+   19.7. Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-second-example-of-inheritance">
-   A Second Example of Inheritance
+   19.8. A Second Example of Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-third-example-of-inheritance">
-   A Third Example of Inheritance
+   19.9. A Third Example of Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#different-forms-of-inheritance">
-   Different Forms of Inheritance
+   19.10. Different Forms of Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#method-overriding">
-   Method Overriding
+   19.11. Method Overriding
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#checking-inheritance">
-   Checking Inheritance
+   19.12. Checking Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-diagrams">
-   Class Diagrams
+   19.13. Class Diagrams
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-encapsulation">
-   Data Encapsulation
+   19.14. Data Encapsulation
   </a>
  </li>
 </ul>
@@ -383,72 +394,72 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#dish-objects">
-   Dish Objects
+   19.1. Dish Objects
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-attributes">
-   Class Attributes
+   19.2. Class Attributes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#comparing-dishes">
-   Comparing Dishes
+   19.3. Comparing Dishes
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#meals">
-   Meals
+   19.4. Meals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#printing-a-meal">
-   Printing a Meal
+   19.5. Printing a Meal
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#add-remove-unique-and-surprise-me">
-   Add, Remove, Unique, and Surprise Me
+   19.6. Add, Remove, Unique, and Surprise Me
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
-   Inheritance
+   19.7. Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-second-example-of-inheritance">
-   A Second Example of Inheritance
+   19.8. A Second Example of Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-third-example-of-inheritance">
-   A Third Example of Inheritance
+   19.9. A Third Example of Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#different-forms-of-inheritance">
-   Different Forms of Inheritance
+   19.10. Different Forms of Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#method-overriding">
-   Method Overriding
+   19.11. Method Overriding
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#checking-inheritance">
-   Checking Inheritance
+   19.12. Checking Inheritance
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#class-diagrams">
-   Class Diagrams
+   19.13. Class Diagrams
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-encapsulation">
-   Data Encapsulation
+   19.14. Data Encapsulation
   </a>
  </li>
 </ul>
@@ -461,14 +472,14 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="inheritance">
-<h1>Inheritance <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">19. </span>Inheritance <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#inheritance" title="Permalink to this headline">¶</a></h1>
 <p><strong>Inheritance</strong> is another important concept in the object oriented programming paradigm.</p>
 <p>Inheritance refers to defining a new class with little or no modification to an existing class.</p>
 <p>Inheritance is the ability to define a new class that is a modified version of an existing
 class without copy-and-pasting.</p>
 <p>This Jupyter Notebook contains <strong>much more</strong> material than Chapter 18 of the book <em>Think Python</em>.</p>
 <div class="section" id="dish-objects">
-<h2>Dish Objects<a class="headerlink" href="#dish-objects" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.1. </span>Dish Objects<a class="headerlink" href="#dish-objects" title="Permalink to this headline">¶</a></h2>
 <p>Healthy food is a hype. People pay a lot of attention to what they eat. It should be low on calories but nevertheless tasty.</p>
 <p>We are going to develop a number of classes to represent dishes and meals in order to see whether our calorie intake is just right (not too much, not too little).</p>
 <p>The types of meals we distinguish are <code class="docutils literal notranslate"><span class="pre">breakfast</span></code>, <code class="docutils literal notranslate"><span class="pre">lunch</span></code>, <code class="docutils literal notranslate"><span class="pre">dinner</span></code>, and <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p>
@@ -534,7 +545,7 @@ class without copy-and-pasting.</p>
 </div>
 </div>
 <div class="section" id="class-attributes">
-<h2>Class Attributes<a class="headerlink" href="#class-attributes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.2. </span>Class Attributes<a class="headerlink" href="#class-attributes" title="Permalink to this headline">¶</a></h2>
 <p>In order to print <code class="docutils literal notranslate"><span class="pre">Dish</span></code> objects in a way that people can easily read, we need a mapping
 from the integer codes to the corresponding meal and food types.</p>
 <p>A natural way to do that is with lists of strings. We assign these lists to <strong>class attribute</strong>.</p>
@@ -601,7 +612,7 @@ from the class <code class="docutils literal notranslate"><span class="pre">Dish
 </div>
 </div>
 <div class="section" id="comparing-dishes">
-<h2>Comparing Dishes<a class="headerlink" href="#comparing-dishes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.3. </span>Comparing Dishes<a class="headerlink" href="#comparing-dishes" title="Permalink to this headline">¶</a></h2>
 <p>For built-in types, there are relational operators (<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, etc.) that compare
 values and determine when one is greater than, less than, or equal to another.</p>
 <p>For programmer-defined types, we can override the behavior of the built-in operators by providing a method named <code class="docutils literal notranslate"><span class="pre">__lt__</span></code>, which stands for “less than”.</p>
@@ -654,7 +665,7 @@ do we only look at the amount of calories? Or do we take the meal into considera
 </div>
 </div>
 <div class="section" id="meals">
-<h2>Meals<a class="headerlink" href="#meals" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.4. </span>Meals<a class="headerlink" href="#meals" title="Permalink to this headline">¶</a></h2>
 <p>Now that we have dishes we can start composing meals.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -715,7 +726,7 @@ do we only look at the amount of calories? Or do we take the meal into considera
 </div>
 </div>
 <div class="section" id="printing-a-meal">
-<h2>Printing a Meal<a class="headerlink" href="#printing-a-meal" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.5. </span>Printing a Meal<a class="headerlink" href="#printing-a-meal" title="Permalink to this headline">¶</a></h2>
 <p>The next cell extends the class with a <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method for printing a <code class="docutils literal notranslate"><span class="pre">Meal</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -791,7 +802,7 @@ eggs
 </div>
 </div>
 <div class="section" id="add-remove-unique-and-surprise-me">
-<h2>Add, Remove, Unique, and Surprise Me<a class="headerlink" href="#add-remove-unique-and-surprise-me" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.6. </span>Add, Remove, Unique, and Surprise Me<a class="headerlink" href="#add-remove-unique-and-surprise-me" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes you want to remove a dish from a meal.</p>
 <p>The list method <code class="docutils literal notranslate"><span class="pre">remove</span></code> provides a convenient way to do that, but you need to pass the name
 of the dish.</p>
@@ -1061,14 +1072,14 @@ of dishes (arbitrary from the list of dishes).</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_9641</span><span class="o">/</span><span class="mf">1369122790.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_9864</span><span class="o">/</span><span class="mf">1369122790.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">     </span><span class="mi">47</span>             <span class="bp">self</span><span class="o">.</span><span class="n">add_dish</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">48</span> 
 <span class="ne">---&gt; </span><span class="mi">49</span> <span class="n">food_table</span> <span class="o">=</span> <span class="n">process_food_data</span><span class="p">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="n">meal</span> <span class="o">=</span> <span class="n">Meal</span><span class="p">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="n">meal</span><span class="o">.</span><span class="n">surprise_me</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 
-<span class="nn">/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_9641/3565547917.py</span> in <span class="ni">process_food_data</span><span class="nt">()</span>
+<span class="nn">/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_9864/3565547917.py</span> in <span class="ni">process_food_data</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span>         <span class="ow">and</span> <span class="n">the</span> <span class="n">value</span> <span class="ow">is</span> <span class="n">a</span> <span class="n">Dish</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="s2">&quot;&quot;&quot;</span>
 <span class="ne">----&gt; </span><span class="mi">7</span><span class="s2">     csv_file = open(&#39;datasets/FoodTable.csv&#39;)</span>
@@ -1093,7 +1104,7 @@ of dishes (arbitrary from the list of dishes).</p>
 </div>
 </div>
 <div class="section" id="id2">
-<h2>Inheritance<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.7. </span>Inheritance<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <p>Inheritance is the ability to define a new class that is a modified version of an existing class.</p>
 <p>As an example, suppose we want to distinguish between the general concept of a meal and a specific meal, such as
 breakfast, lunch and dinner.</p>
@@ -1223,7 +1234,7 @@ Plain yogurt, whole milk
 </div>
 </div>
 <div class="section" id="a-second-example-of-inheritance">
-<h2>A Second Example of Inheritance<a class="headerlink" href="#a-second-example-of-inheritance" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.8. </span>A Second Example of Inheritance<a class="headerlink" href="#a-second-example-of-inheritance" title="Permalink to this headline">¶</a></h2>
 <p>A polygon is a closed figure with 3 or more sides. A class called <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> can be defined as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1301,7 +1312,7 @@ Enter side 3 :  2
 </div>
 </div>
 <div class="section" id="a-third-example-of-inheritance">
-<h2>A Third Example of Inheritance<a class="headerlink" href="#a-third-example-of-inheritance" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.9. </span>A Third Example of Inheritance<a class="headerlink" href="#a-third-example-of-inheritance" title="Permalink to this headline">¶</a></h2>
 <p>Below is another simple example of inheritance in Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1449,7 +1460,7 @@ Notice that we do not pass the argument <code class="docutils literal notranslat
 </div>
 </div>
 <div class="section" id="different-forms-of-inheritance">
-<h2>Different Forms of Inheritance<a class="headerlink" href="#different-forms-of-inheritance" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.10. </span>Different Forms of Inheritance<a class="headerlink" href="#different-forms-of-inheritance" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p><strong>Single inheritance</strong>: When a child class inherits from only one parent class, it is called single inheritance. We saw an example above.</p></li>
 <li><p><strong>Multiple inheritance</strong>: When a child class inherits from multiple parent classes, it is called multiple inheritance. Unlike Java and like C++, Python supports multiple inheritance. We specify all parent classes as a comma-separated list in the bracket.</p></li>
@@ -1658,14 +1669,14 @@ Erik
 </div>
 </div>
 <div class="section" id="method-overriding">
-<h2>Method Overriding<a class="headerlink" href="#method-overriding" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.11. </span>Method Overriding<a class="headerlink" href="#method-overriding" title="Permalink to this headline">¶</a></h2>
 <p>In the above example, notice that <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method was defined in both classes <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code> as well <code class="docutils literal notranslate"><span class="pre">Meal</span></code>.</p>
 <p>When this happens, the method in the derived class <em>overrides</em> the one in the base class. This is to say, <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> in <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code> gets preference over the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> in <code class="docutils literal notranslate"><span class="pre">Meal</span></code>.</p>
 <p>Generally, when overriding a base method, we tend to extend the definition rather than replace it.</p>
 <p>The same is being done by calling the method in base class from the one in derived class (calling <code class="docutils literal notranslate"><span class="pre">Meal.__init__()</span></code> from <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> in <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code>).</p>
 </div>
 <div class="section" id="checking-inheritance">
-<h2>Checking Inheritance<a class="headerlink" href="#checking-inheritance" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.12. </span>Checking Inheritance<a class="headerlink" href="#checking-inheritance" title="Permalink to this headline">¶</a></h2>
 <p>Two built-in functions <code class="docutils literal notranslate"><span class="pre">isinstance()</span></code> and <code class="docutils literal notranslate"><span class="pre">issubclass()</span></code> are used to check inheritances.</p>
 <p>The function <code class="docutils literal notranslate"><span class="pre">isinstance()</span></code> returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the object is an instance of the class or other classes derived from it.</p>
 <p>Each and every class in Python inherits from the base class <code class="docutils literal notranslate"><span class="pre">object</span></code>.</p>
@@ -1767,7 +1778,7 @@ Erik
 </div>
 </div>
 <div class="section" id="class-diagrams">
-<h2>Class Diagrams<a class="headerlink" href="#class-diagrams" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.13. </span>Class Diagrams<a class="headerlink" href="#class-diagrams" title="Permalink to this headline">¶</a></h2>
 <p>A <strong>class diagram</strong> is an abstract representation of the structure of a program.</p>
 <p>It shows the classes and their relations.</p>
 <p>Class diagrams are extremely popular and used, among others, in UML (Unified Modeling Language).</p>
@@ -1813,7 +1824,7 @@ built-in types like list and dict are usually not included in class diagrams.</p
 <p>See <a class="reference external" href="https://en.wikipedia.org/wiki/Class_diagram">https://en.wikipedia.org/wiki/Class_diagram</a> for more information on UML class diagrams.</p>
 </div>
 <div class="section" id="data-encapsulation">
-<h2>Data Encapsulation<a class="headerlink" href="#data-encapsulation" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">19.14. </span>Data Encapsulation<a class="headerlink" href="#data-encapsulation" title="Permalink to this headline">¶</a></h2>
 <p>The previous chapters demonstrate a development plan we might call “object-oriented
 design”.
 We identified objects we needed – like <code class="docutils literal notranslate"><span class="pre">Point</span></code>, <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> and <code class="docutils literal notranslate"><span class="pre">Time</span></code> – and defined
@@ -1866,7 +1877,14 @@ by <strong>data encapsulation</strong>.</p>
               
             
                 <!-- Previous / next buttons -->
-<div class='prev-next-area'>
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="18_classes_methods.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span class="section-number">18. </span>Classes and Methods </p>
+        </div>
+    </a>
 </div>
             
         </div>
