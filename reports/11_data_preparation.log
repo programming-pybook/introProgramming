@@ -25,7 +25,7 @@ with open('datasets/logs.txt') as file:
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_6797/1053339526.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_2891/1053339526.py[0m in [0;36m<module>[0;34m[0m
 [1;32m      1[0m [0;31m# Read the first line of the log.txt file[0m[0;34m[0m[0;34m[0m[0m
 [1;32m      2[0m [0;34m[0m[0m
 [0;32m----> 3[0;31m [0;32mwith[0m [0mopen[0m[0;34m([0m[0;34m'datasets/logs.txt'[0m[0;34m)[0m [0;32mas[0m [0mfile[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
