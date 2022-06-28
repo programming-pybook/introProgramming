@@ -1,11 +1,8 @@
 # Introduction to Programming in Python
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
-
-Check out the content pages bundled with this sample book to see more.
+```{note}
+TODO: Missing introduction
+```
 
 ## Contributors
 * [Mark van den Brand](https://www.tue.nl/en/research/researchers/mark-van-den-brand/) (TU/e)
@@ -13,13 +10,13 @@ Check out the content pages bundled with this sample book to see more.
 * [Lina María Ochoa](https://lmove.github.io) (TU/e)
 * [Tom Verhoeff](https://www.win.tue.nl/~wstomv/) (TU/e)
 
-This book's content has been developed during the last five years, and it has been used for teaching different introductory courses for different academic programs such as Computer Science, Data Science, and Artificial Intelligence.
+This book's content has been developed during the last five years, and it has been used for teaching different introductory courses at Dutch universities for different academic programs such as Computer Science, Data Science, and Artificial Intelligence.
 
 ## Courses
 * Programming - JBI010 (joint bachelor Data Science, TU/Eindhoven & Tilburg University)
-* Introduction to Programming (PYTHON) -  X_401096 (bachelor VU Amsterdam)
-* Software Development for Engineers - 2IS50
-* Programming and modelling - 2WH20
+* Introduction to Programming (PYTHON) -  X_401096 (bachelor Artificial Intelligence, VU Amsterdam)
+* Software Development for Engineers - 2IS50, TU/Eindhoven
+* Programming and modelling - 2WH20, TU/Eindhoven
 
 ## Table of Contents
 ```{tableofcontents}
