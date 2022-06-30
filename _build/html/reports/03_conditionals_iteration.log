@@ -23,7 +23,7 @@ print('x is negative')
 print('Hello Data Scientists')
 ------------------
 
-[0;36m  File [0;32m"/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_2825/80713609.py"[0;36m, line [0;32m3[0m
+[0;36m  File [0;32m"/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_15622/80713609.py"[0;36m, line [0;32m3[0m
 [0;31m    print('x is negative')[0m
 [0m    ^[0m
 [0;31mIndentationError[0m[0;31m:[0m expected an indented block

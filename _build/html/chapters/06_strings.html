@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>6. Strings &#8212; Introduction to Programming in Python</title>
+    <title>Strings &#8212; Introduction to Programming in Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,8 +53,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="7. Exploratory Data Analysis (EDA)" href="07_eda.html" />
-    <link rel="prev" title="5. Functions" href="05_functions.html" />
+    <link rel="next" title="Files" href="08_files.html" />
+    <link rel="prev" title="Functions" href="05_functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -98,100 +98,112 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_programs.html">
-   1. Introduction
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02_assignments.html">
-   2. Variables, expressions and assignments
+   Variables, expressions and assignments
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_conditionals_iteration.html">
-   3. Conditionals and Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_computational_thinking.html">
-   4. Computational Thinking
+   Conditionals and Iteration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="05_functions.html">
-   5. Functions
+   Functions
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   6. Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="07_eda.html">
-   7. Exploratory Data Analysis (EDA)
+   Strings
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08_files.html">
-   8. Files
+   Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09_lists.html">
-   9. Lists
+   Lists
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10_dictionaries.html">
-   10. Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_data_preparation.html">
-   11. Data Preparation
+   Dictionaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12_tuples_sets.html">
-   12. Tuples and Sets
+   Tuples and Sets
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="13_comprehensions_generators.html">
-   13. Comprehensions and Generators
+   Comprehensions and Generators
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="14_regular_expressions.html">
-   14. Regular Expressions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="15_vcs.html">
-   15. Version Control Systems &amp; Git
+   Regular Expressions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="16_classes_objects.html">
-   16. Classes and Objects
+   Classes and Objects
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="17_classes_functions.html">
-   17. Classes and Functions
+   Classes and Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="18_classes_methods.html">
-   18. Classes and Methods
+   Classes and Methods
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="19_inheritance.html">
-   19. Inheritance
+   Inheritance
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_vcs.html">
+   Version Control Systems &amp; Git
   </a>
  </li>
 </ul>
@@ -305,17 +317,17 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-string">
-   6.1. What is a String?
+   What is a String?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#length-of-a-string">
-   6.2. Length of a String
+   Length of a String
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#traversal-with-a-for-loop">
-   6.3. Traversal with a
+   Traversal with a
    <code class="docutils literal notranslate">
     <span class="pre">
      for
@@ -326,27 +338,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#string-slices">
-   6.4. String Slices
+   String Slices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#strings-are-immutable">
-   6.5. Strings are Immutable
+   Strings are Immutable
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#searching">
-   6.6. Searching
+   Searching
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#looping-and-counting">
-   6.7. Looping and Counting
+   Looping and Counting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-in-operator">
-   6.8. The
+   The
    <code class="docutils literal notranslate">
     <span class="pre">
      in
@@ -357,32 +369,32 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#string-comparison">
-   6.9. String Comparison
+   String Comparison
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#string-methods">
-   6.10. String Methods
+   String Methods
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#format-operator">
-   6.11. Format Operator
+   Format Operator
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading-word-lists">
-   6.12. Reading Word Lists
+   Reading Word Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simple-examples">
-   6.13. Simple Examples
+   Simple Examples
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#frequent-string-related-errors">
-   6.14. Frequent string related errors
+   Frequent string related errors
   </a>
  </li>
 </ul>
@@ -407,17 +419,17 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#what-is-a-string">
-   6.1. What is a String?
+   What is a String?
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#length-of-a-string">
-   6.2. Length of a String
+   Length of a String
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#traversal-with-a-for-loop">
-   6.3. Traversal with a
+   Traversal with a
    <code class="docutils literal notranslate">
     <span class="pre">
      for
@@ -428,27 +440,27 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#string-slices">
-   6.4. String Slices
+   String Slices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#strings-are-immutable">
-   6.5. Strings are Immutable
+   Strings are Immutable
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#searching">
-   6.6. Searching
+   Searching
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#looping-and-counting">
-   6.7. Looping and Counting
+   Looping and Counting
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-in-operator">
-   6.8. The
+   The
    <code class="docutils literal notranslate">
     <span class="pre">
      in
@@ -459,32 +471,32 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#string-comparison">
-   6.9. String Comparison
+   String Comparison
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#string-methods">
-   6.10. String Methods
+   String Methods
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#format-operator">
-   6.11. Format Operator
+   Format Operator
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#reading-word-lists">
-   6.12. Reading Word Lists
+   Reading Word Lists
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#simple-examples">
-   6.13. Simple Examples
+   Simple Examples
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#frequent-string-related-errors">
-   6.14. Frequent string related errors
+   Frequent string related errors
   </a>
  </li>
 </ul>
@@ -497,9 +509,9 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="strings">
-<h1><span class="section-number">6. </span>Strings <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h1>
+<h1>Strings <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-is-a-string">
-<h2><span class="section-number">6.1. </span>What is a String?<a class="headerlink" href="#what-is-a-string" title="Permalink to this headline">¶</a></h2>
+<h2>What is a String?<a class="headerlink" href="#what-is-a-string" title="Permalink to this headline">¶</a></h2>
 <p>We have seen and used most of the language constructs Python offers.</p>
 <p>The next step in programming is how to represent data.</p>
 <p>We have seen so far a number of basic data types: integers, floats, and booleans.</p>
@@ -599,7 +611,7 @@ z
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_2858</span><span class="o">/</span><span class="mf">2702017940.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_15659</span><span class="o">/</span><span class="mf">2702017940.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">letter</span> <span class="o">=</span> <span class="n">bike</span><span class="p">[</span><span class="mf">1.5</span><span class="p">]</span>
 
 <span class="ne">TypeError</span>: string indices must be integers
@@ -620,7 +632,7 @@ z
 </div>
 </div>
 <div class="section" id="length-of-a-string">
-<h2><span class="section-number">6.2. </span>Length of a String<a class="headerlink" href="#length-of-a-string" title="Permalink to this headline">¶</a></h2>
+<h2>Length of a String<a class="headerlink" href="#length-of-a-string" title="Permalink to this headline">¶</a></h2>
 <p>There are more operations that we can apply on a sequence, such as calculating the length of a sequence (or string).</p>
 <p><code class="docutils literal notranslate"><span class="pre">len</span></code> is a built-in function to obtain the length of a sequence, and thus of a string.</p>
 <div class="cell docutils container">
@@ -666,7 +678,7 @@ z
 </div>
 </div>
 <div class="section" id="traversal-with-a-for-loop">
-<h2><span class="section-number">6.3. </span>Traversal with a <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#traversal-with-a-for-loop" title="Permalink to this headline">¶</a></h2>
+<h2>Traversal with a <code class="docutils literal notranslate"><span class="pre">for</span></code> Loop<a class="headerlink" href="#traversal-with-a-for-loop" title="Permalink to this headline">¶</a></h2>
 <p>Programs often involve processing a string by reading its characters one by one.</p>
 <p>Often they start at the beginning, select each character, do something to the selected character, and continue until the end of the string.</p>
 <p>This pattern of processing is called a <strong>traversal</strong> of a sequence (or string).</p>
@@ -748,7 +760,7 @@ to generate a list of names in alphabetical order.</p>
 </div>
 </div>
 <div class="section" id="string-slices">
-<h2><span class="section-number">6.4. </span>String Slices<a class="headerlink" href="#string-slices" title="Permalink to this headline">¶</a></h2>
+<h2>String Slices<a class="headerlink" href="#string-slices" title="Permalink to this headline">¶</a></h2>
 <p>We are now able to select individual characters of a string and to iterate over all characters of a string, but sometimes we want just a part (segment) of a string.</p>
 <p>A segment of a string is called a <strong>slice</strong>.</p>
 <p>A slice is obtained by giving a range of indices.</p>
@@ -814,7 +826,7 @@ by two quotation marks:</p>
 </div>
 </div>
 <div class="section" id="strings-are-immutable">
-<h2><span class="section-number">6.5. </span>Strings are Immutable<a class="headerlink" href="#strings-are-immutable" title="Permalink to this headline">¶</a></h2>
+<h2>Strings are Immutable<a class="headerlink" href="#strings-are-immutable" title="Permalink to this headline">¶</a></h2>
 <p>What is meant by <em>immutable</em>?</p>
 <p>It is not possible to use the <code class="docutils literal notranslate"><span class="pre">[]</span></code> operator on the left hand side of an assignment.</p>
 <p>It is not possible to change an existing string, strings are <strong>immutable</strong>.</p>
@@ -851,7 +863,7 @@ by two quotation marks:</p>
 </div>
 </div>
 <div class="section" id="searching">
-<h2><span class="section-number">6.6. </span>Searching<a class="headerlink" href="#searching" title="Permalink to this headline">¶</a></h2>
+<h2>Searching<a class="headerlink" href="#searching" title="Permalink to this headline">¶</a></h2>
 <p>Finding a specific element in a long list can be boring, in principle you have to inspect all elements until you find the element you are looking for.</p>
 <p>The next cell shows a few lines of code that mimicks this searching for an element by means of looking for a specific letter in a word.</p>
 <div class="cell docutils container">
@@ -928,7 +940,7 @@ are looking for— is called a <strong>search</strong>.</p>
 </div>
 </div>
 <div class="section" id="looping-and-counting">
-<h2><span class="section-number">6.7. </span>Looping and Counting<a class="headerlink" href="#looping-and-counting" title="Permalink to this headline">¶</a></h2>
+<h2>Looping and Counting<a class="headerlink" href="#looping-and-counting" title="Permalink to this headline">¶</a></h2>
 <p>The following program counts the number of times the letter <code class="docutils literal notranslate"><span class="pre">e</span></code> appears in a string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -960,7 +972,7 @@ are looking for— is called a <strong>search</strong>.</p>
 </div>
 </div>
 <div class="section" id="the-in-operator">
-<h2><span class="section-number">6.8. </span>The <code class="docutils literal notranslate"><span class="pre">in</span></code> Operator<a class="headerlink" href="#the-in-operator" title="Permalink to this headline">¶</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">in</span></code> Operator<a class="headerlink" href="#the-in-operator" title="Permalink to this headline">¶</a></h2>
 <p>The word <code class="docutils literal notranslate"><span class="pre">in</span></code> is a boolean operator that takes two strings and returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the first appears
 as a substring in the second.</p>
 <div class="cell docutils container">
@@ -1004,7 +1016,7 @@ as a substring in the second.</p>
 </div>
 </div>
 <div class="section" id="string-comparison">
-<h2><span class="section-number">6.9. </span>String Comparison<a class="headerlink" href="#string-comparison" title="Permalink to this headline">¶</a></h2>
+<h2>String Comparison<a class="headerlink" href="#string-comparison" title="Permalink to this headline">¶</a></h2>
 <p>An important operation on strings is checking whether strings are equal or not.
 If you have to search for a certain word in a text or dictionary you will need
 such an operation.</p>
@@ -1055,7 +1067,7 @@ all lowercase, before doing string comparison.</p>
 </div>
 </div>
 <div class="section" id="string-methods">
-<h2><span class="section-number">6.10. </span>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">¶</a></h2>
+<h2>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">¶</a></h2>
 <p>Strings are an example of a Python object.</p>
 <p>For now, an object is equivalente to a value.</p>
 <p>However, it has more information than a normal valuel. An object contains <em>data</em> and a set of <em>methods</em>.</p>
@@ -1131,7 +1143,7 @@ characters.</p>
 </div>
 </div>
 <div class="section" id="format-operator">
-<h2><span class="section-number">6.11. </span>Format Operator<a class="headerlink" href="#format-operator" title="Permalink to this headline">¶</a></h2>
+<h2>Format Operator<a class="headerlink" href="#format-operator" title="Permalink to this headline">¶</a></h2>
 <p>With the format operator <code class="docutils literal notranslate"><span class="pre">%</span></code> we can build a string by replacing parts of it with data stored in variables.</p>
 <p>Remember that when <code class="docutils literal notranslate"><span class="pre">%</span></code> is used with integers it is know as the modulus operator. When playing around with strings we call it the format operator.</p>
 <p>The first operand should always be a string containing <em>format sequences</em>. The second argument is one or more variables. If you have more than one variable they should be stores in a tuple (we will talk about this data type later).</p>
@@ -1197,7 +1209,7 @@ the string format method, which you can read about at
 </div>
 </div>
 <div class="section" id="reading-word-lists">
-<h2><span class="section-number">6.12. </span>Reading Word Lists<a class="headerlink" href="#reading-word-lists" title="Permalink to this headline">¶</a></h2>
+<h2>Reading Word Lists<a class="headerlink" href="#reading-word-lists" title="Permalink to this headline">¶</a></h2>
 <p>In one of the next lectures, file manipulation will be discussed, however we need to have a list of words.</p>
 <p>This file is in plain text, so you can open it with a text editor, but you can also read it from Python.</p>
 <p>The built-in function <code class="docutils literal notranslate"><span class="pre">open</span></code> takes the name of the file as a parameter and returns a
@@ -1253,7 +1265,7 @@ annoying and inconvenient.</p>
 </div>
 </div>
 <div class="section" id="simple-examples">
-<h2><span class="section-number">6.13. </span>Simple Examples<a class="headerlink" href="#simple-examples" title="Permalink to this headline">¶</a></h2>
+<h2>Simple Examples<a class="headerlink" href="#simple-examples" title="Permalink to this headline">¶</a></h2>
 <p>There are a number of exercises/examples in the book.</p>
 <p>The first is to print all words with a length greater than 20.</p>
 <p>A straightforward solution is to use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to iterate over the list of words, of course we first need to read the file with words.</p>
@@ -1359,7 +1371,7 @@ annoying and inconvenient.</p>
 </div>
 </div>
 <div class="section" id="frequent-string-related-errors">
-<h2><span class="section-number">6.14. </span>Frequent string related errors<a class="headerlink" href="#frequent-string-related-errors" title="Permalink to this headline">¶</a></h2>
+<h2>Frequent string related errors<a class="headerlink" href="#frequent-string-related-errors" title="Permalink to this headline">¶</a></h2>
 <p>One of the most frequently occurring and most expensive errors are the <strong>off-by-one</strong> errors.</p>
 <p>When traversing a sequence (string) it turns out to be very hard to get the indices right.</p>
 <p>Consider the following function that tests whether one word is the reverse of the other.</p>
@@ -1497,13 +1509,13 @@ annoying and inconvenient.</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">5. </span>Functions </p>
+            <p class="prev-next-title">Functions </p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="07_eda.html" title="next page">
+    <a class='right-next' id="next-link" href="08_files.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">7. </span>Exploratory Data Analysis (EDA) </p>
+        <p class="prev-next-title">Files </p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
