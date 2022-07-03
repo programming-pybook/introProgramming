@@ -22,7 +22,7 @@ end : Time = start.increment(1337, 460)
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mTypeError[0m                                 Traceback (most recent call last)
-[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_2934/4211679912.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_23489/4211679912.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mend[0m [0;34m:[0m [0mTime[0m [0;34m=[0m [0mstart[0m[0;34m.[0m[0mincrement[0m[0;34m([0m[0;36m1337[0m[0;34m,[0m [0;36m460[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mTypeError[0m: increment() takes 2 positional arguments but 3 were given

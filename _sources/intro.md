@@ -26,3 +26,7 @@ This book's content has been developed during the last five years, and it has be
 ```{bibliography}
 :style: unsrtalpha
 ```
+
+```{note}
+TODO: Missing license
+```

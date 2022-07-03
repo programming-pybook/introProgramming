@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>9. Lists &#8212; Introduction to Programming in Python</title>
+    <title>Lists &#8212; Introduction to Programming in Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -53,14 +53,22 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="10. Dictionaries" href="10_dictionaries.html" />
-    <link rel="prev" title="8. Files" href="08_files.html" />
+    <link rel="next" title="Dictionaries" href="10_dictionaries.html" />
+    <link rel="prev" title="Files" href="08_files.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
     
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -98,100 +106,112 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_programs.html">
-   1. Introduction
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02_assignments.html">
-   2. Variables, expressions and assignments
+   Variables, expressions and assignments
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_conditionals_iteration.html">
-   3. Conditionals and Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_computational_thinking.html">
-   4. Computational Thinking
+   Conditionals and Iteration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="05_functions.html">
-   5. Functions
+   Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="06_strings.html">
-   6. Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="07_eda.html">
-   7. Exploratory Data Analysis (EDA)
+   Strings
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08_files.html">
-   8. Files
+   Files
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   9. Lists
+   Lists
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10_dictionaries.html">
-   10. Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_data_preparation.html">
-   11. Data Preparation
+   Dictionaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12_tuples_sets.html">
-   12. Tuples and Sets
+   Tuples and Sets
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="13_comprehensions_generators.html">
-   13. Comprehensions and Generators
+   Comprehensions and Generators
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="14_regular_expressions.html">
-   14. Regular Expressions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="15_vcs.html">
-   15. Version Control Systems &amp; Git
+   Regular Expressions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="16_classes_objects.html">
-   16. Classes and Objects
+   Classes and Objects
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="17_classes_functions.html">
-   17. Classes and Functions
+   Classes and Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="18_classes_methods.html">
-   18. Classes and Methods
+   Classes and Methods
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="19_inheritance.html">
-   19. Inheritance
+   Inheritance
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_vcs.html">
+   Version Control Systems &amp; Git
   </a>
  </li>
 </ul>
@@ -305,67 +325,67 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-list-is-a-sequence">
-   9.1. A List is a Sequence
+   A List is a Sequence
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lists-are-mutable">
-   9.2. Lists are Mutable
+   Lists are Mutable
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#traversing-a-list">
-   9.3. Traversing a List
+   Traversing a List
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-operations">
-   9.4. List Operations
+   List Operations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-slices">
-   9.5. List Slices
+   List Slices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-methods">
-   9.6. List Methods
+   List Methods
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#map-filter-and-reduce">
-   9.7. Map, Filter and Reduce
+   Map, Filter and Reduce
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#deleting-elements">
-   9.8. Deleting Elements
+   Deleting Elements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lists-and-functions">
-   9.9. Lists and Functions
+   Lists and Functions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lists-and-strings">
-   9.10. Lists and Strings
+   Lists and Strings
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objects-and-values">
-   9.11. Objects and Values
+   Objects and Values
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aliasing">
-   9.12. Aliasing
+   Aliasing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-as-arguments">
-   9.13. List as Arguments
+   List as Arguments
   </a>
  </li>
 </ul>
@@ -390,67 +410,67 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-list-is-a-sequence">
-   9.1. A List is a Sequence
+   A List is a Sequence
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lists-are-mutable">
-   9.2. Lists are Mutable
+   Lists are Mutable
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#traversing-a-list">
-   9.3. Traversing a List
+   Traversing a List
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-operations">
-   9.4. List Operations
+   List Operations
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-slices">
-   9.5. List Slices
+   List Slices
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-methods">
-   9.6. List Methods
+   List Methods
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#map-filter-and-reduce">
-   9.7. Map, Filter and Reduce
+   Map, Filter and Reduce
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#deleting-elements">
-   9.8. Deleting Elements
+   Deleting Elements
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lists-and-functions">
-   9.9. Lists and Functions
+   Lists and Functions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lists-and-strings">
-   9.10. Lists and Strings
+   Lists and Strings
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#objects-and-values">
-   9.11. Objects and Values
+   Objects and Values
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#aliasing">
-   9.12. Aliasing
+   Aliasing
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#list-as-arguments">
-   9.13. List as Arguments
+   List as Arguments
   </a>
  </li>
 </ul>
@@ -463,9 +483,9 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="lists">
-<h1><span class="section-number">9. </span>Lists <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
+<h1>Lists <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="a-list-is-a-sequence">
-<h2><span class="section-number">9.1. </span>A List is a Sequence<a class="headerlink" href="#a-list-is-a-sequence" title="Permalink to this headline">¶</a></h2>
+<h2>A List is a Sequence<a class="headerlink" href="#a-list-is-a-sequence" title="Permalink to this headline">¶</a></h2>
 <p>Like a string, a list is a sequence of in principle <em>arbitrary</em> values, as we have seen with <em>string</em>s.</p>
 <p>In a string, the values are characters; in a list,
 they can be any type.</p>
@@ -562,7 +582,7 @@ they can be any type.</p>
 </div>
 </div>
 <div class="section" id="lists-are-mutable">
-<h2><span class="section-number">9.2. </span>Lists are Mutable<a class="headerlink" href="#lists-are-mutable" title="Permalink to this headline">¶</a></h2>
+<h2>Lists are Mutable<a class="headerlink" href="#lists-are-mutable" title="Permalink to this headline">¶</a></h2>
 <p>In contrast to strings, list elements can be changed.</p>
 <p>The syntax for accessing elements of a list is the same as for accessing characters of a string: the bracket operator.</p>
 <p>The expression inside the brackets is the index of the list element.</p>
@@ -672,7 +692,7 @@ they can be any type.</p>
 </div>
 </div>
 <div class="section" id="traversing-a-list">
-<h2><span class="section-number">9.3. </span>Traversing a List<a class="headerlink" href="#traversing-a-list" title="Permalink to this headline">¶</a></h2>
+<h2>Traversing a List<a class="headerlink" href="#traversing-a-list" title="Permalink to this headline">¶</a></h2>
 <p>The most common way of traversing a list is by means of using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
 <p>The syntax is the same as for strings.</p>
 <div class="margin sidebar">
@@ -772,7 +792,7 @@ Specialized
 </div>
 </div>
 <div class="section" id="list-operations">
-<h2><span class="section-number">9.4. </span>List Operations<a class="headerlink" href="#list-operations" title="Permalink to this headline">¶</a></h2>
+<h2>List Operations<a class="headerlink" href="#list-operations" title="Permalink to this headline">¶</a></h2>
 <p>A few useful list operations are <code class="docutils literal notranslate"><span class="pre">+</span></code> and <code class="docutils literal notranslate"><span class="pre">*</span></code>.</p>
 <p>Actually, we have seen these operations for strings as well.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">+</span></code> operator concatenates two lists as it happens with strings.</p>
@@ -807,7 +827,7 @@ Specialized
 </div>
 </div>
 <div class="section" id="list-slices">
-<h2><span class="section-number">9.5. </span>List Slices<a class="headerlink" href="#list-slices" title="Permalink to this headline">¶</a></h2>
+<h2>List Slices<a class="headerlink" href="#list-slices" title="Permalink to this headline">¶</a></h2>
 <p>Similar to strings it is also possible to take a slice of a list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -896,7 +916,7 @@ However, beware, this changes the list. If you do not want this, make a copy.</p
 </div>
 </div>
 <div class="section" id="list-methods">
-<h2><span class="section-number">9.6. </span>List Methods<a class="headerlink" href="#list-methods" title="Permalink to this headline">¶</a></h2>
+<h2>List Methods<a class="headerlink" href="#list-methods" title="Permalink to this headline">¶</a></h2>
 <p>Python provides methods that operate on lists. For example, <code class="docutils literal notranslate"><span class="pre">append</span></code> adds a new element
 to the end of a list.</p>
 <div class="cell docutils container">
@@ -1040,7 +1060,7 @@ to the end of a list.</p>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_2879</span><span class="o">/</span><span class="mf">1551801728.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_23409</span><span class="o">/</span><span class="mf">1551801728.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">ns_list</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="s1">&#39;abc&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;xyz&#39;</span><span class="p">]</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">ns_list</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> 
@@ -1087,7 +1107,7 @@ to the end of a list.</p>
 </div>
 </div>
 <div class="section" id="map-filter-and-reduce">
-<h2><span class="section-number">9.7. </span>Map, Filter and Reduce<a class="headerlink" href="#map-filter-and-reduce" title="Permalink to this headline">¶</a></h2>
+<h2>Map, Filter and Reduce<a class="headerlink" href="#map-filter-and-reduce" title="Permalink to this headline">¶</a></h2>
 <p>We have seen in the previous section a number of operations that can be applied to lists.</p>
 <p>We will continue discussing a number of operations that can be applied to the elements of a list.</p>
 <p>Suppose you want to add all numerical values of a list. You would probably write the following function
@@ -1192,7 +1212,7 @@ filters out the others.</p>
 </div>
 </div>
 <div class="section" id="deleting-elements">
-<h2><span class="section-number">9.8. </span>Deleting Elements<a class="headerlink" href="#deleting-elements" title="Permalink to this headline">¶</a></h2>
+<h2>Deleting Elements<a class="headerlink" href="#deleting-elements" title="Permalink to this headline">¶</a></h2>
 <p>There are several ways of removing elements of a list, which one to choose depends on what kind of behaviour you want.</p>
 <p>We start with the <code class="docutils literal notranslate"><span class="pre">pop</span></code> method. This operation removes an element at certain index (if given), otherwise it removes the last element of the list.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">pop</span></code> method is a fruitful function: it returns the element that was removed.</p>
@@ -1255,7 +1275,7 @@ filters out the others.</p>
 </div>
 </div>
 <div class="section" id="lists-and-functions">
-<h2><span class="section-number">9.9. </span>Lists and Functions<a class="headerlink" href="#lists-and-functions" title="Permalink to this headline">¶</a></h2>
+<h2>Lists and Functions<a class="headerlink" href="#lists-and-functions" title="Permalink to this headline">¶</a></h2>
 <p>We already saw that we can use the function <code class="docutils literal notranslate"><span class="pre">sum</span></code> to add all items in a list, and the function <code class="docutils literal notranslate"><span class="pre">len</span></code> to get the size of a list.</p>
 <p>There are other handy functions that you can use to compute values without writing your own loops.</p>
 <p>Some of these functions are <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code>.</p>
@@ -1288,7 +1308,7 @@ filters out the others.</p>
 </div>
 </div>
 <div class="section" id="lists-and-strings">
-<h2><span class="section-number">9.10. </span>Lists and Strings<a class="headerlink" href="#lists-and-strings" title="Permalink to this headline">¶</a></h2>
+<h2>Lists and Strings<a class="headerlink" href="#lists-and-strings" title="Permalink to this headline">¶</a></h2>
 <p>A string is a sequence of characters and a list is a sequence of values, but a list of characters is not the same as a string.</p>
 <p>To convert from a string to a list of characters, you can use <code class="docutils literal notranslate"><span class="pre">list</span></code>.</p>
 <div class="cell docutils container">
@@ -1393,7 +1413,7 @@ pass the list as a parameter.</p>
 </div>
 </div>
 <div class="section" id="objects-and-values">
-<h2><span class="section-number">9.11. </span>Objects and Values<a class="headerlink" href="#objects-and-values" title="Permalink to this headline">¶</a></h2>
+<h2>Objects and Values<a class="headerlink" href="#objects-and-values" title="Permalink to this headline">¶</a></h2>
 <p>There is a subtle difference between <em>objects</em> and <em>values</em>.</p>
 <p>Even when two objects represent the same value, they may be considered to be distinct.</p>
 <div class="cell docutils container">
@@ -1458,7 +1478,7 @@ value is a sequence of integers.</p>
 same value, but it is not the same object.</p>
 </div>
 <div class="section" id="aliasing">
-<h2><span class="section-number">9.12. </span>Aliasing<a class="headerlink" href="#aliasing" title="Permalink to this headline">¶</a></h2>
+<h2>Aliasing<a class="headerlink" href="#aliasing" title="Permalink to this headline">¶</a></h2>
 <p>What will be the result of the following Python fragment?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1508,7 +1528,7 @@ same value, but it is not the same object.</p>
 </div>
 </div>
 <div class="section" id="list-as-arguments">
-<h2><span class="section-number">9.13. </span>List as Arguments<a class="headerlink" href="#list-as-arguments" title="Permalink to this headline">¶</a></h2>
+<h2>List as Arguments<a class="headerlink" href="#list-as-arguments" title="Permalink to this headline">¶</a></h2>
 <p>If you pass a list as an argument to a function, you have to be aware of the aliases.</p>
 <p>The function gets a reference to the lists, which is a mutable object, so every modification
 to the list has effect on the original list.</p>
@@ -1650,13 +1670,13 @@ returns all but the first element of a list.</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">8. </span>Files </p>
+            <p class="prev-next-title">Files </p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="10_dictionaries.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">10. </span>Dictionaries </p>
+        <p class="prev-next-title">Dictionaries </p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

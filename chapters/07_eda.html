@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>7. Exploratory Data Analysis (EDA) &#8212; Introduction to Programming in Python</title>
+    <title>Exploratory Data Analysis (EDA) &#8212; Introduction to Programming in Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,14 +55,22 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="8. Files" href="08_files.html" />
-    <link rel="prev" title="6. Strings" href="06_strings.html" />
+    <link rel="next" title="Data Preparation" href="11_data_preparation.html" />
+    <link rel="prev" title="Computational Thinking" href="04_computational_thinking.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
     
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -100,100 +108,112 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
-<ul class="current nav bd-sidenav">
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_programs.html">
-   1. Introduction
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02_assignments.html">
-   2. Variables, expressions and assignments
+   Variables, expressions and assignments
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="03_conditionals_iteration.html">
-   3. Conditionals and Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_computational_thinking.html">
-   4. Computational Thinking
+   Conditionals and Iteration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="05_functions.html">
-   5. Functions
+   Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="06_strings.html">
-   6. Strings
-  </a>
- </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
-   7. Exploratory Data Analysis (EDA)
+   Strings
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08_files.html">
-   8. Files
+   Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09_lists.html">
-   9. Lists
+   Lists
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10_dictionaries.html">
-   10. Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_data_preparation.html">
-   11. Data Preparation
+   Dictionaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12_tuples_sets.html">
-   12. Tuples and Sets
+   Tuples and Sets
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="13_comprehensions_generators.html">
-   13. Comprehensions and Generators
+   Comprehensions and Generators
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="14_regular_expressions.html">
-   14. Regular Expressions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="15_vcs.html">
-   15. Version Control Systems &amp; Git
+   Regular Expressions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="16_classes_objects.html">
-   16. Classes and Objects
+   Classes and Objects
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="17_classes_functions.html">
-   17. Classes and Functions
+   Classes and Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="18_classes_methods.html">
-   18. Classes and Methods
+   Classes and Methods
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="19_inheritance.html">
-   19. Inheritance
+   Inheritance
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_vcs.html">
+   Version Control Systems &amp; Git
   </a>
  </li>
 </ul>
@@ -307,38 +327,38 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-science">
-   7.1. Data Science
+   Data Science
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exploratory-data-analysis">
-   7.2. Exploratory Data Analysis
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#structured-data-a-class-anchor-id-structured-a">
-   7.3. Structured Data
+   Structured Data
    <a class="anchor" id="structured">
    </a>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-types">
-     7.3.1. Data Types
+     Data Types
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rectangular-data-a-class-anchor-id-rectangular-a">
-   7.4. Rectangular Data
+   Rectangular Data
    <a class="anchor" id="rectangular">
    </a>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#import-pandas">
-     7.4.1. Import
+     Import
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
@@ -348,7 +368,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-wines-dataframe">
-     7.4.2. The Wines
+     The Wines
      <code class="docutils literal notranslate">
       <span class="pre">
        DataFrame
@@ -358,74 +378,74 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#indexes">
-     7.4.3. Indexes
+     Indexes
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#location-measures-a-class-anchor-id-location-a">
-   7.5. Location Measures
+   Location Measures
    <a class="anchor" id="location">
    </a>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mean">
-     7.5.1. Mean
+     Mean
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#median">
-     7.5.2. Median
+     Median
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mode">
-     7.5.3. Mode
+     Mode
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variability-measures-a-class-anchor-id-variability-a">
-   7.6. Variability Measures
+   Variability Measures
    <a class="anchor" id="variability">
    </a>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variance">
-     7.6.1. Variance
+     Variance
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#standard-deviation">
-     7.6.2. Standard Deviation
+     Standard Deviation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#interquartile-range-iqr">
-     7.6.3. InterQuartile Range (IQR)
+     InterQuartile Range (IQR)
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-distribution-a-class-anchor-id-distribution-a">
-   7.7. Data Distribution
+   Data Distribution
    <a class="anchor" id="distribution">
    </a>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#boxplots">
-     7.7.1. Boxplots
+     Boxplots
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#histograms">
-     7.7.2. Histograms
+     Histograms
     </a>
    </li>
   </ul>
@@ -452,38 +472,38 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-science">
-   7.1. Data Science
+   Data Science
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#exploratory-data-analysis">
-   7.2. Exploratory Data Analysis
+   Exploratory Data Analysis
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#structured-data-a-class-anchor-id-structured-a">
-   7.3. Structured Data
+   Structured Data
    <a class="anchor" id="structured">
    </a>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#data-types">
-     7.3.1. Data Types
+     Data Types
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#rectangular-data-a-class-anchor-id-rectangular-a">
-   7.4. Rectangular Data
+   Rectangular Data
    <a class="anchor" id="rectangular">
    </a>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#import-pandas">
-     7.4.1. Import
+     Import
      <code class="docutils literal notranslate">
       <span class="pre">
        pandas
@@ -493,7 +513,7 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#the-wines-dataframe">
-     7.4.2. The Wines
+     The Wines
      <code class="docutils literal notranslate">
       <span class="pre">
        DataFrame
@@ -503,74 +523,74 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#indexes">
-     7.4.3. Indexes
+     Indexes
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#location-measures-a-class-anchor-id-location-a">
-   7.5. Location Measures
+   Location Measures
    <a class="anchor" id="location">
    </a>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mean">
-     7.5.1. Mean
+     Mean
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#median">
-     7.5.2. Median
+     Median
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#mode">
-     7.5.3. Mode
+     Mode
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variability-measures-a-class-anchor-id-variability-a">
-   7.6. Variability Measures
+   Variability Measures
    <a class="anchor" id="variability">
    </a>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#variance">
-     7.6.1. Variance
+     Variance
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#standard-deviation">
-     7.6.2. Standard Deviation
+     Standard Deviation
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#interquartile-range-iqr">
-     7.6.3. InterQuartile Range (IQR)
+     InterQuartile Range (IQR)
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#data-distribution-a-class-anchor-id-distribution-a">
-   7.7. Data Distribution
+   Data Distribution
    <a class="anchor" id="distribution">
    </a>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#boxplots">
-     7.7.1. Boxplots
+     Boxplots
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#histograms">
-     7.7.2. Histograms
+     Histograms
     </a>
    </li>
   </ul>
@@ -585,7 +605,7 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="exploratory-data-analysis-eda">
-<h1><span class="section-number">7. </span>Exploratory Data Analysis (EDA) <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#exploratory-data-analysis-eda" title="Permalink to this headline">¶</a></h1>
+<h1>Exploratory Data Analysis (EDA) <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#exploratory-data-analysis-eda" title="Permalink to this headline">¶</a></h1>
 <p><em>(c) 2021, Lina Ochoa Venegas, Eindhoven University of Technology</em></p>
 <p>Probability theory saw its origins in gambling by the end of the 16<span class="math notranslate nohighlight">\(^{th}\)</span> century. However, it was truly developed between the 17<span class="math notranslate nohighlight">\(^{th}\)</span> and the 19<span class="math notranslate nohighlight">\(^{th}\)</span> centuries. Mathematicians and gamblers used games of chance–such as the ones involving dice–to understand the extent to which a situation could happen. This is what we formally know as probability. In short, <strong>probability</strong> is the likelihood that an event will happen in the future or is true. This mathematical theory sets the foundations of <strong>statistics</strong> which is an applied science concerned with the modeling and analysis of data.</p>
 <div class="alert admonition">
@@ -593,7 +613,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Probability is the likelihood that an event will happen in the future or is true. Wheres, statistics is an applied science concerned with the modeling and analysis of data</p>
 </div>
 <div class="section" id="data-science">
-<h2><span class="section-number">7.1. </span>Data Science<a class="headerlink" href="#data-science" title="Permalink to this headline">¶</a></h2>
+<h2>Data Science<a class="headerlink" href="#data-science" title="Permalink to this headline">¶</a></h2>
 <p>Statistics is fundamental for data science; its use is orthogonal to any data science problem. But what is data science in the end? <strong>Data science</strong> is an interdisciplinary field that combines <em>statistics</em>, <em>computer science</em>, and <em>domain knowledge</em> methods to extract knowledge from data to solve problems in a given domain. In this sense,</p>
 <ul class="simple">
 <li><p><em>statistics</em> are used to model and analyze datasets;</p></li>
@@ -606,7 +626,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="exploratory-data-analysis">
-<h2><span class="section-number">7.2. </span>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h2>
+<h2>Exploratory Data Analysis<a class="headerlink" href="#exploratory-data-analysis" title="Permalink to this headline">¶</a></h2>
 <p>In this notebook, we will introduce the notion of <strong>Exploratory Data Analysis (EDA)</strong>, an area of statistics that focuses on getting acquainted with the data at hand. It was promoted by John Tukey in his book “Exploratory Data Analysis” (1977), who mentioned the importance of first exploring the data to formulate better hypotheses later and assess previous assumptions. With the current computational power, EDA has gone far beyond expected, providing tools and resources to a variety of disciplines. With this mindset change, a data science project considers at least the following two phases:</p>
 <ol class="simple">
 <li><p><strong>Exploratory data analysis:</strong> assumptions are verified, methods are chosen, and quality hypotheses are formulated.</p></li>
@@ -623,10 +643,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="structured-data-a-class-anchor-id-structured-a">
-<h2><span class="section-number">7.3. </span>Structured Data <a class="anchor" id="structured"></a><a class="headerlink" href="#structured-data-a-class-anchor-id-structured-a" title="Permalink to this headline">¶</a></h2>
+<h2>Structured Data <a class="anchor" id="structured"></a><a class="headerlink" href="#structured-data-a-class-anchor-id-structured-a" title="Permalink to this headline">¶</a></h2>
 <p>Data comes from diverse sources such as text, sensors, and images. In the initial stage, this data is unstructured and hard to process; extracting facts out from ambiguous representations is cumbersome. That is why we need to structure our data. Ultimately, we want to have an input to which we can apply the statistical concepts we are learning. And for what? For getting actionable information, for having enough evidence to help us make decisions in a better way! You cannot change the past but you can definitely learn from it to change the future.</p>
 <div class="section" id="data-types">
-<h3><span class="section-number">7.3.1. </span>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h3>
+<h3>Data Types<a class="headerlink" href="#data-types" title="Permalink to this headline">¶</a></h3>
 <p>Structured data usually comes in two flavors:</p>
 <ul class="simple">
 <li><p><strong>Numeric:</strong> as its name suggests, we use numbers to represent the data. We consider two special cases:</p>
@@ -681,10 +701,10 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="rectangular-data-a-class-anchor-id-rectangular-a">
-<h2><span class="section-number">7.4. </span>Rectangular Data <a class="anchor" id="rectangular"></a><a class="headerlink" href="#rectangular-data-a-class-anchor-id-rectangular-a" title="Permalink to this headline">¶</a></h2>
+<h2>Rectangular Data <a class="anchor" id="rectangular"></a><a class="headerlink" href="#rectangular-data-a-class-anchor-id-rectangular-a" title="Permalink to this headline">¶</a></h2>
 <p>In data science, we usually work with a special type of data: rectangular data. Think of it as a spreadsheet. <strong>Rectangular data</strong> is a two-dimensional matrix where columns represent features (a.k.a. <strong>variables</strong>) and rows represent records (a.k.a. <strong>cases</strong>). This data representation is derived from <strong>unstructured data</strong> coming from diverse sources. In Python, we use <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, a special library that helps us representing this type of data. In <code class="docutils literal notranslate"><span class="pre">pandas</span></code> we use the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> type: <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> is a type just as <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, or <code class="docutils literal notranslate"><span class="pre">bool</span></code>, the only difference is that it supports other types of operations and is more complex than the types we have just mentioned. Actually, a data frame often contains heterogeneous (data with different data types) and missing data (unknown values for certain features in a record).</p>
 <div class="section" id="import-pandas">
-<h3><span class="section-number">7.4.1. </span>Import <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#import-pandas" title="Permalink to this headline">¶</a></h3>
+<h3>Import <code class="docutils literal notranslate"><span class="pre">pandas</span></code><a class="headerlink" href="#import-pandas" title="Permalink to this headline">¶</a></h3>
 <p>To start interacting with the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> type you will first need to install <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> in your virtual environment. Afterward, you will be able to import it as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -696,7 +716,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>The <code class="docutils literal notranslate"><span class="pre">as</span> <span class="pre">pd</span></code> part of the statement just gives an alternative name to the library (a.k.a. <strong>alias</strong>), so we do not have to write the entire name every time we want to access one of its capabilities.</p>
 </div>
 <div class="section" id="the-wines-dataframe">
-<h3><span class="section-number">7.4.2. </span>The Wines <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#the-wines-dataframe" title="Permalink to this headline">¶</a></h3>
+<h3>The Wines <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code><a class="headerlink" href="#the-wines-dataframe" title="Permalink to this headline">¶</a></h3>
 <p>There are several ways of creating a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> with <code class="docutils literal notranslate"><span class="pre">pandas</span></code>. However, for now, we only care about the notion of what a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> is and how it looks. Later in the course, we will learn to create instances of this type, so do not panic! For this notebook, we will be using a modified version of the <strong>Wine Reviews</strong> dataset created by Zack Thoutt under a
 Creative Commons BY-NC-SA 4.0 license, and later updated by David Stroud. You can find the original dataset <a class="reference external" href="https://github.com/davestroud/Wine">here</a>. Zack gathered all data from the <a class="reference external" href="https://www.winemag.com/">Wine Enthusiast website</a>, an influential magazine about wine and drinks that posts wine ratings and other relevant wine-related reports. The ratings are presented by professional sommeliers (wine tasters) that perform a sensory evaluation of the wine (wine tasting). In the dataset, you will find the following variables (columns):</p>
 <table class="colwidths-auto table">
@@ -869,7 +889,7 @@ Creative Commons BY-NC-SA 4.0 license, and later updated by David Stroud. You ca
 </div>
 </div>
 <div class="section" id="indexes">
-<h3><span class="section-number">7.4.3. </span>Indexes<a class="headerlink" href="#indexes" title="Permalink to this headline">¶</a></h3>
+<h3>Indexes<a class="headerlink" href="#indexes" title="Permalink to this headline">¶</a></h3>
 <p>If you look carefully at the previous example, you will notice that a new column was created. (The first column of the matrix before the ones we have explicitly defined.) This column is an integer index that is automatically created every time you create a new data frame and you do not explicitly mention any other type of index. An <strong>index</strong> is a data structure used to improve the efficiency of certain types of operations and queries executed atop the data frame. They are very useful especially when accessing specific records within your data. To access them you can use the <code class="docutils literal notranslate"><span class="pre">loc</span></code> indexer and specify the number of the record you want within the square brackets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -899,7 +919,7 @@ Name: 2, dtype: object
 </div>
 </div>
 <div class="section" id="location-measures-a-class-anchor-id-location-a">
-<h2><span class="section-number">7.5. </span>Location Measures <a class="anchor" id="location"></a><a class="headerlink" href="#location-measures-a-class-anchor-id-location-a" title="Permalink to this headline">¶</a></h2>
+<h2>Location Measures <a class="anchor" id="location"></a><a class="headerlink" href="#location-measures-a-class-anchor-id-location-a" title="Permalink to this headline">¶</a></h2>
 <p>Numeric variables usually vary within a wide interval of values. When exploring your data, you would like to get an <em>estimate</em> of where most of your data is located for each variable. This estimate is known as the <strong>central tendency</strong> of the data, and it shows the typical or central values of your variables. An <strong>estimate</strong> or a <strong>measure</strong> is a value calculated out from a set of records within your data. They are called like this because they are computed based on what you can observe, which is not necessarily the true reality; uncertainty always lies behind it. There are different measures of location, in this notebook, we will talk about three of them:</p>
 <ul class="simple">
 <li><p>the mean,</p></li>
@@ -911,7 +931,7 @@ Name: 2, dtype: object
 <p>Estimate of central tendency that states where most of the data is located for a given variable.</p>
 </div>
 <div class="section" id="mean">
-<h3><span class="section-number">7.5.1. </span>Mean<a class="headerlink" href="#mean" title="Permalink to this headline">¶</a></h3>
+<h3>Mean<a class="headerlink" href="#mean" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>mean</strong> is one of the most basic measures of location and it is also known as <em>average</em>. It is represented as <span class="math notranslate nohighlight">\(\overline{x}\)</span> in mathematical notation. To compute it, you must add all values of a given variable, and then divide it by the number of values.</p>
 <p><span class="math notranslate nohighlight">\(mean = \overline{x} = \frac{\sum_{i}^{n} x_i}{n}\)</span></p>
 <p>In the formula above <span class="math notranslate nohighlight">\(n\)</span> stands for the total number of values and <span class="math notranslate nohighlight">\(x_i\)</span> for the <span class="math notranslate nohighlight">\(i^{th}\)</span> value in your data, where <span class="math notranslate nohighlight">\(i\)</span> ranges from <span class="math notranslate nohighlight">\(1\)</span> until <span class="math notranslate nohighlight">\(n\)</span> (i.e. <span class="math notranslate nohighlight">\(x \in [i, n]\)</span>).</p>
@@ -972,7 +992,7 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 </div>
 </div>
 <div class="section" id="median">
-<h3><span class="section-number">7.5.2. </span>Median<a class="headerlink" href="#median" title="Permalink to this headline">¶</a></h3>
+<h3>Median<a class="headerlink" href="#median" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>median</strong> is the middle number of a sorted list of values of a given variable. It is represented as <span class="math notranslate nohighlight">\(\widetilde{x}\)</span> in mathematical notation, and it is computed as follows.</p>
 <p><span class="math notranslate nohighlight">\(median = \widetilde{x} = x_{(n \, +\, 1) \, / \, 2}\)</span></p>
 <p>If the number of values is even, it is computed as the mean between the two middle values of the list as follows.</p>
@@ -1204,7 +1224,7 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 </div>
 </div>
 <div class="section" id="mode">
-<h3><span class="section-number">7.5.3. </span>Mode<a class="headerlink" href="#mode" title="Permalink to this headline">¶</a></h3>
+<h3>Mode<a class="headerlink" href="#mode" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>mode</strong> is the set of values that appear more often for a given variable. You can have more than one value when there are ties. This measure is more useful when describing categorical data.</p>
 <p>For example, if we consider the <code class="docutils literal notranslate"><span class="pre">province</span></code> variable of the <code class="docutils literal notranslate"><span class="pre">wines</span></code> data frame, we can compute the mode as follows.</p>
 <ol class="simple">
@@ -1258,7 +1278,7 @@ dtype: object
 </div>
 </div>
 <div class="section" id="variability-measures-a-class-anchor-id-variability-a">
-<h2><span class="section-number">7.6. </span>Variability Measures <a class="anchor" id="variability"></a><a class="headerlink" href="#variability-measures-a-class-anchor-id-variability-a" title="Permalink to this headline">¶</a></h2>
+<h2>Variability Measures <a class="anchor" id="variability"></a><a class="headerlink" href="#variability-measures-a-class-anchor-id-variability-a" title="Permalink to this headline">¶</a></h2>
 <p>Location measures are useful when describing a variable, however, understanding how your data varies is also important. Here is when variability measures are relevant: they help you to measure the dispersion of your data. <strong>Dispersion</strong> is the extent to which values of a variable differ from a central point. In short, it tells you if the values are clustered or spread out. The lower the variability in your data, the more consistent it is. When variability is high, the uncertainty of where to find the data point grows and outliers are more likely to appear.</p>
 <p>As was the case with location, there are different variability measures. In this notebook we will describe three of them:</p>
 <ul class="simple">
@@ -1271,7 +1291,7 @@ dtype: object
 <p>Estimate of dispersion that states the extent to which values of a variable differ from a central point.</p>
 </div>
 <div class="section" id="variance">
-<h3><span class="section-number">7.6.1. </span>Variance<a class="headerlink" href="#variance" title="Permalink to this headline">¶</a></h3>
+<h3>Variance<a class="headerlink" href="#variance" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>deviation</strong> is the distance between observations in your data and a location measure. Deviations give us insights into how dispersed the data is from a central point. In particular, you can compute the deviation of the values of a variable from the mean. In our original <code class="docutils literal notranslate"><span class="pre">wines</span></code> data frame (without the infamous “Disgusting Wine 2021 Malbec”), the deviation of each data point of the <code class="docutils literal notranslate"><span class="pre">points</span></code> variable is computed as follows.</p>
 <p><span class="math notranslate nohighlight">\(x_1 - \overline{x} = 84 - 89.5 = -5.5\)</span><br />
 <span class="math notranslate nohighlight">\(x_2 - \overline{x} = 93 - 89.5 = 3.5\)</span><br />
@@ -1435,7 +1455,7 @@ dtype: object
 </div>
 </div>
 <div class="section" id="standard-deviation">
-<h3><span class="section-number">7.6.2. </span>Standard Deviation<a class="headerlink" href="#standard-deviation" title="Permalink to this headline">¶</a></h3>
+<h3>Standard Deviation<a class="headerlink" href="#standard-deviation" title="Permalink to this headline">¶</a></h3>
 <p>The <strong>standard deviation</strong> is the square root of the variance. This estimate is easier to interpret because it is defined on the same scale as the original values. It is represented as <span class="math notranslate nohighlight">\(s\)</span> in mathematical notation, and it is computed as follows.</p>
 <p><span class="math notranslate nohighlight">\(standard \, deviation = s = \sqrt{s^2} = \sqrt{variance}\)</span></p>
 <p>If we use the <code class="docutils literal notranslate"><span class="pre">wines</span></code> data frame, we can calculate the standard deviation of the <code class="docutils literal notranslate"><span class="pre">points</span></code> variable as follows.</p>
@@ -1479,7 +1499,7 @@ dtype: object
 </div>
 </div>
 <div class="section" id="interquartile-range-iqr">
-<h3><span class="section-number">7.6.3. </span>InterQuartile Range (IQR)<a class="headerlink" href="#interquartile-range-iqr" title="Permalink to this headline">¶</a></h3>
+<h3>InterQuartile Range (IQR)<a class="headerlink" href="#interquartile-range-iqr" title="Permalink to this headline">¶</a></h3>
 <p>Another approach to estimate dispersion of the data is by studying the spread of sorted (ranked) data. One of the simplest measures that can be computed out from the ranked data is the <strong>range</strong>, which is the difference between the largest and smallest values of a variable. Nevertheless, if you have outliers, the range is not a robust measure to use and might lead you to have wrong interpretations of your data. In any case, when there are no outliers in the dataset, you can compute the range as follows.</p>
 <p><span class="math notranslate nohighlight">\(range = max - min\)</span></p>
 <p>In the <code class="docutils literal notranslate"><span class="pre">wines</span></code> data frame, the range estimate of the <code class="docutils literal notranslate"><span class="pre">points</span></code> variable is:</p>
@@ -1528,7 +1548,7 @@ dtype: object
 </div>
 </div>
 <div class="section" id="data-distribution-a-class-anchor-id-distribution-a">
-<h2><span class="section-number">7.7. </span>Data Distribution <a class="anchor" id="distribution"></a><a class="headerlink" href="#data-distribution-a-class-anchor-id-distribution-a" title="Permalink to this headline">¶</a></h2>
+<h2>Data Distribution <a class="anchor" id="distribution"></a><a class="headerlink" href="#data-distribution-a-class-anchor-id-distribution-a" title="Permalink to this headline">¶</a></h2>
 <p>Although previous measures are useful to summarize the shape of our data, it is useful to know its overall distribution. A <strong>distribution</strong> is a collection of observations on a given variable. These observations or data points are later ordered to analyze them and draw insightful conclusions. In particular, graphical representations of distributions are widely used to understand the behavior of the data. Some of the most common ways of visualizing distributions are:</p>
 <ul class="simple">
 <li><p>boxplots, and</p></li>
@@ -1647,7 +1667,7 @@ dtype: object
 <p>A distribution is a collection of observations on a given variable.</p>
 </div>
 <div class="section" id="boxplots">
-<h3><span class="section-number">7.7.1. </span>Boxplots<a class="headerlink" href="#boxplots" title="Permalink to this headline">¶</a></h3>
+<h3>Boxplots<a class="headerlink" href="#boxplots" title="Permalink to this headline">¶</a></h3>
 <p>We used percentiles to compute the IQR, however, percentiles themselves are useful to measure the spread and distribution of the data. Usually, quartiles (<span class="math notranslate nohighlight">\(25^{th}\)</span>, <span class="math notranslate nohighlight">\(50^{th}\)</span>, <span class="math notranslate nohighlight">\(75^{th}\)</span>, and <span class="math notranslate nohighlight">\(100^{th}\)</span> percentiles) are reported. They also help to identify the extreme values or outliers.</p>
 <p>In 1977, Tukey introduced <strong>boxplots</strong>, a type of plot that summarizes the spread of the data based on percentiles. To better understand boxplots, let us have a glimpse at the boxplot of the <code class="docutils literal notranslate"><span class="pre">points</span></code> variable within our wines dataset. We will use the <code class="docutils literal notranslate"><span class="pre">boxplot()</span></code> method from <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to generate the plot.</p>
 <div class="cell docutils container">
@@ -1672,7 +1692,7 @@ dtype: object
 </div>
 </div>
 <div class="section" id="histograms">
-<h3><span class="section-number">7.7.2. </span>Histograms<a class="headerlink" href="#histograms" title="Permalink to this headline">¶</a></h3>
+<h3>Histograms<a class="headerlink" href="#histograms" title="Permalink to this headline">¶</a></h3>
 <p><strong>Histograms</strong> are plots used to show the frequency of a given value or interval of values on a given variable. That is, you can identify how many values fall within a given interval. These intervals are known as <strong>bins</strong> and they have the same width. We can usually modify the number of bins depending on the type of analysis that we want to perform.</p>
 <p>Now, we will display the histogram of the <code class="docutils literal notranslate"><span class="pre">points</span></code> variable using the <code class="docutils literal notranslate"><span class="pre">hist()</span></code> method from the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library.</p>
 <div class="cell docutils container">
@@ -1746,17 +1766,17 @@ dtype: object
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="06_strings.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="04_computational_thinking.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">6. </span>Strings </p>
+            <p class="prev-next-title">Computational Thinking </p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="08_files.html" title="next page">
+    <a class='right-next' id="next-link" href="11_data_preparation.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">8. </span>Files </p>
+        <p class="prev-next-title">Data Preparation </p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

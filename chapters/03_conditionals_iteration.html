@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>3. Conditionals and Iteration &#8212; Introduction to Programming in Python</title>
+    <title>Conditionals and Iteration &#8212; Introduction to Programming in Python</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet">
   <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -55,14 +55,22 @@ const thebe_selector_output = ".output, .cell_output"
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="4. Computational Thinking" href="04_computational_thinking.html" />
-    <link rel="prev" title="2. Variables, expressions and assignments" href="02_assignments.html" />
+    <link rel="next" title="Functions" href="05_functions.html" />
+    <link rel="prev" title="Variables, expressions and assignments" href="02_assignments.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
 
     <!-- Google Analytics -->
     
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
     
@@ -100,100 +108,112 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
 </ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="01_programs.html">
-   1. Introduction
+   Introduction
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="02_assignments.html">
-   2. Variables, expressions and assignments
+   Variables, expressions and assignments
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   3. Conditionals and Iteration
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="04_computational_thinking.html">
-   4. Computational Thinking
+   Conditionals and Iteration
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="05_functions.html">
-   5. Functions
+   Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="06_strings.html">
-   6. Strings
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="07_eda.html">
-   7. Exploratory Data Analysis (EDA)
+   Strings
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="08_files.html">
-   8. Files
+   Files
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="09_lists.html">
-   9. Lists
+   Lists
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="10_dictionaries.html">
-   10. Dictionaries
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="11_data_preparation.html">
-   11. Data Preparation
+   Dictionaries
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="12_tuples_sets.html">
-   12. Tuples and Sets
+   Tuples and Sets
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="13_comprehensions_generators.html">
-   13. Comprehensions and Generators
+   Comprehensions and Generators
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="14_regular_expressions.html">
-   14. Regular Expressions
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="15_vcs.html">
-   15. Version Control Systems &amp; Git
+   Regular Expressions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="16_classes_objects.html">
-   16. Classes and Objects
+   Classes and Objects
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="17_classes_functions.html">
-   17. Classes and Functions
+   Classes and Functions
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="18_classes_methods.html">
-   18. Classes and Methods
+   Classes and Methods
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="19_inheritance.html">
-   19. Inheritance
+   Inheritance
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_vcs.html">
+   Version Control Systems &amp; Git
   </a>
  </li>
 </ul>
@@ -307,47 +327,47 @@ const thebe_selector_output = ".output, .cell_output"
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#boolean-expressions">
-   3.1. Boolean Expressions
+   Boolean Expressions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#logical-operators">
-   3.2. Logical Operators
+   Logical Operators
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conditional-execution">
-   3.3. Conditional Execution
+   Conditional Execution
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#alternative-execution">
-   3.4. Alternative Execution
+   Alternative Execution
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#chained-conditionals">
-   3.5. Chained Conditionals
+   Chained Conditionals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nested-conditionals">
-   3.6. Nested Conditionals
+   Nested Conditionals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#catching-exceptions">
-   3.7. Catching Exceptions
+   Catching Exceptions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#short-circuit-evaluation-of-logical-expressions">
-   3.8. Short-circuit Evaluation of Logical Expressions
+   Short-circuit Evaluation of Logical Expressions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-while-statement">
-   3.9. The
+   The
    <code class="docutils literal notranslate">
     <span class="pre">
      while
@@ -358,7 +378,6 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#break">
-   3.10.
    <code class="docutils literal notranslate">
     <span class="pre">
      break
@@ -368,7 +387,6 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#continue">
-   3.11.
    <code class="docutils literal notranslate">
     <span class="pre">
      continue
@@ -378,12 +396,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#while-loops-in-detail">
-   3.12. While Loops in Detail
+   While Loops in Detail
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#square-roots">
-   3.13. Square Roots
+   Square Roots
   </a>
  </li>
 </ul>
@@ -408,47 +426,47 @@ const thebe_selector_output = ".output, .cell_output"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#boolean-expressions">
-   3.1. Boolean Expressions
+   Boolean Expressions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#logical-operators">
-   3.2. Logical Operators
+   Logical Operators
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#conditional-execution">
-   3.3. Conditional Execution
+   Conditional Execution
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#alternative-execution">
-   3.4. Alternative Execution
+   Alternative Execution
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#chained-conditionals">
-   3.5. Chained Conditionals
+   Chained Conditionals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#nested-conditionals">
-   3.6. Nested Conditionals
+   Nested Conditionals
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#catching-exceptions">
-   3.7. Catching Exceptions
+   Catching Exceptions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#short-circuit-evaluation-of-logical-expressions">
-   3.8. Short-circuit Evaluation of Logical Expressions
+   Short-circuit Evaluation of Logical Expressions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-while-statement">
-   3.9. The
+   The
    <code class="docutils literal notranslate">
     <span class="pre">
      while
@@ -459,7 +477,6 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#break">
-   3.10.
    <code class="docutils literal notranslate">
     <span class="pre">
      break
@@ -469,7 +486,6 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#continue">
-   3.11.
    <code class="docutils literal notranslate">
     <span class="pre">
      continue
@@ -479,12 +495,12 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#while-loops-in-detail">
-   3.12. While Loops in Detail
+   While Loops in Detail
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#square-roots">
-   3.13. Square Roots
+   Square Roots
   </a>
  </li>
 </ul>
@@ -497,9 +513,9 @@ const thebe_selector_output = ".output, .cell_output"
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="conditionals-and-iteration">
-<h1><span class="section-number">3. </span>Conditionals and Iteration <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#conditionals-and-iteration" title="Permalink to this headline">¶</a></h1>
+<h1>Conditionals and Iteration <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#conditionals-and-iteration" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="boolean-expressions">
-<h2><span class="section-number">3.1. </span>Boolean Expressions<a class="headerlink" href="#boolean-expressions" title="Permalink to this headline">¶</a></h2>
+<h2>Boolean Expressions<a class="headerlink" href="#boolean-expressions" title="Permalink to this headline">¶</a></h2>
 <p>A <strong>boolean expression</strong> is an expression that yields either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <p>The following examples use the operator <code class="docutils literal notranslate"><span class="pre">==</span></code> to compare the values of two expressions.</p>
 <p>The result is <code class="docutils literal notranslate"><span class="pre">True</span></code> if the values are the same, otherwise the result is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
@@ -572,7 +588,7 @@ a double equal sign (<code class="docutils literal notranslate"><span class="pre
 operator.</p>
 </div>
 <div class="section" id="logical-operators">
-<h2><span class="section-number">3.2. </span>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h2>
+<h2>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">¶</a></h2>
 <p>There are three logical operators: <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code>.</p>
 <p>The semantics (meaning) of these operators is similar to their meaning in English.</p>
 <p>For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>
@@ -653,7 +669,7 @@ is divisible by <code class="docutils literal notranslate"><span class="pre">2</
 </div>
 </div>
 <div class="section" id="conditional-execution">
-<h2><span class="section-number">3.3. </span>Conditional Execution<a class="headerlink" href="#conditional-execution" title="Permalink to this headline">¶</a></h2>
+<h2>Conditional Execution<a class="headerlink" href="#conditional-execution" title="Permalink to this headline">¶</a></h2>
 <p>In order to write useful programs, we almost always need the ability to check conditions
 and change the behavior of the program accordingly. Conditions allow us to change the execution flow in a program.</p>
 <p><strong>Conditional statements</strong> provide us this functionality.</p>
@@ -704,7 +720,7 @@ x is an integer value
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_2825/80713609.py&quot;</span><span class="gt">, line </span><span class="mi">3</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_23347/80713609.py&quot;</span><span class="gt">, line </span><span class="mi">3</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is negative&#39;</span><span class="p">)</span>
     <span class="o">^</span>
 <span class="ne">IndentationError</span>: expected an indented block
@@ -736,7 +752,7 @@ x is an integer value
 </div>
 </div>
 <div class="section" id="alternative-execution">
-<h2><span class="section-number">3.4. </span>Alternative Execution<a class="headerlink" href="#alternative-execution" title="Permalink to this headline">¶</a></h2>
+<h2>Alternative Execution<a class="headerlink" href="#alternative-execution" title="Permalink to this headline">¶</a></h2>
 <p>There is yet another if statement, namely to represent <strong>alternative execution</strong>.</p>
 <p>There are 2 alternatives to execute and the evaluation of the expression determines which alternative
 needs to be executed.</p>
@@ -765,7 +781,7 @@ needs to be executed.</p>
 </div>
 </div>
 <div class="section" id="chained-conditionals">
-<h2><span class="section-number">3.5. </span>Chained Conditionals<a class="headerlink" href="#chained-conditionals" title="Permalink to this headline">¶</a></h2>
+<h2>Chained Conditionals<a class="headerlink" href="#chained-conditionals" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes there are more than 2 alternatives.</p>
 <p>In that case you can use a <strong>chained conditional</strong>.</p>
 <div class="cell docutils container">
@@ -800,7 +816,7 @@ executed and the conditional terminates.</p>
 </div>
 </div>
 <div class="section" id="nested-conditionals">
-<h2><span class="section-number">3.6. </span>Nested Conditionals<a class="headerlink" href="#nested-conditionals" title="Permalink to this headline">¶</a></h2>
+<h2>Nested Conditionals<a class="headerlink" href="#nested-conditionals" title="Permalink to this headline">¶</a></h2>
 <p>One conditional can also be nested within another.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -896,7 +912,7 @@ become difficult to read very quickly.</p>
 </div>
 </div>
 <div class="section" id="catching-exceptions">
-<h2><span class="section-number">3.7. </span>Catching Exceptions<a class="headerlink" href="#catching-exceptions" title="Permalink to this headline">¶</a></h2>
+<h2>Catching Exceptions<a class="headerlink" href="#catching-exceptions" title="Permalink to this headline">¶</a></h2>
 <p>The following program request you to enter your age. Then, it parses the input as an integer. But what does it happen if you introduce a string instead of a number?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -936,7 +952,7 @@ become difficult to read very quickly.</p>
 </div>
 </div>
 <div class="section" id="short-circuit-evaluation-of-logical-expressions">
-<h2><span class="section-number">3.8. </span>Short-circuit Evaluation of Logical Expressions<a class="headerlink" href="#short-circuit-evaluation-of-logical-expressions" title="Permalink to this headline">¶</a></h2>
+<h2>Short-circuit Evaluation of Logical Expressions<a class="headerlink" href="#short-circuit-evaluation-of-logical-expressions" title="Permalink to this headline">¶</a></h2>
 <p>When Python processes a logical expression, it does it from left to right.</p>
 <p>So, for the expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> it will first process <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> and then <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;10</span></code>.</p>
 <p>However, if it happens that <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">-1</span></code>, the first expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> will be equal to <code class="docutils literal notranslate"><span class="pre">False</span></code> and tthen there is no point to evaluate the second expression. By definition, if one of the expression of an <code class="docutils literal notranslate"><span class="pre">and</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, the whole expression is also <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
@@ -977,7 +993,7 @@ become difficult to read very quickly.</p>
 <p>No errors now because Python stops evaluating expressions when it notices that <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">!=</span> <span class="pre">0</span> <span class="pre">==</span> <span class="pre">False</span></code>. And this is the beauty of using the guard pattern.</p>
 </div>
 <div class="section" id="the-while-statement">
-<h2><span class="section-number">3.9. </span>The <code class="docutils literal notranslate"><span class="pre">while</span></code> Statement<a class="headerlink" href="#the-while-statement" title="Permalink to this headline">¶</a></h2>
+<h2>The <code class="docutils literal notranslate"><span class="pre">while</span></code> Statement<a class="headerlink" href="#the-while-statement" title="Permalink to this headline">¶</a></h2>
 <p>Computers are good in repeating boring tasks, they do this faster and more accurate than people.</p>
 <p>Repetition of instructions is called <strong>iteration</strong> in programming.</p>
 <p>Suppose you want to countdown and print a value, we need to <em>loop</em>.</p>
@@ -1048,7 +1064,7 @@ time through the loop until it reaches 1.</p>
 starting with 16.</p>
 </div>
 <div class="section" id="break">
-<h2><span class="section-number">3.10. </span><code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">break</span></code><a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h2>
 <p>It is possible to enforce the termination of a loop via the <code class="docutils literal notranslate"><span class="pre">break</span></code> statement.</p>
 <p>Suppose you are processing input and as soon as you get the string value <code class="docutils literal notranslate"><span class="pre">done</span></code> you want to terminate.</p>
 <div class="cell docutils container">
@@ -1109,7 +1125,7 @@ holds.</p>
 </div>
 </div>
 <div class="section" id="continue">
-<h2><span class="section-number">3.11. </span><code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#continue" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">continue</span></code><a class="headerlink" href="#continue" title="Permalink to this headline">¶</a></h2>
 <p>Sometimes you don’t want to finish the execution of the loop body for certain iterations.</p>
 <p>In that case, you want to stop the current iteration and continue with the next one.</p>
 <p>To do so, you can use the <code class="docutils literal notranslate"><span class="pre">continue</span></code> keyword.</p>
@@ -1162,7 +1178,7 @@ holds.</p>
 </div>
 </div>
 <div class="section" id="while-loops-in-detail">
-<h2><span class="section-number">3.12. </span>While Loops in Detail<a class="headerlink" href="#while-loops-in-detail" title="Permalink to this headline">¶</a></h2>
+<h2>While Loops in Detail<a class="headerlink" href="#while-loops-in-detail" title="Permalink to this headline">¶</a></h2>
 <p>Let’s consider the following cell to understand the flow of control of a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
 <ul class="simple">
 <li><p>A <code class="docutils literal notranslate"><span class="pre">while</span></code> loop should always have a boolean expression (condition). In the cell  <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> (see line <code class="docutils literal notranslate"><span class="pre">#2</span></code>), but <code class="docutils literal notranslate"><span class="pre">True</span></code> is also fine.</p></li>
@@ -1235,7 +1251,7 @@ If the evaluation of the condition yields the value <code class="docutils litera
     <span style="font-size:0.9em; font-weight: bold;">Flowchart of the third while-loop program.</span>
 </div></div>
 <div class="section" id="square-roots">
-<h2><span class="section-number">3.13. </span>Square Roots<a class="headerlink" href="#square-roots" title="Permalink to this headline">¶</a></h2>
+<h2>Square Roots<a class="headerlink" href="#square-roots" title="Permalink to this headline">¶</a></h2>
 <p>Loops are often used in programs that compute numerical results by starting with an approximate
 answer and iteratively improving it.</p>
 <p>For example, one way of computing square roots is Newton’s method.</p>
@@ -1417,13 +1433,13 @@ abs to compute the absolute value, or magnitude, of the difference between them:
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title"><span class="section-number">2. </span>Variables, expressions and assignments </p>
+            <p class="prev-next-title">Variables, expressions and assignments </p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="04_computational_thinking.html" title="next page">
+    <a class='right-next' id="next-link" href="05_functions.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Computational Thinking </p>
+        <p class="prev-next-title">Functions </p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
