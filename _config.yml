@@ -1,10 +1,11 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Introduction to Programming in Python
-author: 
-copyright: "2022. Eindhoven University of Technology & Vrije Universiteit Amsterdam" 
-logo: logo.png
+title                       : Introduction to Programming in Python
+author                      : ""
+copyright                   : "2022. Eindhoven University of Technology & Vrije Universiteit Amsterdam" 
+logo                        : logo.png
+exclude_patterns            : [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints"]
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -29,9 +30,11 @@ repository:
 # Add GitHub buttons to your book
 # See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
 html:
-  use_issues_button: true
-  use_repository_button: true
-  use_edit_page_button: true
+  use_issues_button         : true
+  use_repository_button     : true
+  use_edit_page_button      : true
+  google_analytics_id       : "G-HLQKTP6KEQ"  # A GA id that can be used to track book views.
+  home_page_in_navbar       : true
 
 launch_buttons:
   notebook_interface        : jupyterlab  # The interface interactive links will activate ["classic", "jupyterlab"]

@@ -20,7 +20,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 99ballons = 'Nena'
 ------------------
 
-[0;36m  File [0;32m"/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_15607/72142339.py"[0;36m, line [0;32m1[0m
+[0;36m  File [0;32m"/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_23329/72142339.py"[0;36m, line [0;32m1[0m
 [0;31m    99ballons = 'Nena'[0m
 [0m      ^[0m
 [0;31mSyntaxError[0m[0;31m:[0m invalid syntax
