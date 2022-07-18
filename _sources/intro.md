@@ -16,7 +16,7 @@ This book's content has been developed during the last five years, and it has be
 * Programming - JBI010 (joint bachelor Data Science, TU/Eindhoven & Tilburg University)
 * Introduction to Programming (PYTHON) -  X_401096 (bachelor Artificial Intelligence, VU Amsterdam)
 * Software Development for Engineers - 2IS50, TU/Eindhoven
-* Programming and modelling - 2WH20, TU/Eindhoven
+* Programming and Modelling - 2WH20, TU/Eindhoven
 
 ## Table of Contents
 ```{tableofcontents}
