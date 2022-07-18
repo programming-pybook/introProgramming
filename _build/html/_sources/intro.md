@@ -22,10 +22,14 @@ This book's content has been developed during the last five years, and it has be
 * Software Development for Engineers - 2IS50, TU/Eindhoven
 * Programming and Modelling - 2WH20, TU/Eindhoven
 
+
+-----------
 ## Table of Contents
 ```{tableofcontents}
 ```
 
+
+-----------
 ## Bibliography
 ```{bibliography}
 :style: unsrtalpha
