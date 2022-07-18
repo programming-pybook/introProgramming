@@ -20,7 +20,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 @Mark: make a view cells on the effect of changing copies.
 ------------------
 
-[0;36m  File [0;32m"/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_46452/1791905913.py"[0;36m, line [0;32m1[0m
+[0;36m  File [0;32m"/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_46872/1791905913.py"[0;36m, line [0;32m1[0m
 [0;31m    @Mark: make a view cells on the effect of changing copies.[0m
 [0m         ^[0m
 [0;31mSyntaxError[0m[0;31m:[0m invalid syntax
