@@ -45,5 +45,5 @@ launch_buttons:
 
 sphinx:
   config:
-    bibtex_reference_style: author_year
+    bibtex_reference_style: label
     language: en
