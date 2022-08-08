@@ -12,6 +12,10 @@ on:
     # paths:
     # - some-subfolder/**
 
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
 # This job installs dependencies, builds the book, and pushes it to `gh-pages`
 jobs:
   deploy-book:
