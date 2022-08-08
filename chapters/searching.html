@@ -1,0 +1,1529 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Searching [^intro] &#8212; Introduction to Programming in Python</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Sorting [^intro]" href="sorting.html" />
+    <link rel="prev" title="Recursion [^intro]" href="recursion.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction to Programming in Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="programs.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assignments.html">
+   Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditionals.html">
+   Conditionals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="beyond_functions.html">
+   Beyond Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tuples.html">
+   Tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sets.html">
+   Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dictionaries.html">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="comprehensions_generators.html">
+   Comprehensions and Generators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regular_expressions.html">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_objects.html">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_functions.html">
+   Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_methods.html">
+   Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inheritance.html">
+   Inheritance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recursion.html">
+   Recursion [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Searching [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sorting.html">
+   Sorting [^intro]
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy.html">
+   NumPy Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pandas.html">
+   Pandas DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vcs.html">
+   Version Control Systems &amp; Git
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/maveme/introProgramming.git/master/v2/gh/maveme/introProgramming/master?urlpath=lab/tree/chapters/searching.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/maveme/introProgramming"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/maveme/introProgramming/issues/new?title=Issue%20on%20page%20%2Fchapters/searching.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/maveme/introProgramming/edit/master/chapters/searching.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/chapters/searching.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#searching-for-two-largest-values-in-a-list">
+   1. Searching for Two Largest Values in a List
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#find-remove-find">
+     Find, Remove, Find
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sort">
+     Sort
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#walk-through-the-list">
+     Walk through the list
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#timing-the-functions">
+   2. Timing the Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#searching">
+   3. Searching
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-search">
+     Linear Search
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#binary-search">
+     Binary Search
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Searching [^intro]</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#searching-for-two-largest-values-in-a-list">
+   1. Searching for Two Largest Values in a List
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#find-remove-find">
+     Find, Remove, Find
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sort">
+     Sort
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#walk-through-the-list">
+     Walk through the list
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#timing-the-functions">
+   2. Timing the Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#searching">
+   3. Searching
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#linear-search">
+     Linear Search
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#binary-search">
+     Binary Search
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="searching-intro">
+<h1>Searching [^intro]<a class="headerlink" href="#searching-intro" title="Permalink to this headline">#</a></h1>
+<p>This Jupyter Notebook is based on external content related to algorithms (e.g. searching and sorting).</p>
+<p><em>(c) 2021, Mark van den Brand, Eindhoven University of Technology</em></p>
+<section id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">#</a></h2>
+<div class="toc" style="margin-top: 1em;">
+    <ul class="toc-item">
+        <li>
+            <span><a href="#1.-Searching-for-Two-Largest-Values-in-a-List" data-toc-modified-id="1.-Searching-for-Two-Largest-Values-in-a-List">1. Searching for Two Largest Values in a List</a></span>
+        </li>
+        <li>
+            <span><a href="#2.-Timing-the-Functions" data-toc-modified-id="2.-Timing-the-Functions">2. Timing the Functions</a></span>
+        </li>
+        <li>
+            <span><a href="#3.-Searching" data-toc-modified-id="3.-Searching">3. Searching</a></span>
+        </li>
+    </ul>
+</div></section>
+<section id="searching-for-two-largest-values-in-a-list">
+<h2>1. Searching for Two Largest Values in a List<a class="headerlink" href="#searching-for-two-largest-values-in-a-list" title="Permalink to this headline">#</a></h2>
+<p>Based on Chapter 11 of the book <em>Practical Programming</em> by P. Gries, J. Campbell, and J. Montojo.</p>
+<p>Suppose we have the following list of data, for instance representing the number of seals treated in the Sealcentre in Pieterburen (NL).</p>
+<p>334 468 549 836 660 389 308 392 520 271</p>
+<p>The first number, 334, represents the number of seals treated in 2009 and the last number, 271, the number of seals treated in 2018.</p>
+<p>We start with a simpler problem, what is the highest number, and we can use the <code class="docutils literal notranslate"><span class="pre">list.index</span></code> to find the corresponding index.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">]</span>
+<span class="n">high</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+<span class="n">counts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">high</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or, more concise:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">]</span>
+<span class="n">counts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">counts</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, suppose we want to find the indexes of the 2 highest amounts. There is no direct method to do so.</p>
+<p>We will present three alternative algorithms:</p>
+<ol class="simple">
+<li><p><em>Find, remove, find</em>: first find the index for highest amount, remove highest amount and then look for the index of the next highest amount. Insert the highest amount back, and adapt the second index if needed.</p></li>
+<li><p><em>Sort</em>: copy the list, and sort, and use the two highest amounts to find the corresponding indices in the original list.</p></li>
+<li><p><em>Walk through the list</em> and keep track of the two highest amounts found so far, update if a higher amount is found.</p></li>
+</ol>
+<p>The ultimate question is of course which <em>one is the fastest solution</em>?</p>
+<section id="find-remove-find">
+<h3>Find, Remove, Find<a class="headerlink" href="#find-remove-find" title="Permalink to this headline">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">find_two_highest_remove</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
+<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    &gt;&gt;&gt; find_two_highest_remove(seals)</span>
+<span class="sd">    (3, 4)</span>
+<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Find the index of the maximum in seals</span>
+    <span class="c1"># Remove that item form the list</span>
+    <span class="c1"># Find the index of the new maximum in the list</span>
+    <span class="c1"># Put the highest item back in the list</span>
+    <span class="c1"># If necessary, adjust the second index</span>
+    <span class="c1"># Return the two indices</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As we have seen <code class="docutils literal notranslate"><span class="pre">max</span></code> and <code class="docutils literal notranslate"><span class="pre">list.index</span></code> do the for finding the index of the highest amount.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">find_two_highest_remove</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
+<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    &gt;&gt;&gt; find_two_highest_remove(seals)</span>
+<span class="sd">    (3, 4)</span>
+<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Find the index of the maximum in seals</span>
+    <span class="n">highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">amounts</span><span class="p">)</span>
+    <span class="n">high_index1</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
+    <span class="c1"># Remove that item form the list</span>
+    <span class="n">amounts</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
+<span class="c1">#    print(high_index1)</span>
+    
+    <span class="c1"># Find the index of the new maximum in the list</span>
+    <span class="n">next_highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">amounts</span><span class="p">)</span>
+    <span class="n">high_index2</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">next_highest</span><span class="p">)</span>
+<span class="c1">#    print(high_index2)</span>
+    
+    <span class="c1"># Put the highest item back in the list</span>
+    <span class="c1"># If necessary, adjust the second index</span>
+    <span class="c1"># Return the two indices</span>
+    
+<span class="n">find_two_highest_remove</span><span class="p">([</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since we removed the highest amount, we have to put it back and if necessary adapt the index of the second-highest amount, if the highest amount was before the second-highest amount in the list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">find_two_highest_remove</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
+<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    &gt;&gt;&gt; find_two_highest_remove(seals)</span>
+<span class="sd">    (3, 4)</span>
+<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Find the index of the maximum in seals</span>
+    <span class="n">highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">amounts</span><span class="p">)</span>
+    <span class="n">high_index1</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
+    <span class="c1"># Remove that item form the list</span>
+    <span class="n">amounts</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
+    
+    <span class="c1"># Find the index of the new maximum in the list</span>
+    <span class="n">next_highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">amounts</span><span class="p">)</span>
+    <span class="n">high_index2</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">next_highest</span><span class="p">)</span>
+    
+    <span class="c1"># Put the highest item back in the list</span>
+    <span class="n">amounts</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">high_index1</span><span class="p">,</span> <span class="n">highest</span><span class="p">)</span>
+    
+    <span class="c1"># If necessary, adjust the second index</span>
+    <span class="k">if</span> <span class="n">high_index1</span> <span class="o">&lt;=</span> <span class="n">high_index2</span><span class="p">:</span>
+        <span class="n">high_index2</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+    <span class="c1"># Return the two indices</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span><span class="p">)</span>
+
+<span class="n">find_two_highest_remove</span><span class="p">([</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying:
+    seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+Expecting nothing
+ok
+Trying:
+    find_two_highest_remove(seals)
+Expecting:
+    (3, 4)
+ok
+Trying:
+    seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+Expecting:
+    True
+ok
+1 items had no tests:
+    __main__
+1 items passed all tests:
+   3 tests in __main__.find_two_highest_remove
+3 tests in 2 items.
+3 passed and 0 failed.
+Test passed.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-success">
+    <b>Do It Yourself!</b><br>
+    Create the function <i>find_two_lowest_remove</i>, which finds the indexes of the 2 lowest numbers of a list of integers received as parameter. Use the <b>find, remove, find</b> algorithm to compute the expected output. 
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="sort">
+<h3>Sort<a class="headerlink" href="#sort" title="Permalink to this headline">#</a></h3>
+<p>In the next cell you will find the refined algorithm based on sorting.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">find_two_highest_sort</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
+<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    &gt;&gt;&gt; find_two_highest_sort(seals)</span>
+<span class="sd">    (3, 4)</span>
+<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Sort a copy of amounts</span>
+    <span class="c1"># Get the two highest values</span>
+    <span class="c1"># Find their indices in the original list</span>
+    <span class="c1"># Return the two indices</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have to refine the sorting and obtaining the index. Note that we sort the list in reverse order!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">find_two_highest_sort</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
+<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    &gt;&gt;&gt; find_two_highest_sort(seals)</span>
+<span class="sd">    (3, 4)</span>
+<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Sort a copy of amounts</span>
+    <span class="n">temp_amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">amounts</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">temp_amounts</span><span class="p">)</span>
+    <span class="c1"># Get the two highest values</span>
+    <span class="n">highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">temp_amounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">next_highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">temp_amounts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">next_highest</span><span class="p">)</span>
+    
+    <span class="c1"># Find their indices in the original list</span>
+    <span class="c1"># Return the two indices</span>
+    
+<span class="n">find_two_highest_sort</span><span class="p">([</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[836, 660, 549, 520, 468, 392, 389, 334, 308, 271]
+836
+660
+</pre></div>
+</div>
+</div>
+</div>
+<p>We need to find the indices for both values in the original list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">find_two_highest_sort</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
+<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    &gt;&gt;&gt; find_two_highest_sort(seals)</span>
+<span class="sd">    (3, 4)</span>
+<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Sort a copy of amounts</span>
+    <span class="n">temp_amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">amounts</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+    <span class="c1"># Get the two highest values</span>
+    <span class="n">highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">temp_amounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">next_highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">temp_amounts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    
+    <span class="c1"># Find their indices in the original list</span>
+    <span class="n">high_index1</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
+    <span class="n">high_index2</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">next_highest</span><span class="p">)</span>
+    
+    <span class="c1"># Return the two indices</span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span><span class="p">)</span>
+
+<span class="n">find_two_highest_sort</span><span class="p">([</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying:
+    seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+Expecting nothing
+ok
+Trying:
+    find_two_highest_remove(seals)
+Expecting:
+    (3, 4)
+ok
+Trying:
+    seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+Expecting:
+    True
+ok
+Trying:
+    seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+Expecting nothing
+ok
+Trying:
+    find_two_highest_sort(seals)
+Expecting:
+    (3, 4)
+ok
+Trying:
+    seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+Expecting:
+    True
+ok
+1 items had no tests:
+    __main__
+2 items passed all tests:
+   3 tests in __main__.find_two_highest_remove
+   3 tests in __main__.find_two_highest_sort
+6 tests in 3 items.
+6 passed and 0 failed.
+Test passed.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=6)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-success">
+    <b>Do It Yourself!</b><br>
+    Create the function <i>find_two_lowest_sort</i>, which finds the indexes of the 2 lowest numbers of a list of integers received as parameter. Use the <b>sort</b> algorithm to compute the expected output. 
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="walk-through-the-list">
+<h3>Walk through the list<a class="headerlink" href="#walk-through-the-list" title="Permalink to this headline">#</a></h3>
+<p>In the next cell you will find the refined algorithm where walk over the list to find the highest two values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">find_two_highest_walk</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
+<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    &gt;&gt;&gt; find_two_highest_walk(seals)</span>
+<span class="sd">    (3, 4)</span>
+<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Examine each value in the list in order</span>
+    <span class="c1"># Keep track of the indices of the two highest values found so far</span>
+    <span class="c1"># Update the indices when a new higher value is found</span>
+    <span class="c1"># Return the two indices</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We start with swapping the first and second line of the refinement steps. Furthermore, the updating of the indices is a step in the loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">find_two_highest_walk</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.</span>
+<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    &gt;&gt;&gt; find_two_highest_walk(seals)</span>
+<span class="sd">    (3, 4)</span>
+<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Keep track of the indices of the two highest values found so far</span>
+    <span class="c1"># Examine each value in the list in order</span>
+    <span class="c1">#     Update the indices when a new higher value is found</span>
+    <span class="c1"># Return the two indices </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">find_two_highest_walk</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.</span>
+<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    &gt;&gt;&gt; find_two_highest_walk(seals)</span>
+<span class="sd">    (3, 4)</span>
+<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Keep track of the indices of the two highest values found so far</span>
+    <span class="k">if</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+        
+    <span class="c1"># Examine each value in the list in order</span>
+    <span class="c1">#     Update the indices when a new higher value is found</span>
+    <span class="c1"># Return the two indices </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will now use a for loop over the indices, because we are interested in the indices and not in the values themselves.</p>
+<p>There are alternative solutions, like using a while loop or a for loop to iterate over the values.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">find_two_highest_walk</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.</span>
+<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    &gt;&gt;&gt; find_two_highest_walk(seals)</span>
+<span class="sd">    (3, 4)</span>
+<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Keep track of the indices of the two highest values found so far</span>
+    <span class="k">if</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+        
+    <span class="c1"># Examine each value in the list in order</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">amounts</span><span class="p">)):</span>
+    <span class="c1">#     Update the indices when a new higher value is found</span>
+    <span class="c1"># Return the two indices   </span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Input</span> <span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">]</span>
+    <span class="c1"># Return the two indices</span>
+                               <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unexpected EOF while parsing
+</pre></div>
+</div>
+</div>
+</div>
+<p>We need to update the indices if the value at the current index is higher than one of the current values.</p>
+<ol class="simple">
+<li><p>We have to update both indices if the value at the current index is higher than the highest values seen so far. In this case both indices have to be updated</p></li>
+<li><p>The value at the current index is between the both highest values seen so far. Only the index of the lowest highest values has to be updated.</p></li>
+<li><p>The value at the current index is lower than the highest values seen so far. Nothing needs to be done.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+
+<span class="k">def</span> <span class="nf">find_two_highest_walk</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.</span>
+<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    &gt;&gt;&gt; find_two_highest_walk(seals)</span>
+<span class="sd">    (3, 4)</span>
+<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Keep track of the indices of the two highest values found so far</span>
+    <span class="k">if</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
+        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+        
+    <span class="c1"># Examine each value in the list in order</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">amounts</span><span class="p">)):</span>
+    <span class="c1">#     Update the indices when a new higher value is found</span>
+        <span class="k">if</span> <span class="n">amounts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">amounts</span><span class="p">[</span><span class="n">high_index1</span><span class="p">]:</span>
+            <span class="n">high_index2</span> <span class="o">=</span> <span class="n">high_index1</span>
+            <span class="n">high_index1</span> <span class="o">=</span> <span class="n">i</span>
+        <span class="k">elif</span> <span class="n">amounts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">amounts</span><span class="p">[</span><span class="n">high_index2</span><span class="p">]:</span>
+            <span class="n">high_index2</span> <span class="o">=</span> <span class="n">i</span>
+        
+    <span class="c1"># Return the two indices </span>
+    <span class="k">return</span> <span class="p">(</span><span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span><span class="p">)</span>
+
+<span class="n">find_two_highest_walk</span><span class="p">([</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-success">
+    <b>Do It Yourself!</b><br>
+    Create the function <i>find_two_lowest_walk</i>, which finds the indexes of the 2 lowest numbers of a list of integers received as parameter. Use the <b>walk through the list</b> algorithm to compute the expected output. 
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="timing-the-functions">
+<h2>2. Timing the Functions<a class="headerlink" href="#timing-the-functions" title="Permalink to this headline">#</a></h2>
+<p>First we are going to generate a huge list of arbitrary unique numbers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+
+<span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">rdlst</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">80000</span><span class="p">:</span>
+    <span class="n">rdnr</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000000</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">rdnr</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">rdlst</span><span class="p">:</span>
+        <span class="n">rdlst</span> <span class="o">=</span> <span class="n">rdlst</span> <span class="o">+</span> <span class="p">[</span><span class="n">rdnr</span><span class="p">]</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+<span class="c1">#print(rdlst)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Via profiling you get insight in the efficiency of your code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="c1">#find_two_highest_remove([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])</span>
+<span class="n">find_two_highest_remove</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The remove code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="c1">#find_two_highest_sort([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])</span>
+<span class="n">find_two_highest_sort</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The sort code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="c1">#find_two_highest_walk([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])</span>
+<span class="n">find_two_highest_walk</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The walk code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-success">
+    <b>Do It Yourself!</b><br>
+    Report the time taken by each of the three functions to return the indices of the lowest numbers of the list of integers.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="searching">
+<h2>3. Searching<a class="headerlink" href="#searching" title="Permalink to this headline">#</a></h2>
+<p>Searching elements in a list is a frequently used operation, as we saw in the cells above. In these cells we use the built-in method <code class="docutils literal notranslate"><span class="pre">index</span></code> on lists.</p>
+<p>We are going to present a number of different search algorithms for unsorted lists, eventually we will produce a more efficient algorithm if the list elements are sorted.</p>
+<section id="linear-search">
+<h3>Linear Search<a class="headerlink" href="#linear-search" title="Permalink to this headline">#</a></h3>
+<p>Linear search starts with the index <code class="docutils literal notranslate"><span class="pre">0</span></code> and looks at each list item one by one, in order to see whether the element at the given index is the element we are looking for?</p>
+<p>We will give two variants, each of the variants uses a loop.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+
+<span class="k">def</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">lst</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">value</span> <span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return the index of the first occurrence of value in lst,</span>
+<span class="sd">    return -1 if value is not in lst.</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 5)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; linear_search([2, 4, 2], 2)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 4)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &gt;&gt;&gt; linear_search([], 5)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Examine the items at each index i in lst, starting at index 0</span>
+    <span class="c1"># Is lst[i] the value we are looking for? If so, stop searching. </span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will first present a solution using a while-loop and an auxilary variable representing the index.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+
+<span class="k">def</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">lst</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">value</span> <span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return the index of the first occurrence of value in lst,</span>
+<span class="sd">    return -1 if value is not in lst.</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 5)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; linear_search([2, 4, 2], 2)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 4)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &gt;&gt;&gt; linear_search([], 5)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Start at index 0</span>
+    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># Examine the items at each index i in lst</span>
+    <span class="c1"># Is lst[i] the value we are looking for? If so, stop searching. </span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">value</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+    <span class="c1"># If we have inspected all elements</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">i</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The next solution present uses a for-loop and an auxilary variable representing the index.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+
+<span class="k">def</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">lst</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">value</span> <span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Return the index of the first occurrence of value in lst,</span>
+<span class="sd">    return -1 if value is not in lst.</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 5)</span>
+<span class="sd">    1</span>
+<span class="sd">    &gt;&gt;&gt; linear_search([2, 4, 2], 2)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 4)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &gt;&gt;&gt; linear_search([], 5)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">i</span>
+    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Suppose the list is sorted, would you use the same search function?</p>
+</section>
+<section id="binary-search">
+<h3>Binary Search<a class="headerlink" href="#binary-search" title="Permalink to this headline">#</a></h3>
+<p>Binary search is only applicable if the elements in the list are sorted. The basic idea of binary search is the find the middle of the list, compare the value with the middle element, if the two are the equal, then the index of the middle element is returned. Otherwise two options are possible, the value is smaller the middle element then the search is continued in the first half, else the search is continued in the second half.</p>
+<p>The advantage is that the number of steps to find the index in a list with 1.000.000 is about 20!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+
+<span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">lst</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">value</span> <span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Return the index of the first occurrence of the value in lst, </span>
+<span class="sd">    or return -1 if the value is not found in lst.</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 1)</span>
+<span class="sd">    0</span>
+<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 4)</span>
+<span class="sd">    2</span>
+<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 5)</span>
+<span class="sd">    4</span>
+<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 10)</span>
+<span class="sd">    7</span>
+<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], -3)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 11)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 3)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &gt;&gt;&gt; binary_search([], -3)</span>
+<span class="sd">    -1</span>
+<span class="sd">    &gt;&gt;&gt; binary_search([1], 1)</span>
+<span class="sd">    0</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Mark the left and right indices of the part of the list to be searched</span>
+    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">j</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    
+    <span class="k">while</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">value</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">j</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
+    
+    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">i</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+
+    
+<span class="n">binary_search</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> 
+               <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> 
+               <span class="mi">61</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">78</span><span class="p">],</span> <span class="mi">55</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+
+<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are a lot of test cases because the test cases cover:</p>
+<ul class="simple">
+<li><p>The value is the first item.</p></li>
+<li><p>The value occurs twice, we want the index of the first occurrence.</p></li>
+<li><p>The value is exactly in the middle of the list.</p></li>
+<li><p>The value is the last item of the list.</p></li>
+<li><p>The value is smaller than all elements in the list.</p></li>
+<li><p>The value is larger than all elements in the list.</p></li>
+<li><p>The value is not in the list, but is larger than some but smaller than others.</p></li>
+<li><p>The list has no items.</p></li>
+<li><p>The list has exactly one item.</p></li>
+</ul>
+<div class="alert alert-success">
+    <b>Do It Yourself!</b><br>
+    Use the linear and the binary search to find the word <i>done</i> in the list. Profile each function and compare the time taken by each one of them.
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;almost&#39;</span><span class="p">,</span> <span class="s1">&#39;done&#39;</span><span class="p">,</span> <span class="s1">&#39;with&#39;</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;course&#39;</span><span class="p">]</span>
+
+<span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Again some timing measurements.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+
+<span class="n">idx1</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">linear_search</span><span class="p">(</span><span class="n">rdlst</span><span class="p">,</span> <span class="mi">202123</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The linear search code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">idx1</span><span class="p">)</span>
+
+<span class="n">rdlst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+
+<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="n">idx2</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">binary_search</span><span class="p">(</span><span class="n">rdlst</span><span class="p">,</span> <span class="mi">202123</span><span class="p">)</span>
+<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The binary search code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">idx2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="recursion.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Recursion [^intro]</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="sorting.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Sorting [^intro]</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+      &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

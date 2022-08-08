@@ -1,0 +1,2132 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Inheritance &#8212; Introduction to Programming in Python</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Recursion [^intro]" href="recursion.html" />
+    <link rel="prev" title="Classes and Methods" href="classes_methods.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction to Programming in Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="programs.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assignments.html">
+   Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditionals.html">
+   Conditionals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="beyond_functions.html">
+   Beyond Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tuples.html">
+   Tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sets.html">
+   Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dictionaries.html">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="comprehensions_generators.html">
+   Comprehensions and Generators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regular_expressions.html">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_objects.html">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_functions.html">
+   Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_methods.html">
+   Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Inheritance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recursion.html">
+   Recursion [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="searching.html">
+   Searching [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sorting.html">
+   Sorting [^intro]
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy.html">
+   NumPy Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pandas.html">
+   Pandas DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vcs.html">
+   Version Control Systems &amp; Git
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/maveme/introProgramming.git/master/v2/gh/maveme/introProgramming/master?urlpath=lab/tree/chapters/inheritance.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/maveme/introProgramming"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/maveme/introProgramming/issues/new?title=Issue%20on%20page%20%2Fchapters/inheritance.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/maveme/introProgramming/edit/master/chapters/inheritance.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/chapters/inheritance.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dish-objects">
+   Dish Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-attributes">
+   Class Attributes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparing-dishes">
+   Comparing Dishes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meals">
+   Meals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#printing-a-meal">
+   Printing a Meal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-remove-unique-and-surprise-me">
+   Add, Remove, Unique, and Surprise Me
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Inheritance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-second-example-of-inheritance">
+   A Second Example of Inheritance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-third-example-of-inheritance">
+   A Third Example of Inheritance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#different-forms-of-inheritance">
+   Different Forms of Inheritance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-overriding">
+   Method Overriding
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checking-inheritance">
+   Checking Inheritance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-diagrams">
+   Class Diagrams
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-encapsulation">
+   Data Encapsulation
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Inheritance </h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dish-objects">
+   Dish Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-attributes">
+   Class Attributes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#comparing-dishes">
+   Comparing Dishes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#meals">
+   Meals
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#printing-a-meal">
+   Printing a Meal
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#add-remove-unique-and-surprise-me">
+   Add, Remove, Unique, and Surprise Me
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Inheritance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-second-example-of-inheritance">
+   A Second Example of Inheritance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-third-example-of-inheritance">
+   A Third Example of Inheritance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#different-forms-of-inheritance">
+   Different Forms of Inheritance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#method-overriding">
+   Method Overriding
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#checking-inheritance">
+   Checking Inheritance
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#class-diagrams">
+   Class Diagrams
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-encapsulation">
+   Data Encapsulation
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="inheritance">
+<h1>Inheritance <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#inheritance" title="Permalink to this headline">#</a></h1>
+<p><strong>Inheritance</strong> is another important concept in the object oriented programming paradigm.</p>
+<p>Inheritance refers to defining a new class with little or no modification to an existing class.</p>
+<p>Inheritance is the ability to define a new class that is a modified version of an existing
+class without copy-and-pasting.</p>
+<p>This Jupyter Notebook contains <strong>much more</strong> material than Chapter 18 of the book <em>Think Python</em>.</p>
+<section id="dish-objects">
+<h2>Dish Objects<a class="headerlink" href="#dish-objects" title="Permalink to this headline">#</a></h2>
+<p>Healthy food is a hype. People pay a lot of attention to what they eat. It should be low on calories but nevertheless tasty.</p>
+<p>We are going to develop a number of classes to represent dishes and meals in order to see whether our calorie intake is just right (not too much, not too little).</p>
+<p>The types of meals we distinguish are <code class="docutils literal notranslate"><span class="pre">breakfast</span></code>, <code class="docutils literal notranslate"><span class="pre">lunch</span></code>, <code class="docutils literal notranslate"><span class="pre">dinner</span></code>, and <code class="docutils literal notranslate"><span class="pre">all</span></code>.</p>
+<p>The types of food we distinguish are <code class="docutils literal notranslate"><span class="pre">vegetarian</span></code> and <code class="docutils literal notranslate"><span class="pre">non-vegetarian</span></code>.</p>
+<p>If we want to define a new object to represent a dish, it is obvious what the attributes should be: <code class="docutils literal notranslate"><span class="pre">meal_type</span></code> and <code class="docutils literal notranslate"><span class="pre">food_type</span></code>.</p>
+<p>A “better” way is to use integers to <strong>encode</strong> the <code class="docutils literal notranslate"><span class="pre">meal_type</span></code> and <code class="docutils literal notranslate"><span class="pre">food_type</span></code>.</p>
+<p>In this context, “encode” means that we are going to define a mapping between numbers and meal_types and food_types.</p>
+<p>This kind of encoding is not meant to be a secret (that would be “encryption”).</p>
+<p>For example, this table shows the meals and the corresponding integer codes:</p>
+<ul class="simple">
+<li><p>all <span class="math notranslate nohighlight">\(\rightarrow\)</span> 0</p></li>
+<li><p>breakfast <span class="math notranslate nohighlight">\(\rightarrow\)</span> 1</p></li>
+<li><p>lunch <span class="math notranslate nohighlight">\(\rightarrow\)</span> 2</p></li>
+<li><p>dinner <span class="math notranslate nohighlight">\(\rightarrow\)</span> 3</p></li>
+</ul>
+<p>The next table shows the type of food and the corresponding integer codes:</p>
+<ul class="simple">
+<li><p>vegetarian <span class="math notranslate nohighlight">\(\rightarrow\)</span> 0</p></li>
+<li><p>non-vegetarian <span class="math notranslate nohighlight">\(\rightarrow\)</span> 1</p></li>
+</ul>
+<p>Although the latter mapping is a kind of overkill, it allows the introduction of more specific food types, like meat, fish, etc.</p>
+<p>The <span class="math notranslate nohighlight">\(\rightarrow\)</span> symbol is used to make it clear that these mappings are not part of the Python program.</p>
+<p>They are part of the program design, but they do not appear explicitly in the code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Dish</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a dish.&quot;&quot;&quot;</span>
+
+    <span class="n">food_type_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;vegetarian&#39;</span><span class="p">,</span> <span class="s1">&#39;non-vegetarian&#39;</span><span class="p">]</span>
+    <span class="n">meal_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;breakfast&#39;</span><span class="p">,</span> <span class="s1">&#39;lunch&#39;</span><span class="p">,</span> <span class="s1">&#39;dinner&#39;</span><span class="p">]</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">calories</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">food_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">meal</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>As usual, the <code class="docutils literal notranslate"><span class="pre">init</span></code> method takes an optional parameter for each attribute.</p>
+<p>The default meal is <code class="docutils literal notranslate"><span class="pre">0</span></code> (<code class="docutils literal notranslate"><span class="pre">all</span></code>) and the food type is <code class="docutils literal notranslate"><span class="pre">1</span></code> (<code class="docutils literal notranslate"><span class="pre">non-vegetarian</span></code>).</p>
+<p>To create a <code class="docutils literal notranslate"><span class="pre">Dish</span></code>, you call <code class="docutils literal notranslate"><span class="pre">Dish</span></code> with the food type and meal type of the dish you want.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fries</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;fries&#39;</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Let’s improve the <i>Dog</i> type we defined in previous chapters. This time we want to have the following attributes: <code class="docutils literal notranslate"><span class="pre">name</span></code>, <code class="docutils literal notranslate"><span class="pre">breed</span></code>, <code class="docutils literal notranslate"><span class="pre">age</span></code>, and <code class="docutils literal notranslate"><span class="pre">weight</span></code>. Define the <code class="docutils literal notranslate"><span class="pre">init</span></code> function and the <code class="docutils literal notranslate"><span class="pre">breeds</span></code> class attribute.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="class-attributes">
+<h2>Class Attributes<a class="headerlink" href="#class-attributes" title="Permalink to this headline">#</a></h2>
+<p>In order to print <code class="docutils literal notranslate"><span class="pre">Dish</span></code> objects in a way that people can easily read, we need a mapping
+from the integer codes to the corresponding meal and food types.</p>
+<p>A natural way to do that is with lists of strings. We assign these lists to <strong>class attribute</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Dish</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a dish.&quot;&quot;&quot;</span>
+    
+    <span class="n">food_type_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;vegetarian&#39;</span><span class="p">,</span> <span class="s1">&#39;non-vegetarian&#39;</span><span class="p">]</span>
+    <span class="n">meal_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;breakfast&#39;</span><span class="p">,</span> <span class="s1">&#39;lunch&#39;</span><span class="p">,</span> <span class="s1">&#39;dinner&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">calories</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">food_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">meal</span>
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; returns the string represetation of a Dish object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> dish </span><span class="si">{}</span><span class="s1"> has </span><span class="si">{:d}</span><span class="s1"> calories and is used </span><span class="si">{}</span><span class="s1"> meal&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Dish</span><span class="o">.</span><span class="n">food_type_names</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">food_type</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calories</span><span class="p">,</span> <span class="n">Dish</span><span class="o">.</span><span class="n">meal_names</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">meal</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Variables like <code class="docutils literal notranslate"><span class="pre">food_type_names</span></code> and <code class="docutils literal notranslate"><span class="pre">meal_names</span></code>, which are defined inside a class but outside
+of any method, are called class attributes because they are associated with the class object <code class="docutils literal notranslate"><span class="pre">Dish</span></code>.</p>
+<p>This term distinguishes them from variables like <code class="docutils literal notranslate"><span class="pre">food_type</span></code> and <code class="docutils literal notranslate"><span class="pre">meal</span></code>, which are called <strong>instance attributes</strong> because they are associated with a particular instance (object).</p>
+<p>Both kinds of attribute are accessed using dot notation. For example, in <code class="docutils literal notranslate"><span class="pre">__str__</span></code>, <code class="docutils literal notranslate"><span class="pre">self</span></code>
+is a <code class="docutils literal notranslate"><span class="pre">Dish</span></code> object, and <code class="docutils literal notranslate"><span class="pre">self.meal</span></code> is its meal.</p>
+<p><code class="docutils literal notranslate"><span class="pre">Dish</span></code> is a class object, and
+<code class="docutils literal notranslate"><span class="pre">Dish.meal_names</span></code> is a list of strings associated with the class.</p>
+<p>Every dish has its own <code class="docutils literal notranslate"><span class="pre">food_type</span></code> and <code class="docutils literal notranslate"><span class="pre">meal</span></code>, but there is only one copy of <code class="docutils literal notranslate"><span class="pre">food_type_names</span></code> and
+<code class="docutils literal notranslate"><span class="pre">meal_names</span></code>.</p>
+<p>Putting it all together, the expression <code class="docutils literal notranslate"><span class="pre">Dish.meal_names[self.meal]</span></code>
+means “use the attribute <code class="docutils literal notranslate"><span class="pre">meal</span></code> from the object <code class="docutils literal notranslate"><span class="pre">self</span></code> as an index into the list <code class="docutils literal notranslate"><span class="pre">meal_names</span></code>
+from the class <code class="docutils literal notranslate"><span class="pre">Dish</span></code>, and select the appropriate string.”</p>
+<p>With the methods we have so far, we can create and print dishes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;fries&#39;</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>vegetarian dish fries has 400 calories and is used lunch meal
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Let’s add a new class attribute <i>breeds</i> with the accepted dog breeds to the <i>Dog</i> type. It must be a list with the following options: “labrador”, “chihuahua”, “samoyed”, “shar-pei”. The <i>breed</i> instance attribute should now be an integer.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="comparing-dishes">
+<h2>Comparing Dishes<a class="headerlink" href="#comparing-dishes" title="Permalink to this headline">#</a></h2>
+<p>For built-in types, there are relational operators (<code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">==</span></code>, etc.) that compare
+values and determine when one is greater than, less than, or equal to another.</p>
+<p>For programmer-defined types, we can override the behavior of the built-in operators by providing a method named <code class="docutils literal notranslate"><span class="pre">__lt__</span></code>, which stands for “less than”.</p>
+<p>This is similar to the <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method that overrides the <code class="docutils literal notranslate"><span class="pre">print</span></code> method.</p>
+<p><code class="docutils literal notranslate"><span class="pre">__lt__</span></code> takes two parameters, <code class="docutils literal notranslate"><span class="pre">self</span></code> and <code class="docutils literal notranslate"><span class="pre">other</span></code>, and returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if <code class="docutils literal notranslate"><span class="pre">self</span></code> is strictly less than other.</p>
+<p>The correct ordering for dishes may be not obvious.</p>
+<p>What criteria do we use, is a vegetarian dish healthier than a non-vegetarian dish? Or
+do we only look at the amount of calories? Or do we take the meal into consideration as well?</p>
+<p>For this moment we take the calories into consideration when comparing dishes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Dish</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a dish.&quot;&quot;&quot;</span>
+    
+    <span class="n">food_type_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;vegetarian&#39;</span><span class="p">,</span> <span class="s1">&#39;non-vegetarian&#39;</span><span class="p">]</span>
+    <span class="n">meal_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;breakfast&#39;</span><span class="p">,</span> <span class="s1">&#39;lunch&#39;</span><span class="p">,</span> <span class="s1">&#39;dinner&#39;</span><span class="p">]</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">calories</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">food_type</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">meal</span>
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; returns the string represetation of a Dish object</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> dish </span><span class="si">{}</span><span class="s1"> has </span><span class="si">{:d}</span><span class="s1"> calories and is used </span><span class="si">{}</span><span class="s1"> meal&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Dish</span><span class="o">.</span><span class="n">food_type_names</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">food_type</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calories</span><span class="p">,</span> <span class="n">Dish</span><span class="o">.</span><span class="n">meal_names</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">meal</span><span class="p">])</span>
+    
+    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; compares 2 dishes based on calories</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># check the calories</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">calories</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">calories</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Override the <i><strong>str</strong></i> method of the <i>Dog</i> types o it says: “<i>name</i> is a <i>breed</i>”. Use the <i>breeds</i> class attribute to get the name of the breed.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="meals">
+<h2>Meals<a class="headerlink" href="#meals" title="Permalink to this headline">#</a></h2>
+<p>Now that we have dishes we can start composing meals.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method is more robust.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We need to be able to compose a meal given a list of dishes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+        
+    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; composes a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Now, the <i>DogOwner</i> type can have more than one dog. Remember that a dog owner has a <i>name</i>, <i>last name</i>, and <i>age</i>. Create the <i>init</i> function so it reflects this new requirement. Afterwards, create the method <i>get_dog</i>, which adds one new dog to the list of dogs of the owner.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="printing-a-meal">
+<h2>Printing a Meal<a class="headerlink" href="#printing-a-meal" title="Permalink to this headline">#</a></h2>
+<p>The next cell extends the class with a <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method for printing a <code class="docutils literal notranslate"><span class="pre">Meal</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dlst</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">:</span>
+            <span class="n">dlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dlst</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; composes a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since we invoke <code class="docutils literal notranslate"><span class="pre">join</span></code> on a newline character, the dishes are separated by newlines.</p>
+<p>Even though the result appears on multiple lines, it is one long string that contains newlines.</p>
+<p>Here is what the result looks like.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cereals</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;cereals&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">eggs</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">meal</span> <span class="p">:</span> <span class="n">Meal</span> <span class="o">=</span> <span class="n">Meal</span><span class="p">()</span>
+<span class="n">meal</span><span class="o">.</span><span class="n">compose</span><span class="p">([</span><span class="n">cereals</span><span class="p">,</span> <span class="n">eggs</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cereals
+eggs
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following code is better.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cereals</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;cereals&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">eggs</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">meal</span> <span class="p">:</span> <span class="n">Meal</span> <span class="o">=</span> <span class="n">Meal</span><span class="p">([</span><span class="n">cereals</span><span class="p">,</span> <span class="n">eggs</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cereals
+eggs
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Define the <i><strong>str</strong></i> method of the <i>DogOwner</i> type. You should print the message “<i>name</i> <i>last_name</i> is <i>age</i> years old and has the following dogs:”. Then, use the <i>join</i> method to append the result of invoking the <i>str</i> method on each dog.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="add-remove-unique-and-surprise-me">
+<h2>Add, Remove, Unique, and Surprise Me<a class="headerlink" href="#add-remove-unique-and-surprise-me" title="Permalink to this headline">#</a></h2>
+<p>Sometimes you want to remove a dish from a meal.</p>
+<p>The list method <code class="docutils literal notranslate"><span class="pre">remove</span></code> provides a convenient way to do that, but you need to pass the name
+of the dish.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dlst</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">:</span>
+            <span class="n">dlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">slst</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; composes a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+        
+    <span class="k">def</span> <span class="nf">remove_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish_name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; removes a dish from a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">dish_name</span><span class="p">:</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="k">break</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Since <code class="docutils literal notranslate"><span class="pre">remove</span></code> removes a dish from the list, if you want to remove a specific dish, you need to pass its name as argument.</p>
+<p>To add a dish, we can use the list method <code class="docutils literal notranslate"><span class="pre">append</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dlst</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">:</span>
+            <span class="n">dlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dlst</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; composes a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+        
+    <span class="k">def</span> <span class="nf">remove_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish_name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; removes a dish from a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">dish_name</span><span class="p">:</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="k">break</span>
+    
+    <span class="k">def</span> <span class="nf">add_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; add a dish to a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Maybe you do not want to have the same dish twice in your meal.</p>
+<p>For that, we introduce a method to check whether a dish is already in the meal.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">dlst</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">:</span>
+            <span class="n">dlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dlst</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; composes a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+        
+    <span class="k">def</span> <span class="nf">remove_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish_name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; removes a dish from a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">dish_name</span><span class="p">:</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="k">break</span>
+    
+    <span class="k">def</span> <span class="nf">add_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; adds a dish to a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">contains_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; checks whether the dish is already in the meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cereals</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;cereals&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">eggs</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">bread</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;bread&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">meal</span> <span class="p">:</span> <span class="n">Meal</span> <span class="o">=</span> <span class="n">Meal</span><span class="p">([</span><span class="n">cereals</span><span class="p">,</span> <span class="n">eggs</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="p">)</span>
+<span class="n">meal</span><span class="o">.</span><span class="n">remove_dish</span><span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">)</span>
+<span class="n">meal</span><span class="o">.</span><span class="n">add_dish</span><span class="p">(</span><span class="n">bread</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="o">.</span><span class="n">contains_dish</span><span class="p">(</span><span class="n">bread</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="o">.</span><span class="n">contains_dish</span><span class="p">(</span><span class="n">eggs</span><span class="p">))</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>cereals
+eggs
+True
+False
+cereals
+bread
+</pre></div>
+</div>
+</div>
+</div>
+<p>There exists an extensive list of food data, see <a class="reference external" href="https://catalog.data.gov/dataset/mypyramid-food-raw-data-f9ed6">https://catalog.data.gov/dataset/mypyramid-food-raw-data-f9ed6</a>.</p>
+<p>This list has been the basis for creating a CSV file with about 85 different types of food, including information on
+calories, portion size, (non-)vegetarian and type of meal.</p>
+<p>Suppose you want to select arbitrary of dishes from this list.</p>
+<p>Before we start implementing the function to read the CSV file, we first write a function to convert an entry of the CSV file into a dish.</p>
+<p>The information in the CSV file is:</p>
+<p><code class="docutils literal notranslate"><span class="pre">Display_Name;</span> <span class="pre">Portion_Amount;</span> <span class="pre">Portion_Display_Name;</span> <span class="pre">Meats;Calories;</span> <span class="pre">Vegetarian;</span> <span class="pre">Meal</span></code>.</p>
+<p>We use this information to develop the conversion function <code class="docutils literal notranslate"><span class="pre">convert_to_dish</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_to_dish</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dish</span><span class="p">:</span>
+    <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Display_Name&#39;</span><span class="p">]</span>
+    <span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Calories&#39;</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Meal&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span>
+        <span class="n">meal_type</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">elif</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Meal&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;L&#39;</span><span class="p">:</span>
+        <span class="n">meal_type</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="k">elif</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Meal&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span>
+        <span class="n">meal_type</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># entry[&#39;Meal&#39;] == &#39;A&#39;</span>
+        <span class="n">meal_type</span> <span class="o">=</span> <span class="mi">0</span>
+        
+    <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Vegetarian&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
+        <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">calories</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">meal_type</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">calories</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">meal_type</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">dish</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>For that we introduce the method <code class="docutils literal notranslate"><span class="pre">surprise_me</span></code>, it takes the number of dishes to be added to
+the meal, and it uses a random function to “select” the dishes.</p>
+<p>Before we can implement this <code class="docutils literal notranslate"><span class="pre">surprise_me</span></code> method, we first have to define a function to
+process food data (given as a CSV file) via a function <code class="docutils literal notranslate"><span class="pre">process_food_data</span></code>.</p>
+<p>See <a class="reference external" href="https://docs.python.org/3/library/csv.html">https://docs.python.org/3/library/csv.html</a> for more information on CSV files.</p>
+<p>We need to import the <code class="docutils literal notranslate"><span class="pre">csv</span></code> module.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="k">def</span> <span class="nf">process_food_data</span><span class="p">():</span>    
+    <span class="sd">&quot;&quot;&quot; reads a CSV and converts it into a dictionary where the key is plain integer value</span>
+<span class="sd">        and the value is a Dish</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">csv_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/FoodTable.csv&#39;</span><span class="p">)</span>
+    <span class="n">food_table</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+    
+    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="n">food_table</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">convert_to_dish</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>    
+        
+    <span class="n">csv_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">food_table</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The next step is writing a function that converts an entry in the food data into a dish.</p>
+<p>Note, that the function <code class="docutils literal notranslate"><span class="pre">randint</span></code> is used to generate an arbitrary ranking.</p>
+<p>The next step is to write the <code class="docutils literal notranslate"><span class="pre">surprise_me</span></code> method, that given an integer value as argument, selects that number
+of dishes (arbitrary from the list of dishes).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+        
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="n">dlst</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">:</span>
+            <span class="n">dlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dlst</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; composes a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span>  <span class="p">:</span> <span class="nb">list</span><span class="o">=</span> <span class="n">dishes</span>
+        
+    <span class="k">def</span> <span class="nf">remove_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish_name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; removes a dish from a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">)):</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">dish_name</span><span class="p">:</span>
+                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+                <span class="k">break</span>
+    
+    <span class="k">def</span> <span class="nf">add_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; adds a dish to a meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">contains_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; checks whether the dish is already in the meal</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span>
+            
+    <span class="k">def</span> <span class="nf">surprise_me</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nr</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; add arbitrary dishes upto &#39;nr_of_dishes&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nr</span><span class="p">):</span>
+            <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">food_table</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">food_table</span><span class="p">))]</span>
+            <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">contains_dish</span><span class="p">(</span><span class="n">dish</span><span class="p">):</span>
+                <span class="n">dish</span> <span class="o">=</span> <span class="n">food_table</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">food_table</span><span class="p">))]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_dish</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+    
+<span class="n">food_table</span> <span class="o">=</span> <span class="n">process_food_data</span><span class="p">()</span>
+<span class="n">meal</span> <span class="o">=</span> <span class="n">Meal</span><span class="p">()</span>
+<span class="n">meal</span><span class="o">.</span><span class="n">surprise_me</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">Input In [23],</span> in <span class="ni">&lt;cell line: 49&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span>                 <span class="n">dish</span> <span class="o">=</span> <span class="n">food_table</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">food_table</span><span class="p">))]</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span>             <span class="bp">self</span><span class="o">.</span><span class="n">add_dish</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">49</span> <span class="n">food_table</span> <span class="o">=</span> <span class="n">process_food_data</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="n">meal</span> <span class="o">=</span> <span class="n">Meal</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="n">meal</span><span class="o">.</span><span class="n">surprise_me</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="nn">Input In [22],</span> in <span class="ni">process_food_data</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">def</span> <span class="nf">process_food_data</span><span class="p">():</span>    
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="sd">&quot;&quot;&quot; reads a CSV and converts it into a dictionary where the key is plain integer value</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span><span class="sd">         and the value is a Dish</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">7</span>     <span class="n">csv_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/FoodTable.csv&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">food_table</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;datasets/FoodTable.csv&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Define the <i>remove_dog</i> and <i>has_dog</i> methods on the <i>DogOwner</i> class. The former removes a dog given its name from the list of dogs. The latter verifies if a dog is part of the list of dogs given its name.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h2>Inheritance<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>Inheritance is the ability to define a new class that is a modified version of an existing class.</p>
+<p>As an example, suppose we want to distinguish between the general concept of a meal and a specific meal, such as
+breakfast, lunch and dinner.</p>
+<p>To define a new class that inherits from an existing class, you put the name of the existing
+class in parentheses.</p>
+<p>The new class is called <strong>derived (or child) class</strong> and the one from which it <em>inherits</em> is called the <strong>base (or parent) class</strong>.</p>
+<p>A derived class inherits features from the base class where new features can be added to it. This results in re-usability of code.</p>
+<p>The syntax for inheritance:</p>
+<p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">BaseClass:</span>&#160;&#160;&#160;&#160; <span class="pre">Body</span> <span class="pre">of</span> <span class="pre">base</span> <span class="pre">class</span> <span class="pre">class</span> <span class="pre">DerivedClass(BaseClass):</span>&#160;&#160;&#160;&#160; <span class="pre">Body</span> <span class="pre">of</span> <span class="pre">derived</span> <span class="pre">class</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Breakfast</span><span class="p">(</span><span class="n">Meal</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; represents a breakfast as a meal </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This definition indicates that <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code> inherits from <code class="docutils literal notranslate"><span class="pre">Meal</span></code>; that means we can use methods like
+<code class="docutils literal notranslate"><span class="pre">add_dish</span></code> and <code class="docutils literal notranslate"><span class="pre">remove_dish</span></code> for <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code> as well as <code class="docutils literal notranslate"><span class="pre">Meal</span></code>.</p>
+<p>When a new class inherits from an existing one, the existing one is called the <strong>parent</strong> and
+the new class is called the <strong>child</strong>.</p>
+<p>In this example, <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code> inherits <code class="docutils literal notranslate"><span class="pre">__init__</span></code> from <code class="docutils literal notranslate"><span class="pre">Meal</span></code>, but it does not really do what we want:
+instead we want to start healthy with a glass of orange juice, the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method for <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code> should initialize dishes with an orange juice. Thus, we <strong>override</strong> it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Breakfast</span><span class="p">(</span><span class="n">Meal</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; represents a breakfast as a meal</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">orange_juice</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;Orange juice (100% juice)&#39;</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">Meal</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,[</span><span class="n">orange_juice</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When you create a <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code>, Python invokes this <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method, not the one in <code class="docutils literal notranslate"><span class="pre">Meal</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">breakfast</span> <span class="p">:</span> <span class="n">Breakfast</span> <span class="o">=</span> <span class="n">Breakfast</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">breakfast</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Orange juice (100% juice)
+</pre></div>
+</div>
+</div>
+</div>
+<p>The other methods are inherited from <code class="docutils literal notranslate"><span class="pre">Meal</span></code>, so we can use <code class="docutils literal notranslate"><span class="pre">add_dish</span></code> and <code class="docutils literal notranslate"><span class="pre">remove_dish</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">breakfast</span> <span class="p">:</span> <span class="n">Breakfast</span> <span class="o">=</span> <span class="n">Breakfast</span><span class="p">()</span>
+<span class="n">yoghurt</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;Fruit yogurt, whole milk&#39;</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">breakfast</span><span class="o">.</span><span class="n">add_dish</span><span class="p">(</span><span class="n">yoghurt</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">breakfast</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Orange juice (100% juice)
+Fruit yogurt, whole milk
+</pre></div>
+</div>
+</div>
+</div>
+<p>The method <code class="docutils literal notranslate"><span class="pre">surprise_me</span></code> of the class <code class="docutils literal notranslate"><span class="pre">Meal</span></code> selects all possible types of food from the food data.
+When composing a breakfast you only want to have breakfast dishes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Breakfast</span><span class="p">(</span><span class="n">Meal</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; represents a breakfast as a meal</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">orange_juice</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;Orange juice (100% juice)&#39;</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="n">Meal</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,[</span><span class="n">orange_juice</span><span class="p">])</span>
+        
+    <span class="k">def</span> <span class="nf">surprise_me</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nr</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="sd">&quot;&quot;&quot; add arbitrary dishes upto &#39;nr_of_dishes&#39;</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nr</span><span class="p">):</span>
+            <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">food_table</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">food_table</span><span class="p">))]</span>
+            <span class="k">while</span> <span class="n">dish</span><span class="o">.</span><span class="n">meal</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">dish</span><span class="o">.</span><span class="n">meal</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">contains_dish</span><span class="p">(</span><span class="n">dish</span><span class="p">):</span>
+                <span class="n">dish</span> <span class="o">=</span> <span class="n">food_table</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">food_table</span><span class="p">))]</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">add_dish</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">breakfast</span> <span class="p">:</span> <span class="n">Breakfast</span> <span class="o">=</span> <span class="n">Breakfast</span><span class="p">()</span>
+
+<span class="n">breakfast</span><span class="o">.</span><span class="n">surprise_me</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">breakfast</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Orange juice (100% juice)
+Plain yogurt, whole milk
+</pre></div>
+</div>
+</div>
+</div>
+<p>Inheritance is a useful feature.</p>
+<p>Some programs that would be repetitive without inheritance can be written more elegantly with it.</p>
+<p>Inheritance can facilitate code reuse, since you can customize the behavior of parent classes without having to modify them.</p>
+<p>In some cases, the inheritance structure reflects the natural structure of the problem, which makes the design easier to understand.</p>
+<p>On the other hand, inheritance can make programs difficult to read.</p>
+<p>When a method is invoked, it is sometimes not clear where to find its definition.</p>
+<p>The relevant code may be spread across several modules.</p>
+<p>Also, many of the things that can be done using inheritance can be done as well or better without it.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>A dog owner can now have other types of pets. Define the <i>Pet</i> class and create the <i>Dog</i> and <i>Cat</i> classes, which inherits from them. A Pet instance has the following attributes: <i>name</i>, <i>breed</i>, <i>age</i>, and <i>weight</i>. Now, we will define new <i>breeds</i> lists on the Dog and Cat classes. Possible cat breeds are “siamese”, “sphynx”, “persian”, and “angora”.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-second-example-of-inheritance">
+<h2>A Second Example of Inheritance<a class="headerlink" href="#a-second-example-of-inheritance" title="Permalink to this headline">#</a></h2>
+<p>A polygon is a closed figure with 3 or more sides. A class called <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> can be defined as follows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Polygon</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">no_of_sides</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">no_of_sides</span>
+        <span class="n">sides</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">no_of_sides</span><span class="p">):</span>
+            <span class="n">sides</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">sides</span>
+
+    <span class="k">def</span> <span class="nf">input_sides</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter side &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; : &quot;</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">)]</span>
+
+    <span class="k">def</span> <span class="nf">display_sides</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Side&quot;</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sides</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This class has data attributes to store the number of sides <code class="docutils literal notranslate"><span class="pre">n</span></code> and magnitude of each side as a list called <code class="docutils literal notranslate"><span class="pre">sides</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">input_sides()</span></code> method takes in the magnitude of each side and <code class="docutils literal notranslate"><span class="pre">display_sides()</span></code> displays these side lengths.</p>
+<p>A triangle is a polygon with 3 sides. So, we can create a class called <code class="docutils literal notranslate"><span class="pre">Triangle</span></code> which inherits from <code class="docutils literal notranslate"><span class="pre">Polygon</span></code>. This makes all the attributes of <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> class available to the <code class="docutils literal notranslate"><span class="pre">Triangle</span></code> class.</p>
+<p>We do not need to define them again (code reusability).</p>
+<p><code class="docutils literal notranslate"><span class="pre">Triangle</span></code> can be defined as follows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Triangle</span><span class="p">(</span><span class="n">Polygon</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">Polygon</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">calculate_area</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sides</span>
+        <span class="c1"># calculate the semi-perimeter</span>
+        <span class="n">s</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+        <span class="n">area</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">c</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The area of the triangle is </span><span class="si">%0.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">area</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Triangle</span></code> has a new method <code class="docutils literal notranslate"><span class="pre">find_area()</span></code> to find and print the area of the triangle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">Triangle</span><span class="p">()</span>
+
+<span class="n">t</span><span class="o">.</span><span class="n">input_sides</span><span class="p">()</span>
+
+<span class="n">t</span><span class="o">.</span><span class="n">calculate_area</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Enter side 1 :  2
+Enter side 2 :  2
+Enter side 3 :  2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The area of the triangle is 1.73
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Copy the <i>Pet</i> class and define the method <i>compute_human_age()</i>, which only returns the age of the pet. Now, copy the <i>Dog</i> and <i>Cat</i> classes, and redefine the new method. In the case of a dog, the human age is equal to the age of the dog times 7; and the human age of a cat is equal to its age times 5. Create one <i>Cat</i> and one <i>Dog</i> object, then test your methods.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="a-third-example-of-inheritance">
+<h2>A Third Example of Inheritance<a class="headerlink" href="#a-third-example-of-inheritance" title="Permalink to this headline">#</a></h2>
+<p>Below is another simple example of inheritance in Python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span> 
+    <span class="sd">&quot;&quot;&quot; Representing a person </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Constructor </span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
+   
+    <span class="c1"># To get name </span>
+    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> 
+   
+    <span class="c1"># To check if this person is an employee </span>
+    <span class="k">def</span> <span class="nf">is_employee</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="kc">False</span>
+   
+   
+<span class="c1"># Inherited or Subclass/Child class</span>
+<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span> 
+   
+    <span class="c1"># Here we return true </span>
+    <span class="k">def</span> <span class="nf">is_employee</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span> 
+        <span class="k">return</span> <span class="kc">True</span>
+
+
+<span class="n">emp</span> <span class="p">:</span> <span class="n">Person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Mark&quot;</span><span class="p">)</span>  <span class="c1"># An Object of Person </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">emp</span><span class="o">.</span><span class="n">get_name</span><span class="p">(),</span> <span class="n">emp</span><span class="o">.</span><span class="n">is_employee</span><span class="p">())</span> 
+   
+<span class="n">emp</span> <span class="p">:</span> <span class="n">Employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s2">&quot;Lina&quot;</span><span class="p">)</span> <span class="c1"># An Object of Employee </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">emp</span><span class="o">.</span><span class="n">get_name</span><span class="p">(),</span> <span class="n">emp</span><span class="o">.</span><span class="n">is_employee</span><span class="p">())</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mark False
+Lina True
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let us work a bit more on this example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span>     
+    <span class="sd">&quot;&quot;&quot; Representing a person </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">idnumber</span> 
+        
+    <span class="c1"># getters have to be added!</span>
+    
+    <span class="c1"># To get name     </span>
+    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span><span class="p">)</span> 
+
+<span class="c1"># Child class</span>
+<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span> 
+    <span class="sd">&quot;&quot;&quot; Representing an employee</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">function</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">salary</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">function</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">function</span> 
+  
+        <span class="c1"># invoking the __init__ of the parent class  </span>
+        <span class="n">Person</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">)</span>  
+  
+                  
+<span class="c1"># creation of an object variable or an instance </span>
+<span class="n">a</span> <span class="p">:</span> <span class="n">Employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="mi">886012</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="s2">&quot;Professor&quot;</span><span class="p">)</span>     
+    
+<span class="c1"># calling a function of the class Person using its instance </span>
+<span class="n">a</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mark
+886012
+</pre></div>
+</div>
+</div>
+</div>
+<p>The variables defined within <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> are called as the <strong>instance variables</strong> or <strong>attributes</strong>. Hence, <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">idnumber</span></code> are the attributes of the class <code class="docutils literal notranslate"><span class="pre">Person</span></code>.</p>
+<p>Similarly, <code class="docutils literal notranslate"><span class="pre">salary</span></code> and <code class="docutils literal notranslate"><span class="pre">function</span></code> are the attributes of the class <code class="docutils literal notranslate"><span class="pre">Employee</span></code>. Since the class <code class="docutils literal notranslate"><span class="pre">Employee</span></code> inherits from class <code class="docutils literal notranslate"><span class="pre">Person</span></code>, <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">idnumber</span></code> are also the attributes of class <code class="docutils literal notranslate"><span class="pre">Employee</span></code>.</p>
+<p>If you forget to invoke the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> of the parent class then its instance variables would not be available to the child class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span>     
+    <span class="sd">&quot;&quot;&quot; Representing a person </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">idnumber</span> 
+        
+    <span class="c1"># To get name     </span>
+    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span><span class="p">)</span> 
+
+<span class="c1"># Child class</span>
+<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span> 
+    <span class="sd">&quot;&quot;&quot; Representing an employee</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">function</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">salary</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">function</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">function</span> 
+  
+        <span class="c1"># invoking the __init__ of the parent class  </span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">)</span>  
+  
+                  
+<span class="c1"># creation of an object variable or an instance </span>
+<span class="n">a</span> <span class="p">:</span> <span class="n">Employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="mi">886012</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="s2">&quot;Professor&quot;</span><span class="p">)</span>     
+    
+<span class="c1"># calling a function of the class Person using its instance </span>
+<span class="n">a</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When calling a method or the parent class you can use <code class="docutils literal notranslate"><span class="pre">super()</span></code>, which returns a temprary object of the parent class.
+With this object you can invoke all methods defined within the super class.
+Notice that we do not pass the argument <code class="docutils literal notranslate"><span class="pre">self</span></code> anymore.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Copy the <i>Pet</i> and <i>Dog</i> classes. Now, you will add the attribute <i>bark_volume</i> to the dog, which is an integer between 1 and 10 being 1 the lowest possible value and 10 the highest. Modify the <i>Dog</i> constructor to add this new instance variable.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="different-forms-of-inheritance">
+<h2>Different Forms of Inheritance<a class="headerlink" href="#different-forms-of-inheritance" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><strong>Single inheritance</strong>: When a child class inherits from only one parent class, it is called single inheritance. We saw an example above.</p></li>
+<li><p><strong>Multiple inheritance</strong>: When a child class inherits from multiple parent classes, it is called multiple inheritance. Unlike Java and like C++, Python supports multiple inheritance. We specify all parent classes as a comma-separated list in the bracket.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span>     
+    <span class="sd">&quot;&quot;&quot; Representing a person </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">pname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">idnumber</span> 
+        
+    <span class="c1"># To get name     </span>
+    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pname</span><span class="p">)</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span><span class="p">)</span> 
+        
+<span class="k">class</span> <span class="nc">Organisation</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Representing an organisation</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tp_of_organ</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">tp_of_organ</span>
+
+<span class="c1"># Child class</span>
+<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">,</span> <span class="n">Organisation</span><span class="p">):</span> 
+    <span class="sd">&quot;&quot;&quot; Representing an employee</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">function</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">salary</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">function</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">function</span> 
+  
+        <span class="c1"># invoking the __init__ of the parent class  </span>
+        <span class="n">Person</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">)</span> 
+        <span class="n">Organisation</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+  
+                  
+<span class="c1"># creation of an object variable or an instance </span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="mi">886012</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="s1">&#39;Professor&#39;</span><span class="p">,</span> <span class="s1">&#39;TU/e&#39;</span><span class="p">,</span> <span class="s1">&#39;university&#39;</span><span class="p">)</span>     
+  
+<span class="c1"># calling a function of the class Person using its instance </span>
+<span class="n">a</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mark
+886012
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Multilevel inheritance</strong>: When we have a child and grandchild relationship.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span>     
+    <span class="sd">&quot;&quot;&quot; Representing a person </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">pname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">idnumber</span> 
+        
+    <span class="c1"># To get name     </span>
+    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pname</span><span class="p">)</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span><span class="p">)</span> 
+        
+<span class="k">class</span> <span class="nc">Organisation</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Representing an organisation</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tp_of_organ</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">tp_of_organ</span>
+
+<span class="c1"># Child class</span>
+<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">,</span> <span class="n">Organisation</span><span class="p">):</span> 
+    <span class="sd">&quot;&quot;&quot; Representing an employee</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">salary</span> 
+  
+        <span class="c1"># invoking the __init__ of the parent class  </span>
+        <span class="n">Person</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">)</span> 
+        <span class="n">Organisation</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">Scientific</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Representing a specific function</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1">#Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">level</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="n">level</span>
+        
+        <span class="c1"># invoking the __init__ of the parent class</span>
+        <span class="n">Employee</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+        
+<span class="c1"># creation of an object variable or an instance </span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Scientific</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="mi">886012</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="s1">&#39;professor&#39;</span><span class="p">,</span> <span class="s1">&#39;TU/e&#39;</span><span class="p">,</span> <span class="s1">&#39;university&#39;</span><span class="p">)</span>     
+  
+<span class="c1"># calling a function of the class Person using its instance </span>
+<span class="n">a</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mark
+886012
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><strong>Hierarchical inheritance</strong>: When more than one derived classes are created from a single base this type of inheritance is called hierarchical inheritance. In this program, we have a parent (base) class and two child (derived) classes.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span>     
+    <span class="sd">&quot;&quot;&quot; Representing a person </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1"># Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>    
+        <span class="bp">self</span><span class="o">.</span><span class="n">pname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">idnumber</span> 
+        
+    <span class="c1"># To get name     </span>
+    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pname</span><span class="p">)</span> 
+        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span><span class="p">)</span> 
+        
+<span class="k">class</span> <span class="nc">Organisation</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot; Representing an organisation</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tp_of_organ</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">tp_of_organ</span>
+
+<span class="c1"># Child class</span>
+<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">,</span> <span class="n">Organisation</span><span class="p">):</span> 
+    <span class="sd">&quot;&quot;&quot; Representing an employee</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">salary</span> 
+  
+        <span class="c1"># invoking the __init__ of the parent class  </span>
+        <span class="n">Person</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">)</span> 
+        <span class="n">Organisation</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">Scientific</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Representing a specific scientific function</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1">#Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">level</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">level</span>  <span class="p">:</span> <span class="nb">str</span><span class="o">=</span> <span class="n">level</span>
+        
+        <span class="c1"># invoking the __init__ of the parent class</span>
+        <span class="n">Employee</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+        
+<span class="k">class</span> <span class="nc">Support</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; Representing a specific support function</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="c1">#Constructor</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">suptype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">suptype</span> <span class="o">=</span> <span class="n">suptype</span>
+        
+        <span class="c1"># invoking the __init__ of the parent class</span>
+        <span class="n">Employee</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+        
+<span class="c1"># creation of an object variable or an instance </span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">Scientific</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="mi">886012</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="s1">&#39;TU/e&#39;</span><span class="p">,</span> <span class="s1">&#39;university&#39;</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">Support</span><span class="p">(</span><span class="s1">&#39;Erik&#39;</span><span class="p">,</span> <span class="mi">685010</span><span class="p">,</span> <span class="mi">50000</span><span class="p">,</span> <span class="s1">&#39;programmer&#39;</span><span class="p">,</span> <span class="s1">&#39;TU/e&#39;</span><span class="p">,</span> <span class="s1">&#39;university&#39;</span><span class="p">)</span>     
+  
+<span class="c1"># calling a function of the class Person using its instance </span>
+<span class="n">a</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+<span class="n">b</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mark
+886012
+Erik
+685010
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>What type of inheritance do we have in the <i>Pet</i>-<i>Dog</i>-<i>Cat</i> scenario? Why?</p>
+</div>
+</section>
+<section id="method-overriding">
+<h2>Method Overriding<a class="headerlink" href="#method-overriding" title="Permalink to this headline">#</a></h2>
+<p>In the above example, notice that <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> method was defined in both classes <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code> as well <code class="docutils literal notranslate"><span class="pre">Meal</span></code>.</p>
+<p>When this happens, the method in the derived class <em>overrides</em> the one in the base class. This is to say, <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> in <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code> gets preference over the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> in <code class="docutils literal notranslate"><span class="pre">Meal</span></code>.</p>
+<p>Generally, when overriding a base method, we tend to extend the definition rather than replace it.</p>
+<p>The same is being done by calling the method in base class from the one in derived class (calling <code class="docutils literal notranslate"><span class="pre">Meal.__init__()</span></code> from <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> in <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code>).</p>
+</section>
+<section id="checking-inheritance">
+<h2>Checking Inheritance<a class="headerlink" href="#checking-inheritance" title="Permalink to this headline">#</a></h2>
+<p>Two built-in functions <code class="docutils literal notranslate"><span class="pre">isinstance()</span></code> and <code class="docutils literal notranslate"><span class="pre">issubclass()</span></code> are used to check inheritances.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">isinstance()</span></code> returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if the object is an instance of the class or other classes derived from it.</p>
+<p>Each and every class in Python inherits from the base class <code class="docutils literal notranslate"><span class="pre">object</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">breakfast</span><span class="p">,</span><span class="n">Breakfast</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">breakfast</span><span class="p">,</span><span class="n">Meal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">breakfast</span><span class="p">,</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">breakfast</span><span class="p">,</span><span class="nb">object</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the same way, <code class="docutils literal notranslate"><span class="pre">issubclass()</span></code> is used to check for class inheritance.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">issubclass</span><span class="p">(</span><span class="n">Meal</span><span class="p">,</span><span class="n">Breakfast</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">issubclass</span><span class="p">(</span><span class="n">Breakfast</span><span class="p">,</span><span class="n">Meal</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">issubclass</span><span class="p">(</span><span class="nb">bool</span><span class="p">,</span><span class="nb">int</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create one <i>Dog</i> and one <i>Cat</i> object. Use the <i>isinstance()</i> and <i>issubclass()</i> functions to verify the relationship between your <i>Pet</i> objects and the <i>Pet</i>, <i>Dog</i>, and <i>Cat</i> classes.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="class-diagrams">
+<h2>Class Diagrams<a class="headerlink" href="#class-diagrams" title="Permalink to this headline">#</a></h2>
+<p>A <strong>class diagram</strong> is an abstract representation of the structure of a program.</p>
+<p>It shows the classes and their relations.</p>
+<p>Class diagrams are extremely popular and used, among others, in UML (Unified Modeling Language).</p>
+<p>There are several kinds of relationship between classes:</p>
+<ul class="simple">
+<li><p>Objects in one class might contain references to objects in another class. For example,
+each Rectangle contains a reference to a Point, and each Deck contains references to
+many Cards. This kind of relationship is called <strong>HAS-A</strong>, as in, “a Rectangle has a
+Point.”</p></li>
+<li><p>One class might inherit from another. This relationship is called <strong>IS-A</strong>, as in, “Breakfast
+is a kind of Meal.”</p></li>
+<li><p>One class might depend on another in the sense that objects in one class take objects
+in the second class as parameters, or use objects in the second class as part of a
+computation. This kind of relationship is called a <strong>dependency</strong>.</p></li>
+</ul>
+<p>A <strong>class diagram</strong> is a graphical representation of these relationships.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39; +--------+        *   +--------+&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; |  Meal  |   ------&gt;  |  Dish  |&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; +--------+            +--------+&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;     /_\                         &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;      |                          &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;      |                          &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;      |                          &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;+-----------+                    &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;| Breakfast |                    &#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;+-----------+                    &#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The arrow with a hollow triangle head represents an IS-A relationship; in this case it indicates that Hand inherits from Deck.</p>
+<p>The standard arrow head represents a HAS-A relationship; in this case a Meal object has references
+to Dish objects.</p>
+<p>The star (*) near the arrow head is a <strong>multiplicity</strong>; it indicates how many Dishes a Meal has.</p>
+<p>A multiplicity can be a simple number, like 3, a range, like 5..7 or a star, which indicates that a Meal can have any number of Dishes.</p>
+<p>There are no dependencies in this diagram.</p>
+<p>They would normally be shown with a dashed arrow.</p>
+<p>Or if there are a lot of dependencies, they are sometimes omitted.</p>
+<p>A more detailed diagram might show that a Meal actually contains a list of Dishes, but
+built-in types like list and dict are usually not included in class diagrams.</p>
+<p>See <a class="reference external" href="https://en.wikipedia.org/wiki/Class_diagram">https://en.wikipedia.org/wiki/Class_diagram</a> for more information on UML class diagrams.</p>
+</section>
+<section id="data-encapsulation">
+<h2>Data Encapsulation<a class="headerlink" href="#data-encapsulation" title="Permalink to this headline">#</a></h2>
+<p>The previous chapters demonstrate a development plan we might call “object-oriented
+design”.
+We identified objects we needed – like <code class="docutils literal notranslate"><span class="pre">Point</span></code>, <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> and <code class="docutils literal notranslate"><span class="pre">Time</span></code> – and defined
+classes to represent them.</p>
+<p>In each case there is an obvious correspondence between the
+object and some entity in the real world (or at least a mathematical world).But sometimes it is less obvious what objects you need and how they should interact.</p>
+<p>In
+that case you need a different development plan.</p>
+<p>In the same way that we discovered
+function interfaces by encapsulation and generalization, we can discover class interfaces
+by <strong>data encapsulation</strong>.</p>
+<p>Introducing classes, attributes and methods, starting from <em>regular</em> Python code, is another example of refactoring.</p>
+<p>This example suggests a development plan for designing objects and methods:</p>
+<ol class="simple">
+<li><p>Start by writing functions that read and write global variables (when necessary).</p></li>
+<li><p>Once you get the program working, look for associations between global variables and the functions that use them.</p></li>
+<li><p>Encapsulate related variables as attributes of an object.</p></li>
+<li><p>Transform the associated functions into methods of the new class.</p></li>
+</ol>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 18 of <span id="id3">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="classes_methods.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Classes and Methods </p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="recursion.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Recursion [^intro]</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+      &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

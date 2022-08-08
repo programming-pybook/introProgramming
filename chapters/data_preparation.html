@@ -1,0 +1,1621 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Data Preparation &#8212; Introduction to Programming in Python</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="NumPy Arrays" href="numpy.html" />
+    <link rel="prev" title="Exploratory Data Analysis (EDA)" href="eda.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction to Programming in Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="programs.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assignments.html">
+   Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditionals.html">
+   Conditionals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="beyond_functions.html">
+   Beyond Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tuples.html">
+   Tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sets.html">
+   Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dictionaries.html">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="comprehensions_generators.html">
+   Comprehensions and Generators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regular_expressions.html">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_objects.html">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_functions.html">
+   Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_methods.html">
+   Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inheritance.html">
+   Inheritance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recursion.html">
+   Recursion [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="searching.html">
+   Searching [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sorting.html">
+   Sorting [^intro]
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy.html">
+   NumPy Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pandas.html">
+   Pandas DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vcs.html">
+   Version Control Systems &amp; Git
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/maveme/introProgramming.git/master/v2/gh/maveme/introProgramming/master?urlpath=lab/tree/chapters/data_preparation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/maveme/introProgramming"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/maveme/introProgramming/issues/new?title=Issue%20on%20page%20%2Fchapters/data_preparation.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/maveme/introProgramming/edit/master/chapters/data_preparation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/chapters/data_preparation.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access-a-class-anchor-id-access-a">
+   Data Access
+   <a class="anchor" id="access">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-formats">
+     File Formats
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plain-text">
+       Plain Text
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#comma-separated-values-csv">
+       Comma-Separated Values (CSV)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#javascript-object-notation-json">
+       JavaScript Object Notation (JSON)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#extensible-markup-language-xml">
+       Extensible Markup Language (XML)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-cleanse-a-class-anchor-id-cleanse-a">
+   Data Cleanse
+   <a class="anchor" id="cleanse">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#erroneous-data">
+     Erroneous Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#missing-values">
+     Missing Values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#value-formats">
+     Value Formats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sensitive-data">
+     Sensitive Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-integration-a-class-anchor-id-integration-a">
+   Data Integration
+   <a class="anchor" id="integration">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-transformation-a-class-anchor-id-transformation-a">
+   Data Transformation
+   <a class="anchor" id="transformation">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-airbnb-case-a-class-anchor-id-airbnb-a">
+   The Airbnb Case
+   <a class="anchor" id="airbnb">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Data Preparation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r1-access-the-listings-csv-file">
+       R1. Access the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         listings.csv
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r2-access-the-reviews-csv-file">
+       R2. Access the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         reviews.csv
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r3-represent-the-listings-dataset-as-a-dictionary-of-dictionaries">
+       R3. Represent the listings dataset as a dictionary of dictionaries
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r4-count-the-number-of-reviews-of-a-listing">
+       R4. Count the number of reviews of a listing
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r5-add-the-number-of-reviews-variable-to-the-listings-dataset">
+       R5. Add the number of reviews variable to the listings dataset
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r6-remove-non-reviewed-listings">
+       R6. Remove non-reviewed listings
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r7-replace-empty-rating-values-by-1">
+       R7. Replace empty rating values by -1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r8-change-the-data-types-of-the-accommodates-price-and-review-scores-rating-to-numeric">
+       R8. Change the data types of the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         accommodates
+        </span>
+       </code>
+       ,
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         price
+        </span>
+       </code>
+       , and
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         review_scores_rating
+        </span>
+       </code>
+       to numeric
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r9-remove-the-district-variable">
+       R9. Remove the district variable
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#apply-r7-r8-and-r9">
+       Apply R7, R8, and R9
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r10-store-the-prepared-dataset">
+       R10. Store the prepared dataset
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Data Preparation </h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-access-a-class-anchor-id-access-a">
+   Data Access
+   <a class="anchor" id="access">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#file-formats">
+     File Formats
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#plain-text">
+       Plain Text
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#comma-separated-values-csv">
+       Comma-Separated Values (CSV)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#javascript-object-notation-json">
+       JavaScript Object Notation (JSON)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#extensible-markup-language-xml">
+       Extensible Markup Language (XML)
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-cleanse-a-class-anchor-id-cleanse-a">
+   Data Cleanse
+   <a class="anchor" id="cleanse">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#erroneous-data">
+     Erroneous Data
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#missing-values">
+     Missing Values
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#value-formats">
+     Value Formats
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sensitive-data">
+     Sensitive Data
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-integration-a-class-anchor-id-integration-a">
+   Data Integration
+   <a class="anchor" id="integration">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-transformation-a-class-anchor-id-transformation-a">
+   Data Transformation
+   <a class="anchor" id="transformation">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-airbnb-case-a-class-anchor-id-airbnb-a">
+   The Airbnb Case
+   <a class="anchor" id="airbnb">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Data Preparation
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r1-access-the-listings-csv-file">
+       R1. Access the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         listings.csv
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r2-access-the-reviews-csv-file">
+       R2. Access the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         reviews.csv
+        </span>
+       </code>
+       file
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r3-represent-the-listings-dataset-as-a-dictionary-of-dictionaries">
+       R3. Represent the listings dataset as a dictionary of dictionaries
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r4-count-the-number-of-reviews-of-a-listing">
+       R4. Count the number of reviews of a listing
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r5-add-the-number-of-reviews-variable-to-the-listings-dataset">
+       R5. Add the number of reviews variable to the listings dataset
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r6-remove-non-reviewed-listings">
+       R6. Remove non-reviewed listings
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r7-replace-empty-rating-values-by-1">
+       R7. Replace empty rating values by -1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r8-change-the-data-types-of-the-accommodates-price-and-review-scores-rating-to-numeric">
+       R8. Change the data types of the
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         accommodates
+        </span>
+       </code>
+       ,
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         price
+        </span>
+       </code>
+       , and
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         review_scores_rating
+        </span>
+       </code>
+       to numeric
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r9-remove-the-district-variable">
+       R9. Remove the district variable
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#apply-r7-r8-and-r9">
+       Apply R7, R8, and R9
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#r10-store-the-prepared-dataset">
+       R10. Store the prepared dataset
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="data-preparation">
+<h1>Data Preparation <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#data-preparation" title="Permalink to this headline">#</a></h1>
+<p><em>(c) 2021, Lina Ochoa Venegas, Eindhoven University of Technology</em></p>
+<p>In the Exploratory Data Analysis (EDA) chapter, we mentioned the two main stages considered in a data science project. In this notebook, we will extend this workflow by adding a new stage, namely the <em>data preparation</em> stage. <strong>Data preparation</strong> is a critical stage within the data analysis process given that data should be structure in such a way that it eases the extraction of information and does not alter the expected results. It is required because there might be missing values, missing variables<sup>1</sup> that must be computed based on existing features, discrepancies in the levels of categorical variables, wrong data formats, erroneous observations, to name but a few. Thus, when analyzing data, we consider the following stages:</p>
+<ol class="simple">
+<li><p><strong>Data preparation:</strong> raw data is manipulated and transformed so further analysis can be performed atop of it to solve a domain problem.</p></li>
+<li><p><strong>Exploratory data analysis:</strong> assumptions are verified, methods are chosen, and quality hypotheses are formulated.</p></li>
+<li><p><strong>Confirmatory data analysis:</strong> (statistical hypothesis testing) previously defined hypotheses are tested and conclusions are drawn from the analysis.</p></li>
+</ol>
+<p>Although we placed <em>data preparation</em> as the first stage of the data analysis process, it is common that after performing the EDA, data scientists go back to the underlying data and prepare it even further. This is natural after identifying irrelevant or erroneous observations, as well as errors in the formatting of the values.</p>
+<p><sup>1</sup> Remember that in the context of data science a <em>variable</em> models a feature of a case or observation. They are represented as columns in a rectangular dataset.</p>
+<div class="alert alert-info">
+    <b>Data preparation</b><br>
+    <p>Data preparation is a stage in the data analysis process where raw data is manipulated and transformed to support further analysis targeting a domain problem.<p>
+</div><p>Data preparation comprises the following subprocess:</p>
+<ul class="simple">
+<li><p><strong>Data access:</strong> accessing and discovering the dataset.</p></li>
+<li><p><strong>Data cleanse:</strong> cleaning the data by treating faulty and inconsistent data.</p></li>
+<li><p><strong>Data integration:</strong> merging or joining multiple data sources together.</p></li>
+<li><p><strong>Data transformation:</strong> normalizing, enriching, generalizing, or reducing the data.</p></li>
+</ul>
+<p>The application of each subprocess in a dataset will depend on the nature of the data and the domain problem to solve.</p>
+<section id="data-access-a-class-anchor-id-access-a">
+<h2>Data Access <a class="anchor" id="access"></a><a class="headerlink" href="#data-access-a-class-anchor-id-access-a" title="Permalink to this headline">#</a></h2>
+<p>The data preparation stage begins with accessing and discovering the data. Evaluating if the data is correct and enough is part of the duties of a good data scientist. It must be clear:</p>
+<ul class="simple">
+<li><p>what was the <em>methodology</em> used to extract the data;</p></li>
+<li><p>which <em>data structure</em> should be used to represent the data;</p></li>
+<li><p>which <em>format</em> is used to store the data, and;</p></li>
+<li><p>which <em>variables</em> are available.</p></li>
+</ul>
+<p>This information will be useful to assess and understand if the data at hand is enough to solve the domain problem, and if not, what additional data is needed. The result of this process will be finding a new dataset to replace or complement the existing one (c.f. <a class="reference external" href="#integration">Data Integration</a>) or adding new variables to the existing dataset (c.f. <a class="reference external" href="#trannsformation">Data Transformation</a>).</p>
+<p>For this course, we will only consider <em>rectangular data</em>, but there are many other data structures used in the wild. In particular, we will focus on the different file formats we can find and how to use Python to access these data sources.</p>
+<div class="alert alert-info">
+    <b>Data access</b><br>
+    <p>Subprocess within the data analysis stage that focuses on accessing and discovering the data.<p>
+</div><section id="file-formats">
+<h3>File Formats<a class="headerlink" href="#file-formats" title="Permalink to this headline">#</a></h3>
+<p>There are a plethora of formats used to store both structured and unstructured data. Some of the most popular formats are <em>plain text (txt)</em>, <em>Comma-Separated Values (CSV)</em>, <em>JavaScript Object Notation (JSON)</em>, and <em>Extensible Markup Language (XML)</em>.</p>
+<section id="plain-text">
+<h4>Plain Text<a class="headerlink" href="#plain-text" title="Permalink to this headline">#</a></h4>
+<p>In the Files chapter, you had the opportunity to interact with <strong>plain text</strong> files–with the <code class="docutils literal notranslate"><span class="pre">.txt</span></code> extension–, representing characters written using a specific encoding such as ASCII or Unicode. An <strong>encoding</strong> is a system that represents each character as a number for digital representation. (Have a look at the <code class="docutils literal notranslate"><span class="pre">logs.txt</span></code> file.)</p>
+<p>You can use the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function and <code class="docutils literal notranslate"><span class="pre">with</span></code> statement in Python to interact with these types of files. The <code class="docutils literal notranslate"><span class="pre">with</span></code> statement simplifies and encapsulates the use of try-except-finally patterns–that -s, you do not need to write them explicitly, the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement does that for you! For more examples, check the Files chapter.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Read the first line of the log.txt file</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="nn">Input In [1],</span> in <span class="ni">&lt;cell line: 3&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Read the first line of the log.txt file</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">())</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;datasets/logs.txt&#39;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="comma-separated-values-csv">
+<h4>Comma-Separated Values (CSV)<a class="headerlink" href="#comma-separated-values-csv" title="Permalink to this headline">#</a></h4>
+<p>The <strong>Comma-Separated Values (CSV)</strong> format–with the <code class="docutils literal notranslate"><span class="pre">.csv</span></code> extension–uses a comma, semicolon, or another character to separate values in a file. Each line in the file reports a case or record, and each value within the record is an observation for a given variable. Each record should have the same number of observations. CSV files usually store rectangular data in plain text and they look as follows. (Also have a look at the <code class="docutils literal notranslate"><span class="pre">logs.csv</span></code> file.)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">variable_1</span><span class="p">,</span> <span class="n">variable_2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">variable_n</span>
+<span class="n">row_1_value_1</span><span class="p">,</span> <span class="n">row_1_value_2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">row_1_value_n</span>
+<span class="n">row_2_value_1</span><span class="p">,</span> <span class="n">row_2_value_2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">row_2_value_n</span>
+<span class="n">row_3_value_1</span><span class="p">,</span> <span class="n">row_3_value_2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">row_3_value_n</span>
+</pre></div>
+</div>
+<p>In Pyhon, we can use the <code class="docutils literal notranslate"><span class="pre">csv</span></code> library to interact with CSV files. We can use the <code class="docutils literal notranslate"><span class="pre">reader()</span></code> function to create a reader object that will iterate over the rows in the CSV file. We can access each value using an index–based on the position of the variable in the file. Notice that the header of the rectangular data will also be printed if you do not exclude it explicitly.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> <span class="c1"># Default value of delimiter is &#39;,&#39;</span>
+    
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="n">typ</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>        <span class="c1"># We write typ because type is a reserved word</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="n">from_email</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+        <span class="n">to_email</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">typ</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s1">] from:</span><span class="si">{</span><span class="n">from_email</span><span class="si">}</span><span class="s1"> to:</span><span class="si">{</span><span class="n">to_email</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, indexing is error-prone. We can instead use the <code class="docutils literal notranslate"><span class="pre">DictReader()</span></code> function that will create a dictionary for each record in the file. You can access specific values with the name of the variable–declared in the first row of the file. In this case, you do not need to manage the header row, the <code class="docutils literal notranslate"><span class="pre">csv</span></code> library will do it for you.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+        <span class="n">typ</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span>            <span class="c1"># We write typ because type is a reserved word</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span>
+        <span class="n">from_email</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;from&#39;</span><span class="p">]</span>
+        <span class="n">to_email</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;to&#39;</span><span class="p">]</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">]</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">typ</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s1">] from:</span><span class="si">{</span><span class="n">from_email</span><span class="si">}</span><span class="s1"> to:</span><span class="si">{</span><span class="n">to_email</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="javascript-object-notation-json">
+<h4>JavaScript Object Notation (JSON)<a class="headerlink" href="#javascript-object-notation-json" title="Permalink to this headline">#</a></h4>
+<p>The <strong>JavaScript Object Notation (JSON)</strong> is a file format–with the <code class="docutils literal notranslate"><span class="pre">.json</span></code> extension–used to store data objects represented as attribute-value pairs. We can think of it as an object that usually contains data in the form of lists and dictionaries. This format is specially popular when there is data transfer between web applications and servers. JSON files look as follows. (Also have a look at the <code class="docutils literal notranslate"><span class="pre">logs.json</span></code> file.)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;key_1&quot;</span> <span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;key_1_1&quot;</span> <span class="p">:</span> <span class="s2">&quot;value_1&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;key_1_2&quot;</span> <span class="p">:</span> <span class="s2">&quot;value_2&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;key_1_3&quot;</span> <span class="p">:</span> <span class="p">[</span><span class="o">...</span><span class="p">],</span>
+        <span class="o">...</span>
+    <span class="p">},</span>
+    <span class="o">...</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>JSON supports the following formats:</p>
+<ul class="simple">
+<li><p><strong>Object:</strong> unordered set of name-value pairs. An object starts with <code class="docutils literal notranslate"><span class="pre">{</span></code> and ends with <code class="docutils literal notranslate"><span class="pre">}</span></code> (similar to a dictionary in Python).</p></li>
+<li><p><strong>Array:</strong> sequence of values. An array begins with <code class="docutils literal notranslate"><span class="pre">[</span></code> and <code class="docutils literal notranslate"><span class="pre">]</span></code> (similar to a list in Python).</p></li>
+<li><p><strong>Value:</strong> can be a string (in double quotes), a number, <code class="docutils literal notranslate"><span class="pre">true</span></code>, <code class="docutils literal notranslate"><span class="pre">false</span></code>, <code class="docutils literal notranslate"><span class="pre">null</span></code>, an object, or an array.</p></li>
+</ul>
+<p>In Python, we can use the <code class="docutils literal notranslate"><span class="pre">json</span></code> library to interact with JSON files. We can use the <code class="docutils literal notranslate"><span class="pre">load()</span></code> function which creates a Python object based on <a class="reference external" href="https://docs.python.org/3/library/json.html#json-to-py-table">this conversion table</a>. You can then interact with the data as you normaly do in Pthon.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.json&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>  <span class="c1"># We get a dictionary out from the JSON file</span>
+    
+    <span class="k">for</span> <span class="n">obj</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>                 <span class="c1"># Iterate over all objects (dictionaries) in the array (list)</span>
+        <span class="n">typ</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span>            <span class="c1"># We write typ because type is a reserved word</span>
+        <span class="n">timestamp</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;timestamp&#39;</span><span class="p">]</span>
+        <span class="n">from_email</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;from&#39;</span><span class="p">]</span>
+        <span class="n">to_email</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;to&#39;</span><span class="p">]</span>
+        <span class="n">message</span> <span class="o">=</span> <span class="n">obj</span><span class="p">[</span><span class="s1">&#39;message&#39;</span><span class="p">]</span>
+        
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">typ</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">message</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">timestamp</span><span class="si">}</span><span class="s1">] from:</span><span class="si">{</span><span class="n">from_email</span><span class="si">}</span><span class="s1"> to:</span><span class="si">{</span><span class="n">to_email</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="extensible-markup-language-xml">
+<h4>Extensible Markup Language (XML)<a class="headerlink" href="#extensible-markup-language-xml" title="Permalink to this headline">#</a></h4>
+<p>The Extensible Markup Language (XML) is a markup language and data format used to represent and store arbitrary data structures. The XML language was formalized in the World Wide Web Consortium’s XML 1.0 Specification of 1998. It consists of a set of structured <em>tags</em>, each one with zero or more <em>attributes</em>, and an <em>element</em> (characters in between the opening and ending tags). XML files look as follows. (Also have a look at the <code class="docutils literal notranslate"><span class="pre">logs.xml</span></code> file.)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">tag_1</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tag_1_1</span> <span class="n">attr_1</span><span class="o">=</span><span class="s2">&quot;value_1&quot;</span> <span class="n">attr_2</span><span class="o">=</span><span class="s2">&quot;value_2&quot;</span> <span class="o">...&gt;</span>
+        <span class="n">element_1_1</span>
+    <span class="o">&lt;/&lt;</span><span class="n">tag_1_1</span><span class="o">&gt;</span>
+    <span class="o">&lt;</span><span class="n">tag_1_2</span><span class="o">&gt;</span>
+        <span class="n">element_1_2</span>
+    <span class="o">&lt;/&lt;</span><span class="n">tag_1_2</span><span class="o">&gt;</span>
+    <span class="o">...</span>
+<span class="o">&lt;/</span><span class="n">tag_1</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>In Python, we can use the <code class="docutils literal notranslate"><span class="pre">xml.etree.ElementTree</span></code> library to interact with XML files. We use the <code class="docutils literal notranslate"><span class="pre">parse()</span></code> function to read and parse an XML file. The output of the function is a tree. Trees are out of the scope of this course, but you should know that these are frequent data structures used in computer science and data science. You can traverse the tree to get relevant information from each of its nodes. In the following cell, we show a very simple interaction with the tree structure.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">xml.etree.ElementTree</span> <span class="k">as</span> <span class="nn">ET</span>
+
+<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;datasets/logs.xml&#39;</span><span class="p">)</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>                <span class="c1"># Get the root node of the tree</span>
+
+<span class="k">for</span> <span class="n">message</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">iter</span><span class="p">(</span><span class="s1">&#39;message&#39;</span><span class="p">):</span> <span class="c1"># Get all tags of type &#39;message&#39;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>              <span class="c1"># and print their text.</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="data-cleanse-a-class-anchor-id-cleanse-a">
+<h2>Data Cleanse <a class="anchor" id="cleanse"></a><a class="headerlink" href="#data-cleanse-a-class-anchor-id-cleanse-a" title="Permalink to this headline">#</a></h2>
+<p>The <strong>data cleanse</strong> stage is one of the most important parts of the data preparation process, mainly because is at this moment where faulty data and inconsistencies should be treated. If done incorrectly, the subsequent analysis might result in biased or inaccurate results. Some of the main tasks that should be carried on during the data cleanse stage include:</p>
+<ul class="simple">
+<li><p>removing <em>erroneous data</em>;</p></li>
+<li><p>dealing with <em>missing values</em>;</p></li>
+<li><p><em>formatting values</em>, and;</p></li>
+<li><p>masking <em>sensitive data</em>.</p></li>
+</ul>
+<p>How to deal with these and other data issues will depend on the data source you are dealing with. There is no rule of thumb to follow for all cases. However, you can always be conscious about the previously mentioned tasks, and evaluate how to align them with your data. Hereafter, we present the main points to consider when cleaning a dataset.</p>
+<div class="alert alert-info">
+    <b>Data cleanse</b><br>
+    <p>Subprocess within the data analysis stage that focuses on cleaning the data by treating faulty and inconsistent data.<p>
+</div><section id="erroneous-data">
+<h3>Erroneous Data<a class="headerlink" href="#erroneous-data" title="Permalink to this headline">#</a></h3>
+<p>When accessing your data, you might encounter noisy or wrong values, duplicated records, or even irrelevant observations.</p>
+<ul class="simple">
+<li><p><strong>Noisy or wrong values</strong> can be detected by checking that all values of a given variable are contained within the accepted <em>domain</em> of that variable. If not, you need to isolate and analyze these cases. Which values do they have? Do you need to redefine the domain of the variable? Or on the contrary, do you need to remove the record because the data is erroneous? Can you still keep the record and replace the faulty value with a default value, so you do not lose information relevant to other variables? All these questions and many more must be considered when deciding how to deal with noisy or wrong values in your data. Additionally, some outliers might be placed in this category. But beware! Not all outliers are faulty data. You need to further analyze them to draw a valid conclusion.</p></li>
+<li><p><strong>Duplicated records</strong> (or data redundancy) are also a point of discussion during the data cleanse stage. Do you want to keep them or you must get rid of them? The answer–once again–will depend on the problem at hand. Sometimes keeping duplicated records is required because they show the frequency of an event that is relevant to solve the domain problem. However, oftentimes these duplicates have been wrongly included in the dataset and should be removed to avoid getting biased results.</p></li>
+<li><p><strong>Irrelevant observations</strong> might also be included in your data. It might happen that you are using a dataset that explores a universe that is not part of the problem you want to solve. For instance, you might have a dataset that reports observations of a given domain for all the continents, but it might be the case that your problem focuses on only one of them. Then, having these extra cases will steer your research in the wrong direction. To avoid these issues, you must get rid of these irrelevant observations.</p></li>
+</ul>
+</section>
+<section id="missing-values">
+<h3>Missing Values<a class="headerlink" href="#missing-values" title="Permalink to this headline">#</a></h3>
+<p>Information loss and dropouts or nonresponses are typical causes of missing values. The former usually happens as a consequence of varying accuracy and precision of the different data sources used to extract the dataset; the latter appears when conducting studies that involve surveys or interviews. It is not rare to face cases where certain values are missed in the process of measuring and formatting data. It is up to you as a data scientist to decide how to deal with these cases. The options are pretty similar to the ones you have when dealing with noisy or wrong values; you can decide to ignore these observations and remove them from the dataset or replace them with a default value. If you opt for the latter, you need to carefully decide which is the default value you will be using, is it the mean, the median, a prediction, or a flag (like <code class="docutils literal notranslate"><span class="pre">-1</span></code> or <code class="docutils literal notranslate"><span class="pre">NaN</span></code>) that indicates that the value is missing?</p>
+</section>
+<section id="value-formats">
+<h3>Value Formats<a class="headerlink" href="#value-formats" title="Permalink to this headline">#</a></h3>
+<p>It is not rare to face observations containing the right data but the wrong format. This is particularly frequent when dealing with dates or timestamps: the format might be different among different records. To properly process this data you will need to define a standard and modify all values accordingly. Each variable must have a specific format, and all values within that variable should comply with it. Be as meticulous as possible when dealing with these cases; even forgetting about capitalizing a word or adding an extra space that does not comply with your format will make you lose a lot of time and effort!</p>
+</section>
+<section id="sensitive-data">
+<h3>Sensitive Data<a class="headerlink" href="#sensitive-data" title="Permalink to this headline">#</a></h3>
+<p>As a data scientist, you have a big responsibility when dealing with private data. During the last decades, we have witnessed the rise of international regulations–such as the General Data Protection Regulation (<a class="reference external" href="https://gdpr.eu/what-is-gdpr/">GDPR</a>)–that enforces certain security practices to protect the rights and privacy of people involved in data gathering studies. Therefore, sensitive data should be masked in your dataset. <strong>Data masking</strong> is the process of hiding data in the original dataset. It can be performed using <strong>pseudonymization</strong> or <strong>anonymization</strong> (Tachepun, 2020). In the former, data is kept private by transforming it into another form. Some of the techniques used to pseudonymize data are:</p>
+<ul class="simple">
+<li><p><strong>Encryption:</strong> plain text data is encoded in ciphertext format. To do so a key and algorithm are used.</p></li>
+<li><p><strong>Tokenization:</strong> data is transformed but keeps its uniqueness–that is, the same values will be mapped to the same alternative representation. For instance, every value <code class="docutils literal notranslate"><span class="pre">'Omar'</span></code> will be mapped to the same value (let us say) <code class="docutils literal notranslate"><span class="pre">'Rolt'</span></code>.</p></li>
+<li><p><strong>Scrambling:</strong> data obfuscation is permanent and there is no way to go back to the original value.</p></li>
+</ul>
+<p>In the case of anonymization, we can use the following techniques:</p>
+<ul class="simple">
+<li><p><strong>Suppression:</strong> certain characters are replaced by a special symbol such as <code class="docutils literal notranslate"><span class="pre">*</span></code>. For instance, a credit card might be represented as <code class="docutils literal notranslate"><span class="pre">'****</span> <span class="pre">****</span> <span class="pre">****</span> <span class="pre">2789'</span></code>.</p></li>
+<li><p><strong>Generalization:</strong> values are discretized–that is, they are replaced by the range in which they are located. For instance, the age <code class="docutils literal notranslate"><span class="pre">23</span></code> can be replaced by <code class="docutils literal notranslate"><span class="pre">'20-25'</span></code>.</p></li>
+</ul>
+<p>Although extremely important, masking sensitive data is out of the scope of this course.</p>
+</section>
+</section>
+<section id="data-integration-a-class-anchor-id-integration-a">
+<h2>Data Integration <a class="anchor" id="integration"></a><a class="headerlink" href="#data-integration-a-class-anchor-id-integration-a" title="Permalink to this headline">#</a></h2>
+<p>The <strong>data integration</strong> stage is required when dealing with multiple data sources. These independent data sources can be merged or joined together. The main issues faced during this stage involve dealing with:</p>
+<ul class="simple">
+<li><p><strong>Schema integration:</strong> you should be able to merge the schemas of the different data sources into one schema.</p></li>
+<li><p><strong>Data conflicts:</strong> conflicts can be related to <em>naming conflicts</em>, either by introducing synonyms (two variables with different names representing the same feature) or homonyms (two variables with the same name represent different features); <em>type conflicts</em>, where the same variable is modeled with a different data type in two sources, and; <em>domain conflicts</em>, where the same variable has a different domain in two sources, among others.</p></li>
+<li><p><strong>Data redundancy:</strong> merging multiple data sources might result in duplicated records or variables. In the former, the duplicated record might be expected if it is describing a different observation with the same attributes. However, the rationale behind keeping or removing a record must be clear. Having redundant information might negatively impact the readability and complexity of your data.</p></li>
+</ul>
+<div class="alert alert-info">
+    <b>Data integration</b><br>
+    <p>Subprocess within the data analysis stage that focuses on merging or joining multiple data sources.<p>
+</div></section>
+<section id="data-transformation-a-class-anchor-id-transformation-a">
+<h2>Data Transformation <a class="anchor" id="transformation"></a><a class="headerlink" href="#data-transformation-a-class-anchor-id-transformation-a" title="Permalink to this headline">#</a></h2>
+<p>The <strong>data transformation</strong> stage involves modifying the existing data to <em>normalize</em>, <em>enrich</em>, <em>generalize</em>, or <em>reduce</em> it.</p>
+<ul class="simple">
+<li><p><strong>Data normalization:</strong> mapping values in the original range of a variable into an output range. Beware that depending on the chosen method distortion or bias might be introduced in the data.</p></li>
+<li><p><strong>Data enrichment:</strong> data from different variables and sources are added or related resulting in new variables in the dataset. One type of data enrichment is <em>data aggregation</em>, which results from the operation of aggregating or summarizing multiple values in one.</p></li>
+<li><p><strong>Data generalization:</strong> values of a variable are replaced with high-level factors or ranges. This is useful to perform analysis based on categories.</p></li>
+<li><p><strong>Data reduction:</strong> data is reduced to ease its manipulation and analysis. Irrelevant variables might be removed. In addition, the number of observations can also be reduced utilizing different techniques such as random sampling.</p></li>
+</ul>
+<div class="alert alert-info">
+    <b>Data transformation</b><br>
+    <p>Subprocess within the data analysis stage that normalizes, enriches, generalizes, or reduces the data at hand.<p>
+</div></section>
+<section id="the-airbnb-case-a-class-anchor-id-airbnb-a">
+<h2>The Airbnb Case <a class="anchor" id="airbnb"></a><a class="headerlink" href="#the-airbnb-case-a-class-anchor-id-airbnb-a" title="Permalink to this headline">#</a></h2>
+<a class="reference internal image-reference" href="../_images/airbnb.jpeg"><img alt="Airbnb" class="align-center" src="../_images/airbnb.jpeg" style="width: 500px;" /></a>
+<div style="text-align:center">
+    <span style="font-size:0.9em; font-weight: bold;">The Airbnb case.</span>
+</div>
+<br>
+<p>To apply the concepts we have learned in this notebook, we will use an adapted version of the <em>Airbnb Listings &amp; Reviews</em> available <a class="reference external" href="https://www.kaggle.com/mysarahmadbhat/airbnb-listings-reviews">here</a> under a CC0 1.0 Universal license. The dataset contains 279,712 listings of Airbnb in 10 major cities and more than 1 million reviews. The dataset comes in two different CSV files: the <code class="docutils literal notranslate"><span class="pre">listing.csv</span></code> and the <code class="docutils literal notranslate"><span class="pre">reviews.csv</span></code> files. The former contains the following variables.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">listing_id</span></code></p></td>
+<td><p>ID of the listing in Airbnb</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">name</span></code></p></td>
+<td><p>Name of the listing</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">neighbourhood</span></code></p></td>
+<td><p>Neighbourhood where the listing is located</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">district</span></code></p></td>
+<td><p>District where the listing is located</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">city</span></code></p></td>
+<td><p>City where the listing is located</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">property_type</span></code></p></td>
+<td><p>Type of the property (e.g. entire apartment, private room)</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">room_type</span></code></p></td>
+<td><p>Type of (e.g. entire place, hotel room)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">accommodates</span></code></p></td>
+<td><p>Maximum number of guests</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">amenities</span></code></p></td>
+<td><p>Amenities of the listing</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">price</span></code></p></td>
+<td><p>Price of the listing in local currency</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">review_scores_rating</span></code></p></td>
+<td><p>Listing’s overall rating (out of 100)</p></td>
+</tr>
+</tbody>
+</table>
+<p>The latter contains the following features:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">listing_id</span></code></p></td>
+<td><p>ID of the listing in Airbnb</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">review_id</span></code></p></td>
+<td><p>Id of the review</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">date</span></code></p></td>
+<td><p>Date when the review was posted</p></td>
+</tr>
+</tbody>
+</table>
+<section id="id2">
+<h3>Data Preparation<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h3>
+<p>In this opportunity, we are in charge of preparing the data for the coming data analysis stages. To do so, we have identified some requirements defined as follows.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Requirement</p></th>
+<th class="text-align:left head"><p>Subprocess</p></th>
+<th class="text-align:left head"><p>Aspect</p></th>
+<th class="text-align:left head"><p>Requirement</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>R1</p></td>
+<td class="text-align:left"><p>Data access</p></td>
+<td class="text-align:left"><p>-</p></td>
+<td class="text-align:left"><p>Access the <code class="docutils literal notranslate"><span class="pre">listings.csv</span></code> file</p></td>
+</tr>
+<tr class="row-odd"><td><p>R2</p></td>
+<td class="text-align:left"><p>Data access</p></td>
+<td class="text-align:left"><p>-</p></td>
+<td class="text-align:left"><p>Access the <code class="docutils literal notranslate"><span class="pre">reviews.csv</span></code> file</p></td>
+</tr>
+<tr class="row-even"><td><p>R3</p></td>
+<td class="text-align:left"><p>Data access</p></td>
+<td class="text-align:left"><p>-</p></td>
+<td class="text-align:left"><p>Represent the listings dataset as a dictionary of dictionaries</p></td>
+</tr>
+<tr class="row-odd"><td><p>R4</p></td>
+<td class="text-align:left"><p>Data transformation</p></td>
+<td class="text-align:left"><p>Data enrichment</p></td>
+<td class="text-align:left"><p>Count the number of reviews of a listing</p></td>
+</tr>
+<tr class="row-even"><td><p>R5</p></td>
+<td class="text-align:left"><p>Data integration</p></td>
+<td class="text-align:left"><p>-</p></td>
+<td class="text-align:left"><p>Add the number of reviews variable to the listings dataset</p></td>
+</tr>
+<tr class="row-odd"><td><p>R6</p></td>
+<td class="text-align:left"><p>Data cleanse</p></td>
+<td class="text-align:left"><p>Erroneous/Noisy data</p></td>
+<td class="text-align:left"><p>Remove non-reviewed listings</p></td>
+</tr>
+<tr class="row-even"><td><p>R7</p></td>
+<td class="text-align:left"><p>Data cleanse</p></td>
+<td class="text-align:left"><p>Missing values</p></td>
+<td class="text-align:left"><p>Replace empty rating values by -1</p></td>
+</tr>
+<tr class="row-odd"><td><p>R8</p></td>
+<td class="text-align:left"><p>Data cleanse</p></td>
+<td class="text-align:left"><p>Data format/type)</p></td>
+<td class="text-align:left"><p>Change the data types of the <code class="docutils literal notranslate"><span class="pre">accommodates</span></code>, <code class="docutils literal notranslate"><span class="pre">price</span></code>, and <code class="docutils literal notranslate"><span class="pre">review_scores_rating</span></code> to numeric</p></td>
+</tr>
+<tr class="row-even"><td><p>R9</p></td>
+<td class="text-align:left"><p>Data transformation</p></td>
+<td class="text-align:left"><p>Data reduction</p></td>
+<td class="text-align:left"><p>Remove the <code class="docutils literal notranslate"><span class="pre">district</span></code> variable</p></td>
+</tr>
+<tr class="row-odd"><td><p>R10</p></td>
+<td class="text-align:left"><p>Data store</p></td>
+<td class="text-align:left"><p>-</p></td>
+<td class="text-align:left"><p>Store the prepared dataset</p></td>
+</tr>
+</tbody>
+</table>
+<p>Hereafter, we will use Python to address each of these requirements.</p>
+<section id="r1-access-the-listings-csv-file">
+<h4>R1. Access the <code class="docutils literal notranslate"><span class="pre">listings.csv</span></code> file<a class="headerlink" href="#r1-access-the-listings-csv-file" title="Permalink to this headline">#</a></h4>
+<p>We open the <code class="docutils literal notranslate"><span class="pre">listings.csv</span></code> file and we print its header and the first two rows to see its content.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/listings.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span>  <span class="c1"># Print header and first two rows</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span> 
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="r2-access-the-reviews-csv-file">
+<h4>R2. Access the <code class="docutils literal notranslate"><span class="pre">reviews.csv</span></code> file<a class="headerlink" href="#r2-access-the-reviews-csv-file" title="Permalink to this headline">#</a></h4>
+<p>As we did before, we open now the <code class="docutils literal notranslate"><span class="pre">reviews.csv</span></code> file and we print its header and the first two rows to see its content.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/reviews.csv&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ratings_file</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">3</span><span class="p">):</span> <span class="c1"># Print header and first two rows</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">ratings_file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="r3-represent-the-listings-dataset-as-a-dictionary-of-dictionaries">
+<h4>R3. Represent the listings dataset as a dictionary of dictionaries<a class="headerlink" href="#r3-represent-the-listings-dataset-as-a-dictionary-of-dictionaries" title="Permalink to this headline">#</a></h4>
+<p>After reading the CVS file we will transform it into a dictionary of dictionaries. The keys of the parent dictionary will be the listing IDs. Regarding the keys of the nested dictionaries, they will be named as the remaining variables of the dataset. The file has some strange characters that cannot be read properly, that is why we have added the <code class="docutils literal notranslate"><span class="pre">encoding='utf8',</span> <span class="pre">errors='ignore'</span></code> arguments to the <code class="docutils literal notranslate"><span class="pre">open()</span></code> function; all erroneous characters will be ignored.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="k">def</span> <span class="nf">access_data</span><span class="p">(</span><span class="n">path_listings</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]]:</span>
+    <span class="sd">&quot;&quot;&quot; Accesses and returns the listings dataset </span>
+<span class="sd">        as a dictionary of dictionaries. Keys are </span>
+<span class="sd">        listing_ids.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">listings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_listings</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span> <span class="c1"># Ignore erroneous characters</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+            <span class="n">listing_key</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;listing_id&#39;</span><span class="p">]</span>  <span class="c1"># Get listing ID</span>
+            <span class="n">listing_val</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>             <span class="c1"># Create nested dictionary</span>
+            
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">row</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;listing_id&#39;</span><span class="p">:</span>          <span class="c1"># For all variables in the CSV file we will</span>
+                    <span class="n">listing_val</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>  <span class="c1"># create an item in the nested dictionary</span>
+                    
+            <span class="n">listings</span><span class="p">[</span><span class="n">listing_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">listing_val</span>  <span class="c1"># Add the nested dict to the parent dict</span>
+    
+    <span class="k">return</span> <span class="n">listings</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">access_data</span><span class="p">(</span><span class="s1">&#39;datasets/listings.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;281420&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="r4-count-the-number-of-reviews-of-a-listing">
+<h4>R4. Count the number of reviews of a listing<a class="headerlink" href="#r4-count-the-number-of-reviews-of-a-listing" title="Permalink to this headline">#</a></h4>
+<p>We want to aggregate the data of the reviews–that is, we want to count the total number of reviews for each listing. For that, we create the function <code class="docutils literal notranslate"><span class="pre">agggregate_reviews()</span></code> with takes the <code class="docutils literal notranslate"><span class="pre">reviews.csv</span></code> path as a parameter and returns a dictionary where the key represents the listing ID and the value represents the number of reviews.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span>
+
+<span class="k">def</span> <span class="nf">agggregate_reviews</span><span class="p">(</span><span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="s1">&#39;str&#39;</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot; Returns a dictionary where listing IDs are </span>
+<span class="sd">        mapped to the number of reviews in the given</span>
+<span class="sd">        file.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">reviews</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+            <span class="n">listing_id</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;listing_id&#39;</span><span class="p">]</span>      <span class="c1"># Get listing ID</span>
+            <span class="n">count</span> <span class="o">=</span> <span class="n">reviews</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">listing_id</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Get previous count or initialize it to 0</span>
+            <span class="n">reviews</span><span class="p">[</span><span class="n">listing_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">count</span> <span class="o">+</span> <span class="mi">1</span>     <span class="c1"># Add one to the count</span>
+            
+    <span class="k">return</span> <span class="n">reviews</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="r5-add-the-number-of-reviews-variable-to-the-listings-dataset">
+<h4>R5. Add the number of reviews variable to the listings dataset<a class="headerlink" href="#r5-add-the-number-of-reviews-variable-to-the-listings-dataset" title="Permalink to this headline">#</a></h4>
+<p>We will enrich the listings dataset with the aggregated reviews–that is, we will add a new key (a.k.a <code class="docutils literal notranslate"><span class="pre">reviews</span></code>) to the nested dictionaries. This new item will display the number of reviews associated with the listing.</p>
+</section>
+<section id="r6-remove-non-reviewed-listings">
+<h4>R6. Remove non-reviewed listings<a class="headerlink" href="#r6-remove-non-reviewed-listings" title="Permalink to this headline">#</a></h4>
+<p>We only care about listings with reviews. The other observations will be excluded in the data analysis stages. Thus, we need to remove all these cases from the data.</p>
+<p><strong>Note:</strong> to favor performance, we will comply with both requirements (R5 and R6) in the following code cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">access_data</span><span class="p">(</span><span class="n">path_listings</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">path_reviews</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]]:</span>
+    <span class="sd">&quot;&quot;&quot; Accesses and returns the listings dataset </span>
+<span class="sd">        as a dictionary of dictionaries. Keys are </span>
+<span class="sd">        listing_ids.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">listings</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path_listings</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf8&#39;</span><span class="p">,</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">reviews</span> <span class="o">=</span> <span class="n">agggregate_reviews</span><span class="p">(</span><span class="n">path_reviews</span><span class="p">)</span>  <span class="c1"># Get the reviews variable</span>
+        <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        
+        <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
+            <span class="n">listing_key</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;listing_id&#39;</span><span class="p">]</span> <span class="c1"># Get listing ID</span>
+            <span class="n">listing_val</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>            <span class="c1"># Create nested dictionary</span>
+            
+            <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">row</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+                <span class="k">if</span> <span class="n">key</span> <span class="o">!=</span> <span class="s1">&#39;listing_id&#39;</span><span class="p">:</span>          <span class="c1"># For all variables in the CSV file we will </span>
+                    <span class="n">listing_val</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>  <span class="c1"># create an item in the nested dictionary</span>
+            
+            <span class="n">listing_val</span><span class="p">[</span><span class="s1">&#39;reviews&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">reviews</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">listing_key</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>  <span class="c1"># Integrate data: add reviews variable</span>
+            <span class="n">listings</span><span class="p">[</span><span class="n">listing_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">listing_val</span>                   <span class="c1"># Add the nested dict to the parent dict</span>
+    
+    <span class="k">return</span> <span class="n">listings</span>
+
+<span class="n">data</span> <span class="o">=</span> <span class="n">access_data</span><span class="p">(</span><span class="s1">&#39;datasets/listings.csv&#39;</span><span class="p">,</span> <span class="s1">&#39;datasets/reviews.csv&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;281420&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="r7-replace-empty-rating-values-by-1">
+<h4>R7. Replace empty rating values by -1<a class="headerlink" href="#r7-replace-empty-rating-values-by-1" title="Permalink to this headline">#</a></h4>
+<p>Given a nested listing dictionary, we aim at replacing all empty rating values with -1. For that purpose, we define the function <code class="docutils literal notranslate"><span class="pre">replace_empty_rating()</span></code>, which takes a nested listing dictionary and modifies it accordingly. This function will be used later.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">replace_empty_rating</span><span class="p">(</span><span class="n">listing</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot; Replaces all empty rating values by -1.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rating</span> <span class="o">=</span> <span class="n">listing</span><span class="p">[</span><span class="s1">&#39;review_scores_rating&#39;</span><span class="p">]</span>   <span class="c1"># Get rating value</span>
+        
+    <span class="k">if</span> <span class="n">rating</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span><span class="p">:</span>                           <span class="c1"># If empty</span>
+        <span class="n">listing</span><span class="p">[</span><span class="s1">&#39;review_scores_rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;-1&#39;</span> <span class="c1"># assign the &#39;-1&#39; value</span>
+        
+        
+    <span class="k">return</span> <span class="n">listing</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="r8-change-the-data-types-of-the-accommodates-price-and-review-scores-rating-to-numeric">
+<h4>R8. Change the data types of the <code class="docutils literal notranslate"><span class="pre">accommodates</span></code>, <code class="docutils literal notranslate"><span class="pre">price</span></code>, and <code class="docutils literal notranslate"><span class="pre">review_scores_rating</span></code> to numeric<a class="headerlink" href="#r8-change-the-data-types-of-the-accommodates-price-and-review-scores-rating-to-numeric" title="Permalink to this headline">#</a></h4>
+<p>Now, we would like to modify the types of the <code class="docutils literal notranslate"><span class="pre">accommodates</span></code>, <code class="docutils literal notranslate"><span class="pre">price</span></code>, and <code class="docutils literal notranslate"><span class="pre">review_scores_rating</span></code> to integer values. Thus, we define the function <code class="docutils literal notranslate"><span class="pre">change_data_types()</span></code>, which takes a nested listing dictionary and modifies it accordingly. This function will be used later.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">change_data_types</span><span class="p">(</span><span class="n">listing</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot; Changes the types of the accommodates, price,</span>
+<span class="sd">        and review_scores_rating to integer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">listing</span><span class="p">[</span><span class="s1">&#39;accommodates&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">listing</span><span class="p">[</span><span class="s1">&#39;accommodates&#39;</span><span class="p">])</span>
+    <span class="n">listing</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">listing</span><span class="p">[</span><span class="s1">&#39;price&#39;</span><span class="p">])</span>
+    <span class="n">listing</span><span class="p">[</span><span class="s1">&#39;review_scores_rating&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">listing</span><span class="p">[</span><span class="s1">&#39;review_scores_rating&#39;</span><span class="p">])</span>
+        
+    <span class="k">return</span> <span class="n">listing</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="r9-remove-the-district-variable">
+<h4>R9. Remove the district variable<a class="headerlink" href="#r9-remove-the-district-variable" title="Permalink to this headline">#</a></h4>
+<p>Lastly, we have seen that the <code class="docutils literal notranslate"><span class="pre">district</span></code> variable is error-prone–it has many empty values. We do not consider that this variable is relevant for our analysis. Therefore, we will remove it from the nested dictionaries. We define then the <code class="docutils literal notranslate"><span class="pre">remove_district_var()</span></code>, which modifies a nested listing accordingly. The function will be used later.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">remove_district_var</span><span class="p">(</span><span class="n">listing</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot; Removes the district item from the dictionary.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">del</span> <span class="n">listing</span><span class="p">[</span><span class="s1">&#39;district&#39;</span><span class="p">]</span> <span class="c1"># Remove the district key-value from the dict</span>
+    <span class="k">return</span> <span class="n">listing</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="apply-r7-r8-and-r9">
+<h4>Apply R7, R8, and R9<a class="headerlink" href="#apply-r7-r8-and-r9" title="Permalink to this headline">#</a></h4>
+<p>We will now use the functions defined previously to clean and transform our dataset.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">create_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]]:</span>
+    <span class="sd">&quot;&quot;&quot; Creates, cleans and transforms the Airbnb dataset.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">clean_data</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">listing_id</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+        <span class="n">listing</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">listing_id</span><span class="p">]</span>
+        <span class="n">reviews</span> <span class="o">=</span> <span class="n">listing</span><span class="p">[</span><span class="s1">&#39;reviews&#39;</span><span class="p">]</span>
+        
+        <span class="k">if</span> <span class="n">reviews</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>                                       <span class="c1"># Data cleanse: Remove non-reviewed listings</span>
+            <span class="k">continue</span>
+        
+        <span class="n">clean_data</span><span class="p">[</span><span class="n">listing_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">listing</span>
+        <span class="n">clean_data</span><span class="p">[</span><span class="n">listing_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">replace_empty_rating</span><span class="p">(</span><span class="n">listing</span><span class="p">)</span> <span class="c1"># Data cleanse: Replace empty ratings by -1</span>
+        <span class="n">clean_data</span><span class="p">[</span><span class="n">listing_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">change_data_types</span><span class="p">(</span><span class="n">listing</span><span class="p">)</span>    <span class="c1"># Data cleanse: Change data types</span>
+        <span class="n">clean_data</span><span class="p">[</span><span class="n">listing_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">remove_district_var</span><span class="p">(</span><span class="n">listing</span><span class="p">)</span>  <span class="c1"># Data transformation: Remove district variable</span>
+       
+    <span class="k">return</span> <span class="n">clean_data</span>
+
+<span class="n">dataset</span> <span class="o">=</span> <span class="n">create_dataset</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">dataset</span><span class="p">[</span><span class="s1">&#39;281420&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="r10-store-the-prepared-dataset">
+<h4>R10. Store the prepared dataset<a class="headerlink" href="#r10-store-the-prepared-dataset" title="Permalink to this headline">#</a></h4>
+<p>Finally, we will store the resulting dataset in a new CSV file, so we avoid performing the same cleaning every time we need to analyze the data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">store_data</span><span class="p">(</span><span class="n">data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">any</span><span class="p">]],</span> <span class="n">path</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; Stores the dataset in the file given as a parameter.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">outfile</span><span class="p">:</span>
+        <span class="n">varnames</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s1">&#39;name&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;neighbourhood&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;city&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;property_type&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;room_type&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;accommodates&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;amenities&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;price&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;review_scores_rating&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;reviews&#39;</span>
+        <span class="p">]</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictWriter</span><span class="p">(</span><span class="n">outfile</span><span class="p">,</span> <span class="n">fieldnames</span><span class="o">=</span><span class="n">varnames</span><span class="p">)</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writeheader</span><span class="p">()</span>
+        
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+            
+<span class="n">store_data</span><span class="p">(</span><span class="n">dataset</span><span class="p">,</span> <span class="s1">&#39;datasets/out_listings.csv&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We made it! The data is ready to be used for the EDA and confirmatory data analysis stages.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 3 of <span id="id3">[<a class="reference internal" href="../intro.html#id15" title="Dorian Pyle. Data Preparation for Data Mining. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edition, 1999. ISBN 1558605290.">Pyl99</a>]</span>. <br> <strong>Relevant references:</strong> <br> Kwak, S. K., &amp; Kim, J. H. (2017). <em>Statistical Data Preparation: Management of Missing Values and Outliers</em>. Korean journal of anesthesiology, 70(4), 407–411. DOI: 10.4097/kjae.2017.70.4.407. Find it <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5548942/pdf/kjae-70-407.pdf">here</a>. <br> Saluja, C. (2018). <em>Data Preparation — A Crucial Step in Data Mining</em>. Medium. Find it <a class="reference external" href="https://medium.com/&#64;chhavi.saluja1401/data-preparation-a-crucial-step-in-data-mining-dba35772f281">here</a>.<br> Tachepun, C. and Thammaboosadee, S. (2020). <em>A Data Masking Guideline for Optimizing Insights and Privacy Under GDPR Compliance</em>. In the 11th International Conference on Advances in Information Technology. ACM, New York, Article 22, 1–9. DOI: 10.1145/3406601.3406627. Find it <a class="reference external" href="https://dl.acm.org/doi/abs/10.1145/3406601.3406627">here</a>.</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="eda.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Exploratory Data Analysis (EDA) </p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="numpy.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">NumPy Arrays</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+      &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,1121 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Beyond Functions &#8212; Introduction to Programming in Python</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Strings" href="strings.html" />
+    <link rel="prev" title="Functions" href="functions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Introduction to Programming in Python
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="programs.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assignments.html">
+   Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditionals.html">
+   Conditionals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Beyond Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tuples.html">
+   Tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sets.html">
+   Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dictionaries.html">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="comprehensions_generators.html">
+   Comprehensions and Generators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regular_expressions.html">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_objects.html">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_functions.html">
+   Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_methods.html">
+   Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inheritance.html">
+   Inheritance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recursion.html">
+   Recursion [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="searching.html">
+   Searching [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sorting.html">
+   Sorting [^intro]
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy.html">
+   NumPy Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pandas.html">
+   Pandas DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vcs.html">
+   Version Control Systems &amp; Git
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/maveme/introProgramming.git/master/v2/gh/maveme/introProgramming/master?urlpath=lab/tree/chapters/beyond_functions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/maveme/introProgramming"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/maveme/introProgramming/issues/new?title=Issue%20on%20page%20%2Fchapters/beyond_functions.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/maveme/introProgramming/edit/master/chapters/beyond_functions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Edit this page"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="headerbtn__text-container">suggest edit</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/chapters/beyond_functions.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-functions">
+   Why Functions?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flow-of-execution">
+   Flow of Execution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encapsulation">
+   Encapsulation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generalization">
+   Generalization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interface-design">
+   Interface Design
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#refactoring">
+   Refactoring
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-development-plan">
+   A Development Plan
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#incremental-development">
+   Incremental Development
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Beyond Functions </h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#why-functions">
+   Why Functions?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#flow-of-execution">
+   Flow of Execution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encapsulation">
+   Encapsulation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generalization">
+   Generalization
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interface-design">
+   Interface Design
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#refactoring">
+   Refactoring
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-development-plan">
+   A Development Plan
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#incremental-development">
+   Incremental Development
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="beyond-functions">
+<h1>Beyond Functions <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#beyond-functions" title="Permalink to this headline">#</a></h1>
+<section id="why-functions">
+<h2>Why Functions?<a class="headerlink" href="#why-functions" title="Permalink to this headline">#</a></h2>
+<p>It may not be clear why it is worth the trouble to divide a program into functions. There
+are several reasons:</p>
+<ul class="simple">
+<li><p>Creating a new function gives you an opportunity to name a group of statements,
+which makes your program easier to read and debug.</p></li>
+<li><p>Functions can make a program smaller by eliminating repetitive code. Later, if you
+make a change, you only have to make it in one place.</p></li>
+<li><p>Dividing a long program into functions allows you to debug the parts one at a time
+and then assemble them into a working whole.</p></li>
+<li><p>Well-designed functions are often useful for many programs. Once you write and
+debug one, you can reuse it.</p></li>
+</ul>
+</section>
+<section id="flow-of-execution">
+<h2>Flow of Execution<a class="headerlink" href="#flow-of-execution" title="Permalink to this headline">#</a></h2>
+<p>Functions have to be defined before they can be executed, this is similar to a variable
+definition. You cannot use a variable in the right hand side of an assignment if it is
+not introduced in the left hand side of a preceding assignment.</p>
+<p>The execution of a Python script/progam always starts with the first statement of
+the program, this is also called the <em>flow of execution</em>.</p>
+<p>Statements are run one at a time (<em>sequential</em>), from top to bottom.</p>
+<p>Function definitions do not alter the flow of execution of the program, but remember that
+statements inside the function do not run until the function is called.</p>
+<p>You could consider a function call as a <em>detour</em> in the flow of execution of a program.</p>
+<p>Instead of going to the next statement,
+the flow jumps to the body of the function, runs the statements there, and
+continues with the execution of the statements after the function call.</p>
+<p>That sounds simple enough, until you remember that one function can call another.</p>
+<p>While in the middle of one function, the program might have to run the statements in another
+function.</p>
+<p>Then, while running that new function, the program might have to run yet another function, and so!</p>
+<p>In principle this is going to stop because there are a finite number of functions.</p>
+</section>
+<section id="encapsulation">
+<h2>Encapsulation<a class="headerlink" href="#encapsulation" title="Permalink to this headline">#</a></h2>
+<p>If you want to re-use statements, you have to capture them in a function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_important_message</span><span class="p">():</span>
+    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Computer science is important&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data science is more important&#39;</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+<span class="n">print_important_message</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+</pre></div>
+</div>
+</div>
+</div>
+<p>Wrapping a piece of code up in a function is called <strong>encapsulation</strong>.</p>
+<p>One of the benefits of encapsulation is that it attaches a name to the code, which:</p>
+<ol class="simple">
+<li><p>serves as a kind of documentation; and</p></li>
+<li><p>facilitates re-use.</p></li>
+</ol>
+<p>It is more concise to call a function multiple times than to <strong>copy-and-paste</strong> the code fragment of body multiple times!</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>At this point we are going to be more strict than the books of the course.
+We are going to define explicitly the type of the arguments, in case of <code class="docutils literal notranslate"><span class="pre">important_message</span></code> the type of the argument is an <code class="docutils literal notranslate"><span class="pre">integer</span></code> value and therefor we use the type <code class="docutils literal notranslate"><span class="pre">int</span></code>. If the function returns a result, so we are dealing with <em>fruitful functions</em>, then we define the type of the result of the function by means of <code class="docutils literal notranslate"><span class="pre">-&gt;</span> <span class="pre">type</span></code>. In case of <code class="docutils literal notranslate"><span class="pre">important_message</span></code> no value is returned. In this case we use <code class="docutils literal notranslate"><span class="pre">-&gt;</span> <span class="pre">None</span></code>.</p>
+</div>
+</aside>
+</section>
+<section id="generalization">
+<h2>Generalization<a class="headerlink" href="#generalization" title="Permalink to this headline">#</a></h2>
+<p>Suppose we want to re-use the function <code class="docutils literal notranslate"><span class="pre">important_message</span></code>, but with a different number of printed messages.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_important_message</span><span class="p">(</span><span class="n">freq</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">freq</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Computer science is important&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data science is more important&#39;</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+<span class="n">print_important_message</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">print_important_message</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+Computer science is important
+Data science is more important
+</pre></div>
+</div>
+</div>
+</div>
+<p>Adding a parameter to a function is called generalization because it makes the function
+more general: in the previous version, the messages are printed 7 times; in this version it
+can be any number.</p>
+<p>Another step in the generalization is to make the disciplines flexible.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_important_message</span><span class="p">(</span><span class="n">freq</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">discipline1</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">discipline2</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span>  <span class="n">freq</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">discipline1</span> <span class="o">+</span> <span class="s1">&#39; is important&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">discipline2</span><span class="p">,</span> <span class="s1">&#39;is more important&#39;</span><span class="p">)</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+<span class="n">print_important_message</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Artificial intelligence&#39;</span><span class="p">,</span> <span class="s1">&#39;Statistics&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Artificial intelligence is important
+Statistics is more important
+Artificial intelligence is important
+Statistics is more important
+Artificial intelligence is important
+Statistics is more important
+</pre></div>
+</div>
+</div>
+</div>
+<p>When a function has more than a few numeric arguments, it is easy to forget what they are,
+or what order they should be in.</p>
+<p>In that case it is often a good idea to include the names of
+the parameters in the argument list:
+important_message(freq=7, discipline1=’Computer science’, discipline2=’Statistics’)</p>
+<p>These are called keyword arguments because they include the parameter names as “keywords”
+(not to be confused with Python keywords like while and def).</p>
+<p>This syntax makes the program more readable.</p>
+<p>It is also a reminder about how arguments
+and parameters work: when you call a function, the arguments are assigned to the parameters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_important_message</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">discipline1</span><span class="o">=</span><span class="s1">&#39;Computer science&#39;</span><span class="p">,</span> <span class="n">discipline2</span><span class="o">=</span><span class="s1">&#39;Statistics&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Computer science is important
+Statistics is more important
+Computer science is important
+Statistics is more important
+Computer science is important
+Statistics is more important
+Computer science is important
+Statistics is more important
+Computer science is important
+Statistics is more important
+Computer science is important
+Statistics is more important
+Computer science is important
+Statistics is more important
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="interface-design">
+<h2>Interface Design<a class="headerlink" href="#interface-design" title="Permalink to this headline">#</a></h2>
+<p>The <strong>interface</strong> of a function is a summary of how it is used:</p>
+<ul class="simple">
+<li><p>What are the parameters and their types?</p></li>
+<li><p>What does the function do?</p></li>
+<li><p>What is the return value and its type, if any?</p></li>
+</ul>
+<p>An interface is “clean” if it allows the caller to do what they want without dealing with unnecessary details of
+the body of the function.</p>
+<p>A good interface can be defined by choosing a good name for the function and for its parameters and by providing the types of its arguments and result.</p>
+<p>A short description, via comments, of the basic functionality of the function is also useful. This description can include the restrictions (so-called <strong>pre-conditions</strong>) for calling the function.</p>
+</section>
+<section id="refactoring">
+<h2>Refactoring<a class="headerlink" href="#refactoring" title="Permalink to this headline">#</a></h2>
+<p>After you have written a program it makes sense to study the code and see whether there are opportunities to improve the structure of the code.</p>
+<p>If you have copied and pasted instructions, it is advisable to introduced a separate function.</p>
+<p>It may also be the case that you developed a function with a complex and bulky body. Then, consider the introduction of auxilary functions.</p>
+<p>All these improvements are <strong>refactorings</strong>.</p>
+<p>Once you start coding, you understand the problem better.</p>
+<p>Sometimes refactoring is a sign that you have learned something.</p>
+</section>
+<section id="a-development-plan">
+<h2>A Development Plan<a class="headerlink" href="#a-development-plan" title="Permalink to this headline">#</a></h2>
+<p>A development plan is a process for writing programs.</p>
+<p>The process we use is “encapsulation and generalization”.</p>
+<p>The steps of this process are:</p>
+<ol class="simple">
+<li><p>Start by writing a small program with no function definitions.</p></li>
+<li><p>Once you get the program working, identify a coherent piece of it, encapsulate the
+piece in a function and give it a name.</p></li>
+<li><p>Generalize the function by adding appropriate parameters.</p></li>
+<li><p>Repeat steps 1–3 until you have a set of working functions. Copy and paste working
+code to avoid retyping (and re-debugging).</p></li>
+<li><p>Look for opportunities to improve the program by refactoring. For example, if you
+have similar code in several places, consider factoring it into an appropriately general
+function.</p></li>
+</ol>
+<p>This process has some drawbacks—we will see alternatives later—but it can be useful if
+you do not know ahead of time how to divide the program into functions. This approach
+lets you design as you go along.</p>
+</section>
+<section id="incremental-development">
+<h2>Incremental Development<a class="headerlink" href="#incremental-development" title="Permalink to this headline">#</a></h2>
+<p>The larger the program you need to develop the more useful it is to have a structured way of developing it.</p>
+<p>There are multiple ways of structuring the development process and in fact your computational thinking.</p>
+<p>An important development paradigm is <strong>divide and conquer</strong>. You can, for example, try to split the problem in subproblems and solve each subproblem in isolation. This paradigm works for large and complex problems, furthermore, it allows parallel development of a program.</p>
+<p>However, before applying any development paradigm you need to understand the problem. Critical reading is essential, making sketches to visualise the problem and the solution, explain the solution to somebody else, and finally write the code.</p>
+<p>Another paradigm, as advocated by “Think Python” is to use incremental development.</p>
+<p>The idea is not to try develop a complete program in one go, but to develop it step by step.</p>
+<p>Along the way you can write small tests to see whether you program behaves correctly.</p>
+<p>Developing a complete program is likely to fail and you will spend a lot of time on debugging.</p>
+<p>As an example, suppose you want to calculate the volume of a hollow cylinder, so a cylinder with an inner cylinder removed.</p>
+<p>So, the problem we have to solve is subtracting the volume of the inner cylinder from the volume of the outer cylinder. The volume of a cylinder is can be calculated by <span class="math notranslate nohighlight">\(volume = h*\pi*R^2\)</span>.</p>
+<p>So, can we now mathematical formulate the problem?</p>
+<p><span class="math notranslate nohighlight">\(volume = h (\pi R^2 - \pi r^2)\)</span></p>
+<img alt="Cylinder" class="align-center" src="../_images/hollow-cylinder.png" />
+<p>The first step is to consider how a function to calculate the volume of a hollow cylinder should look like in Python.</p>
+<p>In other words, what are the inputs (parameters) and what is the output (return value)?</p>
+<p>A first try is to write a function with three numbers, which represent the radius of
+the two cylinders and their heights, the result is a floating-point value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
+<span class="sd">    on the radius of the outer and inner cylinder&quot;&quot;&quot;</span>
+    
+    <span class="k">return</span> <span class="mf">0.0</span>
+
+<span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>This function is obviously not correct, it does not calculate the value of a hollow cylinder, it just returns <code class="docutils literal notranslate"><span class="pre">0.0</span></code>.</p>
+<p>However, we have now a skeleton of the function.</p>
+<p>So, in the next step we can start developing the body of the function.</p>
+<p>We need first to calculate the volume of a single cylinder based on the radius and
+the height.</p>
+<p>We introduce two auxilary variables <code class="docutils literal notranslate"><span class="pre">surfaceC1</span></code> and <code class="docutils literal notranslate"><span class="pre">surfaceC2</span></code>.</p>
+<p>Furthermore we add a <code class="docutils literal notranslate"><span class="pre">print</span></code> statement to see whether the values make sense.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
+<span class="sd">    on the radius of the outer and inner cylinder&quot;&quot;&quot;</span>
+    
+    <span class="n">surfaceC1</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">outerRadius</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">surfaceC2</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">innerRadius</span><span class="o">**</span><span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;surfaceC1 is&#39;</span><span class="p">,</span> <span class="n">surfaceC1</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;surfaceC2 is&#39;</span><span class="p">,</span> <span class="n">surfaceC2</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="mf">0.0</span>
+
+<span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="nn">Input In [6],</span> in <span class="ni">&lt;cell line: 12&gt;</span><span class="nt">()</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;surfaceC2 is&#39;</span><span class="p">,</span> <span class="n">surfaceC2</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="k">return</span> <span class="mf">0.0</span>
+<span class="ne">---&gt; </span><span class="mi">12</span> <span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+
+<span class="nn">Input In [6],</span> in <span class="ni">volume</span><span class="nt">(outerRadius, innerRadius, height)</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd">     on the radius of the outer and inner cylinder&quot;&quot;&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">5</span>     <span class="n">surfaceC1</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">outerRadius</span><span class="o">**</span><span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">surfaceC2</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">innerRadius</span><span class="o">**</span><span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;surfaceC1 is&#39;</span><span class="p">,</span> <span class="n">surfaceC1</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;math&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>The next step is to calculate the difference of the surfaces.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
+<span class="sd">    on the radius of the outer and inner cylinder&quot;&quot;&quot;</span>
+    
+    <span class="n">surfaceC1</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">outerRadius</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">surfaceC2</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">innerRadius</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">diffSurfaces</span> <span class="o">=</span> <span class="n">surfaceC1</span> <span class="o">-</span> <span class="n">surfaceC2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;diffSurfaces is&#39;</span><span class="p">,</span> <span class="n">diffSurfaces</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="mf">0.0</span>
+
+<span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then, we add a statement for multiplying the obtained difference with the height.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
+<span class="sd">    on the radius of the outer and inner cylinder&quot;&quot;&quot;</span>
+    
+    <span class="n">surfaceC1</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">outerRadius</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">surfaceC2</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">innerRadius</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">diffSurfaces</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">surfaceC1</span> <span class="o">-</span> <span class="n">surfaceC2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;diffSurfaces is&#39;</span><span class="p">,</span> <span class="n">diffSurfaces</span><span class="p">)</span>
+        
+    <span class="k">return</span> <span class="n">height</span> <span class="o">*</span> <span class="n">diffSurfaces</span>
+
+<span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The last step is to make sure that if the outer radius is smaller than the inner radius. Thus, we return <code class="docutils literal notranslate"><span class="pre">0</span></code> instead of a negative volume and print an error message.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
+<span class="sd">    on the radius of the outer and inner cylinder, using</span>
+<span class="sd">    outerRadius &gt;= innerRadius&quot;&quot;&quot;</span>
+    
+    <span class="k">if</span> <span class="n">outerRadius</span> <span class="o">&gt;=</span> <span class="n">innerRadius</span><span class="p">:</span>
+        <span class="n">surfaceC1</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">outerRadius</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">surfaceC2</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">innerRadius</span><span class="o">**</span><span class="mi">2</span>
+        <span class="n">diffSurfaces</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">surfaceC1</span> <span class="o">-</span> <span class="n">surfaceC2</span>
+        
+        <span class="n">volumeCylinder</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">height</span> <span class="o">*</span> <span class="n">diffSurfaces</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The outer cylinder should be larger than the inner cylinder&quot;</span><span class="p">)</span>
+        
+        <span class="n">volumeCylinder</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+        
+    <span class="k">return</span> <span class="n">volumeCylinder</span>
+
+<span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The final version of the function does not display anything when it runs; it only returns
+a value, or prints an error message.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">print</span></code> statements we wrote are useful for debugging, but once you get the
+function working, you should remove them.</p>
+<p>Code like that is called <strong>scaffolding</strong> or <strong>refactor</strong> because it
+is helpful for building the program but is not part of the final product.</p>
+<p>When you get more experienced, you will add more statements in one ‘run’ and use less debug statements.</p>
+<p>The key points of the incremental approach are:</p>
+<ol class="simple">
+<li><p>Start with a working program and make small incremental changes. At any point, if
+there is an error, you should have a good idea where it is.</p></li>
+<li><p>Use variables to hold intermediate values so you can display and check them.</p></li>
+<li><p>Once the program is working, you might want to remove some of the scaffolding or
+consolidate multiple statements into compound expressions, but only if it does not
+make the program difficult to read.</p></li>
+</ol>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 4 of <span id="id2">[<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Sev16</a>]</span> and Chapters 3 and 6 of <span id="id3">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="functions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Functions </p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="strings.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Strings </p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+      &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

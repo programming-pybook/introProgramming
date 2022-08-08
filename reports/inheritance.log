@@ -1,0 +1,94 @@
+Traceback (most recent call last):
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/asyncio/base_events.py", line 616, in run_until_complete
+    return future.result()
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "/opt/hostedtoolcache/Python/3.8.13/x64/lib/python3.8/site-packages/nbclient/client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import random
+
+class Meal:
+    """Represents a collection of dishes."""
+    
+    def __init__(self, dishes=[]) -> None:
+        """ creates a new Meal object and initializes it
+        """
+        self.dishes : list = dishes
+        
+    def __str__(self) -> str:
+        dlst = []
+        for dish in self.dishes:
+            dlst.append(dish.name)
+        return '\n'.join(dlst)
+        
+    def compose(self, dishes : list) -> None:
+        """ composes a meal
+        """
+        self.dishes  : list= dishes
+        
+    def remove_dish(self, dish_name : str) -> None:
+        """ removes a dish from a meal
+        """
+        for i in range(len(self.dishes)):
+            if self.dishes[i].name == dish_name:
+                del self.dishes[i]
+                break
+    
+    def add_dish(self, dish : Dish) -> None:
+        """ adds a dish to a meal
+        """
+        self.dishes.append(dish)
+        
+    def contains_dish(self, dish : Dish) -> bool:
+        """ checks whether the dish is already in the meal
+        """
+        return dish in self.dishes
+            
+    def surprise_me(self, nr : int) -> None:
+        """ add arbitrary dishes upto 'nr_of_dishes'
+        """
+        for i in range(nr):
+            dish : Dish = food_table[random.randint(0,len(food_table))]
+            while self.contains_dish(dish):
+                dish = food_table[random.randint(0,len(food_table))]
+            self.add_dish(dish)
+    
+food_table = process_food_data()
+meal = Meal()
+meal.surprise_me(5)
+print(meal)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+Input [0;32mIn [23][0m, in [0;36m<cell line: 49>[0;34m()[0m
+[1;32m     46[0m                 dish [38;5;241m=[39m food_table[random[38;5;241m.[39mrandint([38;5;241m0[39m,[38;5;28mlen[39m(food_table))]
+[1;32m     47[0m             [38;5;28mself[39m[38;5;241m.[39madd_dish(dish)
+[0;32m---> 49[0m food_table [38;5;241m=[39m [43mprocess_food_data[49m[43m([49m[43m)[49m
+[1;32m     50[0m meal [38;5;241m=[39m Meal()
+[1;32m     51[0m meal[38;5;241m.[39msurprise_me([38;5;241m5[39m)
+
+Input [0;32mIn [22][0m, in [0;36mprocess_food_data[0;34m()[0m
+[1;32m      3[0m [38;5;28;01mdef[39;00m [38;5;21mprocess_food_data[39m():    
+[1;32m      4[0m     [38;5;124;03m""" reads a CSV and converts it into a dictionary where the key is plain integer value[39;00m
+[1;32m      5[0m [38;5;124;03m        and the value is a Dish[39;00m
+[1;32m      6[0m [38;5;124;03m    """[39;00m
+[0;32m----> 7[0m     csv_file [38;5;241m=[39m [38;5;28;43mopen[39;49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mdatasets/FoodTable.csv[39;49m[38;5;124;43m'[39;49m[43m)[49m
+[1;32m      8[0m     food_table : [38;5;28mdict[39m [38;5;241m=[39m [38;5;28mdict[39m()
+[1;32m      9[0m     reader [38;5;241m=[39m csv[38;5;241m.[39mDictReader(csv_file, delimiter[38;5;241m=[39m[38;5;124m'[39m[38;5;124m;[39m[38;5;124m'[39m)
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'datasets/FoodTable.csv'
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/FoodTable.csv'
+
