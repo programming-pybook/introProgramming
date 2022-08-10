@@ -9,8 +9,9 @@ on:
     # unrelated files, you can make this run only if a file within that specific
     # folder has been modified.
     #
-    paths:
-     - book/**
+    # paths:
+    #  - book/*
+
 
 permissions:
   pull-requests: write
@@ -37,7 +38,7 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build .
+        jupyter-book build -all book
 
     # Push the book's HTML to github-pages
     - name: GitHub Pages action
