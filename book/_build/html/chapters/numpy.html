@@ -1,0 +1,1553 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NumPy Arrays &#8212; Introduction to Programming in Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Pandas DataFrames" href="pandas.html" />
+    <link rel="prev" title="Data Preparation" href="data_preparation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction to Programming in Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="programs.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assignments.html">
+   Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditionals.html">
+   Conditionals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="beyond_functions.html">
+   Beyond Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tuples.html">
+   Tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sets.html">
+   Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dictionaries.html">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="comprehensions_generators.html">
+   Comprehensions and Generators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regular_expressions.html">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_objects.html">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_functions.html">
+   Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_methods.html">
+   Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inheritance.html">
+   Inheritance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recursion.html">
+   Recursion [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="searching.html">
+   Searching [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sorting.html">
+   Sorting [^intro]
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   NumPy Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pandas.html">
+   Pandas DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vcs.html">
+   Version Control Systems &amp; Git
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/numpy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/maveme/introProgramming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/maveme/introProgramming/issues/new?title=Issue%20on%20page%20%2Fchapters/numpy.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/maveme/introProgramming/edit/master/chapters/numpy.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/maveme/introProgramming.git/master/v2/gh/maveme/introProgramming/master?urlpath=lab/tree/chapters/numpy.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-a-class-anchor-id-introduction-a">
+   1. Introduction
+   <a class="anchor" id="introduction">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-numpy-arrays-a-class-anchor-id-arrays-a">
+   2. Create NumPy Arrays
+   <a class="anchor" id="arrays">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-array-from-list">
+     NumPy Array from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       list
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-array-from-scratch">
+     NumPy Array from Scratch
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multi-dimensional-arrays-a-class-anchor-id-multidimensional-a">
+   3. Multi-dimensional Arrays
+   <a class="anchor" id="multidimensional">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array-attributes-a-class-anchor-id-attributes-a">
+   4. Array Attributes
+   <a class="anchor" id="attributes">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing-a-class-anchor-id-indexing-a">
+   5. Indexing
+   <a class="anchor" id="indexing">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slicing-a-class-anchor-id-slicing-a">
+   6. Slicing
+   <a class="anchor" id="slicing">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-dimensional-array">
+     One-dimensional Array
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multi-dimensional-arrays">
+     Multi-dimensional Arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copies-of-arrays">
+     Copies of Arrays
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#masking">
+   7. Masking
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>NumPy Arrays</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-a-class-anchor-id-introduction-a">
+   1. Introduction
+   <a class="anchor" id="introduction">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#create-numpy-arrays-a-class-anchor-id-arrays-a">
+   2. Create NumPy Arrays
+   <a class="anchor" id="arrays">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-array-from-list">
+     NumPy Array from
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       list
+      </span>
+     </code>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#numpy-array-from-scratch">
+     NumPy Array from Scratch
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#multi-dimensional-arrays-a-class-anchor-id-multidimensional-a">
+   3. Multi-dimensional Arrays
+   <a class="anchor" id="multidimensional">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#array-attributes-a-class-anchor-id-attributes-a">
+   4. Array Attributes
+   <a class="anchor" id="attributes">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#indexing-a-class-anchor-id-indexing-a">
+   5. Indexing
+   <a class="anchor" id="indexing">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#slicing-a-class-anchor-id-slicing-a">
+   6. Slicing
+   <a class="anchor" id="slicing">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#one-dimensional-array">
+     One-dimensional Array
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#multi-dimensional-arrays">
+     Multi-dimensional Arrays
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#copies-of-arrays">
+     Copies of Arrays
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#masking">
+   7. Masking
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="numpy-arrays">
+<h1>NumPy Arrays<a class="headerlink" href="#numpy-arrays" title="Permalink to this headline">¶</a></h1>
+<p>This Jupyter Notebook is based on Chapter 2 of the book “Python Data Science Handbook” by Jake VanderPlas.</p>
+<p><em>(c) 2021, Lina Ochoa Venegas, Eindhoven University of Technology</em></p>
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="#introduction">1. Introduction</a></p></li>
+<li><p><a class="reference external" href="#arrays">2. Create NumPy Arrays</a></p></li>
+<li><p><a class="reference external" href="#multidimensional">3. Multidimensional Arrays</a></p></li>
+<li><p><a class="reference external" href="#attributes">4. Array Attributes</a></p></li>
+<li><p><a class="reference external" href="#indexing">5. Indexing</a></p></li>
+<li><p><a class="reference external" href="#slicing">6. Slicing</a></p></li>
+<li><p><a class="reference external" href="#masking">7. Masking</a></p></li>
+</ul>
+</div>
+<div class="section" id="introduction-a-class-anchor-id-introduction-a">
+<h2>1. Introduction <a class="anchor" id="introduction"></a><a class="headerlink" href="#introduction-a-class-anchor-id-introduction-a" title="Permalink to this headline">¶</a></h2>
+<p>NumPy stands for <em>Numerical Python</em>. It is a Python library that supports large multi-dimensional arrays. NumPy also offers mathematical functions designed to operate over this type of array. But why not use normal Python data types–such as lists or tuples? The main reason is that NumPy arrays are way more efficient when storing and manipulating large amounts of data. Why are they more efficient? Mainly, because NumPy arrays are fixed-type arrays, meaning that they can contain items of a specific type–contrary, to <code class="docutils literal notranslate"><span class="pre">list</span></code> structures that handle diverse types at the same type. This fixed-type array condition makes NumPy arrays less flexible but more efficient, placing them at the basis of the data science ecosystem in Python.</p>
+<p>To start using NumPy you need to add the following code.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>By convention, the <code class="docutils literal notranslate"><span class="pre">numpy</span></code> module is renamed to <code class="docutils literal notranslate"><span class="pre">np</span></code>, so your code is less verbose.</p>
+</div>
+<div class="section" id="create-numpy-arrays-a-class-anchor-id-arrays-a">
+<h2>2. Create NumPy Arrays <a class="anchor" id="arrays"></a><a class="headerlink" href="#create-numpy-arrays-a-class-anchor-id-arrays-a" title="Permalink to this headline">¶</a></h2>
+<p>You can create NumPy arrays out from Python lists or from scratch.</p>
+<div class="section" id="numpy-array-from-list">
+<h3>NumPy Array from <code class="docutils literal notranslate"><span class="pre">list</span></code><a class="headerlink" href="#numpy-array-from-list" title="Permalink to this headline">¶</a></h3>
+<p>When creating NumPy arrays out from Python lists you first need to create a Python list. For example, in the following cell, we create a Python list that contains prime numbers greater than 0 and less than 30.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Python list</span>
+<span class="n">primes</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">primes</span><span class="p">))</span>
+<span class="n">primes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;list&#39;&gt;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
+</pre></div>
+</div>
+</div>
+</div>
+<p>We notice that all elements within the <code class="docutils literal notranslate"><span class="pre">primes</span></code> list are integers. Therefore, we can create a NumPy array with integer values out from this list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creat NummPy array out from Pyton list</span>
+<span class="n">np_primes</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">np_primes</span><span class="p">))</span>
+<span class="n">np_primes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;numpy.ndarray&#39;&gt;
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2,  3,  5,  7, 11, 13, 17, 19, 23, 29])
+</pre></div>
+</div>
+</div>
+</div>
+<p>If it happens that your list contains different types, NumPy will attempt to upcast them. For instance, the following list has both integers and float point numbers. Integers can then be upcasted to floats.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mf">9.6</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mf">7.1</span><span class="p">,</span> <span class="mf">6.1</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+<span class="n">np_scores</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
+<span class="n">np_scores</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([10. ,  9.6,  4.3,  8. ,  7.1,  6.1,  8. ])
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can go further and specify the data type of the items in the array by using the <code class="docutils literal notranslate"><span class="pre">dtype</span></code> keyword parameters. NumPy has a set of predefined types such as <code class="docutils literal notranslate"><span class="pre">bool_</span></code> (for Booleans), <code class="docutils literal notranslate"><span class="pre">int_</span></code> (for integers), <code class="docutils literal notranslate"><span class="pre">float_</span></code> (for floating-point numbers), and <code class="docutils literal notranslate"><span class="pre">str_</span></code> (for strings). When creating arrays, NumPy’s default type is <code class="docutils literal notranslate"><span class="pre">float_</span></code>. The whole list of types can be found <a class="reference external" href="https://numpy.org/doc/stable/reference/arrays.scalars.html#built-in-scalar-types">here</a>.</p>
+<p>In the following cell, we take the list of integers <code class="docutils literal notranslate"><span class="pre">scale</span></code>, and we convert it into a NumPy array with floating-point numbers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scale</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">np_scale</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">scale</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float_&#39;</span><span class="p">)</span>
+<span class="n">np_scale</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 2., 3., 4., 5.])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="numpy-array-from-scratch">
+<h3>NumPy Array from Scratch<a class="headerlink" href="#numpy-array-from-scratch" title="Permalink to this headline">¶</a></h3>
+<p>When dealing with large arrays it is better to create them from scratch instead of using Python lists. To do so, you can use diverse built-in functions provided by NumPy.</p>
+<p>For instance, you can use the <code class="docutils literal notranslate"><span class="pre">zeros()</span></code> function, which creates an array with <code class="docutils literal notranslate"><span class="pre">n</span></code> number of zeros. In the following cell, we create an array with <code class="docutils literal notranslate"><span class="pre">8</span></code> zeros. Notice that by default the numbers are created as floats. If you want to change the type you can also use the <code class="docutils literal notranslate"><span class="pre">dtype</span></code> keyword.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an array with 8 zeros</span>
+<span class="n">zeros</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+<span class="n">zeros</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0., 0., 0., 0., 0., 0., 0., 0.])
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">ones()</span></code> function works similar to the <code class="docutils literal notranslate"><span class="pre">zeros()</span></code> one, the only difference is that it creates <code class="docutils literal notranslate"><span class="pre">1</span></code>s instead of <code class="docutils literal notranslate"><span class="pre">0</span></code>s.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ones</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
+<span class="n">ones</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 1, 1, 1, 1, 1, 1, 1])
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also pick a specific number to fill in your array using the <code class="docutils literal notranslate"><span class="pre">full()</span></code> function. Look into the following cell. The first parameter of the function receives the number of items of the array; while the second parameter gets the value that should be copied in each location of the array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pi_numbers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mf">3.1418</span><span class="p">)</span>
+<span class="n">pi_numbers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multi-dimensional-arrays-a-class-anchor-id-multidimensional-a">
+<h2>3. Multi-dimensional Arrays <a class="anchor" id="multidimensional"></a><a class="headerlink" href="#multi-dimensional-arrays-a-class-anchor-id-multidimensional-a" title="Permalink to this headline">¶</a></h2>
+<p>NumPy also supports the creation of multi-dimensional arrays (or matrices). The previous example can be altered, so we can define the number of rows and columns that our array will have. If both the numbers of rows and columns are greater than 1, we will end up with a multi-dimensional array.</p>
+<p>For instance, in the following cell, we use again the <code class="docutils literal notranslate"><span class="pre">full()</span></code> function to create the <code class="docutils literal notranslate"><span class="pre">pi_matrix</span></code>, which consists of 4 rows and 8 columns. Therefore, instead of passing an integer as the first argument, we pass a tuple whose first item is the number of <strong>rows</strong> (i.e. <code class="docutils literal notranslate"><span class="pre">4</span></code>) and the number of <strong>columns</strong> (i.e. <code class="docutils literal notranslate"><span class="pre">8</span></code>).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pi_matrix</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="mf">3.1418</span><span class="p">)</span>
+<span class="n">pi_matrix</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418],
+       [3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418],
+       [3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418],
+       [3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418, 3.1418]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also create an array out of regular Python nested lists: inner lists become rows in the matrix.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nested_lists</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">nested_lists</span><span class="p">)</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">nested_lists</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Some other interesting functions for creating multi-dimensional arrays include:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">arange()</span></code>: creates a linear sequences. It is similar to the <code class="docutils literal notranslate"><span class="pre">range()</span></code> function.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates a linear sequence between 0 and 10. It steps by 2.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 2, 4, 6, 8])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">linspace()</span></code>: creates an array of evenly spaced numbers.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates an array of 5 items, evenly spaced between 0 and 1.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0.  , 0.25, 0.5 , 0.75, 1.  ])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">random.random()</span></code>: creates an array with random numbers between 0 and 1.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates a matrix (3 rows and 4 columns) with random numbers between 0 and 1.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.00833365, 0.95363643, 0.72414164, 0.46703631],
+       [0.79245805, 0.54845635, 0.04036864, 0.13747126],
+       [0.58196483, 0.43281883, 0.0023215 , 0.90796388]])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">random.randint()</span></code>: creates an array with random integers in a given interval.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates a 4x4 matrix with random integers between 0 and 100</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[32, 78, 51, 33],
+       [76, 91, 47, 86],
+       [ 6, 45,  4, 25],
+       [24, 14, 99, 65]])
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">random.normal()</span></code>: creates a normally distributed array with random numbers. You must set the mean and the standard deviation values.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates a normally distributed 4x4 matrix with random numbers. </span>
+<span class="c1"># The mean is set to 0 and the standard deviation to 1.</span>
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.85590397, -0.54829096, -2.16393688, -2.25335638],
+       [ 1.00653662,  0.78113848, -0.531574  ,  0.9558758 ],
+       [ 1.02833632, -0.75812776, -0.22985152, -0.26113623],
+       [ 0.25619682,  0.20849379,  2.44933302, -2.76618711]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="array-attributes-a-class-anchor-id-attributes-a">
+<h2>4. Array Attributes <a class="anchor" id="attributes"></a><a class="headerlink" href="#array-attributes-a-class-anchor-id-attributes-a" title="Permalink to this headline">¶</a></h2>
+<p>Every NumPy array has the following set of attributes:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ndim</span></code></p></td>
+<td><p>Number of dimensions</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">shape</span></code></p></td>
+<td><p>Size of each dimension</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">size</span></code></p></td>
+<td><p>Number of elements in the array</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dtype</span></code></p></td>
+<td><p>Data type of the array</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">itemsize</span></code></p></td>
+<td><p>Size in bytes of each array element</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">nbytes</span></code></p></td>
+<td><p>Size in bytes of the array</p></td>
+</tr>
+</tbody>
+</table>
+<p>Hereafter, we will create three different arrays (one-dimensional, two-dimensional, and three-dimensional arrays) to see the output of these attributes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># One-dimensional array</span>
+<span class="n">one_dim</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+<span class="n">one_dim</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([8, 4, 1, 0, 8, 3])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Two-dimensional array</span>
+<span class="n">two_dim</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">two_dim</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[9, 9, 2, 1, 3, 7],
+       [8, 0, 0, 3, 0, 6]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Three-dimensional array</span>
+<span class="n">three_dim</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">three_dim</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[9, 9, 7, 1, 9, 0],
+        [3, 5, 0, 4, 2, 8],
+        [9, 9, 2, 5, 6, 2]],
+
+       [[0, 5, 4, 5, 8, 4],
+        [8, 5, 0, 7, 8, 2],
+        [8, 4, 8, 6, 0, 0]]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Let us explore now the <code class="docutils literal notranslate"><span class="pre">ndim</span></code>, <code class="docutils literal notranslate"><span class="pre">shape</span></code>, and <code class="docutils literal notranslate"><span class="pre">size</span></code> attributes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;One-dimensional array: ndim=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s1">, shape=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">, size=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Two-dimensional array: ndim=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s1">, shape=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">, size=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Three-dimensional array: ndim=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s1">, shape=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">, size=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>One-dimensional array: ndim=1, shape=(6,), size=6
+Two-dimensional array: ndim=2, shape=(2, 6), size=12
+Three-dimensional array: ndim=3, shape=(2, 3, 6), size=36
+</pre></div>
+</div>
+</div>
+</div>
+<p>What about the <code class="docutils literal notranslate"><span class="pre">dtype</span></code>?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;One-dimensional array: dtype=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Two-dimensional array: dtype=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Three-dimensional array: dtype=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>One-dimensional array: dtype=int64
+Two-dimensional array: dtype=int64
+Three-dimensional array: dtype=int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">int64</span></code> data type refers to a signed integer (can be both positive or negative) that uses 64 bits for its representation.</p>
+<p>Finally, let us look into the <code class="docutils literal notranslate"><span class="pre">itemsize</span></code> and <code class="docutils literal notranslate"><span class="pre">nbytes</span></code> attributes. Notice that <code class="docutils literal notranslate"><span class="pre">nbytes</span></code> is equal to <span class="math notranslate nohighlight">\(itemsize \times size\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;One-dimensional array: itemsize=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">itemsize</span><span class="si">}</span><span class="s1"> bytes, nbytes=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">nbytes</span><span class="si">}</span><span class="s1"> bytes&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Two-dimensional array: itemsize=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">itemsize</span><span class="si">}</span><span class="s1"> bytes, nbytes=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">nbytes</span><span class="si">}</span><span class="s1"> bytes&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Three-dimensional array: itemsize=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">itemsize</span><span class="si">}</span><span class="s1"> bytes, nbytes=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">nbytes</span><span class="si">}</span><span class="s1"> bytes&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>One-dimensional array: itemsize=8 bytes, nbytes=48 bytes
+Two-dimensional array: itemsize=8 bytes, nbytes=96 bytes
+Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="indexing-a-class-anchor-id-indexing-a">
+<h2>5. Indexing <a class="anchor" id="indexing"></a><a class="headerlink" href="#indexing-a-class-anchor-id-indexing-a" title="Permalink to this headline">¶</a></h2>
+<p>Indexing in NumPy arrays is pretty similar to Python list indexing. Actually, when dealing with one-dimensional arrays there is no difference at all. To see this, let us redefine and use the <code class="docutils literal notranslate"><span class="pre">primes</span></code> array–now as a NumPy array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">])</span>
+<span class="n">primes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2,  3,  5,  7, 11, 13, 17, 19, 23, 29])
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want to access the first element in the array, we can use the <code class="docutils literal notranslate"><span class="pre">0</span></code> value between the squared brackets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>To access, the last item in the array, we refer to the length of the array minus one position. Otherwise, we will get an out-of-bounds index error.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>29
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can also opt for accessing items backwards by using negative indices. For instance, if we want to access the last item in the array, we can employ the <code class="docutils literal notranslate"><span class="pre">-1</span></code> index.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>29
+</pre></div>
+</div>
+</div>
+</div>
+<p>When dealing with <strong>multi-dimensional arrays</strong>, you need to specify a comma-separated sequence of indices. To see how it works, let us create the <code class="docutils literal notranslate"><span class="pre">integers</span></code> two-dimensional array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
+<span class="n">integers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we want to access the item located in the first row of the matrix, second column (i.e. <code class="docutils literal notranslate"><span class="pre">2</span></code>), we use the <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code> index (remember that we start counting from 0).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>To access the element placed at the middle of the <code class="docutils literal notranslate"><span class="pre">integers</span></code> matrix (i.e. <code class="docutils literal notranslate"><span class="pre">5</span></code>), we can find the middle point of each dimension as follows. (Notice that the following code will only work for a matrix whose dimension sizes are both odd!)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">integers</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">middle_rows</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">rows</span> <span class="o">//</span> <span class="mi">2</span>
+<span class="n">middle_columns</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">columns</span> <span class="o">//</span> <span class="mi">2</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Middle index rows: </span><span class="si">{</span><span class="n">middle_rows</span><span class="si">}</span><span class="s1">, Middle index columns: </span><span class="si">{</span><span class="n">middle_columns</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">integers</span><span class="p">[</span><span class="n">middle_rows</span><span class="p">,</span> <span class="n">middle_columns</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Middle index rows: 1, Middle index columns: 1
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, to access the last item in the two-dimensional array–that is, the element in the bottom-right corner (i.e. <code class="docutils literal notranslate"><span class="pre">9</span></code>), we can consider the size of each element and subtract <code class="docutils literal notranslate"><span class="pre">1</span></code> unit to each one of them. Then we use these new values as part of the sequence of indices.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">integers</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">last_rows</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">rows</span> <span class="o">-</span> <span class="mi">1</span>
+<span class="n">last_columns</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">columns</span> <span class="o">-</span> <span class="mi">1</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Last index rows: </span><span class="si">{</span><span class="n">last_rows</span><span class="si">}</span><span class="s1">, Last index columns: </span><span class="si">{</span><span class="n">last_columns</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="n">integers</span><span class="p">[</span><span class="n">last_rows</span><span class="p">,</span> <span class="n">last_columns</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last index rows: 2, Last index columns: 2
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
+</pre></div>
+</div>
+</div>
+</div>
+<p>NumPy arrays are mutable, meaning that you can directly modify their values. In the following cell, we modify the first element of the matrix <code class="docutils literal notranslate"><span class="pre">integers</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">integers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[100,   2,   3],
+       [  4,   5,   6],
+       [  7,   8,   9]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="slicing-a-class-anchor-id-slicing-a">
+<h2>6. Slicing <a class="anchor" id="slicing"></a><a class="headerlink" href="#slicing-a-class-anchor-id-slicing-a" title="Permalink to this headline">¶</a></h2>
+<p>Array slicing also works like the regular slicing of Python lists. That is, we use the squared brackets (<code class="docutils literal notranslate"><span class="pre">[]</span></code>) and the colon symbol (<code class="docutils literal notranslate"><span class="pre">:</span></code>) to play around and choose the items we are interested in. The regular slicing notation looks as follows:</p>
+<p><code class="docutils literal notranslate"><span class="pre">x[start:stop]</span></code></p>
+<p>However, there is one extra attribute you can define when slicing (this also applies to other Python sequences such as lists and strings): the <code class="docutils literal notranslate"><span class="pre">step</span></code>, which only considers every <span class="math notranslate nohighlight">\(n^{th}\)</span> item in the sequence–being <span class="math notranslate nohighlight">\(n\)</span> the value you assign to it. Notice that the last colon and attribute are always optional in Python.</p>
+<p><code class="docutils literal notranslate"><span class="pre">x[start:stop:step]</span></code></p>
+<p>If you do not specify a value for any of these three attributes, they will get their default value. All default values are shown in the following table.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Attribute</p></th>
+<th class="text-align:center head"><p>Default value</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">start</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">stop</span></code></p></td>
+<td class="text-align:center"><p>Size of dimension</p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">step</span></code></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="one-dimensional-array">
+<h3>One-dimensional Array<a class="headerlink" href="#one-dimensional-array" title="Permalink to this headline">¶</a></h3>
+<p>Now, let us go back to our <code class="docutils literal notranslate"><span class="pre">primes</span></code> array and let us slice it in different ways.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">])</span>
+<span class="n">primes</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2,  3,  5,  7, 11, 13, 17, 19, 23, 29])
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the following cell, we only consider the first five items of the <code class="docutils literal notranslate"><span class="pre">primes</span></code> array. Notice that the element placed at the 5<span class="math notranslate nohighlight">\(^{th}\)</span> position won’t be included.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_five</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">first_five</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2,  3,  5,  7, 11])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Computing the middle point manually might be error-prone. We can, therefore, compute the index in an integer variable (a.k.a. <code class="docutils literal notranslate"><span class="pre">middle</span></code>), and use it to define where half of the array starts. In the following cell, we consider all items placed in the second half of the array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">middle</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> 
+<span class="n">last_half</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="n">middle</span><span class="p">:]</span>
+<span class="n">last_half</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([13, 17, 19, 23, 29])
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the following cell, we specify both the <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">stop</span></code> attributes to take the two middle values of the array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">two_middle</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">two_middle</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([11, 13])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we can start using the <code class="docutils literal notranslate"><span class="pre">step</span></code> attribute. If we set it to <code class="docutils literal notranslate"><span class="pre">2</span></code> without specifying any other value for the <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">stop</span></code> attributes, we will get every two elements from the array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">every_two</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">every_two</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 2,  5, 11, 17, 23])
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can go further and decide to consider every two elements only in the last half of the array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">middle</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> 
+<span class="n">every_two_half</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="n">middle</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">every_two_half</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([13, 19, 29])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="multi-dimensional-arrays">
+<h3>Multi-dimensional Arrays<a class="headerlink" href="#multi-dimensional-arrays" title="Permalink to this headline">¶</a></h3>
+<p>Slicing works similarly when dealing with multi-dimensional arrays. You only need to separate every slicing criterion for each dimension with a <code class="docutils literal notranslate"><span class="pre">comma</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">x[start_dim1:stop_dim1:step_dim1,</span> <span class="pre">start_dim2:stop_dim2:step_dim2,</span> <span class="pre">...]</span></code></p>
+<p>Let us have a look at the <code class="docutils literal notranslate"><span class="pre">integers</span></code> matrix.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
+<span class="n">integers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick first two rows and first two columns</span>
+<span class="n">integers</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2],
+       [4, 5]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick last two rows and last two columns</span>
+<span class="n">integers</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[5, 6],
+       [8, 9]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick all rows and column in position 2 (last column)</span>
+<span class="n">integers</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([3, 6, 9])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick first row and all columns</span>
+<span class="n">integers</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick first row and all columns (another way)</span>
+<span class="n">integers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick all rows and every two steps pick a column</span>
+<span class="n">integers</span><span class="p">[:,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 3],
+       [4, 6],
+       [7, 9]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="copies-of-arrays">
+<h3>Copies of Arrays<a class="headerlink" href="#copies-of-arrays" title="Permalink to this headline">¶</a></h3>
+<p>A difference of foremost importance between NumPy arrays and Python lists is that array slices return <strong>views</strong> instead of <strong>copies</strong> of the data. This means that if you modify the array slices you are actually modifying the underlying data. This property is very useful especially when dealing with large datasets: we can focus on the data we need to modify and there is no need to handle extra copies.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub_integers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">integers</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">sub_integers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2],
+       [4, 5]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change the first value of the view</span>
+<span class="n">sub_integers</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">sub_integers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[100,   2],
+       [  4,   5]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the integers matrix has been also updated</span>
+<span class="n">integers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[100,   2,   3],
+       [  4,   5,   6],
+       [  7,   8,   9]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, the <em>views</em> property comes at a cost: if you just wanted to experiment with your data without really aiming at modifying it, you can end up with a polluted dataset. If you prefer to work with a copy, you need to be explicit about it. Luckily, NumPy provides the method <code class="docutils literal notranslate"><span class="pre">copy()</span></code>, which will help you in this regard.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
+<span class="n">integers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a copy instead</span>
+<span class="n">sub_integers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">integers</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">sub_integers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2],
+       [4, 5]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update first item of the copy</span>
+<span class="n">sub_integers</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">sub_integers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[100,   2],
+       [  4,   5]])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The integers matrix is intact</span>
+<span class="n">integers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 2, 3],
+       [4, 5, 6],
+       [7, 8, 9]])
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="masking">
+<h2>7. Masking<a class="headerlink" href="#masking" title="Permalink to this headline">¶</a></h2>
+<p>We can use Boolean arrays to mask (or filter) values in the array. Suppose that we would like to get all values from the <code class="docutils literal notranslate"><span class="pre">integers</span></code> array that are greater than or equal to 5. Let us first create the Boolean array and see how it looks like.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span> <span class="o">&gt;=</span> <span class="mi">5</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[False, False, False],
+       [False,  True,  True],
+       [ True,  True,  True]])
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can see that NumPy checks the Boolean expression against all values in the array, then it creates a new NumPy array with Boolean values stating if the condition is satisfied by the item in a given position.</p>
+<p>Now, if we want to mask the <code class="docutils literal notranslate"><span class="pre">integers</span></code> array and consider the subset of data points that are greater than or equal to 5, we need to use the Boolean array to index on the boolean condition.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">[</span><span class="n">integers</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 6, 7, 8, 9])
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that NumPy returns a one-dimensional array with all the values that meet the condition.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="data_preparation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data Preparation </p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="pandas.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Pandas DataFrames</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+        &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

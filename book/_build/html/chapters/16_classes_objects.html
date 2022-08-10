@@ -1,0 +1,1283 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes and Objects &#8212; Introduction to Programming in Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Classes and Functions" href="17_classes_functions.html" />
+    <link rel="prev" title="Regular Expressions" href="14_regular_expressions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction to Programming in Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_programs.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_assignments.html">
+   Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_conditionals_iteration.html">
+   Conditionals and Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_dictionaries.html">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_tuples_sets.html">
+   Tuples and Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13_comprehensions_generators.html">
+   Comprehensions and Generators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_regular_expressions.html">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17_classes_functions.html">
+   Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18_classes_methods.html">
+   Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="19_inheritance.html">
+   Inheritance
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_vcs.html">
+   Version Control Systems &amp; Git
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/16_classes_objects.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/maveme/introProgramming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/maveme/introProgramming/issues/new?title=Issue%20on%20page%20%2Fchapters/16_classes_objects.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/maveme/introProgramming/edit/master/chapters/16_classes_objects.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/maveme/introProgramming.git/master/v2/gh/maveme/introProgramming/master?urlpath=lab/tree/chapters/16_classes_objects.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programmer-defined-types">
+   2. Programmer-defined Types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   Attributes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-init-method">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     init
+    </span>
+   </code>
+   Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rectangles">
+   Rectangles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instances-as-return-values">
+   Instances as Return Values
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objects-are-mutable">
+   Objects are Mutable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copying">
+   Copying
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Classes and Objects </h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#programmer-defined-types">
+   2. Programmer-defined Types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#attributes">
+   Attributes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#the-init-method">
+   The
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     init
+    </span>
+   </code>
+   Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#rectangles">
+   Rectangles
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#instances-as-return-values">
+   Instances as Return Values
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#objects-are-mutable">
+   Objects are Mutable
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copying">
+   Copying
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="classes-and-objects">
+<h1>Classes and Objects <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#classes-and-objects" title="Permalink to this headline">¶</a></h1>
+<p>There are multiple programming paradigms: <strong>imperative</strong>, <strong>logical</strong>, <strong>functional</strong>, and <strong>object-oriented</strong>, the logical and functional way of programming is sometimes called <strong>declarative</strong>.</p>
+<p>So far, we have seen the imperative way of programming; creating data structures, and developing functions that manipulate the data structures.</p>
+<p>We will graduately introduce concepts from <strong>object-oriented</strong> programming.</p>
+<p>The idea of object-oriented programming is to bring code and data closer together; this will increase the level of abstraction and facilitates encapsulation of data.</p>
+<p>Object-oriented (OO) paradigm enables information hiding, the underlying structure is invisible and the programmer can use, among others, so-called <em>getters</em> and <em>setters</em> to manipulate the data.</p>
+<div class="section" id="programmer-defined-types">
+<h2>2. Programmer-defined Types<a class="headerlink" href="#programmer-defined-types" title="Permalink to this headline">¶</a></h2>
+<p>We have seen and used a number of built-in types of Python.</p>
+<p>We are now going to define our own types.</p>
+<p>We will start by creating a type called <code class="docutils literal notranslate"><span class="pre">Point</span></code> that represents a point in a two-dimensional space.</p>
+<p>In mathematical notation, points are often written in parentheses with a comma separating the coordinates.</p>
+<p><span class="math notranslate nohighlight">\((0, 0)\)</span> represents the origin, and <span class="math notranslate nohighlight">\((x, y)\)</span> represents the point <span class="math notranslate nohighlight">\(x\)</span>
+units to the right and <span class="math notranslate nohighlight">\(y\)</span> units up from the origin.</p>
+<p>There are several ways we might represent points in Python:</p>
+<ul class="simple">
+<li><p>We could store the coordinates separately in two variables, <code class="docutils literal notranslate"><span class="pre">x</span></code> and <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p></li>
+<li><p>We could store the coordinates as elements in a list or tuple.</p></li>
+<li><p>We could create a new type to represent points as objects.</p></li>
+</ul>
+<p>Creating a new type is more complicated than the other options, but it offers numerous advantages as we will see later on.</p>
+<p>A programmer-defined type is also called a <strong>class</strong>.</p>
+<p>The following cell shows the class definition for <code class="docutils literal notranslate"><span class="pre">Point</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a point in 2-D space.&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>A new class <code class="docutils literal notranslate"><span class="pre">Point</span></code> has been introduced.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Define the class <em>Dog</em>, which represents a dog (obviously). Include a docstring with the description of the class.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>There is not much you can do so far with this <code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Point</span></code>.</p>
+<p>The body is a docstring that explains what the class defines or is used for.</p>
+<p>Defining a class named <code class="docutils literal notranslate"><span class="pre">Point</span></code> creates a <strong>class object</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Point</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>__main__.Point
+</pre></div>
+</div>
+</div>
+</div>
+<p>Because <code class="docutils literal notranslate"><span class="pre">Point</span></code> is defined at the top level, its “full name” is <code class="docutils literal notranslate"><span class="pre">__main__.Point</span></code>.</p>
+<p>The class object is like a <strong>factory</strong> for creating objects, it is a built-in mechanism that based on the class allocates pieces of memory to store the data. Every object is a separate allocated piece of memory.</p>
+<p>To create a Point, you call <code class="docutils literal notranslate"><span class="pre">Point</span></code> as if it were a function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pnt</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
+<span class="n">pnt</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fb910ff6eb0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The return value is a reference to a <code class="docutils literal notranslate"><span class="pre">Point</span></code> object, which we assign to the variable <code class="docutils literal notranslate"><span class="pre">pnt</span></code>.</p>
+<p>Creating a new object is called <strong>instantiation</strong>, and the object is an <strong>instance</strong> of the class.</p>
+<p>When you print an instance, Python tells you what class it belongs to and where it is stored in memory.</p>
+<p>Every object is an instance of some class, so “object” and “instance” are interchangeable.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create an instance of a Dog and assign its value to a the variable <code class="docutils literal notranslate"><span class="pre">doggy</span></code>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="attributes">
+<h2>Attributes<a class="headerlink" href="#attributes" title="Permalink to this headline">¶</a></h2>
+<p>The class <code class="docutils literal notranslate"><span class="pre">Point</span></code> we have created in the previous section is not really useful.</p>
+<p>The next step is to assign values to an instance of the class <code class="docutils literal notranslate"><span class="pre">Point</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pnt</span><span class="o">.</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">pnt</span><span class="o">.</span><span class="n">y</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">4.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The same syntax (notation) is used as for selecting a variable from a module, for instance <code class="docutils literal notranslate"><span class="pre">math.pi</span></code> or <code class="docutils literal notranslate"><span class="pre">string.whitespace</span></code>.</p>
+<p>We use the <code class="docutils literal notranslate"><span class="pre">dot</span></code> notation to assign values to named elements of an object.</p>
+<p>The elements are called <strong>attributes</strong>, see the corresponding visualisation of the corresponding <strong>object diagram</strong>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p></p></th>
+<th class="text-align:left head"><p>Point</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>pnt <span class="math notranslate nohighlight">\(\rightarrow\)</span></p></td>
+<td class="text-align:left"><p>x <span class="math notranslate nohighlight">\(\rightarrow\)</span> 3.0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>y <span class="math notranslate nohighlight">\(\rightarrow\)</span> 4.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>The variable <code class="docutils literal notranslate"><span class="pre">pnt</span></code> refers to a Point object, which contains two attributes.</p>
+<p>Each attribute refers to a floating-point number.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Python is a dynamically typed language. This means you do not need to define the types of variables explicitly, Python will deduced them for you and report if there are inconsistencies. The <strong>attributes</strong> of a class do not need to be declared explicitly when creating a class.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pnt</span><span class="o">.</span><span class="n">z</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">5.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Add the attributes <code class="docutils literal notranslate"><span class="pre">name</span></code> and <code class="docutils literal notranslate"><span class="pre">breed</span></code> to the object doggy refers to. Set the values you prefer.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can read the value of an attribute using the same syntax.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x =&#39;</span><span class="p">,</span> <span class="n">pnt</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">pnt</span><span class="o">.</span><span class="n">y</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;y =&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = 3.0
+y = 4.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>The expression <code class="docutils literal notranslate"><span class="pre">pnt.y</span></code> means, “Go to the object <code class="docutils literal notranslate"><span class="pre">pnt</span></code>
+refers to and get the value of <code class="docutils literal notranslate"><span class="pre">y</span></code>.”</p>
+<p>We assign that value to a variable named <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
+<p>There is no conflict between the variable <code class="docutils literal notranslate"><span class="pre">y</span></code> and the attribute <code class="docutils literal notranslate"><span class="pre">y</span></code>;
+they live in 2 different worlds.</p>
+<p>You can use dot notation as part of any expression, as we can see in the cells below.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;(</span><span class="si">%g</span><span class="s1">, </span><span class="si">%g</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pnt</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">pnt</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;(3, 4)&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+
+<span class="n">distance</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pnt</span><span class="o">.</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">pnt</span><span class="o">.</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">distance</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can use an instance of a class as argument for a function in the usual way.</p>
+<p><code class="docutils literal notranslate"><span class="pre">print_point</span></code> takes a point as an argument and displays it in mathematical notation.</p>
+<p>To invoke it, you can pass <code class="docutils literal notranslate"><span class="pre">pnt</span></code> as an argument.</p>
+<p>The argument of the function has the type <code class="docutils literal notranslate"><span class="pre">Point</span></code>, the <em>type-hints</em> are very important to really document and understand the function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_point</span><span class="p">(</span><span class="n">p</span> <span class="p">:</span> <span class="n">Point</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;prints a point object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(</span><span class="si">%g</span><span class="s1">, </span><span class="si">%g</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
+    
+<span class="n">print_point</span><span class="p">(</span><span class="n">pnt</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<p>Inside the function, <code class="docutils literal notranslate"><span class="pre">p</span></code> is an alias for <code class="docutils literal notranslate"><span class="pre">pnt</span></code>, so if the function modifies <code class="docutils literal notranslate"><span class="pre">p</span></code>, <code class="docutils literal notranslate"><span class="pre">pnt</span></code> changes.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create a function <code class="docutils literal notranslate"><span class="pre">print_dog(dog:</span> <span class="pre">Dog)</span> <span class="pre">-&gt;</span> <span class="pre">None</span></code> that prints a message with the attributes of the dog. Use the dot notation to access the attributes of the dog object. Print a message that says: “This dog is called <i>name</i> and it is a <i>breed</i>”. Use the doggy variable to verify the effect of your function.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="the-init-method">
+<h2>The <code class="docutils literal notranslate"><span class="pre">init</span></code> Method<a class="headerlink" href="#the-init-method" title="Permalink to this headline">¶</a></h2>
+<p>The init method (short for “initialization”) is a special method that gets invoked when an
+object is created. Its full name is <code class="docutils literal notranslate"><span class="pre">__init__</span></code> (two underscore characters, followed by
+init, and then two more underscores).</p>
+<p>Its purpose is to initialize a new object, this is the <em>constructor</em> method. When the object is created, for instance via <code class="docutils literal notranslate"><span class="pre">Time(11,</span> <span class="pre">43,</span> <span class="pre">51)</span></code>, the parameters are passed to the created object.</p>
+<p>By convention, the first parameter of a method is called <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
+<p>An <code class="docutils literal notranslate"><span class="pre">init</span></code> method for the <code class="docutils literal notranslate"><span class="pre">Point</span></code> class is shown in the next cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a point in 2-D space.&quot;&quot;&quot;</span>
+    
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Point object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">x</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="rectangles">
+<h2>Rectangles<a class="headerlink" href="#rectangles" title="Permalink to this headline">¶</a></h2>
+<p>Sometimes it is obvious what the attributes of an object should be, but other times you have to make decisions.</p>
+<p>For example, imagine you are designing a class to represent rectangles.</p>
+<p>What attributes would you use to specify the location and size of a rectangle?</p>
+<p>We assume that the rectangle is just in a vertical or horizontal position.</p>
+<p>There are at least two possibilities:</p>
+<ul class="simple">
+<li><p>You could specify one corner of the rectangle (or the center), the width, and the height.</p></li>
+<li><p>You could specify two opposing corners.</p></li>
+</ul>
+<p>At this point it is hard to say whether one is better than the other, so we will implement the first case, just as an example, so the combination of one corner with width and height.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents a rectangle.</span>
+<span class="sd">    </span>
+<span class="sd">    attributes: width, height, corner.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+        
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot; creates a new Point object and initializes it</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">w</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">h</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">corner</span> <span class="p">:</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The docstring lists the attributes: <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> are numbers; <code class="docutils literal notranslate"><span class="pre">corner</span></code> is a <code class="docutils literal notranslate"><span class="pre">Point</span></code> object that specifies the lower-left corner.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Remember that Python is dynamically typed, the mentioning of the attributes in the docstring is not same as declaring them.</p>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Declare a new class called <i>DogOwner</i>. This class will have the following attributes: name, last_name, age, and dog. Include the docstring that describes this class.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To represent a rectangle, you have to instantiate a Rectangle object and assign values to the attributes.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box</span> <span class="p">:</span> <span class="n">Rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<span class="n">box</span><span class="o">.</span><span class="n">width</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">100.0</span>
+<span class="n">box</span><span class="o">.</span><span class="n">height</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">200.0</span>
+<span class="n">box</span><span class="o">.</span><span class="n">corner</span> <span class="p">:</span> <span class="n">Point</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
+<span class="n">box</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+<span class="n">box</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">y</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The expression <code class="docutils literal notranslate"><span class="pre">box.corner.x</span></code> means, “Go to the object <code class="docutils literal notranslate"><span class="pre">box</span></code> refers to and select the attribute named <code class="docutils literal notranslate"><span class="pre">corner</span></code>; then go to that object and select the attribute named <code class="docutils literal notranslate"><span class="pre">x</span></code>.”</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p></p></th>
+<th class="text-align:left head"><p>Rectangle</p></th>
+<th class="text-align:left head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>box <span class="math notranslate nohighlight">\(\rightarrow\)</span></p></td>
+<td class="text-align:left"><p>width <span class="math notranslate nohighlight">\(\rightarrow\)</span> 100.0</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>height <span class="math notranslate nohighlight">\(\rightarrow\)</span> 200.0</p></td>
+<td class="text-align:left"><p><strong>Point</strong></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>corner <span class="math notranslate nohighlight">\(\longrightarrow\)</span></p></td>
+<td class="text-align:left"><p>x <span class="math notranslate nohighlight">\(\rightarrow\)</span> 0.0</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>y <span class="math notranslate nohighlight">\(\rightarrow\)</span> 0.0</p></td>
+</tr>
+</tbody>
+</table>
+<p>The figure shows the layout of this object.</p>
+<p>An object that is an attribute of another object is <strong>embedded</strong>.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create a new dog owner and assign values to all of its attributes. Do not forget to assign values to his or her dog attributes!</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Classes and Objects<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Every class in Python is <em>derived</em> from the class <code class="docutils literal notranslate"><span class="pre">object</span></code>, so every <em>instance</em> of every class is an <code class="docutils literal notranslate"><span class="pre">object</span></code>.</p>
+<p>The class <code class="docutils literal notranslate"><span class="pre">object</span></code> is a <em>superclass</em> of class <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>, and class <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> is a <em>subclass</em> of class <code class="docutils literal notranslate"><span class="pre">object</span></code>.</p>
+<p>Class <code class="docutils literal notranslate"><span class="pre">object</span></code> has the following <em>attributes</em> (attributes are elements inside a class that refer to methods, functions, variables, or even other classes).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__class__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__class__&#39;,
+ &#39;__delattr__&#39;,
+ &#39;__dict__&#39;,
+ &#39;__dir__&#39;,
+ &#39;__doc__&#39;,
+ &#39;__eq__&#39;,
+ &#39;__format__&#39;,
+ &#39;__ge__&#39;,
+ &#39;__getattribute__&#39;,
+ &#39;__gt__&#39;,
+ &#39;__hash__&#39;,
+ &#39;__init__&#39;,
+ &#39;__init_subclass__&#39;,
+ &#39;__le__&#39;,
+ &#39;__lt__&#39;,
+ &#39;__module__&#39;,
+ &#39;__ne__&#39;,
+ &#39;__new__&#39;,
+ &#39;__reduce__&#39;,
+ &#39;__reduce_ex__&#39;,
+ &#39;__repr__&#39;,
+ &#39;__setattr__&#39;,
+ &#39;__sizeof__&#39;,
+ &#39;__str__&#39;,
+ &#39;__subclasshook__&#39;,
+ &#39;__weakref__&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you compare these 2 lists, you observe that they are almost the same, except for <code class="docutils literal notranslate"><span class="pre">__dict__</span></code>, <code class="docutils literal notranslate"><span class="pre">__module__</span></code>, and <code class="docutils literal notranslate"><span class="pre">__weakref__</span></code>.</p>
+<p>We can even get <em>help</em> on our <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on class Rectangle in module __main__:
+
+class Rectangle(builtins.object)
+ |  Rectangle(w=0, h=0, x=0, y=0)
+ |  
+ |  Represents a rectangle.
+ |  
+ |  attributes: width, height, corner.
+ |  
+ |  Methods defined here:
+ |  
+ |  __init__(self, w=0, h=0, x=0, y=0)
+ |      creates a new Point object and initializes it
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |  
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Use the function <code class="docutils literal notranslate"><span class="pre">help()</span></code> to display the documentation of the class DogOwner.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="instances-as-return-values">
+<h2>Instances as Return Values<a class="headerlink" href="#instances-as-return-values" title="Permalink to this headline">¶</a></h2>
+<p>Functions can return instances.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">find_center</span></code> takes a <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> as an argument
+and returns a <code class="docutils literal notranslate"><span class="pre">Point</span></code> that contains the coordinates of the center of the Rectangle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_center</span><span class="p">(</span><span class="n">rect</span> <span class="p">:</span> <span class="n">Rectangle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Point</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;calculates the center of a rectangle</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">p</span> <span class="p">:</span> <span class="n">Point</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span>
+    <span class="n">p</span><span class="o">.</span><span class="n">y</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span>
+    <span class="k">return</span> <span class="n">p</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Here is an example that passes <code class="docutils literal notranslate"><span class="pre">box</span></code> as an argument and assigns the resulting <code class="docutils literal notranslate"><span class="pre">Point</span></code> to center.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">center</span> <span class="p">:</span> <span class="n">Point</span> <span class="o">=</span> <span class="n">find_center</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
+<span class="n">print_point</span><span class="p">(</span><span class="n">center</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(50, 100)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create the function <code class="docutils literal notranslate"><span class="pre">add_dog_lastname(owner:</span> <span class="pre">DogOwner)</span> <span class="pre">-&gt;</span> <span class="pre">Dog</span></code>, which modifies the name of the dog by concatenating the last name of the owner to it. For example, if the dog’s name is “Scooby” and the owner’s last name is “Doo”, the new name of the dog should be “Scooby Doo”. Return the modified instance of the dog.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="objects-are-mutable">
+<h2>Objects are Mutable<a class="headerlink" href="#objects-are-mutable" title="Permalink to this headline">¶</a></h2>
+<p>You can change the state of an object by making an assignment to one of its attributes.</p>
+<p>It is possible to change the size of a rectangle without changing its position.</p>
+<p>In the cell below, the <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> are adapted.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">width</span> <span class="o">+</span> <span class="mi">50</span>
+<span class="n">box</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also write functions that modify objects.</p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">grow_rectangle</span></code> takes a
+<code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> object and two numbers, <code class="docutils literal notranslate"><span class="pre">dwidth</span></code> and <code class="docutils literal notranslate"><span class="pre">dheight</span></code>, and adds the numbers to the
+<code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> of the rectangle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grow_rectangle</span><span class="p">(</span><span class="n">rect</span> <span class="p">:</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">dwidth</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dheight</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;increases the size of the rectangle</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">rect</span><span class="o">.</span><span class="n">width</span> <span class="o">+=</span> <span class="n">dwidth</span>
+    <span class="n">rect</span><span class="o">.</span><span class="n">height</span> <span class="o">+=</span> <span class="n">dheight</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The next cell shows how to use this function and demonstrates its effect.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;width = &#39;</span><span class="p">,</span> <span class="n">box</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;height = &#39;</span><span class="p">,</span> <span class="n">box</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+
+<span class="n">grow_rectangle</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;width = &#39;</span><span class="p">,</span> <span class="n">box</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;height = &#39;</span><span class="p">,</span> <span class="n">box</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>width =  150.0
+height =  300.0
+width =  200.0
+height =  400.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Because <code class="docutils literal notranslate"><span class="pre">rect</span></code> is an alias for <code class="docutils literal notranslate"><span class="pre">box</span></code>, so if the function modifies <code class="docutils literal notranslate"><span class="pre">rect</span></code>, <code class="docutils literal notranslate"><span class="pre">box</span></code>
+changes as well.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create the function <code class="docutils literal notranslate"><span class="pre">celebrate_birthday(owner</span> <span class="pre">:</span> <span class="pre">DogOwner)</span></code>, which adds 1 year to the age of the dog’s owner. Do not return the new owner. Call the function and pass an instance of a DogOwner. Use the <i>print()</i> function to see how the attributes of the object have changes.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="copying">
+<h2>Copying<a class="headerlink" href="#copying" title="Permalink to this headline">¶</a></h2>
+<p>Aliasing can make a program difficult to read, it may even be dangerous, because changes in one place might have unexpected effects in another place.</p>
+<p>It is hard to keep track of all the variables that might
+refer to a given object and being changed unindented.</p>
+<p>Copying an object is often an alternative to aliasing.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">copy</span></code> module contains a function
+called <code class="docutils literal notranslate"><span class="pre">copy</span></code> that can duplicate any object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="p">:</span> <span class="n">Point</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">3.0</span>
+<span class="n">p1</span><span class="o">.</span><span class="n">y</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">4.0</span>
+
+<span class="kn">import</span> <span class="nn">copy</span>
+<span class="n">p2</span> <span class="p">:</span> <span class="n">Point</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> contain the same data, but are different objects.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_point</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+<span class="n">print_point</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+
+<span class="n">p1</span> <span class="ow">is</span> <span class="n">p2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3, 4)
+(3, 4)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">is</span></code> operator indicates that <code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> are not the same object, thus this explains the <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">==</span></code> operator is also defined for <em>programmer-defined types</em>, for
+programmer-defined types the <code class="docutils literal notranslate"><span class="pre">==</span></code> and <code class="docutils literal notranslate"><span class="pre">is</span></code> operator have the same behaviour, although you may have expected differently.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">==</span></code> operator yields <code class="docutils literal notranslate"><span class="pre">False</span></code> although these points contain the
+same data.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">==</span> <span class="n">p2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you use <code class="docutils literal notranslate"><span class="pre">copy.copy</span></code> to duplicate a <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>, you will find that it copies the Rectangle object but not the embedded Point.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box2</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
+<span class="n">box2</span> <span class="ow">is</span> <span class="n">box</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box2</span><span class="o">.</span><span class="n">corner</span> <span class="ow">is</span> <span class="n">box</span><span class="o">.</span><span class="n">corner</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:left head"><p></p></th>
+<th class="text-align:left head"><p>Rectangle</p></th>
+<th class="text-align:left head"><p></p></th>
+<th class="text-align:left head"><p>Rectangle</p></th>
+<th class="text-align:left head"><p></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:left"><p>box2 <span class="math notranslate nohighlight">\(\rightarrow\)</span></p></td>
+<td class="text-align:left"><p>width <span class="math notranslate nohighlight">\(\rightarrow\)</span> 100.0</p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>100 <span class="math notranslate nohighlight">\(\leftarrow\)</span> width</p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\leftarrow\)</span> box</p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>height <span class="math notranslate nohighlight">\(\rightarrow\)</span> 200.0</p></td>
+<td class="text-align:left"><p><strong>Point</strong></p></td>
+<td class="text-align:left"><p>200.0 <span class="math notranslate nohighlight">\(\leftarrow\)</span> height</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>corner <span class="math notranslate nohighlight">\(\longrightarrow\)</span></p></td>
+<td class="text-align:left"><p>x <span class="math notranslate nohighlight">\(\rightarrow\)</span> 0.0</p></td>
+<td class="text-align:left"><p><span class="math notranslate nohighlight">\(\longleftarrow\)</span> corner</p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p>y <span class="math notranslate nohighlight">\(\rightarrow\)</span> 0.0</p></td>
+<td class="text-align:left"><p></p></td>
+<td class="text-align:left"><p></p></td>
+</tr>
+</tbody>
+</table>
+<p>The diagram above shows the object diagram.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">copy.copy</span></code> operator is a so-called <strong>shallow copy</strong>.</p>
+<p>It copies the object and any references it contains, but not the embedded
+objects.</p>
+<p>In many cases this is not the desired behaviour, you want to copy the entire object structure.</p>
+<p>In order to do that you need to use the <code class="docutils literal notranslate"><span class="pre">copy.deepcopy</span></code> function, this function implements the <strong>deep copy</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box3</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
+<span class="n">box3</span> <span class="ow">is</span> <span class="n">box</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box3</span><span class="o">.</span><span class="n">corner</span> <span class="ow">is</span> <span class="n">box</span><span class="o">.</span><span class="n">corner</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@Mark</span><span class="p">:</span> <span class="n">make</span> <span class="n">a</span> <span class="n">view</span> <span class="n">cells</span> <span class="n">on</span> <span class="n">the</span> <span class="n">effect</span> <span class="n">of</span> <span class="n">changing</span> <span class="n">copies</span><span class="o">.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_46872/1791905913.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="nd">@Mark</span><span class="p">:</span> <span class="n">make</span> <span class="n">a</span> <span class="n">view</span> <span class="n">cells</span> <span class="n">on</span> <span class="n">the</span> <span class="n">effect</span> <span class="n">of</span> <span class="n">changing</span> <span class="n">copies</span><span class="o">.</span>
+         <span class="o">^</span>
+<span class="ne">SyntaxError</span>: invalid syntax
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create a dog owner instance, then create two copies of it: i) a shallow copy; and ii) a deep copy. Compare the dogs of the copies against the original dog with the <i>is</i> operator. What is the difference between both cases?</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 15 of <span id="id3">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="14_regular_expressions.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Regular Expressions </p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="17_classes_functions.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Classes and Functions</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+        &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

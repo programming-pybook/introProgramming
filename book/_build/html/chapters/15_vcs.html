@@ -1,0 +1,1022 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Version Control Systems &amp; Git &#8212; Introduction to Programming in Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Data Preparation" href="11_data_preparation.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction to Programming in Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_programs.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_assignments.html">
+   Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_conditionals_iteration.html">
+   Conditionals and Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_dictionaries.html">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_tuples_sets.html">
+   Tuples and Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13_comprehensions_generators.html">
+   Comprehensions and Generators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_regular_expressions.html">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16_classes_objects.html">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17_classes_functions.html">
+   Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18_classes_methods.html">
+   Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="19_inheritance.html">
+   Inheritance
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Version Control Systems &amp; Git
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/15_vcs.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/maveme/introProgramming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/maveme/introProgramming/issues/new?title=Issue%20on%20page%20%2Fchapters/15_vcs.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/maveme/introProgramming/edit/master/chapters/15_vcs.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/maveme/introProgramming.git/master/v2/gh/maveme/introProgramming/master?urlpath=lab/tree/chapters/15_vcs.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-control-system-vcs-a-class-anchor-id-vcs-a">
+   Version Control System (VCS)
+   <a class="anchor" id="vcs">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#centralized-vcs">
+     Centralized VCS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distributed-vcs">
+     Distributed VCS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-a-class-anchor-id-git-a">
+   Git
+   <a class="anchor" id="git">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-features">
+     Git Features
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-states">
+     Git States
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sections-of-a-git-project">
+     Sections of a Git Project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-workflow">
+     Git Workflow
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-a-git-repository-a-class-anchor-id-git-repo-a">
+   Getting a Git Repository
+   <a class="anchor" id="git-repo">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-local-git-repository">
+     Create Local Git Repository
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clone-git-repository">
+     Clone Git Repository
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-status-lifecycle-a-class-anchor-id-lifecycle-a">
+   File Status Lifecycle
+   <a class="anchor" id="lifecycle">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#verifying-files-status">
+     Verifying Files Status
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tracking-and-staging-files">
+     Tracking and Staging Files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#viewing-specific-changes">
+     Viewing Specific Changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#committing-changes">
+     Committing Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#remote-repositories-a-class-anchor-id-remote-repos-a">
+   Remote Repositories
+   <a class="anchor" id="remote-repos">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#branches">
+     Branches
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pulling-changes">
+     Pulling Changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pushing-changes">
+     Pushing Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-things-go-wrong-a-class-anchor-id-wrong-a">
+   When Things Go Wrong
+   <a class="anchor" id="wrong">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fixing-a-commit-message">
+     Fixing a Commit Message
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-forgotten-file-to-commit">
+     Add Forgotten File to Commit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unstaging-a-staged-file">
+     Unstaging a Staged File
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unmodifying-a-modified-file">
+     Unmodifying a Modified File
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Version Control Systems & Git</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#version-control-system-vcs-a-class-anchor-id-vcs-a">
+   Version Control System (VCS)
+   <a class="anchor" id="vcs">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#centralized-vcs">
+     Centralized VCS
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#distributed-vcs">
+     Distributed VCS
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-a-class-anchor-id-git-a">
+   Git
+   <a class="anchor" id="git">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-features">
+     Git Features
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-states">
+     Git States
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#sections-of-a-git-project">
+     Sections of a Git Project
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#git-workflow">
+     Git Workflow
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-a-git-repository-a-class-anchor-id-git-repo-a">
+   Getting a Git Repository
+   <a class="anchor" id="git-repo">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#create-local-git-repository">
+     Create Local Git Repository
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#clone-git-repository">
+     Clone Git Repository
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#file-status-lifecycle-a-class-anchor-id-lifecycle-a">
+   File Status Lifecycle
+   <a class="anchor" id="lifecycle">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#verifying-files-status">
+     Verifying Files Status
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tracking-and-staging-files">
+     Tracking and Staging Files
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#viewing-specific-changes">
+     Viewing Specific Changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#committing-changes">
+     Committing Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#remote-repositories-a-class-anchor-id-remote-repos-a">
+   Remote Repositories
+   <a class="anchor" id="remote-repos">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#branches">
+     Branches
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pulling-changes">
+     Pulling Changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pushing-changes">
+     Pushing Changes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#when-things-go-wrong-a-class-anchor-id-wrong-a">
+   When Things Go Wrong
+   <a class="anchor" id="wrong">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fixing-a-commit-message">
+     Fixing a Commit Message
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#add-forgotten-file-to-commit">
+     Add Forgotten File to Commit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unstaging-a-staged-file">
+     Unstaging a Staged File
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#unmodifying-a-modified-file">
+     Unmodifying a Modified File
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="version-control-systems-git">
+<h1>Version Control Systems &amp; Git<a class="headerlink" href="#version-control-systems-git" title="Permalink to this headline">¶</a></h1>
+<p>This Jupyter Notebook is based on Chapters 1 and 2 of <span id="id1">[<a class="reference internal" href="../intro.html#id17" title="Scott Chacon and Ben Straub. Pro git. Springer Nature, 2014. URL: https://git-scm.com/book/en/v2.">CS14</a>]</span>.</p>
+<p><em>(c) 2021, Lina Ochoa Venegas, Eindhoven University of Technology</em></p>
+<p>In this notebook, we introduce the main concepts behind Version Control Systems and Git. We will also cover the main actions that Git supports and how to run them from the command line. A series of tutorials will accompany this notebook. Contrary to the command line approach, these tutorials will focus on how to perform the main Git actions with an Integrated Development Environment (IDE).</p>
+<div class="section" id="version-control-system-vcs-a-class-anchor-id-vcs-a">
+<h2>Version Control System (VCS) <a class="anchor" id="vcs"></a><a class="headerlink" href="#version-control-system-vcs-a-class-anchor-id-vcs-a" title="Permalink to this headline">¶</a></h2>
+<p>A <strong>Version Control System (VCS)</strong> is a system in charge of recording changes made to a file or set of files. These files are linked to specific versions. Therefore, you will be able to navigate through the history of a given file when needed. The reasons behind doing this are:</p>
+<ul class="simple">
+<li><p><em>reverting files</em> to a previous version;</p></li>
+<li><p><em>comparing changes</em> over time;</p></li>
+<li><p>detect when an <em>issue</em> was introduced, among others.</p></li>
+</ul>
+<p>In general, VCS will help you recover in case errors and problems impact one or more files.</p>
+<p>But which type of files are we talking about? Basically, we are talking of any type of file. However, in data science, we can think of files storing datasets, reports, or source code.</p>
+<div class="alert admonition">
+<p class="admonition-title">Version Control System (VCS)</p>
+<p>ystem in charge of managing changes made to a file or set of files.</p>
+</div>
+<div class="section" id="centralized-vcs">
+<h3>Centralized VCS<a class="headerlink" href="#centralized-vcs" title="Permalink to this headline">¶</a></h3>
+<p>When developing software, most people need to collaborate with other programmers. To deal with this requirement <strong>centralized VCSs</strong> were created. This type of VCSs have a central server that contains all versioned files, and clients check out the latest versions of the files from other machines. Some of the most well-known centralized VCSs include <a class="reference external" href="http://cvs.nongnu.org/">CVS</a>, <a class="reference external" href="https://subversion.apache.org/">Subversion</a>, and <a class="reference external" href="https://www.perforce.com/">Perforce</a>.</p>
+<p>The main disadvantage of this approach is that there is a single point of failure, namely the central server hosting the versioned files. If the server goes down or the database gets corrupted, you risk losing all the version information except for possible ad-hoc snapshots in other machines.</p>
+<a class="reference internal image-reference" href="../_images/centralized-vcs.png"><img alt="Centralized VCS" class="align-center" src="../_images/centralized-vcs.png" style="width: 400px;" /></a>
+<div style="text-align:center">
+    <span style="font-size:0.9em; font-weight: bold;">Centralized VCS. Image taken from <em>Pro Git</em> Scott Chacon and Ben Straub.</span>
+</div><div class="alert admonition">
+<p class="admonition-title">Centralized VCS</p>
+<p>CS having a central server that contains all versioned files of a project, and clients check out the latest versions of the files from other machines.</p>
+</div>
+</div>
+<div class="section" id="distributed-vcs">
+<h3>Distributed VCS<a class="headerlink" href="#distributed-vcs" title="Permalink to this headline">¶</a></h3>
+<p>To overcome the pitfall of centralized VCSs, <strong>distributed VCSs</strong> were designed. These systems allow clients not only to have the latest versions of the files in their machines but instead the whole history of the repository. This whole copy of the repository is what we know as a <em>mirror</em>. Thus, if the server goes down or the database is damaged, information might be restored from any of the client repositories; every client has a full backup of the versioned data. Moreover, you can freely interact with the local repository in your machine and upload any change to the remote server whenever you prefer. Some of the most popular distributed VCSs include <a class="reference external" href="https://git-scm.com/">Git</a>, <a class="reference external" href="https://www.mercurial-scm.org/">Mercurial</a>, <a class="reference external" href="https://bazaar.canonical.com/en/">Bazaar</a>, and <a class="reference external" href="http://darcs.net/">Darcs</a>.</p>
+<a class="reference internal image-reference" href="../_images/distributed-vcs.png"><img alt="Distributed VCS" class="align-center" src="../_images/distributed-vcs.png" style="width: 400px;" /></a>
+<div style="text-align:center">
+    <span style="font-size:0.9em; font-weight: bold;">Distributed VCS. Image taken from <em>Pro Git</em> Scott Chacon and Ben Straub.</span>
+</div><div class="alert admonition">
+<p class="admonition-title">Distributed VCS</p>
+<p>VCS allowing clients to have a mirror of the tracked files of a project.</p>
+</div>
+</div>
+</div>
+<div class="section" id="git-a-class-anchor-id-git-a">
+<h2>Git <a class="anchor" id="git"></a><a class="headerlink" href="#git-a-class-anchor-id-git-a" title="Permalink to this headline">¶</a></h2>
+<p>Git–as previously mentioned–is one of the most popular distributed VCSs. What makes it special is the way it manages versions. Contrary to other solutions that store files and the differences with previous versions (also known as <em>delta-based version control</em>); Git sees data as a series of snapshots of a filesystem. Then, every time you commit a change to the repository, Git takes a picture of the current state of the files. For performance purposes, if a file is not changed it will only create a link to the previously stored version of the file.</p>
+<a class="reference internal image-reference" href="../_images/delta-based-vc.png"><img alt="Delta-based VC" class="align-center" src="../_images/delta-based-vc.png" style="width: 550px;" /></a>
+<div style="text-align:center">
+    <span style="font-size:0.9em; font-weight: bold;">Version control based on deltas. Image taken from <em>Pro Git</em> Scott Chacon and Ben Straub.</span>
+</div>
+<br>
+<br>
+<a class="reference internal image-reference" href="../_images/snapshot-based-vc.png"><img alt="Snapshot-based VC" class="align-center" src="../_images/snapshot-based-vc.png" style="width: 550px;" /></a>
+<div style="text-align:center">
+    <span style="font-size:0.9em; font-weight: bold;">Version control based on snapshots. Image taken from <em>Pro Git</em> Scott Chacon and Ben Straub.</span>
+</div><div class="section" id="git-features">
+<h3>Git Features<a class="headerlink" href="#git-features" title="Permalink to this headline">¶</a></h3>
+<p>Some of the most notorious Git features include:</p>
+<ul class="simple">
+<li><p><strong>Integrity:</strong> Every time you commit a change in Git the content will be checksummed–that is, a function will be used to represent the content in another digital representation. This means that if data is changed or corrupted on the fly, Git will be able to detect the issue. git uses the so-called SHA-1 hash to checksum the repositories content. The <em>SHA-1 hash</em> is a 40-character string of hexadecimal characters (0-9 and a-f). Every single commit in Git has a hash number that identifies it. An example of a SHA-1 hash looks as follows:</p></li>
+</ul>
+<pre>
+24b9da6552252987aa493b52f8696cd6d3b00373
+</pre>
+<ul class="simple">
+<li><p><strong>Data addition:</strong> Git usually only adds data and does not remove it. This property gives us confidence in experimenting with the system without losing any relevant information if we mess things up. In most cases, you will be able to go back to a stable and working version.</p></li>
+</ul>
+</div>
+<div class="section" id="git-states">
+<h3>Git States<a class="headerlink" href="#git-states" title="Permalink to this headline">¶</a></h3>
+<p>Every file can be in one of the three following states in Git:</p>
+<ul class="simple">
+<li><p><strong>Modified:</strong> the file has been changed but it has not been managed by the VCS.</p></li>
+<li><p><strong>Staged:</strong> the file has been added to be part of the next commit snapshot.</p></li>
+<li><p><strong>Committed:</strong> the commit has been safely stored in your local database.</p></li>
+</ul>
+</div>
+<div class="section" id="sections-of-a-git-project">
+<h3>Sections of a Git Project<a class="headerlink" href="#sections-of-a-git-project" title="Permalink to this headline">¶</a></h3>
+<p>A Git project always considers the following three main sections:</p>
+<ul class="simple">
+<li><p><strong>Working directory:</strong> (also known as the <em>working tree</em>) checkout of a specific version of a repository with all corresponding files.</p></li>
+<li><p><strong>Staging area:</strong> (also known as the <em>index</em>) file storing the information about the content of the next commit.</p></li>
+<li><p><strong>Git directory:</strong> <code class="docutils literal notranslate"><span class="pre">.git</span></code> folder where Git stores the metadata and database of the project. This is what is copied when you clone a repository.</p></li>
+</ul>
+</div>
+<div class="section" id="git-workflow">
+<h3>Git Workflow<a class="headerlink" href="#git-workflow" title="Permalink to this headline">¶</a></h3>
+<p>After knowing the main Git sections, you will be able to understand the Git workflow:</p>
+<ol class="simple">
+<li><p>Check out the specific version of the project. Compressed files in the Git directory are moved to your working directory.</p></li>
+<li><p>Modify files in your working directory.</p></li>
+<li><p>Select and stage the files you want to include in the next commit.</p></li>
+<li><p>Commit the staged files, storing a permanent snapshot in your Git repository.</p></li>
+</ol>
+<a class="reference internal image-reference" href="../_images/git-workflow.png"><img alt="Git Workflow" class="align-center" src="../_images/git-workflow.png" style="width: 550px;" /></a>
+<div style="text-align:center">
+    <span style="font-size:0.9em; font-weight: bold;">Git workflow. Image taken from <em>Pro Git</em> Scott Chacon and Ben Straub.</span>
+</div></div>
+</div>
+<div class="section" id="getting-a-git-repository-a-class-anchor-id-git-repo-a">
+<h2>Getting a Git Repository <a class="anchor" id="git-repo"></a><a class="headerlink" href="#getting-a-git-repository-a-class-anchor-id-git-repo-a" title="Permalink to this headline">¶</a></h2>
+<p>There are two ways to get a Git repository:</p>
+<ol class="simple">
+<li><p>Take a local folder in your machine and turn it into a Git repository.</p></li>
+<li><p>Clone an existing repository from elsewhere.</p></li>
+</ol>
+<div class="section" id="create-local-git-repository">
+<h3>Create Local Git Repository<a class="headerlink" href="#create-local-git-repository" title="Permalink to this headline">¶</a></h3>
+<p>When you have a project that is not under version control and you want to use Git for this matter, you will need to initialize the Git repository in this location. To do so, open the command line and type the following commands:</p>
+<ol class="simple">
+<li><p>Go to the location of your folder using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> (<strong>c</strong>hange <strong>d</strong>irectory) command.</p></li>
+</ol>
+<p>In Windows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd C:/Users/user/path/to/project
+</pre></div>
+</div>
+<p>In macOS:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd /Users/user/path/to/project
+</pre></div>
+</div>
+<p>In Linux:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ cd /home/user/path/to/project
+</pre></div>
+</div>
+<ol class="simple">
+<li><p>Initialize the Git repository.</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git init
+</pre></div>
+</div>
+<p>The last step creates the <code class="docutils literal notranslate"><span class="pre">.git</span></code> directory in the specified folder. However, no file has started to be tracked.</p>
+</div>
+<div class="section" id="clone-git-repository">
+<h3>Clone Git Repository<a class="headerlink" href="#clone-git-repository" title="Permalink to this headline">¶</a></h3>
+<p>If you want to get a copy of an existing Git repository, you should <strong>clone</strong> it. When you clone a repository you get a full copy of the data stored in the server–that is, every version of every file that is being tracked in the project. To clone a project you need to type the following command in your command line:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git clone https://repository/url.git
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="file-status-lifecycle-a-class-anchor-id-lifecycle-a">
+<h2>File Status Lifecycle <a class="anchor" id="lifecycle"></a><a class="headerlink" href="#file-status-lifecycle-a-class-anchor-id-lifecycle-a" title="Permalink to this headline">¶</a></h2>
+<p>Once you have set up your Git repository, you would like to start interacting with it and probably collaborating with other developers. This implies changing the current files and committing those changes to your Git repository.</p>
+<p>Git labels files as <em>tracked</em> or <em>untracked</em>. On the one hand, <strong>tracked files</strong> are files that Git knows about–that is, files that were part of the last snapshot or that have been staged by the user. Moreover, these files can be in an <em>unmodified</em>, <em>modified</em>, or <em>staged</em> state. When you clone a repository, all files are initially labeled as tracked and unmodified. On the second hand, <strong>untracked files</strong> are any other files that are not part of the previous group.</p>
+<p>When working with a file, it follows the lifecycle shown in the image below.</p>
+<ul class="simple">
+<li><p>In the first scenario, an untracked file is added to the staging area. It is then labelled as a <em>tracked</em> and <em>staged</em> file.</p></li>
+<li><p>In the second scenario, a <em>tracked</em> and <em>unmodified</em> file is edited by a developer. It is immediately labeled as <em>tracked</em> and <em>modified</em>.</p></li>
+<li><p>In the third scenario, a <em>tracked</em> and <em>modified</em> file is added to the staging area. It is then labeled as a <em>tracked</em> and <em>staged</em> file.</p></li>
+<li><p>In the fourth scenario, a <em>tracked</em> and <em>unmodified</em> file is removed from the Git repository. It is immediately labeled as <em>untracked</em>.</p></li>
+<li><p>In the last scenario, a <em>staged</em> file is committed to the Git repository. It is then labeled as <em>tracked</em> and <em>unmodified</em>.</p></li>
+</ul>
+<a class="reference internal image-reference" href="../_images/files-status-lifecycle.png"><img alt="Lifecycle of Files Status" class="align-center" src="../_images/files-status-lifecycle.png" style="width: 550px;" /></a>
+<div style="text-align:center">
+    <span style="font-size:0.9em; font-weight: bold;">Lifecycle of files status. Image taken from <em>Pro Git</em> Scott Chacon and Ben Straub.</span>
+</div>
+<div class="section" id="verifying-files-status">
+<h3>Verifying Files Status<a class="headerlink" href="#verifying-files-status" title="Permalink to this headline">¶</a></h3>
+<p>To check the status of your files you can use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git status
+</pre></div>
+</div>
+<p>For a short summary you can use the <code class="docutils literal notranslate"><span class="pre">-s</span></code> or <code class="docutils literal notranslate"><span class="pre">--short</span></code> option:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git status -s
+</pre></div>
+</div>
+<p>The output of this command is a list of files with two columns. The left-hand side column shows the status of the file in the staging area, and the right-hand side column shows the status of the file in the working tree. The table below shows the possible labels you can have in both columns:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Status</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>??</p></td>
+<td><p>Untracked file</p></td>
+</tr>
+<tr class="row-odd"><td><p>A</p></td>
+<td><p>Added to staging area</p></td>
+</tr>
+<tr class="row-even"><td><p>M</p></td>
+<td><p>Modified file</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="tracking-and-staging-files">
+<h3>Tracking and Staging Files<a class="headerlink" href="#tracking-and-staging-files" title="Permalink to this headline">¶</a></h3>
+<p>If Git shows you a list of <em>untracked</em> files that you would like to start tracking you must use the command <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git add path/to/file
+</pre></div>
+</div>
+<p>You can add several files at the same time:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git add path/to/file1 path/to/file2 path/to/file3
+</pre></div>
+</div>
+<p>Or you can even add all untracked and modified files by using the <code class="docutils literal notranslate"><span class="pre">.</span></code> wildcard:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git add .
+</pre></div>
+</div>
+<p>However, be careful with the last one given that you might include changes that you do not want others to see or that might impact the project negatively because changes are not stable.</p>
+</div>
+<div class="section" id="viewing-specific-changes">
+<h3>Viewing Specific Changes<a class="headerlink" href="#viewing-specific-changes" title="Permalink to this headline">¶</a></h3>
+<p>If you want to know what you have changed and not just the list of modified files, you can use the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git diff 
+</pre></div>
+</div>
+<p>This command will list all the changes you have made to the repository. In short, it compares what is in your working directory with what is in the staging area. These changes–including additions and removals–are what we know as a <strong>patch</strong>.</p>
+<p>However, the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">diff</span></code> command won’t show any change if those changes have been staged already. If you want to check the changes that you have staged and that will go in the next commit, you can use the <code class="docutils literal notranslate"><span class="pre">--staged</span></code> option. The command will then compare your staged changes against the last commit:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git diff --staged
+</pre></div>
+</div>
+</div>
+<div class="section" id="committing-changes">
+<h3>Committing Changes<a class="headerlink" href="#committing-changes" title="Permalink to this headline">¶</a></h3>
+<p>Once you have set up your staging area–meaning that you have added the files you want to track and modified in the Git repository (with the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> command)– you can proceed with committing such changes as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git commit
+</pre></div>
+</div>
+<p>This command will launch the default editor stored in the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">core.editor</span></code> variable. You will be able to add a message that describes the content of your commit. You can also write this message directly when writing the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span></code> command with the <code class="docutils literal notranslate"><span class="pre">-m</span></code> option:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git commit -m &quot;Your message here&quot;
+</pre></div>
+</div>
+<p>You must add a description to your commit, otherwise, the operation will be aborted.</p>
+<p>In general, commits should be atomic, meaning that they contain changes related to a very specific requirement. If you achieve this you will be able to write a meaningful commit message. Good practices on writing meaningful commit messages include:</p>
+<ul class="simple">
+<li><p>Answer the question <em>what are the changes for?</em></p></li>
+<li><p>Using the <em>imperative form of the verb</em> at the beginning of the message. For example: “Modify README file to list contributors”. Avoid using other forms of the verb such as “Added”, “Adding”, etc.</p></li>
+<li><p><em>Keep it short</em>. Include between 50 to 70 characters that explain the purpose of the commit.</p></li>
+<li><p><em>Be consistent</em>. There are several conventions to create your commit messages. Investigate a bit about them and choose the one that you prefer. Once you make a decision stick to it and be consistent.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="remote-repositories-a-class-anchor-id-remote-repos-a">
+<h2>Remote Repositories <a class="anchor" id="remote-repos"></a><a class="headerlink" href="#remote-repositories-a-class-anchor-id-remote-repos-a" title="Permalink to this headline">¶</a></h2>
+<p>A <strong>remote repository</strong> is a version of your project stored in a server somewhere on the Internet (or even on your own machine, but this is out of the scope of this course). You can have multiple remote repositories. To collaborate with others, you need to <em>push</em> and <em>pull</em> data from these remote repositories. In this course, we will only work with one remote repository.</p>
+<p>To list the remote repositories associated with your project, you can type the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git remote
+</pre></div>
+</div>
+<p>This command will list the short names of all the remote repositories you have configured. At least you will get the <code class="docutils literal notranslate"><span class="pre">origin</span></code> repository, which is the default name Git gives to the repository from which you clone your project. When cloning your project, the <code class="docutils literal notranslate"><span class="pre">origin</span></code> repository is automatically created for you.</p>
+<div class="section" id="branches">
+<h3>Branches<a class="headerlink" href="#branches" title="Permalink to this headline">¶</a></h3>
+<p>When you initialize a git repository you will automatically get a branch, which is a line of development that keeps track of related commits. The name of the branch that you get by default with Git is called the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch. You will have then a local version of the branch, which will also be set up to track a remote branch in your remote repository. To list your local branches run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git branch
+</pre></div>
+</div>
+<p>You can create other branches, but once again, this is out of the scope of the course. For more information, we encourage you to read the “Git Branching” chapter of the ProGit book referenced by this notebook.</p>
+</div>
+<div class="section" id="pulling-changes">
+<h3>Pulling Changes<a class="headerlink" href="#pulling-changes" title="Permalink to this headline">¶</a></h3>
+<p>Once you have set up your branch, you can fetch all changes introduced in the remote repository and merge them into your local version with the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git pull
+</pre></div>
+</div>
+</div>
+<div class="section" id="pushing-changes">
+<h3>Pushing Changes<a class="headerlink" href="#pushing-changes" title="Permalink to this headline">¶</a></h3>
+<p>When you have created some commits in your local repository and you want to share them in the remote repository you can use the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">&lt;remote&gt;</span> <span class="pre">&lt;branch&gt;</span></code> command. For instance, if you want to push your changes to the <code class="docutils literal notranslate"><span class="pre">master</span></code> branch of the <code class="docutils literal notranslate"><span class="pre">origin</span></code> repository, you will type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git push origin master
+</pre></div>
+</div>
+<p>This command will work only if no one has pushed new commits between your last pull and the moment you try to push your changes. If someone pushed after you fetched the repository and before you try to push your changes, you will be requested to pull again first, merge the modifications, solve conflicts if any, and try to push one more time.</p>
+</div>
+</div>
+<div class="section" id="when-things-go-wrong-a-class-anchor-id-wrong-a">
+<h2>When Things Go Wrong <a class="anchor" id="wrong"></a><a class="headerlink" href="#when-things-go-wrong-a-class-anchor-id-wrong-a" title="Permalink to this headline">¶</a></h2>
+<p>We are humans, we make mistakes. Git knows this, that is why it provides us with a set of commands that will help us fix these issues. However, you need to be careful because if you do it incorrectly you might lose information on the road.</p>
+<div class="section" id="fixing-a-commit-message">
+<h3>Fixing a Commit Message<a class="headerlink" href="#fixing-a-commit-message" title="Permalink to this headline">¶</a></h3>
+<p>If you want to change the commit message of your previous commit, and you have not changed anything in your staging area, you can use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git commit --amend
+</pre></div>
+</div>
+<p>The default editor will be launched with the previous message, then you will be able to modify it as you want.</p>
+</div>
+<div class="section" id="add-forgotten-file-to-commit">
+<h3>Add Forgotten File to Commit<a class="headerlink" href="#add-forgotten-file-to-commit" title="Permalink to this headline">¶</a></h3>
+<p>You can also use the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">--amend</span></code> if you forgot to add a file to the previous commit. To this aim, you will need to add the file to the staging area (using the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">add</span></code> command), and write <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">--amend</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git commit -m &quot;Commit without file1&quot;
+$ git add file1
+$ git commit --amend
+</pre></div>
+</div>
+<p>The second commit will modify the first one, so you will end up with only one commit instead of two. What is actually happening is that the first commit is being replaced by the enhanced commit created in the last line.</p>
+</div>
+<div class="section" id="unstaging-a-staged-file">
+<h3>Unstaging a Staged File<a class="headerlink" href="#unstaging-a-staged-file" title="Permalink to this headline">¶</a></h3>
+<p>If you accidentally added a file to your staging area, you can remove it from there by using the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span></code> command. For instance, let us imagine that you add all modified files in your working directory to the staging area as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git add .
+</pre></div>
+</div>
+<p>You then realize that you made a mistake, and one of the files (e.g. <code class="docutils literal notranslate"><span class="pre">file2</span></code>) must be removed from the coming commit. To do so you will need to type:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git reset HEAD path/to/file2
+</pre></div>
+</div>
+<p>Alternatively, you can use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git restore --staged path/to/file2
+</pre></div>
+</div>
+<p>After executing any of the two previous commands, the file will still keep your changes but it will be removed from the staging area.</p>
+</div>
+<div class="section" id="unmodifying-a-modified-file">
+<h3>Unmodifying a Modified File<a class="headerlink" href="#unmodifying-a-modified-file" title="Permalink to this headline">¶</a></h3>
+<p>But what if you want to even discard the changes introduced to <code class="docutils literal notranslate"><span class="pre">file2</span></code> and get the version you had in the previous commit? For that, you can use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git checkout path/to/file2
+</pre></div>
+</div>
+<p>Alternatively, you can use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ git restore path/to/file2
+</pre></div>
+</div>
+<p>Be careful with these commands. Once executed <em>you will lose all the changes you introduced before</em>. Use them only if you are absolutely sure that this is what you want.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="11_data_preparation.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Data Preparation </p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+        &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

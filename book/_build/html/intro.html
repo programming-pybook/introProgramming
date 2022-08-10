@@ -1,0 +1,583 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction to Programming in Python &#8212; Introduction to Programming in Python</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction" href="chapters/programs.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1 current">
+  <a class="reference internal" href="#">
+   Introduction to Programming in Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/programs.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/assignments.html">
+   Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/conditionals.html">
+   Conditionals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/beyond_functions.html">
+   Beyond Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/tuples.html">
+   Tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/sets.html">
+   Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/dictionaries.html">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/comprehensions_generators.html">
+   Comprehensions and Generators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/regular_expressions.html">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/classes_objects.html">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/classes_functions.html">
+   Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/classes_methods.html">
+   Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/inheritance.html">
+   Inheritance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/recursion.html">
+   Recursion [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/searching.html">
+   Searching [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/sorting.html">
+   Sorting [^intro]
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/numpy.html">
+   NumPy Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/pandas.html">
+   Pandas DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="chapters/vcs.html">
+   Version Control Systems &amp; Git
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/maveme/introProgramming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/maveme/introProgramming/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/maveme/introProgramming/edit/master/intro.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributors">
+   Contributors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#courses">
+   Courses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction to Programming in Python</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributors">
+   Contributors
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#courses">
+   Courses
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#table-of-contents">
+   Table of Contents
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction-to-programming-in-python">
+<h1>Introduction to Programming in Python<a class="headerlink" href="#introduction-to-programming-in-python" title="Permalink to this headline">¶</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>TODO: Missing introduction</p>
+</div>
+<div class="section" id="contributors">
+<h2>Contributors<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>TODO: Update: check order and missing contributors</p>
+</div>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.tue.nl/en/research/researchers/mark-van-den-brand/">Mark van den Brand</a> (TU/e)</p></li>
+<li><p><a class="reference external" href="https://maveme.github.io">Mauricio Verano Merino</a> (VU Amsterdam)</p></li>
+<li><p><a class="reference external" href="https://lmove.github.io">Lina María Ochoa</a> (TU/e)</p></li>
+<li><p><a class="reference external" href="https://www.win.tue.nl/~wstomv/">Tom Verhoeff</a> (TU/e)</p></li>
+</ul>
+<p>This book’s content has been developed during the last five years, and it has been used for teaching different introductory courses at Dutch universities for different academic programs such as Computer Science, Data Science, and Artificial Intelligence.</p>
+</div>
+<div class="section" id="courses">
+<h2>Courses<a class="headerlink" href="#courses" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Programming - JBI010 (joint bachelor Data Science, TU/Eindhoven &amp; Tilburg University)</p></li>
+<li><p>Introduction to Programming (PYTHON) -  X_401096 (bachelor Artificial Intelligence, VU Amsterdam)</p></li>
+<li><p>Software Development for Engineers - 2IS50, TU/Eindhoven</p></li>
+<li><p>Programming and Modelling - 2WH20, TU/Eindhoven</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="table-of-contents">
+<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Programming</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chapters/programs.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/assignments.html">Variables, expressions and assignments </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/conditionals.html">Conditionals </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/iteration.html">Iteration </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/functions.html">Functions </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/beyond_functions.html">Beyond Functions </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/strings.html">Strings </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/tuples.html">Tuples </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/lists.html">Lists </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/sets.html">Sets </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/dictionaries.html">Dictionaries </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/comprehensions_generators.html">Comprehensions and Generators </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/files.html">Files </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/regular_expressions.html">Regular Expressions </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/classes_objects.html">Classes and Objects </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/classes_functions.html">Classes and Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/classes_methods.html">Classes and Methods </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/inheritance.html">Inheritance </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/recursion.html">Recursion [^intro]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/searching.html">Searching [^intro]</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/sorting.html">Sorting [^intro]</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Data Science</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chapters/computational_thinking.html">Computational Thinking </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/eda.html">Exploratory Data Analysis (EDA) </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/data_preparation.html">Data Preparation </a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/numpy.html">NumPy Arrays</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/pandas.html">Pandas DataFrames</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapters/vcs.html">Version Control Systems &amp; Git</a></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="bibliography">
+<h2>Bibliography<a class="headerlink" href="#bibliography" title="Permalink to this headline">¶</a></h2>
+<div class="docutils container" id="id1">
+<dl class="citation">
+<dt class="label" id="id8"><span class="brackets">Sev16</span></dt>
+<dd><p>C.R. Severance. Python for everybody: exploring data using python 3. <em>Creative Commons</em>, 2016.</p>
+</dd>
+<dt class="label" id="id7"><span class="brackets">Dow15</span></dt>
+<dd><p>Allen B. Downey. <em>Think Python</em>. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.</p>
+</dd>
+<dt class="label" id="id9"><span class="brackets">McC04</span></dt>
+<dd><p>Steve McConnell. <em>Code Complete</em>. Microsoft Press, USA, 2004. ISBN 0735619670.</p>
+</dd>
+<dt class="label" id="id10"><span class="brackets">Bee07</span></dt>
+<dd><p>Karl Beecher. <em>Computational Thinking: A Beginner’s Guide to Problem-solving</em>. BCS Learning &amp; Development Limited, USA, 2007. ISBN 9781780173641.</p>
+</dd>
+<dt class="label" id="id11"><span class="brackets">Erw17</span></dt>
+<dd><p>Martin Erwig. <em>Once Upon an Algorithm: How Stories Explain Computing</em>. The MIT Press, 2017. ISBN 0262036630.</p>
+</dd>
+<dt class="label" id="id12"><span class="brackets">BB17</span></dt>
+<dd><p>Peter Bruce and Andrew Bruce. <em>Practical Statistics for Data Scientists</em>. O Reilly, 2017.</p>
+</dd>
+<dt class="label" id="id13"><span class="brackets">DBC10</span></dt>
+<dd><p>David M Diez, Christopher D Barr, and Mine Cetinkaya. <em>OpenIntro Statistics</em>. OpenIntro, Inc., 2010.</p>
+</dd>
+<dt class="label" id="id14"><span class="brackets">Van19</span></dt>
+<dd><p>Jake VanderPlas. <em>Python Data Science Handbook</em>. Volume 53. O Reilly, 2019.</p>
+</dd>
+<dt class="label" id="id15"><span class="brackets">Pyl99</span></dt>
+<dd><p>Dorian Pyle. <em>Data Preparation for Data Mining</em>. Morgan Kaufmann Publishers Inc., San Francisco, CA, USA, 1st edition, 1999. ISBN 1558605290.</p>
+</dd>
+<dt class="label" id="id17"><span class="brackets">CS14</span></dt>
+<dd><p>Scott Chacon and Ben Straub. <em>Pro git</em>. Springer Nature, 2014. URL: <a class="reference external" href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a>.</p>
+</dd>
+</dl>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>TODO: Missing license</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="chapters/programs.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+        &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

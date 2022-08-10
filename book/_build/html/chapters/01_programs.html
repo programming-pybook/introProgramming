@@ -1,0 +1,819 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction &#8212; Introduction to Programming in Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Variables, expressions and assignments" href="02_assignments.html" />
+    <link rel="prev" title="Introduction to Programming in Python" href="../intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction to Programming in Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_assignments.html">
+   Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_conditionals_iteration.html">
+   Conditionals and Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="10_dictionaries.html">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_tuples_sets.html">
+   Tuples and Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13_comprehensions_generators.html">
+   Comprehensions and Generators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_regular_expressions.html">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16_classes_objects.html">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17_classes_functions.html">
+   Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18_classes_methods.html">
+   Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="19_inheritance.html">
+   Inheritance
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_vcs.html">
+   Version Control Systems &amp; Git
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/01_programs.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/maveme/introProgramming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/maveme/introProgramming/issues/new?title=Issue%20on%20page%20%2Fchapters/01_programs.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/maveme/introProgramming/edit/master/chapters/01_programs.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/maveme/introProgramming.git/master/v2/gh/maveme/introProgramming/master?urlpath=lab/tree/chapters/01_programs.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-program-a-class-anchor-id-program-a">
+   What is a Program?
+   <a class="anchor" id="program">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreters-and-compilers-a-class-anchor-id-interpreters-compilers-a">
+   Interpreters and Compilers
+   <a class="anchor" id="interpreters-compilers">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-python-a-class-anchor-id-python-a">
+   Running Python
+   <a class="anchor" id="python">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#our-first-program-a-class-anchor-id-first-program-a">
+   Our First Program
+   <a class="anchor" id="first-program">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic-operators-a-class-anchor-id-arithmetic-operators-a">
+   Arithmetic Operators
+   <a class="anchor" id="arithmetic-operators">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-can-go-wrong-a-class-anchor-id-wrong-a">
+   What Can Go Wrong
+   <a class="anchor" id="wrong">
+   </a>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Introduction</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-program-a-class-anchor-id-program-a">
+   What is a Program?
+   <a class="anchor" id="program">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interpreters-and-compilers-a-class-anchor-id-interpreters-compilers-a">
+   Interpreters and Compilers
+   <a class="anchor" id="interpreters-compilers">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-python-a-class-anchor-id-python-a">
+   Running Python
+   <a class="anchor" id="python">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#our-first-program-a-class-anchor-id-first-program-a">
+   Our First Program
+   <a class="anchor" id="first-program">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#arithmetic-operators-a-class-anchor-id-arithmetic-operators-a">
+   Arithmetic Operators
+   <a class="anchor" id="arithmetic-operators">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-can-go-wrong-a-class-anchor-id-wrong-a">
+   What Can Go Wrong
+   <a class="anchor" id="wrong">
+   </a>
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="introduction">
+<h1>Introduction<a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<!-- ## Introduction to These Lecture Notes <a class="anchor" id="introduction"></a> -->
+<p>The content of these notes is organized to accompany the books <strong>Python for Everybody</strong> by Charles Severance<span id="id2">[<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Sev16</a>]</span> and <strong>Think Python (2nd edition)</strong> by <strong>Allen Downey</strong><span id="id3">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
+<p>The code fragments have mostly been taken from the books and adapted in some cases.</p>
+<p><strike>We will use <strong>Jupyter</strong> Notebooks in JBI010 (Programming for Data Science</strike></p>
+<p>You are encouraged to <strong>play along</strong> in this file as you read the book. The more you practice programming the better your skills will become!</p>
+<p>To evaluate a cell, select it by clicking on it, and then click the <em>Run</em> button below the code cell, or press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> within the cell.</p>
+<p><strike>If this is your first use of Jupyter, then take the <strong>User Interface Tour</strong>
+(see the Help menu).
+See <em>Help &gt; Notebook Help</em> for more details, such as how to format Markdown cells.</strike></p>
+<p><strike>To find out about <strong>keyboard shortcuts</strong> for Jupyter commands,
+see <em>Help &gt; Keyboard</em> Shortcuts.
+Pressing <code class="docutils literal notranslate"><span class="pre">Cmd</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">P</span></code> (MacOS) / <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">P</span></code> (Windows, Linux)
+shows an overview of all commands.</strike></p>
+<p>Occasionally, we have added a bit of extra information. This is marked as <strong>[EXTRA]</strong>.</p>
+<div class="section" id="what-is-a-program-a-class-anchor-id-program-a">
+<h2>What is a Program? <a class="anchor" id="program"></a><a class="headerlink" href="#what-is-a-program-a-class-anchor-id-program-a" title="Permalink to this headline">¶</a></h2>
+<p>A program is a sequence of instructions to perform a computation, such as finding a name in a database,
+drawing a picture, etc.</p>
+<p>Programming is more than writting code, it is first about understanding a problem, thinking about a solution, and then translating this into a programming language/code.</p>
+<p>Programming is part of <strong>Software Engineering</strong>. Software Engineering is the discipline of solving
+problems in a structured way by developing software.</p>
+<p>The details look different in different languages, but a few basic instructions appear in just
+about every language:</p>
+<p><strong>input:</strong> Data to be processed</p>
+<p><strong>output:</strong> Produced data</p>
+<p><strong>sequential execution:</strong> Perform operations one after another</p>
+<p><strong>conditional execution:</strong> Having alternative paths to perform operations</p>
+<p><strong>repeated execution:</strong> Repeat operations</p>
+<p><strong>reuse:</strong> Group and name operations for re-use and understandability</p>
+<p>There is a lot more to tell about Software Engineering but for the moment this is suffient. Actually, Software Engineering is an entire research field and most of the people educated at universities will become software engineers in the future careers.</p>
+</div>
+<div class="section" id="interpreters-and-compilers-a-class-anchor-id-interpreters-compilers-a">
+<h2>Interpreters and Compilers <a class="anchor" id="interpreters-compilers"></a><a class="headerlink" href="#interpreters-and-compilers-a-class-anchor-id-interpreters-compilers-a" title="Permalink to this headline">¶</a></h2>
+<p>Computers only understand machine language. This language is written exclusively in zeros and ones, so it looks somehow like this:</p>
+<p style="text-align: center;">
+0011101000111010  
+1011010100001010
+</p><p>It is cumbersome for programmers to write programs in such language. That is why we need translators that map <em>high-level laguages</em> like Python to machine language. A high-level language is a programming language designed to be used by humans in an intuitive way. These translators can be either <em>interpreters</em> or <em>compilers</em>.</p>
+<p><strong>interpreter:</strong> it reads the source code of a program written by a human, parses it and translates it on the fly. Python is an example of an interpreter.</p>
+<p><strong>compiler:</strong> it takes the whole program written in a high-level language and translates it into machine language. This translation is saved in an independent file that can be later used for execution. An executable file is usually labelled with the <em>.exe</em> or <em>.dll</em> extensions in Windows. There is no unique suffix for Mac or Linux. If you open a file like this in a text editor it will look somehow like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+äE�Lâ˜ËÙìJ�Hã{(HÖˇtæË*íJ�Î∑LâΩ˚ˇˇHãΩ˚ˇˇËíJ�ÉΩà˝ˇˇÖ0��HãΩ®˝ˇˇË,íJ�H«Ö˚ˇˇ����H∏����ˇˇˇˇHâÖ˚ˇˇ1ˆ1“LâÔË‘∂ˇˇHãÖ†˝ˇˇLãpXMÖˆttAˇunIã~@HÖˇt	Iâ~HË≤ëJ�Mã~ MÖˇt9IãF(L9¯t$HçX–HãxËHÖˇt	HâxËäëJ�HâÿI9ﬂu‚Iã~ ÎLâˇMâ~(ËpëJ�Iã~HÖˇt	Iâ~Ë^ëJ�Lâ˜ËVëJ�foÖ˚ˇˇHãÖ†˝ˇˇÛ@XfÔ…ÛHhHâ«HÉ«xfI~∆1ˆ1“ËûπˇˇMÖˆttAˇunIã~@HÖˇt	Iâ~HËëJ�Mã~ MÖˇt9IãF(L9¯t$HçX–HãxËHÖˇt	HâxËﬂêJ�HâÿI9ﬂu‚Iã~ ÎLâˇMâ~(Ë≈êJ�Iã~HÖˇt	Iâ~Ë≥êJ�Lâ˜Ë´êJ�Ë÷êJ�Lã≠x˝ˇˇHãù0˝ˇˇLãΩÄ˝ˇˇÈÅﬂˇˇHãµx˝ˇˇË ≈ˇˇH9¬LãΩ–¸ˇˇLã≠p˝ˇˇÜô���Hâ”Lçµ˚ˇˇfÑ�����HâÖ˚ˇˇHâù˚ˇˇIãEHâÖ ˚ˇˇH«Ö(˚ˇˇ����IãGI;Gt2Hãç(˚ˇˇHâHHãç ˚ˇˇHâHHãç˚ˇˇHãï˚ˇˇHâPHâIÉG Î
+
+
+</pre></div>
+</div>
+</div>
+<div class="section" id="running-python-a-class-anchor-id-python-a">
+<h2>Running Python <a class="anchor" id="python"></a><a class="headerlink" href="#running-python-a-class-anchor-id-python-a" title="Permalink to this headline">¶</a></h2>
+<p><strong>Installation of Python</strong></p>
+<p><strike>For the installation and testing of the installation see Assignment Week 1.</strike></p>
+<div class="attention admonition">
+<p class="admonition-title">TODO</p>
+<p>Include this to the book</p>
+</div>
+<p><strong>Running Python</strong></p>
+<p>The Python interpreter is a program that reads and executes Python code.</p>
+<p>The Python interpreter can be used to evaluate simple expressions as well.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Place the cursor in a cell, for instance the cell on the left, and click the <em>Run</em> button, or press <code class="docutils literal notranslate"><span class="pre">Shift+Enter</span></code>.</p>
+</div>
+</div>
+<p>How fast can you calculate the value of the expression in the cell below? And what is the value?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">+</span><span class="mi">2</span><span class="o">+</span><span class="mi">3</span><span class="o">+</span><span class="mi">4</span><span class="o">+</span><span class="mi">5</span><span class="o">+</span><span class="mi">6</span><span class="o">+</span><span class="mi">7</span><span class="o">+</span><span class="mi">8</span><span class="o">+</span><span class="mi">9</span><span class="o">+</span><span class="mi">10</span><span class="o">+</span><span class="mi">11</span><span class="o">+</span><span class="mi">12</span><span class="o">+</span><span class="mi">13</span><span class="o">+</span><span class="mi">14</span><span class="o">+</span><span class="mi">15</span><span class="o">+</span><span class="mi">16</span><span class="o">+</span><span class="mi">17</span><span class="o">+</span><span class="mi">18</span><span class="o">+</span><span class="mi">19</span><span class="o">+</span><span class="mi">20</span><span class="o">+</span><span class="mi">21</span><span class="o">+</span><span class="mi">22</span><span class="o">+</span><span class="mi">23</span><span class="o">+</span><span class="mi">24</span><span class="o">+</span><span class="mi">25</span><span class="o">+</span><span class="mi">26</span><span class="o">+</span><span class="mi">27</span><span class="o">+</span><span class="mi">28</span><span class="o">+</span><span class="mi">29</span><span class="o">+</span><span class="mi">30</span><span class="o">+</span><span class="mi">31</span><span class="o">+</span><span class="mi">32</span><span class="o">+</span><span class="mi">33</span><span class="o">+</span><span class="mi">34</span><span class="o">+</span><span class="mi">35</span><span class="o">+</span><span class="mi">36</span><span class="o">+</span><span class="mi">37</span><span class="o">+</span><span class="mi">38</span><span class="o">+</span><span class="mi">39</span><span class="o">+</span><span class="mi">40</span><span class="o">+</span><span class="mi">41</span><span class="o">+</span><span class="mi">42</span><span class="o">+</span><span class="mi">43</span><span class="o">+</span><span class="mi">44</span><span class="o">+</span><span class="mi">45</span><span class="o">+</span><span class="mi">46</span><span class="o">+</span><span class="mi">47</span><span class="o">+</span><span class="mi">48</span><span class="o">+</span><span class="mi">49</span><span class="o">+</span><span class="mi">50</span><span class="o">+</span><span class="mi">51</span><span class="o">+</span><span class="mi">52</span><span class="o">+</span><span class="mi">53</span><span class="o">+</span><span class="mi">54</span><span class="o">+</span><span class="mi">55</span><span class="o">+</span><span class="mi">56</span><span class="o">+</span><span class="mi">57</span><span class="o">+</span><span class="mi">58</span><span class="o">+</span><span class="mi">59</span><span class="o">+</span><span class="mi">60</span><span class="o">+</span><span class="mi">61</span><span class="o">+</span><span class="mi">62</span><span class="o">+</span><span class="mi">63</span><span class="o">+</span><span class="mi">64</span><span class="o">+</span><span class="mi">65</span><span class="o">+</span><span class="mi">66</span><span class="o">+</span><span class="mi">67</span><span class="o">+</span><span class="mi">68</span><span class="o">+</span><span class="mi">69</span><span class="o">+</span><span class="mi">70</span><span class="o">+</span><span class="mi">71</span><span class="o">+</span><span class="mi">72</span><span class="o">+</span><span class="mi">73</span><span class="o">+</span><span class="mi">74</span><span class="o">+</span><span class="mi">75</span><span class="o">+</span><span class="mi">76</span><span class="o">+</span><span class="mi">77</span><span class="o">+</span><span class="mi">78</span><span class="o">+</span><span class="mi">79</span><span class="o">+</span><span class="mi">80</span><span class="o">+</span><span class="mi">81</span><span class="o">+</span><span class="mi">82</span><span class="o">+</span><span class="mi">83</span><span class="o">+</span><span class="mi">84</span><span class="o">+</span><span class="mi">85</span><span class="o">+</span><span class="mi">86</span><span class="o">+</span><span class="mi">87</span><span class="o">+</span><span class="mi">88</span><span class="o">+</span><span class="mi">89</span><span class="o">+</span><span class="mi">90</span><span class="o">+</span><span class="mi">91</span><span class="o">+</span><span class="mi">92</span><span class="o">+</span><span class="mi">93</span><span class="o">+</span><span class="mi">94</span><span class="o">+</span><span class="mi">95</span><span class="o">+</span><span class="mi">96</span><span class="o">+</span><span class="mi">97</span><span class="o">+</span><span class="mi">98</span><span class="o">+</span><span class="mi">99</span><span class="o">+</span><span class="mi">100</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5050
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or how about?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">100</span> <span class="o">*</span> <span class="mi">101</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5050.0
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="our-first-program-a-class-anchor-id-first-program-a">
+<h2>Our First Program <a class="anchor" id="first-program"></a><a class="headerlink" href="#our-first-program-a-class-anchor-id-first-program-a" title="Permalink to this headline">¶</a></h2>
+<p><strong>A program is more than just a list of instructions.</strong></p>
+<p>A program is a list of <em>instructions</em> or, sometimes also called <em>statements</em> to instruct the computer how to perform a calculation.</p>
+<p>The first statement you normally write is “Hello World!”, however I took the liberty to change this boring first program a bit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello Data Scientists!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hello Data Scientists!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>In Jupyter notebooks, you do not need to use <code class="docutils literal notranslate"><span class="pre">print</span></code> to see the value of an expression (when it appears at the end of the cell).
+In the remainder, we will often omit <code class="docutils literal notranslate"><span class="pre">print</span></code> when playing with expressions (or variables).</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Hello Data Scientists!&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Hello Data Scientists!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Can you print the text “Hello Programming!”?</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="arithmetic-operators-a-class-anchor-id-arithmetic-operators-a">
+<h2>Arithmetic Operators <a class="anchor" id="arithmetic-operators"></a><a class="headerlink" href="#arithmetic-operators-a-class-anchor-id-arithmetic-operators-a" title="Permalink to this headline">¶</a></h2>
+<p>The fact that Python interprets its programs allows us to immediately execute Python statements/expressions, such as the print statement for “Hello Data Scientists!”.</p>
+<p>The arithmetic operators <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code> perform addition, subtraction, and multiplication, as demonstrated in the following cells.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">40</span> <span class="o">+</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">43</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">6</span> <span class="o">*</span> <span class="mi">7</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span> <span class="o">*</span> <span class="p">(</span><span class="mi">100</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10100
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Can you add 40 to 25, then multiply it by 2, and finally substracting 5?</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>More arithmetic operators</strong><br />
+The operator <code class="docutils literal notranslate"><span class="pre">/</span></code> performs a division and the operator <code class="docutils literal notranslate"><span class="pre">**</span></code> is the “to the power” operator.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">84</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span> <span class="o">*</span> <span class="p">(</span><span class="mi">100</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5050.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">6</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">6</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42
+</pre></div>
+</div>
+</div>
+</div>
+<p>Beware of the priorities, use brackets when in doubt!</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">100</span> <span class="o">*</span> <span class="mi">100</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">/</span> <span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10000.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Let’s compute the area of a circle of radius <span class="math notranslate nohighlight">\(r = 10\)</span>. Remember that the area of a circle is computed as <span class="math notranslate nohighlight">\(a = \pi r^2\)</span>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="what-can-go-wrong-a-class-anchor-id-wrong-a">
+<h2>What Can Go Wrong <a class="anchor" id="wrong"></a><a class="headerlink" href="#what-can-go-wrong-a-class-anchor-id-wrong-a" title="Permalink to this headline">¶</a></h2>
+<p>While writing your program you will introduce errors, and it is completely normal. However, it will be easier to fix them if you know the three types of errors that you will find.</p>
+<p><strong>syntax errors:</strong> “Syntax” refers to the structure of a program and the rules about that structure. For example, in English the construct “She all night” has a syntax error because there is no verb that completes the sentence. To fix this issue you should add a verb like “She studies all night”. Now, if you run the following cell you will get a syntax error in Python.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello Data Scientists!&#39;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_46714/1147586275.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello Data Scientists!&#39;</span>
+                                  <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unexpected EOF while parsing
+</pre></div>
+</div>
+</div>
+</div>
+<p>This happens because we forgot to end the line with the closing parenthesis ‘)’.</p>
+<p><strong>Runtime errors:</strong> these errors do not appear until the program has started running. Can you think of a runtime error?</p>
+<p>What happens if I execute the following instructions?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">value</span> <span class="o">=</span> <span class="mi">66</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">value</span> <span class="o">/</span> <span class="mi">0</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Logic errors:</strong> they appear when there is an invalid order in your program. For instance, in English the construct “She sleeps, goes to bed, and takes a shower” has logic errors. It would make more sense if we say “She takes a shower, goes to bed, and sleeps”.</p>
+<p><strong>Semantic errors:</strong> “Semantic” refers to meaning. These errors appear when the program does not do what it is supposed to do. If there is a semantic error in your program, it will run without generating error
+messages, but it will not do the right thing. It will do something else. Specifically, it will do what you told it to do. For example, you compute the addition between two numbers but the program was supposed to compute the difference.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Semantic errors are often related to not fully understanding the problem.</p>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 1 of the books Python for Everybody by <span id="id4">Severance [<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Sev16</a>]</span> and Think Python by <span id="id5">Downey [<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="../intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Introduction to Programming in Python</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="02_assignments.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Variables, expressions and assignments </p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+        &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,1201 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dictionaries &#8212; Introduction to Programming in Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Tuples and Sets" href="12_tuples_sets.html" />
+    <link rel="prev" title="Lists" href="09_lists.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction to Programming in Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="01_programs.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="02_assignments.html">
+   Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="03_conditionals_iteration.html">
+   Conditionals and Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="05_functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="06_strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="08_files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="09_lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="12_tuples_sets.html">
+   Tuples and Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="13_comprehensions_generators.html">
+   Comprehensions and Generators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="14_regular_expressions.html">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="16_classes_objects.html">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="17_classes_functions.html">
+   Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="18_classes_methods.html">
+   Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="19_inheritance.html">
+   Inheritance
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="04_computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="07_eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="11_data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="15_vcs.html">
+   Version Control Systems &amp; Git
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/10_dictionaries.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/maveme/introProgramming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/maveme/introProgramming/issues/new?title=Issue%20on%20page%20%2Fchapters/10_dictionaries.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/maveme/introProgramming/edit/master/chapters/10_dictionaries.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/maveme/introProgramming.git/master/v2/gh/maveme/introProgramming/master?urlpath=lab/tree/chapters/10_dictionaries.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-dictionary-is-a-mapping">
+   A Dictionary is a Mapping
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionary-as-a-set-of-counters">
+   Dictionary as a Set of Counters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries-and-files">
+   Dictionaries and Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries-and-lists">
+   Dictionaries and Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#looping-and-dictionaries">
+   Looping and Dictionaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reverse-lookup">
+   Reverse Lookup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#global-variables">
+   Global Variables
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Dictionaries </h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-dictionary-is-a-mapping">
+   A Dictionary is a Mapping
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionary-as-a-set-of-counters">
+   Dictionary as a Set of Counters
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries-and-files">
+   Dictionaries and Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dictionaries-and-lists">
+   Dictionaries and Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#looping-and-dictionaries">
+   Looping and Dictionaries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reverse-lookup">
+   Reverse Lookup
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#global-variables">
+   Global Variables
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="dictionaries">
+<h1>Dictionaries <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="a-dictionary-is-a-mapping">
+<h2>A Dictionary is a Mapping<a class="headerlink" href="#a-dictionary-is-a-mapping" title="Permalink to this headline">¶</a></h2>
+<p>We know the concept of a dictionary already since our childhood, a dictionary is a list of (alphabet) list of words with, among others, their meaning or translation.</p>
+<p>The <strong>dictionary</strong> data type in Python is similar to a list, but quite different from
+the dictionaries we know from daily life.</p>
+<p>In a list, the indices have to be integers; in a dictionary they can be (almost) any type.</p>
+<p>A dictionary contains a collection of indices, which are called <strong>keys</strong>, and a collection of
+<strong>values</strong>, every key is associated with a single value.</p>
+<p>The association of a key and a value is called a <strong>key-value pair</strong> or sometimes an <strong>item</strong>.</p>
+<p>In mathematical language, a dictionary represents a mapping from keys to values, so you
+can also say that each key “maps to” a value.</p>
+<p>Consider a dictionary from English to Dutch words, both the keys and values are strings.</p>
+<p>The function <code class="docutils literal notranslate"><span class="pre">dict</span></code> creates a new dictionary with no items.</p>
+<p>Because <code class="docutils literal notranslate"><span class="pre">dict</span></code> is the name of a built-in function, you should avoid using it as a variable name.</p>
+<p>If you want to use a dictionary as argument or result of a function together with a type hint you have to add the following line to your code:</p>
+<p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">typing</span> <span class="pre">import</span> <span class="pre">Dict</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eng2dut</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The curly-brackets, <code class="docutils literal notranslate"><span class="pre">{}</span></code>, represent an empty dictionary.</p>
+<p>To add items to the dictionary, you can use square brackets.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;een&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have now created one entry with the key <code class="docutils literal notranslate"><span class="pre">'one'</span></code> and the value <code class="docutils literal notranslate"><span class="pre">'een'</span></code>.</p>
+<p>If we print our dictionary we will see one key-value pair, where the key and value are separated by a colon.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">eng2dut</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;one&#39;: &#39;een&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can also create a dictionary as follows.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="s1">&#39;een&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="s1">&#39;twee&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="s1">&#39;drie&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">:</span> <span class="s2">&quot;vier&quot;</span><span class="p">}</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eng2dut</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;one&#39;: &#39;een&#39;, &#39;two&#39;: &#39;twee&#39;, &#39;three&#39;: &#39;drie&#39;, &#39;four&#39;: &#39;vier&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create a dictionary <i>capitals</i> that maps countries to capital cities. Use the country as key of the pair. Include the following: The Netherlands - Amsterdam, Brazil - Brasilia, Australia - Canberra, Cuba - Havana, Kenya - Nairobi, Canada - Ottawa, Japan - Tokyo.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can add via the <em>key</em> index a <em>value</em> to the dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span><span class="p">[</span><span class="s1">&#39;five&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;vijf&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">eng2dut</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;one&#39;: &#39;een&#39;, &#39;two&#39;: &#39;twee&#39;, &#39;three&#39;: &#39;drie&#39;, &#39;four&#39;: &#39;vier&#39;, &#39;five&#39;: &#39;vijf&#39;}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Add two new pairs to the dictionary <code class="docutils literal notranslate"><span class="pre">capitals</span></code>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When the dictionary is printed the order of the key-value pairs may have changed, as we saw.</p>
+<p>The order of the items in the dictionary is unpredictable.</p>
+<p>The order is no issue, because the retrieval of values is done via the keys and <strong>not</strong> via indices.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span><span class="p">[</span><span class="s1">&#39;two&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;twee&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you try to retrieve a value for a non-existing key, you will get a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> exception.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span><span class="p">[</span><span class="s1">&#39;six&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">rm</span><span class="o">/</span><span class="n">jpz9s5s53h1gyb3l6pg_h57r0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_46815</span><span class="o">/</span><span class="mf">1093986632.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">eng2dut</span><span class="p">[</span><span class="s1">&#39;six&#39;</span><span class="p">]</span>
+
+<span class="ne">KeyError</span>: &#39;six&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function <code class="docutils literal notranslate"><span class="pre">len</span></code> will give you the number of key-value pairs in the dictionary.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">eng2dut</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> operator also works on dictionaries.</p>
+<p>It tells you whether something is used as a key.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;one&#39;</span> <span class="ow">in</span> <span class="n">eng2dut</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;een&#39;</span> <span class="ow">in</span> <span class="n">eng2dut</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you want to check whether a <strong>value</strong> is stored in the dictionary, you have first to retrieve all values through the <code class="docutils literal notranslate"><span class="pre">values()</span></code> method.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dutch_words</span> <span class="o">=</span> <span class="n">eng2dut</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">dutch_words</span><span class="p">)</span>
+<span class="s1">&#39;twee&#39;</span> <span class="ow">in</span> <span class="n">dutch_words</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">in</span></code> uses a different algorithm to find the elements in a list or dictionary.</p>
+<p>In a list, it uses a linear search algorithm: the longer the list gets the more time it will cost.</p>
+<p>In a dictionary, a <strong>hash table</strong> is used: the <code class="docutils literal notranslate"><span class="pre">in</span></code> operator takes about the same amount of time no matter how many items are in the dictionary. This property makes dictionaries a very powerful data structure when storing large amounts of data.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Check if the <code class="docutils literal notranslate"><span class="pre">capitals</span></code> dictionary contains the key <i>Mexico</i>.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionary-as-a-set-of-counters">
+<h2>Dictionary as a Set of Counters<a class="headerlink" href="#dictionary-as-a-set-of-counters" title="Permalink to this headline">¶</a></h2>
+<p>Suppose you are given a string and you want to count how many times each letter appears, the so-called letter frequency.</p>
+<p>It is not hard to imagine that this type of exercise is useful, but you will have to do more often in the future, think of the frequency of words in a text, names in an archive, purchases per customer, etc.</p>
+<p>We are computing a <strong>histogram</strong>, which is a statistical term for a set of frequencies.</p>
+<p>There are multiple ways of doing this:</p>
+<ol class="simple">
+<li><p>You could create 26 variables, one for each letter of the alphabet.
+Then you could traverse
+the string and, for each character, increment the corresponding counter, probably
+using a chained conditional.
+It is not hard to imagine that this does not work for arbitrary words in a text.</p></li>
+</ol>
+<ol class="simple">
+<li><p>You could create a list with 26 elements.
+Then you could convert each character to
+a number (using the built-in function <code class="docutils literal notranslate"><span class="pre">ord</span></code>).
+Again, this does not work for arbitrary names in a text, because what is an (efficient) way to convert a word into an index.</p></li>
+</ol>
+<ol class="simple">
+<li><p>You could create a dictionary with characters as keys and counters as the corresponding
+values. The first time you see a character, you would add an item to the dictionary.
+After that you would increment the value of an existing item.
+This is actually a very general and reusable solution.</p></li>
+</ol>
+<p>This is, by the way, a typical example where you have to think carefully before choosing your data representation.</p>
+<p>A simple, but wrong, choice may work for a small set of elements, but may get complicated or expensive if the data
+becomes more bulky.</p>
+<p>An <strong>implementation</strong> is a way of performing a computation; some implementations are more efficient than others.</p>
+<p>For example, an advantage of the dictionary implementation is that we
+do not have to know ahead of time which letters appear in the string and we only have to
+make room for the letters that do appear.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">histogram</span><span class="p">(</span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Creates a dictionary for counting the number of letters in a word</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">dct</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">ch</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">:</span>
+            <span class="n">dct</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">dct</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">dct</span>
+
+<span class="n">letter_hist</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="s1">&#39;datascience&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">dict</span></code> data type offers a number of built in methods, one of them is <code class="docutils literal notranslate"><span class="pre">get</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">get</span></code> method takes a <em>key</em> as first argument and a <em>default</em> value as second.</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">key</span></code> is not found in the dictionary, an <em>item</em> is created with the first argument is <code class="docutils literal notranslate"><span class="pre">key</span></code> and the second argument as <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">histogram</span><span class="p">(</span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Creates a dictionary for counting the number of letters in a word</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">dct</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
+        <span class="n">dct</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">dct</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">dct</span>
+
+<span class="n">letter_hist</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="s1">&#39;computerscience&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Now we can use some useful Python libraries to plot our histogram.</p>
+</div>
+</div>
+<p>In this case we use <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> libraries.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the relevant libraries, see </span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="o">%</span><span class="k">matplotlib</span> inline
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;index&quot;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Call the <code class="docutils literal notranslate"><span class="pre">histogram</span></code> function with different inputs and print it to see how the histogram changes from case to case.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionaries-and-files">
+<h2>Dictionaries and Files<a class="headerlink" href="#dictionaries-and-files" title="Permalink to this headline">¶</a></h2>
+<p>Now we want to count the occurrence of words in a file.</p>
+<p>For this task we will consider a piece of text taken from <em>Romeo and Julliet</em> by William Shakespeare. This text has been altered in the sense that it does not include any punctuation.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+    <span class="n">fhand</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/romeo.txt&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;File cannot be opened:&#39;</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+    <span class="n">exit</span><span class="p">()</span>
+    
+<span class="n">romeo_dict</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fhand</span><span class="p">:</span>
+    <span class="n">words</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">romeo_dict</span><span class="p">:</span>
+            <span class="n">romeo_dict</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">romeo_dict</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            
+<span class="nb">print</span><span class="p">(</span><span class="n">romeo_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the previous code we use two <code class="docutils literal notranslate"><span class="pre">for</span></code> loops. The first one iterates over the lines of the document while the second one iterates over the words of the current line in the first loop.</p>
+<p>This pattern is quite common and is known as <strong>nested loops</strong>. The first loop is called the <strong>outer loop</strong> while the second one is named the <strong>inner loop</strong>.</p>
+<p>In addition we have use the abbreviation of <code class="docutils literal notranslate"><span class="pre">counts[word]</span> <span class="pre">=</span> <span class="pre">counts[word]</span> <span class="pre">+</span> <span class="pre">1</span></code> as <code class="docutils literal notranslate"><span class="pre">counts[word]</span> <span class="pre">+=</span> <span class="pre">1</span></code>.</p>
+<p>This abbreviation is also used with <code class="docutils literal notranslate"><span class="pre">-=</span></code>, <code class="docutils literal notranslate"><span class="pre">*=</span></code>, and <code class="docutils literal notranslate"><span class="pre">/=</span></code>.</p>
+<p>Now, let us consider a piece of text that does have punctuation marks and capital letters.</p>
+<p>In this regards, cases such as ‘soft’ and ‘soft!’, and ‘Who’ and ‘who’ will be considered as different words.</p>
+<p>To solve both problems we can rely on the <code class="docutils literal notranslate"><span class="pre">lower</span></code> and <code class="docutils literal notranslate"><span class="pre">translate</span></code> string methods.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">translate</span></code> method receives a translation tables as input. To create this table we rely on the <code class="docutils literal notranslate"><span class="pre">maketrans</span></code> function, which get three parameters: characters to be replaced, characters to replace previous ones, and characters to delete. For our challenge we only need to define the third parameter.</p>
+<p>We will also use the string constant <code class="docutils literal notranslate"><span class="pre">punctuation</span></code>, which defines the list of punctuation marks. We will need to import the module <code class="docutils literal notranslate"><span class="pre">string</span></code> to have access to this value.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">fhand</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/romeo-full.txt&#39;</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;File cannot be opened:&#39;</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
+    <span class="n">exit</span><span class="p">()</span>
+    
+<span class="n">romeof_dict</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fhand</span><span class="p">:</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
+    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="n">words</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">romeof_dict</span><span class="p">:</span>
+            <span class="n">romeof_dict</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">romeof_dict</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+            
+<span class="nb">print</span><span class="p">(</span><span class="n">romeof_dict</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionaries-and-lists">
+<h2>Dictionaries and Lists<a class="headerlink" href="#dictionaries-and-lists" title="Permalink to this headline">¶</a></h2>
+<p>Lists can be used as values in a dictionary.</p>
+<p>Suppose you want to create a dictionary where the frequency of the letters is the key and the value is a list of letters with that frequency.</p>
+<p>In fact, you invert the dictionary, creating a dictionary that maps frequencies to letters.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">invert_dict</span><span class="p">(</span><span class="n">dct</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
+    <span class="n">inv_dct</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">:</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">val</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">inv_dct</span><span class="p">:</span>
+            <span class="n">inv_dct</span><span class="p">[</span><span class="n">val</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">inv_dct</span><span class="p">[</span><span class="n">val</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">inv_dct</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each time through the loop, <code class="docutils literal notranslate"><span class="pre">key</span></code> gets a key from <code class="docutils literal notranslate"><span class="pre">dct</span></code> and <code class="docutils literal notranslate"><span class="pre">val</span></code> gets the corresponding value.</p>
+<p>If <code class="docutils literal notranslate"><span class="pre">val</span></code> is not in <code class="docutils literal notranslate"><span class="pre">inv_dct</span></code>, that means we haven’t seen it before, so we create a new item and
+initialize it with a <strong>singleton</strong> (a list that contains a single element).</p>
+<p>Otherwise we have seen this value before, so we append the corresponding key to the list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_dct</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">invert_dict</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">)</span>
+<span class="c1">#print(letter_hist)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">new_dct</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Lists can be values in a dictionary, as this example shows, but they cannot be keys.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
+<span class="n">d</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<span class="n">d</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;oops&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The keys must be <strong>hashable</strong>, or to put it more correctly, must be
+usable as argument for a hash function.</p>
+<p>A <strong>hash</strong> is a function that takes a value (of almost any kind) and returns an integer.</p>
+<p>Dictionaries use these integers, called <strong>hash values</strong>, to store and look up key-value pairs.</p>
+<p>A value must not be mutable in order to be usable for hashing, lists are mutable, so not suited for hashing.</p>
+<p>When you create a key-value pair, Python hashes the key
+and stores it in the corresponding location.</p>
+<p>If you modify the key and then hash it again, it
+would go to a different location.</p>
+<p>In that case you might have two entries for the same key,
+or you might not be able to find a key.</p>
+<p>So, dictionaries themselves are not suitable for hashing, because they are mutable as well.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">invert_dict</span></code> function to invert the <code class="docutils literal notranslate"><span class="pre">romeo_dict</span></code> dictionary.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="looping-and-dictionaries">
+<h2>Looping and Dictionaries<a class="headerlink" href="#looping-and-dictionaries" title="Permalink to this headline">¶</a></h2>
+<p>If you use a dictionary in a <code class="docutils literal notranslate"><span class="pre">for</span></code> statements, the keys are used for traversing.</p>
+<p>Consider the following <code class="docutils literal notranslate"><span class="pre">print_histogram</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_histogram</span><span class="p">(</span><span class="n">hst</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;prints the dictionary</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">hst</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">hst</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        
+<span class="n">print_histogram</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The keys are printed in an unsorted order.</p>
+<p>The built-in function <code class="docutils literal notranslate"><span class="pre">sorted</span></code> can be used if you want the keys to be sorted.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_histogram</span><span class="p">(</span><span class="n">hst</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;prints the dictionary in a sorted manner</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">hst</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">hst</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+        
+<span class="n">print_histogram</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Sort the keys of the <i>capitals</i> dictionary, and print each pair.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="reverse-lookup">
+<h2>Reverse Lookup<a class="headerlink" href="#reverse-lookup" title="Permalink to this headline">¶</a></h2>
+<p>Given a key it is easy to find the corresponding value, this is a so called <strong>lookup</strong>.</p>
+<p>Suppose you have a value and you want to find the corresponding key.</p>
+<p>There are two challenges:</p>
+<ol class="simple">
+<li><p>A value may appear multiple times in the dictionary, keys are unique, but values not.
+Consider the translation of the English words: the noun “lettuce” and the verb “beat”; the Dutch word in both cases is “sla”.
+Depending on the application, you might be able to pick one, or you create a list that contains all relevant keys.</p></li>
+<li><p>There is no simple syntax to do a reverse lookup; you have to search explicitly.</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse_lookup</span><span class="p">(</span><span class="n">dct</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">val</span> <span class="p">:</span> <span class="nb">any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">any</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">key</span>
+    <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse_lookup</span><span class="p">(</span><span class="n">dct</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">val</span> <span class="p">:</span> <span class="nb">any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]:</span>
+    <span class="n">rlist</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="n">rlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">rlist</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This function is again a typical application of the search pattern, however if the value is not found,
+we <strong>raise</strong> an exception.</p>
+<p>The <strong>raise statement</strong> raises an exception, in our case it causes a <code class="docutils literal notranslate"><span class="pre">LookupError</span></code>, this is a built-in
+exception to indicate that a lookup operation failed.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">his</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="s1">&#39;programming&#39;</span><span class="p">)</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">reverse_lookup</span><span class="p">(</span><span class="n">his</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">key</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">his</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="s1">&#39;programming&#39;</span><span class="p">)</span>
+<span class="n">key</span> <span class="o">=</span> <span class="n">reverse_lookup</span><span class="p">(</span><span class="n">his</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">key</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The effect when you raise an exception is the same as when Python raises one: it prints a
+traceback and an error message.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">raise</span></code> statement can take a detailed error message as an optional argument.</p>
+<div class="highlight-Python notranslate"><div class="highlight"><pre><span></span><span class="k">raise</span> <span class="ne">LookupError</span><span class="p">(</span><span class="s1">&#39;value does not appear in the dictionary&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Beware that the reverse lookup is not efficient, in case of a large dictionary your program may become slow.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Use the <code class="docutils literal notranslate"><span class="pre">reverse_lookup</span></code> function to look for existing and non-existing keys in the <code class="docutils literal notranslate"><span class="pre">capitals</span></code> dictionary.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="global-variables">
+<h2>Global Variables<a class="headerlink" href="#global-variables" title="Permalink to this headline">¶</a></h2>
+<p>Variables that are created outside functions belong to the special frame called <strong><strong>main</strong></strong> and they are called <strong>global</strong>.</p>
+<p>They can be accessed from any function.</p>
+<p>Unlike local variables, which disappear when their
+function ends, global variables persist from one function call to the next.</p>
+<p>It is common to use global variables for <strong>flags</strong>; that is, boolean variables that indicate (“flag”) whether a condition is true.</p>
+<p>For example, some programs use a flag named verbose to
+control the level of detail in the output.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">verbose</span> <span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="k">def</span> <span class="nf">example1</span><span class="p">():</span>
+    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Running example1&#39;</span><span class="p">)</span>
+        
+<span class="n">example1</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can not just reassign a global variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">been_called</span> <span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">example2</span><span class="p">():</span>
+    <span class="n">been_called</span> <span class="o">=</span> <span class="kc">True</span>       <span class="c1"># WRONG</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
+<span class="n">example2</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>What went wrong?</p>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">been_called</span></code> did not change, because <code class="docutils literal notranslate"><span class="pre">been_called</span></code> in the function <code class="docutils literal notranslate"><span class="pre">example2</span></code> is considered a local variable.</p>
+<p>The local variable goes
+away when the function ends, and has no effect on the global variable.</p>
+<p>To reassign a global variable inside a function you have to declare the global variable before
+you use it.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">been_called</span> <span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+
+<span class="k">def</span> <span class="nf">example2</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">been_called</span>
+    <span class="n">been_called</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
+<span class="n">example2</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The <strong>global statement</strong> tells the interpreter: “In this function, when I say
+<code class="docutils literal notranslate"><span class="pre">been_called</span></code>, I mean the global variable; do not create a local one.”</p>
+<p>Another example is presented in the following cell.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">example3</span><span class="p">():</span> 
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>       <span class="c1"># WRONG</span>
+
+<span class="n">example3</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">def</span> <span class="nf">example3</span><span class="p">():</span> 
+    <span class="k">global</span> <span class="n">count</span>
+    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    
+<span class="n">example3</span><span class="p">()</span>
+<span class="n">example3</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>How about the following, is this correct?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">known</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">example5</span><span class="p">():</span>
+    <span class="n">known</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    
+<span class="n">example5</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">known</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">known</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">def</span> <span class="nf">example5</span><span class="p">():</span>
+    <span class="n">known</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+    
+<span class="n">example5</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">known</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">known</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">def</span> <span class="nf">example5</span><span class="p">():</span>
+<span class="c1">#    known = [&#39;b&#39;]</span>
+    <span class="n">known</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+    
+<span class="n">example5</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">known</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>When working with variables that are mutable, you are allowed to change the values in the dictionary.</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Global variables can be useful, but if you have a lot of them, and you modify them frequently, they can make your programs hard to debug.</p>
+</div>
+</div>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapter 9 of <span id="id2">[<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Sev16</a>]</span> and Chapter 11 of <span id="id3">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="09_lists.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Lists </p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="12_tuples_sets.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Tuples and Sets </p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+        &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

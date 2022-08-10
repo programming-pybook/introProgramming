@@ -1,0 +1,1473 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes and Functions &#8212; Introduction to Programming in Python</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Classes and Methods" href="classes_methods.html" />
+    <link rel="prev" title="Classes and Objects" href="classes_objects.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-HLQKTP6KEQ"></script>
+<script>
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){ dataLayer.push(arguments); }
+                    gtag('js', new Date());
+                    gtag('config', 'G-HLQKTP6KEQ');
+                </script>
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Introduction to Programming in Python</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction to Programming in Python
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Programming
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="programs.html">
+   Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="assignments.html">
+   Variables, expressions and assignments
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="conditionals.html">
+   Conditionals
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="iteration.html">
+   Iteration
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="beyond_functions.html">
+   Beyond Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tuples.html">
+   Tuples
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="lists.html">
+   Lists
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sets.html">
+   Sets
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="dictionaries.html">
+   Dictionaries
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="comprehensions_generators.html">
+   Comprehensions and Generators
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="regular_expressions.html">
+   Regular Expressions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_objects.html">
+   Classes and Objects
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Classes and Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classes_methods.html">
+   Classes and Methods
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="inheritance.html">
+   Inheritance
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="recursion.html">
+   Recursion [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="searching.html">
+   Searching [^intro]
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sorting.html">
+   Sorting [^intro]
+  </a>
+ </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Data Science
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="computational_thinking.html">
+   Computational Thinking
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="eda.html">
+   Exploratory Data Analysis (EDA)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_preparation.html">
+   Data Preparation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="numpy.html">
+   NumPy Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pandas.html">
+   Pandas DataFrames
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="vcs.html">
+   Version Control Systems &amp; Git
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/chapters/classes_functions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/maveme/introProgramming"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/maveme/introProgramming/issues/new?title=Issue%20on%20page%20%2Fchapters/classes_functions.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/maveme/introProgramming/edit/master/chapters/classes_functions.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/maveme/introProgramming.git/master/v2/gh/maveme/introProgramming/master?urlpath=lab/tree/chapters/classes_functions.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time">
+   Time
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pure-functions">
+   Pure Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modifiers">
+   Modifiers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prototyping-vs-planning">
+   Prototyping vs. Planning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing">
+   Testing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testing-of-functions">
+     Testing of functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manual-testing">
+     Manual testing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-on-function-testing">
+     More on function testing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#automated-testing-via-docstring">
+     Automated testing via docstring
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#invariants">
+     Invariants
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Classes and Functions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#time">
+   Time
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pure-functions">
+   Pure Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modifiers">
+   Modifiers
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#prototyping-vs-planning">
+   Prototyping vs. Planning
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing">
+   Testing
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#testing-of-functions">
+     Testing of functions
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#manual-testing">
+     Manual testing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-on-function-testing">
+     More on function testing
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#automated-testing-via-docstring">
+     Automated testing via docstring
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#invariants">
+     Invariants
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="classes-and-functions">
+<h1>Classes and Functions<a class="headerlink" href="#classes-and-functions" title="Permalink to this headline">¶</a></h1>
+<p>This Jupyter Notebook is based on Chapter 16 of <span id="id1">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
+<p><em>(c) 2020, Mark van den Brand, Eindhoven University of Technology</em></p>
+<p>The next step is to develop functions that manipulate the programmer-defined types. We will see how these types can be passed as arguments to functions and be returned as results.</p>
+<p>In this chapter a functional programming style will be used.</p>
+<div class="section" id="time">
+<h2>Time<a class="headerlink" href="#time" title="Permalink to this headline">¶</a></h2>
+<p>We will start with introducing another programmer-defined type: the class <code class="docutils literal notranslate"><span class="pre">Time</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Represents the time of day.</span>
+<span class="sd">    </span>
+<span class="sd">    attributes: hour, minute, second</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can now create <code class="docutils literal notranslate"><span class="pre">Time</span></code> objects and assign values to the attributes: <code class="docutils literal notranslate"><span class="pre">hours</span></code>, <code class="docutils literal notranslate"><span class="pre">minutes</span></code>, and <code class="docutils literal notranslate"><span class="pre">seconds</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
+<span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">59</span>
+<span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">33</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the next cell, a new way of formatting strings is shown. See <a class="reference external" href="https://pyformat.info">https://pyformat.info</a> for more information.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; prints a Time object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span><span class="n">time</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span><span class="n">time</span><span class="o">.</span><span class="n">second</span><span class="p">))</span>
+
+<span class="n">print_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(11:59:33)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_after</span><span class="p">(</span><span class="n">time1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">time2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; gets 2 Time objects as argument and </span>
+<span class="sd">        returns a boolean to indicate whether time1 is greater than time2</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">time1</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;</span> <span class="n">time2</span><span class="o">.</span><span class="n">hour</span> <span class="ow">or</span> <span class="n">time1</span><span class="o">.</span><span class="n">minute</span> <span class="o">&gt;</span> <span class="n">time2</span><span class="o">.</span><span class="n">minute</span> <span class="ow">or</span> <span class="n">time1</span><span class="o">.</span><span class="n">second</span> <span class="o">&gt;</span> <span class="n">time2</span><span class="o">.</span><span class="n">second</span>
+
+<span class="n">new_time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
+<span class="n">new_time</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">11</span>
+<span class="n">new_time</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">59</span>
+<span class="n">new_time</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">31</span>
+
+<span class="n">is_after</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">new_time</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create the function <code class="docutils literal notranslate"><span class="pre">print_time_meridiem(time</span> <span class="pre">:</span> <span class="pre">Time)</span></code>, which takes an instance of type Time and prints the time following the 12-hour convention (e.g. 12:05 pm, 11:46 am).</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="pure-functions">
+<h2>Pure Functions<a class="headerlink" href="#pure-functions" title="Permalink to this headline">¶</a></h2>
+<p>We will develop functions that allows us to manipulate <code class="docutils literal notranslate"><span class="pre">Time</span></code> objects: <strong>pure functions</strong> and <strong>modifiers</strong>.</p>
+<p>The strategy for developing these functions is based on <strong>prototype and patch</strong>;
+a way of tackling a complex problem by
+starting with a simple prototype and incrementally dealing with the complications.</p>
+<p>The next cell shows a simple prototype of the <code class="docutils literal notranslate"><span class="pre">add_time</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">sum</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
+    <span class="nb">sum</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">hour</span>
+    <span class="nb">sum</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">minute</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">minute</span>
+    <span class="nb">sum</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">second</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">second</span>
+    <span class="k">return</span> <span class="nb">sum</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This function creates a new <code class="docutils literal notranslate"><span class="pre">Time</span></code> object (<code class="docutils literal notranslate"><span class="pre">sum</span></code>), its attributes are initialized by adding
+the values of the attributes of the arguments, and eventually returns the created object.</p>
+<p>This is called a <strong>pure function</strong> because it does not have any side effects:</p>
+<ul class="simple">
+<li><p>it does not modify any of the objects passed to it as arguments and</p></li>
+<li><p>it has no effect, like displaying a value or getting user input, other than returning a value.</p></li>
+</ul>
+<p>The function of the previous cell can be tested by creating and adding 2 <code class="docutils literal notranslate"><span class="pre">Time</span></code> objects.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
+<span class="n">start</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="n">start</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">45</span>
+<span class="n">start</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">duration</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
+<span class="n">duration</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">duration</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">35</span>
+<span class="n">duration</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="n">finished</span> <span class="o">=</span> <span class="n">add_time</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">duration</span><span class="p">)</span>
+<span class="n">print_time</span><span class="p">(</span><span class="n">finished</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(22:80:00)
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is of course an illegal time.</p>
+<p>The problem is caused by the fact that we did not keep track of the fact that there are only <code class="docutils literal notranslate"><span class="pre">60</span></code> seconds in a minute, <code class="docutils literal notranslate"><span class="pre">60</span></code> minutes in an hour, and <code class="docutils literal notranslate"><span class="pre">24</span></code> hours in a day, <em>or do we allow more hours in a <code class="docutils literal notranslate"><span class="pre">Time</span></code> object?</em></p>
+<p>What were the exact <strong>requirements</strong>?</p>
+<p>Let us assume that there are only <code class="docutils literal notranslate"><span class="pre">24</span></code> hours in a day.</p>
+<p>So, we are representing the <em>time of the day</em>, not a time frame.</p>
+<p>We need to <em>carry</em> over seconds to minutes and minutes to hours.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="nb">sum</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
+    <span class="nb">sum</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">hour</span>
+    <span class="nb">sum</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">minute</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">minute</span>
+    <span class="nb">sum</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">second</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">second</span>
+
+<span class="c1"># fix the seconds if greater than 60</span>
+    <span class="k">if</span> <span class="nb">sum</span><span class="o">.</span><span class="n">second</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="nb">sum</span><span class="o">.</span><span class="n">second</span> <span class="o">-=</span> <span class="mi">60</span>
+        <span class="nb">sum</span><span class="o">.</span><span class="n">minute</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># fix the minutes if greater than 60</span>
+    <span class="k">if</span> <span class="nb">sum</span><span class="o">.</span><span class="n">minute</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="nb">sum</span><span class="o">.</span><span class="n">minute</span> <span class="o">-=</span> <span class="mi">60</span>
+        <span class="nb">sum</span><span class="o">.</span><span class="n">hour</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+<span class="c1"># fix with hours if greater than 24</span>
+    <span class="k">if</span> <span class="nb">sum</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
+        <span class="nb">sum</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+        
+    <span class="k">return</span> <span class="nb">sum</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This function does the job, this solution is slightly more elaborated.</p>
+<p>The function is quite long and a more concise solution will be presented.</p>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create the pure function <i>convert_utc(time : Time, utc_units : int) -&gt; Time</i>, which takes an instance of type Time (representing the Coordinated Universal Time -UTC) and the number of UTC units. This function adds the integer to the <i>hours</i> attribute. Remember that an hour must be equal or greater to zero, and less than 24.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="modifiers">
+<h2>Modifiers<a class="headerlink" href="#modifiers" title="Permalink to this headline">¶</a></h2>
+<p>It may be useful for a function to modify the objects it gets as parameters.</p>
+<p>In that case, the changes are visible to the caller.</p>
+<p>Functions that work this way are called <strong>modifiers</strong>.</p>
+<p>In the next cell, a first version of the function <code class="docutils literal notranslate"><span class="pre">increment</span></code> is presented.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">increment2</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; adds the seconds (2nd argument) to the Time object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">+=</span> <span class="n">seconds</span>
+    
+<span class="c1"># fix the seconds if greater than 60</span>
+    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">-=</span> <span class="mi">60</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">+=</span> <span class="mi">1</span>
+        
+<span class="c1"># fix the minutes if greater than 60</span>
+    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">-=</span> <span class="mi">60</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># fix with hours if greater than 24</span>
+    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>The function starts with adding the <code class="docutils literal notranslate"><span class="pre">seconds</span></code> to <code class="docutils literal notranslate"><span class="pre">time.second</span></code>; the remainder deals with the special cases we
+saw before.</p>
+<p>This function is not correct, when the amount of seconds to be added is larger than <code class="docutils literal notranslate"><span class="pre">60</span></code>.</p>
+<p>It is then necessary to add more minutes to <code class="docutils literal notranslate"><span class="pre">time.minutes</span></code> than just <code class="docutils literal notranslate"><span class="pre">1</span></code>.</p>
+<p>A straightforward solution is to use a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop, but this may not be very efficient.</p>
+<p>Anything that can be done with modifiers can also be done with pure functions.</p>
+<p>In fact, some programming languages, also known as <strong>functional programming languages</strong>,
+only allow pure functions.</p>
+<p>There is some evidence that programs that use pure functions are faster to develop and less error-prone than programs
+that use modifiers.</p>
+<p>But modifiers are convenient at times, and functional programs tend to be less efficient.</p>
+<p>It is, therefore, good practice to develop <strong>pure functions</strong> instead of <strong>modifiers</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; adds the seconds (2nd argument) to the Time object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">seconds</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">+=</span> <span class="n">hours</span>
+    
+    <span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">+=</span> <span class="n">minutes</span>
+    
+    <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">+=</span> <span class="n">seconds</span>
+    
+<span class="c1"># fix the seconds if greater than 60</span>
+    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">-=</span> <span class="mi">60</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="c1"># fix the minutes if greater than 60</span>
+    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">-=</span> <span class="mi">60</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># fix with hours if greater than 24</span>
+    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span> 
+        
+<span class="n">print_time</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+<span class="n">increment</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="mi">3660</span><span class="p">)</span>
+<span class="n">print_time</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(21:45:00)
+(22:46:00)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Let’s introduce some changes to the previous exercise. Create the modifier <i>convert_utc_modifier(time : Time, utc_units : int) -&gt; Time</i>, which takes an instance of type Time (representing the Coordinated Universal Time -UTC) and adds the number of UTC units to it. This function adds the integer to the <i>hours</i> attribute. Remember that an hour must be equal or greater to zero, and less than 24.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="prototyping-vs-planning">
+<h2>Prototyping vs. Planning<a class="headerlink" href="#prototyping-vs-planning" title="Permalink to this headline">¶</a></h2>
+<p>The development strategy used so far in this chapter has been <em>prototype and patch</em>.</p>
+<p>The problem with this approach is that the code becomes bulky, it may contain code to deal with a lot of corner cases.</p>
+<p>This approach can be effective, especially if you do not have yet a deep understanding
+of the problem, but it may involve a lot of testing.</p>
+<p>An alternative is <em>designed development</em>, in which high-level insight into the problem can
+make the programming much easier.</p>
+<p>For instance, to realize that the conversion from time to seconds and back allows us just to manipulate time
+in terms of the amount of seconds; <code class="docutils literal notranslate"><span class="pre">1</span></code> minute is <code class="docutils literal notranslate"><span class="pre">60</span></code> seconds and <code class="docutils literal notranslate"><span class="pre">1</span></code> hour is <code class="docutils literal notranslate"><span class="pre">3600</span></code> seconds.</p>
+<p>So, if we convert the <code class="docutils literal notranslate"><span class="pre">Time</span></code> object to an integer value representing seconds and back, we are done.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value representing seconds</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span>
+    <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span>
+    <span class="k">return</span> <span class="n">seconds</span>
+
+<span class="n">print_time</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">time_to_int</span><span class="p">(</span><span class="n">start</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(22:46:00)
+81960
+</pre></div>
+</div>
+</div>
+</div>
+<p>We need now to develop the inverse function: <code class="docutils literal notranslate"><span class="pre">int_to_time</span></code>.</p>
+<p>This function takes an integer value as argument and returns a <code class="docutils literal notranslate"><span class="pre">Time</span></code> object.</p>
+<p>We will use a special data type: tuples. We will dive deeper into this type in coming topics, for now let us just see how to use them.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; converts an integer value representing seconds into a Time object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
+    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+    
+<span class="c1"># fix with hours if greater than 24</span>
+    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
+        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+        
+    <span class="k">return</span> <span class="n">time</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>One way to check that both functions are correct is by means of using a <em>consistency check</em>.</p>
+<p>In this case, we will verify with the expression <code class="docutils literal notranslate"><span class="pre">time_to_int(int_to_time(x))</span> <span class="pre">==</span> <span class="pre">x</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">86300</span>
+<span class="n">time_to_int</span><span class="p">(</span><span class="n">int_to_time</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">==</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, the solutions presented in the book “Think Python” do not deal with the fact that there are only <code class="docutils literal notranslate"><span class="pre">24</span></code> hours in a day.</p>
+<p>Thus, the proposed test, <code class="docutils literal notranslate"><span class="pre">time_to_int(int_to_time(x))</span> <span class="pre">==</span> <span class="pre">x</span></code>
+does not work for values equal or greater than <code class="docutils literal notranslate"><span class="pre">86400</span></code>.</p>
+<p>This is a typical case of getting the right <strong>requirements</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_time</span><span class="p">(</span><span class="n">int_to_time</span><span class="p">(</span><span class="mi">86399</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(00:00:00)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time_to_int</span><span class="p">(</span><span class="n">int_to_time</span><span class="p">(</span><span class="mi">86399</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="o">==</span> <span class="mi">86400</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Once we are convinced that both functions are correct (according to our specifications), we can reimplement
+the <code class="docutils literal notranslate"><span class="pre">add_time</span></code> and <code class="docutils literal notranslate"><span class="pre">increment</span></code> functions.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">s</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="n">s</span>
+    <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>These time conversion functions allow us to develop also a <i>sub_time(t1 : Time, t2 : Time) -&gt; Time</i> function, that subtracts two time intervals. Again, make sure you that your are not ‘travelling back to the future’, or end up with a negative time.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this headline">¶</a></h2>
+<p>Whenever you have defined a variable or a function, <strong>verify</strong> it, <em>before</em> using it.
+Do not rely on them blindly.</p>
+<ul class="simple">
+<li><p>Inspect the value of the variable</p></li>
+<li><p>Apply the function to some arguments, and inspect the results</p></li>
+</ul>
+<p><strong>Advice</strong>: Keep such test code in your notebook, so that you can rerun it and use it as a kind of documentation.</p>
+<div class="section" id="testing-of-functions">
+<h3>Testing of functions<a class="headerlink" href="#testing-of-functions" title="Permalink to this headline">¶</a></h3>
+<p>Testing is a way of convincing yourself that the implementation of the function is correct. Testing is not equivalent to giving a formal proof.</p>
+<p>In order to be able to test, you should first execute the function yourself in your head or on paper. Suppose you have written a function to sort elements of a list, then you could start with a non-empty list of unsorted elements, and do the sorting of the list of elements yourself resulting in a sorted list of elements. This already shows that you should start with manageable input. You should not start with a list with more than 100 elements.</p>
+<ul class="simple">
+<li><p>Choose appropriate arguments</p></li>
+<li><p>Apply function and gather results</p></li>
+<li><p>Decide on pass or fail</p></li>
+</ul>
+</div>
+<div class="section" id="manual-testing">
+<h3>Manual testing<a class="headerlink" href="#manual-testing" title="Permalink to this headline">¶</a></h3>
+<p>A simple but rather labor-intensive way of testing is manual testing. You write in one cell the function body and in a few following cells, the various tests for the function.</p>
+<p>When testing you have to think of corner cases, for instance, empty lists, the elements at the first or last index of a list.</p>
+<ul class="simple">
+<li><p>Call the function for various arguments in a code cell, such that it shows some result (either via <code class="docutils literal notranslate"><span class="pre">print</span></code> or as last expression in code cell).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sorted_list</span> <span class="o">=</span> <span class="n">sort</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sorted_list</span><span class="p">)</span> <span class="c1"># This should give [1, 3, 4, 9]</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Visually, check those results.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">roll_dice</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Roll n dice.</span>
+<span class="sd">    Assumption: n &gt;= 0.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">rolls</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">rolls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">rolls</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Test 1: boundary case</span>
+<span class="n">roll_dice</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6,
+ 5,
+ 2,
+ 6,
+ 4,
+ 1,
+ 1,
+ 5,
+ 3,
+ 3,
+ 2,
+ 3,
+ 4,
+ 1,
+ 3,
+ 4,
+ 1,
+ 5,
+ 4,
+ 6,
+ 2,
+ 3,
+ 4,
+ 1,
+ 5,
+ 6,
+ 1,
+ 5,
+ 3,
+ 6,
+ 2,
+ 5,
+ 4,
+ 1,
+ 5,
+ 3,
+ 1,
+ 2,
+ 3,
+ 4,
+ 3,
+ 3,
+ 3,
+ 6,
+ 3,
+ 6,
+ 3,
+ 6,
+ 6,
+ 1,
+ 5,
+ 6,
+ 6,
+ 3,
+ 1,
+ 6,
+ 1,
+ 5,
+ 4,
+ 5,
+ 4,
+ 1,
+ 2,
+ 1,
+ 5,
+ 4,
+ 4,
+ 5,
+ 6,
+ 4,
+ 2,
+ 1,
+ 3,
+ 2,
+ 2,
+ 2,
+ 3,
+ 5,
+ 4,
+ 3,
+ 1,
+ 2,
+ 6,
+ 6,
+ 6,
+ 1,
+ 5,
+ 1,
+ 6,
+ 5,
+ 1,
+ 5,
+ 2,
+ 3,
+ 1,
+ 5,
+ 2,
+ 4,
+ 2,
+ 1]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Test 2: test the length of the resulting list</span>
+<span class="nb">len</span><span class="p">(</span><span class="n">roll_dice</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Test 3: test whether all rolls are valid</span>
+<span class="n">rolls_bool</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+
+<span class="k">for</span> <span class="n">roll</span> <span class="ow">in</span> <span class="n">roll_dice</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">rolls_bool</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">roll</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="c1"># list of Booleans</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rolls_bool</span><span class="p">)</span>
+<span class="nb">all</span><span class="p">(</span><span class="n">rolls_bool</span><span class="p">)</span> <span class="c1"># check if all Booleans in the list are True</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[True, True, True, True, True, True, True, True, True, True]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="more-on-function-testing">
+<h3>More on function testing<a class="headerlink" href="#more-on-function-testing" title="Permalink to this headline">¶</a></h3>
+<p>The challenge with function testing is to convince yourself that you have dealt with all possible cases that the function needs to handle.</p>
+<ul class="simple">
+<li><p>Testing a function in just one call is hardly ever enough.</p></li>
+<li><p>Pick a <em>few</em> <em>important</em> arguments, for which you can check the corresponding result.</p></li>
+<li><p>Boundary cases, and small typical case</p>
+<ul>
+<li><p>Strive for <strong>code coverage</strong></p></li>
+<li><p>Code that is not executed during the call, is not tested</p></li>
+<li><p>Cover all branches of <code class="docutils literal notranslate"><span class="pre">if-elif-else</span></code></p></li>
+</ul>
+</li>
+<li><p>You do not need to check the result directly; could test it indirectly. For instance, by checking the number of elements in a list instead of inspecting the list.</p></li>
+</ul>
+<p>Suppose you need to write a function that merges 2 lists. A sufficient test can be to check whether the length of the resulting list is the same as the length of both argument lists.</p>
+</div>
+<div class="section" id="automated-testing-via-docstring">
+<h3>Automated testing via docstring<a class="headerlink" href="#automated-testing-via-docstring" title="Permalink to this headline">¶</a></h3>
+<p>A good programming practice is to add <strong>usage examples</strong> to the docstring:</p>
+<ul class="simple">
+<li><p>You can do it in such a format
+that these examples are <strong>automatically executable and checkable</strong></p></li>
+</ul>
+<p>Format of examples/test cases in docstring:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">expression</span> <span class="k">with</span> <span class="n">function</span> <span class="n">call</span>
+<span class="go">expected result</span>
+<span class="gp">...</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">expression</span> <span class="k">with</span> <span class="n">function</span> <span class="n">call</span>
+<span class="go">expected result</span>
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">def</span> <span class="nf">roll_dice</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Roll n dice.</span>
+<span class="sd">    </span>
+<span class="sd">    Assumption: n &gt;= 0.</span>
+<span class="sd">    </span>
+<span class="sd">    Examples and test cases:</span>
+<span class="sd">    &gt;&gt;&gt; roll_dice(0)  # boundary case</span>
+<span class="sd">    []</span>
+<span class="sd">    &gt;&gt;&gt; len(roll_dice(3))  # test length</span>
+<span class="sd">    3</span>
+<span class="sd">    &gt;&gt;&gt; all(roll in range(1, 6 + 1) for roll in roll_dice(10))  # test values</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="n">rolls</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    
+    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">rolls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    
+    <span class="k">return</span> <span class="n">rolls</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>How to run test cases for function with docstring tests:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">doctest</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doctest.run_docstring_examples(func,</span> <span class="pre">globals(),</span> <span class="pre">verbose=True,</span> <span class="pre">name='...')</span></code><br />
+runs all test cases of <code class="docutils literal notranslate"><span class="pre">func</span></code>, reporting details</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doctest.run_docstring_examples(func,</span> <span class="pre">globals(),</span> <span class="pre">verbose=False)</span></code><br />
+runs all test cases, only reporting failures</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">run_docstring_examples</span><span class="p">(</span><span class="n">roll_dice</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;roll_dice&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Finding tests in roll_dice
+Trying:
+    roll_dice(0)  # boundary case
+Expecting:
+    []
+ok
+Trying:
+    len(roll_dice(3))  # test length
+Expecting:
+    3
+ok
+Trying:
+    all(roll in range(1, 6 + 1) for roll in roll_dice(10))  # test values
+Expecting:
+    True
+ok
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">run_docstring_examples</span><span class="p">(</span><span class="n">roll_dice</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;roll_dice&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>One more example of tests in docstring:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+
+<span class="k">def</span> <span class="nf">count_text</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
+    <span class="sd">&quot;&quot;&quot;Return dictionary with count for each letter in text.</span>
+<span class="sd">    </span>
+<span class="sd">    &gt;&gt;&gt; count_text(&quot;&quot;)  # boundary case</span>
+<span class="sd">    {}</span>
+<span class="sd">    &gt;&gt;&gt; count_text(&quot;dad&quot;)</span>
+<span class="sd">    {&#39;d&#39;: 2, &#39;a&#39;: 1}</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">counts</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>  <span class="c1"># use 0 when key is not present</span>
+    
+    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
+        <span class="n">counts</span><span class="p">[</span><span class="n">letter</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_text</span><span class="p">(</span><span class="s2">&quot;dad&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;d&#39;: 2, &#39;a&#39;: 1}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">run_docstring_examples</span><span class="p">(</span><span class="n">count_text</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;count_text&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Finding tests in count_text
+Trying:
+    count_text(&quot;&quot;)  # boundary case
+Expecting:
+    {}
+ok
+Trying:
+    count_text(&quot;dad&quot;)
+Expecting:
+    {&#39;d&#39;: 2, &#39;a&#39;: 1}
+ok
+</pre></div>
+</div>
+</div>
+</div>
+<p>How to run test cases for all functions with docstring tests:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">doctest.testmod(verbose=True)</span></code> runs all test cases, reporting details</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">doctest.testmod(verbose=False)</span></code> runs all test cases, showing a summary</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying:
+    count_text(&quot;&quot;)  # boundary case
+Expecting:
+    {}
+ok
+Trying:
+    count_text(&quot;dad&quot;)
+Expecting:
+    {&#39;d&#39;: 2, &#39;a&#39;: 1}
+ok
+Trying:
+    roll_dice(0)  # boundary case
+Expecting:
+    []
+ok
+Trying:
+    len(roll_dice(3))  # test length
+Expecting:
+    3
+ok
+Trying:
+    all(roll in range(1, 6 + 1) for roll in roll_dice(10))  # test values
+Expecting:
+    True
+ok
+9 items had no tests:
+    __main__
+    __main__.Time
+    __main__.add_time
+    __main__.increment
+    __main__.increment2
+    __main__.int_to_time
+    __main__.is_after
+    __main__.print_time
+    __main__.time_to_int
+2 items passed all tests:
+   2 tests in __main__.count_text
+   3 tests in __main__.roll_dice
+5 tests in 11 items.
+5 passed and 0 failed.
+Test passed.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># without details</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TestResults(failed=0, attempted=5)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="invariants">
+<h3>Invariants<a class="headerlink" href="#invariants" title="Permalink to this headline">¶</a></h3>
+<p>A <code class="docutils literal notranslate"><span class="pre">Time</span></code> object is well-formed if the values of minute and second are between 0 and 60
+(including 0 but not 60) and if hour is between 0 and 24.</p>
+<p>Requirements like these are called <strong>invariants</strong> because they should always be true.</p>
+<p>To put it a different way, if they are not true, something has gone wrong.</p>
+<p>Writing code to check invariants can help detect errors and find their causes.</p>
+<p>The next cell contains the function <code class="docutils literal notranslate"><span class="pre">valid_time(time</span> <span class="pre">:</span> <span class="pre">Time)</span></code> that takes a <code class="docutils literal notranslate"><span class="pre">Time</span></code> object and returns <code class="docutils literal notranslate"><span class="pre">False</span></code> if it
+violates an <strong>invariant</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">valid_time</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; checks whether we are dealing with a correct Time object</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span> <span class="ow">or</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">&gt;=</span> <span class="mi">60</span> <span class="ow">or</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">return</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>At the beginning of each function you could check the arguments to make sure they are
+valid.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">valid_time</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">valid_time</span><span class="p">(</span><span class="n">t2</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;invalid Time object in add_time&#39;</span><span class="p">)</span>
+    <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or you could use an <strong>assert statement</strong>, which checks a given invariant and raises an exception
+if it fails.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    
+    <span class="k">assert</span> <span class="n">valid_time</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">valid_time</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
+    <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Assert statements</strong> are useful because they distinguish code that deals with normal conditions
+from code that checks for errors.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "maveme/introProgramming",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./chapters"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="classes_objects.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Classes and Objects </p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="classes_methods.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Classes and Methods </p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+        &copy; Copyright 2022. Eindhoven University of Technology &amp; Vrije Universiteit Amsterdam.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,92 @@
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.9/site-packages/jupyter_cache/executors/utils.py", line 51, in single_nb_execution
+    executenb(
+  File "/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 1112, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+  File "/opt/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 74, in wrapped
+    return just_run(coro(*args, **kwargs))
+  File "/opt/anaconda3/lib/python3.9/site-packages/nbclient/util.py", line 53, in just_run
+    return loop.run_until_complete(coro)
+  File "/opt/anaconda3/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 553, in async_execute
+    await self.async_execute_cell(
+  File "/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 857, in async_execute_cell
+    self._check_raise_for_error(cell, exec_reply)
+  File "/opt/anaconda3/lib/python3.9/site-packages/nbclient/client.py", line 760, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+import random
+
+class Meal:
+    """Represents a collection of dishes."""
+    
+    def __init__(self, dishes=[]) -> None:
+        """ creates a new Meal object and initializes it
+        """
+        self.dishes : list = dishes
+        
+    def __str__(self) -> str:
+        dlst = []
+        for dish in self.dishes:
+            dlst.append(dish.name)
+        return '\n'.join(dlst)
+        
+    def compose(self, dishes : list) -> None:
+        """ composes a meal
+        """
+        self.dishes  : list= dishes
+        
+    def remove_dish(self, dish_name : str) -> None:
+        """ removes a dish from a meal
+        """
+        for i in range(len(self.dishes)):
+            if self.dishes[i].name == dish_name:
+                del self.dishes[i]
+                break
+    
+    def add_dish(self, dish : Dish) -> None:
+        """ adds a dish to a meal
+        """
+        self.dishes.append(dish)
+        
+    def contains_dish(self, dish : Dish) -> bool:
+        """ checks whether the dish is already in the meal
+        """
+        return dish in self.dishes
+            
+    def surprise_me(self, nr : int) -> None:
+        """ add arbitrary dishes upto 'nr_of_dishes'
+        """
+        for i in range(nr):
+            dish : Dish = food_table[random.randint(0,len(food_table))]
+            while self.contains_dish(dish):
+                dish = food_table[random.randint(0,len(food_table))]
+            self.add_dish(dish)
+    
+food_table = process_food_data()
+meal = Meal()
+meal.surprise_me(5)
+print(meal)
+------------------
+
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mFileNotFoundError[0m                         Traceback (most recent call last)
+[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_46897/1369122790.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     47[0m             [0mself[0m[0;34m.[0m[0madd_dish[0m[0;34m([0m[0mdish[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     48[0m [0;34m[0m[0m
+[0;32m---> 49[0;31m [0mfood_table[0m [0;34m=[0m [0mprocess_food_data[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     50[0m [0mmeal[0m [0;34m=[0m [0mMeal[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     51[0m [0mmeal[0m[0;34m.[0m[0msurprise_me[0m[0;34m([0m[0;36m5[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;32m/var/folders/rm/jpz9s5s53h1gyb3l6pg_h57r0000gn/T/ipykernel_46897/3565547917.py[0m in [0;36mprocess_food_data[0;34m()[0m
+[1;32m      5[0m         [0;32mand[0m [0mthe[0m [0mvalue[0m [0;32mis[0m [0ma[0m [0mDish[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      6[0m     """
+[0;32m----> 7[0;31m     [0mcsv_file[0m [0;34m=[0m [0mopen[0m[0;34m([0m[0;34m'datasets/FoodTable.csv'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m      8[0m     [0mfood_table[0m [0;34m:[0m [0mdict[0m [0;34m=[0m [0mdict[0m[0;34m([0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+[1;32m      9[0m     [0mreader[0m [0;34m=[0m [0mcsv[0m[0;34m.[0m[0mDictReader[0m[0;34m([0m[0mcsv_file[0m[0;34m,[0m [0mdelimiter[0m[0;34m=[0m[0;34m';'[0m[0;34m)[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mFileNotFoundError[0m: [Errno 2] No such file or directory: 'datasets/FoodTable.csv'
+FileNotFoundError: [Errno 2] No such file or directory: 'datasets/FoodTable.csv'
+
