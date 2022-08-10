@@ -10,7 +10,7 @@ on:
     # folder has been modified.
     #
     # paths:
-    #  - book/
+     - book/**
 
 permissions:
   pull-requests: write
