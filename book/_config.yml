@@ -1,7 +1,7 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title                       : Introduction to Programming in Python
+title                       : Learning Python by doing
 author                      : ""
 copyright                   : "2022. Eindhoven University of Technology & Vrije Universiteit Amsterdam" 
 logo                        : logo.png
