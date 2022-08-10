@@ -9,8 +9,8 @@ on:
     # unrelated files, you can make this run only if a file within that specific
     # folder has been modified.
     #
-    paths:
-     - book/
+    # paths:
+    #  - book/
 
 permissions:
   pull-requests: write
@@ -44,4 +44,4 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3.6.1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./_build/html
+        publish_dir: ./book/_build/html
