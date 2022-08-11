@@ -630,22 +630,16 @@ title="Print to PDF"
 <!-- ## Introductio to These Lecture Notes <a class="anchor" id="introduction"></a> -->
 <p>The content of these notes is organized to accompany the books <strong>Python for Everybody</strong> by Charles Severance<span id="id2">[<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Sev16</a>]</span> and <strong>Think Python (2nd edition)</strong> by <strong>Allen Downey</strong><span id="id3">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
 <p>The code fragments have mostly been taken from the books and adapted in some cases.</p>
-<p><strike>We will use <strong>Jupyter</strong> Notebooks in JBI010 (Programming for Data Science</strike></p>
-<p>You are encouraged to <strong>play along</strong> in this file as you read the book. The more you practice programming the better your skills will become!</p>
+<p>You are encouraged to <strong>play along</strong> in this file as you read the book.</p>
+<p><strong>The more you practice programming the better your programming skills will become! You do not learn programming by just reading code, you have to write the code yourself. However, before writing the first line of code, you have to solve the problem in your head, on a blackboard or on paper. If you start solving the problem at hand by immediately writing code, you will spend a lot of time because it is very a very inefficient way of working. It is too much trial-and-error. You need first to understand the problem, create mentally a solution, try to figure out whether you have dealt with all (corner) cases, and then start writing the code.</strong></p>
 <p>To evaluate a cell, select it by clicking on it, and then click the <em>Run</em> button below the code cell, or press <code class="docutils literal notranslate"><span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">Enter</span></code> within the cell.</p>
-<p><strike>If this is your first use of Jupyter, then take the <strong>User Interface Tour</strong>
-(see the Help menu).
-See <em>Help &gt; Notebook Help</em> for more details, such as how to format Markdown cells.</strike></p>
-<p><strike>To find out about <strong>keyboard shortcuts</strong> for Jupyter commands,
-see <em>Help &gt; Keyboard</em> Shortcuts.
-Pressing <code class="docutils literal notranslate"><span class="pre">Cmd</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">P</span></code> (MacOS) / <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">Shift</span> <span class="pre">+</span> <span class="pre">P</span></code> (Windows, Linux)
-shows an overview of all commands.</strike></p>
 <p>Occasionally, we have added a bit of extra information. This is marked as <strong>[EXTRA]</strong>.</p>
 <section id="what-is-a-program-a-class-anchor-id-program-a">
 <h2>What is a Program? <a class="anchor" id="program"></a><a class="headerlink" href="#what-is-a-program-a-class-anchor-id-program-a" title="Permalink to this headline">#</a></h2>
 <p>A program is a sequence of instructions to perform a computation, such as finding a name in a database,
 drawing a picture, etc.</p>
 <p>Programming is more than writting code, it is first about understanding a problem, thinking about a solution, and then translating this into a programming language/code.</p>
+<p>It is also important to realise that software may have a very long timespan and a lot of modifications maybe performed on the software over this timespan. If you walk, for instance, into the software development department of an arbitrary bank in the Netherlands, you will find operational COBOL code written somewhere between 1960 and 1970! So, this code is already 50 up to 60 years old. In this timespan, we had the Y2K challenge, the introduction of the Euro, merging of banks, and changes in legislations. All these changes had to be implemented in the COBOL code that keeps the bank operational 24/7.</p>
 <p>Programming is part of <strong>Software Engineering</strong>. Software Engineering is the discipline of solving
 problems in a structured way by developing software.</p>
 <p>The details look different in different languages, but a few basic instructions appear in just
@@ -656,7 +650,7 @@ about every language:</p>
 <p><strong>conditional execution:</strong> Having alternative paths to perform operations</p>
 <p><strong>repeated execution:</strong> Repeat operations</p>
 <p><strong>reuse:</strong> Group and name operations for re-use and understandability</p>
-<p>There is a lot more to tell about Software Engineering but for the moment this is suffient. Actually, Software Engineering is an entire research field and most of the people educated at universities will become software engineers in the future careers.</p>
+<p>There is a lot more to tell about Software Engineering but for the moment this is suffient. Actually, Software Engineering is an entire research field and most of the people educated at universities may become software engineers in the future careers.</p>
 </section>
 <section id="interpreters-and-compilers-a-class-anchor-id-interpreters-compilers-a">
 <h2>Interpreters and Compilers <a class="anchor" id="interpreters-compilers"></a><a class="headerlink" href="#interpreters-and-compilers-a-class-anchor-id-interpreters-compilers-a" title="Permalink to this headline">#</a></h2>
@@ -721,9 +715,10 @@ about every language:</p>
 </section>
 <section id="our-first-program-a-class-anchor-id-first-program-a">
 <h2>Our First Program <a class="anchor" id="first-program"></a><a class="headerlink" href="#our-first-program-a-class-anchor-id-first-program-a" title="Permalink to this headline">#</a></h2>
-<p><strong>A program is more than just a list of instructions.</strong></p>
-<div class="alert alert-block alert-warning"><b>Gijs:</b> This one is a bit unclear to me. It says "a program is more than just a list of instruction", yet below it it says "a program is a list of instructions", without being clear on why it is not "just" a list of instructions</div>
-<p>A program is a list of <em>instructions</em> or, sometimes also called <em>statements</em> to instruct the computer how to perform a calculation.</p>
+<p><strong>A program is more than just a list of instructions.</strong> The list of instructions should solve the problem at hand, so process the input, produce correct output by performing the needed calculations, but the instructions should be well organized with respect to the underlying structure, the names used in the
+instructions should make sense, and the problem at hand should be solved in an efficient way.</p>
+<p>This list of <em>instructions</em> or, sometimes also called <em>statements</em>  instruct the computer how to process the input, if any, perform a calculation, and produce
+the output, if any.</p>
 <p>The first statement you normally write is “Hello World!”, however I took the liberty to change this boring first program a bit.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -897,8 +892,7 @@ The operator <code class="docutils literal notranslate"><span class="pre">/</spa
 </section>
 <section id="what-can-go-wrong-a-class-anchor-id-wrong-a">
 <h2>What Can Go Wrong <a class="anchor" id="wrong"></a><a class="headerlink" href="#what-can-go-wrong-a-class-anchor-id-wrong-a" title="Permalink to this headline">#</a></h2>
-<p>While writing your program you will introduce errors, and it is completely normal. However, it will be easier to fix them if you know the three types of errors that you will find.</p>
-<div class="alert alert-block alert-warning"><b>Gijs:</b> It is mentioned that there are three types of errors, however 4 seem to be listed below here. Should this 3 be a 4 or is there some subidivision of the error below here that should be emphasized?</div>
+<p>While writing your program you will introduce errors, and it is completely normal. However, it will be easier to fix them if you know the four types of errors that you will find.</p>
 <p><strong>syntax errors:</strong> “Syntax” refers to the structure of a program and the rules about that structure. For example, in English the construct “She all night” has a syntax error because there is no verb that completes the sentence. To fix this issue you should add a verb like “She studies all night”. Now, if you run the following cell you will get a syntax error in Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
