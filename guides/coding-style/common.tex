@@ -1,0 +1,89 @@
+\usepackage{listings}
+\usepackage{latexsym}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{courier}
+\usepackage{url}
+\usepackage{amssymb,amstext,amsfonts}
+\usepackage{relsize}
+\usepackage[dutch,english]{babel}
+\pagestyle{fancy}
+%
+\makeatletter
+% make lists more compact
+\renewcommand{\@listi}{\leftmargin\leftmargini
+            \parsep .5\parskip
+            \topsep \z@%was \parsep
+            \itemsep .5\parsep%was \parskip
+            \partopsep \z@}
+\makeatother
+\renewcommand{\textfraction}{.1}
+\renewcommand{\topfraction}{.7}
+\renewcommand{\bottomfraction}{.7}
+%
+\newcounter{globenum}
+% usage example:
+%  \begin{enumerate}
+%    \item ...
+%    ...
+%    \setcounter{globenum}{\value{enumi}}
+%  \end{enumerate}
+%  ...
+%  \begin{enumerate}
+%    \setcounter{enumi}{\value{globenum}}
+%    \item ...
+%    ...
+%  \end{enumerate}
+%
+\newdimen\digitwidth\setbox0=\hbox{\rm0}\digitwidth\wd0
+%  include \def~{\kern\digitwidth} within environment, so that ~ can be used
+%  as digit-wide space
+%
+\newcommand{\TBD}{\fbox{\color{red}To Be Done}}
+\newcommand{\TBC}{\fbox{\color{red}To Be Completed}}
+%
+\newcommand{\B}{\bfseries}
+\newcommand{\T}{\ttfamily}
+\newcommand{\E}[1]{\foreignlanguage{english}{#1}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+%\newcommand{\R}{\mathbb{R}}
+\newcommand{\peach}{\textsf{\larger peach${}^\mathsf{3}$}}
+\newcommand{\momotor}{\textsf{Momotor}}
+\newcommand{\keyw}[1]{\textbf{#1}}
+\newcommand{\SC}{$;\ \ $} % sequential composition, semicolon
+\newcommand{\id}[1]{\mathit{#1}}
+\newcommand{\slot}[1]{\langle\textit{#1\/}\rangle}
+\newcommand{\Set}[1]{\left\{\,#1\,\right\}}
+\newcommand{\Oh}[1]{\mathcal{O}\left(#1\right)}
+%
+\definecolor{myyellow}{cmyk}{0,0,0.4,0}
+\definecolor{mycyan}{cmyk}{0.3,0,0,0}
+\definecolor{myred}{cmyk}{0,0.4,0.4,0}
+\definecolor{mygreen}{rgb}{0.4,1,0.4}
+\definecolor{tuedarkblue}{rgb}{0.0745,0.02745,0.41176}
+\definecolor{tuelightblue}{rgb}{0.356863,0.45098,0.545098}
+\definecolor{tuegray}{rgb}{0.84,0.88235,0.898}
+\definecolor{tuegrey}{rgb}{0.84,0.88235,0.898}
+\newcommand{\Y}[1]{\colorbox{myyellow}{#1}}
+\newcommand{\C}[1]{\colorbox{mycyan}{#1}}
+\newcommand{\R}[1]{\colorbox{myred}{#1}}
+\newcommand{\G}[1]{\colorbox{mygreen}{#1}}
+\newcommand{\W}[1]{\colorbox{white}{#1}}
+\newcommand{\M}[1]{\colorbox{magenta}{#1}}
+%
+\lstset{language=Python,numbers=left,numberstyle=\tiny,%
+  showlines,
+  morekeywords={enum},%
+  basicstyle=\ttfamily,%
+  keywordstyle=\bfseries,%
+  %identifierstyle=\itshape,%
+  stringstyle=\color{blue},%
+  showstringspaces=false,%
+  commentstyle=\color{blue}\itshape%,
+  %directivestyle=\color{green}%
+}
+\lstdefinestyle{normal}{basicstyle=\ttfamily}
+\lstdefinestyle{small}{basicstyle=\ttfamily\small}
