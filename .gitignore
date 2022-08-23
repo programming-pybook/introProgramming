@@ -1,2 +1,6 @@
 *.DS_Store
 guides/installation-guide/.texpadtmp/*
+*.aux
+*.log
+*.out
+*.gz
