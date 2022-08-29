@@ -4,3 +4,4 @@ guides/installation-guide/.texpadtmp/*
 *.log
 *.out
 *.gz
+*.pdf

@@ -1,0 +1,316 @@
+\documentclass{tufte-handout}
+
+\title{Coding Style Guide}%thanks{Inspired by Edward~R. Tufte!}}
+
+\author[Mauricio Verano Merino]{Introduction to Python Programming}
+
+\date{2022-2023} % without \date command, current date is supplied
+
+%\geometry{showframe} % display margins for debugging page layout
+
+\usepackage{graphicx} % allow embedded images
+  \setkeys{Gin}{width=\linewidth,totalheight=\textheight,keepaspectratio}
+  \graphicspath{{graphics/}} % set of paths to search for images
+\usepackage{amsmath}  % extended mathematics
+\usepackage{booktabs} % book-quality tables
+\usepackage{units}    % non-stacked fractions and better unit spacing
+\usepackage{multicol} % multiple column layout facilities
+\usepackage{lipsum}   % filler text
+\usepackage{fancyvrb} % extended verbatim environments
+  \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+
+% Standardize command font styles and environments
+\newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
+\newcommand{\docopt}[1]{\ensuremath{\langle}\textrm{\textit{#1}}\ensuremath{\rangle}}% optional command argument
+\newcommand{\docarg}[1]{\textrm{\textit{#1}}}% (required) command argument
+\newcommand{\docenv}[1]{\textsf{#1}}% environment name
+\newcommand{\docpkg}[1]{\texttt{#1}}% package name
+\newcommand{\doccls}[1]{\texttt{#1}}% document class name
+\newcommand{\docclsopt}[1]{\texttt{#1}}% document class option name
+\newenvironment{docspec}{\begin{quote}\noindent}{\end{quote}}% command specification environment
+
+\definecolor{vu-color}{RGB}{0,137,207}
+\usepackage{listings}
+\lstset{language=Python,numbers=left,numberstyle=\tiny,%
+  showlines,
+  morekeywords={enum},%
+  basicstyle=\ttfamily,%
+  keywordstyle=\bfseries,%
+  %identifierstyle=\itshape,%
+  stringstyle=\color{blue},%
+  showstringspaces=false,%
+  commentstyle=\color{blue}\itshape%,
+  %directivestyle=\color{green}%
+}
+\newcommand{\B}{\bfseries}
+
+\begin{document}
+
+\maketitle% this prints the handout title, author, and date
+
+\begin{marginfigure}[-4cm]%
+  \includegraphics[width=\linewidth]{vu}
+\end{marginfigure}
+
+\begin{abstract}
+\noindent
+The following mild coding standard ensures
+easily readable and modifiable Python source code.
+This standard is based on~\cite{CodeConventions:2001},
+where much more detailed rules, motivations, and examples can be found.
+The notes below explain these rules.
+\end{abstract}
+
+\begin{enumerate}
+
+\item\label{it:consistency}
+Be consistent when using the freedom that this standard leaves.
+\marginpar{\B Consistency}
+
+\item\label{it:indentation}
+\emph{Always\/} indent \emph{systematically\/} a \textcolor{vu-color}{multiple of 4~spaces}.
+\marginpar{\B Indentation}
+\emph{Never\/} use TAB characters in source code.
+(Let your editor expand the TAB key to spaces. Jupyter Notebook already does this)
+
+\item\label{it:line-length}
+\emph{Always\/} limit the line length to \textcolor{vu-color}{at most 80 characters}.
+(Set a right margin.)
+\marginpar{\B Line~length}
+
+\item\label{it:empty-lines}
+\emph{Always\/} use \textcolor{vu-color}{one empty line before and after} the following cases:
+\marginpar{\B Empty~lines}
+\begin{itemize}
+    \item functions
+    \item classes are surrounded by two white lines instead
+\end{itemize}
+White lines can be used to separate \emph{groups\/} of statements or assignments to enhance readability
+
+\item\label{it:spacing-1}
+\emph{Never\/} write a space before
+\marginpar{\B Spacing~1}
+and \emph{always\/} write \textcolor{vu-color}{one space after} the following items
+(\emph{unless} at  line end):
+\begin{itemize}
+\item \lstinline","\quad\lstinline":"
+\end{itemize}
+
+\item\label{it:spacing-2}
+\emph{Always\/} write \textcolor{vu-color}{one space before and after} the following items
+\marginpar{\B Spacing~2}
+(\emph{unless} at line begin/end):
+\begin{itemize}
+\item keywords: \lstinline"if   for   while   " etc.
+\item binary operators (\emph{except\/} \lstinline"."): \lstinline"=  +  -  *  /  %  ==  !=  <  >  <=  >=  &&  || "~etc.
+\end{itemize}
+
+\item\label{it:comments}
+\emph{Always\/} explain each variable declaration in a \textcolor{vu-color}{comment}.
+\marginpar{\B Comments}
+
+\item\label{it:docstring}
+\emph{Always\/} specify each public entity (Classes and functions) 
+\marginpar{\B Docstring}
+with a \textcolor{vu-color}{docstring comment}.
+
+
+\item\label{it:naming-1}
+Variable, function and class names should \emph{always\/} \textcolor{vu-color}{reflect the usage rather than the implementation}.
+\marginpar{\B Naming~1}
+
+
+\item\label{it:naming-2}
+\emph{Always\/} use the associated name conventions for different objects:
+\marginpar{\B Naming~2}
+\begin{itemize}
+\item Use \textcolor{vu-color}{CapWords} for class names
+\item Use \textcolor{vu-color}{lowercase with words separated by underscores} for function and variable names
+\item Use \textcolor{vu-color}{All caps with words separated by underscores} for the name of constants
+\end{itemize}
+
+\item\label{it:type-hints}
+\emph{Always\/} add \textcolor{vu-color}{type hints} to functions using ':' or '->'
+\marginpar{\B Type~Hints}
+
+\end{enumerate}
+
+
+
+%\enlargethispage{\baselineskip}
+%%\marginpar{\vspace*{1ex}\R{\fbox{BAD}}}
+%\lstinputlisting[linerange={2-15}]{../example_bad.py}
+%\hrule\marginpar{\vspace*{1ex}\fbox{GOOD}}
+%\lstinputlisting[linerange={2-30}]{../example_good.py}
+
+
+
+\section* {Notes}
+
+Well-organized source code is important for several reasons.
+\begin{itemize}
+\item The compiler may not care about this,
+  but source code is also read by others:
+  developers, reviewers, maintainers, teachers, graders, \ldots
+\item It is an important means to \emph{prevent defects}.
+\item It facilitates \emph{localization of defects},
+  both by the author, and by others.
+\end{itemize}
+
+Here is some further background information on each of the rules.
+\begin{enumerate}
+
+\item Consistency especially plays a role
+\marginpar{\B Consistency}
+  in the placement of opening braces~\lstinline"".
+  Either place them at the end of the line with the controlling statement,
+  or at the beginning of a line by themselves directly below the the controlling statement.
+  An advantage of the latter style is that opening and closing braces are vertically aligned.
+  A disadvantage is that it takes more vertical space.
+
+\item Indentation provides visual clues
+\marginpar{\B Indentation}
+  about the containment structure (\emph{nesting\/}).
+  One or two space indentation does not provide enough visually guidance.
+  Some standards prescribe indenting by multiples of three spaces
+  (because that interferes with TAB characters, thereby discouraging them even more).
+  Indenting by more than four spaces is a waste,
+  and leaves less room in view of the line length limit
+  (also see the next note).
+
+\item Your screen may fit longer lines,
+\marginpar{\B Line~length}
+  but you are not the only one reading the source code.
+  Moreover, long lines are hard to parse.
+  Also see next note.
+  
+  Avoid long lines by introducing auxiliary variables, methods,
+  or classes (e.g., to group multiple parameters).
+  
+  If a long line is unavoidable,
+  break it at an appropriate place, and continue on the next line.
+  
+  Of course, the line length of generated code may not be under your control.
+
+\item Empty lines provide visual clues about \emph{grouping},
+\marginpar{\B Empty~lines}
+  on an intermediate level (also see next two notes).
+  Besides the situations mentioned in Rule~\ref{it:empty-lines},
+  it is good to delineate \emph{groups of related statements\/} by empty lines;
+  for example, needed loop variable declarations, the loop, and finalization of the loop.
+  By the way,
+  such grouping can also be made explicit by \emph{brackets},
+  defining a \emph{block}, possibly with its own local variables.
+  
+  Avoid long blocks of statements by introducing auxiliary methods (Extra functions).
+
+\item Spacing also provides visual clues about \emph{grouping},
+\marginpar{\B Spacing~1}
+  but on a lower level than empty lines
+  (see preceding note; also see next note).
+  This rule concerns \emph{punctuation}.
+  
+  \emph{Commas\/} are used to separate items in lists,
+  such as \emph{parameters\/} (both formal and actual),
+  and expressions.
+  
+  There should never be multiple \emph{colons\/} on the same line.
+  
+\item Spacing improves readability,
+\marginpar{\B Spacing~2}
+  especially when quickly scanning source code,
+  rather than reading it slowly in full detail.
+  
+  Readability of expressions can be further improved by appropriate
+  use of \emph{parentheses}, and \emph{auxiliary variables and functions}.
+
+\item Variables are introduced for a specific purpose.
+\marginpar{\B Comments}
+  The name of the variable should reflect that purpose.
+  However, a name should also not be too long.
+  Furthermore, the purpose usually involves relationships to other
+  elements of the program.
+  A comment makes this explicit.
+  To avoid having to spend any effort on deciding whether to include a comment or not,
+  the rule is simply to provide it always.
+  
+  It is also good practice to provide comments with non-obvious statements.
+  However, there is such a thing as \emph{superfluous\/} comments.
+  Do not comment the obvious.
+
+\item Public entities are typically classes, methods, functions 
+\marginpar{\B Docstring}
+  and (non-local) constants.
+  Public entities can be used anywhere in a program.
+  Therefore,
+  their usage should be well documented.
+  Docstring comments have two benefits over ordinary (non-docstring) comments:
+  \begin{itemize}
+  \item They support additional features, such as \emph{tags},
+    to structure documentation.
+  \item They can be extracted from the source code and presented separately,
+    as a document with cross references.
+  \end{itemize}
+  Many Python Integrated Development Environments (IDEs)
+  provide additional benefits when using docstring comments. 
+  Docstring comments can be identified by the triple quotes and often span multiple lines 
+  
+  """ This is a docstring """
+
+\item Variables, Functions and Classes are introduced for a specific purpose.
+\marginpar{\B Naming}
+  The name of the variable should reflect that purpose.
+  But names can also give visual clues to the usage. 
+  Using different types of names helps with quickly interpreting code.
+  \begin{itemize}
+      \item Class names should \emph{always} start with a capital letter so classes are easily spotted. Any additional words in the class name should also start with a capital letter. This is the CapWords convention (E.g. KittenShop).
+      \item Functions and variables should be written in lowercase with words separated by underscores. 
+      For functions it is also allowed to use camelCase, where the first word starts with a lowercase letter but the other words start with uppercase (E.g. kittenShop), but all lowercase is preferred.
+      \item Constants are written in all caps to remind developers that these values should not and will not be changed (E.g. MAXVALUE).
+  \end{itemize}
+  
+  
+
+\item Functions often only allow a specific type of variables 
+\marginpar{\B Type~Hints}
+  to be given as parameters.
+  Because code is often created in (large) groups, others may not know what variable types are allowed in a function and which ones are not.
+  Type hints help developers so that they don't have to carefully look through (complex) functions to be able to use these functions.
+  
+  By adding type hints ...
+  \begin{itemize}
+      \item to the function, a coder can quickly know what type the function returns and use the function without exactly knowing what the outcome could be.
+      
+      Example: \begin{lstlisting}[numbers=none]
+      def example(var1) -> TYPE:
+      \end{lstlisting}
+      \item to the parameters, someone can quickly see what types the variables should be, before they can successfully use the function.
+      
+      The only parameter that doesn't need a type hint is the parameter 'self'. This parameter is standard for methods but does not need an explicit type hint. (This is used in classes).
+      
+      Example: \begin{lstlisting}[numbers=none]
+      def example(var1: TYPE):
+      \end{lstlisting}
+  \end{itemize}
+  Note: It is rumoured that Python might update at some point to change type hints from voluntary to mandatory.
+
+
+\end{enumerate}
+
+
+\begin{thebibliography}{9}
+
+\bibitem{CodeConventions:2001}
+\emph{Style Guide for Python Code}.
+PEP 8, 2001.\\
+\verb"https://www.python.org/dev/peps/pep-0008/"
+
+\end{thebibliography}
+
+%
+\bibliography{sample-handout}
+\bibliographystyle{plainnat}
+
+
+
+\end{document}
