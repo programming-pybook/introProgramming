@@ -1,5 +1,6 @@
 *.DS_Store
 guides/installation-guide/.texpadtmp/*
+guides/coding-style/VU/.texpadtmp/*
 *.aux
 *.log
 *.out
