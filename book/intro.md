@@ -1,4 +1,4 @@
-# Introduction to Programming in Python
+# Learning Python by doing
 
 ```{note}
 TODO: Missing introduction
