@@ -218,6 +218,44 @@ After installing the tools, you should verify them. To do so:
 
 
 \section{Notebooks on VS Code}
+Visual Studio Code (\href{https://code.visualstudio.com/}{VS Code}) is a lightweight but powerful Integrated Development Environment (IDE) for popular programming languages such as C, Java, and JavaScript. 
+Moreover, it also comes with support for creating and editing Jupyter notebooks.
+This section briefly explains how to use a Jupyter notebook within VS Code.
+
+To open and edit your Jupyter notebooks on VS Code, please follow the next steps:
+\begin{quote}
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item Download VS Code for your platform \href{https://code.visualstudio.com/Download}{here}.
+\item Open VS Code. Click on \texttt{file} > \texttt{open folder} and navigate to your target folder. All the files in the target folder will be listed on the left side panel (\Cref{fig:vscode-navigator}).
+    \begin{marginfigure}%
+      \includegraphics[width=1.0\linewidth]{assets/07-openfile-vscode.jpg}
+      \caption{VS Code navigator.}
+      \label{fig:vscode-navigator}
+    \end{marginfigure}
+\item Select an environment for your project. Open Command Palette (\texttt{Ctrl+Shift+P}) (\Cref{fig:environment-vscode}) and choose Python: Select Interpreter command to choose your Python environment.
+    \begin{marginfigure}%
+      \includegraphics[width=1.2\linewidth]{assets/08-choose-env-vscode.jpg}
+      \caption{Choose environment in VS Code.}
+      \label{fig:environment-vscode}
+    \end{marginfigure}
+
+
+\item Click the Jupyter notebook your want to open in left side bar in your folder(trust the workspace if a pop-up window appears)(see \Cref{fig:trust-workspace}). 
+    \begin{marginfigure}%
+      \includegraphics[width=1.3\linewidth]{assets/09-trust-workspace.jpg}
+      \caption{Trust workspace and open notebook.}
+      \label{fig:trust-workspace}
+    \end{marginfigure}
+\item For more instructions, please refer to this \href{https://code.visualstudio.com/docs/datascience/jupyter-notebooks}{page}.
+\end{enumerate}
+\end{quote}
+
+
+
+
+
+
 
 
 \section{Additional Notes}
@@ -255,7 +293,8 @@ To uninstall Anaconda, please follow the guidelines provided
 
 %\section{(End of Notebook)}\label{end-of-notebook}
 
-\copyright~ Mauricio Verano Merino. 2022-2023. \textbf{VU Amsterdam - TU/e}
+\copyright~ Mauricio Verano Merino. 2021-2023. \textbf{VU Amsterdam - TU/e}\\
+\copyright~ Yuyu Bai. 2023. \textbf{VU Amsterdam}
 
 
 \end{document}
