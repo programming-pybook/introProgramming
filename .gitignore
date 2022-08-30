@@ -4,3 +4,5 @@ guides/installation-guide/.texpadtmp/*
 *.log
 *.out
 *.gz
+*.bbl
+*.blg
