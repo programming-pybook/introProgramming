@@ -5,9 +5,5 @@ guides/coding-style/VU/.texpadtmp/*
 *.log
 *.out
 *.gz
-<<<<<<< HEAD
-*.pdf
-=======
 *.bbl
 *.blg
->>>>>>> 9becf95e0d32f7c1436ef50b7cc309c6f44d5322
