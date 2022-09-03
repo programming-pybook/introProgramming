@@ -50,10 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Iteration" href="iteration.html" />
-    <link rel="prev" title="Variables, expressions and assignments" href="assignments.html" />
+    <link rel="prev" title="Variables, Expressions, and Assignments" href="assignments.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -134,7 +136,7 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="assignments.html">
-   Variables, expressions and assignments
+   Variables, Expressions, and Assignments
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -511,12 +513,59 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-a-class-anchor-id-logic-a">
+   Introduction
+   <a class="anchor" id="logic">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logic-a-class-anchor-id-logic-a">
+   Logic
+   <a class="anchor" id="logic">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-arguments-a-class-anchor-id-arguments-a">
+   Types of Arguments
+   <a class="anchor" id="arguments">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deductive-arguments">
+     Deductive Arguments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inductive-arguments">
+     Inductive Arguments
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-logic-a-class-anchor-id-boolean-logic-a">
+   4. Boolean Logic
+   <a class="anchor" id="boolean-logic">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logical-operators">
+     Logical Operators
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#boolean-expressions">
    Boolean Expressions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#logical-operators">
+  <a class="reference internal nav-link" href="#id2">
    Logical Operators
   </a>
  </li>
@@ -570,12 +619,59 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#introduction-a-class-anchor-id-logic-a">
+   Introduction
+   <a class="anchor" id="logic">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#logic-a-class-anchor-id-logic-a">
+   Logic
+   <a class="anchor" id="logic">
+   </a>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-arguments-a-class-anchor-id-arguments-a">
+   Types of Arguments
+   <a class="anchor" id="arguments">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deductive-arguments">
+     Deductive Arguments
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#inductive-arguments">
+     Inductive Arguments
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-logic-a-class-anchor-id-boolean-logic-a">
+   4. Boolean Logic
+   <a class="anchor" id="boolean-logic">
+   </a>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#logical-operators">
+     Logical Operators
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#boolean-expressions">
    Boolean Expressions
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#logical-operators">
+  <a class="reference internal nav-link" href="#id2">
    Logical Operators
   </a>
  </li>
@@ -621,11 +717,109 @@ title="Print to PDF"
                 
   <section class="tex2jax_ignore mathjax_ignore" id="conditionals">
 <h1>Conditionals <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#conditionals" title="Permalink to this headline">#</a></h1>
+<section id="introduction-a-class-anchor-id-logic-a">
+<h2>Introduction <a class="anchor" id="logic"></a><a class="headerlink" href="#introduction-a-class-anchor-id-logic-a" title="Permalink to this headline">#</a></h2>
+<p>This chapter introduces the main concepts related to Boolean logic.
+In particular, we refer to Boolean values (i.e., <code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code>), and how they can be used in Boolean expressions to support conditional executions within a program.</p>
+</section>
+<section id="logic-a-class-anchor-id-logic-a">
+<h2>Logic <a class="anchor" id="logic"></a><a class="headerlink" href="#logic-a-class-anchor-id-logic-a" title="Permalink to this headline">#</a></h2>
+<p><strong>Logic</strong> is the study of the formal principles of reasoning.
+These principles determine what can be considered as a correct or incorrect argument.
+An <strong>argument</strong> is “a change of reasoning that ends up in a conclusion” (Beecher, 2017).
+Every statement within an argument is called a <strong>proposition</strong>, and it has a <strong>truth value</strong>.
+That is, it is either <strong>true</strong> or <strong>false</strong>.
+Thus, certain expressions like questions (e.g. “are you hungry?”) or commands (e.g. “clean your bedroom!”) cannot be propositions given that they do not have a truth value.</p>
+<p>Below we present a very famous argument in the logic field:</p>
+<ol class="simple">
+<li><p>Socrates is a man.</p></li>
+<li><p>All men are mortal.</p></li>
+<li><p>Therefore, Socrates is mortal.</p></li>
+</ol>
+<p>This argument is composed of three propositions (each one is enumerated).
+These statements are propositions because all of them have a truth value.
+However, you can notice that some of these statements are used to arrive at a conclusion.
+The propositions that form the basis of an argument are known as <strong>premises</strong>.
+In our example, propositions 1 and 2 are premises.
+Lastly, the proposition that is derived from a set of premises is known as a <strong>conclusion</strong>.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Logic studies the formal principles of reasoning, which determine if an argument is correct or not. An argument is a sequence of premises. Each premise is a statement that has a truth value (i.e. true or false).</p>
+</div>
+</aside>
+</section>
+<section id="types-of-arguments-a-class-anchor-id-arguments-a">
+<h2>Types of Arguments <a class="anchor" id="arguments"></a><a class="headerlink" href="#types-of-arguments-a-class-anchor-id-arguments-a" title="Permalink to this headline">#</a></h2>
+<p>Arguments can either be deductive or inductive.</p>
+<section id="deductive-arguments">
+<h3>Deductive Arguments<a class="headerlink" href="#deductive-arguments" title="Permalink to this headline">#</a></h3>
+<p><strong>Deductive</strong> arguments are considered a strong form of reasoning because the conclusion is derived from previous premises. However, deductive arguments can fail in two different scenarios:</p>
+<p><strong>False premises:</strong> One of the premises turns to be false. For example:</p>
+<ol class="simple">
+<li><p>I eat healthy food.</p></li>
+<li><p>Every person eating healthy food is tall.</p></li>
+<li><p>I am tall.</p></li>
+</ol>
+<p>In this example, premise 2 is false. It is not true that every person eating healthy food is tall. Then, this argument fails.</p>
+<p><strong>Faulty logic:</strong> The conclusion is wrongly derived out from the premises. For example:</p>
+<ol class="simple">
+<li><p>All bitterballen are round.</p></li>
+<li><p>The moon is round.</p></li>
+<li><p>The moon is a bitterbal.</p></li>
+</ol>
+<p>In this case, the conclusion presented in premise 3 is false. It is true that bitterballen are round and that the moon is round, but this does not imply that the moon is a bitterbal! By the way, a “bitterbal” is a typical Dutch snack, to be eaten with a good glass of beer!</p>
+</section>
+<section id="inductive-arguments">
+<h3>Inductive Arguments<a class="headerlink" href="#inductive-arguments" title="Permalink to this headline">#</a></h3>
+<p>Although deductive arguments are strong, they follow very stern standards that make them difficult to build. Additionally, the real world usually cannot be seen just in black and white–there are many shades in between. This is where inductive arguments play an important role. <strong>Inductive</strong> arguments do not have an unquestionable truth value. Instead, they deal with <em>probabilities</em> to express the level of confidence in them. Thus, the conclusion of the argument cannot be guaranteed to be true, but you can have a certain confidence in it. An example of an inductive argument comes as follows:</p>
+<ol class="simple">
+<li><p>Every time I go out home it is raining.</p></li>
+<li><p>Tomorrow I will go out from home.</p></li>
+<li><p>Tomorrow it will be raining.</p></li>
+</ol>
+<p>There is no way you can be certain that tomorrow will rain, but given the evidence, there is a high chance that it will be the case. (The chance might be even higher if we mention that we are living in the Netherlands!)</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition-extra admonition">
+<p class="admonition-title">EXTRA</p>
+<p>Arguments can be either deductive or inductive. On the one hand, deductive arguments have premises that have a clear truth value. On the other hand, inductive arguments have premises associated with a level of confidence in them.</p>
+</div>
+</aside>
+</section>
+</section>
+<section id="boolean-logic-a-class-anchor-id-boolean-logic-a">
+<h2>4. Boolean Logic <a class="anchor" id="boolean-logic"></a><a class="headerlink" href="#boolean-logic-a-class-anchor-id-boolean-logic-a" title="Permalink to this headline">#</a></h2>
+<p>Given their binary nature, computers are well suited to deal with deductive reasoning (rather than inductive). To allow them to reason about the correctness of an argument, we use Boolean logic. <strong>Boolean logic</strong> is a form of logic that deals with deductive arguments–that is, arguments having propositions with a truth value that is either true or false. Boolean logic or Boolean algebra was introduced by George Boole (that is why it is called Boolean) in his book “The Mathematical Analysis of Logic” in 1847. It deals with <strong>binary variables</strong> (with true or false values) representing propositions and logical operations on them.</p>
+<section id="logical-operators">
+<h3>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">#</a></h3>
+<p>The main logical operators used in Boolean logic to connect propositions are:</p>
+<ol class="simple">
+<li><p><strong>And</strong> operator: It is also known as the <em>conjunction</em> operator. It chains premises in such a way that <em>all</em> of them must be true for the conclusion to be true.</p></li>
+<li><p><strong>Or</strong> operator: It is also known as the <em>disjunction</em> operator. It connects premises in such a way that <em>at least one</em> of them must be true for the conclusion to be true.</p></li>
+<li><p><strong>Not</strong> operator: It is also known as the <em>negation</em> operator. It modifies the value of a proposition by <em>flipping</em> its truth value.</p></li>
+</ol>
+<img src="assets/logical-operators.jpeg" alt="Venn diagrams of logical operators" width="600"/>
+<div style="text-align:center">
+    <span style="font-size:0.9em; font-weight: bold;">Venn diagrams of the <em>and</em>, <em>or</em>, and <em>not</em> logical operators.</span>
+</div>
+<br>
+<p>In Boolean logic, propositions are usually represented as letters or <em>variables</em> (see previous figure). For instance, going back to our Socrates argument, we can represent the three propositions as follows:</p>
+<ul class="simple">
+<li><p><strong>P:</strong> Socrates is a man.</p></li>
+<li><p><strong>Q:</strong> All men are mortal.</p></li>
+<li><p><strong>R:</strong> Therefore, Socrates is mortal.</p></li>
+</ul>
+<p>In order for R to be true, P and Q most be true.</p>
+</section>
+</section>
 <section id="boolean-expressions">
 <h2>Boolean Expressions<a class="headerlink" href="#boolean-expressions" title="Permalink to this headline">#</a></h2>
+<p>Let us now see how Boolean logic is supported in Python!</p>
 <p>A <strong>boolean expression</strong> is an expression that yields either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p>The following examples use the operator <code class="docutils literal notranslate"><span class="pre">==</span></code> to compare the values of two expressions.</p>
-<p>The result is <code class="docutils literal notranslate"><span class="pre">True</span></code> if the values are the same, otherwise the result is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>The following examples use the operator <code class="docutils literal notranslate"><span class="pre">==</span></code> to compare the values of two expressions.
+The result is <code class="docutils literal notranslate"><span class="pre">True</span></code> if the values are the same, otherwise the result is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">==</span> <span class="mi">5</span>
@@ -663,7 +857,7 @@ title="Print to PDF"
 </div>
 </div>
 </div>
-<p>Beside the relational operator <code class="docutils literal notranslate"><span class="pre">==</span></code> we have</p>
+<p>Besides the relational operator <code class="docutils literal notranslate"><span class="pre">==</span></code> we have</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-align:left head"><p><strong>Operator</strong></p></th>
@@ -694,15 +888,40 @@ a double equal sign (<code class="docutils literal notranslate"><span class="pre
 <p>Remember that <code class="docutils literal notranslate"><span class="pre">=</span></code> is an assignment operator and <code class="docutils literal notranslate"><span class="pre">==</span></code> is a relational
 operator.</p>
 </section>
-<section id="logical-operators">
-<h2>Logical Operators<a class="headerlink" href="#logical-operators" title="Permalink to this headline">#</a></h2>
-<p>There are three logical operators: <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code>.</p>
-<p>The semantics (meaning) of these operators is similar to their meaning in English.</p>
-<p>For example, <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code>
-only if <code class="docutils literal notranslate"><span class="pre">x</span></code> is greater than <code class="docutils literal notranslate"><span class="pre">0</span></code> <em>and</em> less than <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
+<section id="id2">
+<h2>Logical Operators<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
+<p>There are the three Python logical operators: <code class="docutils literal notranslate"><span class="pre">and</span></code>, <code class="docutils literal notranslate"><span class="pre">or</span></code>, and <code class="docutils literal notranslate"><span class="pre">not</span></code>.
+The semantics (meaning) of these operators is the same one as the one presented in the <a class="reference external" href="#boolean-logic">Boolean Logic</a> section.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>Operator</p></th>
+<th class="text-align:center head"><p>Technical name</p></th>
+<th class="text-align:center head"><p>Math symbol</p></th>
+<th class="text-align:center head"><p>Python construct</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>And</p></td>
+<td class="text-align:center"><p>Conjunction</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\land\)</span></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">and</span></code></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>Or</p></td>
+<td class="text-align:center"><p>Disjunction</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\lor\)</span></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">or</span></code></p></td>
+</tr>
+<tr class="row-even"><td class="text-align:center"><p>Not</p></td>
+<td class="text-align:center"><p>Negation</p></td>
+<td class="text-align:center"><p><span class="math notranslate nohighlight">\(\lnot\)</span></p></td>
+<td class="text-align:center"><p><code class="docutils literal notranslate"><span class="pre">not</span></code></p></td>
+</tr>
+</tbody>
+</table>
+<p>They can be used in combination with Boolean expressions, as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">9</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">9</span>
 <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span>
 </pre></div>
 </div>
@@ -713,11 +932,11 @@ only if <code class="docutils literal notranslate"><span class="pre">x</span></c
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0</span> <span class="pre">or</span> <span class="pre">n</span> <span class="pre">%</span> <span class="pre">3</span> <span class="pre">==</span> <span class="pre">0</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>either one or both</em> of the conditions are <code class="docutils literal notranslate"><span class="pre">True</span></code>, that is, if the number
+<p><code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">%</span> <span class="pre">2</span> <span class="pre">==</span> <span class="pre">0</span> <span class="pre">or</span> <span class="pre">n</span> <span class="pre">%</span> <span class="pre">3</span> <span class="pre">==</span> <span class="pre">0</span></code> is <code class="docutils literal notranslate"><span class="pre">True</span></code> if <em>either one or both</em> of the conditions are <code class="docutils literal notranslate"><span class="pre">True</span></code>—that is, if the number
 is divisible by <code class="docutils literal notranslate"><span class="pre">2</span></code> <em>or</em> <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">27</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">27</span>
 <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span>
 </pre></div>
 </div>
@@ -732,8 +951,8 @@ is divisible by <code class="docutils literal notranslate"><span class="pre">2</
 <code class="docutils literal notranslate"><span class="pre">False</span></code>, that is, if <code class="docutils literal notranslate"><span class="pre">x</span></code> is less than or equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">15</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -744,12 +963,12 @@ is divisible by <code class="docutils literal notranslate"><span class="pre">2</
 </div>
 </div>
 </div>
-<p>Strictly speaking, the operands of the logical operators should be boolean expressions, but Python is not very strict.</p>
-<p>Any nonzero number is interpreted as <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
-<p>This flexibility can be useful, but there are some subtleties to it that might be confusing.</p>
-<p>You might want to avoid it (unless you know what you are doing).</p>
-<p>If you use the boolean operators in the same expression you have to beware of the order of the boolean operators.</p>
-<p>The order is as follows: <code class="docutils literal notranslate"><span class="pre">not</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">or</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">and</span></code>, again if in doubt <em>use brackets!</em></p>
+<p>Strictly speaking, the operands of the logical operators should be Boolean expressions, but Python is not very strict.
+Any non-zero number is interpreted as <code class="docutils literal notranslate"><span class="pre">True</span></code>.
+This flexibility can be useful, but there are some subtleties to it that might be confusing.
+You might want to avoid it (unless you know what you are doing).</p>
+<p>If you use the Boolean operators in the same expression you have to beware of their precedence order.
+The order is as follows: <code class="docutils literal notranslate"><span class="pre">not</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">or</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">and</span></code>, again if in doubt <em>use brackets!</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span>
@@ -777,15 +996,16 @@ is divisible by <code class="docutils literal notranslate"><span class="pre">2</
 </section>
 <section id="conditional-execution">
 <h2>Conditional Execution<a class="headerlink" href="#conditional-execution" title="Permalink to this headline">#</a></h2>
-<p>In order to write useful programs, we almost always need the ability to check conditions
-and change the behavior of the program accordingly. Conditions allow us to change the execution flow in a program.</p>
-<p><strong>Conditional statements</strong> provide us this functionality.</p>
-<p>The simplest form is the <strong>if statement</strong>.</p>
+<p>In order to write useful programs, under certain situations, we need to check if a set of conditions are fulfilled and change the behavior of the program accordingly.
+Conditions allow us to change the execution flow in a program.</p>
+<p><strong>Conditional statements</strong> provide us with this functionality.
+The simplest form of a conditional statement is the <strong>if statement</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is positive&#39;</span><span class="p">)</span>
+    
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is an integer value&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -797,16 +1017,17 @@ x is an integer value
 </div>
 </div>
 </div>
-<p>The boolean expression after the <code class="docutils literal notranslate"><span class="pre">if</span></code> is called the <strong>condition</strong>.</p>
-<p>If it is true, the indented statement is being executed.</p>
-<p>If statements have the same structure as function definitions: a header followed by an indented body.</p>
-<p>Statements like this are called <strong>compound statements</strong>.</p>
+<p>The Boolean expression after the <code class="docutils literal notranslate"><span class="pre">if</span></code> keyword is called the <strong>condition</strong>.
+If it is true, then the indented statement is being executed.</p>
+<p>If statements have a header (aka. condition) followed by an indented body.
+Statements like this are called <strong>compound statements</strong>.</p>
 <p>What is printed when executing the following cells?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is negative&#39;</span><span class="p">)</span>
+    
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello Data Scientists&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -819,9 +1040,10 @@ x is an integer value
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is negative&#39;</span><span class="p">)</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello Data Scientists&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -835,10 +1057,10 @@ x is an integer value
 </div>
 </div>
 </div>
-<p>Where “normal” programming languages use brackets, for instance <code class="docutils literal notranslate"><span class="pre">{</span></code> and <code class="docutils literal notranslate"><span class="pre">}</span></code> in C or Java, Python uses <strong>indentation</strong> to group lists of instruction <em>blocks</em>.</p>
+<p>Where other programming languages use brackets, for instance <code class="docutils literal notranslate"><span class="pre">{</span></code> and <code class="docutils literal notranslate"><span class="pre">}</span></code> in C or Java, Python uses <strong>indentation</strong> to group lists of instruction <em>blocks</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is negative&#39;</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello Data Scientists&#39;</span><span class="p">)</span>
@@ -857,15 +1079,51 @@ x is an integer value
 </div>
 </div>
 </div>
+<p>Sometimes conditionals are not really needed; using a Boolean expression is sufficient.
+Having unneeded language constructs (e.g. conditionals) can negatively impact the readability of your code.</p>
+<p>Let us see an example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change the truth values of p and q to see how the conclusion r changes</span>
+<span class="n">p</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">q</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">r</span><span class="p">:</span> <span class="nb">bool</span>
+
+<span class="k">if</span> <span class="n">p</span> <span class="ow">and</span> <span class="n">q</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="kc">False</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The previous translation to Python code of the deductive argument is correct, however, we can get rid of the conditional statement! Let us see.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change the truth values of p and q to see how the conclusion r changes</span>
+<span class="n">p</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">q</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">r</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">p</span> <span class="ow">and</span> <span class="n">q</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="alternative-execution">
 <h2>Alternative Execution<a class="headerlink" href="#alternative-execution" title="Permalink to this headline">#</a></h2>
-<p>There is yet another if statement, namely to represent <strong>alternative execution</strong>.</p>
-<p>There are 2 alternatives to execute and the evaluation of the expression determines which alternative
-needs to be executed.</p>
+<p>There is yet another if statement to represent an <strong>alternative execution</strong>.
+This statement is calles an if-else statement.
+There are 2 alternatives to execute and the evaluation of the expression determines which alternative
+needs to be executed.
+If the condition is true the body of the <code class="docutils literal notranslate"><span class="pre">if</span></code> section will be executed.
+However, if the condition is false, the body of the <code class="docutils literal notranslate"><span class="pre">else</span></code> section will be executed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">23</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">23</span>
 
 <span class="k">if</span>  <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is even&#39;</span><span class="p">)</span>
@@ -889,12 +1147,15 @@ needs to be executed.</p>
 </section>
 <section id="chained-conditionals">
 <h2>Chained Conditionals<a class="headerlink" href="#chained-conditionals" title="Permalink to this headline">#</a></h2>
-<p>Sometimes there are more than 2 alternatives.</p>
-<p>In that case you can use a <strong>chained conditional</strong>.</p>
+<p>Sometimes there are more than 2 alternatives.
+In that case you can use a <strong>chained conditional</strong>.
+A chained contidional starts with the well-known <code class="docutils literal notranslate"><span class="pre">if</span></code> section, it ends with the <code class="docutils literal notranslate"><span class="pre">else</span></code> one, and all othar alternative executions placed in the middle, are preceeded by an <code class="docutils literal notranslate"><span class="pre">elif</span></code> section.
+<code class="docutils literal notranslate"><span class="pre">elif</span></code> is an abbreviation of <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code>.
+After the <code class="docutils literal notranslate"><span class="pre">elif</span></code> keyword you should always define a new Boolean expression.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">y</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
 
 <span class="k">if</span>  <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is less than y&#39;</span><span class="p">)</span>
@@ -906,8 +1167,7 @@ needs to be executed.</p>
 </div>
 </div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">elif</span></code> is an abbreviation of <code class="docutils literal notranslate"><span class="pre">else</span> <span class="pre">if</span></code>.</p>
-<p>Every condition is checked from top to bottom and as soon as one succeeds the corresponding branch is
+<p>Conditions in a chained condition are checked from top to bottom, and as soon as one succeeds the corresponding branch is
 executed and the conditional terminates.</p>
 <p>If more than one condition evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> only the first branch for which the condition succeeds is executed.</p>
 <div class="seealso dropdown admonition">
@@ -924,13 +1184,14 @@ executed and the conditional terminates.</p>
 </section>
 <section id="nested-conditionals">
 <h2>Nested Conditionals<a class="headerlink" href="#nested-conditionals" title="Permalink to this headline">#</a></h2>
-<p>One conditional can also be nested within another.</p>
+<p>One conditional can also be nested within another.
+That is, you can have a contidional statement within the body of one of the alternative executions of a conditional.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
 
-<span class="k">if</span>  <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x and y are equal&#39;</span><span class="p">)</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
@@ -941,24 +1202,23 @@ executed and the conditional terminates.</p>
 </div>
 </div>
 </div>
-<p>The outer conditional contains two branches.</p>
-<p>The first branch contains a simple statement.</p>
-<p>The second branch contains another <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, which has two branches of its own.</p>
+<p>In the prvious example, the outer conditional contains two branches.
+The first branch contains a simple statement that prints the message “x and y are equal”.
+The second branch contains another <code class="docutils literal notranslate"><span class="pre">if</span></code> statement, which has two branches of its own.</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition-extra admonition">
 <p class="admonition-title">EXTRA</p>
 <p>Although the indentation of the statements makes the structure apparent, <strong>nested conditionals</strong>
-become difficult to read very quickly.</p>
+become difficult to read very quickly. It is a good idea to avoid them whenever you can.
+Logical operators often provide a way to simplify nested conditional statements.</p>
 </div>
 </aside>
-<p>It is a good idea to avoid them whenever you can.</p>
-<p>Logical operators often provide a way to simplify nested conditional statements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
 
-<span class="k">if</span>  <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="p">:</span>
+<span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
     <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
         <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is a positive single-digit number&#39;</span><span class="p">)</span>
 </pre></div>
@@ -968,7 +1228,7 @@ become difficult to read very quickly.</p>
 <p>We can <strong>refactor</strong> this nested conditional by introducing the <code class="docutils literal notranslate"><span class="pre">and</span></code> operator in the logical expression.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
 
 <span class="k">if</span>  <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is a positive single-digit number&#39;</span><span class="p">)</span>
@@ -979,17 +1239,10 @@ become difficult to read very quickly.</p>
 <p>We can <strong>refactor</strong> this nested conditional by merging the two conditions into <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>
 
-<span class="k">if</span>  <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
+<span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is a positive single-digit number&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Do something!&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1020,26 +1273,31 @@ become difficult to read very quickly.</p>
 </section>
 <section id="catching-exceptions">
 <h2>Catching Exceptions<a class="headerlink" href="#catching-exceptions" title="Permalink to this headline">#</a></h2>
-<p>The following program request you to enter your age. Then, it parses the input as an integer. But what does it happen if you introduce a string instead of a number?</p>
+<p>The following program requests you to enter your age.
+Then, it parses the input as an integer.
+But what does happen if you introduce a string that cannot be converted into a number?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your age? &#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your age? &#39;</span><span class="p">)</span>
 <span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <p>Indeed, you get an error or exception.</p>
-<p>Python can help you handle these cases to end the program gracefully, or continue trhough an alternative path. The construct that handles errors is called <strong>try/except</strong>.</p>
-<p>We use the try/except when we know that a sequence of instructions might introduce an error (placed in the <strong>try</strong> section) and you want to execute other sequence in case the problem rises (placed in the <strong>except</strong> section). If no error appears, the except section is ignored.</p>
-<p><strong>Catching</strong> is the action of handling an exception.</p>
-<p>Now, let’s rewrite our previous example with the try/except construct.</p>
+<p>Python can help you handle these cases to end the program gracefully, or continue through an alternative path.
+The construct that handles errors is called <strong>try-except</strong>.</p>
+<p>We use the try-except statement when we know that a sequence of instructions might introduce an error (placed in the <strong>try</strong> section) and you want to execute other sequence in case the problem rises (placed in the <strong>except</strong> section).
+If no error appears, the except section is ignored.
+<strong>Catching</strong> is the action of handling an exception.</p>
+<p>Now, let us rewrite our previous example with the try/except construct.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your age? &#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your age? &#39;</span><span class="p">)</span>
 
-<span class="k">try</span><span class="p">:</span> 
-     <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="c1"># The int(age) call can rise an exception</span>
+    <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
 <span class="k">except</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You should introduce a number!&#39;</span><span class="p">)</span>
 </pre></div>
@@ -1061,14 +1319,17 @@ become difficult to read very quickly.</p>
 <section id="short-circuit-evaluation-of-logical-expressions">
 <h2>Short-circuit Evaluation of Logical Expressions<a class="headerlink" href="#short-circuit-evaluation-of-logical-expressions" title="Permalink to this headline">#</a></h2>
 <p>When Python processes a logical expression, it does it from left to right.</p>
-<p>So, for the expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> it will first process <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> and then <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;10</span></code>.</p>
-<p>However, if it happens that <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">-1</span></code>, the first expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> will be equal to <code class="docutils literal notranslate"><span class="pre">False</span></code> and tthen there is no point to evaluate the second expression. By definition, if one of the expression of an <code class="docutils literal notranslate"><span class="pre">and</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, the whole expression is also <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
-<p>Python avoids processing extra expressions when the result is already known. This is know as <strong>short-circuiting</strong> the evaluation.</p>
-<p>Short-circuiting the evaluation lead to a useful technique known as the <strong>guard pattern</strong>. Let’s see why it is needed with the following example.</p>
+<p>So, for the expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span> <span class="pre">and</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code> it will first process <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> and then <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code>.</p>
+<p>However, if it happens that <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">-1</span></code>, the first expression <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> will be equal to <code class="docutils literal notranslate"><span class="pre">False</span></code> and then there is no point to evaluate the second expression.
+By definition, if one of the expression of an <code class="docutils literal notranslate"><span class="pre">and</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>, the whole expression is also <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>Python avoids processing extra expressions when the result is already known.
+This is know as <strong>short-circuiting</strong> the evaluation.
+Short-circuiting the evaluation lead to a useful technique known as the <strong>guard pattern</strong>.
+Let us see why it is needed with the following example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
 
 <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">2</span>
 </pre></div>
@@ -1078,30 +1339,33 @@ become difficult to read very quickly.</p>
 <p>Everything works fine until now. But what does it happen if we change the value of <code class="docutils literal notranslate"><span class="pre">y</span></code> to <code class="docutils literal notranslate"><span class="pre">0</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">2</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Yes. We get an error because you cannot have <code class="docutils literal notranslate"><span class="pre">0</span></code> as a denominator in a division. We can use the guard pattern to place a <strong>guard</strong> expression that let us check if <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">!=</span> <span class="pre">0</span></code>. Let’s see what happens now.</p>
+<p>We get an error because you cannot have <code class="docutils literal notranslate"><span class="pre">0</span></code> as a denominator in a division.
+We can use the guard pattern to place a <strong>guard</strong> expression that let us check if <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">!=</span> <span class="pre">0</span></code>.
+Let us see what happens now.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
 
 <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">2</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>No errors now because Python stops evaluating expressions when it notices that <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">!=</span> <span class="pre">0</span> <span class="pre">==</span> <span class="pre">False</span></code>. And this is the beauty of using the guard pattern.</p>
+<p>No errors appear now because Python stops evaluating expressions when it notices that <code class="docutils literal notranslate"><span class="pre">y</span> <span class="pre">!=</span> <span class="pre">0</span> <span class="pre">==</span> <span class="pre">False</span></code>.
+And this is the beauty of using the guard pattern!</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
-<dd><p>This Jupyter Notebook is based on Chapter 3 and 5 of <span id="id2">[<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Sev16</a>]</span>; and Chapter 5 and 7 of <span id="id3">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
+<dd><p>This Jupyter Notebook is based on Chapter 3 and 5 of <span id="id3">[<a class="reference internal" href="../intro.html#id8" title="C.R. Severance. Python for everybody: exploring data using python 3. Creative Commons, 2016.">Sev16</a>]</span>; and Chapter 5 and 7 of <span id="id4">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
 </dd>
 </dl>
 </section>
@@ -1138,7 +1402,7 @@ become difficult to read very quickly.</p>
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Variables, expressions and assignments </p>
+            <p class="prev-next-title">Variables, Expressions, and Assignments </p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="iteration.html" title="next page">

@@ -17,9 +17,10 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-x = 1
+x: int = 1
 if x < 0:
 print('x is negative')
+
 print('Hello Data Scientists')
 ------------------
 
@@ -28,5 +29,5 @@ print('Hello Data Scientists')
 [0m    ^[0m
 [0;31mIndentationError[0m[0;31m:[0m expected an indented block
 
-IndentationError: expected an indented block (80713609.py, line 3)
+IndentationError: expected an indented block (1122604160.py, line 3)
 
