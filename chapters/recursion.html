@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Recursion [^intro] &#8212; Learning Python by doing</title>
+    <title>Recursion &#8212; Learning Python by doing</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Searching [^intro]" href="searching.html" />
+    <link rel="next" title="Searching" href="searching.html" />
     <link rel="prev" title="Inheritance" href="inheritance.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
@@ -221,17 +221,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Recursion [^intro]
+   Recursion
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="searching.html">
-   Searching [^intro]
+   Searching
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="sorting.html">
-   Sorting [^intro]
+   Sorting
   </a>
  </li>
 </ul>
@@ -513,28 +513,23 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of Contents
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#recursion">
-   1. Recursion
+  <a class="reference internal nav-link" href="#id2">
+   Recursion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#infinite-recursion">
-   2. Infinite Recursion
+   Infinite Recursion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-recursion">
-   3. More Recursion
+   More Recursion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-recursion-examples">
-   4. More Recursion Examples
+   More Recursion Examples
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -546,7 +541,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#memos">
-   5. Memos
+   Memos
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -570,7 +565,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Recursion [^intro]</h1>
+                <h1>Recursion </h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -581,28 +576,23 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of Contents
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#recursion">
-   1. Recursion
+  <a class="reference internal nav-link" href="#id2">
+   Recursion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#infinite-recursion">
-   2. Infinite Recursion
+   Infinite Recursion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-recursion">
-   3. More Recursion
+   More Recursion
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#more-recursion-examples">
-   4. More Recursion Examples
+   More Recursion Examples
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -614,7 +604,7 @@ title="Print to PDF"
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#memos">
-   5. Memos
+   Memos
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -639,36 +629,14 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="recursion-intro">
-<h1>Recursion [^intro]<a class="headerlink" href="#recursion-intro" title="Permalink to this headline">#</a></h1>
-<p>This Jupyter Notebook is based on Chapter 5 and 6 of the book Think Python.</p>
-<p><em>(c) 2021, Mark van den Brand, Eindhoven University of Technology</em></p>
-<section id="table-of-contents">
-<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">#</a></h2>
-<div class="toc" style="margin-top: 1em;">
-    <ul class="toc-item">
-        <li>
-            <span><a href="#1.-Recursion" data-toc-modified-id="1.-Recursion">1. Recursion</a></span>
-        </li>
-        <li>
-            <span><a href="#2.-Infinite-Recursion" data-toc-modified-id="2.-Infinite-Recursion">2. Infinite Recursion</a></span>
-        </li>
-        <li>
-            <span><a href="#3.-More-Recursion" data-toc-modified-id="3.-More-Recursion">3. More Recursion</a></span>
-        </li>
-        <li>
-            <span><a href="#4.-More-Recursion-Examples" data-toc-modified-id="4.-More-Recursion-Examples">4. More Recursion Examples</a></span>
-        </li>
-        <li>
-            <span><a href="#5.-Memos" data-toc-modified-id="5.-Memos">5. Memos</a></span>
-        </li>
-    </ul>
-</div></section>
-<section id="recursion">
-<h2>1. Recursion<a class="headerlink" href="#recursion" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="recursion">
+<h1>Recursion <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#recursion" title="Permalink to this headline">#</a></h1>
+<section id="id2">
+<h2>Recursion<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>One of the most powerful but also intriguing features of a programming is <strong>recursion</strong>.</p>
 <p>An extremely simple definition of recursion is defining a computation in terms of itself.</p>
-<img src="assets/munchausen.jpg" width=400 height=400 /><p>If translated to our Python world, one could say that you define a function in terms of itself.
+<a class="reference internal image-reference" href="../_images/munchausen.jpg"><img alt="../_images/munchausen.jpg" class="align-center" src="../_images/munchausen.jpg" style="width: 400px;" /></a>
+<p>If translated to our Python world, one could say that you define a function in terms of itself.
 That is, in the definition of the function body a function call to the function you are defining is used.</p>
 <p>Let us make this more concrete by means of a simple example.</p>
 <div class="cell docutils container">
@@ -750,10 +718,11 @@ to the caller, and the remaining lines of the function are not executed.</p>
 <p>For simple examples like this, it is probably easier to use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
 <p>But we will come across examples that are much harder to write with a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop than with recursion, for instance calculating the <strong>factorials</strong> or the <strong>fibonacci numbers</strong>, see later.</p>
 <p>However, some care is needed! It is very easy to create a recursive function that does not terminate, it is as easy as creating a loop that does not terminate, when does a loop not terminate?</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Create the recursive version of the function <i>sum_digits</i>. As before, the function takes a number as input and returns the sum of all the digits of such number. For instance, the output for the input 13450 is 13. 
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create the recursive version of the function <i>sum_digits</i>. As before, the function takes a number as input and returns the sum of all the digits of such number. For instance, the output for the input 13450 is 13.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -762,7 +731,7 @@ to the caller, and the remaining lines of the function are not executed.</p>
 </div>
 </section>
 <section id="infinite-recursion">
-<h2>2. Infinite Recursion<a class="headerlink" href="#infinite-recursion" title="Permalink to this headline">#</a></h2>
+<h2>Infinite Recursion<a class="headerlink" href="#infinite-recursion" title="Permalink to this headline">#</a></h2>
 <p>Recursion is very powerful and convenient, but there is also a risk, we have to ensure that the recursion terminates.</p>
 <p>So, as a programmer you have to take care of formulating a correct <strong>base case</strong> that terminates the recursion.</p>
 <p>If you consider both the <code class="docutils literal notranslate"><span class="pre">countdown</span></code> and the <code class="docutils literal notranslate"><span class="pre">print_n</span></code> function you will see that the base case is formulated as
@@ -795,12 +764,13 @@ there is a base case that does not make a recursive call.</p>
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Which is the base case of the recursive function <i>sum_digits</i>? 
-</div></section>
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Which is the base case of the recursive function <i>sum_digits</i>?</p>
+</div>
+</section>
 <section id="more-recursion">
-<h2>3. More Recursion<a class="headerlink" href="#more-recursion" title="Permalink to this headline">#</a></h2>
+<h2>More Recursion<a class="headerlink" href="#more-recursion" title="Permalink to this headline">#</a></h2>
 <p>A recursive definition is similar to a circular definition,
 in the sense that the definition contains a reference to the thing being defined.</p>
 <p>In normal life, this does not make much sense, but when programming it is extremely handy.</p>
@@ -919,10 +889,11 @@ the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multi
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Add at least two tests to check the output of the <i>sum_digits</i> function. Check the base case output and other arbitrary case. Verify the output given by the <i>doctest</i> module.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Add at least two tests to check the output of the <i>sum_digits</i> function. Check the base case output and other arbitrary case. Verify the output given by the <i>doctest</i> module.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -931,7 +902,7 @@ the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multi
 </div>
 </section>
 <section id="more-recursion-examples">
-<h2>4. More Recursion Examples<a class="headerlink" href="#more-recursion-examples" title="Permalink to this headline">#</a></h2>
+<h2>More Recursion Examples<a class="headerlink" href="#more-recursion-examples" title="Permalink to this headline">#</a></h2>
 <p>Yet another famous recursive mathematical function is the <code class="docutils literal notranslate"><span class="pre">fibonacci</span></code> function.</p>
 <p>Growth of trees, biological ones, follow this principle.</p>
 <p><code class="docutils literal notranslate"><span class="pre">fibonacci(0)</span> <span class="pre">=</span> <span class="pre">0</span></code></p>
@@ -1007,10 +978,12 @@ the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multi
 </div>
 <p>Many Fibonacci values get <strong>recomputed</strong> over and over again.</p>
 <p>Keep in mind that there are only 35 Fibonacci values smaller than <code class="docutils literal notranslate"><span class="pre">fib(35)</span></code>.</p>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Create the recursive function <i>countup</i>, which takes an integer as parameter and prints numbers from 1 until the input number in a recursive way.
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Create the recursive function <i>countup</i>, which takes an integer as parameter and prints numbers from 1 until the input number in a
+recursive way.</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
 </pre></div>
@@ -1025,7 +998,8 @@ the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multi
 <li><p>Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack i.e. a disk can only be moved if it is the uppermost disk on a stack.</p></li>
 <li><p>No disk may be placed on top of a smaller disk.</p></li>
 </ol>
-<img src="assets/tower-of-hanoi.png" width=400 height=400 /><div class="cell docutils container">
+<a class="reference internal image-reference" href="../_images/tower-of-hanoi.png"><img alt="../_images/tower-of-hanoi.png" class="align-center" src="../_images/tower-of-hanoi.png" style="width: 400px;" /></a>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">towers_of_hanoi</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span> <span class="p">,</span> <span class="n">source</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">destination</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">auxiliary</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
 <span class="c1">#    print(&quot;n = &quot;, n, &quot;src = &quot;, source, &quot;dst = &quot;, destination, &quot;aux = &quot;, auxiliary)</span>
@@ -1048,7 +1022,7 @@ the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multi
 </section>
 </section>
 <section id="memos">
-<h2>5. Memos<a class="headerlink" href="#memos" title="Permalink to this headline">#</a></h2>
+<h2>Memos<a class="headerlink" href="#memos" title="Permalink to this headline">#</a></h2>
 <section id="inefficiency-in-recursive-definitions">
 <h3>Inefficiency in recursive definitions<a class="headerlink" href="#inefficiency-in-recursive-definitions" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
@@ -1111,6 +1085,12 @@ memoizing intermediate values.</p>
 <p>If the result is already there, it can return immediately.</p>
 <p>Otherwise it has to compute the new value, add it to the dictionary, and
 return it.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on Chapters 5 and 6 of the book Think Python <span id="id3">[<a class="reference internal" href="../intro.html#id7" title="Allen B. Downey. Think Python. O'Reilly, Beijing ;, second edition. edition, 2015. ISBN 9781491939369 1491939362.">Dow15</a>]</span>.</p>
+</dd>
+</dl>
 </section>
 </section>
 </section>
@@ -1152,7 +1132,7 @@ return it.</p>
     <a class='right-next' id="next-link" href="searching.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Searching [^intro]</p>
+        <p class="prev-next-title">Searching </p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

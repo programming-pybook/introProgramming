@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Sorting [^intro] &#8212; Learning Python by doing</title>
+    <title>Sorting &#8212; Learning Python by doing</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -55,7 +55,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Computational Thinking" href="computational_thinking.html" />
-    <link rel="prev" title="Searching [^intro]" href="searching.html" />
+    <link rel="prev" title="Searching" href="searching.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -221,17 +221,17 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="recursion.html">
-   Recursion [^intro]
+   Recursion
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="searching.html">
-   Searching [^intro]
+   Searching
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Sorting [^intro]
+   Sorting
   </a>
  </li>
 </ul>
@@ -513,13 +513,8 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of Contents
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sorting">
-   4. Sorting
+  <a class="reference internal nav-link" href="#id2">
+   Sorting
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -553,7 +548,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Sorting [^intro]</h1>
+                <h1>Sorting </h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -564,13 +559,8 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#table-of-contents">
-   Table of Contents
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#sorting">
-   4. Sorting
+  <a class="reference internal nav-link" href="#id2">
+   Sorting
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -605,21 +595,10 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="sorting-intro">
-<h1>Sorting [^intro]<a class="headerlink" href="#sorting-intro" title="Permalink to this headline">#</a></h1>
-<p>This Jupyter Notebook is based on external content related to algorithms (e.g. searching and sorting).</p>
-<p><em>(c) 2021, Mark van den Brand, Eindhoven University of Technology</em></p>
-<section id="table-of-contents">
-<h2>Table of Contents<a class="headerlink" href="#table-of-contents" title="Permalink to this headline">#</a></h2>
-<div class="toc" style="margin-top: 1em;">
-    <ul class="toc-item">
-        <li>
-            <span><a href="#4.-Sorting" data-toc-modified-id="4.-Sorting">4. Sorting</a></span>
-        </li>
-    </ul>
-</div></section>
-<section id="sorting">
-<h2>4. Sorting<a class="headerlink" href="#sorting" title="Permalink to this headline">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="sorting">
+<h1>Sorting <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#sorting" title="Permalink to this headline">#</a></h1>
+<section id="id2">
+<h2>Sorting<a class="headerlink" href="#id2" title="Permalink to this headline">#</a></h2>
 <p>Sorting is an operation that you need to perform frequently. There are multiple sorting algorithms, such as bubble sort, insertion sort, merge sort, quick sort, etc. Each algorithm has a different time complexity, this means the amount of time need to sort an array.</p>
 <p>Of course, Python offers built-in functions for sorting, e.g. <code class="docutils literal notranslate"><span class="pre">list.sort()</span></code>.</p>
 <p>But it is good to understand the basic principles of various sorting algorithms.</p>
@@ -888,7 +867,7 @@ Test passed.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The binary search code took 10425.82ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The binary search code took 11733.70ms
 </pre></div>
 </div>
 </div>
@@ -1041,10 +1020,10 @@ Test passed.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The binary search code took 10480.16ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The binary search code took 11913.24ms
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion search code took 6020.75ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion search code took 6809.62ms
 lst1 == lst2
 </pre></div>
 </div>
@@ -1257,11 +1236,11 @@ Test passed.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bubble sort took 10645.29ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bubble sort took 12073.38ms
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion sort took 6079.61ms
-The merge sort took 51.69ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion sort took 6776.39ms
+The merge sort took 54.70ms
 lst1 == lst2
 lst1 == lst3
 </pre></div>
@@ -1544,13 +1523,13 @@ Test passed.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bubble sort took 10692.02ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bubble sort took 11498.08ms
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion sort took 6043.91ms
-The merge sort took 48.81ms
-The quick sort took 28.79ms
-The python sort took 1.44ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion sort took 6521.39ms
+The merge sort took 52.88ms
+The quick sort took 30.36ms
+The python sort took 1.60ms
 lst1 == lst2
 lst1 == lst3
 lst1 == rdlst1
@@ -1559,10 +1538,11 @@ lst1 == rdlst2
 </div>
 </div>
 </div>
-<div class="alert alert-success">
-    <b>Do It Yourself!</b><br>
-    Use the four functions to sort an array of integers and profile each one of them. Create a copy of the list otherwise you will end up sorting the same list. What is the difference among each algorithm?
-</div><div class="cell docutils container">
+<div class="seealso dropdown admonition">
+<p class="admonition-title">Do It Yourself!</p>
+<p>Use the four functions to sort an array of integers and profile each one of them. Create a copy of the list otherwise you will end up sorting the same list. What is the difference among each algorithm?</p>
+</div>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
 
@@ -1572,6 +1552,12 @@ lst1 == rdlst2
 </div>
 </div>
 <p><strong>Advice:</strong> when writing code always make sure that the code is correct (via testing for instance) before starting optimizing.</p>
+<hr class="footnotes docutils" />
+<dl class="footnote brackets">
+<dt class="label" id="intro"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>This Jupyter Notebook is based on external content related to algorithms (e.g. searching and sorting).</p>
+</dd>
+</dl>
 </section>
 </section>
 </section>
@@ -1607,7 +1593,7 @@ lst1 == rdlst2
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Searching [^intro]</p>
+            <p class="prev-next-title">Searching </p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="computational_thinking.html" title="next page">
