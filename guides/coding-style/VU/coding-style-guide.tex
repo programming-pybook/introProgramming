@@ -1,4 +1,4 @@
-\documentclass{tufte-handout}
+\documentclass[nobib]{tufte-handout}
 
 \title{Coding Style Guide}%thanks{Inspired by Edward~R. Tufte!}}
 
@@ -18,6 +18,9 @@
 \usepackage{lipsum}   % filler text
 \usepackage{fancyvrb} % extended verbatim environments
   \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
+\usepackage{hyperref}
+\hypersetup{colorlinks}
+\usepackage{natbib}
 
 % Standardize command font styles and environments
 \newcommand{\doccmd}[1]{\texttt{\textbackslash#1}}% command name -- adds backslash automatically
@@ -46,6 +49,7 @@
 
 \begin{document}
 
+
 \maketitle% this prints the handout title, author, and date
 
 \begin{marginfigure}[-4cm]%
@@ -58,7 +62,7 @@ The following mild coding standard ensures
 easily readable and modifiable Python source code.
 This standard is based on~\cite{CodeConventions:2001},
 where much more detailed rules, motivations, and examples can be found.
-The notes below explain these rules.
+The notes below explain these rules.\ci
 \end{abstract}
 
 \begin{enumerate}
@@ -79,11 +83,11 @@ Be consistent when using the freedom that this standard leaves.
 \marginpar{\B Line~length}
 
 \item\label{it:empty-lines}
-\emph{Always\/} use \textcolor{vu-color}{one empty line before and after} the following cases:
+\emph{Always\/} use \textcolor{vu-color}{empty lines before and after} the following cases:
 \marginpar{\B Empty~lines}
 \begin{itemize}
-    \item functions
-    \item classes are surrounded by two white lines instead
+    \item one empty line before and after functions
+    \item two empty line before and after classes
 \end{itemize}
 White lines can be used to separate \emph{groups\/} of statements or assignments to enhance readability
 
@@ -130,7 +134,7 @@ Variable, function and class names should \emph{always\/} \textcolor{vu-color}{r
 \end{itemize}
 
 \item\label{it:type-hints}
-\emph{Always\/} add \textcolor{vu-color}{type hints} to functions using ':' or '->'
+\emph{Always\/} add \textcolor{vu-color}{type hints} to functions using ':' or '->'(see examples \href{https://peps.python.org/pep-0484/#arbitrary-generic-types-as-base-classes}{here})
 \marginpar{\B Type~Hints}
 
 \end{enumerate}
