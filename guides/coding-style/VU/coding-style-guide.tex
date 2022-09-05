@@ -1,5 +1,14 @@
 \documentclass{tufte-handout}
 
+% Document contributors:
+%   - Yuri Maas
+%   - Lina Ochoa Venegas
+%   - Mauricio Verano Merino
+%
+% Copyright 2022 TU/e
+% Copyright 2022 VU Amsterdam
+
+
 \title{Coding Style Guide}%thanks{Inspired by Edward~R. Tufte!}}
 
 \author[Mauricio Verano Merino]{Introduction to Python Programming}
@@ -54,249 +63,477 @@
 
 \begin{abstract}
 \noindent
-The following mild coding standard ensures
-easily readable and modifiable Python source code.
-This standard is based on~\cite{CodeConventions:2001},
-where much more detailed rules, motivations, and examples can be found.
+The following mild coding standard ensures easily readable and modifiable Python source code.
+This standard is based on~\cite{rossum2001pep8}, where much more detailed rules, motivations, and examples can be found.
 The notes below explain these rules.
+Beware that some of the examples lack type hints and docstrings, even though these ones are of mandatory use within the context of the course.
+We do this to avoid distracting your attention from the style guideline.
 \end{abstract}
 
-\begin{enumerate}
 
-\item\label{it:consistency}
-Be consistent when using the freedom that this standard leaves.
-\marginpar{\B Consistency}
+\section{Motivation}
+Well-organized source code is important for several reasons. For instance,
 
-\item\label{it:indentation}
-\emph{Always\/} indent \emph{systematically\/} a \textcolor{vu-color}{multiple of 4~spaces}.
-\marginpar{\B Indentation}
-\emph{Never\/} use TAB characters in source code.
-(Let your editor expand the TAB key to spaces. Jupyter Notebook already does this)
-
-\item\label{it:line-length}
-\emph{Always\/} limit the line length to \textcolor{vu-color}{at most 80 characters}.
-(Set a right margin.)
-\marginpar{\B Line~length}
-
-\item\label{it:empty-lines}
-\emph{Always\/} use \textcolor{vu-color}{one empty line before and after} the following cases:
-\marginpar{\B Empty~lines}
 \begin{itemize}
-    \item functions
-    \item classes are surrounded by two white lines instead
-\end{itemize}
-White lines can be used to separate \emph{groups\/} of statements or assignments to enhance readability
-
-\item\label{it:spacing-1}
-\emph{Never\/} write a space before
-\marginpar{\B Spacing~1}
-and \emph{always\/} write \textcolor{vu-color}{one space after} the following items
-(\emph{unless} at  line end):
-\begin{itemize}
-\item \lstinline","\quad\lstinline":"
+	\item The compiler may not care about this,
+	but source code is also read by others (e.g., developers, reviewers, maintainers).
+	\item It is an important means to \emph{prevent defects}.
+	\item It facilitates the \emph{localization of defects}, both by the author and by others.
 \end{itemize}
 
-\item\label{it:spacing-2}
-\emph{Always\/} write \textcolor{vu-color}{one space before and after} the following items
-\marginpar{\B Spacing~2}
-(\emph{unless} at line begin/end):
+
+\section{Guidelines}
+
+This section highlights the most important style guidelines used when writing Python code.
+Additional code examples are presented along the section.
+
+\subsection{Naming Conventions}
+
+The name of modules, classes, methods, functions, and variables should reflect their purpose.
+Good names help with the readability of the code.
+In addition to that, you should be aware of the following naming styles when using one construct or the other:
+
 \begin{itemize}
-\item keywords: \lstinline"if   for   while   " etc.
-\item binary operators (\emph{except\/} \lstinline"."): \lstinline"=  +  -  *  /  %  ==  !=  <  >  <=  >=  &&  || "~etc.
+	\item Class names should \emph{always} start with a capital letter so classes are easily spotted. Any additional words in the class name should also start with a capital letter. This is the CapWords or CamelCase convention (e.g., \texttt{KittenShop}).
+	
+	\item Modules, functions, methods, and variables should be written in lowercase with words separated by underscores (e.g., \texttt{sum\_integers}).
+	
+	\item Constants are written in all caps to remind developers that these values should not and will not be changed. If the constant has multiple words, they must be separated by underscores (e.g., \texttt{MAX\_VALUE}).
 \end{itemize}
 
-\item\label{it:comments}
-\emph{Always\/} explain each variable declaration in a \textcolor{vu-color}{comment}.
-\marginpar{\B Comments}
-
-\item\label{it:docstring}
-\emph{Always\/} specify each public entity (Classes and functions) 
-\marginpar{\B Docstring}
-with a \textcolor{vu-color}{docstring comment}.
+As a special case, use always the word \texttt{self} as the first argument of any instance method.
+Lastly, if a name clashes with a reserved Python keyword, add a trailing underscore instead of abbreviating the name (e.g., \texttt{type\_} instead of \texttt{typ}).
 
 
-\item\label{it:naming-1}
-Variable, function and class names should \emph{always\/} \textcolor{vu-color}{reflect the usage rather than the implementation}.
-\marginpar{\B Naming~1}
+\subsection{Type Hints}
+Functions and methods often only allow a specific type of variables to be given as arguments.
+Because code is often created in a team, other members may not know what variable types are allowed in a function or method.
+Type hints help developers get to know the accepted argument and return types.
+The only parameter that doesn't need a type hint is the parameter \texttt{self} when defining a method.
+In this course, we use the \texttt{typing} module to denote complex data structures such as \texttt{List} and \texttt{Tuple}.
+Return type and parameter type hints are written as follows:
+
+%\begin{mdframed}
+%\begin{minted}{python}
+%from typing import List, Dict
+%
+%def extract_prices(products: List[Dict]) -> List[int]:
+%    # Extracts the prices from the list of dictionaries.
+%\end{minted}
+%\end{mdframed}
 
 
-\item\label{it:naming-2}
-\emph{Always\/} use the associated name conventions for different objects:
-\marginpar{\B Naming~2}
+
+
+\begin{lstlisting}[numbers=none,language=python]
+from typing import List, Dict
+
+def extract_prices(products: List[Dict]) -> List[int]:
+    # Extracts the prices from the list of dictionaries.
+\end{lstlisting}
+
+\
+
+
+\subsection{Indentation}
+
+Indentation provides visual clues about the containment structure (\emph{nesting\/}) of the code.
+Prefer to use 4 spaces per indentation level instead of tabs\footnote{You can configure this aspect on the Integrated Development Environment (IDE) you are working in.}.
+
+When facing continuation lines\footnote{Any statement that requires more than one line can continue in on the next line that is neither a comment or a blank line. The first line of such a statement is known as a \emph{continued line}, while the succeeding ones are \emph{continuation lines}~\cite{ibm2022continuation}.}, you can align elements vertically or using a hanging indent.
+In the former, you can leverage Python's implicit line joining inside parentheses, brackets, and braces, as follows:
+
+\begin{lstlisting}[numbers=none,language=python]
+# Notice that arguments "num1" and "num2" are vertically aligned
+total = sum(num1, num2
+            num3, num4)
+\end{lstlisting}
+
+In the case of a hanging indent, there should be no parameters or arguments on the first line after opening the parentheses, brackets, or braces.
+Then, add a level of indentation.
+When defining a function, add an extra level of indentation.
+For example:
+
+\begin{lstlisting}[numbers=none,language=python]
+# Add an indentation level to hanging indents
+total = sum(
+    num1, num2,
+    num3, num4
+)
+
+# Add an extra level to function signatures to differentiate 
+# parameters from the rest of the code
+def sum(
+        num1: int, num2: int
+        num3: int, num4: int) -> int:
+    return num1 + num2 + num3 + num4
+\end{lstlisting}
+
+When defining constructs using parentheses, brackets, or braces, you can either line up with the first non-empty character of the previous line:
+
+\begin{lstlisting}[numbers=none,language=python]
+# Line up a list (or any other sequence)
+digits = [
+    0, 1, 2, 3, 4,
+    5, 6, 7, 8, 9 
+    ]
+    
+# Line up the arguments of a function
+total = sum(
+    num1, num2,
+    num3, num4
+    )
+\end{lstlisting}
+
+Or you can line up with the character of the continued line (i.e., first line starting the multiline construct):
+
+\begin{lstlisting}[numbers=none,language=python]
+# Line up a list (or any other sequence)
+digits = [
+	0, 1, 2, 3, 4,
+	5, 6, 7, 8, 9 
+]
+	
+# Line up the arguments of a function
+total = sum(
+	num1, num2,
+	num3, num4
+)
+\end{lstlisting}
+
+\subsection{Line Length}
+Your screen may fit longer lines, but you are not the only one reading the source code.
+In general, limit the number of characters per line to 80.
+This limit avoids text wrapping, improving the readability of the code.
+You can avoid long lines by introducing auxiliary variables, methods, or classes (e.g., to group multiple parameters).
+If a long line is unavoidable, break it at an appropriate place, and continue on the next line.
+Use line continuation via its implicit use with parentheses, brackets, and braces, or with an explicit backslash ("\") at the end of the line.
+The former is preferred over the latter.
+
+\begin{lstlisting}[numbers=none,language=python]
+# Use of line continuation with backslash (\)
+with open('path/to/some/file/in/your/computer') as file1, \
+     open('path/to/another/file/in/your/computer') as file2:
+    content1 = file1.read()
+    content2 = file2.read()
+\end{lstlisting}
+
+When breaking code that involves binary operators, prefer to break the line before the operator to increase the understandability of the code:
+
+\begin{lstlisting}[numbers=none,language=python]
+# Break before the binary operator
+income = (gross_wages
+          + taxable_interest
+          + (dividends - qualified_dividends)
+          - ira_deduction
+          - student_loan_interest)
+\end{lstlisting}
+
+\subsection{Blank Lines}
+
+Empty lines provide visual clues about \emph{grouping}.
+When writing top-level functions and classes, surround them with 2 blank lines.
+Methods (functions declared within a class) should be surrounded by 1 blank line.	
+Besides these cases, it is good practice to separate functional-related statements with a blank line.
+
+\begin{lstlisting}[numbers=none,language=python]
+# The Python file starts here
+
+
+# Leave 2 blank lines before and after top-level functions
+def square(base: float, exp: float) -> float:
+    return base ** exp
+
+
+# Leave 2 blank lines before and after class definitions
+def Point:
+	
+	# Leave 1 blank line before and after a method definition	
+	def __init__(self, x: int, y: int) -> None:
+	    self.x = x
+	    self.y = y
+     
+\end{lstlisting}
+
+Avoid long blocks of statements by introducing auxiliary functions, and avoid having multiple statements on the same line.
+
+\begin{lstlisting}[numbers=none,language=python]
+# Correct
+if price > 1000:
+    apply_discount()
+
+pay_product(price)
+pay_taxes(price)
+
+# Incorrect
+if price > 1000: apply_discount()
+pay_product(price); pay_taxes(price)
+\end{lstlisting}
+
+\subsection{String Quotes}
+There is no preference for the use of single- or double-quotes when defining a string.
+Both are accepted by Python.
+It is important, though, to pick one of the two and be consistent in its use.
+Moreover, when there is a need to write quotes within the string, use the other type of quotes to avoid using backslashes.
+
+\begin{lstlisting}[numbers=none,language=python]
+# Use single-quoted strings
+greeting = 'They said: "Hello Karla!"'
+
+# Or double-quoted strings
+greeting = "They said: 'Hello Karla!'"
+
+\end{lstlisting}
+
+
+\subsection{Whitespaces}
+
+Use whitespaces in the following situations:
+
 \begin{itemize}
-\item Use \textcolor{vu-color}{CapWords} for class names
-\item Use \textcolor{vu-color}{lowercase with words separated by underscores} for function and variable names
-\item Use \textcolor{vu-color}{All caps with words separated by underscores} for the name of constants
+	\item After a colon, especially when defining a type hint or dictionary.
+	
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+product = {'name': 'tomatoes', 'quantity': 10}
+
+def sum_integers(numbers: List[int]) -> int:
+	return sum(numbers)
+	
+	
+# Inorrect:
+product = {'name':'tomatoes', 'quantity' :10}
+
+def sum_integers(numbers:List[int]) -> int:
+    return sum(numbers)
+	
+\end{lstlisting}
+	
+	\item Before and after \texttt{->} to denote the return type of a function, and any binary operator including assignments (\texttt{=}), augmented assignments (e.g., \texttt{+=}, \texttt{-=}), comparisons (\texttt{==}, \texttt{<}, \texttt{>}, \texttt{<=}, \texttt{>=}, \texttt{in}, \texttt{is}), and logic connectors (\texttt{and}, \texttt{or}, and \texttt{not})\footnote{For this course we will \textbf{always} keep a space before and after a binary operator, even though the original style guide removes the whitespace when using higher priority operators in an extended expression. This is in line with their suggestion of following "your own judgment" when facing these cases.}.
+
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+def sum_integers(numbers: List[int]) -> int:
+    return sum(numbers)
+
+total = sum_integers(nums) + 10 - (15 * 40)
+
+# Incorrect:
+
+def sum_integers(numbers: List[int])->int:
+    return sum(numbers)
+    
+total= sum_integers(nums)+ 10-(15*40)
+
+\end{lstlisting}
+	
+	\item When assigning a value to a keyword parameter (\textbf{with} a type hint!).
+	
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+def square(base: float, exp: float = 1) -> float:
+    return square_aux(b=base, e=exp)
+			
+# Incorrect:
+def square(base: float, exp:float=1) -> float:
+    return square_aux(b=base, e=exp)
+\end{lstlisting}
+
+	\item When using colons in an extended slice. However, avoid them when a slice parameter is omitted.
+	
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+ingredients[lower:upper]
+ingredients[lower:upper:]
+ingredients[lower::step]
+ingredients[:upper:step]
+ingredients[lower + offset : upper + offset]
+
+# Incorrect:
+ingredients[lower: upper]
+ingredients[lower :upper:]
+ingredients[lower: :step]
+ingredients[ :upper: step]
+ingredients[lower + offset:upper + offset]
+\end{lstlisting}
+	
+\end{itemize}
+\textbf{Avoid} whitespaces in the following situations:
+
+\begin{itemize}
+	\item After opening or before closing parentheses, brackets, or braces.
+	
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+ingredients = [
+    {'name': 'tomatoes', 'quantity': 1},
+    {'name': 'onions', 'quantity': 1},
+    {'name': 'eggs', 'quantity': 2}
+]
+	
+# Incorrect:
+ingredients = [ { 'name': 'tomatoes', 'quantity': 1 },
+                { 'name': 'onions', 'quantity': 1 },
+                { 'name': 'eggs', 'quantity': 2 } ]
+	
+\end{lstlisting}
+	
+	\item Between a trailing comma and a close parenthesis.
+	
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+one_item_tuple = (0,)
+
+# Incorrect:
+one_item_tuple = (0, )		
+\end{lstlisting}
+
+	\item Before a comma, colon, or semicolon.
+	
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+if age >= 0: 
+    print('They are', str(age), 'years old')
+		
+# Incorrect:
+if age >= 0 : 
+    print('They are' , str(age) , 'years old')	
+\end{lstlisting}
+
+	\item Before an open parenthesis.
+	
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+sum_list([4, 5])
+
+# Incorrect
+sum_list ([4, 5])
+\end{lstlisting}
+
+	\item When trying to align multiple assignment operators.
+	
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+first_name = 'Erik'
+last_name = 'Walravens'
+age = 23
+
+# Incorrect:
+first_name = 'Erik'
+last_name  = 'Walravens'
+age        = 23
+
+\end{lstlisting}	
+
+	\item When assigning a value to a keyword parameter (\textbf{without} a type hint!).
+	
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+def square(base, exp=1):
+    return square_aux(b=base, e=exp)
+    
+# Incorrect:
+def square(base, exp = 1):
+    return square_aux(b = base, e = exp)
+\end{lstlisting}
+	
 \end{itemize}
 
-\item\label{it:type-hints}
-\emph{Always\/} add \textcolor{vu-color}{type hints} to functions using ':' or '->'
-\marginpar{\B Type~Hints}
+\subsection{Trailing Commas}
+Trailing commas are mandatory when defining a tuple with just one element, in the rest of the cases they are optional.
+When dealing with tuples, it is a good practice to surround the tuple with parentheses.
 
-\end{enumerate}
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+files = ('config.txt',)
 
+# Incorrect
+files = 'config.txt',
+\end{lstlisting}
 
+Redundant trailing commas are helpful when defining a sequence of values that should be extended over time.
+In these cases, each line has a value with a trailing comma.
 
-%\enlargethispage{\baselineskip}
-%%\marginpar{\vspace*{1ex}\R{\fbox{BAD}}}
-%\lstinputlisting[linerange={2-15}]{../example_bad.py}
-%\hrule\marginpar{\vspace*{1ex}\fbox{GOOD}}
-%\lstinputlisting[linerange={2-30}]{../example_good.py}
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+files = [
+    'config.txt',
+    'config.properties',
+    'requirements.txt',
+]
 
+# Incorrect
+files = ['config.txt', 'config.properties', 'requirements.txt',]
+\end{lstlisting}
 
+\subsection{Comments}
 
-\section* {Notes}
+Comments help you explain the purpose or meaning of your code.
+Code changes fast, so its comments are prone to be outdated.
+Ensure you keep them up-to-date every time the code changes.
+Comments should be complete sentences starting with a \texttt{\#} followed by a single space.
+All sentences within the comment should start with a capital letter.
+Line length should be respected, thus the rest of the comment should follow its own \texttt{\#} in the form of continuation lines.
+These code comments can also be used as inline comments, which are comments that are written in the same line of a statement.
+Inline comments should be separated from the statement by at least 2 whitespaces.
+Obvious comments should always be avoided. 
+Use them only if the code really needs additional explanation.
 
-Well-organized source code is important for several reasons.
-\begin{itemize}
-\item The compiler may not care about this,
-  but source code is also read by others:
-  developers, reviewers, maintainers, teachers, graders, \ldots
-\item It is an important means to \emph{prevent defects}.
-\item It facilitates \emph{localization of defects},
-  both by the author, and by others.
-\end{itemize}
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
 
-Here is some further background information on each of the rules.
-\begin{enumerate}
+# Only print the message if the age is valid (positive integer).
+if age >= 0: 
+print('They are', str(age), 'years old')
 
-\item Consistency especially plays a role
-\marginpar{\B Consistency}
-  in the placement of opening braces~\lstinline"".
-  Either place them at the end of the line with the controlling statement,
-  or at the beginning of a line by themselves directly below the the controlling statement.
-  An advantage of the latter style is that opening and closing braces are vertically aligned.
-  A disadvantage is that it takes more vertical space.
-
-\item Indentation provides visual clues
-\marginpar{\B Indentation}
-  about the containment structure (\emph{nesting\/}).
-  One or two space indentation does not provide enough visually guidance.
-  Some standards prescribe indenting by multiples of three spaces
-  (because that interferes with TAB characters, thereby discouraging them even more).
-  Indenting by more than four spaces is a waste,
-  and leaves less room in view of the line length limit
-  (also see the next note).
-
-\item Your screen may fit longer lines,
-\marginpar{\B Line~length}
-  but you are not the only one reading the source code.
-  Moreover, long lines are hard to parse.
-  Also see next note.
-  
-  Avoid long lines by introducing auxiliary variables, methods,
-  or classes (e.g., to group multiple parameters).
-  
-  If a long line is unavoidable,
-  break it at an appropriate place, and continue on the next line.
-  
-  Of course, the line length of generated code may not be under your control.
-
-\item Empty lines provide visual clues about \emph{grouping},
-\marginpar{\B Empty~lines}
-  on an intermediate level (also see next two notes).
-  Besides the situations mentioned in Rule~\ref{it:empty-lines},
-  it is good to delineate \emph{groups of related statements\/} by empty lines;
-  for example, needed loop variable declarations, the loop, and finalization of the loop.
-  By the way,
-  such grouping can also be made explicit by \emph{brackets},
-  defining a \emph{block}, possibly with its own local variables.
-  
-  Avoid long blocks of statements by introducing auxiliary methods (Extra functions).
-
-\item Spacing also provides visual clues about \emph{grouping},
-\marginpar{\B Spacing~1}
-  but on a lower level than empty lines
-  (see preceding note; also see next note).
-  This rule concerns \emph{punctuation}.
-  
-  \emph{Commas\/} are used to separate items in lists,
-  such as \emph{parameters\/} (both formal and actual),
-  and expressions.
-  
-  There should never be multiple \emph{colons\/} on the same line.
-  
-\item Spacing improves readability,
-\marginpar{\B Spacing~2}
-  especially when quickly scanning source code,
-  rather than reading it slowly in full detail.
-  
-  Readability of expressions can be further improved by appropriate
-  use of \emph{parentheses}, and \emph{auxiliary variables and functions}.
-
-\item Variables are introduced for a specific purpose.
-\marginpar{\B Comments}
-  The name of the variable should reflect that purpose.
-  However, a name should also not be too long.
-  Furthermore, the purpose usually involves relationships to other
-  elements of the program.
-  A comment makes this explicit.
-  To avoid having to spend any effort on deciding whether to include a comment or not,
-  the rule is simply to provide it always.
-  
-  It is also good practice to provide comments with non-obvious statements.
-  However, there is such a thing as \emph{superfluous\/} comments.
-  Do not comment the obvious.
-
-\item Public entities are typically classes, methods, functions 
-\marginpar{\B Docstring}
-  and (non-local) constants.
-  Public entities can be used anywhere in a program.
-  Therefore,
-  their usage should be well documented.
-  Docstring comments have two benefits over ordinary (non-docstring) comments:
-  \begin{itemize}
-  \item They support additional features, such as \emph{tags},
-    to structure documentation.
-  \item They can be extracted from the source code and presented separately,
-    as a document with cross references.
-  \end{itemize}
-  Many Python Integrated Development Environments (IDEs)
-  provide additional benefits when using docstring comments. 
-  Docstring comments can be identified by the triple quotes and often span multiple lines. 
-
-\indent	\lstinline{""" This is a docstring """}
-  
-
-\item Variables, Functions and Classes are introduced for a specific purpose.
-\marginpar{\B Naming}
-  The name of the variable should reflect that purpose.
-  But names can also give visual clues to the usage. 
-  Using different types of names helps with quickly interpreting code.
-  \begin{itemize}
-      \item Class names should \emph{always} start with a capital letter so classes are easily spotted. Any additional words in the class name should also start with a capital letter. This is the CapWords convention (E.g. KittenShop).
-      \item Functions and variables should be written in lowercase with words separated by underscores. 
-      For functions it is also allowed to use camelCase, where the first word starts with a lowercase letter but the other words start with uppercase (E.g. kittenShop), but all lowercase is preferred.
-      \item Constants are written in all caps to remind developers that these values should not and will not be changed (E.g. MAXVALUE).
-  \end{itemize}
-  
-  
-
-\item Functions often only allow a specific type of variables 
-\marginpar{\B Type~Hints}
-  to be given as parameters.
-  Because code is often created in (large) groups, others may not know what variable types are allowed in a function and which ones are not.
-  Type hints help developers so that they don't have to carefully look through (complex) functions to be able to use these functions.
-  
-  By adding type hints ...
-  \begin{itemize}
-      \item to the function, a coder can quickly know what type the function returns and use the function without exactly knowing what the outcome could be.
-      
-      Example: \begin{lstlisting}[numbers=none]
-      def example(var1) -> TYPE:
-      \end{lstlisting}
-      \item to the parameters, someone can quickly see what types the variables should be, before they can successfully use the function.
-      
-      The only parameter that doesn't need a type hint is the parameter 'self'. This parameter is standard for methods but does not need an explicit type hint. (This is used in classes).
-      
-      Example: \begin{lstlisting}[numbers=none]
-      def example(var1: TYPE):
-      \end{lstlisting}
-  \end{itemize}
-  Note: It is rumoured that Python might update at some point to change type hints from voluntary to mandatory.
+count += 1  # Skip first item of the sequence
 
 
-\end{enumerate}
+# Incorrect:
+
+#check if the age is greater or equal to 0
+if age >= 0: 
+print('They are', str(age), 'years old')
+
+count += 1#add 1
+\end{lstlisting}
+
+\subsection{Docstrings}
+You should write documentation for all public modules, functions, classes, and methods.
+This documentation is known as \textbf{docstring} in Python, and they have been defined in the \href{https://peps.python.org/pep-0257/}{PEP 257} document.
+Besides these conventions, you can also follow other formats to write your docstrings.
+In this course, we use the \href{https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html}{\textbf{reST}} (reStructuredText) format, which is used by default in the JetBrains PyCharm IDE.
+Have a look at both documents and follow their guidelines when writing your docstrings.
+You can also opt for any other format as long as you stay consistent in its use along your code.
+
+In general, docstrings start with a triplet of double quotes, followed by the description of the construct, parameters or field descriptions, and description of the return value (in the case of non-void functions and methods).
+Prefer to start with a verb that describes the action performed by the construct in case of dealing with functions or methods.
+
+\begin{lstlisting}[numbers=none,language=python]
+# Correct:
+def sum(num1: int, num2: int
+        num3: int, num4: int) -> int:
+    """
+    Returns the addition of four integer numbers received as 
+    parameters.
+    
+    :param num1: first integer number
+    :param num2: second integer number
+    :param num3: third integer number
+    :param num4: fourth integer number
+    :returns: the addition of the four numbers.
+    """
+    return num1 + num2 + num3 + num4
+    
+    
+# Incorrect:
+def sum(num1: int, num2: int
+        num3: int, num4: int) -> int:
+    #does something with the numbers and maybe it returns 
+    #something else.
+    return num1 + num2 + num3 + num4
+\end{lstlisting}
+
 
 
 %
