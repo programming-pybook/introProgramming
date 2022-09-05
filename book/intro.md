@@ -1,13 +1,13 @@
 # Learning Python by doing
 
-```{note}
+<!-- ```{note}
 TODO: Missing introduction
-```
+``` -->
 
 ## Contributors
-```{note}
+<!-- ```{note}
 TODO: Update: check order and missing contributors
-```
+``` -->
 
 * [Mark van den Brand](https://www.tue.nl/en/research/researchers/mark-van-den-brand/) (TU/e)
 * [Mauricio Verano Merino](https://maveme.github.io) (VU Amsterdam)
