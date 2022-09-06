@@ -7,3 +7,4 @@ guides/coding-style/VU/.texpadtmp/*
 *.gz
 *.bbl
 *.blg
+*.pygtex

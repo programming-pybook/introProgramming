@@ -4,9 +4,12 @@
 %   - Yuri Maas
 %   - Lina Ochoa Venegas
 %   - Mauricio Verano Merino
+%   - Yuyu Bai
 %
 % Copyright 2022 TU/e
 % Copyright 2022 VU Amsterdam
+% pdflatex -shell-escape -synctex=1 -interaction=nonstopmode  coding-style-guide.tex
+
 
 
 \title{Coding Style Guide}%thanks{Inspired by Edward~R. Tufte!}}
@@ -26,6 +29,9 @@
 \usepackage{multicol} % multiple column layout facilities
 \usepackage{lipsum}   % filler text
 \usepackage{fancyvrb} % extended verbatim environments
+\usepackage{minted}       % Support styled listings
+\usepackage{mdframed}     % Support frames
+
   \fvset{fontsize=\normalsize}% default font size for fancy-verbatim environments
 
 % Standardize command font styles and environments
@@ -113,24 +119,14 @@ The only parameter that doesn't need a type hint is the parameter \texttt{self} 
 In this course, we use the \texttt{typing} module to denote complex data structures such as \texttt{List} and \texttt{Tuple}.
 Return type and parameter type hints are written as follows:
 
-%\begin{mdframed}
-%\begin{minted}{python}
-%from typing import List, Dict
-%
-%def extract_prices(products: List[Dict]) -> List[int]:
-%    # Extracts the prices from the list of dictionaries.
-%\end{minted}
-%\end{mdframed}
-
-
-
-
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 from typing import List, Dict
 
 def extract_prices(products: List[Dict]) -> List[int]:
     # Extracts the prices from the list of dictionaries.
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 \
 
@@ -143,18 +139,23 @@ Prefer to use 4 spaces per indentation level instead of tabs\footnote{You can co
 When facing continuation lines\footnote{Any statement that requires more than one line can continue in on the next line that is neither a comment or a blank line. The first line of such a statement is known as a \emph{continued line}, while the succeeding ones are \emph{continuation lines}~\cite{ibm2022continuation}.}, you can align elements vertically or using a hanging indent.
 In the former, you can leverage Python's implicit line joining inside parentheses, brackets, and braces, as follows:
 
-\begin{lstlisting}[numbers=none,language=python]
-# Notice that arguments "num1" and "num3" are vertically aligned
+
+\begin{mdframed}
+\begin{minted}{python}
+# Notice that arguments "num1" and "num2" are vertically 
+# aligned
 total = sum(num1, num2
             num3, num4)
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 In the case of a hanging indent, there should be no parameters or arguments on the first line after opening the parentheses, brackets, or braces.
 Then, add a level of indentation.
 When defining a function, add an extra level of indentation.
 For example:
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Add an indentation level to hanging indents
 total = sum(
     num1, num2,
@@ -167,11 +168,13 @@ def sum(
         num1: int, num2: int
         num3: int, num4: int) -> int:
     return num1 + num2 + num3 + num4
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 When defining constructs using parentheses, brackets, or braces, you can either line up with the first non-empty character of the previous line:
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Line up a list (or any other sequence)
 digits = [
     0, 1, 2, 3, 4,
@@ -183,11 +186,13 @@ total = sum(
     num1, num2,
     num3, num4
     )
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 Or you can line up with the character of the continued line (i.e., first line starting the multiline construct):
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Line up a list (or any other sequence)
 digits = [
 	0, 1, 2, 3, 4,
@@ -199,7 +204,8 @@ total = sum(
 	num1, num2,
 	num3, num4
 )
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 \subsection{Line Length}
 Your screen may fit longer lines, but you are not the only one reading the source code.
@@ -210,24 +216,28 @@ If a long line is unavoidable, break it at an appropriate place, and continue on
 Use line continuation via its implicit use with parentheses, brackets, and braces, or with an explicit backslash \textbackslash  at the end of the line.
 The former is preferred over the latter.
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Use of line continuation with backslash (\)
-with open('path/to/some/file/in/your/computer') as file1, \
-     open('path/to/another/file/in/your/computer') as file2:
+with open('path/file/in/your/computer') as file1,\
+     open('path/another/file/in/your/computer') as file2:
     content1 = file1.read()
     content2 = file2.read()
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 When breaking code that involves binary operators, prefer to break the line before the operator to increase the understandability of the code:
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Break before the binary operator
 income = (gross_wages
           + taxable_interest
           + (dividends - qualified_dividends)
           - ira_deduction
           - student_loan_interest)
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 \subsection{Blank Lines}
 
@@ -236,7 +246,8 @@ When writing top-level functions and classes, surround them with 2 blank lines.
 Methods (functions declared within a class) should be surrounded by 1 blank line.	
 Besides these cases, it is good practice to separate functional-related statements with a blank line.
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # The Python file starts here
 
 
@@ -245,19 +256,23 @@ def square(base: float, exp: float) -> float:
     return base ** exp
 
 
-# Leave 2 blank lines before and after class definitions
+# Leave 2 blank lines before and after class 
+# definitions
 Class Point:
 	
-	# Leave 1 blank line before and after a method definition	
+	# Leave 1 blank line before and after a method 
+	# definition	
 	def __init__(self, x: int, y: int) -> None:
 	    self.x = x
 	    self.y = y
      
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 Avoid long blocks of statements by introducing auxiliary functions, and avoid having multiple statements on the same line.
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct
 if price > 1000:
     apply_discount()
@@ -268,7 +283,8 @@ pay_taxes(price)
 # Incorrect
 if price > 1000: apply_discount()
 pay_product(price); pay_taxes(price)
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 \subsection{String Quotes}
 There is no preference for the use of single- or double-quotes when defining a string.
@@ -276,14 +292,16 @@ Both are accepted by Python.
 It is important, though, to pick one of the two and be consistent in its use.
 Moreover, when there is a need to write quotes within the string, use the other type of quotes to avoid using backslashes.
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Use single-quoted strings
 greeting = 'They said: "Hello Karla!"'
 
 # Or double-quoted strings
 greeting = "They said: 'Hello Karla!'"
 
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 
 \subsection{Whitespaces}
@@ -294,7 +312,8 @@ Use whitespaces in the following situations:
     \item After a comma.
 	\item After a colon, especially when defining a type hint or dictionary.
 	
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 product = {'name': 'tomatoes', 'quantity': 10}
 
@@ -308,11 +327,13 @@ product = {'name':'tomatoes', 'quantity' :10}
 def sum_integers(numbers:List[int]) -> int:
     return sum(numbers)
 	
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 	
 	\item Before and after \texttt{->} to denote the return type of a function, and any binary operator including assignments (\texttt{=}), augmented assignments (e.g., \texttt{+=}, \texttt{-=}), comparisons (\texttt{==}, \texttt{<}, \texttt{>}, \texttt{<=}, \texttt{>=}, \texttt{in}, \texttt{is}), and logic connectors (\texttt{and}, \texttt{or}, and \texttt{not})\footnote{For this course we will \textbf{always} keep a space before and after a binary operator, even though the original style guide removes the whitespace when using higher priority operators in an extended expression. This is in line with their suggestion of following "your own judgment" when facing these cases.}.
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 def sum_integers(numbers: List[int]) -> int:
     return sum(numbers)
@@ -326,11 +347,13 @@ def sum_integers(numbers: List[int])->int:
     
 total= sum_integers(nums)+ 10-(15*40)
 
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 	
 	\item When assigning a value to a keyword parameter (\textbf{with} a type hint!).
 	
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 def square(base: float, exp: float = 1) -> float:
     return square_aux(b = base, e = exp)
@@ -338,11 +361,13 @@ def square(base: float, exp: float = 1) -> float:
 # Incorrect:
 def square(base: float, exp:float=1) -> float:
     return square_aux(b=base, e=exp)
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 	\item When using colons in an extended slice. However, avoid them when a slice parameter is omitted.
 	
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 ingredients[lower:upper]
 ingredients[lower:upper:]
@@ -356,7 +381,8 @@ ingredients[lower :upper:]
 ingredients[lower: :step]
 ingredients[ :upper: step]
 ingredients[lower + offset:upper + offset]
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 	
 \end{itemize}
 \textbf{Avoid} whitespaces in the following situations:
@@ -364,7 +390,8 @@ ingredients[lower + offset:upper + offset]
 \begin{itemize}
 	\item After opening or before closing parentheses, brackets, or braces.
 	
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 ingredients = [
     {'name': 'tomatoes', 'quantity': 1},
@@ -377,21 +404,25 @@ ingredients = [ { 'name': 'tomatoes', 'quantity': 1 },
                 { 'name': 'onions', 'quantity': 1 },
                 { 'name': 'eggs', 'quantity': 2 } ]
 	
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 	
 	\item Between a trailing comma and a close parenthesis.
 	
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 one_item_tuple = (0,)
 
 # Incorrect:
 one_item_tuple = (0, )		
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 	\item Before a comma, colon, or semicolon.
 	
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 if age >= 0: 
     print('They are', str(age), 'years old')
@@ -399,21 +430,25 @@ if age >= 0:
 # Incorrect:
 if age >= 0 : 
     print('They are' , str(age) , 'years old')	
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 	\item Before an open parenthesis.
 	
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 sum_list([4, 5])
 
 # Incorrect
 sum_list ([4, 5])
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 	\item When trying to align multiple assignment operators.
 	
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 first_name = 'Erik'
 last_name = 'Walravens'
@@ -424,11 +459,13 @@ first_name = 'Erik'
 last_name  = 'Walravens'
 age        = 23
 
-\end{lstlisting}	
+\end{minted}
+\end{mdframed}	
 
 	\item When assigning a value to a keyword parameter (\textbf{without} a type hint!).
 	
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 def square(base, exp=1):
     return square_aux(b=base, e=exp)
@@ -436,7 +473,8 @@ def square(base, exp=1):
 # Incorrect:
 def square(base, exp = 1):
     return square_aux(b = base, e = exp)
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 	
 \end{itemize}
 
@@ -444,28 +482,32 @@ def square(base, exp = 1):
 Trailing commas are mandatory when defining a tuple with just one element, in the rest of the cases they are optional.
 When dealing with tuples, it is a good practice to surround the tuple with parentheses.
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 files = ('config.txt',)
 
 # Incorrect
 files = 'config.txt',
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 Redundant trailing commas are helpful when defining a sequence of values that should be extended over time.
 In these cases, each line has a value with a trailing comma.
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 files = [
     'config.txt',
     'config.properties',
-    'requirements.txt',
+    'reqs.txt',
 ]
 
 # Incorrect
-files = ['config.txt', 'config.properties', 'requirements.txt',]
-\end{lstlisting}
+files = ['config.txt', 'config.properties', 'reqs.txt',]
+\end{minted}
+\end{mdframed}
 
 \subsection{Comments}
 
@@ -480,10 +522,12 @@ Inline comments should be separated from the statement by at least 2 whitespaces
 Obvious comments should always be avoided. 
 Use them only if the code really needs additional explanation.
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 
-# Only print the message if the age is valid (positive integer).
+# Only print the message if the age is valid (positive 
+# integer).
 if age >= 0: 
 print('They are', str(age), 'years old')
 
@@ -497,7 +541,8 @@ if age >= 0:
 print('They are', str(age), 'years old')
 
 count += 1#add 1
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 \subsection{Docstrings}
 You should write documentation for all public modules, functions, classes, and methods.
@@ -510,13 +555,14 @@ You can also opt for any other format as long as you stay consistent in its use 
 In general, docstrings start with a triplet of double quotes, followed by the description of the construct, parameters or field descriptions, and description of the return value (in the case of non-void functions and methods).
 Prefer to start with a verb that describes the action performed by the construct in case of dealing with functions or methods.
 
-\begin{lstlisting}[numbers=none,language=python]
+\begin{mdframed}
+\begin{minted}{python}
 # Correct:
 def sum(num1: int, num2: int
         num3: int, num4: int) -> int:
     """
-    Returns the addition of four integer numbers received as 
-    parameters.
+    Returns the addition of four integer numbers received 
+    as parameters.
     
     :param num1: first integer number
     :param num2: second integer number
@@ -533,12 +579,13 @@ def sum(num1: int, num2: int
     #does something with the numbers and maybe it returns 
     #something else.
     return num1 + num2 + num3 + num4
-\end{lstlisting}
+\end{minted}
+\end{mdframed}
 
 
 
 %
-\bibliography{sample-handout}
+\bibliography{sample-handout.bib}
 \bibliographystyle{plainnat}
 
 \copyright~2021-2023. \textbf{VU Amsterdam - TU/e}
