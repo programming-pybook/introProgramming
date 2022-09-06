@@ -136,7 +136,7 @@ def extract_prices(products: List[Dict]) -> List[int]:
 Indentation provides visual clues about the containment structure (\emph{nesting\/}) of the code.
 Prefer to use 4 spaces per indentation level instead of tabs\footnote{You can configure this aspect on the Integrated Development Environment (IDE) you are working in. Jupyter Notebook already does this.}.
 
-When facing continuation lines\footnote{Any statement that requires more than one line can continue in on the next line that is neither a comment or a blank line. The first line of such a statement is known as a \emph{continued line}, while the succeeding ones are \emph{continuation lines}~\cite{ibm2022continuation}.}, you can align elements vertically or using a hanging indent.
+When facing continuation lines\footnote{Any statement that requires more than one line can continue in on the next line that is neither a comment nor a blank line. The first line of such a statement is known as a \emph{continued line}, while the succeeding ones are \emph{continuation lines}~\cite{ibm2022continuation}.}, you can align elements vertically or using a hanging indent.
 In the former, you can leverage Python's implicit line joining inside parentheses, brackets, and braces, as follows:
 
 
@@ -144,7 +144,7 @@ In the former, you can leverage Python's implicit line joining inside parenthese
 \begin{minted}{python}
 # Notice that arguments "num1" and "num2" are vertically 
 # aligned
-total = sum(num1, num2
+total = sum(num1, num2,
             num3, num4)
 \end{minted}
 \end{mdframed}
