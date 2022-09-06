@@ -134,10 +134,11 @@ def extract_prices(products: List[Dict]) -> List[int]:
 \subsection{Indentation}
 
 Indentation provides visual clues about the containment structure (\emph{nesting\/}) of the code.
-Prefer to use 4 spaces per indentation level instead of tabs\footnote{You can configure this aspect on the Integrated Development Environment (IDE) you are working in.}.
+Prefer to use 4 spaces per indentation level instead of tabs\footnote{You can configure this aspect on the Integrated Development Environment (IDE) you are working in. Jupyter Notebook already does this.}.
 
 When facing continuation lines\footnote{Any statement that requires more than one line can continue in on the next line that is neither a comment or a blank line. The first line of such a statement is known as a \emph{continued line}, while the succeeding ones are \emph{continuation lines}~\cite{ibm2022continuation}.}, you can align elements vertically or using a hanging indent.
 In the former, you can leverage Python's implicit line joining inside parentheses, brackets, and braces, as follows:
+
 
 \begin{mdframed}
 \begin{minted}{python}
@@ -212,7 +213,7 @@ In general, limit the number of characters per line to 80.
 This limit avoids text wrapping, improving the readability of the code.
 You can avoid long lines by introducing auxiliary variables, methods, or classes (e.g., to group multiple parameters).
 If a long line is unavoidable, break it at an appropriate place, and continue on the next line.
-Use line continuation via its implicit use with parentheses, brackets, and braces, or with an explicit backslash ("\") at the end of the line.
+Use line continuation via its implicit use with parentheses, brackets, and braces, or with an explicit backslash \textbackslash  at the end of the line.
 The former is preferred over the latter.
 
 \begin{mdframed}
@@ -257,7 +258,7 @@ def square(base: float, exp: float) -> float:
 
 # Leave 2 blank lines before and after class 
 # definitions
-def Point:
+Class Point:
 	
 	# Leave 1 blank line before and after a method 
 	# definition	
@@ -308,6 +309,7 @@ greeting = "They said: 'Hello Karla!'"
 Use whitespaces in the following situations:
 
 \begin{itemize}
+    \item After a comma.
 	\item After a colon, especially when defining a type hint or dictionary.
 	
 \begin{mdframed}
@@ -354,7 +356,7 @@ total= sum_integers(nums)+ 10-(15*40)
 \begin{minted}{python}
 # Correct:
 def square(base: float, exp: float = 1) -> float:
-    return square_aux(b=base, e=exp)
+    return square_aux(b = base, e = exp)
 			
 # Incorrect:
 def square(base: float, exp:float=1) -> float:
