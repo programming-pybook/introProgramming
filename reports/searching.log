@@ -40,7 +40,7 @@ def find_two_highest_walk(amounts : List[int]) -> Tuple[int, int]:
     # Return the two indices   
 ------------------
 
-[0;36m  Input [0;32mIn [16][0;36m[0m
+[0;36m  Cell [0;32mIn [16], line 21[0;36m[0m
 [0;31m    # Return the two indices[0m
 [0m                               ^[0m
 [0;31mSyntaxError[0m[0;31m:[0m unexpected EOF while parsing

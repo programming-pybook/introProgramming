@@ -22,7 +22,7 @@ end : Time = start.increment(1337, 460)
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mTypeError[0m                                 Traceback (most recent call last)
-Input [0;32mIn [15][0m, in [0;36m<cell line: 1>[0;34m()[0m
+Cell [0;32mIn [15], line 1[0m
 [0;32m----> 1[0m end : Time [38;5;241m=[39m [43mstart[49m[38;5;241;43m.[39;49m[43mincrement[49m[43m([49m[38;5;241;43m1337[39;49m[43m,[49m[43m [49m[38;5;241;43m460[39;49m[43m)[49m
 
 [0;31mTypeError[0m: increment() takes 2 positional arguments but 3 were given

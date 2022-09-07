@@ -73,14 +73,14 @@ print(meal)
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Input [0;32mIn [23][0m, in [0;36m<cell line: 49>[0;34m()[0m
+Cell [0;32mIn [23], line 49[0m
 [1;32m     46[0m                 dish [38;5;241m=[39m food_table[random[38;5;241m.[39mrandint([38;5;241m0[39m,[38;5;28mlen[39m(food_table))]
 [1;32m     47[0m             [38;5;28mself[39m[38;5;241m.[39madd_dish(dish)
 [0;32m---> 49[0m food_table [38;5;241m=[39m [43mprocess_food_data[49m[43m([49m[43m)[49m
 [1;32m     50[0m meal [38;5;241m=[39m Meal()
 [1;32m     51[0m meal[38;5;241m.[39msurprise_me([38;5;241m5[39m)
 
-Input [0;32mIn [22][0m, in [0;36mprocess_food_data[0;34m()[0m
+Cell [0;32mIn [22], line 7[0m, in [0;36mprocess_food_data[0;34m()[0m
 [1;32m      3[0m [38;5;28;01mdef[39;00m [38;5;21mprocess_food_data[39m():    
 [1;32m      4[0m     [38;5;124;03m""" reads a CSV and converts it into a dictionary where the key is plain integer value[39;00m
 [1;32m      5[0m [38;5;124;03m        and the value is a Dish[39;00m

@@ -20,7 +20,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 @Mark: make a view cells on the effect of changing copies.
 ------------------
 
-[0;36m  Input [0;32mIn [37][0;36m[0m
+[0;36m  Cell [0;32mIn [37], line 1[0;36m[0m
 [0;31m    @Mark: make a view cells on the effect of changing copies.[0m
 [0m         ^[0m
 [0;31mSyntaxError[0m[0;31m:[0m invalid syntax

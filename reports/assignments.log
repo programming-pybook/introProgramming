@@ -20,7 +20,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 99ballons: str = 'Nena'
 ------------------
 
-[0;36m  Input [0;32mIn [18][0;36m[0m
+[0;36m  Cell [0;32mIn [18], line 1[0;36m[0m
 [0;31m    99ballons: str = 'Nena'[0m
 [0m      ^[0m
 [0;31mSyntaxError[0m[0;31m:[0m invalid syntax

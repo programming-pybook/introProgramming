@@ -26,7 +26,7 @@ for line in file:
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mFileNotFoundError[0m                         Traceback (most recent call last)
-Input [0;32mIn [1][0m, in [0;36m<cell line: 1>[0;34m()[0m
+Cell [0;32mIn [1], line 1[0m
 [0;32m----> 1[0m file [38;5;241m=[39m [38;5;28;43mopen[39;49m[43m([49m[38;5;124;43m'[39;49m[38;5;124;43mdatasets/mbox-short.txt[39;49m[38;5;124;43m'[39;49m[43m)[49m
 [1;32m      3[0m [38;5;28;01mfor[39;00m line [38;5;129;01min[39;00m file:
 [1;32m      4[0m     line: [38;5;28mstr[39m [38;5;241m=[39m line[38;5;241m.[39mrstrip()
