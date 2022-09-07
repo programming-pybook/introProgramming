@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="continue-flowchart.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="true"
+     inkscape:zoom="0.58781078"
+     inkscape:cx="577.56681"
+     inkscape:cy="669.43311"
+     inkscape:window-width="1848"
+     inkscape:window-height="1016"
+     inkscape:window-x="72"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g61662">
+    <inkscape:grid
+       type="xygrid"
+       id="grid1108" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient45652">
+      <stop
+         style="stop-color:#008080;stop-opacity:1;"
+         offset="0"
+         id="stop45648" />
+      <stop
+         style="stop-color:#008080;stop-opacity:0;"
+         offset="1"
+         id="stop45650" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient44498">
+      <stop
+         style="stop-color:#008080;stop-opacity:1;"
+         offset="0"
+         id="stop44494" />
+      <stop
+         style="stop-color:#008080;stop-opacity:0;"
+         offset="1"
+         id="stop44496" />
+    </linearGradient>
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path35839" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="TriangleOutL"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="TriangleOutL"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.8)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt"
+         d="M 5.77,0.0 L -2.88,5.0 L -2.88,-5.0 L 5.77,0.0 z "
+         id="path35960" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path35839-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend-06"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path35839-2" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend-06-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path35839-2-8" />
+    </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient44498"
+       id="linearGradient44500"
+       x1="-774.15802"
+       y1="19.957281"
+       x2="-487.41483"
+       y2="352.73618"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient45652"
+       id="linearGradient45654"
+       x1="-622.15472"
+       y1="177.71503"
+       x2="-602.01416"
+       y2="157.57443"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(-0.6733936,-0.67339358)" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g61662"
+       transform="matrix(0.53983637,0,0,0.53983637,553.90328,247.79727)"
+       inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/break-flowchart.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96">
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-06-1)"
+         d="M -820.20833,-46.037489 V 1.5875"
+         id="path35736-6-7"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <rect
+         style="fill:#008080;fill-opacity:1;stroke:none;stroke-width:0.552051;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect36116"
+         width="105.83336"
+         height="58.208332"
+         x="-873.125"
+         y="-89.429146"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <rect
+         style="fill:url(#linearGradient44500);fill-opacity:1;stroke:#ffffff;stroke-width:0.276043;stroke-dasharray:1.10418, 0.552092;stroke-opacity:1"
+         id="rect1212-6"
+         width="94.948036"
+         height="94.948036"
+         x="-871.16895"
+         y="21.347208"
+         transform="matrix(0.91957676,0.39291041,-0.91957678,0.39291036,0,0)"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-820.2373"
+         y="-297.71286"
+         id="text4592"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><tspan
+           sodipodi:role="line"
+           id="tspan4590"
+           style="text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+           x="-820.2373"
+           y="-297.71286">Validate termination</tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+           x="-820.2373"
+           y="-284.48373"
+           id="tspan10246"> condition</tspan></text>
+      <rect
+         style="fill:url(#linearGradient45654);fill-opacity:1;stroke:#ffffff;stroke-width:0.276043;stroke-dasharray:1.10418, 0.552092;stroke-opacity:1"
+         id="rect1212-6-6"
+         width="94.948036"
+         height="94.948036"
+         x="-714.65479"
+         y="177.28633"
+         transform="matrix(0.91957676,0.39291041,-0.91957678,0.39291036,0,0)"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-820.46265"
+         y="-169.74741"
+         id="text4592-2"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+           x="-820.46265"
+           y="-169.74741"
+           id="tspan10246-1">continue?</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-818.96271"
+         y="-64.187202"
+         id="text4592-2-2"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+           x="-818.96271"
+           y="-64.187202"
+           id="tspan10246-1-7">Execute next </tspan><tspan
+           sodipodi:role="line"
+           style="text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke-width:0.264583"
+           x="-818.96271"
+           y="-50.958076"
+           id="tspan41129">statement</tspan></text>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+         d="m -820.20832,-259.29166 v 47.62499"
+         id="path35736"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-06)"
+         d="m -820.20833,-382.05832 v 47.62499"
+         id="path35736-6"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend-0)"
+         d="m -820.20833,-137.58332 v 47.624987"
+         id="path35736-3"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+         d="m -873.125,-58.208333 -79.41508,1.081881 V -297.2841 l 44.11059,0"
+         id="path43256"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <circle
+         style="fill:#ffffff;fill-opacity:1;stroke:#008080;stroke-width:5.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path44115"
+         cx="-820.34888"
+         cy="16.161951"
+         r="13.229166"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <circle
+         style="fill:#008080;fill-opacity:1;stroke:#008080;stroke-width:0.799999;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path44115-6"
+         cx="-820.67004"
+         cy="-377.74173"
+         r="13.229166"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#Arrow2Lend)"
+         d="m -731.98714,-297.2841 49.01177,0 V 16.391195 L -804.33333,15.875"
+         id="path45019"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cccc"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.793421;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m -952.54008,-173.77445 h 48.01549"
+         id="path45777"
+         inkscape:connector-type="polyline"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="cc"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-724.18213"
+         y="-302.31418"
+         id="text47005"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><tspan
+           sodipodi:role="line"
+           id="tspan47003"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-724.18213"
+           y="-302.31418">False</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-851.7854"
+         y="-398.90836"
+         id="text47005-5"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><tspan
+           sodipodi:role="line"
+           id="tspan47003-9"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-851.7854"
+           y="-398.90836">Enter loop</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-847.22052"
+         y="47.952564"
+         id="text47005-5-2"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><tspan
+           sodipodi:role="line"
+           id="tspan47003-9-2"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-847.22052"
+           y="47.952564">Exit loop</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-815.17255"
+         y="-236.11766"
+         id="text47005-9"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><tspan
+           sodipodi:role="line"
+           id="tspan47003-2"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-815.17255"
+           y="-236.11766">True</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-936.85657"
+         y="-179.23759"
+         id="text47005-9-0"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><tspan
+           sodipodi:role="line"
+           id="tspan47003-2-2"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-936.85657"
+           y="-179.23759">Yes</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+         x="-816.05957"
+         y="-112.72749"
+         id="text47005-9-0-3"
+         inkscape:export-filename="/home/lina/Documents/tue/courses/jbi010/course-material-jbi010/202223/lectures/week1/assets/continue-flowchart.png"
+         inkscape:export-xdpi="96"
+         inkscape:export-ydpi="96"><tspan
+           sodipodi:role="line"
+           id="tspan47003-2-2-7"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';stroke-width:0.264583"
+           x="-816.05957"
+           y="-112.72749">No</tspan></text>
+    </g>
+  </g>
+</svg>
