@@ -894,14 +894,14 @@ title="Print to PDF"
 <p>To start interacting with the <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> type you will first need to install <code class="docutils literal notranslate"><span class="pre">numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> in your virtual environment. Afterward, you will be able to import it as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
@@ -978,30 +978,30 @@ Creative Commons BY-NC-SA 4.0 license, and later updated by David Stroud. You ca
     <span style="font-size:0.9em; font-weight: bold;">Wine tasting setting.</span>
 </div><div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import pandas</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Import pandas
+import pandas as pd
 
-<span class="c1"># Gather your data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s1">&#39;Earthquake 2011 Zinfandel&#39;</span><span class="p">,</span> 
-        <span class="s1">&#39;Ruinart NV Blanc de Blancs Brut Chardonnay&#39;</span><span class="p">,</span> 
-        <span class="s1">&#39;Undurraga 2012 U Estate Grown Cabernet Sauvignon&#39;</span><span class="p">,</span> 
-        <span class="s1">&#39;Grassini 2014 Merlot&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;country&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;US&#39;</span><span class="p">,</span> <span class="s1">&#39;France&#39;</span><span class="p">,</span> <span class="s1">&#39;Chile&#39;</span><span class="p">,</span> <span class="s1">&#39;US&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;province&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;California&#39;</span><span class="p">,</span> <span class="s1">&#39;Champagne&#39;</span><span class="p">,</span> <span class="s1">&#39;Rapel Valley&#39;</span><span class="p">,</span> <span class="s1">&#39;California&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;winery&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Earthquake&#39;</span><span class="p">,</span> <span class="s1">&#39;Ruinart&#39;</span><span class="p">,</span> <span class="s1">&#39;Undurraga&#39;</span><span class="p">,</span> <span class="s1">&#39;Grassini&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;designation&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="s1">&#39;NaN&#39;</span><span class="p">,</span> <span class="s1">&#39;Blanc de Blancs Brut&#39;</span><span class="p">,</span> <span class="s1">&#39;U Estate Grown&#39;</span><span class="p">,</span> <span class="s1">&#39;NaN&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;variety&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Bordeaux-style Red Blend&#39;</span><span class="p">,</span> <span class="s1">&#39;Chardonnay&#39;</span><span class="p">,</span> <span class="s1">&#39;Touriga Nacional&#39;</span><span class="p">,</span> <span class="s1">&#39;Chardonnay&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">84</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">95</span><span class="p">],</span>
-    <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">26.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">,</span> <span class="mf">95.0</span><span class="p">]</span>
-<span class="p">}</span>
+# Gather your data
+data = {
+    &#39;title&#39;: [
+        &#39;Earthquake 2011 Zinfandel&#39;, 
+        &#39;Ruinart NV Blanc de Blancs Brut Chardonnay&#39;, 
+        &#39;Undurraga 2012 U Estate Grown Cabernet Sauvignon&#39;, 
+        &#39;Grassini 2014 Merlot&#39;],
+    &#39;country&#39;: [&#39;US&#39;, &#39;France&#39;, &#39;Chile&#39;, &#39;US&#39;],
+    &#39;province&#39;: [&#39;California&#39;, &#39;Champagne&#39;, &#39;Rapel Valley&#39;, &#39;California&#39;],
+    &#39;winery&#39;: [&#39;Earthquake&#39;, &#39;Ruinart&#39;, &#39;Undurraga&#39;, &#39;Grassini&#39;],
+    &#39;designation&#39;: [ &#39;NaN&#39;, &#39;Blanc de Blancs Brut&#39;, &#39;U Estate Grown&#39;, &#39;NaN&#39;],
+    &#39;variety&#39;: [&#39;Bordeaux-style Red Blend&#39;, &#39;Chardonnay&#39;, &#39;Touriga Nacional&#39;, &#39;Chardonnay&#39;],
+    &#39;points&#39;: [84, 93, 86, 95],
+    &#39;price&#39;: [26.0, 65.0, 11.0, 95.0]
+}
 
-<span class="c1"># Create data frame</span>
-<span class="n">wines</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+# Create data frame
+wines = pd.DataFrame(data)
 
-<span class="c1"># See data frame content</span>
-<span class="n">wines</span>
+# See data frame content
+wines
 </pre></div>
 </div>
 </div>
@@ -1012,8 +1012,8 @@ Creative Commons BY-NC-SA 4.0 license, and later updated by David Stroud. You ca
 <p>If you look carefully at the previous example, you will notice that a new column was created. (The first column of the matrix before the ones we have explicitly defined.) This column is an integer index that is automatically created every time you create a new data frame and you do not explicitly mention any other type of index. An <strong>index</strong> is a data structure used to improve the efficiency of certain types of operations and queries executed atop the data frame. They are very useful especially when accessing specific records within your data. To access them you can use the <code class="docutils literal notranslate"><span class="pre">loc</span></code> indexer and specify the number of the record you want within the square brackets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get Grassini 2014 Merlot case</span>
-<span class="n">wines</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get Grassini 2014 Merlot case
+wines.loc[2]
 </pre></div>
 </div>
 </div>
@@ -1047,31 +1047,31 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>However, computing the mean by hand when dealing with a big dataset is not handy anymore. That is why Python offers a ser of libraries that can help you with these common calculations. Two examples are the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> libraries. Let us see how they work.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using pure python</span>
-<span class="n">points</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
-<span class="n">mean</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">points</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
-<span class="n">mean</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using pure python
+points = wines[&#39;points&#39;]
+mean = sum(points) / len(points)
+mean
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using the statistics library</span>
-<span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using the statistics library
+import statistics as st
 
-<span class="n">points</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
-<span class="n">mean</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
-<span class="n">mean</span>
+points = wines[&#39;points&#39;]
+mean = st.mean(points)
+mean
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using pandas</span>
-<span class="n">mean</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> 
-<span class="n">mean</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using pandas
+mean = wines[&#39;points&#39;].mean() 
+mean
 </pre></div>
 </div>
 </div>
@@ -1104,42 +1104,42 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>Python and the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> libraries can also help us to compute the median. Let us see how they work.!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using pure python</span>
-<span class="n">points</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
-<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
-<span class="n">points_sorted</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
-<span class="n">median</span><span class="p">:</span> <span class="nb">float</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using pure python
+points = wines[&#39;points&#39;]
+n = len(points)
+points_sorted = sorted(points)
+median: float
     
-<span class="k">if</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="n">index_1</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>      <span class="c1"># Indeces in Python start from 0, we need to substract 1</span>
-    <span class="n">index_2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># Same case here</span>
-    <span class="n">median</span> <span class="o">=</span> <span class="p">(</span><span class="n">points_sorted</span><span class="p">[</span><span class="n">index_1</span><span class="p">]</span> <span class="o">+</span> <span class="n">points_sorted</span><span class="p">[</span><span class="n">index_2</span><span class="p">])</span> <span class="o">/</span> <span class="mi">2</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">index</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># And here.</span>
-    <span class="n">median</span> <span class="o">=</span> <span class="n">points_sorted</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
+if n % 2 == 0:
+    index_1 = int(n / 2) - 1      # Indeces in Python start from 0, we need to substract 1
+    index_2 = int(n / 2 + 1) - 1  # Same case here
+    median = (points_sorted[index_1] + points_sorted[index_2]) / 2
+else:
+    index = int((n + 1) / 2) - 1  # And here.
+    median = points_sorted[index]
 
-<span class="n">median</span>
+median
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using the statistics library</span>
-<span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using the statistics library
+import statistics as st
 
-<span class="n">points</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
-<span class="n">median</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
-<span class="n">median</span>
+points = wines[&#39;points&#39;]
+median = st.median(points)
+median
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using pandas</span>
-<span class="n">median</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span> 
-<span class="n">median</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using pandas
+median = wines[&#39;points&#39;].median() 
+median
 </pre></div>
 </div>
 </div>
@@ -1148,31 +1148,31 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>To understand the idea of robustness, let us add the infamous “Disgusting Wine 2021 Malbec” record to the <code class="docutils literal notranslate"><span class="pre">wines</span></code> data frame. This case is not part of the real data set.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import pandas</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Import pandas
+import pandas as pd
 
-<span class="c1"># Gather your data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s1">&#39;Earthquake 2011 Zinfandel&#39;</span><span class="p">,</span> 
-        <span class="s1">&#39;Ruinart NV Blanc de Blancs Brut Chardonnay&#39;</span><span class="p">,</span> 
-        <span class="s1">&#39;Undurraga 2012 U Estate Grown Cabernet Sauvignon&#39;</span><span class="p">,</span> 
-        <span class="s1">&#39;Grassini 2014 Merlot&#39;</span><span class="p">,</span>
-        <span class="s1">&#39;Disgusting Wine 2021 Malbec&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;country&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;US&#39;</span><span class="p">,</span> <span class="s1">&#39;France&#39;</span><span class="p">,</span> <span class="s1">&#39;Chile&#39;</span><span class="p">,</span> <span class="s1">&#39;US&#39;</span><span class="p">,</span> <span class="s1">&#39;Bartovia&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;province&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;California&#39;</span><span class="p">,</span> <span class="s1">&#39;Champagne&#39;</span><span class="p">,</span> <span class="s1">&#39;Rapel Valley&#39;</span><span class="p">,</span> <span class="s1">&#39;California&#39;</span><span class="p">,</span> <span class="s1">&#39;Brockway&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;winery&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Earthquake&#39;</span><span class="p">,</span> <span class="s1">&#39;Ruinart&#39;</span><span class="p">,</span> <span class="s1">&#39;Undurraga&#39;</span><span class="p">,</span> <span class="s1">&#39;Grassini&#39;</span><span class="p">,</span> <span class="s1">&#39;Duff&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;designation&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="s1">&#39;NaN&#39;</span><span class="p">,</span> <span class="s1">&#39;Blanc de Blancs Brut&#39;</span><span class="p">,</span> <span class="s1">&#39;U Estate Grown&#39;</span><span class="p">,</span> <span class="s1">&#39;NaN&#39;</span><span class="p">,</span> <span class="s1">&#39;NaN&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;variety&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Bordeaux-style Red Blend&#39;</span><span class="p">,</span> <span class="s1">&#39;Chardonnay&#39;</span><span class="p">,</span> <span class="s1">&#39;Touriga Nacional&#39;</span><span class="p">,</span> <span class="s1">&#39;Chardonnay&#39;</span><span class="p">,</span> <span class="s1">&#39;Malbec&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">84</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
-    <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">26.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">,</span> <span class="mf">95.0</span><span class="p">,</span> <span class="mf">300.0</span><span class="p">]</span>
-<span class="p">}</span>
+# Gather your data
+data = {
+    &#39;title&#39;: [
+        &#39;Earthquake 2011 Zinfandel&#39;, 
+        &#39;Ruinart NV Blanc de Blancs Brut Chardonnay&#39;, 
+        &#39;Undurraga 2012 U Estate Grown Cabernet Sauvignon&#39;, 
+        &#39;Grassini 2014 Merlot&#39;,
+        &#39;Disgusting Wine 2021 Malbec&#39;],
+    &#39;country&#39;: [&#39;US&#39;, &#39;France&#39;, &#39;Chile&#39;, &#39;US&#39;, &#39;Bartovia&#39;],
+    &#39;province&#39;: [&#39;California&#39;, &#39;Champagne&#39;, &#39;Rapel Valley&#39;, &#39;California&#39;, &#39;Brockway&#39;],
+    &#39;winery&#39;: [&#39;Earthquake&#39;, &#39;Ruinart&#39;, &#39;Undurraga&#39;, &#39;Grassini&#39;, &#39;Duff&#39;],
+    &#39;designation&#39;: [ &#39;NaN&#39;, &#39;Blanc de Blancs Brut&#39;, &#39;U Estate Grown&#39;, &#39;NaN&#39;, &#39;NaN&#39;],
+    &#39;variety&#39;: [&#39;Bordeaux-style Red Blend&#39;, &#39;Chardonnay&#39;, &#39;Touriga Nacional&#39;, &#39;Chardonnay&#39;, &#39;Malbec&#39;],
+    &#39;points&#39;: [84, 93, 86, 95, 5],
+    &#39;price&#39;: [26.0, 65.0, 11.0, 95.0, 300.0]
+}
 
-<span class="c1"># Create data frame</span>
-<span class="n">wines</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+# Create data frame
+wines = pd.DataFrame(data)
 
-<span class="c1"># See data frame content</span>
-<span class="n">wines</span>
+# See data frame content
+wines
 </pre></div>
 </div>
 </div>
@@ -1180,17 +1180,17 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>In the previous example, “Disgusting Wine 2021 Malbec” is considered an outlier for the <code class="docutils literal notranslate"><span class="pre">points</span></code> variable, given that it is an extreme value distant from other values in the dataset. Now, let us compute again the mean and the median with this modification.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using pandas</span>
-<span class="n">mean</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> 
-<span class="n">mean</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using pandas
+mean = wines[&#39;points&#39;].mean() 
+mean
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">median</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">()</span>
-<span class="n">median</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>median = wines[&#39;points&#39;].median()
+median
 </pre></div>
 </div>
 </div>
@@ -1219,21 +1219,21 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>Let us see how to compute the mode with the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> libraries in Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using the statistics library</span>
-<span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using the statistics library
+import statistics as st
 
-<span class="n">province</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;province&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-<span class="n">mode</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">mode</span><span class="p">(</span><span class="n">province</span><span class="p">)</span>
-<span class="n">mode</span>
+province = wines[&#39;province&#39;].tolist()
+mode = st.mode(province)
+mode
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using pandas</span>
-<span class="n">mode</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;province&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()</span>
-<span class="n">mode</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using pandas
+mode = wines[&#39;province&#39;].mode()
+mode
 </pre></div>
 </div>
 </div>
@@ -1282,48 +1282,48 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>Let us see how to compute the variance with the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> libraries in Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Going back to our original dataset</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Going back to our original dataset
+import pandas as pd
 
-<span class="c1"># Gather your data</span>
-<span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;title&#39;</span><span class="p">:</span> <span class="p">[</span>
-        <span class="s1">&#39;Earthquake 2011 Zinfandel&#39;</span><span class="p">,</span> 
-        <span class="s1">&#39;Ruinart NV Blanc de Blancs Brut Chardonnay&#39;</span><span class="p">,</span> 
-        <span class="s1">&#39;Undurraga 2012 U Estate Grown Cabernet Sauvignon&#39;</span><span class="p">,</span> 
-        <span class="s1">&#39;Grassini 2014 Merlot&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;country&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;US&#39;</span><span class="p">,</span> <span class="s1">&#39;France&#39;</span><span class="p">,</span> <span class="s1">&#39;Chile&#39;</span><span class="p">,</span> <span class="s1">&#39;US&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;province&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;California&#39;</span><span class="p">,</span> <span class="s1">&#39;Champagne&#39;</span><span class="p">,</span> <span class="s1">&#39;Rapel Valley&#39;</span><span class="p">,</span> <span class="s1">&#39;California&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;winery&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Earthquake&#39;</span><span class="p">,</span> <span class="s1">&#39;Ruinart&#39;</span><span class="p">,</span> <span class="s1">&#39;Undurraga&#39;</span><span class="p">,</span> <span class="s1">&#39;Grassini&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;designation&#39;</span><span class="p">:</span> <span class="p">[</span> <span class="s1">&#39;NaN&#39;</span><span class="p">,</span> <span class="s1">&#39;Blanc de Blancs Brut&#39;</span><span class="p">,</span> <span class="s1">&#39;U Estate Grown&#39;</span><span class="p">,</span> <span class="s1">&#39;NaN&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;variety&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Bordeaux-style Red Blend&#39;</span><span class="p">,</span> <span class="s1">&#39;Chardonnay&#39;</span><span class="p">,</span> <span class="s1">&#39;Touriga Nacional&#39;</span><span class="p">,</span> <span class="s1">&#39;Chardonnay&#39;</span><span class="p">],</span>
-    <span class="s1">&#39;points&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mi">84</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">86</span><span class="p">,</span> <span class="mi">95</span><span class="p">],</span>
-    <span class="s1">&#39;price&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">26.0</span><span class="p">,</span> <span class="mf">65.0</span><span class="p">,</span> <span class="mf">11.0</span><span class="p">,</span> <span class="mf">95.0</span><span class="p">]</span>
-<span class="p">}</span>
+# Gather your data
+data = {
+    &#39;title&#39;: [
+        &#39;Earthquake 2011 Zinfandel&#39;, 
+        &#39;Ruinart NV Blanc de Blancs Brut Chardonnay&#39;, 
+        &#39;Undurraga 2012 U Estate Grown Cabernet Sauvignon&#39;, 
+        &#39;Grassini 2014 Merlot&#39;],
+    &#39;country&#39;: [&#39;US&#39;, &#39;France&#39;, &#39;Chile&#39;, &#39;US&#39;],
+    &#39;province&#39;: [&#39;California&#39;, &#39;Champagne&#39;, &#39;Rapel Valley&#39;, &#39;California&#39;],
+    &#39;winery&#39;: [&#39;Earthquake&#39;, &#39;Ruinart&#39;, &#39;Undurraga&#39;, &#39;Grassini&#39;],
+    &#39;designation&#39;: [ &#39;NaN&#39;, &#39;Blanc de Blancs Brut&#39;, &#39;U Estate Grown&#39;, &#39;NaN&#39;],
+    &#39;variety&#39;: [&#39;Bordeaux-style Red Blend&#39;, &#39;Chardonnay&#39;, &#39;Touriga Nacional&#39;, &#39;Chardonnay&#39;],
+    &#39;points&#39;: [84, 93, 86, 95],
+    &#39;price&#39;: [26.0, 65.0, 11.0, 95.0]
+}
 
-<span class="n">wines</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">wines</span>
+wines = pd.DataFrame(data)
+wines
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using the statistics library</span>
-<span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using the statistics library
+import statistics as st
 
-<span class="n">points</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
-<span class="n">variance</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">variance</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
-<span class="n">variance</span>
+points = wines[&#39;points&#39;]
+variance = st.variance(points)
+variance
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using pandas</span>
-<span class="n">variance</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">var</span><span class="p">()</span>
-<span class="n">variance</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using pandas
+variance = wines[&#39;points&#39;].var()
+variance
 </pre></div>
 </div>
 </div>
@@ -1343,21 +1343,21 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>This value tells us that values in the <code class="docutils literal notranslate"><span class="pre">points</span></code> variable tend to vary around <span class="math notranslate nohighlight">\(\pm 5.32\)</span> points from the mean. Let us see how to compute the standard deviation with the <code class="docutils literal notranslate"><span class="pre">statistics</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> libraries in Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using the statistics library</span>
-<span class="kn">import</span> <span class="nn">statistics</span> <span class="k">as</span> <span class="nn">st</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using the statistics library
+import statistics as st
 
-<span class="n">points</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span>
-<span class="n">stdev</span> <span class="o">=</span> <span class="n">st</span><span class="o">.</span><span class="n">stdev</span><span class="p">(</span><span class="n">points</span><span class="p">)</span>
-<span class="n">stdev</span>
+points = wines[&#39;points&#39;]
+stdev = st.stdev(points)
+stdev
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using pandas</span>
-<span class="n">stdev</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
-<span class="n">stdev</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using pandas
+stdev = wines[&#39;points&#39;].std()
+stdev
 </pre></div>
 </div>
 </div>
@@ -1397,11 +1397,11 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>Let us see how to compute the IQR with the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library in Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Using pandas</span>
-<span class="n">q1</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">)</span>
-<span class="n">q3</span> <span class="o">=</span> <span class="n">wines</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.75</span><span class="p">,</span> <span class="n">interpolation</span><span class="o">=</span><span class="s1">&#39;lower&#39;</span><span class="p">)</span>
-<span class="n">iqr</span> <span class="o">=</span> <span class="n">q3</span> <span class="o">-</span> <span class="n">q1</span>
-<span class="n">iqr</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Using pandas
+q1 = wines[&#39;points&#39;].quantile(0.25, interpolation=&#39;lower&#39;)
+q3 = wines[&#39;points&#39;].quantile(0.75, interpolation=&#39;lower&#39;)
+iqr = q3 - q1
+iqr
 </pre></div>
 </div>
 </div>
@@ -1422,13 +1422,13 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>Before diving into these representations, we will first import the whole <code class="docutils literal notranslate"><span class="pre">wines</span></code> dataset into our environment. To this aim, we use the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library and in particular, the <code class="docutils literal notranslate"><span class="pre">read_csv()</span></code> method, which reads the data from a Comma-Separated Values (CSV) file and stores it in a data frame. In the next chapter, we will learn more about this and other file formats.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
 
-<span class="c1"># Read data from the wines.csv file and store it in a data frame</span>
-<span class="n">wines</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;assets/wines.csv&quot;</span><span class="p">)</span>
+# Read data from the wines.csv file and store it in a data frame
+wines = pd.read_csv(&quot;assets/wines.csv&quot;)
 
-<span class="c1"># Display the first lines of the data frame</span>
-<span class="n">wines</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+# Display the first lines of the data frame
+wines.head()
 </pre></div>
 </div>
 </div>
@@ -1443,9 +1443,9 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>In 1977, Tukey introduced <strong>boxplots</strong>, a type of plot that summarizes the spread of the data based on percentiles. To better understand boxplots, let us have a glimpse at the boxplot of the <code class="docutils literal notranslate"><span class="pre">points</span></code> variable within our wines dataset. We will use the <code class="docutils literal notranslate"><span class="pre">boxplot()</span></code> method from <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to generate the plot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a boxplot out from the points variable (column)</span>
-<span class="n">boxplot</span> <span class="o">=</span> <span class="n">wines</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;points&#39;</span><span class="p">])</span>
-<span class="n">boxplot</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create a boxplot out from the points variable (column)
+boxplot = wines.boxplot(column=[&#39;points&#39;])
+boxplot
 </pre></div>
 </div>
 </div>
@@ -1462,9 +1462,9 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>Now, we will display the histogram of the <code class="docutils literal notranslate"><span class="pre">points</span></code> variable using the <code class="docutils literal notranslate"><span class="pre">hist()</span></code> method from the <code class="docutils literal notranslate"><span class="pre">pandas</span></code> library.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a histogram out from the points variable (column)</span>
-<span class="n">hist</span> <span class="o">=</span> <span class="n">wines</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;points&#39;</span><span class="p">,</span> <span class="n">rwidth</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-<span class="n">hist</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create a histogram out from the points variable (column)
+hist = wines.hist(column=&#39;points&#39;, rwidth=0.9, grid=False)
+hist
 </pre></div>
 </div>
 </div>
@@ -1472,9 +1472,9 @@ Now, we can compute the mean: <span class="math notranslate nohighlight">\(\over
 <p>You can see that the data within the <code class="docutils literal notranslate"><span class="pre">points</span></code> variable has a <em>bell shape</em>. When this happens we state that our data has a <strong>normal distribution</strong>. However, if we create the histogram for the <code class="docutils literal notranslate"><span class="pre">price</span></code> variable the bell shape will be gone. Let us have a look.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a histogram out from the price variable (column)</span>
-<span class="n">hist</span> <span class="o">=</span> <span class="n">wines</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">column</span><span class="o">=</span><span class="s1">&#39;price&#39;</span><span class="p">,</span> <span class="n">rwidth</span><span class="o">=</span><span class="mf">0.9</span><span class="p">,</span> <span class="n">grid</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">hist</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create a histogram out from the price variable (column)
+hist = wines.hist(column=&#39;price&#39;, rwidth=0.9, grid=False, bins=100)
+hist
 </pre></div>
 </div>
 </div>

@@ -715,19 +715,19 @@ class without copy-and-pasting.</p>
 <p>They are part of the program design, but they do not appear explicitly in the code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Dish</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a dish.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Dish:
+    &quot;&quot;&quot;Represents a dish.&quot;&quot;&quot;
 
-    <span class="n">food_type_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;vegetarian&#39;</span><span class="p">,</span> <span class="s1">&#39;non-vegetarian&#39;</span><span class="p">]</span>
-    <span class="n">meal_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;breakfast&#39;</span><span class="p">,</span> <span class="s1">&#39;lunch&#39;</span><span class="p">,</span> <span class="s1">&#39;dinner&#39;</span><span class="p">]</span>
+    food_type_names : list = [&#39;vegetarian&#39;, &#39;non-vegetarian&#39;]
+    meal_names : list = [&#39;all&#39;, &#39;breakfast&#39;, &#39;lunch&#39;, &#39;dinner&#39;]
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">calories</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">food_type</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">meal</span>
+    def __init__(self, name : str, calories : int, food_type : int = 1, meal : int = 0) -&gt; None:
+        &quot;&quot;&quot; creates a new Meal object and initializes it
+        &quot;&quot;&quot;
+        self.name : str = name
+        self.calories : int = calories
+        self.food_type : int = food_type
+        self.meal : int = meal
 </pre></div>
 </div>
 </div>
@@ -737,7 +737,7 @@ class without copy-and-pasting.</p>
 <p>To create a <code class="docutils literal notranslate"><span class="pre">Dish</span></code>, you call <code class="docutils literal notranslate"><span class="pre">Dish</span></code> with the food type and meal type of the dish you want.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fries</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;fries&#39;</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fries : Dish = Dish(&#39;fries&#39;, 400, 0, 3)
 </pre></div>
 </div>
 </div>
@@ -748,7 +748,7 @@ class without copy-and-pasting.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -761,24 +761,24 @@ from the integer codes to the corresponding meal and food types.</p>
 <p>A natural way to do that is with lists of strings. We assign these lists to <strong>class attribute</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Dish</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a dish.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Dish:
+    &quot;&quot;&quot;Represents a dish.&quot;&quot;&quot;
     
-    <span class="n">food_type_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;vegetarian&#39;</span><span class="p">,</span> <span class="s1">&#39;non-vegetarian&#39;</span><span class="p">]</span>
-    <span class="n">meal_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;breakfast&#39;</span><span class="p">,</span> <span class="s1">&#39;lunch&#39;</span><span class="p">,</span> <span class="s1">&#39;dinner&#39;</span><span class="p">]</span>
+    food_type_names : list = [&#39;vegetarian&#39;, &#39;non-vegetarian&#39;]
+    meal_names : list = [&#39;all&#39;, &#39;breakfast&#39;, &#39;lunch&#39;, &#39;dinner&#39;]
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">calories</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">food_type</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">meal</span>
+    def __init__(self, name: str, calories : int, food_type : int = 1, meal : int = 0) -&gt; None:
+        &quot;&quot;&quot; creates a new Meal object and initializes it
+        &quot;&quot;&quot;
+        self.name : str = name
+        self.calories : int = calories
+        self.food_type : int = food_type
+        self.meal : int = meal
         
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; returns the string represetation of a Dish object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> dish </span><span class="si">{}</span><span class="s1"> has </span><span class="si">{:d}</span><span class="s1"> calories and is used </span><span class="si">{}</span><span class="s1"> meal&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Dish</span><span class="o">.</span><span class="n">food_type_names</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">food_type</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calories</span><span class="p">,</span> <span class="n">Dish</span><span class="o">.</span><span class="n">meal_names</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">meal</span><span class="p">])</span>
+    def __str__(self) -&gt; str:
+        &quot;&quot;&quot; returns the string represetation of a Dish object
+        &quot;&quot;&quot;
+        return &#39;{} dish {} has {:d} calories and is used {} meal&#39;.format(Dish.food_type_names[self.food_type], self.name, self.calories, Dish.meal_names[self.meal])
 </pre></div>
 </div>
 </div>
@@ -798,8 +798,8 @@ from the class <code class="docutils literal notranslate"><span class="pre">Dish
 <p>With the methods we have so far, we can create and print dishes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;fries&#39;</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dish : Dish = Dish(&#39;fries&#39;, 400, 0, 2)
+print(dish)
 </pre></div>
 </div>
 </div>
@@ -815,7 +815,7 @@ from the class <code class="docutils literal notranslate"><span class="pre">Dish
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -834,30 +834,30 @@ do we only look at the amount of calories? Or do we take the meal into considera
 <p>For this moment we take the calories into consideration when comparing dishes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Dish</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a dish.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Dish:
+    &quot;&quot;&quot;Represents a dish.&quot;&quot;&quot;
     
-    <span class="n">food_type_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;vegetarian&#39;</span><span class="p">,</span> <span class="s1">&#39;non-vegetarian&#39;</span><span class="p">]</span>
-    <span class="n">meal_names</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;all&#39;</span><span class="p">,</span> <span class="s1">&#39;breakfast&#39;</span><span class="p">,</span> <span class="s1">&#39;lunch&#39;</span><span class="p">,</span> <span class="s1">&#39;dinner&#39;</span><span class="p">]</span>
+    food_type_names : list = [&#39;vegetarian&#39;, &#39;non-vegetarian&#39;]
+    meal_names : list = [&#39;all&#39;, &#39;breakfast&#39;, &#39;lunch&#39;, &#39;dinner&#39;]
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">calories</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">food_type</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">food_type</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">meal</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">meal</span>
+    def __init__(self, name: str, calories : int, food_type : int = 1, meal : int = 0) -&gt; None:
+        &quot;&quot;&quot; creates a new Meal object and initializes it
+        &quot;&quot;&quot;
+        self.name : str = name
+        self.calories : int = calories
+        self.food_type : int = food_type
+        self.meal : int = meal
         
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; returns the string represetation of a Dish object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{}</span><span class="s1"> dish </span><span class="si">{}</span><span class="s1"> has </span><span class="si">{:d}</span><span class="s1"> calories and is used </span><span class="si">{}</span><span class="s1"> meal&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">Dish</span><span class="o">.</span><span class="n">food_type_names</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">food_type</span><span class="p">],</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">calories</span><span class="p">,</span> <span class="n">Dish</span><span class="o">.</span><span class="n">meal_names</span><span class="p">[</span><span class="bp">self</span><span class="o">.</span><span class="n">meal</span><span class="p">])</span>
+    def __str__(self) -&gt; str:
+        &quot;&quot;&quot; returns the string represetation of a Dish object
+        &quot;&quot;&quot;
+        return &#39;{} dish {} has {:d} calories and is used {} meal&#39;.format(Dish.food_type_names[self.food_type], self.name, self.calories, Dish.meal_names[self.meal])
     
-    <span class="k">def</span> <span class="fm">__lt__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; compares 2 dishes based on calories</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="c1"># check the calories</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">calories</span> <span class="o">&lt;</span> <span class="n">other</span><span class="o">.</span><span class="n">calories</span>
+    def __lt__(self, other) -&gt; bool:
+        &quot;&quot;&quot; compares 2 dishes based on calories
+        &quot;&quot;&quot;
+        # check the calories
+        return self.calories &lt; other.calories
 </pre></div>
 </div>
 </div>
@@ -868,7 +868,7 @@ do we only look at the amount of calories? Or do we take the meal into considera
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -879,13 +879,13 @@ do we only look at the amount of calories? Or do we take the meal into considera
 <p>Now that we have dishes we can start composing meals.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Meal:
+    &quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
+    def __init__(self) -&gt; None:
+        &quot;&quot;&quot; creates a new Meal object and initializes it
+        &quot;&quot;&quot;
+        self.dishes : list = []
 </pre></div>
 </div>
 </div>
@@ -893,13 +893,13 @@ do we only look at the amount of calories? Or do we take the meal into considera
 <p>The following <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method is more robust.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Meal:
+    &quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def __init__(self, dishes=[]) -&gt; None:
+        &quot;&quot;&quot; creates a new Meal object and initializes it
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
 </pre></div>
 </div>
 </div>
@@ -907,18 +907,18 @@ do we only look at the amount of calories? Or do we take the meal into considera
 <p>We need to be able to compose a meal given a list of dishes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Meal:
+    &quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def __init__(self, dishes=[]) -&gt; None:
+        &quot;&quot;&quot; creates a new Meal object and initializes it
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
         
-    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; composes a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def compose(self, dishes : list) -&gt; None:
+        &quot;&quot;&quot; composes a meal
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
 </pre></div>
 </div>
 </div>
@@ -929,7 +929,7 @@ do we only look at the amount of calories? Or do we take the meal into considera
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -940,24 +940,24 @@ do we only look at the amount of calories? Or do we take the meal into considera
 <p>The next cell extends the class with a <code class="docutils literal notranslate"><span class="pre">__str__</span></code> method for printing a <code class="docutils literal notranslate"><span class="pre">Meal</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Meal:
+    &quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def __init__(self, dishes=[]) -&gt; None:
+        &quot;&quot;&quot; creates a new Meal object and initializes it
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
         
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">dlst</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">:</span>
-            <span class="n">dlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dlst</span><span class="p">)</span>
+    def __str__(self):
+        dlst : list = []
+        for dish in self.dishes:
+            dlst.append(dish.name)
+        return &#39;\n&#39;.join(dlst)
         
-    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; composes a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def compose(self, dishes : list) -&gt; None:
+        &quot;&quot;&quot; composes a meal
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
 </pre></div>
 </div>
 </div>
@@ -967,11 +967,11 @@ do we only look at the amount of calories? Or do we take the meal into considera
 <p>Here is what the result looks like.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cereals</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;cereals&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">eggs</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">meal</span> <span class="p">:</span> <span class="n">Meal</span> <span class="o">=</span> <span class="n">Meal</span><span class="p">()</span>
-<span class="n">meal</span><span class="o">.</span><span class="n">compose</span><span class="p">([</span><span class="n">cereals</span><span class="p">,</span> <span class="n">eggs</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>cereals : Dish = Dish(&#39;cereals&#39;, 200, 0, 1)
+eggs : Dish = Dish(&#39;eggs&#39;, 100, 0, 1)
+meal : Meal = Meal()
+meal.compose([cereals, eggs])
+print(meal)
 </pre></div>
 </div>
 </div>
@@ -985,10 +985,10 @@ eggs
 <p>The following code is better.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cereals</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;cereals&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">eggs</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">meal</span> <span class="p">:</span> <span class="n">Meal</span> <span class="o">=</span> <span class="n">Meal</span><span class="p">([</span><span class="n">cereals</span><span class="p">,</span> <span class="n">eggs</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>cereals : Dish = Dish(&#39;cereals&#39;, 200, 0, 1)
+eggs : Dish = Dish(&#39;eggs&#39;, 100, 0, 1)
+meal : Meal = Meal([cereals, eggs])
+print(meal)
 </pre></div>
 </div>
 </div>
@@ -1005,7 +1005,7 @@ eggs
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1018,32 +1018,32 @@ eggs
 of the dish.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Meal:
+    &quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def __init__(self, dishes=[]) -&gt; None:
+        &quot;&quot;&quot; creates a new Meal object and initializes it
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
         
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">dlst</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">:</span>
-            <span class="n">dlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">slst</span><span class="p">)</span>
+    def __str__(self):
+        dlst : list = []
+        for dish in self.dishes:
+            dlst.append(dish.name)
+        return &#39;\n&#39;.join(slst)
         
-    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; composes a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def compose(self, dishes : list) -&gt; None:
+        &quot;&quot;&quot; composes a meal
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
         
-    <span class="k">def</span> <span class="nf">remove_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish_name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; removes a dish from a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">)):</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">dish_name</span><span class="p">:</span>
-                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-                <span class="k">break</span>
+    def remove_dish(self, dish_name : str) -&gt; None:
+        &quot;&quot;&quot; removes a dish from a meal
+        &quot;&quot;&quot;
+        for i in range(len(self.dishes)):
+            if self.dishes[i].name == dish_name:
+                del self.dishes[i]
+                break
 </pre></div>
 </div>
 </div>
@@ -1052,37 +1052,37 @@ of the dish.</p>
 <p>To add a dish, we can use the list method <code class="docutils literal notranslate"><span class="pre">append</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Meal:
+    &quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def __init__(self, dishes=[]) -&gt; None:
+        &quot;&quot;&quot; creates a new Meal object and initializes it
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
         
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">dlst</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">:</span>
-            <span class="n">dlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dlst</span><span class="p">)</span>
+    def __str__(self):
+        dlst = []
+        for dish in self.dishes:
+            dlst.append(dish.name)
+        return &#39;\n&#39;.join(dlst)
         
-    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; composes a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def compose(self, dishes : list) -&gt; None:
+        &quot;&quot;&quot; composes a meal
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
         
-    <span class="k">def</span> <span class="nf">remove_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish_name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; removes a dish from a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">)):</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">dish_name</span><span class="p">:</span>
-                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-                <span class="k">break</span>
+    def remove_dish(self, dish_name : str) -&gt; None:
+        &quot;&quot;&quot; removes a dish from a meal
+        &quot;&quot;&quot;
+        for i in range(len(self.dishes)):
+            if self.dishes[i].name == dish_name:
+                del self.dishes[i]
+                break
     
-    <span class="k">def</span> <span class="nf">add_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; add a dish to a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+    def add_dish(self, dish : Dish) -&gt; None:
+        &quot;&quot;&quot; add a dish to a meal
+        &quot;&quot;&quot;
+        self.dishes.append(dish)
 </pre></div>
 </div>
 </div>
@@ -1091,59 +1091,59 @@ of the dish.</p>
 <p>For that, we introduce a method to check whether a dish is already in the meal.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Meal:
+    &quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def __init__(self, dishes=[]) -&gt; None:
+        &quot;&quot;&quot; creates a new Meal object and initializes it
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
         
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">dlst</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">:</span>
-            <span class="n">dlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dlst</span><span class="p">)</span>
+    def __str__(self):
+        dlst = []
+        for dish in self.dishes:
+            dlst.append(dish.name)
+        return &#39;\n&#39;.join(dlst)
         
-    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; composes a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def compose(self, dishes : list) -&gt; None:
+        &quot;&quot;&quot; composes a meal
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
         
-    <span class="k">def</span> <span class="nf">remove_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish_name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; removes a dish from a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">)):</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">dish_name</span><span class="p">:</span>
-                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-                <span class="k">break</span>
+    def remove_dish(self, dish_name : str) -&gt; None:
+        &quot;&quot;&quot; removes a dish from a meal
+        &quot;&quot;&quot;
+        for i in range(len(self.dishes)):
+            if self.dishes[i].name == dish_name:
+                del self.dishes[i]
+                break
     
-    <span class="k">def</span> <span class="nf">add_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; adds a dish to a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+    def add_dish(self, dish : Dish) -&gt; None:
+        &quot;&quot;&quot; adds a dish to a meal
+        &quot;&quot;&quot;
+        self.dishes.append(dish)
         
-    <span class="k">def</span> <span class="nf">contains_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; checks whether the dish is already in the meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span>
+    def contains_dish(self, dish : Dish) -&gt; bool:
+        &quot;&quot;&quot; checks whether the dish is already in the meal
+        &quot;&quot;&quot;
+        return dish in self.dishes
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cereals</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;cereals&#39;</span><span class="p">,</span> <span class="mi">200</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">eggs</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">bread</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;bread&#39;</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">meal</span> <span class="p">:</span> <span class="n">Meal</span> <span class="o">=</span> <span class="n">Meal</span><span class="p">([</span><span class="n">cereals</span><span class="p">,</span> <span class="n">eggs</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="p">)</span>
-<span class="n">meal</span><span class="o">.</span><span class="n">remove_dish</span><span class="p">(</span><span class="s1">&#39;eggs&#39;</span><span class="p">)</span>
-<span class="n">meal</span><span class="o">.</span><span class="n">add_dish</span><span class="p">(</span><span class="n">bread</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="o">.</span><span class="n">contains_dish</span><span class="p">(</span><span class="n">bread</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="o">.</span><span class="n">contains_dish</span><span class="p">(</span><span class="n">eggs</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>cereals : Dish = Dish(&#39;cereals&#39;, 200, 0, 1)
+eggs : Dish = Dish(&#39;eggs&#39;, 100, 0, 1)
+bread : Dish = Dish(&#39;bread&#39;, 50, 0, 0)
+meal : Meal = Meal([cereals, eggs])
+print(meal)
+meal.remove_dish(&#39;eggs&#39;)
+meal.add_dish(bread)
+print(meal.contains_dish(bread))
+print(meal.contains_dish(eggs))
 
-<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="p">)</span>
+print(meal)
 </pre></div>
 </div>
 </div>
@@ -1168,23 +1168,23 @@ calories, portion size, (non-)vegetarian and type of meal.</p>
 <p>We use this information to develop the conversion function <code class="docutils literal notranslate"><span class="pre">convert_to_dish</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">convert_to_dish</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dish</span><span class="p">:</span>
-    <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Display_Name&#39;</span><span class="p">]</span>
-    <span class="n">calories</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Calories&#39;</span><span class="p">]</span>
-    <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Meal&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;B&#39;</span><span class="p">:</span>
-        <span class="n">meal_type</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">elif</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Meal&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;L&#39;</span><span class="p">:</span>
-        <span class="n">meal_type</span> <span class="o">=</span> <span class="mi">2</span>
-    <span class="k">elif</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Meal&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span>
-        <span class="n">meal_type</span> <span class="o">=</span> <span class="mi">3</span>
-    <span class="k">else</span><span class="p">:</span> <span class="c1"># entry[&#39;Meal&#39;] == &#39;A&#39;</span>
-        <span class="n">meal_type</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def convert_to_dish(entry) -&gt; Dish:
+    name : str = entry[&#39;Display_Name&#39;]
+    calories : int = entry[&#39;Calories&#39;]
+    if entry[&#39;Meal&#39;] == &#39;B&#39;:
+        meal_type = 1
+    elif entry[&#39;Meal&#39;] == &#39;L&#39;:
+        meal_type = 2
+    elif entry[&#39;Meal&#39;] == &#39;D&#39;:
+        meal_type = 3
+    else: # entry[&#39;Meal&#39;] == &#39;A&#39;
+        meal_type = 0
         
-    <span class="k">if</span> <span class="n">entry</span><span class="p">[</span><span class="s1">&#39;Vegetarian&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;yes&#39;</span><span class="p">:</span>
-        <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">calories</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">meal_type</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">calories</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">meal_type</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">dish</span>
+    if entry[&#39;Vegetarian&#39;] == &#39;yes&#39;:
+        dish : Dish = Dish(name, calories, 0, meal_type)
+    else:
+        dish : Dish = Dish(name, calories, 1, meal_type)
+    return dish
 </pre></div>
 </div>
 </div>
@@ -1197,23 +1197,23 @@ process food data (given as a CSV file) via a function <code class="docutils lit
 <p>We need to import the <code class="docutils literal notranslate"><span class="pre">csv</span></code> module.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import csv
 
-<span class="k">def</span> <span class="nf">process_food_data</span><span class="p">():</span>    
-    <span class="sd">&quot;&quot;&quot; reads a CSV and converts it into a dictionary where the key is plain integer value</span>
-<span class="sd">        and the value is a Dish</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">csv_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/FoodTable.csv&#39;</span><span class="p">)</span>
-    <span class="n">food_table</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+def process_food_data():    
+    &quot;&quot;&quot; reads a CSV and converts it into a dictionary where the key is plain integer value
+        and the value is a Dish
+    &quot;&quot;&quot;
+    csv_file = open(&#39;datasets/FoodTable.csv&#39;)
+    food_table : dict = dict()
+    reader = csv.DictReader(csv_file, delimiter=&#39;;&#39;)
     
-    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span>
-        <span class="n">food_table</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">convert_to_dish</span><span class="p">(</span><span class="n">entry</span><span class="p">)</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>    
+    i : int = 0
+    for entry in reader:
+        food_table[i] = convert_to_dish(entry)
+        i += 1    
         
-    <span class="n">csv_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">food_table</span>
+    csv_file.close()
+    return food_table
 </pre></div>
 </div>
 </div>
@@ -1224,72 +1224,72 @@ process food data (given as a CSV file) via a function <code class="docutils lit
 of dishes (arbitrary from the list of dishes).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import random
 
-<span class="k">class</span> <span class="nc">Meal</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;</span>
+class Meal:
+    &quot;&quot;&quot;Represents a collection of dishes.&quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span><span class="o">=</span><span class="p">[])</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Meal object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">dishes</span>
+    def __init__(self, dishes=[]) -&gt; None:
+        &quot;&quot;&quot; creates a new Meal object and initializes it
+        &quot;&quot;&quot;
+        self.dishes : list = dishes
         
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="n">dlst</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">:</span>
-            <span class="n">dlst</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dlst</span><span class="p">)</span>
+    def __str__(self) -&gt; str:
+        dlst = []
+        for dish in self.dishes:
+            dlst.append(dish.name)
+        return &#39;\n&#39;.join(dlst)
         
-    <span class="k">def</span> <span class="nf">compose</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dishes</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; composes a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span>  <span class="p">:</span> <span class="nb">list</span><span class="o">=</span> <span class="n">dishes</span>
+    def compose(self, dishes : list) -&gt; None:
+        &quot;&quot;&quot; composes a meal
+        &quot;&quot;&quot;
+        self.dishes  : list= dishes
         
-    <span class="k">def</span> <span class="nf">remove_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish_name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; removes a dish from a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">)):</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">name</span> <span class="o">==</span> <span class="n">dish_name</span><span class="p">:</span>
-                <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-                <span class="k">break</span>
+    def remove_dish(self, dish_name : str) -&gt; None:
+        &quot;&quot;&quot; removes a dish from a meal
+        &quot;&quot;&quot;
+        for i in range(len(self.dishes)):
+            if self.dishes[i].name == dish_name:
+                del self.dishes[i]
+                break
     
-    <span class="k">def</span> <span class="nf">add_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; adds a dish to a meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+    def add_dish(self, dish : Dish) -&gt; None:
+        &quot;&quot;&quot; adds a dish to a meal
+        &quot;&quot;&quot;
+        self.dishes.append(dish)
         
-    <span class="k">def</span> <span class="nf">contains_dish</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; checks whether the dish is already in the meal</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="n">dish</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">dishes</span>
+    def contains_dish(self, dish : Dish) -&gt; bool:
+        &quot;&quot;&quot; checks whether the dish is already in the meal
+        &quot;&quot;&quot;
+        return dish in self.dishes
             
-    <span class="k">def</span> <span class="nf">surprise_me</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nr</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; add arbitrary dishes upto &#39;nr_of_dishes&#39;</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nr</span><span class="p">):</span>
-            <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">food_table</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">food_table</span><span class="p">))]</span>
-            <span class="k">while</span> <span class="bp">self</span><span class="o">.</span><span class="n">contains_dish</span><span class="p">(</span><span class="n">dish</span><span class="p">):</span>
-                <span class="n">dish</span> <span class="o">=</span> <span class="n">food_table</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">food_table</span><span class="p">))]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">add_dish</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+    def surprise_me(self, nr : int) -&gt; None:
+        &quot;&quot;&quot; add arbitrary dishes upto &#39;nr_of_dishes&#39;
+        &quot;&quot;&quot;
+        for i in range(nr):
+            dish : Dish = food_table[random.randint(0,len(food_table))]
+            while self.contains_dish(dish):
+                dish = food_table[random.randint(0,len(food_table))]
+            self.add_dish(dish)
     
-<span class="n">food_table</span> <span class="o">=</span> <span class="n">process_food_data</span><span class="p">()</span>
-<span class="n">meal</span> <span class="o">=</span> <span class="n">Meal</span><span class="p">()</span>
-<span class="n">meal</span><span class="o">.</span><span class="n">surprise_me</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">meal</span><span class="p">)</span>
+food_table = process_food_data()
+meal = Meal()
+meal.surprise_me(5)
+print(meal)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">49</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">23</span><span class="p">],</span> <span class="n">line</span> <span class="mi">49</span>
 <span class="g g-Whitespace">     </span><span class="mi">46</span>                 <span class="n">dish</span> <span class="o">=</span> <span class="n">food_table</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">food_table</span><span class="p">))]</span>
 <span class="g g-Whitespace">     </span><span class="mi">47</span>             <span class="bp">self</span><span class="o">.</span><span class="n">add_dish</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
 <span class="ne">---&gt; </span><span class="mi">49</span> <span class="n">food_table</span> <span class="o">=</span> <span class="n">process_food_data</span><span class="p">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">50</span> <span class="n">meal</span> <span class="o">=</span> <span class="n">Meal</span><span class="p">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="n">meal</span><span class="o">.</span><span class="n">surprise_me</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 
-<span class="nn">Cell In [22], line 7,</span> in <span class="ni">process_food_data</span><span class="nt">()</span>
+<span class="nn">Cell In[22], line 7,</span> in <span class="ni">process_food_data</span><span class="nt">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">def</span> <span class="nf">process_food_data</span><span class="p">():</span>    
 <span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="sd">&quot;&quot;&quot; reads a CSV and converts it into a dictionary where the key is plain integer value</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span><span class="sd">         and the value is a Dish</span>
@@ -1297,6 +1297,15 @@ of dishes (arbitrary from the list of dishes).</p>
 <span class="ne">----&gt; </span><span class="mi">7</span>     <span class="n">csv_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/FoodTable.csv&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">food_table</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
 <span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">DictReader</span><span class="p">(</span><span class="n">csv_file</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py:282,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">282</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;datasets/FoodTable.csv&#39;
 </pre></div>
@@ -1309,7 +1318,7 @@ of dishes (arbitrary from the list of dishes).</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1328,9 +1337,9 @@ class in parentheses.</p>
 <p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">BaseClass:</span>&#160;&#160;&#160;&#160; <span class="pre">Body</span> <span class="pre">of</span> <span class="pre">base</span> <span class="pre">class</span> <span class="pre">class</span> <span class="pre">DerivedClass(BaseClass):</span>&#160;&#160;&#160;&#160; <span class="pre">Body</span> <span class="pre">of</span> <span class="pre">derived</span> <span class="pre">class</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Breakfast</span><span class="p">(</span><span class="n">Meal</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; represents a breakfast as a meal </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Breakfast(Meal):
+    &quot;&quot;&quot; represents a breakfast as a meal 
+    &quot;&quot;&quot;
 </pre></div>
 </div>
 </div>
@@ -1343,13 +1352,13 @@ the new class is called the <strong>child</strong>.</p>
 instead we want to start healthy with a glass of orange juice, the <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method for <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code> should initialize dishes with an orange juice. Thus, we <strong>override</strong> it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Breakfast</span><span class="p">(</span><span class="n">Meal</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; represents a breakfast as a meal</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Breakfast(Meal):
+    &quot;&quot;&quot; represents a breakfast as a meal
+    &quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">orange_juice</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;Orange juice (100% juice)&#39;</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="n">Meal</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,[</span><span class="n">orange_juice</span><span class="p">])</span>
+    def __init__(self):
+        orange_juice : Dish = Dish(&#39;Orange juice (100% juice)&#39;, 105, 0, 0)
+        Meal.__init__(self,[orange_juice])
 </pre></div>
 </div>
 </div>
@@ -1357,8 +1366,8 @@ instead we want to start healthy with a glass of orange juice, the <code class="
 <p>When you create a <code class="docutils literal notranslate"><span class="pre">Breakfast</span></code>, Python invokes this <code class="docutils literal notranslate"><span class="pre">__init__</span></code> method, not the one in <code class="docutils literal notranslate"><span class="pre">Meal</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">breakfast</span> <span class="p">:</span> <span class="n">Breakfast</span> <span class="o">=</span> <span class="n">Breakfast</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">breakfast</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>breakfast : Breakfast = Breakfast()
+print(breakfast)
 </pre></div>
 </div>
 </div>
@@ -1371,10 +1380,10 @@ instead we want to start healthy with a glass of orange juice, the <code class="
 <p>The other methods are inherited from <code class="docutils literal notranslate"><span class="pre">Meal</span></code>, so we can use <code class="docutils literal notranslate"><span class="pre">add_dish</span></code> and <code class="docutils literal notranslate"><span class="pre">remove_dish</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">breakfast</span> <span class="p">:</span> <span class="n">Breakfast</span> <span class="o">=</span> <span class="n">Breakfast</span><span class="p">()</span>
-<span class="n">yoghurt</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;Fruit yogurt, whole milk&#39;</span><span class="p">,</span> <span class="mi">202</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">breakfast</span><span class="o">.</span><span class="n">add_dish</span><span class="p">(</span><span class="n">yoghurt</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">breakfast</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>breakfast : Breakfast = Breakfast()
+yoghurt : Dish = Dish(&#39;Fruit yogurt, whole milk&#39;, 202, 0, 0)
+breakfast.add_dish(yoghurt)
+print(breakfast)
 </pre></div>
 </div>
 </div>
@@ -1389,32 +1398,32 @@ Fruit yogurt, whole milk
 When composing a breakfast you only want to have breakfast dishes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Breakfast</span><span class="p">(</span><span class="n">Meal</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; represents a breakfast as a meal</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Breakfast(Meal):
+    &quot;&quot;&quot; represents a breakfast as a meal
+    &quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">orange_juice</span> <span class="o">=</span> <span class="n">Dish</span><span class="p">(</span><span class="s1">&#39;Orange juice (100% juice)&#39;</span><span class="p">,</span> <span class="mi">105</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-        <span class="n">Meal</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,[</span><span class="n">orange_juice</span><span class="p">])</span>
+    def __init__(self):
+        orange_juice = Dish(&#39;Orange juice (100% juice)&#39;, 105, 0, 0)
+        Meal.__init__(self,[orange_juice])
         
-    <span class="k">def</span> <span class="nf">surprise_me</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nr</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; add arbitrary dishes upto &#39;nr_of_dishes&#39;</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">nr</span><span class="p">):</span>
-            <span class="n">dish</span> <span class="p">:</span> <span class="n">Dish</span> <span class="o">=</span> <span class="n">food_table</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">food_table</span><span class="p">))]</span>
-            <span class="k">while</span> <span class="n">dish</span><span class="o">.</span><span class="n">meal</span> <span class="o">==</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">dish</span><span class="o">.</span><span class="n">meal</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">contains_dish</span><span class="p">(</span><span class="n">dish</span><span class="p">):</span>
-                <span class="n">dish</span> <span class="o">=</span> <span class="n">food_table</span><span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">food_table</span><span class="p">))]</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">add_dish</span><span class="p">(</span><span class="n">dish</span><span class="p">)</span>
+    def surprise_me(self, nr : int) -&gt; None:
+        &quot;&quot;&quot; add arbitrary dishes upto &#39;nr_of_dishes&#39;
+        &quot;&quot;&quot;
+        for i in range(nr):
+            dish : Dish = food_table[random.randint(0,len(food_table))]
+            while dish.meal == 2 or dish.meal == 3 or self.contains_dish(dish):
+                dish = food_table[random.randint(0,len(food_table))]
+            self.add_dish(dish)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">breakfast</span> <span class="p">:</span> <span class="n">Breakfast</span> <span class="o">=</span> <span class="n">Breakfast</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>breakfast : Breakfast = Breakfast()
 
-<span class="n">breakfast</span><span class="o">.</span><span class="n">surprise_me</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">breakfast</span><span class="p">)</span>
+breakfast.surprise_me(1)
+print(breakfast)
 </pre></div>
 </div>
 </div>
@@ -1439,7 +1448,7 @@ Plain yogurt, whole milk
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1450,20 +1459,20 @@ Plain yogurt, whole milk
 <p>A polygon is a closed figure with 3 or more sides. A class called <code class="docutils literal notranslate"><span class="pre">Polygon</span></code> can be defined as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Polygon</span><span class="p">:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">no_of_sides</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">no_of_sides</span>
-        <span class="n">sides</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">no_of_sides</span><span class="p">):</span>
-            <span class="n">sides</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">sides</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Polygon:
+    def __init__(self, no_of_sides : int):
+        self.n : int = no_of_sides
+        sides : list = []
+        for i in range(no_of_sides):
+            sides.append(0)
+        self.sides : list = sides
 
-    <span class="k">def</span> <span class="nf">input_sides</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">sides</span> <span class="o">=</span> <span class="p">[</span><span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter side &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; : &quot;</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">)]</span>
+    def input_sides(self) -&gt; None:
+        self.sides = [float(input(&quot;Enter side &quot; + str(i + 1) + &quot; : &quot;)) for i in range(self.n)]
 
-    <span class="k">def</span> <span class="nf">display_sides</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Side&quot;</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="s2">&quot;is&quot;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">sides</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    def display_sides(self) -&gt; None:
+        for i in range(self.n):
+            print(&quot;Side&quot;, i + 1, &quot;is&quot;, self.sides[i])
 </pre></div>
 </div>
 </div>
@@ -1475,16 +1484,16 @@ Plain yogurt, whole milk
 <p><code class="docutils literal notranslate"><span class="pre">Triangle</span></code> can be defined as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Triangle</span><span class="p">(</span><span class="n">Polygon</span><span class="p">):</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="n">Polygon</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Triangle(Polygon):
+    def __init__(self):
+        Polygon.__init__(self, 3)
 
-    <span class="k">def</span> <span class="nf">calculate_area</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sides</span>
-        <span class="c1"># calculate the semi-perimeter</span>
-        <span class="n">s</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span> <span class="o">+</span> <span class="n">b</span> <span class="o">+</span> <span class="n">c</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>
-        <span class="n">area</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="p">(</span><span class="n">s</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">a</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">b</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">s</span> <span class="o">-</span> <span class="n">c</span><span class="p">))</span> <span class="o">**</span> <span class="mf">0.5</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The area of the triangle is </span><span class="si">%0.2f</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">area</span><span class="p">)</span>
+    def calculate_area(self) -&gt; None:
+        a, b, c = self.sides
+        # calculate the semi-perimeter
+        s : int = (a + b + c) / 2
+        area : float = (s * (s - a) * (s - b) * (s - c)) ** 0.5
+        print(&#39;The area of the triangle is %0.2f&#39; % area)
 </pre></div>
 </div>
 </div>
@@ -1492,11 +1501,11 @@ Plain yogurt, whole milk
 <p><code class="docutils literal notranslate"><span class="pre">class</span> <span class="pre">Triangle</span></code> has a new method <code class="docutils literal notranslate"><span class="pre">find_area()</span></code> to find and print the area of the triangle.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="n">Triangle</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t = Triangle()
 
-<span class="n">t</span><span class="o">.</span><span class="n">input_sides</span><span class="p">()</span>
+t.input_sides()
 
-<span class="n">t</span><span class="o">.</span><span class="n">calculate_area</span><span class="p">()</span>
+t.calculate_area()
 </pre></div>
 </div>
 </div>
@@ -1517,7 +1526,7 @@ Enter side 3 :  2
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1528,36 +1537,36 @@ Enter side 3 :  2
 <p>Below is another simple example of inheritance in Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span> 
-    <span class="sd">&quot;&quot;&quot; Representing a person </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Person(): 
+    &quot;&quot;&quot; Representing a person 
+    &quot;&quot;&quot;
     
-    <span class="c1"># Constructor </span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
+    # Constructor 
+    def __init__(self, name : str): 
+        self.name : str = name 
    
-    <span class="c1"># To get name </span>
-    <span class="k">def</span> <span class="nf">get_name</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span> 
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">name</span> 
+    # To get name 
+    def get_name(self) -&gt; str: 
+        return self.name 
    
-    <span class="c1"># To check if this person is an employee </span>
-    <span class="k">def</span> <span class="nf">is_employee</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span> 
-        <span class="k">return</span> <span class="kc">False</span>
+    # To check if this person is an employee 
+    def is_employee(self) -&gt; bool: 
+        return False
    
    
-<span class="c1"># Inherited or Subclass/Child class</span>
-<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span> 
+# Inherited or Subclass/Child class
+class Employee(Person): 
    
-    <span class="c1"># Here we return true </span>
-    <span class="k">def</span> <span class="nf">is_employee</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span> 
-        <span class="k">return</span> <span class="kc">True</span>
+    # Here we return true 
+    def is_employee(self) -&gt; bool: 
+        return True
 
 
-<span class="n">emp</span> <span class="p">:</span> <span class="n">Person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="s2">&quot;Mark&quot;</span><span class="p">)</span>  <span class="c1"># An Object of Person </span>
-<span class="nb">print</span><span class="p">(</span><span class="n">emp</span><span class="o">.</span><span class="n">get_name</span><span class="p">(),</span> <span class="n">emp</span><span class="o">.</span><span class="n">is_employee</span><span class="p">())</span> 
+emp : Person = Person(&quot;Mark&quot;)  # An Object of Person 
+print(emp.get_name(), emp.is_employee()) 
    
-<span class="n">emp</span> <span class="p">:</span> <span class="n">Employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s2">&quot;Lina&quot;</span><span class="p">)</span> <span class="c1"># An Object of Employee </span>
-<span class="nb">print</span><span class="p">(</span><span class="n">emp</span><span class="o">.</span><span class="n">get_name</span><span class="p">(),</span> <span class="n">emp</span><span class="o">.</span><span class="n">is_employee</span><span class="p">())</span> 
+emp : Employee = Employee(&quot;Lina&quot;) # An Object of Employee 
+print(emp.get_name(), emp.is_employee()) 
 </pre></div>
 </div>
 </div>
@@ -1571,40 +1580,40 @@ Lina True
 <p>Let us work a bit more on this example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span>     
-    <span class="sd">&quot;&quot;&quot; Representing a person </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Person():     
+    &quot;&quot;&quot; Representing a person 
+    &quot;&quot;&quot;
     
-    <span class="c1"># Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>    
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">idnumber</span> 
+    # Constructor
+    def __init__(self, name : str, idnumber : int):    
+        self.name : str = name 
+        self.idnumber : int = idnumber 
         
-    <span class="c1"># getters have to be added!</span>
+    # getters have to be added!
     
-    <span class="c1"># To get name     </span>
-    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span><span class="p">)</span> 
+    # To get name     
+    def display(self) -&gt; None: 
+        print(self.name) 
+        print(self.idnumber) 
 
-<span class="c1"># Child class</span>
-<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span> 
-    <span class="sd">&quot;&quot;&quot; Representing an employee</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+# Child class
+class Employee(Person): 
+    &quot;&quot;&quot; Representing an employee
+    &quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">function</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">salary</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">function</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">function</span> 
+    def __init__(self, name : str, idnumber : int, salary : int, function : str): 
+        self.salary : int = salary 
+        self.function : str = function 
   
-        <span class="c1"># invoking the __init__ of the parent class  </span>
-        <span class="n">Person</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">)</span>  
+        # invoking the __init__ of the parent class  
+        Person.__init__(self, name, idnumber)  
   
                   
-<span class="c1"># creation of an object variable or an instance </span>
-<span class="n">a</span> <span class="p">:</span> <span class="n">Employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="mi">886012</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="s2">&quot;Professor&quot;</span><span class="p">)</span>     
+# creation of an object variable or an instance 
+a : Employee = Employee(&#39;Mark&#39;, 886012, 100000, &quot;Professor&quot;)     
     
-<span class="c1"># calling a function of the class Person using its instance </span>
-<span class="n">a</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+# calling a function of the class Person using its instance 
+a.display()
 </pre></div>
 </div>
 </div>
@@ -1620,38 +1629,38 @@ Lina True
 <p>If you forget to invoke the <code class="docutils literal notranslate"><span class="pre">__init__()</span></code> of the parent class then its instance variables would not be available to the child class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span>     
-    <span class="sd">&quot;&quot;&quot; Representing a person </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Person():     
+    &quot;&quot;&quot; Representing a person 
+    &quot;&quot;&quot;
     
-    <span class="c1"># Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>    
-        <span class="bp">self</span><span class="o">.</span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">idnumber</span> 
+    # Constructor
+    def __init__(self, name : str, idnumber : int):    
+        self.name : str = name 
+        self.idnumber : int = idnumber 
         
-    <span class="c1"># To get name     </span>
-    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="p">)</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span><span class="p">)</span> 
+    # To get name     
+    def display(self) -&gt; None: 
+        print(self.name) 
+        print(self.idnumber) 
 
-<span class="c1"># Child class</span>
-<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">):</span> 
-    <span class="sd">&quot;&quot;&quot; Representing an employee</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+# Child class
+class Employee(Person): 
+    &quot;&quot;&quot; Representing an employee
+    &quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">function</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">salary</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">function</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">function</span> 
+    def __init__(self, name : str, idnumber : int, salary : int, function : str): 
+        self.salary : int = salary 
+        self.function : str = function 
   
-        <span class="c1"># invoking the __init__ of the parent class  </span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">)</span>  
+        # invoking the __init__ of the parent class  
+        super().__init__(name, idnumber)  
   
                   
-<span class="c1"># creation of an object variable or an instance </span>
-<span class="n">a</span> <span class="p">:</span> <span class="n">Employee</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="mi">886012</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="s2">&quot;Professor&quot;</span><span class="p">)</span>     
+# creation of an object variable or an instance 
+a : Employee = Employee(&#39;Mark&#39;, 886012, 100000, &quot;Professor&quot;)     
     
-<span class="c1"># calling a function of the class Person using its instance </span>
-<span class="n">a</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+# calling a function of the class Person using its instance 
+a.display()
 </pre></div>
 </div>
 </div>
@@ -1665,7 +1674,7 @@ Notice that we do not pass the argument <code class="docutils literal notranslat
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1679,47 +1688,47 @@ Notice that we do not pass the argument <code class="docutils literal notranslat
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span>     
-    <span class="sd">&quot;&quot;&quot; Representing a person </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Person():     
+    &quot;&quot;&quot; Representing a person 
+    &quot;&quot;&quot;
     
-    <span class="c1"># Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>    
-        <span class="bp">self</span><span class="o">.</span><span class="n">pname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">idnumber</span> 
+    # Constructor
+    def __init__(self, name : str, idnumber : int):    
+        self.pname : str = name 
+        self.idnumber : int = idnumber 
         
-    <span class="c1"># To get name     </span>
-    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pname</span><span class="p">)</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span><span class="p">)</span> 
+    # To get name     
+    def display(self): 
+        print(self.pname) 
+        print(self.idnumber) 
         
-<span class="k">class</span> <span class="nc">Organisation</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot; Representing an organisation</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tp_of_organ</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">tp_of_organ</span>
+class Organisation():
+    &quot;&quot;&quot; Representing an organisation
+    &quot;&quot;&quot;
+    # Constructor
+    def __init__(self, name : str, tp_of_organ : str):
+        self.orgname : str = name
+        self.orgtype : str = tp_of_organ
 
-<span class="c1"># Child class</span>
-<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">,</span> <span class="n">Organisation</span><span class="p">):</span> 
-    <span class="sd">&quot;&quot;&quot; Representing an employee</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">function</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">salary</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">function</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">function</span> 
+# Child class
+class Employee(Person, Organisation): 
+    &quot;&quot;&quot; Representing an employee
+    &quot;&quot;&quot;
+    # Constructor
+    def __init__(self, idname : str, idnumber : int, salary : int, function : str, orgname : str, orgtype : str): 
+        self.salary : int = salary 
+        self.function : str = function 
   
-        <span class="c1"># invoking the __init__ of the parent class  </span>
-        <span class="n">Person</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">)</span> 
-        <span class="n">Organisation</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+        # invoking the __init__ of the parent class  
+        Person.__init__(self, idname, idnumber) 
+        Organisation.__init__(self, orgname, orgtype)
   
                   
-<span class="c1"># creation of an object variable or an instance </span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">Employee</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="mi">886012</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="s1">&#39;Professor&#39;</span><span class="p">,</span> <span class="s1">&#39;TU/e&#39;</span><span class="p">,</span> <span class="s1">&#39;university&#39;</span><span class="p">)</span>     
+# creation of an object variable or an instance 
+a = Employee(&#39;Mark&#39;, 886012, 100000, &#39;Professor&#39;, &#39;TU/e&#39;, &#39;university&#39;)     
   
-<span class="c1"># calling a function of the class Person using its instance </span>
-<span class="n">a</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+# calling a function of the class Person using its instance 
+a.display()
 </pre></div>
 </div>
 </div>
@@ -1735,56 +1744,56 @@ Notice that we do not pass the argument <code class="docutils literal notranslat
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span>     
-    <span class="sd">&quot;&quot;&quot; Representing a person </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Person():     
+    &quot;&quot;&quot; Representing a person 
+    &quot;&quot;&quot;
     
-    <span class="c1"># Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>    
-        <span class="bp">self</span><span class="o">.</span><span class="n">pname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">idnumber</span> 
+    # Constructor
+    def __init__(self, name : str, idnumber : int):    
+        self.pname : str = name 
+        self.idnumber : int = idnumber 
         
-    <span class="c1"># To get name     </span>
-    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pname</span><span class="p">)</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span><span class="p">)</span> 
+    # To get name     
+    def display(self): 
+        print(self.pname) 
+        print(self.idnumber) 
         
-<span class="k">class</span> <span class="nc">Organisation</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot; Representing an organisation</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tp_of_organ</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">tp_of_organ</span>
+class Organisation():
+    &quot;&quot;&quot; Representing an organisation
+    &quot;&quot;&quot;
+    # Constructor
+    def __init__(self, name : str, tp_of_organ : str):
+        self.orgname : str = name
+        self.orgtype : str = tp_of_organ
 
-<span class="c1"># Child class</span>
-<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">,</span> <span class="n">Organisation</span><span class="p">):</span> 
-    <span class="sd">&quot;&quot;&quot; Representing an employee</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span><span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">salary</span> 
+# Child class
+class Employee(Person, Organisation): 
+    &quot;&quot;&quot; Representing an employee
+    &quot;&quot;&quot;
+    # Constructor
+    def __init__(self, idname : str, idnumber :int, salary : int, orgname : str, orgtype : str): 
+        self.salary : int = salary 
   
-        <span class="c1"># invoking the __init__ of the parent class  </span>
-        <span class="n">Person</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">)</span> 
-        <span class="n">Organisation</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+        # invoking the __init__ of the parent class  
+        Person.__init__(self, idname, idnumber) 
+        Organisation.__init__(self, orgname, orgtype)
         
-<span class="k">class</span> <span class="nc">Scientific</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Representing a specific function</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+class Scientific(Employee):
+    &quot;&quot;&quot; Representing a specific function
+    &quot;&quot;&quot;
     
-    <span class="c1">#Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">level</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="n">level</span>
+    #Constructor
+    def __init__(self, idname : str, idnumber : int, salary : int, level : str, orgname : str, orgtype : str):
+        self.level = level
         
-        <span class="c1"># invoking the __init__ of the parent class</span>
-        <span class="n">Employee</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+        # invoking the __init__ of the parent class
+        Employee.__init__(self, idname, idnumber, salary, orgname, orgtype)
         
-<span class="c1"># creation of an object variable or an instance </span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">Scientific</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="mi">886012</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="s1">&#39;professor&#39;</span><span class="p">,</span> <span class="s1">&#39;TU/e&#39;</span><span class="p">,</span> <span class="s1">&#39;university&#39;</span><span class="p">)</span>     
+# creation of an object variable or an instance 
+a = Scientific(&#39;Mark&#39;, 886012, 100000, &#39;professor&#39;, &#39;TU/e&#39;, &#39;university&#39;)     
   
-<span class="c1"># calling a function of the class Person using its instance </span>
-<span class="n">a</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+# calling a function of the class Person using its instance 
+a.display()
 </pre></div>
 </div>
 </div>
@@ -1800,69 +1809,69 @@ Notice that we do not pass the argument <code class="docutils literal notranslat
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Person</span><span class="p">():</span>     
-    <span class="sd">&quot;&quot;&quot; Representing a person </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Person():     
+    &quot;&quot;&quot; Representing a person 
+    &quot;&quot;&quot;
     
-    <span class="c1"># Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>    
-        <span class="bp">self</span><span class="o">.</span><span class="n">pname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">idnumber</span> 
+    # Constructor
+    def __init__(self, name : str, idnumber : int):    
+        self.pname : str = name 
+        self.idnumber : int = idnumber 
         
-    <span class="c1"># To get name     </span>
-    <span class="k">def</span> <span class="nf">display</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">pname</span><span class="p">)</span> 
-        <span class="nb">print</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">idnumber</span><span class="p">)</span> 
+    # To get name     
+    def display(self): 
+        print(self.pname) 
+        print(self.idnumber) 
         
-<span class="k">class</span> <span class="nc">Organisation</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot; Representing an organisation</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">tp_of_organ</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">name</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">tp_of_organ</span>
+class Organisation():
+    &quot;&quot;&quot; Representing an organisation
+    &quot;&quot;&quot;
+    # Constructor
+    def __init__(self, name : str, tp_of_organ : str):
+        self.orgname : str = name
+        self.orgtype : str = tp_of_organ
 
-<span class="c1"># Child class</span>
-<span class="k">class</span> <span class="nc">Employee</span><span class="p">(</span><span class="n">Person</span><span class="p">,</span> <span class="n">Organisation</span><span class="p">):</span> 
-    <span class="sd">&quot;&quot;&quot; Representing an employee</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span> 
-        <span class="bp">self</span><span class="o">.</span><span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">salary</span> 
+# Child class
+class Employee(Person, Organisation): 
+    &quot;&quot;&quot; Representing an employee
+    &quot;&quot;&quot;
+    # Constructor
+    def __init__(self, idname : str, idnumber : int, salary : int, orgname : str, orgtype : str): 
+        self.salary : int = salary 
   
-        <span class="c1"># invoking the __init__ of the parent class  </span>
-        <span class="n">Person</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">)</span> 
-        <span class="n">Organisation</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+        # invoking the __init__ of the parent class  
+        Person.__init__(self, idname, idnumber) 
+        Organisation.__init__(self, orgname, orgtype)
         
-<span class="k">class</span> <span class="nc">Scientific</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Representing a specific scientific function</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+class Scientific(Employee):
+    &quot;&quot;&quot; Representing a specific scientific function
+    &quot;&quot;&quot;
     
-    <span class="c1">#Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span> <span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">level</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">level</span>  <span class="p">:</span> <span class="nb">str</span><span class="o">=</span> <span class="n">level</span>
+    #Constructor
+    def __init__(self, idname : str, idnumber : int , salary : int, level : str, orgname : str, orgtype : str):
+        self.level  : str= level
         
-        <span class="c1"># invoking the __init__ of the parent class</span>
-        <span class="n">Employee</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+        # invoking the __init__ of the parent class
+        Employee.__init__(self, idname, idnumber, salary, orgname, orgtype)
         
-<span class="k">class</span> <span class="nc">Support</span><span class="p">(</span><span class="n">Employee</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot; Representing a specific support function</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+class Support(Employee):
+    &quot;&quot;&quot; Representing a specific support function
+    &quot;&quot;&quot;
     
-    <span class="c1">#Constructor</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">idnumber</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">salary</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">suptype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgname</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">orgtype</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">suptype</span> <span class="o">=</span> <span class="n">suptype</span>
+    #Constructor
+    def __init__(self, idname : str, idnumber : int, salary : int, suptype : str, orgname : str, orgtype : str):
+        self.suptype = suptype
         
-        <span class="c1"># invoking the __init__ of the parent class</span>
-        <span class="n">Employee</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">idname</span><span class="p">,</span> <span class="n">idnumber</span><span class="p">,</span> <span class="n">salary</span><span class="p">,</span> <span class="n">orgname</span><span class="p">,</span> <span class="n">orgtype</span><span class="p">)</span>
+        # invoking the __init__ of the parent class
+        Employee.__init__(self, idname, idnumber, salary, orgname, orgtype)
         
-<span class="c1"># creation of an object variable or an instance </span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">Scientific</span><span class="p">(</span><span class="s1">&#39;Mark&#39;</span><span class="p">,</span> <span class="mi">886012</span><span class="p">,</span> <span class="mi">100000</span><span class="p">,</span> <span class="s1">&#39;full&#39;</span><span class="p">,</span> <span class="s1">&#39;TU/e&#39;</span><span class="p">,</span> <span class="s1">&#39;university&#39;</span><span class="p">)</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">Support</span><span class="p">(</span><span class="s1">&#39;Erik&#39;</span><span class="p">,</span> <span class="mi">685010</span><span class="p">,</span> <span class="mi">50000</span><span class="p">,</span> <span class="s1">&#39;programmer&#39;</span><span class="p">,</span> <span class="s1">&#39;TU/e&#39;</span><span class="p">,</span> <span class="s1">&#39;university&#39;</span><span class="p">)</span>     
+# creation of an object variable or an instance 
+a = Scientific(&#39;Mark&#39;, 886012, 100000, &#39;full&#39;, &#39;TU/e&#39;, &#39;university&#39;)
+b = Support(&#39;Erik&#39;, 685010, 50000, &#39;programmer&#39;, &#39;TU/e&#39;, &#39;university&#39;)     
   
-<span class="c1"># calling a function of the class Person using its instance </span>
-<span class="n">a</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
-<span class="n">b</span><span class="o">.</span><span class="n">display</span><span class="p">()</span>
+# calling a function of the class Person using its instance 
+a.display()
+b.display()
 </pre></div>
 </div>
 </div>
@@ -1894,7 +1903,7 @@ Erik
 <p>Each and every class in Python inherits from the base class <code class="docutils literal notranslate"><span class="pre">object</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">breakfast</span><span class="p">,</span><span class="n">Breakfast</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>isinstance(breakfast,Breakfast)
 </pre></div>
 </div>
 </div>
@@ -1906,7 +1915,7 @@ Erik
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">breakfast</span><span class="p">,</span><span class="n">Meal</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>isinstance(breakfast,Meal)
 </pre></div>
 </div>
 </div>
@@ -1918,7 +1927,7 @@ Erik
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">breakfast</span><span class="p">,</span><span class="nb">int</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>isinstance(breakfast,int)
 </pre></div>
 </div>
 </div>
@@ -1930,7 +1939,7 @@ Erik
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">isinstance</span><span class="p">(</span><span class="n">breakfast</span><span class="p">,</span><span class="nb">object</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>isinstance(breakfast,object)
 </pre></div>
 </div>
 </div>
@@ -1943,7 +1952,7 @@ Erik
 <p>In the same way, <code class="docutils literal notranslate"><span class="pre">issubclass()</span></code> is used to check for class inheritance.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">issubclass</span><span class="p">(</span><span class="n">Meal</span><span class="p">,</span><span class="n">Breakfast</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>issubclass(Meal,Breakfast)
 </pre></div>
 </div>
 </div>
@@ -1955,7 +1964,7 @@ Erik
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">issubclass</span><span class="p">(</span><span class="n">Breakfast</span><span class="p">,</span><span class="n">Meal</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>issubclass(Breakfast,Meal)
 </pre></div>
 </div>
 </div>
@@ -1967,7 +1976,7 @@ Erik
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">issubclass</span><span class="p">(</span><span class="nb">bool</span><span class="p">,</span><span class="nb">int</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>issubclass(bool,int)
 </pre></div>
 </div>
 </div>
@@ -1983,7 +1992,7 @@ Erik
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -2009,16 +2018,16 @@ computation. This kind of relationship is called a <strong>dependency</strong>.<
 <p>A <strong>class diagram</strong> is a graphical representation of these relationships.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39; +--------+        *   +--------+&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; |  Meal  |   ------&gt;  |  Dish  |&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39; +--------+            +--------+&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;     /_\                         &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;      |                          &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;      |                          &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;      |                          &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;+-----------+                    &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;| Breakfast |                    &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;+-----------+                    &#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&#39; +--------+        *   +--------+&#39;)
+print(&#39; |  Meal  |   ------&gt;  |  Dish  |&#39;)
+print(&#39; +--------+            +--------+&#39;)
+print(&#39;     /_\                         &#39;)
+print(&#39;      |                          &#39;)
+print(&#39;      |                          &#39;)
+print(&#39;      |                          &#39;)
+print(&#39;+-----------+                    &#39;)
+print(&#39;| Breakfast |                    &#39;)
+print(&#39;+-----------+                    &#39;)
 </pre></div>
 </div>
 </div>

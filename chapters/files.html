@@ -650,15 +650,24 @@ Another way is to store data in a <strong>database</strong>, we will see a simpl
 We use the built-in function <code class="docutils literal notranslate"><span class="pre">open()</span></code> in Python to achieve this task.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/output.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file_out = open(&#39;datasets/output.txt&#39;)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/output.txt&#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py:282,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">282</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;datasets/output.txt&#39;
 </pre></div>
@@ -675,7 +684,7 @@ The file handle is not the real data, but instead, it is an intermediary that we
 <p>The newline character is represented as <code class="docutils literal notranslate"><span class="pre">\n</span></code>. If you include this character in a string, the content after the newline character will be displayed in a new line.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data</span><span class="se">\n</span><span class="s1">Science&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&#39;Data\nScience&#39;)
 </pre></div>
 </div>
 </div>
@@ -691,7 +700,7 @@ while using the newline character?
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -708,13 +717,13 @@ With the <code class="docutils literal notranslate"><span class="pre">for</span>
 <p>The following code creates a <strong>file handle</strong> (<code class="docutils literal notranslate"><span class="pre">file_logs</span></code>) and counts the number of lines in the file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_logs</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.txt&#39;</span><span class="p">)</span>
-<span class="n">count</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file_logs = open(&#39;datasets/logs.txt&#39;)
+count : int = 0
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file_logs</span><span class="p">:</span>
-    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+for line in file_logs:
+    count += 1
     
-<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+print(count)
 </pre></div>
 </div>
 </div>
@@ -724,12 +733,12 @@ This method reads the whole content of the file as a <strong>big string</strong>
 <p>It is a good idea to store the output of the <code class="docutils literal notranslate"><span class="pre">read()</span></code> method in a variable, given that it <strong>exhausts resources</strong> (once resources are read, no more content can be obtained in a future invocation).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_logs</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.txt&#39;</span><span class="p">)</span>
-<span class="n">first_call</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">file_logs</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">second_call</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">file_logs</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file_logs = open(&#39;datasets/logs.txt&#39;)
+first_call : str = file_logs.read()
+second_call : str = file_logs.read()
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;First call:</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">first_call</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Second call:</span><span class="se">\n</span><span class="s1">&#39;</span> <span class="o">+</span> <span class="n">second_call</span><span class="p">)</span>
+print(&#39;First call:\n&#39; + first_call)
+print(&#39;Second call:\n&#39; + second_call)
 </pre></div>
 </div>
 </div>
@@ -740,7 +749,7 @@ This method reads the whole content of the file as a <strong>big string</strong>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -752,11 +761,11 @@ This method reads the whole content of the file as a <strong>big string</strong>
 For instance, we can use the <code class="docutils literal notranslate"><span class="pre">startswith()</span></code> string method to print the lines that start by “INFO”.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_logs</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file_logs = open(&#39;datasets/logs.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file_logs</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;INFO&#39;</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+for line in file_logs:
+    if line.startswith(&#39;INFO&#39;):
+        print(line)
 </pre></div>
 </div>
 </div>
@@ -767,11 +776,11 @@ But, why are we seeing the extra blank line between lines?</p>
 <p>To improve the asthetics of our output we can use the <code class="docutils literal notranslate"><span class="pre">rstrip()</span></code> method, which strips whitespaces from the end of a string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_logs</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file_logs = open(&#39;datasets/logs.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file_logs</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;INFO&#39;</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+for line in file_logs:
+    if line.startswith(&#39;INFO&#39;):
+        print(line.rstrip())
 </pre></div>
 </div>
 </div>
@@ -780,12 +789,12 @@ But, why are we seeing the extra blank line between lines?</p>
 <p>Please reflect on the difference between the <code class="docutils literal notranslate"><span class="pre">continue</span></code> and <code class="docutils literal notranslate"><span class="pre">break</span></code> statement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_logs</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file_logs = open(&#39;datasets/logs.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file_logs</span><span class="p">:</span>
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;INFO&#39;</span><span class="p">):</span> 
-        <span class="k">continue</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+for line in file_logs:
+    if not line.startswith(&#39;INFO&#39;): 
+        continue
+    print(line.rstrip())
 </pre></div>
 </div>
 </div>
@@ -796,12 +805,12 @@ This method returns the <strong>position</strong> of the string or <code class="
 <p>Let us print now all lines that contain the text ‘from:bob&#64;mail.nl’.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_logs</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/logs.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file_logs = open(&#39;datasets/logs.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file_logs</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">line</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;from:bob@mail.nl&#39;</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span> 
-        <span class="k">continue</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+for line in file_logs:
+    if line.find(&#39;from:bob@mail.nl&#39;) == -1: 
+        continue
+    print(line.rstrip())
 </pre></div>
 </div>
 </div>
@@ -812,7 +821,7 @@ This method returns the <strong>position</strong> of the string or <code class="
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -828,10 +837,10 @@ For example, when you open a file for reading, Python looks for it in the curren
 <p><code class="docutils literal notranslate"><span class="pre">os.getcwd</span></code> returns the name of the current directory</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import os
 
-<span class="n">cwd</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cwd</span><span class="p">)</span>
+cwd : str = os.getcwd()
+print(cwd)
 </pre></div>
 </div>
 </div>
@@ -846,7 +855,7 @@ but it is a <strong>relative path</strong> because it relates to the current dir
 path</strong>. To find the absolute path to a file, you can use <code class="docutils literal notranslate"><span class="pre">os.path.abspath</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s1">&#39;datasets/output.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>os.path.abspath(&#39;datasets/output.txt&#39;)
 </pre></div>
 </div>
 </div>
@@ -855,7 +864,7 @@ path</strong>. To find the absolute path to a file, you can use <code class="doc
 <p><code class="docutils literal notranslate"><span class="pre">os.path.exists</span></code> checks whether a file or directory <strong>exists</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s1">&#39;datasets/output.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>os.path.exists(&#39;datasets/output.txt&#39;)
 </pre></div>
 </div>
 </div>
@@ -864,14 +873,14 @@ path</strong>. To find the absolute path to a file, you can use <code class="doc
 <p><strong>[NOTE]</strong> I use an absolute path in the next cells, please change accordingly if you want to run the cells.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;datasets/output.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>os.path.isdir(&#39;datasets/output.txt&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="s1">&#39;/Users/mvdbrand/Documents/GitLab/course-material-jbi010/202122/lectures/week3&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>os.path.isdir(&#39;/Users/mvdbrand/Documents/GitLab/course-material-jbi010/202122/lectures/week3&#39;)
 </pre></div>
 </div>
 </div>
@@ -879,7 +888,7 @@ path</strong>. To find the absolute path to a file, you can use <code class="doc
 <p><code class="docutils literal notranslate"><span class="pre">os.listdir</span></code> returns a <strong>list of the files</strong> (and other directories) in the given directory.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">cwd</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> os.listdir(cwd)
 </pre></div>
 </div>
 </div>
@@ -888,19 +897,19 @@ path</strong>. To find the absolute path to a file, you can use <code class="doc
 <p><code class="docutils literal notranslate"><span class="pre">os.path.join</span></code> takes a directory and a file name and joins them into a <strong>complete path</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">content</span><span class="p">(</span><span class="n">dir_name</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;prints all files in subdirectories starting from dir_name&quot;&quot;&quot;</span>
-    <span class="n">current_directories</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">dir_name</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def content(dir_name : str) -&gt; None:
+    &quot;&quot;&quot;prints all files in subdirectories starting from dir_name&quot;&quot;&quot;
+    current_directories : str = os.listdir(dir_name)
     
-    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">current_directories</span><span class="p">:</span>
-        <span class="n">path</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dir_name</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    for name in current_directories:
+        path : str = os.path.join(dir_name, name)
         
-        <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;File is:&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Path is:&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span>
+        if os.path.isfile(path):
+            print(&quot;File is:&quot;, path)
+        else:
+            print(&quot;Path is:&quot;, path)
             
-<span class="n">content</span><span class="p">(</span><span class="s1">&#39;/Users/mvdbrand/Documents/GitLab/course-material-jbi010/202021/lectures&#39;</span><span class="p">)</span>
+content(&#39;/Users/mvdbrand/Documents/GitLab/course-material-jbi010/202021/lectures&#39;)
 </pre></div>
 </div>
 </div>
@@ -911,7 +920,7 @@ path</strong>. To find the absolute path to a file, you can use <code class="doc
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -919,8 +928,8 @@ path</strong>. To find the absolute path to a file, you can use <code class="doc
 <p>The <code class="docutils literal notranslate"><span class="pre">os</span></code> module provides a function called <code class="docutils literal notranslate"><span class="pre">walk</span></code> that walks over all subdirectories.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">path</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s1">&#39;/Users/mvdbrand/Documents/GitLab/course-material-jbi010/202122/lectures&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for path in os.walk(&#39;/Users/mvdbrand/Documents/GitLab/course-material-jbi010/202122/lectures&#39;):
+    print(path)
 </pre></div>
 </div>
 </div>
@@ -931,7 +940,7 @@ path</strong>. To find the absolute path to a file, you can use <code class="doc
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -943,10 +952,10 @@ path</strong>. To find the absolute path to a file, you can use <code class="doc
 <p>To do so, we can use the <code class="docutils literal notranslate"><span class="pre">input</span></code> function as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the file name:&#39;</span><span class="p">)</span>
-<span class="n">file_handle</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file = input(&#39;Enter the file name:&#39;)
+file_handle : str = open(file)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+print(file)
 </pre></div>
 </div>
 </div>
@@ -961,7 +970,7 @@ The file may not exist, it may be read or write protected, etc.
 If you try to open a file that does not exist, you get a <code class="docutils literal notranslate"><span class="pre">FileNotFoundError</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fbad</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;bad.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fbad = open(&#39;bad.txt&#39;)
 </pre></div>
 </div>
 </div>
@@ -969,7 +978,7 @@ If you try to open a file that does not exist, you get a <code class="docutils l
 <p>If you are not allowed to open a file, you get an error message as well.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/etc/passwd&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> file_out = open(&#39;/etc/passwd&#39;, &#39;w&#39;)
 </pre></div>
 </div>
 </div>
@@ -977,7 +986,7 @@ If you try to open a file that does not exist, you get a <code class="docutils l
 <p>If you try to open a directory, you get another error message.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> <span class="n">file_in</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;/users&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span> file_in = open(&#39;/users&#39;)
 </pre></div>
 </div>
 </div>
@@ -990,10 +999,10 @@ It is better to go ahead and try—and deal with problems if they happen—which
 what the <code class="docutils literal notranslate"><span class="pre">try</span></code> statement does.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="n">fbad</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;bad_file&#39;</span><span class="p">)</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Something went wrong.&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>try:
+    fbad : str = open(&#39;bad_file&#39;)
+except:
+    print(&#39;Something went wrong.&#39;)
 </pre></div>
 </div>
 </div>
@@ -1010,11 +1019,11 @@ In general, catching an exception gives you a chance to fix the problem, or try 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modify the following code</span>
-<span class="n">file</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Enter the file name:&#39;</span><span class="p">)</span>
-<span class="n">file_handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Modify the following code
+file = input(&#39;Enter the file name:&#39;)
+file_handle = open(file)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+print(file)
 </pre></div>
 </div>
 </div>
@@ -1025,7 +1034,7 @@ In general, catching an exception gives you a chance to fix the problem, or try 
 <p>To write a file you should open it with mode <code class="docutils literal notranslate"><span class="pre">w</span></code> (from <em>write</em>) as second parameter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/output.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file_out = open(&#39;datasets/output.txt&#39;, &#39;w&#39;)
 </pre></div>
 </div>
 </div>
@@ -1036,8 +1045,8 @@ If the file does not exist, a new one is created.</p>
 The <code class="docutils literal notranslate"><span class="pre">write</span></code> method puts data into the file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">line1</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;There are bright Data Scientists</span><span class="se">\n</span><span class="s2">&quot;</span>
-<span class="n">file_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>line1 : str = &quot;There are bright Data Scientists\n&quot;
+file_out.write(line1)
 </pre></div>
 </div>
 </div>
@@ -1048,8 +1057,8 @@ The <code class="docutils literal notranslate"><span class="pre">write</span></c
 If you write more data to the file, it will be <strong>appended</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">line2</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;But there are also bright Computer Scientists</span><span class="se">\n</span><span class="s2">&quot;</span>
-<span class="n">file_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">line2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>line2 : str = &quot;But there are also bright Computer Scientists\n&quot;
+file_out.write(line2)
 </pre></div>
 </div>
 </div>
@@ -1060,7 +1069,7 @@ If you do not close the file, it is closed for you when your program is terminat
 However, similar to type hints and comments, make it common practice to <strong>close files explicitly</strong>, because different Python environments may have different behaviour in this respect.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file_out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file_out.close()
 </pre></div>
 </div>
 </div>
@@ -1071,7 +1080,7 @@ However, similar to type hints and comments, make it common practice to <strong>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>

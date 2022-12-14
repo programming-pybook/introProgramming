@@ -947,17 +947,17 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 </table>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change the truth values of p and q to see how the conclusion r changes</span>
-<span class="n">p</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">q</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">r</span><span class="p">:</span> <span class="nb">bool</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Change the truth values of p and q to see how the conclusion r changes
+p = True
+q = True
+r: bool
 
-<span class="k">if</span> <span class="n">p</span> <span class="ow">and</span> <span class="n">q</span><span class="p">:</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="kc">False</span>
+if p and q:
+    r = True
+else:
+    r = False
     
-<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+print(r)
 </pre></div>
 </div>
 </div>
@@ -970,12 +970,12 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 <p>The previous translation to Python code of the deductive argument is correct, however we can do way better! Let us see:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change the truth values of p and q to see how the conclusion r changes</span>
-<span class="n">p</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">q</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">r</span> <span class="o">=</span> <span class="n">p</span> <span class="ow">and</span> <span class="n">q</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Change the truth values of p and q to see how the conclusion r changes
+p = True
+q = True
+r = p and q
     
-<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+print(r)
 </pre></div>
 </div>
 </div>
@@ -1226,11 +1226,11 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">alice</span> <span class="o">=</span> <span class="mi">60</span>        <span class="c1"># Alice&#39;s height</span>
-<span class="n">max_doorway</span> <span class="o">=</span> <span class="mi">15</span>  <span class="c1"># Max doorway height</span>
-<span class="n">min_doorway</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Min doorway height</span>
-<span class="n">drink</span> <span class="o">=</span> <span class="mi">11</span>        <span class="c1"># Height decrease after taking a sip from the &#39;DRINK ME&#39; bottle</span>
-<span class="n">eat</span> <span class="o">=</span> <span class="mi">1</span>           <span class="c1"># Height increase after taking a bite from the &#39;EAT ME&#39; cake</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>alice = 60        # Alice&#39;s height
+max_doorway = 15  # Max doorway height
+min_doorway = 10  # Min doorway height
+drink = 11        # Height decrease after taking a sip from the &#39;DRINK ME&#39; bottle
+eat = 1           # Height increase after taking a bite from the &#39;EAT ME&#39; cake
 </pre></div>
 </div>
 </div>
@@ -1268,29 +1268,29 @@ In this case, the conclusion presented in premise 3 is false. It is true that bi
 <p>Now, we will implement our algorithm in Python.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inputs</span>
-<span class="n">alice</span> <span class="o">=</span> <span class="mi">60</span>        <span class="c1"># Alice&#39;s height</span>
-<span class="n">max_doorway</span> <span class="o">=</span> <span class="mi">15</span>  <span class="c1"># Max doorway height</span>
-<span class="n">min_doorway</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Min doorway height</span>
-<span class="n">drink</span> <span class="o">=</span> <span class="mi">11</span>        <span class="c1"># Height decrease after taking a sip from the &#39;DRINK ME&#39; bottle</span>
-<span class="n">eat</span> <span class="o">=</span> <span class="mi">1</span>           <span class="c1"># Height increase after taking a bite from the &#39;EAT ME&#39; cake</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Inputs
+alice = 60        # Alice&#39;s height
+max_doorway = 15  # Max doorway height
+min_doorway = 10  # Min doorway height
+drink = 11        # Height decrease after taking a sip from the &#39;DRINK ME&#39; bottle
+eat = 1           # Height increase after taking a bite from the &#39;EAT ME&#39; cake
 
 
-<span class="c1"># Algorithm</span>
-<span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-    <span class="k">if</span> <span class="mi">10</span> <span class="o">&lt;</span> <span class="n">alice</span> <span class="o">&lt;=</span> <span class="mi">15</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Alice is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">alice</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; inches. She can go out of the hall through the doorway!&#39;</span><span class="p">)</span>
-        <span class="k">break</span>
-    <span class="k">elif</span> <span class="n">alice</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Alice is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">alice</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; inches. Take a bite from the &quot;EAT ME&quot; cake!&#39;</span><span class="p">)</span>
-        <span class="n">alice</span> <span class="o">=</span> <span class="n">alice</span> <span class="o">+</span> <span class="n">eat</span>
-    <span class="k">elif</span> <span class="n">alice</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Alice is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">alice</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; inches. Take a sip from the &quot;DRINK ME&quot; bottle!&#39;</span><span class="p">)</span>
-        <span class="n">alice</span> <span class="o">=</span> <span class="n">alice</span> <span class="o">-</span> <span class="n">drink</span>
+# Algorithm
+while True:
+    if 10 &lt; alice &lt;= 15:
+        print(&#39;Alice is &#39; + str(alice) + &#39; inches. She can go out of the hall through the doorway!&#39;)
+        break
+    elif alice &lt; 10:
+        print(&#39;Alice is &#39; + str(alice) + &#39; inches. Take a bite from the &quot;EAT ME&quot; cake!&#39;)
+        alice = alice + eat
+    elif alice &gt; 15:
+        print(&#39;Alice is &#39; + str(alice) + &#39; inches. Take a sip from the &quot;DRINK ME&quot; bottle!&#39;)
+        alice = alice - drink
 
         
-<span class="c1"># Output</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">alice</span><span class="p">)</span>
+# Output
+print(alice)
 </pre></div>
 </div>
 </div>
@@ -1309,7 +1309,7 @@ Alice is 9 inches. Take a bite from the &quot;EAT ME&quot; cake!
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">17</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">17</span>
 <span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Alice is &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">alice</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; inches. Take a bite from the &quot;EAT ME&quot; cake!&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">alice</span> <span class="o">=</span> <span class="n">alice</span> <span class="o">+</span> <span class="n">eat</span>
 <span class="ne">---&gt; </span><span class="mi">17</span> <span class="k">elif</span> <span class="n">alice</span> <span class="o">&gt;</span> <span class="mi">15</span><span class="p">:</span>
@@ -1325,28 +1325,28 @@ Alice is 9 inches. Take a bite from the &quot;EAT ME&quot; cake!
 <p><strong>Note:</strong> In the following code, we will use f-Strings. We will talk more about later in the course, but now you can start grasping what is their use and how we can build them.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Inputs</span>
-<span class="n">alice</span> <span class="o">=</span> <span class="mi">60</span>        <span class="c1"># Alice&#39;s height</span>
-<span class="n">max_doorway</span> <span class="o">=</span> <span class="mi">15</span>  <span class="c1"># Max doorway height</span>
-<span class="n">min_doorway</span> <span class="o">=</span> <span class="mi">10</span>  <span class="c1"># Min doorway height</span>
-<span class="n">drink</span> <span class="o">=</span> <span class="mi">11</span>        <span class="c1"># Height decrease after taking a sip from the &#39;DRINK ME&#39; bottle</span>
-<span class="n">eat</span> <span class="o">=</span> <span class="mi">1</span>           <span class="c1"># Height increase after taking a bite from the &#39;EAT ME&#39; cake</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Inputs
+alice = 60        # Alice&#39;s height
+max_doorway = 15  # Max doorway height
+min_doorway = 10  # Min doorway height
+drink = 11        # Height decrease after taking a sip from the &#39;DRINK ME&#39; bottle
+eat = 1           # Height increase after taking a bite from the &#39;EAT ME&#39; cake
 
 
-<span class="c1"># Algorithm</span>
-<span class="k">while</span> <span class="n">alice</span> <span class="o">&lt;</span> <span class="n">min_doorway</span> <span class="ow">or</span> <span class="n">alice</span> <span class="o">&gt;=</span> <span class="n">max_doorway</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">alice</span> <span class="o">&lt;</span> <span class="n">min_doorway</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Alice is </span><span class="si">{</span><span class="n">alice</span><span class="si">}</span><span class="s1"> inches. Take a bite from the &quot;EAT ME&quot; cake!&#39;</span><span class="p">)</span>
-        <span class="n">alice</span> <span class="o">+=</span> <span class="n">eat</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Alice is </span><span class="si">{</span><span class="n">alice</span><span class="si">}</span><span class="s1"> inches. Take a sip from the &quot;DRINK ME&quot; bottle!&#39;</span><span class="p">)</span>
-        <span class="n">alice</span> <span class="o">-=</span> <span class="n">drink</span>
+# Algorithm
+while alice &lt; min_doorway or alice &gt;= max_doorway:
+    if alice &lt; min_doorway:
+        print(f&#39;Alice is {alice} inches. Take a bite from the &quot;EAT ME&quot; cake!&#39;)
+        alice += eat
+    else:
+        print(f&#39;Alice is {alice} inches. Take a sip from the &quot;DRINK ME&quot; bottle!&#39;)
+        alice -= drink
 
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Alice is </span><span class="si">{</span><span class="n">alice</span><span class="si">}</span><span class="s1"> inches. She can go out of the hall through the doorway!&#39;</span><span class="p">)</span>        
+print(f&#39;Alice is {alice} inches. She can go out of the hall through the doorway!&#39;)        
 
 
-<span class="c1"># Output</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">alice</span><span class="p">)</span>
+# Output
+print(alice)
 </pre></div>
 </div>
 </div>

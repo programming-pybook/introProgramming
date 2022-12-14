@@ -654,11 +654,11 @@ title="Print to PDF"
 <p>We will start with introducing another programmer-defined type: the class <code class="docutils literal notranslate"><span class="pre">Time</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.</span>
-<span class="sd">    </span>
-<span class="sd">    attributes: hour, minute, second</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.
+    
+    attributes: hour, minute, second
+    &quot;&quot;&quot;
 </pre></div>
 </div>
 </div>
@@ -666,10 +666,10 @@ title="Print to PDF"
 <p>We can now create <code class="docutils literal notranslate"><span class="pre">Time</span></code> objects and assign values to the attributes: <code class="docutils literal notranslate"><span class="pre">hours</span></code>, <code class="docutils literal notranslate"><span class="pre">minutes</span></code>, and <code class="docutils literal notranslate"><span class="pre">seconds</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">11</span>
-<span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">59</span>
-<span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">33</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>time : Time = Time()
+time.hour : int = 11
+time.minute : int = 59
+time.second : int = 33
 </pre></div>
 </div>
 </div>
@@ -677,12 +677,12 @@ title="Print to PDF"
 <p>In the next cell, a new way of formatting strings is shown. See <a class="reference external" href="https://pyformat.info">https://pyformat.info</a> for more information.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; prints a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span><span class="n">time</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span><span class="n">time</span><span class="o">.</span><span class="n">second</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_time(time : Time) -&gt; None:
+    &quot;&quot;&quot; prints a Time object
+    &quot;&quot;&quot;
+    print(&#39;({:02d}:{:02d}:{:02d})&#39;.format(time.hour,time.minute,time.second))
 
-<span class="n">print_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span>
+print_time(time)
 </pre></div>
 </div>
 </div>
@@ -694,18 +694,18 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_after</span><span class="p">(</span><span class="n">time1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">time2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; gets 2 Time objects as argument and </span>
-<span class="sd">        returns a boolean to indicate whether time1 is greater than time2</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">time1</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;</span> <span class="n">time2</span><span class="o">.</span><span class="n">hour</span> <span class="ow">or</span> <span class="n">time1</span><span class="o">.</span><span class="n">minute</span> <span class="o">&gt;</span> <span class="n">time2</span><span class="o">.</span><span class="n">minute</span> <span class="ow">or</span> <span class="n">time1</span><span class="o">.</span><span class="n">second</span> <span class="o">&gt;</span> <span class="n">time2</span><span class="o">.</span><span class="n">second</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def is_after(time1 : Time, time2 : Time) -&gt; bool:
+    &quot;&quot;&quot; gets 2 Time objects as argument and 
+        returns a boolean to indicate whether time1 is greater than time2
+    &quot;&quot;&quot;
+    return time1.hour &gt; time2.hour or time1.minute &gt; time2.minute or time1.second &gt; time2.second
 
-<span class="n">new_time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">new_time</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">11</span>
-<span class="n">new_time</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">59</span>
-<span class="n">new_time</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">31</span>
+new_time : Time = Time()
+new_time.hour : int = 11
+new_time.minute : int = 59
+new_time.second : int = 31
 
-<span class="n">is_after</span><span class="p">(</span><span class="n">time</span><span class="p">,</span><span class="n">new_time</span><span class="p">)</span>
+is_after(time,new_time)
 </pre></div>
 </div>
 </div>
@@ -721,7 +721,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -736,14 +736,14 @@ starting with a simple prototype and incrementally dealing with the complication
 <p>The next cell shows a simple prototype of the <code class="docutils literal notranslate"><span class="pre">add_time</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">sum</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="nb">sum</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">hour</span>
-    <span class="nb">sum</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">minute</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">minute</span>
-    <span class="nb">sum</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">second</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">second</span>
-    <span class="k">return</span> <span class="nb">sum</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def add_time(t1 : Time, t2 : Time) -&gt; Time:
+    &quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects
+    &quot;&quot;&quot;
+    sum : Time = Time()
+    sum.hour : int = t1.hour + t2.hour
+    sum.minute : int = t1.minute + t2.minute
+    sum.second : int = t1.second + t2.second
+    return sum
 </pre></div>
 </div>
 </div>
@@ -758,18 +758,18 @@ the values of the attributes of the arguments, and eventually returns the create
 <p>The function of the previous cell can be tested by creating and adding 2 <code class="docutils literal notranslate"><span class="pre">Time</span></code> objects.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">start</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="n">start</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">45</span>
-<span class="n">start</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time()
+start.hour : int = 21
+start.minute : int = 45
+start.second : int = 0
 
-<span class="n">duration</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">duration</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">duration</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">35</span>
-<span class="n">duration</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+duration : Time = Time()
+duration.hour : int = 1
+duration.minute : int = 35
+duration.second : int = 0
 
-<span class="n">finished</span> <span class="o">=</span> <span class="n">add_time</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">duration</span><span class="p">)</span>
-<span class="n">print_time</span><span class="p">(</span><span class="n">finished</span><span class="p">)</span>
+finished = add_time(start, duration)
+print_time(finished)
 </pre></div>
 </div>
 </div>
@@ -787,29 +787,29 @@ the values of the attributes of the arguments, and eventually returns the create
 <p>We need to <em>carry</em> over seconds to minutes and minutes to hours.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">sum</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="nb">sum</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">hour</span>
-    <span class="nb">sum</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">minute</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">minute</span>
-    <span class="nb">sum</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">t1</span><span class="o">.</span><span class="n">second</span> <span class="o">+</span> <span class="n">t2</span><span class="o">.</span><span class="n">second</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def add_time(t1 : Time, t2 : Time) -&gt; Time:
+    &quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects
+    &quot;&quot;&quot;
+    sum : Time = Time()
+    sum.hour : int = t1.hour + t2.hour
+    sum.minute : int = t1.minute + t2.minute
+    sum.second : int = t1.second + t2.second
 
-<span class="c1"># fix the seconds if greater than 60</span>
-    <span class="k">if</span> <span class="nb">sum</span><span class="o">.</span><span class="n">second</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
-        <span class="nb">sum</span><span class="o">.</span><span class="n">second</span> <span class="o">-=</span> <span class="mi">60</span>
-        <span class="nb">sum</span><span class="o">.</span><span class="n">minute</span> <span class="o">+=</span> <span class="mi">1</span>
+# fix the seconds if greater than 60
+    if sum.second &gt;= 60:
+        sum.second -= 60
+        sum.minute += 1
 
-<span class="c1"># fix the minutes if greater than 60</span>
-    <span class="k">if</span> <span class="nb">sum</span><span class="o">.</span><span class="n">minute</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
-        <span class="nb">sum</span><span class="o">.</span><span class="n">minute</span> <span class="o">-=</span> <span class="mi">60</span>
-        <span class="nb">sum</span><span class="o">.</span><span class="n">hour</span> <span class="o">+=</span> <span class="mi">1</span>
+# fix the minutes if greater than 60
+    if sum.minute &gt;= 60:
+        sum.minute -= 60
+        sum.hour += 1
         
-<span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="nb">sum</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="nb">sum</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+# fix with hours if greater than 24
+    if sum.hour &gt;= 24:
+        sum.hour -= 24
         
-    <span class="k">return</span> <span class="nb">sum</span>
+    return sum
 </pre></div>
 </div>
 </div>
@@ -822,7 +822,7 @@ the values of the attributes of the arguments, and eventually returns the create
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -836,24 +836,24 @@ the values of the attributes of the arguments, and eventually returns the create
 <p>In the next cell, a first version of the function <code class="docutils literal notranslate"><span class="pre">increment</span></code> is presented.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">increment2</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; adds the seconds (2nd argument) to the Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">+=</span> <span class="n">seconds</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def increment2(time : Time, seconds : int) -&gt; None:
+    &quot;&quot;&quot; adds the seconds (2nd argument) to the Time object
+    &quot;&quot;&quot;
+    time.second += seconds
     
-<span class="c1"># fix the seconds if greater than 60</span>
-    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">-=</span> <span class="mi">60</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">+=</span> <span class="mi">1</span>
+# fix the seconds if greater than 60
+    while time.second &gt;= 60:
+        time.second -= 60
+        time.minute += 1
         
-<span class="c1"># fix the minutes if greater than 60</span>
-    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">-=</span> <span class="mi">60</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">+=</span> <span class="mi">1</span>
+# fix the minutes if greater than 60
+    while time.minute &gt;= 60:
+        time.minute -= 60
+        time.hour += 1
 
-<span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span> 
+# fix with hours if greater than 24
+    while time.hour &gt;= 24:
+        time.hour -= 24 
 </pre></div>
 </div>
 </div>
@@ -872,34 +872,34 @@ that use modifiers.</p>
 <p>It is, therefore, good practice to develop <strong>pure functions</strong> instead of <strong>modifiers</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; adds the seconds (2nd argument) to the Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="p">(</span><span class="n">hours</span><span class="p">,</span> <span class="n">seconds</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">+=</span> <span class="n">hours</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def increment(time : Time, seconds : int) -&gt; None:
+    &quot;&quot;&quot; adds the seconds (2nd argument) to the Time object
+    &quot;&quot;&quot;
+    (hours, seconds) = divmod(seconds, 3600)
+    time.hour += hours
     
-    <span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="n">seconds</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">+=</span> <span class="n">minutes</span>
+    (minutes, seconds) = divmod(seconds, 60)
+    time.minute += minutes
     
-    <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">+=</span> <span class="n">seconds</span>
+    time.second += seconds
     
-<span class="c1"># fix the seconds if greater than 60</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">-=</span> <span class="mi">60</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="mi">1</span>
+# fix the seconds if greater than 60
+    if time.second &gt;= 60:
+        time.second -= 60
+        time.minute = 1
 
-<span class="c1"># fix the minutes if greater than 60</span>
-    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">-=</span> <span class="mi">60</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">+=</span> <span class="mi">1</span>
+# fix the minutes if greater than 60
+    while time.minute &gt;= 60:
+        time.minute -= 60
+        time.hour += 1
 
-<span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">while</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span> 
+# fix with hours if greater than 24
+    while time.hour &gt;= 24:
+        time.hour -= 24 
         
-<span class="n">print_time</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
-<span class="n">increment</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="mi">3660</span><span class="p">)</span>
-<span class="n">print_time</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+print_time(start)
+increment(start, 3660)
+print_time(start)
 </pre></div>
 </div>
 </div>
@@ -916,7 +916,7 @@ that use modifiers.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -935,15 +935,15 @@ in terms of the amount of seconds; <code class="docutils literal notranslate"><s
 <p>So, if we convert the <code class="docutils literal notranslate"><span class="pre">Time</span></code> object to an integer value representing seconds and back, we are done.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value representing seconds</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span>
-    <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span>
-    <span class="k">return</span> <span class="n">seconds</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def time_to_int(time : Time) -&gt; int:
+    &quot;&quot;&quot; converts a Time object into an integer value representing seconds
+    &quot;&quot;&quot;
+    minutes : int = 60 * time.hour + time.minute
+    seconds : int = 60 * minutes + time.second
+    return seconds
 
-<span class="n">print_time</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">time_to_int</span><span class="p">(</span><span class="n">start</span><span class="p">))</span>
+print_time(start)
+print(time_to_int(start))
 </pre></div>
 </div>
 </div>
@@ -959,18 +959,18 @@ in terms of the amount of seconds; <code class="docutils literal notranslate"><s
 <p>We will use a special data type: tuples. We will dive deeper into this type in coming topics, for now let us just see how to use them.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts an integer value representing seconds into a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def int_to_time(seconds : int) -&gt; Time:
+    &quot;&quot;&quot; converts an integer value representing seconds into a Time object
+    &quot;&quot;&quot;
+    time : Time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
     
-<span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+# fix with hours if greater than 24
+    if time.hour &gt;= 24:
+        time.hour -= 24
         
-    <span class="k">return</span> <span class="n">time</span>
+    return time
 </pre></div>
 </div>
 </div>
@@ -979,8 +979,8 @@ in terms of the amount of seconds; <code class="docutils literal notranslate"><s
 <p>In this case, we will verify with the expression <code class="docutils literal notranslate"><span class="pre">time_to_int(int_to_time(x))</span> <span class="pre">==</span> <span class="pre">x</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">86300</span>
-<span class="n">time_to_int</span><span class="p">(</span><span class="n">int_to_time</span><span class="p">(</span><span class="n">x</span><span class="p">))</span> <span class="o">==</span> <span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x = 86300
+time_to_int(int_to_time(x)) == x
 </pre></div>
 </div>
 </div>
@@ -996,7 +996,7 @@ does not work for values equal or greater than <code class="docutils literal not
 <p>This is a typical case of getting the right <strong>requirements</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_time</span><span class="p">(</span><span class="n">int_to_time</span><span class="p">(</span><span class="mi">86399</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print_time(int_to_time(86399+1))
 </pre></div>
 </div>
 </div>
@@ -1008,7 +1008,7 @@ does not work for values equal or greater than <code class="docutils literal not
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time_to_int</span><span class="p">(</span><span class="n">int_to_time</span><span class="p">(</span><span class="mi">86399</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span> <span class="o">==</span> <span class="mi">86400</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>time_to_int(int_to_time(86399+1)) == 86400
 </pre></div>
 </div>
 </div>
@@ -1022,22 +1022,22 @@ does not work for values equal or greater than <code class="docutils literal not
 the <code class="docutils literal notranslate"><span class="pre">add_time</span></code> and <code class="docutils literal notranslate"><span class="pre">increment</span></code> functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def add_time(t1 : Time, t2 : Time) -&gt; Time:
+    &quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects
+    &quot;&quot;&quot;
+    seconds : int = time_to_int(t1) + time_to_int(t2)
+    return int_to_time(seconds)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">s</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="n">s</span>
-    <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def increment(t1 : Time, s : int) -&gt; Time:
+    &quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects
+    &quot;&quot;&quot;
+    seconds : int = time_to_int(t1) + s
+    return int_to_time(seconds)
 </pre></div>
 </div>
 </div>
@@ -1048,7 +1048,7 @@ the <code class="docutils literal notranslate"><span class="pre">add_time</span>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1089,140 +1089,140 @@ Do not rely on them blindly.</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List
+import random
 
-<span class="k">def</span> <span class="nf">roll_dice</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Roll n dice.</span>
-<span class="sd">    Assumption: n &gt;= 0.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def roll_dice(n: int) -&gt; List[int]:
+    &quot;&quot;&quot;Roll n dice.
+    Assumption: n &gt;= 0.
+    &quot;&quot;&quot;
     
-    <span class="n">rolls</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    rolls : List[int] = list()
     
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">rolls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    for _ in range(n):
+        rolls.append(random.randint(1, 6))
     
-    <span class="k">return</span> <span class="n">rolls</span>
+    return rolls
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Test 1: boundary case</span>
-<span class="n">roll_dice</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>#Test 1: boundary case
+roll_dice(100)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[4,
- 3,
- 3,
- 1,
- 4,
- 6,
- 3,
- 2,
- 3,
- 5,
- 3,
- 4,
- 2,
- 5,
- 1,
- 4,
- 5,
- 5,
- 2,
- 1,
- 3,
- 2,
- 2,
- 5,
- 6,
- 1,
- 5,
- 3,
- 3,
- 2,
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[6,
  6,
  5,
+ 5,
+ 2,
+ 2,
  6,
  4,
+ 5,
+ 4,
  2,
+ 3,
+ 5,
+ 1,
+ 4,
+ 3,
+ 4,
+ 4,
+ 1,
+ 1,
+ 5,
  6,
+ 2,
  6,
  4,
  3,
  5,
- 1,
- 1,
+ 5,
+ 2,
  3,
+ 6,
+ 6,
+ 2,
+ 2,
+ 1,
+ 2,
+ 2,
+ 3,
+ 4,
+ 5,
+ 5,
+ 5,
+ 3,
+ 6,
+ 3,
+ 4,
+ 4,
+ 6,
+ 6,
+ 3,
+ 6,
+ 1,
+ 2,
+ 2,
+ 2,
+ 1,
+ 1,
+ 4,
+ 6,
+ 6,
+ 6,
+ 6,
+ 2,
+ 4,
+ 4,
+ 4,
  5,
  3,
  5,
+ 3,
+ 3,
  5,
- 4,
  2,
- 6,
- 4,
  2,
- 4,
- 1,
- 6,
- 6,
  1,
  5,
- 4,
- 1,
- 1,
- 4,
- 1,
- 4,
- 1,
- 4,
- 3,
- 4,
- 6,
  5,
+ 3,
+ 4,
+ 6,
+ 2,
+ 6,
+ 4,
+ 2,
  4,
  6,
  6,
- 3,
+ 6,
  2,
  1,
  2,
- 1,
- 6,
- 2,
- 6,
  5,
- 6,
- 6,
+ 1,
+ 4,
+ 4,
  6,
  4,
  3,
- 1,
  6,
- 4,
- 2,
- 4,
- 3,
- 2,
- 3,
- 4,
- 1,
- 1,
- 1,
- 3]
+ 2]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Test 2: test the length of the resulting list</span>
-<span class="nb">len</span><span class="p">(</span><span class="n">roll_dice</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>#Test 2: test the length of the resulting list
+len(roll_dice(3))
 </pre></div>
 </div>
 </div>
@@ -1234,14 +1234,14 @@ Do not rely on them blindly.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Test 3: test whether all rolls are valid</span>
-<span class="n">rolls_bool</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>#Test 3: test whether all rolls are valid
+rolls_bool : List[bool] = list()
 
-<span class="k">for</span> <span class="n">roll</span> <span class="ow">in</span> <span class="n">roll_dice</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
-    <span class="n">rolls_bool</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">roll</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="c1"># list of Booleans</span>
+for roll in roll_dice(10):
+    rolls_bool.append(roll in range(1, 6 + 1)) # list of Booleans
 
-<span class="nb">print</span><span class="p">(</span><span class="n">rolls_bool</span><span class="p">)</span>
-<span class="nb">all</span><span class="p">(</span><span class="n">rolls_bool</span><span class="p">)</span> <span class="c1"># check if all Booleans in the list are True</span>
+print(rolls_bool)
+all(rolls_bool) # check if all Booleans in the list are True
 </pre></div>
 </div>
 </div>
@@ -1290,29 +1290,29 @@ that these examples are <strong>automatically executable and checkable</strong><
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List
+import random
 
-<span class="k">def</span> <span class="nf">roll_dice</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Roll n dice.</span>
-<span class="sd">    </span>
-<span class="sd">    Assumption: n &gt;= 0.</span>
-<span class="sd">    </span>
-<span class="sd">    Examples and test cases:</span>
-<span class="sd">    &gt;&gt;&gt; roll_dice(0)  # boundary case</span>
-<span class="sd">    []</span>
-<span class="sd">    &gt;&gt;&gt; len(roll_dice(3))  # test length</span>
-<span class="sd">    3</span>
-<span class="sd">    &gt;&gt;&gt; all(roll in range(1, 6 + 1) for roll in roll_dice(10))  # test values</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def roll_dice(n: int) -&gt; List[int]:
+    &quot;&quot;&quot;Roll n dice.
     
-    <span class="n">rolls</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    Assumption: n &gt;= 0.
     
-    <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
-        <span class="n">rolls</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+    Examples and test cases:
+    &gt;&gt;&gt; roll_dice(0)  # boundary case
+    []
+    &gt;&gt;&gt; len(roll_dice(3))  # test length
+    3
+    &gt;&gt;&gt; all(roll in range(1, 6 + 1) for roll in roll_dice(10))  # test values
+    True
+    &quot;&quot;&quot;
     
-    <span class="k">return</span> <span class="n">rolls</span>
+    rolls : List[int] = list()
+    
+    for _ in range(n):
+        rolls.append(random.randint(1, 6))
+    
+    return rolls
 </pre></div>
 </div>
 </div>
@@ -1327,20 +1327,22 @@ runs all test cases, only reporting failures</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import doctest
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">run_docstring_examples</span><span class="p">(</span><span class="n">roll_dice</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;roll_dice&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.run_docstring_examples(roll_dice, globals(), verbose=True, name=&#39;roll_dice&#39;)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Finding tests in roll_dice
-Trying:
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Trying:
     roll_dice(0)  # boundary case
 Expecting:
     []
@@ -1361,7 +1363,7 @@ ok
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">run_docstring_examples</span><span class="p">(</span><span class="n">roll_dice</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;roll_dice&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.run_docstring_examples(roll_dice, globals(), verbose=False, name=&#39;roll_dice&#39;)
 </pre></div>
 </div>
 </div>
@@ -1369,30 +1371,30 @@ ok
 <p>One more example of tests in docstring:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span>
-<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">defaultdict</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import Dict
+from collections import defaultdict
 
-<span class="k">def</span> <span class="nf">count_text</span><span class="p">(</span><span class="n">text</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return dictionary with count for each letter in text.</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; count_text(&quot;&quot;)  # boundary case</span>
-<span class="sd">    {}</span>
-<span class="sd">    &gt;&gt;&gt; count_text(&quot;dad&quot;)</span>
-<span class="sd">    {&#39;d&#39;: 2, &#39;a&#39;: 1}</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">counts</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>  <span class="c1"># use 0 when key is not present</span>
+def count_text(text: str) -&gt; Dict[str, int]:
+    &quot;&quot;&quot;Return dictionary with count for each letter in text.
     
-    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span>
-        <span class="n">counts</span><span class="p">[</span><span class="n">letter</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+    &gt;&gt;&gt; count_text(&quot;&quot;)  # boundary case
+    {}
+    &gt;&gt;&gt; count_text(&quot;dad&quot;)
+    {&#39;d&#39;: 2, &#39;a&#39;: 1}
+    &quot;&quot;&quot;
+    counts : dict = defaultdict(int)  # use 0 when key is not present
+    
+    for letter in text:
+        counts[letter] += 1
 
-    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
+    return dict(counts)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count_text</span><span class="p">(</span><span class="s2">&quot;dad&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>count_text(&quot;dad&quot;)
 </pre></div>
 </div>
 </div>
@@ -1404,7 +1406,7 @@ ok
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">run_docstring_examples</span><span class="p">(</span><span class="n">count_text</span><span class="p">,</span> <span class="nb">globals</span><span class="p">(),</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;count_text&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.run_docstring_examples(count_text, globals(), verbose=True, name=&#39;count_text&#39;)
 </pre></div>
 </div>
 </div>
@@ -1431,7 +1433,7 @@ ok
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -1486,7 +1488,7 @@ Test passed.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># without details</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.testmod(verbose=False)  # without details
 </pre></div>
 </div>
 </div>
@@ -1508,14 +1510,14 @@ Test passed.
 violates an <strong>invariant</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">valid_time</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; checks whether we are dealing with a correct Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span> <span class="ow">or</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">&gt;=</span> <span class="mi">60</span> <span class="ow">or</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">&gt;=</span> <span class="mi">60</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="kc">True</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def valid_time(time : Time) -&gt; bool:
+    &quot;&quot;&quot; checks whether we are dealing with a correct Time object
+    &quot;&quot;&quot;
+    if time.hour &lt; 0 or time.minute &lt; 0 or time.second &lt; 0:
+        return False
+    if time.hour &gt;= 24 or time.minute &gt;= 60 or time.second &gt;= 60:
+        return False
+    return True
 </pre></div>
 </div>
 </div>
@@ -1524,15 +1526,15 @@ violates an <strong>invariant</strong>.</p>
 valid.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def add_time(t1 : Time, t2 : Time) -&gt; Time:
+    &quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects
+    &quot;&quot;&quot;
     
-    <span class="k">if</span> <span class="ow">not</span> <span class="n">valid_time</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">valid_time</span><span class="p">(</span><span class="n">t2</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;invalid Time object in add_time&#39;</span><span class="p">)</span>
-    <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
+    if not valid_time(t1) or not valid_time(t2):
+        raise ValueError(&#39;invalid Time object in add_time&#39;)
+    seconds : int = time_to_int(t1) + time_to_int(t2)
     
-    <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    return int_to_time(seconds)
 </pre></div>
 </div>
 </div>
@@ -1541,14 +1543,14 @@ valid.</p>
 if it fails.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def add_time(t1 : Time, t2 : Time) -&gt; Time:
+    &quot;&quot;&quot; returns a new Time object containing the sum of the 2 argument Time objects
+    &quot;&quot;&quot;
     
-    <span class="k">assert</span> <span class="n">valid_time</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="ow">and</span> <span class="n">valid_time</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
-    <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span> <span class="o">+</span> <span class="n">time_to_int</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
+    assert valid_time(t1) and valid_time(t2)
+    seconds : int = time_to_int(t1) + time_to_int(t2)
     
-    <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    return int_to_time(seconds)
 </pre></div>
 </div>
 </div>

@@ -641,15 +641,15 @@ That is, in the definition of the function body a function call to the function 
 <p>Let us make this more concrete by means of a simple example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">countdown</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Prints by means of recursion decreasing values from n to 1 </span>
-<span class="sd">        and prints &quot;Ready!&quot; for n = 0.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Ready!&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
-        <span class="n">countdown</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def countdown(n : int) -&gt; None:
+    &quot;&quot;&quot; Prints by means of recursion decreasing values from n to 1 
+        and prints &quot;Ready!&quot; for n = 0.
+    &quot;&quot;&quot;
+    if n &lt;= 0:
+        print(&#39;Ready!&#39;)
+    else:
+        print(n)
+        countdown(n - 1)
 </pre></div>
 </div>
 </div>
@@ -658,7 +658,7 @@ That is, in the definition of the function body a function call to the function 
 <p>Otherwise, it outputs <code class="docutils literal notranslate"><span class="pre">n</span></code> and then calls a function named <code class="docutils literal notranslate"><span class="pre">countdown</span></code> passing <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">-</span> <span class="pre">1</span></code> as an argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countdown</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>countdown(3)
 </pre></div>
 </div>
 </div>
@@ -687,16 +687,16 @@ not greater than <code class="docutils literal notranslate"><span class="pre">0<
 <p>We can write a function that prints a string <code class="docutils literal notranslate"><span class="pre">n</span></code> times.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_n</span><span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Prints the string represented by the parameter &quot;s&quot; and recursively</span>
-<span class="sd">        calls itself with a string &quot;s+ +s&quot; as long as &quot;n &gt; 0&quot;.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-    <span class="n">print_n</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s1"> </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_n(s : str, n : int) -&gt; None:
+    &quot;&quot;&quot; Prints the string represented by the parameter &quot;s&quot; and recursively
+        calls itself with a string &quot;s+ +s&quot; as long as &quot;n &gt; 0&quot;.
+    &quot;&quot;&quot;
+    if n &lt;= 0:
+        return
+    print(s)
+    print_n(f&#39;{s} {s}&#39;, n - 1)
     
-<span class="n">print_n</span><span class="p">(</span><span class="s2">&quot;Machine Learning&quot;</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+print_n(&quot;Machine Learning&quot;, 5)
 </pre></div>
 </div>
 </div>
@@ -724,7 +724,7 @@ to the caller, and the remaining lines of the function are not executed.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -742,24 +742,24 @@ there is a base case that does not make a recursive call.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">print_n</span></code> recursive function, terminate elegantly for values of <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">10</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_n</span><span class="p">(</span><span class="s1">&#39;Machine Learning&#39;</span><span class="p">,</span> <span class="o">-</span><span class="mi">10</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print_n(&#39;Machine Learning&#39;, -10)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_n</span><span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Prints the string represented by the parameter &quot;s&quot; and recursively</span>
-<span class="sd">        calls itself with a string &quot;s+ +s&quot; as long as &quot;n != 0&quot;.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_n(s : str, n : int) -&gt; None:
+    &quot;&quot;&quot; Prints the string represented by the parameter &quot;s&quot; and recursively
+        calls itself with a string &quot;s+ +s&quot; as long as &quot;n != 0&quot;.
+    &quot;&quot;&quot;
+    if n == 0:
+        return
     
-    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
-    <span class="n">print_n</span><span class="p">(</span><span class="n">s</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">s</span><span class="p">,</span> <span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    print(s)
+    print_n(s + &quot; &quot; + s, n - 1)
     
-<span class="n">print_n</span><span class="p">(</span><span class="s2">&quot;Machine Learning&quot;</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+print_n(&quot;Machine Learning&quot;, -2)
 </pre></div>
 </div>
 </div>
@@ -787,11 +787,11 @@ evaluate it.</p>
 be clear that factorial takes an integer:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Calculates the factorial of its argument n.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def factorial(n : int) -&gt; int:
+    &quot;&quot;&quot;Calculates the factorial of its argument n.&quot;&quot;&quot;
     
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
+    if n == 0:
+        return 1
 </pre></div>
 </div>
 </div>
@@ -800,17 +800,17 @@ be clear that factorial takes an integer:</p>
 the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multiply this by <span class="math notranslate nohighlight">\(n\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Calculates the factorial of its argument n.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def factorial(n : int) -&gt; int:
+    &quot;&quot;&quot;Calculates the factorial of its argument n.&quot;&quot;&quot;
 
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">i_fac_value</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">i_fac_value</span>
-        <span class="k">return</span> <span class="n">result</span>
+    if n == 0:
+        return 1
+    else:
+        i_fac_value : int = factorial(n - 1)
+        result = n * i_fac_value
+        return result
 
-<span class="n">factorial</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+factorial(100)
 </pre></div>
 </div>
 </div>
@@ -818,15 +818,15 @@ the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multi
 <p>The body of the <code class="docutils literal notranslate"><span class="pre">else</span></code> part can be written more compactly.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Calculates the factorial of its argument n.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def factorial(n : int) -&gt; int:
+    &quot;&quot;&quot;Calculates the factorial of its argument n.&quot;&quot;&quot;
 
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">n</span> <span class="o">*</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n - 1)
 
-<span class="n">factorial</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+factorial(100)
 </pre></div>
 </div>
 </div>
@@ -834,17 +834,17 @@ the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multi
 <p>If the last statement of the function contains the a call to the recursive function, we call this <em>tail recursion</em>, we can replace the recursive function by a loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Calculates the factorial of its argument n.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def factorial(n : int) -&gt; int:
+    &quot;&quot;&quot;Calculates the factorial of its argument n.&quot;&quot;&quot;
 
-    <span class="n">rf</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="k">while</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="n">rf</span> <span class="o">*=</span> <span class="n">n</span>
-        <span class="n">n</span> <span class="o">-=</span> <span class="mi">1</span>
+    rf : int = 1
+    while n &gt; 0:
+        rf *= n
+        n -= 1
     
-    <span class="k">return</span> <span class="n">rf</span>
+    return rf
 
-<span class="n">factorial</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+factorial(100)
 </pre></div>
 </div>
 </div>
@@ -852,39 +852,39 @@ the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multi
 <p>The <code class="docutils literal notranslate"><span class="pre">factorial</span></code> function, but now with proper tests.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">factorial</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Calculates the factorial of its argument n.</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; factorial(0) # base case</span>
-<span class="sd">    1</span>
-<span class="sd">    &gt;&gt;&gt; factorial(10) # arbitrary number</span>
-<span class="sd">    3628800</span>
-<span class="sd">    </span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def factorial(n : int) -&gt; int:
+    &quot;&quot;&quot;Calculates the factorial of its argument n.
+    
+    &gt;&gt;&gt; factorial(0) # base case
+    1
+    &gt;&gt;&gt; factorial(10) # arbitrary number
+    3628800
+    
+    &quot;&quot;&quot;
 
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">i_fac_value</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">factorial</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="n">result</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="n">i_fac_value</span>
-        <span class="k">return</span> <span class="n">result</span>
+    if n == 0:
+        return 1
+    else:
+        i_fac_value : int = factorial(n - 1)
+        result : int = n * i_fac_value
+        return result
     
 
-<span class="n">factorial</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+factorial(10)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import doctest
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -895,7 +895,7 @@ the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multi
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -910,46 +910,46 @@ the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multi
 <p><code class="docutils literal notranslate"><span class="pre">fibonacci(n)</span> <span class="pre">=</span> <span class="pre">fibonacci(n-1)</span> <span class="pre">+</span> <span class="pre">fibonacci(n-2)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Calculates the fibonacci number of its argument.</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; fibonacci(0) # base case 0</span>
-<span class="sd">    0</span>
-<span class="sd">    &gt;&gt;&gt; fibonacci(1) # base case 1</span>
-<span class="sd">    1</span>
-<span class="sd">    &gt;&gt;&gt; fibonacci(13) # arbtriry number</span>
-<span class="sd">    233</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def fibonacci(n : int) -&gt; int:
+    &quot;&quot;&quot;Calculates the fibonacci number of its argument.
     
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span> 
-        <span class="k">return</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+    &gt;&gt;&gt; fibonacci(0) # base case 0
+    0
+    &gt;&gt;&gt; fibonacci(1) # base case 1
+    1
+    &gt;&gt;&gt; fibonacci(13) # arbtriry number
+    233
+    &quot;&quot;&quot;
+    
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else: 
+        return fibonacci(n - 1) + fibonacci(n - 2)
 
-<span class="n">fibonacci</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+fibonacci(15)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>[fibonacci(n) for n in range(20)]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fibonacci</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fibonacci(35)
 </pre></div>
 </div>
 </div>
@@ -958,20 +958,20 @@ the value of <span class="math notranslate nohighlight">\(n-1\)</span> and multi
 <p>Let us count the number of <code class="docutils literal notranslate"><span class="pre">fib</span></code> calls.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib_calls</span><span class="p">(</span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Counts the number of calls to fib to compute fib(n).</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">2</span> <span class="o">+</span> <span class="n">fib_calls</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="n">fib_calls</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def fib_calls(n: int) -&gt; int:
+    &quot;&quot;&quot; Counts the number of calls to fib to compute fib(n).
+    &quot;&quot;&quot;
+    if n &lt;= 1:
+        return 0
+    else:
+        return 2 + fib_calls(n - 2) + fib_calls(n - 1)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fib_calls</span><span class="p">(</span><span class="mi">35</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fib_calls(35)
 </pre></div>
 </div>
 </div>
@@ -985,7 +985,7 @@ recursive way.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1001,20 +1001,20 @@ recursive way.</p>
 <a class="reference internal image-reference" href="../_images/tower-of-hanoi.png"><img alt="../_images/tower-of-hanoi.png" class="align-center" src="../_images/tower-of-hanoi.png" style="width: 400px;" /></a>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">towers_of_hanoi</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span> <span class="p">,</span> <span class="n">source</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">destination</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">auxiliary</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="c1">#    print(&quot;n = &quot;, n, &quot;src = &quot;, source, &quot;dst = &quot;, destination, &quot;aux = &quot;, auxiliary)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def towers_of_hanoi(n : int , source : str, destination : str, auxiliary : str) -&gt; None:
+#    print(&quot;n = &quot;, n, &quot;src = &quot;, source, &quot;dst = &quot;, destination, &quot;aux = &quot;, auxiliary)
     
-    <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Move disk 1 from source&quot;</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="s2">&quot;to destination&quot;</span><span class="p">,</span> <span class="n">destination</span><span class="p">)</span>
-        <span class="k">return</span>
+    if n == 1:
+        print(&quot;Move disk 1 from source&quot;, source, &quot;to destination&quot;, destination)
+        return
     
-    <span class="n">towers_of_hanoi</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">auxiliary</span><span class="p">,</span> <span class="n">destination</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Move disk&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="s2">&quot;from source&quot;</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="s2">&quot;to destination&quot;</span><span class="p">,</span> <span class="n">destination</span><span class="p">)</span>
-    <span class="n">towers_of_hanoi</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">auxiliary</span><span class="p">,</span> <span class="n">destination</span><span class="p">,</span> <span class="n">source</span><span class="p">)</span>
+    towers_of_hanoi(n - 1, source, auxiliary, destination)
+    print(&quot;Move disk&quot;, n, &quot;from source&quot;, source, &quot;to destination&quot;, destination)
+    towers_of_hanoi(n - 1, auxiliary, destination, source)
           
-<span class="c1"># Driver code</span>
-<span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">towers_of_hanoi</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">)</span>
+# Driver code
+n = 2
+towers_of_hanoi(n, &#39;A&#39;, &#39;B&#39;, &#39;C&#39;)
 </pre></div>
 </div>
 </div>
@@ -1047,35 +1047,35 @@ recursive way.</p>
 memoizing intermediate values.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">known_fibs</span> <span class="o">=</span> <span class="p">{</span><span class="mi">0</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">1</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>known_fibs = {0:0, 1:1}
 
-<span class="k">def</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Calculates the fibonacci number of its argument by means of a cache.</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; fibonacci(0) # base case 0</span>
-<span class="sd">    0</span>
-<span class="sd">    &gt;&gt;&gt; fibonacci(1) # base case 1</span>
-<span class="sd">    1</span>
-<span class="sd">    &gt;&gt;&gt; fibonacci(13) # arbitrary number</span>
-<span class="sd">    233</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def fibonacci(n : int) -&gt; int:
+    &quot;&quot;&quot;Calculates the fibonacci number of its argument by means of a cache.
     
-    <span class="k">if</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">known_fibs</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">known_fibs</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+    &gt;&gt;&gt; fibonacci(0) # base case 0
+    0
+    &gt;&gt;&gt; fibonacci(1) # base case 1
+    1
+    &gt;&gt;&gt; fibonacci(13) # arbitrary number
+    233
+    &quot;&quot;&quot;
     
-    <span class="n">res</span> <span class="o">=</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
-    <span class="n">known_fibs</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span>
-    <span class="k">return</span> <span class="n">res</span>
+    if n in known_fibs:
+        return known_fibs[n]
+    
+    res = fibonacci(n - 1) + fibonacci(n - 2)
+    known_fibs[n] = res
+    return res
 
-<span class="n">fibonacci</span><span class="p">(</span><span class="mi">350</span><span class="p">)</span>
-<span class="c1">#print(known_fibs)</span>
+fibonacci(350)
+#print(known_fibs)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>

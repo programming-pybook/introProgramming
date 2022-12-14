@@ -822,7 +822,7 @@ Lastly, the proposition that is derived from a set of premises is known as a <st
 The result is <code class="docutils literal notranslate"><span class="pre">True</span></code> if the values are the same, otherwise the result is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">==</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>5 == 5
 </pre></div>
 </div>
 </div>
@@ -834,7 +834,7 @@ The result is <code class="docutils literal notranslate"><span class="pre">True<
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">5</span> <span class="o">==</span> <span class="mi">6</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>5 == 6
 </pre></div>
 </div>
 </div>
@@ -847,7 +847,7 @@ The result is <code class="docutils literal notranslate"><span class="pre">True<
 <p><code class="docutils literal notranslate"><span class="pre">True</span></code> and <code class="docutils literal notranslate"><span class="pre">False</span></code> are special values of the type <code class="docutils literal notranslate"><span class="pre">bool</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">and</span> <span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>True and False
 </pre></div>
 </div>
 </div>
@@ -921,8 +921,8 @@ The semantics (meaning) of these operators is the same one as the one presented 
 <p>They can be used in combination with Boolean expressions, as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">9</span>
-<span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 9
+x &gt; 0 and x &lt; 10
 </pre></div>
 </div>
 </div>
@@ -936,8 +936,8 @@ The semantics (meaning) of these operators is the same one as the one presented 
 is divisible by <code class="docutils literal notranslate"><span class="pre">2</span></code> <em>or</em> <code class="docutils literal notranslate"><span class="pre">3</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">27</span>
-<span class="n">n</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span> <span class="ow">or</span> <span class="n">n</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n: int = 27
+n % 2 == 0 or n % 3 == 0
 </pre></div>
 </div>
 </div>
@@ -951,9 +951,9 @@ is divisible by <code class="docutils literal notranslate"><span class="pre">2</
 <code class="docutils literal notranslate"><span class="pre">False</span></code>, that is, if <code class="docutils literal notranslate"><span class="pre">x</span></code> is less than or equal to <code class="docutils literal notranslate"><span class="pre">y</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="ow">not</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 10
+y: int = 15
+not (x &gt; y)
 </pre></div>
 </div>
 </div>
@@ -971,7 +971,7 @@ You might want to avoid it (unless you know what you are doing).</p>
 The order is as follows: <code class="docutils literal notranslate"><span class="pre">not</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">or</span></code> &gt; <code class="docutils literal notranslate"><span class="pre">and</span></code>, again if in doubt <em>use brackets!</em></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="ow">not</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>not False and True
 </pre></div>
 </div>
 </div>
@@ -983,7 +983,7 @@ The order is as follows: <code class="docutils literal notranslate"><span class=
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span> <span class="ow">and</span> <span class="kc">True</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>True or False and True
 </pre></div>
 </div>
 </div>
@@ -1002,11 +1002,11 @@ Conditions allow us to change the execution flow in a program.</p>
 The simplest form of a conditional statement is the <strong>if statement</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is positive&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 10
+if x &gt; 0:
+    print(&#39;x is positive&#39;)
     
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is an integer value&#39;</span><span class="p">)</span>
+print(&#39;x is an integer value&#39;)
 </pre></div>
 </div>
 </div>
@@ -1024,11 +1024,11 @@ Statements like this are called <strong>compound statements</strong>.</p>
 <p>What is printed when executing the following cells?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is negative&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 1
+if x &lt; 0:
+    print(&#39;x is negative&#39;)
     
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello Data Scientists&#39;</span><span class="p">)</span>
+print(&#39;Hello Data Scientists&#39;)
 </pre></div>
 </div>
 </div>
@@ -1040,16 +1040,16 @@ Statements like this are called <strong>compound statements</strong>.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is negative&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 1
+if x &lt; 0:
+print(&#39;x is negative&#39;)
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello Data Scientists&#39;</span><span class="p">)</span>
+print(&#39;Hello Data Scientists&#39;)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">11</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is negative&#39;</span><span class="p">)</span>
     <span class="o">^</span>
 <span class="ne">IndentationError</span>: expected an indented block
@@ -1060,10 +1060,10 @@ Statements like this are called <strong>compound statements</strong>.</p>
 <p>Where other programming languages use brackets, for instance <code class="docutils literal notranslate"><span class="pre">{</span></code> and <code class="docutils literal notranslate"><span class="pre">}</span></code> in C or Java, Python uses <strong>indentation</strong> to group lists of instruction <em>blocks</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
-<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is negative&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello Data Scientists&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = -1
+if x &lt; 0:
+    print(&#39;x is negative&#39;)
+    print(&#39;Hello Data Scientists&#39;)
 </pre></div>
 </div>
 </div>
@@ -1074,7 +1074,7 @@ Statements like this are called <strong>compound statements</strong>.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1084,17 +1084,17 @@ Having unneeded language constructs (e.g. conditionals) can negatively impact th
 <p>Let us see an example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change the truth values of p and q to see how the conclusion r changes</span>
-<span class="n">p</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">q</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">r</span><span class="p">:</span> <span class="nb">bool</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Change the truth values of p and q to see how the conclusion r changes
+p: bool = True
+q: bool = True
+r: bool
 
-<span class="k">if</span> <span class="n">p</span> <span class="ow">and</span> <span class="n">q</span><span class="p">:</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="n">r</span> <span class="o">=</span> <span class="kc">False</span>
+if p and q:
+    r = True
+else:
+    r = False
     
-<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+print(r)
 </pre></div>
 </div>
 </div>
@@ -1102,12 +1102,12 @@ Having unneeded language constructs (e.g. conditionals) can negatively impact th
 <p>The previous translation to Python code of the deductive argument is correct, however, we can get rid of the conditional statement! Let us see.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change the truth values of p and q to see how the conclusion r changes</span>
-<span class="n">p</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">q</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">r</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="n">p</span> <span class="ow">and</span> <span class="n">q</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Change the truth values of p and q to see how the conclusion r changes
+p: bool = True
+q: bool = True
+r: bool = p and q
     
-<span class="nb">print</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
+print(r)
 </pre></div>
 </div>
 </div>
@@ -1123,12 +1123,12 @@ If the condition is true the body of the <code class="docutils literal notransla
 However, if the condition is false, the body of the <code class="docutils literal notranslate"><span class="pre">else</span></code> section will be executed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">23</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 23
 
-<span class="k">if</span>  <span class="n">x</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is even&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is odd&#39;</span><span class="p">)</span>
+if  x % 2 == 0:
+    print(&#39;x is even&#39;)
+else:
+    print(&#39;x is odd&#39;)
 </pre></div>
 </div>
 </div>
@@ -1139,7 +1139,7 @@ However, if the condition is false, the body of the <code class="docutils litera
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1154,15 +1154,15 @@ A chained contidional starts with the well-known <code class="docutils literal n
 After the <code class="docutils literal notranslate"><span class="pre">elif</span></code> keyword you should always define a new Boolean expression.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">4</span>
-<span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 4
+y: int = 2
 
-<span class="k">if</span>  <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is less than y&#39;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is greater than y&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x and y are equal&#39;</span><span class="p">)</span>
+if  x &lt; y:
+    print(&#39;x is less than y&#39;)
+elif x &gt; y:
+    print(&#39;x is greater than y&#39;)
+else:
+    print(&#39;x and y are equal&#39;)
 </pre></div>
 </div>
 </div>
@@ -1176,7 +1176,7 @@ executed and the conditional terminates.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1188,16 +1188,16 @@ executed and the conditional terminates.</p>
 That is, you can have a contidional statement within the body of one of the alternative executions of a conditional.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 2
+y: int = 2
 
-<span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x and y are equal&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is less than y&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is greater than y&#39;</span><span class="p">)</span>
+if x == y:
+    print(&#39;x and y are equal&#39;)
+else:
+    if x &lt; y:
+        print(&#39;x is less than y&#39;)
+    else:
+        print(&#39;x is greater than y&#39;)
 </pre></div>
 </div>
 </div>
@@ -1216,11 +1216,11 @@ Logical operators often provide a way to simplify nested conditional statements.
 </aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 2
 
-<span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is a positive single-digit number&#39;</span><span class="p">)</span>
+if 0 &lt; x:
+    if x &lt; 10:
+        print(&#39;x is a positive single-digit number&#39;)
 </pre></div>
 </div>
 </div>
@@ -1228,10 +1228,10 @@ Logical operators often provide a way to simplify nested conditional statements.
 <p>We can <strong>refactor</strong> this nested conditional by introducing the <code class="docutils literal notranslate"><span class="pre">and</span></code> operator in the logical expression.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 2
 
-<span class="k">if</span>  <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is a positive single-digit number&#39;</span><span class="p">)</span>
+if  0 &lt; x and x &lt; 10:
+    print(&#39;x is a positive single-digit number&#39;)
 </pre></div>
 </div>
 </div>
@@ -1239,10 +1239,10 @@ Logical operators often provide a way to simplify nested conditional statements.
 <p>We can <strong>refactor</strong> this nested conditional by merging the two conditions into <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;</span> <span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">10</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 3
 
-<span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is a positive single-digit number&#39;</span><span class="p">)</span>
+if 0 &lt; x &lt; 10:
+    print(&#39;x is a positive single-digit number&#39;)
 </pre></div>
 </div>
 </div>
@@ -1253,19 +1253,19 @@ Logical operators often provide a way to simplify nested conditional statements.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Modify this code</span>
-<span class="n">day</span> <span class="o">=</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Modify this code
+day = 2
 
-<span class="k">if</span> <span class="n">day</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The week just started&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">day</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;We are just in the middle of the week&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">day</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The week is ending&#39;</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;It is a fact, the week ends today&#39;</span><span class="p">)</span>
+if day &lt; 3:
+    print(&#39;The week just started&#39;)
+else:
+    if day &lt;= 5:
+        print(&#39;We are just in the middle of the week&#39;)
+    else:
+        if day &lt; 7:
+            print(&#39;The week is ending&#39;)
+        else:
+            print(&#39;It is a fact, the week ends today&#39;)
 </pre></div>
 </div>
 </div>
@@ -1278,8 +1278,8 @@ Then, it parses the input as an integer.
 But what does happen if you introduce a string that cannot be converted into a number?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your age? &#39;</span><span class="p">)</span>
-<span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>age: str = input(&#39;What is your age? &#39;)
+int(age)
 </pre></div>
 </div>
 </div>
@@ -1293,13 +1293,13 @@ If no error appears, the except section is ignored.
 <p>Now, let us rewrite our previous example with the try/except construct.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your age? &#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>age: str = input(&#39;What is your age? &#39;)
 
-<span class="k">try</span><span class="p">:</span>
-    <span class="c1"># The int(age) call can rise an exception</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;You should introduce a number!&#39;</span><span class="p">)</span>
+try:
+    # The int(age) call can rise an exception
+    print(int(age))
+except:
+    print(&#39;You should introduce a number!&#39;)
 </pre></div>
 </div>
 </div>
@@ -1310,7 +1310,7 @@ If no error appears, the except section is ignored.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1328,10 +1328,10 @@ Short-circuiting the evaluation lead to a useful technique known as the <strong>
 Let us see why it is needed with the following example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 10
+y: int = 5
 
-<span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">2</span>
+x &gt; 0 and x / y == 2
 </pre></div>
 </div>
 </div>
@@ -1339,10 +1339,10 @@ Let us see why it is needed with the following example.</p>
 <p>Everything works fine until now. But what does it happen if we change the value of <code class="docutils literal notranslate"><span class="pre">y</span></code> to <code class="docutils literal notranslate"><span class="pre">0</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 10
+y: int = 0
 
-<span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">2</span>
+x &gt; 0 and x / y == 2
 </pre></div>
 </div>
 </div>
@@ -1352,10 +1352,10 @@ We can use the guard pattern to place a <strong>guard</strong> expression that l
 Let us see what happens now.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 10
+y: int = 0
 
-<span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">y</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">x</span> <span class="o">/</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">2</span>
+x &gt; 0 and y != 0 and x / y == 2
 </pre></div>
 </div>
 </div>

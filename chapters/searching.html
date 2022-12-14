@@ -638,9 +638,9 @@ title="Print to PDF"
 <p>We start with a simpler problem, what is the highest number, and we can use the <code class="docutils literal notranslate"><span class="pre">list.index</span></code> to find the corresponding index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">]</span>
-<span class="n">high</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">counts</span><span class="p">)</span>
-<span class="n">counts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">high</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>counts = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+high = max(counts)
+counts.index(high)
 </pre></div>
 </div>
 </div>
@@ -653,8 +653,8 @@ title="Print to PDF"
 <p>Or, more concise:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span> <span class="o">=</span> <span class="p">[</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">]</span>
-<span class="n">counts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="n">counts</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>counts = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+counts.index(max(counts))
 </pre></div>
 </div>
 </div>
@@ -676,22 +676,22 @@ title="Print to PDF"
 <h3>Find, Remove, Find<a class="headerlink" href="#find-remove-find" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">find_two_highest_remove</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
-<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    &gt;&gt;&gt; find_two_highest_remove(seals)</span>
-<span class="sd">    (3, 4)</span>
-<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Find the index of the maximum in seals</span>
-    <span class="c1"># Remove that item form the list</span>
-    <span class="c1"># Find the index of the new maximum in the list</span>
-    <span class="c1"># Put the highest item back in the list</span>
-    <span class="c1"># If necessary, adjust the second index</span>
-    <span class="c1"># Return the two indices</span>
+def find_two_highest_remove(amounts : List[int]) -&gt; Tuple[int, int]:
+    &quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.
+    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    &gt;&gt;&gt; find_two_highest_remove(seals)
+    (3, 4)
+    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    True
+    &quot;&quot;&quot;
+    # Find the index of the maximum in seals
+    # Remove that item form the list
+    # Find the index of the new maximum in the list
+    # Put the highest item back in the list
+    # If necessary, adjust the second index
+    # Return the two indices
 </pre></div>
 </div>
 </div>
@@ -699,33 +699,33 @@ title="Print to PDF"
 <p>As we have seen <code class="docutils literal notranslate"><span class="pre">max</span></code> and <code class="docutils literal notranslate"><span class="pre">list.index</span></code> do the for finding the index of the highest amount.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">find_two_highest_remove</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
-<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    &gt;&gt;&gt; find_two_highest_remove(seals)</span>
-<span class="sd">    (3, 4)</span>
-<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Find the index of the maximum in seals</span>
-    <span class="n">highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">amounts</span><span class="p">)</span>
-    <span class="n">high_index1</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
-    <span class="c1"># Remove that item form the list</span>
-    <span class="n">amounts</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
-<span class="c1">#    print(high_index1)</span>
+def find_two_highest_remove(amounts : List[int]) -&gt; Tuple[int, int]:
+    &quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.
+    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    &gt;&gt;&gt; find_two_highest_remove(seals)
+    (3, 4)
+    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    True
+    &quot;&quot;&quot;
+    # Find the index of the maximum in seals
+    highest : int = max(amounts)
+    high_index1 : int = amounts.index(highest)
+    # Remove that item form the list
+    amounts.remove(highest)
+#    print(high_index1)
     
-    <span class="c1"># Find the index of the new maximum in the list</span>
-    <span class="n">next_highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">amounts</span><span class="p">)</span>
-    <span class="n">high_index2</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">next_highest</span><span class="p">)</span>
-<span class="c1">#    print(high_index2)</span>
+    # Find the index of the new maximum in the list
+    next_highest : int = max(amounts)
+    high_index2 : int = amounts.index(next_highest)
+#    print(high_index2)
     
-    <span class="c1"># Put the highest item back in the list</span>
-    <span class="c1"># If necessary, adjust the second index</span>
-    <span class="c1"># Return the two indices</span>
+    # Put the highest item back in the list
+    # If necessary, adjust the second index
+    # Return the two indices
     
-<span class="n">find_two_highest_remove</span><span class="p">([</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">])</span>
+find_two_highest_remove([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])
 </pre></div>
 </div>
 </div>
@@ -733,37 +733,37 @@ title="Print to PDF"
 <p>Since we removed the highest amount, we have to put it back and if necessary adapt the index of the second-highest amount, if the highest amount was before the second-highest amount in the list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">find_two_highest_remove</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
-<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    &gt;&gt;&gt; find_two_highest_remove(seals)</span>
-<span class="sd">    (3, 4)</span>
-<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Find the index of the maximum in seals</span>
-    <span class="n">highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">amounts</span><span class="p">)</span>
-    <span class="n">high_index1</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
-    <span class="c1"># Remove that item form the list</span>
-    <span class="n">amounts</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
+def find_two_highest_remove(amounts : List[int]) -&gt; Tuple[int, int]:
+    &quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.
+    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    &gt;&gt;&gt; find_two_highest_remove(seals)
+    (3, 4)
+    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    True
+    &quot;&quot;&quot;
+    # Find the index of the maximum in seals
+    highest : int = max(amounts)
+    high_index1 : int = amounts.index(highest)
+    # Remove that item form the list
+    amounts.remove(highest)
     
-    <span class="c1"># Find the index of the new maximum in the list</span>
-    <span class="n">next_highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">amounts</span><span class="p">)</span>
-    <span class="n">high_index2</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">next_highest</span><span class="p">)</span>
+    # Find the index of the new maximum in the list
+    next_highest : int = max(amounts)
+    high_index2 : int = amounts.index(next_highest)
     
-    <span class="c1"># Put the highest item back in the list</span>
-    <span class="n">amounts</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="n">high_index1</span><span class="p">,</span> <span class="n">highest</span><span class="p">)</span>
+    # Put the highest item back in the list
+    amounts.insert(high_index1, highest)
     
-    <span class="c1"># If necessary, adjust the second index</span>
-    <span class="k">if</span> <span class="n">high_index1</span> <span class="o">&lt;=</span> <span class="n">high_index2</span><span class="p">:</span>
-        <span class="n">high_index2</span> <span class="o">+=</span> <span class="mi">1</span>
+    # If necessary, adjust the second index
+    if high_index1 &lt;= high_index2:
+        high_index2 += 1
         
-    <span class="c1"># Return the two indices</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span><span class="p">)</span>
+    # Return the two indices
+    return (high_index1, high_index2)
 
-<span class="n">find_two_highest_remove</span><span class="p">([</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">])</span>
+find_two_highest_remove([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])
 </pre></div>
 </div>
 </div>
@@ -775,8 +775,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import doctest
+doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -815,7 +815,7 @@ Test passed.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -826,20 +826,20 @@ Test passed.
 <p>In the next cell you will find the refined algorithm based on sorting.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">find_two_highest_sort</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
-<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    &gt;&gt;&gt; find_two_highest_sort(seals)</span>
-<span class="sd">    (3, 4)</span>
-<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Sort a copy of amounts</span>
-    <span class="c1"># Get the two highest values</span>
-    <span class="c1"># Find their indices in the original list</span>
-    <span class="c1"># Return the two indices</span>
+def find_two_highest_sort(amounts : List[int]) -&gt; Tuple[int, int]:
+    &quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.
+    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    &gt;&gt;&gt; find_two_highest_sort(seals)
+    (3, 4)
+    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    True
+    &quot;&quot;&quot;
+    # Sort a copy of amounts
+    # Get the two highest values
+    # Find their indices in the original list
+    # Return the two indices
 </pre></div>
 </div>
 </div>
@@ -847,29 +847,29 @@ Test passed.
 <p>We have to refine the sorting and obtaining the index. Note that we sort the list in reverse order!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">find_two_highest_sort</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
-<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    &gt;&gt;&gt; find_two_highest_sort(seals)</span>
-<span class="sd">    (3, 4)</span>
-<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Sort a copy of amounts</span>
-    <span class="n">temp_amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">amounts</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">temp_amounts</span><span class="p">)</span>
-    <span class="c1"># Get the two highest values</span>
-    <span class="n">highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">temp_amounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">next_highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">temp_amounts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">next_highest</span><span class="p">)</span>
+def find_two_highest_sort(amounts : List[int]) -&gt; Tuple[int, int]:
+    &quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.
+    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    &gt;&gt;&gt; find_two_highest_sort(seals)
+    (3, 4)
+    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    True
+    &quot;&quot;&quot;
+    # Sort a copy of amounts
+    temp_amounts : List[int] = sorted(amounts, reverse = True)
+    print(temp_amounts)
+    # Get the two highest values
+    highest : int = temp_amounts[0]
+    next_highest : int = temp_amounts[1]
+    print(highest)
+    print(next_highest)
     
-    <span class="c1"># Find their indices in the original list</span>
-    <span class="c1"># Return the two indices</span>
+    # Find their indices in the original list
+    # Return the two indices
     
-<span class="n">find_two_highest_sort</span><span class="p">([</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">])</span>
+find_two_highest_sort([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])
 </pre></div>
 </div>
 </div>
@@ -884,31 +884,31 @@ Test passed.
 <p>We need to find the indices for both values in the original list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">find_two_highest_sort</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
-<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    &gt;&gt;&gt; find_two_highest_sort(seals)</span>
-<span class="sd">    (3, 4)</span>
-<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="c1"># Sort a copy of amounts</span>
-    <span class="n">temp_amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">amounts</span><span class="p">,</span> <span class="n">reverse</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+def find_two_highest_sort(amounts : List[int]) -&gt; Tuple[int, int]:
+    &quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.
+    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    &gt;&gt;&gt; find_two_highest_sort(seals)
+    (3, 4)
+    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    True
+    &quot;&quot;&quot;
+    # Sort a copy of amounts
+    temp_amounts : List[int] = sorted(amounts, reverse = True)
 
-    <span class="c1"># Get the two highest values</span>
-    <span class="n">highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">temp_amounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">next_highest</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">temp_amounts</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    # Get the two highest values
+    highest : int = temp_amounts[0]
+    next_highest : int = temp_amounts[1]
     
-    <span class="c1"># Find their indices in the original list</span>
-    <span class="n">high_index1</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">highest</span><span class="p">)</span>
-    <span class="n">high_index2</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">amounts</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">next_highest</span><span class="p">)</span>
+    # Find their indices in the original list
+    high_index1 : int = amounts.index(highest)
+    high_index2 : int = amounts.index(next_highest)
     
-    <span class="c1"># Return the two indices</span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span><span class="p">)</span>
+    # Return the two indices
+    return (high_index1, high_index2)
 
-<span class="n">find_two_highest_sort</span><span class="p">([</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">])</span>
+find_two_highest_sort([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])
 </pre></div>
 </div>
 </div>
@@ -920,7 +920,7 @@ Test passed.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -974,7 +974,7 @@ Test passed.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -985,21 +985,21 @@ Test passed.
 <p>In the next cell you will find the refined algorithm where walk over the list to find the highest two values.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">find_two_highest_walk</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.</span>
-<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    &gt;&gt;&gt; find_two_highest_walk(seals)</span>
-<span class="sd">    (3, 4)</span>
-<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def find_two_highest_walk(amounts : List[int]) -&gt; Tuple[int, int]:
+    &quot;&quot;&quot;Return a tuple of the indices of the two highest values in list amounts.
+    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    &gt;&gt;&gt; find_two_highest_walk(seals)
+    (3, 4)
+    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    True
+    &quot;&quot;&quot;
 
-    <span class="c1"># Examine each value in the list in order</span>
-    <span class="c1"># Keep track of the indices of the two highest values found so far</span>
-    <span class="c1"># Update the indices when a new higher value is found</span>
-    <span class="c1"># Return the two indices</span>
+    # Examine each value in the list in order
+    # Keep track of the indices of the two highest values found so far
+    # Update the indices when a new higher value is found
+    # Return the two indices
 </pre></div>
 </div>
 </div>
@@ -1007,47 +1007,47 @@ Test passed.
 <p>We start with swapping the first and second line of the refinement steps. Furthermore, the updating of the indices is a step in the loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">find_two_highest_walk</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.</span>
-<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    &gt;&gt;&gt; find_two_highest_walk(seals)</span>
-<span class="sd">    (3, 4)</span>
-<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def find_two_highest_walk(amounts : List[int]) -&gt; Tuple[int, int]:
+    &quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.
+    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    &gt;&gt;&gt; find_two_highest_walk(seals)
+    (3, 4)
+    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    True
+    &quot;&quot;&quot;
 
-    <span class="c1"># Keep track of the indices of the two highest values found so far</span>
-    <span class="c1"># Examine each value in the list in order</span>
-    <span class="c1">#     Update the indices when a new higher value is found</span>
-    <span class="c1"># Return the two indices </span>
+    # Keep track of the indices of the two highest values found so far
+    # Examine each value in the list in order
+    #     Update the indices when a new higher value is found
+    # Return the two indices 
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">find_two_highest_walk</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.</span>
-<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    &gt;&gt;&gt; find_two_highest_walk(seals)</span>
-<span class="sd">    (3, 4)</span>
-<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def find_two_highest_walk(amounts : List[int]) -&gt; Tuple[int, int]:
+    &quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.
+    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    &gt;&gt;&gt; find_two_highest_walk(seals)
+    (3, 4)
+    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    True
+    &quot;&quot;&quot;
 
-    <span class="c1"># Keep track of the indices of the two highest values found so far</span>
-    <span class="k">if</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+    # Keep track of the indices of the two highest values found so far
+    if amounts[0] &gt; amounts[1]:
+        high_index1, high_index2 = 0, 1
+    else:
+        high_index1, high_index2 = 1, 0
         
-    <span class="c1"># Examine each value in the list in order</span>
-    <span class="c1">#     Update the indices when a new higher value is found</span>
-    <span class="c1"># Return the two indices </span>
+    # Examine each value in the list in order
+    #     Update the indices when a new higher value is found
+    # Return the two indices 
 </pre></div>
 </div>
 </div>
@@ -1056,32 +1056,32 @@ Test passed.
 <p>There are alternative solutions, like using a while loop or a for loop to iterate over the values.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">find_two_highest_walk</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.</span>
-<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    &gt;&gt;&gt; find_two_highest_walk(seals)</span>
-<span class="sd">    (3, 4)</span>
-<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def find_two_highest_walk(amounts : List[int]) -&gt; Tuple[int, int]:
+    &quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.
+    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    &gt;&gt;&gt; find_two_highest_walk(seals)
+    (3, 4)
+    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    True
+    &quot;&quot;&quot;
 
-    <span class="c1"># Keep track of the indices of the two highest values found so far</span>
-    <span class="k">if</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+    # Keep track of the indices of the two highest values found so far
+    if amounts[0] &gt; amounts[1]:
+        high_index1, high_index2 = 0, 1
+    else:
+        high_index1, high_index2 = 1, 0
         
-    <span class="c1"># Examine each value in the list in order</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">amounts</span><span class="p">)):</span>
-    <span class="c1">#     Update the indices when a new higher value is found</span>
-    <span class="c1"># Return the two indices   </span>
+    # Examine each value in the list in order
+    for i in range(2, len(amounts)):
+    #     Update the indices when a new higher value is found
+    # Return the two indices   
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">21</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">21</span>
     <span class="c1"># Return the two indices</span>
                                <span class="o">^</span>
 <span class="ne">SyntaxError</span>: unexpected EOF while parsing
@@ -1097,43 +1097,43 @@ Test passed.
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">find_two_highest_walk</span><span class="p">(</span><span class="n">amounts</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.</span>
-<span class="sd">    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    &gt;&gt;&gt; find_two_highest_walk(seals)</span>
-<span class="sd">    (3, 4)</span>
-<span class="sd">    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]</span>
-<span class="sd">    True</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def find_two_highest_walk(amounts : List[int]) -&gt; Tuple[int, int]:
+    &quot;&quot;&quot;Return a tuple of the indices of the tow highest values in list amounts.
+    &gt;&gt;&gt; seals = [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    &gt;&gt;&gt; find_two_highest_walk(seals)
+    (3, 4)
+    &gt;&gt;&gt; seals == [334, 468, 549, 836, 660, 389, 308, 392, 520, 271]
+    True
+    &quot;&quot;&quot;
 
-    <span class="c1"># Keep track of the indices of the two highest values found so far</span>
-    <span class="k">if</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">amounts</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span>
+    # Keep track of the indices of the two highest values found so far
+    if amounts[0] &gt; amounts[1]:
+        high_index1, high_index2 = 0, 1
+    else:
+        high_index1, high_index2 = 1, 0
         
-    <span class="c1"># Examine each value in the list in order</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">amounts</span><span class="p">)):</span>
-    <span class="c1">#     Update the indices when a new higher value is found</span>
-        <span class="k">if</span> <span class="n">amounts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">amounts</span><span class="p">[</span><span class="n">high_index1</span><span class="p">]:</span>
-            <span class="n">high_index2</span> <span class="o">=</span> <span class="n">high_index1</span>
-            <span class="n">high_index1</span> <span class="o">=</span> <span class="n">i</span>
-        <span class="k">elif</span> <span class="n">amounts</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">amounts</span><span class="p">[</span><span class="n">high_index2</span><span class="p">]:</span>
-            <span class="n">high_index2</span> <span class="o">=</span> <span class="n">i</span>
+    # Examine each value in the list in order
+    for i in range(2, len(amounts)):
+    #     Update the indices when a new higher value is found
+        if amounts[i] &gt; amounts[high_index1]:
+            high_index2 = high_index1
+            high_index1 = i
+        elif amounts[i] &gt; amounts[high_index2]:
+            high_index2 = i
         
-    <span class="c1"># Return the two indices </span>
-    <span class="k">return</span> <span class="p">(</span><span class="n">high_index1</span><span class="p">,</span> <span class="n">high_index2</span><span class="p">)</span>
+    # Return the two indices 
+    return (high_index1, high_index2)
 
-<span class="n">find_two_highest_walk</span><span class="p">([</span><span class="mi">334</span><span class="p">,</span> <span class="mi">468</span><span class="p">,</span> <span class="mi">549</span><span class="p">,</span> <span class="mi">836</span><span class="p">,</span> <span class="mi">660</span><span class="p">,</span> <span class="mi">389</span><span class="p">,</span> <span class="mi">308</span><span class="p">,</span> <span class="mi">392</span><span class="p">,</span> <span class="mi">520</span><span class="p">,</span> <span class="mi">271</span><span class="p">])</span>
+find_two_highest_walk([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -1144,7 +1144,7 @@ Test passed.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1156,19 +1156,19 @@ Test passed.
 <p>First we are going to generate a huge list of arbitrary unique numbers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import random
+from typing import List
 
-<span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">rdlst</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+i : int = 0
+rdlst : List[int] = []
     
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">80000</span><span class="p">:</span>
-    <span class="n">rdnr</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000000</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">rdnr</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">rdlst</span><span class="p">:</span>
-        <span class="n">rdlst</span> <span class="o">=</span> <span class="n">rdlst</span> <span class="o">+</span> <span class="p">[</span><span class="n">rdnr</span><span class="p">]</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+while i &lt; 80000:
+    rdnr : int = random.randint(0,1000000)
+    if rdnr not in rdlst:
+        rdlst = rdlst + [rdnr]
+    i += 1
     
-<span class="c1">#print(rdlst)</span>
+#print(rdlst)
 </pre></div>
 </div>
 </div>
@@ -1176,25 +1176,25 @@ Test passed.
 <p>Via profiling you get insight in the efficiency of your code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import time
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="c1">#find_two_highest_remove([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])</span>
-<span class="n">find_two_highest_remove</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The remove code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+#find_two_highest_remove([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])
+find_two_highest_remove(rdlst)
+t2 = time.perf_counter()
+print(&quot;The remove code took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="c1">#find_two_highest_sort([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])</span>
-<span class="n">find_two_highest_sort</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The sort code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+#find_two_highest_sort([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])
+find_two_highest_sort(rdlst)
+t2 = time.perf_counter()
+print(&quot;The sort code took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="c1">#find_two_highest_walk([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])</span>
-<span class="n">find_two_highest_walk</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The walk code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+#find_two_highest_walk([334, 468, 549, 836, 660, 389, 308, 392, 520, 271])
+find_two_highest_walk(rdlst)
+t2 = time.perf_counter()
+print(&quot;The walk code took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 </pre></div>
 </div>
 </div>
@@ -1205,7 +1205,7 @@ Test passed.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1221,24 +1221,24 @@ Test passed.
 <p>We will give two variants, each of the variants uses a loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import Any
 
-<span class="k">def</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">lst</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">value</span> <span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Return the index of the first occurrence of value in lst,</span>
-<span class="sd">    return -1 if value is not in lst.</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 5)</span>
-<span class="sd">    1</span>
-<span class="sd">    &gt;&gt;&gt; linear_search([2, 4, 2], 2)</span>
-<span class="sd">    0</span>
-<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 4)</span>
-<span class="sd">    -1</span>
-<span class="sd">    &gt;&gt;&gt; linear_search([], 5)</span>
-<span class="sd">    -1</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def linear_search(lst : list, value : Any) -&gt; int:
+    &quot;&quot;&quot;Return the index of the first occurrence of value in lst,
+    return -1 if value is not in lst.
     
-    <span class="c1"># Examine the items at each index i in lst, starting at index 0</span>
-    <span class="c1"># Is lst[i] the value we are looking for? If so, stop searching. </span>
+    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 5)
+    1
+    &gt;&gt;&gt; linear_search([2, 4, 2], 2)
+    0
+    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 4)
+    -1
+    &gt;&gt;&gt; linear_search([], 5)
+    -1
+    &quot;&quot;&quot;
+    
+    # Examine the items at each index i in lst, starting at index 0
+    # Is lst[i] the value we are looking for? If so, stop searching. 
 </pre></div>
 </div>
 </div>
@@ -1246,43 +1246,43 @@ Test passed.
 <p>We will first present a solution using a while-loop and an auxilary variable representing the index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import Any
 
-<span class="k">def</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">lst</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">value</span> <span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Return the index of the first occurrence of value in lst,</span>
-<span class="sd">    return -1 if value is not in lst.</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 5)</span>
-<span class="sd">    1</span>
-<span class="sd">    &gt;&gt;&gt; linear_search([2, 4, 2], 2)</span>
-<span class="sd">    0</span>
-<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 4)</span>
-<span class="sd">    -1</span>
-<span class="sd">    &gt;&gt;&gt; linear_search([], 5)</span>
-<span class="sd">    -1</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def linear_search(lst : list, value : Any) -&gt; int:
+    &quot;&quot;&quot;Return the index of the first occurrence of value in lst,
+    return -1 if value is not in lst.
     
-    <span class="c1"># Start at index 0</span>
-    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="c1"># Examine the items at each index i in lst</span>
-    <span class="c1"># Is lst[i] the value we are looking for? If so, stop searching. </span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">value</span><span class="p">:</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 5)
+    1
+    &gt;&gt;&gt; linear_search([2, 4, 2], 2)
+    0
+    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 4)
+    -1
+    &gt;&gt;&gt; linear_search([], 5)
+    -1
+    &quot;&quot;&quot;
+    
+    # Start at index 0
+    i : int = 0
+    # Examine the items at each index i in lst
+    # Is lst[i] the value we are looking for? If so, stop searching. 
+    while i != len(lst) and lst[i] != value:
+        i += 1
         
-    <span class="c1"># If we have inspected all elements</span>
-    <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">):</span>
-        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">i</span>
+    # If we have inspected all elements
+    if i == len(lst):
+        return -1
+    else:
+        return i
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import doctest
 
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -1290,33 +1290,33 @@ Test passed.
 <p>The next solution present uses a for-loop and an auxilary variable representing the index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import Any
 
-<span class="k">def</span> <span class="nf">linear_search</span><span class="p">(</span><span class="n">lst</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">value</span> <span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Return the index of the first occurrence of value in lst,</span>
-<span class="sd">    return -1 if value is not in lst.</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 5)</span>
-<span class="sd">    1</span>
-<span class="sd">    &gt;&gt;&gt; linear_search([2, 4, 2], 2)</span>
-<span class="sd">    0</span>
-<span class="sd">    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 4)</span>
-<span class="sd">    -1</span>
-<span class="sd">    &gt;&gt;&gt; linear_search([], 5)</span>
-<span class="sd">    -1</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def linear_search(lst : list, value : Any) -&gt; int:
+    &quot;&quot;&quot;Return the index of the first occurrence of value in lst,
+    return -1 if value is not in lst.
     
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)):</span>
-        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">i</span>
-    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 5)
+    1
+    &gt;&gt;&gt; linear_search([2, 4, 2], 2)
+    0
+    &gt;&gt;&gt; linear_search([2, 5, 1, -3], 4)
+    -1
+    &gt;&gt;&gt; linear_search([], 5)
+    -1
+    &quot;&quot;&quot;
+    
+    for i in range(len(lst)):
+        if lst[i] == value:
+            return i
+    return -1
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -1329,61 +1329,61 @@ Test passed.
 <p>The advantage is that the number of steps to find the index in a list with 1.000.000 is about 20!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import Any
 
-<span class="k">def</span> <span class="nf">binary_search</span><span class="p">(</span><span class="n">lst</span> <span class="p">:</span> <span class="nb">list</span><span class="p">,</span> <span class="n">value</span> <span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Return the index of the first occurrence of the value in lst, </span>
-<span class="sd">    or return -1 if the value is not found in lst.</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 1)</span>
-<span class="sd">    0</span>
-<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 4)</span>
-<span class="sd">    2</span>
-<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 5)</span>
-<span class="sd">    4</span>
-<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 10)</span>
-<span class="sd">    7</span>
-<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], -3)</span>
-<span class="sd">    -1</span>
-<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 11)</span>
-<span class="sd">    -1</span>
-<span class="sd">    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 3)</span>
-<span class="sd">    -1</span>
-<span class="sd">    &gt;&gt;&gt; binary_search([], -3)</span>
-<span class="sd">    -1</span>
-<span class="sd">    &gt;&gt;&gt; binary_search([1], 1)</span>
-<span class="sd">    0</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def binary_search(lst : list, value : Any) -&gt; int:
+    &quot;&quot;&quot; Return the index of the first occurrence of the value in lst, 
+    or return -1 if the value is not found in lst.
     
-    <span class="c1"># Mark the left and right indices of the part of the list to be searched</span>
-    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">j</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 1)
+    0
+    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 4)
+    2
+    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 5)
+    4
+    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 10)
+    7
+    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], -3)
+    -1
+    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 11)
+    -1
+    &gt;&gt;&gt; binary_search([1, 2, 4, 4, 5, 7, 9, 10], 3)
+    -1
+    &gt;&gt;&gt; binary_search([], -3)
+    -1
+    &gt;&gt;&gt; binary_search([1], 1)
+    0
+    &quot;&quot;&quot;
     
-    <span class="k">while</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="n">j</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">value</span><span class="p">:</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">j</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
+    # Mark the left and right indices of the part of the list to be searched
+    i : int = 0
+    j : int = len(lst) - 1
     
-    <span class="k">if</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="ow">and</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">value</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">i</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    while i != j + 1:
+        m = (i + j) // 2
+        if lst[m] &lt; value:
+            i = m + 1
+        else:
+            j = m - 1
+    
+    if 0 &lt;= i &lt; len(lst) and lst[i] == value:
+        return i
+    else:
+        return -1
 
     
-<span class="n">binary_search</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> 
-               <span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> 
-               <span class="mi">61</span><span class="p">,</span> <span class="mi">62</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="mi">67</span><span class="p">,</span> <span class="mi">70</span><span class="p">,</span> <span class="mi">73</span><span class="p">,</span> <span class="mi">76</span><span class="p">,</span> <span class="mi">78</span><span class="p">],</span> <span class="mi">55</span><span class="p">)</span>
+binary_search([1, 2, 4, 4, 5, 7, 9, 10, 12, 15, 
+               20, 20, 25, 33, 33, 44, 55, 60, 
+               61, 62, 64, 67, 70, 73, 76, 78], 55)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import doctest
 
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -1406,9 +1406,9 @@ Test passed.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;we&#39;</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">,</span> <span class="s1">&#39;almost&#39;</span><span class="p">,</span> <span class="s1">&#39;done&#39;</span><span class="p">,</span> <span class="s1">&#39;with&#39;</span><span class="p">,</span> <span class="s1">&#39;the&#39;</span><span class="p">,</span> <span class="s1">&#39;course&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>lst = [&#39;we&#39;, &#39;are&#39;, &#39;almost&#39;, &#39;done&#39;, &#39;with&#39;, &#39;the&#39;, &#39;course&#39;]
 
-<span class="c1"># Remove this line and add your code here</span>
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1416,22 +1416,22 @@ Test passed.
 <p>Again some timing measurements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import time
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
+t1 = time.perf_counter()
 
-<span class="n">idx1</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">linear_search</span><span class="p">(</span><span class="n">rdlst</span><span class="p">,</span> <span class="mi">202123</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The linear search code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">idx1</span><span class="p">)</span>
+idx1 : int = linear_search(rdlst, 202123)
+t2 = time.perf_counter()
+print(&quot;The linear search code took {:.2f}ms&quot;.format((t2 - t1) * 1000))
+print(idx1)
 
-<span class="n">rdlst</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+rdlst.sort()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">idx2</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">binary_search</span><span class="p">(</span><span class="n">rdlst</span><span class="p">,</span> <span class="mi">202123</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The binary search code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">idx2</span><span class="p">)</span>
+t1 = time.perf_counter()
+idx2 : int = binary_search(rdlst, 202123)
+t2 = time.perf_counter()
+print(&quot;The binary search code took {:.2f}ms&quot;.format((t2 - t1) * 1000))
+print(idx2)
 </pre></div>
 </div>
 </div>

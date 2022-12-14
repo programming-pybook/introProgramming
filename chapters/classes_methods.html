@@ -746,13 +746,13 @@ the class and the method more explicit.</p></li>
 <p>We defined the class <code class="docutils literal notranslate"><span class="pre">Time</span></code> and defined a function to print the time <code class="docutils literal notranslate"><span class="pre">print_time</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
     
-<span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; prints a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span><span class="n">time</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span><span class="n">time</span><span class="o">.</span><span class="n">second</span><span class="p">))</span>
+def print_time(time : Time) -&gt; None:
+    &quot;&quot;&quot; prints a Time object
+    &quot;&quot;&quot;
+    print(&#39;{:02d}:{:02d}:{:02d}&#39;.format(time.hour,time.minute,time.second))
 </pre></div>
 </div>
 </div>
@@ -760,12 +760,12 @@ the class and the method more explicit.</p></li>
 <p>This function uses a <code class="docutils literal notranslate"><span class="pre">Time</span></code> object as argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">start</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="n">start</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">45</span>
-<span class="n">start</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time()
+start.hour : int = 21
+start.minute : int = 45
+start.second : int = 0
 
-<span class="n">print_time</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+print_time(start)
 </pre></div>
 </div>
 </div>
@@ -786,18 +786,18 @@ the class and the method more explicit.</p></li>
 </aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="n">time</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; prints a Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span><span class="n">time</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span><span class="n">time</span><span class="o">.</span><span class="n">second</span><span class="p">))</span>
+    def print_time(time) -&gt; None:
+        &quot;&quot;&quot; prints a Time object
+        &quot;&quot;&quot;
+        print(&#39;{:02d}:{:02d}:{:02d}&#39;.format(time.hour,time.minute,time.second))
         
-<span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">start</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="n">start</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">45</span>
-<span class="n">start</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+start : Time = Time()
+start.hour : int = 21
+start.minute : int = 45
+start.second : int = 0
 </pre></div>
 </div>
 </div>
@@ -809,7 +809,7 @@ the class and the method more explicit.</p></li>
 <p>The first (and uncommon) way is to use <strong>function syntax</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Time</span><span class="o">.</span><span class="n">print_time</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Time.print_time(start)
 </pre></div>
 </div>
 </div>
@@ -823,7 +823,7 @@ the class and the method more explicit.</p></li>
 <p>The second way is more concise: <strong>method syntax</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span><span class="o">.</span><span class="n">print_time</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start.print_time()
 </pre></div>
 </div>
 </div>
@@ -841,25 +841,25 @@ assigned to <code class="docutils literal notranslate"><span class="pre">time</s
 <p>The next cell shows a more common way to write <code class="docutils literal notranslate"><span class="pre">print_time</span></code>, using the <code class="docutils literal notranslate"><span class="pre">self</span></code> parameter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; prints a Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">))</span>
+    def print_time(self) -&gt; None:
+        &quot;&quot;&quot; prints a Time object
+        &quot;&quot;&quot;
+        print(&#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second))
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">start</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">22</span>
-<span class="n">start</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">31</span>
-<span class="n">start</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time()
+start.hour : int = 22
+start.minute : int = 31
+start.second : int = 0
 
-<span class="n">start</span><span class="o">.</span><span class="n">print_time</span><span class="p">()</span>
+start.print_time()
 </pre></div>
 </div>
 </div>
@@ -884,7 +884,7 @@ like <code class="docutils literal notranslate"><span class="pre">start.print_ti
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -898,32 +898,32 @@ Actually, we saw them earlier as functions.</p>
 The next cells also contain simple manual tests.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; prints a Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">))</span> 
+    def print_time(self) -&gt; None:
+        &quot;&quot;&quot; prints a Time object
+        &quot;&quot;&quot;
+        print(&#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second)) 
         
-    <span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value respresenting seconds</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-        <span class="k">return</span> <span class="n">seconds</span>
+    def time_to_int(self) -&gt; int:
+        &quot;&quot;&quot; converts a Time object into an integer value respresenting seconds
+        &quot;&quot;&quot;
+        minutes : int = 60 * self.hour + self.minute
+        seconds : int = 60 * minutes + self.second
+        return seconds
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">start</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="n">start</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">45</span>
-<span class="n">start</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time()
+start.hour : int = 21
+start.minute : int = 45
+start.second : int = 1
 
-<span class="n">start</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">==</span> <span class="mi">78301</span>
+start.time_to_int() == 78301
 </pre></div>
 </div>
 </div>
@@ -937,51 +937,51 @@ The next cells also contain simple manual tests.</p>
 <p>Functions can be implemented as methods if they take an instantiated object as argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; prints a Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">))</span> 
+    def print_time(self) -&gt; None:
+        &quot;&quot;&quot; prints a Time object
+        &quot;&quot;&quot;
+        print(&#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second)) 
         
-    <span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value respresenting seconds</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-        <span class="k">return</span> <span class="n">seconds</span>
+    def time_to_int(self) -&gt; int:
+        &quot;&quot;&quot; converts a Time object into an integer value respresenting seconds
+        &quot;&quot;&quot;
+        minutes : int = 60 * self.hour + self.minute
+        seconds : int = 60 * minutes + self.second
+        return seconds
 
-<span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts a values representing seconds into a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+def int_to_time(seconds : int) -&gt; Time:
+    &quot;&quot;&quot; converts a values representing seconds into a Time object
+    &quot;&quot;&quot;
+    time : Time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
     
-    <span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+    # fix with hours if greater than 24
+    if time.hour &gt;= 24:
+        time.hour -= 24
         
-    <span class="k">return</span> <span class="n">time</span>
+    return time
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">start</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="n">start</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">45</span>
-<span class="n">start</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time()
+start.hour : int = 21
+start.minute : int = 45
+start.second : int = 0
 
-<span class="n">int_to_time</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">())</span><span class="o">.</span><span class="n">print_time</span><span class="p">()</span>
+int_to_time(start.time_to_int()).print_time()
 
-<span class="c1"># Beware the following test fails!</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">int_to_time</span><span class="p">(</span><span class="n">start</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">())</span> <span class="o">==</span> <span class="n">start</span><span class="p">)</span>
+# Beware the following test fails!
+print(int_to_time(start.time_to_int()) == start)
 
-<span class="c1"># Where as the next test succeeds!</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">int_to_time</span><span class="p">(</span><span class="mi">78301</span><span class="p">)</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">==</span> <span class="mi">78301</span><span class="p">)</span>
+# Where as the next test succeeds!
+print(int_to_time(78301).time_to_int() == 78301)
 </pre></div>
 </div>
 </div>
@@ -996,55 +996,55 @@ True
 <p>The next cell shows an extension of the class <code class="docutils literal notranslate"><span class="pre">Time</span></code> with the <code class="docutils literal notranslate"><span class="pre">increment</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; prints a Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">))</span> 
+    def print_time(self) -&gt; None:
+        &quot;&quot;&quot; prints a Time object
+        &quot;&quot;&quot;
+        print(&#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second)) 
         
-    <span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value respresenting seconds</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-        <span class="k">return</span> <span class="n">seconds</span>
+    def time_to_int(self) -&gt; int:
+        &quot;&quot;&quot; converts a Time object into an integer value respresenting seconds
+        &quot;&quot;&quot;
+        minutes : int = 60 * self.hour + self.minute
+        seconds : int = 60 * minutes + self.second
+        return seconds
             
-    <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def increment(self, seconds : int):
+        &quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)
+        &quot;&quot;&quot;
+        seconds += self.time_to_int()
+        return int_to_time(seconds)
 
-<span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts a values representing seconds into a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+def int_to_time(seconds : int) -&gt; Time:
+    &quot;&quot;&quot; converts a values representing seconds into a Time object
+    &quot;&quot;&quot;
+    time : Time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
     
-    <span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+    # fix with hours if greater than 24
+    if time.hour &gt;= 24:
+        time.hour -= 24
         
-    <span class="k">return</span> <span class="n">time</span>
+    return time
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">start</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="n">start</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">45</span>
-<span class="n">start</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time()
+start.hour : int = 21
+start.minute : int = 45
+start.second : int = 0
 
-<span class="n">start</span><span class="o">.</span><span class="n">print_time</span><span class="p">()</span>
-<span class="n">end</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span><span class="mi">1337</span><span class="p">)</span>
-<span class="n">end</span><span class="o">.</span><span class="n">print_time</span><span class="p">()</span>
+start.print_time()
+end : Time = start.increment(1337)
+end.print_time()
 
-<span class="n">start</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span><span class="o">+</span><span class="mi">1337</span> <span class="o">==</span> <span class="n">end</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
+start.time_to_int()+1337 == end.time_to_int()
 </pre></div>
 </div>
 </div>
@@ -1064,14 +1064,14 @@ True
 <p>If you invoke increment with two arguments, you get the following error message.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">end</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span><span class="mi">1337</span><span class="p">,</span> <span class="mi">460</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>end : Time = start.increment(1337, 460)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">15</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">end</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span><span class="mi">1337</span><span class="p">,</span> <span class="mi">460</span><span class="p">)</span>
 
 <span class="ne">TypeError</span>: increment() takes 2 positional arguments but 3 were given
@@ -1089,57 +1089,57 @@ True
 and the second parameter <code class="docutils literal notranslate"><span class="pre">other</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; prints a Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">))</span> 
+    def print_time(self) -&gt; None:
+        &quot;&quot;&quot; prints a Time object
+        &quot;&quot;&quot;
+        print(&#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second)) 
         
-    <span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value respresenting seconds</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-        <span class="k">return</span> <span class="n">seconds</span>
+    def time_to_int(self) -&gt; int:
+        &quot;&quot;&quot; converts a Time object into an integer value respresenting seconds
+        &quot;&quot;&quot;
+        minutes : int = 60 * self.hour + self.minute
+        seconds : int = 60 * minutes + self.second
+        return seconds
             
-    <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def increment(self, seconds : int):
+        &quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)
+        &quot;&quot;&quot;
+        seconds += self.time_to_int()
+        return int_to_time(seconds)
     
-    <span class="k">def</span> <span class="nf">is_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; checks whether the current time is after the given time</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
+    def is_after(self, other) -&gt; bool:
+        &quot;&quot;&quot; checks whether the current time is after the given time
+        &quot;&quot;&quot;
+        return self.time_to_int() &gt; other.time_to_int()
 
-<span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts a values representing seconds into a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+def int_to_time(seconds : int) -&gt; Time:
+    &quot;&quot;&quot; converts a values representing seconds into a Time object
+    &quot;&quot;&quot;
+    time : Time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
     
-    <span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+    # fix with hours if greater than 24
+    if time.hour &gt;= 24:
+        time.hour -= 24
         
-    <span class="k">return</span> <span class="n">time</span>
+    return time
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">start</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">21</span>
-<span class="n">start</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">45</span>
-<span class="n">start</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time()
+start.hour : int = 21
+start.minute : int = 45
+start.second : int = 0
 
-<span class="n">end</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">start</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span><span class="mi">1337</span><span class="p">)</span>
-<span class="n">end</span><span class="o">.</span><span class="n">is_after</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+end : Time = start.increment(1337)
+end.is_after(start)
 </pre></div>
 </div>
 </div>
@@ -1159,11 +1159,11 @@ sketch(parrot, cage, dead=True)
 parrot and cage are positional, and dead is a keyword argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_event_time</span><span class="p">(</span><span class="n">time</span> <span class="p">:</span> <span class="n">Time</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="s2">&quot;None&quot;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1"> </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span><span class="p">,</span> <span class="n">event</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_event_time(time : Time, event=&quot;None&quot;):
+    print(&#39;{:02d}:{:02d}:{:02d} {}&#39;.format(time.hour, time.minute, time.second, event))
           
-<span class="n">print_event_time</span><span class="p">(</span><span class="n">start</span><span class="p">,</span> <span class="n">event</span><span class="o">=</span><span class="s2">&quot;Log in&quot;</span><span class="p">)</span>
-<span class="n">print_event_time</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+print_event_time(start, event=&quot;Log in&quot;)
+print_event_time(start)
 </pre></div>
 </div>
 </div>
@@ -1185,61 +1185,61 @@ init, and then two more underscores).</p>
 <p>An <code class="docutils literal notranslate"><span class="pre">init</span></code> method for the <code class="docutils literal notranslate"><span class="pre">Time</span></code> class is shown in the next cell.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Time object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">hour</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">minute</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">second</span>
+    def __init__(self, hour=0, minute=0, second=0):
+        &quot;&quot;&quot; creates a new Time object and initializes it
+        &quot;&quot;&quot;
+        self.hour : int = hour
+        self.minute : int = minute
+        self.second : int = second
             
-    <span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; prints a Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">))</span> 
+    def print_time(self) -&gt; None:
+        &quot;&quot;&quot; prints a Time object
+        &quot;&quot;&quot;
+        print(&#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second)) 
         
-    <span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value respresenting seconds</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-        <span class="k">return</span> <span class="n">seconds</span>
+    def time_to_int(self) -&gt; int:
+        &quot;&quot;&quot; converts a Time object into an integer value respresenting seconds
+        &quot;&quot;&quot;
+        minutes : int = 60 * self.hour + self.minute
+        seconds : int = 60 * minutes + self.second
+        return seconds
             
-    <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def increment(self, seconds : int):
+        &quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)
+        &quot;&quot;&quot;
+        seconds += self.time_to_int()
+        return int_to_time(seconds)
     
-    <span class="k">def</span> <span class="nf">is_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; checks whether the current time is after the given time</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
+    def is_after(self, other) -&gt; bool:
+        &quot;&quot;&quot; checks whether the current time is after the given time
+        &quot;&quot;&quot;
+        return self.time_to_int() &gt; other.time_to_int()
 
-<span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts a values representing seconds into a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+def int_to_time(seconds : int) -&gt; Time:
+    &quot;&quot;&quot; converts a values representing seconds into a Time object
+    &quot;&quot;&quot;
+    time : Time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
     
-    <span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+    # fix with hours if greater than 24
+    if time.hour &gt;= 24:
+        time.hour -= 24
         
-    <span class="k">return</span> <span class="n">time</span>
+    return time
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">start</span><span class="o">.</span><span class="n">print_time</span><span class="p">()</span>
-<span class="n">end</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">51</span><span class="p">)</span>
-<span class="n">end</span><span class="o">.</span><span class="n">print_time</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time()
+start.print_time()
+end : Time = Time(25, 43, 51)
+end.print_time()
 </pre></div>
 </div>
 </div>
@@ -1254,58 +1254,58 @@ init, and then two more underscores).</p>
 <p>Here are two alternative implementations for <code class="docutils literal notranslate"><span class="pre">__init__</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Time object and initializes it,</span>
-<span class="sd">            if at least proper values are provided.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">hour</span> <span class="o">&lt;</span> <span class="mi">24</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">minute</span> <span class="o">&lt;</span> <span class="mi">59</span> <span class="ow">and</span> <span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">second</span> <span class="o">&lt;</span> <span class="mi">59</span><span class="p">):</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">hour</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">minute</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">second</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">minute</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">second</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Trying to create an invalid time representation!&quot;</span><span class="p">)</span>
+    def __init__(self, hour=0, minute=0, second=0) -&gt; None:
+        &quot;&quot;&quot; creates a new Time object and initializes it,
+            if at least proper values are provided.
+        &quot;&quot;&quot;
+        if (0 &lt;= hour &lt; 24 and 0 &lt;= minute &lt; 59 and 0 &lt;= second &lt; 59):
+            self.hour : int = hour
+            self.minute : int = minute
+            self.second : int = second
+        else:
+            self.hour : int = 0
+            self.minute : int = 0
+            self.second : int = 0
+            print(&quot;Trying to create an invalid time representation!&quot;)
             
-    <span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; prints a Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">))</span> 
+    def print_time(self) -&gt; None:
+        &quot;&quot;&quot; prints a Time object
+        &quot;&quot;&quot;
+        print(&#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second)) 
         
-    <span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value respresenting seconds</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-        <span class="k">return</span> <span class="n">seconds</span>
+    def time_to_int(self) -&gt; int:
+        &quot;&quot;&quot; converts a Time object into an integer value respresenting seconds
+        &quot;&quot;&quot;
+        minutes : int = 60 * self.hour + self.minute
+        seconds : int = 60 * minutes + self.second
+        return seconds
             
-    <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def increment(self, seconds : int):
+        &quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)
+        &quot;&quot;&quot;
+        seconds += self.time_to_int()
+        return int_to_time(seconds)
     
-    <span class="k">def</span> <span class="nf">is_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; checks whether the current time is after the given time</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
+    def is_after(self, other) -&gt; bool:
+        &quot;&quot;&quot; checks whether the current time is after the given time
+        &quot;&quot;&quot;
+        return self.time_to_int() &gt; other.time_to_int()
 
-<span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts a values representing seconds into a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+def int_to_time(seconds : int) -&gt; Time:
+    &quot;&quot;&quot; converts a values representing seconds into a Time object
+    &quot;&quot;&quot;
+    time : Time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
     
-    <span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+    # fix with hours if greater than 24
+    if time.hour &gt;= 24:
+        time.hour -= 24
         
-    <span class="k">return</span> <span class="n">time</span>
+    return time
 </pre></div>
 </div>
 </div>
@@ -1313,61 +1313,61 @@ init, and then two more underscores).</p>
 <p>Or:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Time object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minute</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">second</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+    def __init__(self, hour=0, minute=0, second=0) -&gt; None:
+        &quot;&quot;&quot; creates a new Time object and initializes it
+        &quot;&quot;&quot;
+        (ignore, self.hour) = divmod(hour, 24)
+        (ignore, self.minute) = divmod(minute, 60)
+        (ignore, self.second) = divmod(second, 60)
 
-    <span class="k">def</span> <span class="nf">print_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; prints a Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">))</span> 
+    def print_time(self) -&gt; None:
+        &quot;&quot;&quot; prints a Time object
+        &quot;&quot;&quot;
+        print(&#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second)) 
                 
-    <span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value respresenting seconds</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-        <span class="k">return</span> <span class="n">seconds</span>
+    def time_to_int(self) -&gt; int:
+        &quot;&quot;&quot; converts a Time object into an integer value respresenting seconds
+        &quot;&quot;&quot;
+        minutes : int = 60 * self.hour + self.minute
+        seconds : int = 60 * minutes + self.second
+        return seconds
             
-    <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def increment(self, seconds : int):
+        &quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)
+        &quot;&quot;&quot;
+        seconds += self.time_to_int()
+        return int_to_time(seconds)
     
-    <span class="k">def</span> <span class="nf">is_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; checks whether the current time is after the given time</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
+    def is_after(self, other) -&gt; bool:
+        &quot;&quot;&quot; checks whether the current time is after the given time
+        &quot;&quot;&quot;
+        return self.time_to_int() &gt; other.time_to_int()
 
-<span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts a values representing seconds into a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+def int_to_time(seconds : int) -&gt; Time:
+    &quot;&quot;&quot; converts a values representing seconds into a Time object
+    &quot;&quot;&quot;
+    time : Time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
     
-    <span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+    # fix with hours if greater than 24
+    if time.hour &gt;= 24:
+        time.hour -= 24
         
-    <span class="k">return</span> <span class="n">time</span>
+    return time
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-<span class="n">start</span><span class="o">.</span><span class="n">print_time</span><span class="p">()</span>
-<span class="n">end</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">51</span><span class="p">)</span>
-<span class="n">end</span><span class="o">.</span><span class="n">print_time</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time()
+start.print_time()
+end : Time = Time(25, 43, 51)
+end.print_time()
 </pre></div>
 </div>
 </div>
@@ -1381,8 +1381,8 @@ init, and then two more underscores).</p>
 <p>If you provide one argument, it overrides <code class="docutils literal notranslate"><span class="pre">hour</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
-<span class="n">start</span><span class="o">.</span><span class="n">print_time</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time(9)
+start.print_time()
 </pre></div>
 </div>
 </div>
@@ -1395,8 +1395,8 @@ init, and then two more underscores).</p>
 <p>If you provide two arguments, it overrides <code class="docutils literal notranslate"><span class="pre">hour</span></code> and <code class="docutils literal notranslate"><span class="pre">minutes</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">45</span><span class="p">)</span>
-<span class="n">start</span><span class="o">.</span><span class="n">print_time</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time(9, 45)
+start.print_time()
 </pre></div>
 </div>
 </div>
@@ -1408,7 +1408,7 @@ init, and then two more underscores).</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1420,59 +1420,59 @@ init, and then two more underscores).</p>
 of an object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Time object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minute</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">second</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+    def __init__(self, hour=0, minute=0, second=0) -&gt; None:
+        &quot;&quot;&quot; creates a new Time object and initializes it
+        &quot;&quot;&quot;
+        (ignore, self.hour) = divmod(hour, 24)
+        (ignore, self.minute) = divmod(minute, 60)
+        (ignore, self.second) = divmod(second, 60)
         
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a string from the current Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">)</span>
+    def __str__(self) -&gt; str:
+        &quot;&quot;&quot; creates a string from the current Time object
+        &quot;&quot;&quot;
+        return &#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second)
     
-    <span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value respresenting seconds</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-        <span class="k">return</span> <span class="n">seconds</span>
+    def time_to_int(self) -&gt; int:
+        &quot;&quot;&quot; converts a Time object into an integer value respresenting seconds
+        &quot;&quot;&quot;
+        minutes : int = 60 * self.hour + self.minute
+        seconds : int = 60 * minutes + self.second
+        return seconds
             
-    <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def increment(self, seconds : int):
+        &quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)
+        &quot;&quot;&quot;
+        seconds += self.time_to_int()
+        return int_to_time(seconds)
     
-    <span class="k">def</span> <span class="nf">is_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; checks whether the current time is after the given time</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
+    def is_after(self, other) -&gt; bool:
+        &quot;&quot;&quot; checks whether the current time is after the given time
+        &quot;&quot;&quot;
+        return self.time_to_int() &gt; other.time_to_int()
 
-<span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts a values representing seconds into a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+def int_to_time(seconds : int) -&gt; Time:
+    &quot;&quot;&quot; converts a values representing seconds into a Time object
+    &quot;&quot;&quot;
+    time : Time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
     
-    <span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+    # fix with hours if greater than 24
+    if time.hour &gt;= 24:
+        time.hour -= 24
         
-    <span class="k">return</span> <span class="n">time</span>
+    return time
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">start</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time(25, 45, 30)
+print(start)
 </pre></div>
 </div>
 </div>
@@ -1491,7 +1491,7 @@ to write <code class="docutils literal notranslate"><span class="pre">__str__</s
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1527,66 +1527,66 @@ programmer-defined types.</p>
 <code class="docutils literal notranslate"><span class="pre">Time</span></code> class, you can use the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator on <code class="docutils literal notranslate"><span class="pre">Time</span></code> objects.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Time object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minute</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">second</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+    def __init__(self, hour=0, minute=0, second=0) -&gt; None:
+        &quot;&quot;&quot; creates a new Time object and initializes it
+        &quot;&quot;&quot;
+        (ignore, self.hour) = divmod(hour, 24)
+        (ignore, self.minute) = divmod(minute, 60)
+        (ignore, self.second) = divmod(second, 60)
         
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a string from the current Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">)</span>
+    def __str__(self) -&gt; str:
+        &quot;&quot;&quot; creates a string from the current Time object
+        &quot;&quot;&quot;
+        return &#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second)
     
-    <span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value respresenting seconds</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-        <span class="k">return</span> <span class="n">seconds</span>
+    def time_to_int(self) -&gt; int:
+        &quot;&quot;&quot; converts a Time object into an integer value respresenting seconds
+        &quot;&quot;&quot;
+        minutes : int = 60 * self.hour + self.minute
+        seconds : int = 60 * minutes + self.second
+        return seconds
             
-    <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def increment(self, seconds : int):
+        &quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)
+        &quot;&quot;&quot;
+        seconds += self.time_to_int()
+        return int_to_time(seconds)
     
-    <span class="k">def</span> <span class="nf">is_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; checks whether the current time is after the given time</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
+    def is_after(self, other) -&gt; bool:
+        &quot;&quot;&quot; checks whether the current time is after the given time
+        &quot;&quot;&quot;
+        return self.time_to_int() &gt; other.time_to_int()
     
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; adds a Time object to the current Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def __add__(self, other):
+        &quot;&quot;&quot; adds a Time object to the current Time object
+        &quot;&quot;&quot;
+        seconds : int = self.time_to_int() + other.time_to_int()
+        return int_to_time(seconds)
 
-<span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts a values representing seconds into a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+def int_to_time(seconds : int) -&gt; Time:
+    &quot;&quot;&quot; converts a values representing seconds into a Time object
+    &quot;&quot;&quot;
+    time : Time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
     
-    <span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+    # fix with hours if greater than 24
+    if time.hour &gt;= 24:
+        time.hour -= 24
         
-    <span class="k">return</span> <span class="n">time</span>
+    return time
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">duration</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">start</span> <span class="o">+</span> <span class="n">duration</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time(9, 45, 30)
+duration : Time = Time(0, 15, 30)
+print(start + duration)
 </pre></div>
 </div>
 </div>
@@ -1609,7 +1609,7 @@ method, like <code class="docutils literal notranslate"><span class="pre">__add_
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1623,75 +1623,75 @@ method, like <code class="docutils literal notranslate"><span class="pre">__add_
 other and invokes either <code class="docutils literal notranslate"><span class="pre">add_time</span></code> or <code class="docutils literal notranslate"><span class="pre">increment</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Time object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minute</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">second</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+    def __init__(self, hour=0, minute=0, second=0) -&gt; None:
+        &quot;&quot;&quot; creates a new Time object and initializes it
+        &quot;&quot;&quot;
+        (ignore, self.hour) = divmod(hour, 24)
+        (ignore, self.minute) = divmod(minute, 60)
+        (ignore, self.second) = divmod(second, 60)
         
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a string from the current Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">)</span>
+    def __str__(self) -&gt; str:
+        &quot;&quot;&quot; creates a string from the current Time object
+        &quot;&quot;&quot;
+        return &#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second)
     
-    <span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value respresenting seconds</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-        <span class="k">return</span> <span class="n">seconds</span>
+    def time_to_int(self) -&gt; int:
+        &quot;&quot;&quot; converts a Time object into an integer value respresenting seconds
+        &quot;&quot;&quot;
+        minutes : int = 60 * self.hour + self.minute
+        seconds : int = 60 * minutes + self.second
+        return seconds
             
-    <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def increment(self, seconds : int):
+        &quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)
+        &quot;&quot;&quot;
+        seconds += self.time_to_int()
+        return int_to_time(seconds)
     
-    <span class="k">def</span> <span class="nf">is_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; checks whether the current time is after the given time</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
+    def is_after(self, other) -&gt; bool:
+        &quot;&quot;&quot; checks whether the current time is after the given time
+        &quot;&quot;&quot;
+        return self.time_to_int() &gt; other.time_to_int()
     
-    <span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; adds a Time object to the current Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def add_time(self, other):
+        &quot;&quot;&quot; adds a Time object to the current Time object
+        &quot;&quot;&quot;
+        seconds : int = self.time_to_int() + other.time_to_int()
+        return int_to_time(seconds)
     
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span> <span class="p">:</span> <span class="nb">any</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; adds a Time object or an amount of seconds to the current Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Time</span><span class="p">):</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_time</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    def __add__(self, other : any):
+        &quot;&quot;&quot; adds a Time object or an amount of seconds to the current Time object
+        &quot;&quot;&quot;
+        if isinstance(other, Time):
+            return self.add_time(other)
+        else:
+            return self.increment(other)
 
-<span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts a values representing seconds into a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+def int_to_time(seconds : int) -&gt; Time:
+    &quot;&quot;&quot; converts a values representing seconds into a Time object
+    &quot;&quot;&quot;
+    time : Time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
     
-    <span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+    # fix with hours if greater than 24
+    if time.hour &gt;= 24:
+        time.hour -= 24
         
-    <span class="k">return</span> <span class="n">time</span>
+    return time
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">start</span> <span class="o">+</span> <span class="mi">3600</span><span class="p">)</span>
-<span class="n">duration</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">start</span><span class="o">+</span><span class="n">duration</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time(9, 45, 30)
+print(start + 3600)
+duration : Time = Time(2)
+print(start+duration)
 </pre></div>
 </div>
 </div>
@@ -1713,7 +1713,7 @@ other and invokes either <code class="docutils literal notranslate"><span class=
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1722,7 +1722,7 @@ other and invokes either <code class="docutils literal notranslate"><span class=
 first operand, you get an error message.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">3630</span> <span class="o">+</span> <span class="n">start</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(3630 + start)
 </pre></div>
 </div>
 </div>
@@ -1734,79 +1734,79 @@ integer to add a <code class="docutils literal notranslate"><span class="pre">Ti
 is invoked when a <code class="docutils literal notranslate"><span class="pre">Time</span></code> object appears on the right side of the <code class="docutils literal notranslate"><span class="pre">+</span></code> operator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Time:
+    &quot;&quot;&quot;Represents the time of day.&quot;&quot;&quot;
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Time object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">hour</span><span class="p">,</span> <span class="mi">24</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minute</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">ignore</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">second</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+    def __init__(self, hour=0, minute=0, second=0) -&gt; None:
+        &quot;&quot;&quot; creates a new Time object and initializes it
+        &quot;&quot;&quot;
+        (ignore, self.hour) = divmod(hour, 24)
+        (ignore, self.minute) = divmod(minute, 60)
+        (ignore, self.second) = divmod(second, 60)
         
-    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; creates a string from the current Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">:</span><span class="si">{:02d}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span><span class="p">)</span>
+    def __str__(self) -&gt; str:
+        &quot;&quot;&quot; creates a string from the current Time object
+        &quot;&quot;&quot;
+        return &#39;{:02d}:{:02d}:{:02d}&#39;.format(self.hour, self.minute, self.second)
     
-    <span class="k">def</span> <span class="nf">time_to_int</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; converts a Time object into an integer value respresenting seconds</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">hour</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">minute</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">60</span> <span class="o">*</span> <span class="n">minutes</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">second</span>
-        <span class="k">return</span> <span class="n">seconds</span>
+    def time_to_int(self) -&gt; int:
+        &quot;&quot;&quot; converts a Time object into an integer value respresenting seconds
+        &quot;&quot;&quot;
+        minutes : int = 60 * self.hour + self.minute
+        seconds : int = 60 * minutes + self.second
+        return seconds
             
-    <span class="k">def</span> <span class="nf">increment</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def increment(self, seconds : int):
+        &quot;&quot;&quot; increments a Time object with an amount of seconds (represented as an integer)
+        &quot;&quot;&quot;
+        seconds += self.time_to_int()
+        return int_to_time(seconds)
     
-    <span class="k">def</span> <span class="nf">is_after</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-        <span class="sd">&quot;&quot;&quot; checks whether the current time is after the given time</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">other</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
+    def is_after(self, other) -&gt; bool:
+        &quot;&quot;&quot; checks whether the current time is after the given time
+        &quot;&quot;&quot;
+        return self.time_to_int() &gt; other.time_to_int()
     
-    <span class="k">def</span> <span class="nf">add_time</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; adds a Time object to the current Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span> <span class="o">+</span> <span class="n">other</span><span class="o">.</span><span class="n">time_to_int</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">int_to_time</span><span class="p">(</span><span class="n">seconds</span><span class="p">)</span>
+    def add_time(self, other):
+        &quot;&quot;&quot; adds a Time object to the current Time object
+        &quot;&quot;&quot;
+        seconds : int = self.time_to_int() + other.time_to_int()
+        return int_to_time(seconds)
     
-    <span class="k">def</span> <span class="fm">__add__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span> <span class="p">:</span> <span class="nb">any</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; adds a Time object or an amount of seconds to the current Time object</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">other</span><span class="p">,</span> <span class="n">Time</span><span class="p">):</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">add_time</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    def __add__(self, other : any):
+        &quot;&quot;&quot; adds a Time object or an amount of seconds to the current Time object
+        &quot;&quot;&quot;
+        if isinstance(other, Time):
+            return self.add_time(other)
+        else:
+            return self.increment(other)
 
-    <span class="k">def</span> <span class="fm">__radd__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">other</span> <span class="p">:</span> <span class="nb">any</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; flips the arguments if needed</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__add__</span><span class="p">(</span><span class="n">other</span><span class="p">)</span>
+    def __radd__(self, other : any):
+        &quot;&quot;&quot; flips the arguments if needed
+        &quot;&quot;&quot;
+        return self.__add__(other)
     
-<span class="k">def</span> <span class="nf">int_to_time</span><span class="p">(</span><span class="n">seconds</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Time</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; converts a values representing seconds into a Time object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">()</span>
-    <span class="n">minutes</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">second</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">seconds</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
-    <span class="n">time</span><span class="o">.</span><span class="n">hour</span><span class="p">,</span> <span class="n">time</span><span class="o">.</span><span class="n">minute</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">minutes</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+def int_to_time(seconds : int) -&gt; Time:
+    &quot;&quot;&quot; converts a values representing seconds into a Time object
+    &quot;&quot;&quot;
+    time : Time = Time()
+    minutes, time.second = divmod(seconds, 60)
+    time.hour, time.minute = divmod(minutes, 60)
     
-    <span class="c1"># fix with hours if greater than 24</span>
-    <span class="k">if</span> <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">&gt;=</span> <span class="mi">24</span><span class="p">:</span>
-        <span class="n">time</span><span class="o">.</span><span class="n">hour</span> <span class="o">-=</span> <span class="mi">24</span>
+    # fix with hours if greater than 24
+    if time.hour &gt;= 24:
+        time.hour -= 24
         
-    <span class="k">return</span> <span class="n">time</span>
+    return time
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">start</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="mi">45</span><span class="p">,</span> <span class="mi">30</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">3630</span> <span class="o">+</span> <span class="n">start</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="mi">3630</span> <span class="o">+</span> <span class="n">start</span> <span class="o">+</span> <span class="mi">363</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>start : Time = Time(9, 45, 30)
+print(3630 + start)
+print(3630 + start + 363)
 </pre></div>
 </div>
 </div>
@@ -1820,16 +1820,16 @@ is invoked when a <code class="docutils literal notranslate"><span class="pre">T
 <p>In Section 11.2 we used <code class="docutils literal notranslate"><span class="pre">histogram</span></code> to count the number of times each letter appears in a word.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">histogram</span><span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="nb">list</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">dict</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; creates a histogram from a list of elements</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">c</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">d</span><span class="p">:</span>
-            <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">d</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">d</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def histogram(s : list) -&gt; dict:
+    &quot;&quot;&quot; creates a histogram from a list of elements
+    &quot;&quot;&quot;
+    d = dict()
+    for c in s:
+        if c not in d:
+            d[c] = 1
+        else:
+            d[c] = d[c] + 1
+    return d
 </pre></div>
 </div>
 </div>
@@ -1837,8 +1837,8 @@ is invoked when a <code class="docutils literal notranslate"><span class="pre">T
 <p>The function <code class="docutils literal notranslate"><span class="pre">histogram</span></code> works on a list of words.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;science&#39;</span><span class="p">,</span> <span class="s1">&#39;statistics&#39;</span><span class="p">,</span> <span class="s1">&#39;machine&#39;</span><span class="p">,</span> <span class="s1">&#39;learning&#39;</span><span class="p">,</span> <span class="s1">&#39;computer&#39;</span><span class="p">,</span> <span class="s1">&#39;science&#39;</span><span class="p">]</span>
-<span class="n">histogram</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t = [&#39;data&#39;, &#39;science&#39;, &#39;statistics&#39;, &#39;machine&#39;, &#39;learning&#39;, &#39;computer&#39;, &#39;science&#39;]
+histogram(t)
 </pre></div>
 </div>
 </div>
@@ -1846,8 +1846,8 @@ is invoked when a <code class="docutils literal notranslate"><span class="pre">T
 <p>Or on a list of prime numbers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">histogram</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p = [3, 7, 11, 13, 3, 5, 23, 13, 3]
+histogram(p)
 </pre></div>
 </div>
 </div>
@@ -1859,15 +1859,15 @@ sequence, works as long as the elements of the sequence support addition.</p>
 <p>Since <code class="docutils literal notranslate"><span class="pre">Time</span></code> objects provide an <code class="docutils literal notranslate"><span class="pre">add</span></code> method, they work with <code class="docutils literal notranslate"><span class="pre">sum</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">43</span><span class="p">)</span>
-<span class="n">t2</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">41</span><span class="p">)</span>
-<span class="n">t3</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="n">Time</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">37</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t1 : Time = Time(7, 43)
+t2 : Time = Time(7, 41)
+t3 : Time = Time(7, 37)
 
-<span class="n">total_time</span> <span class="p">:</span> <span class="n">Time</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">,</span> <span class="n">t3</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">total_time</span><span class="p">)</span>
+total_time : Time = sum([t1, t2, t3])
+print(total_time)
 
-<span class="n">total_value</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">([</span><span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">total_value</span><span class="p">)</span>
+total_value : int = sum([3, 7, 11, 13, 3, 5, 23, 13, 3])
+print(total_value)
 </pre></div>
 </div>
 </div>
@@ -1882,7 +1882,7 @@ you already wrote can be applied to a type you never planned for.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>

@@ -718,9 +718,9 @@ if we want to calculate the average of a list of integers, the basic data types 
 <p>One of the operations that we can perform on strings is selecting one of the characters, via <em>indexing</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bike</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;gazelle&#39;</span>
-<span class="n">letter</span> <span class="o">=</span> <span class="n">bike</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-<span class="n">letter</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>bike : str = &#39;gazelle&#39;
+letter = bike[1]
+letter
 </pre></div>
 </div>
 </div>
@@ -737,8 +737,8 @@ if we want to calculate the average of a list of integers, the basic data types 
 <p>The first letter of a string is obtained by index <code class="docutils literal notranslate"><span class="pre">0</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">letter</span> <span class="o">=</span> <span class="n">bike</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-<span class="n">letter</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>letter = bike[0]
+letter
 </pre></div>
 </div>
 </div>
@@ -776,15 +776,15 @@ letter, and so on.</p>
 <p>As an index you can use an expression that contains variables and operators:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">letter</span> <span class="o">=</span> <span class="n">bike</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
-<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="n">letter</span> <span class="o">=</span> <span class="n">bike</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
-<span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="n">letter</span> <span class="o">=</span> <span class="n">bike</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>i : int = 0
+letter = bike[i]
+print(letter)
+i += 1
+letter = bike[i]
+print(letter)
+i += 1
+letter = bike[i]
+print(letter)
 </pre></div>
 </div>
 </div>
@@ -799,14 +799,14 @@ z
 <p>The value of the index <strong>must</strong> be an integer.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">letter</span> <span class="o">=</span> <span class="n">bike</span><span class="p">[</span><span class="mf">1.5</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>letter = bike[1.5]
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">letter</span> <span class="o">=</span> <span class="n">bike</span><span class="p">[</span><span class="mf">1.5</span><span class="p">]</span>
 
 <span class="ne">TypeError</span>: string indices must be integers
@@ -820,7 +820,7 @@ z
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -832,14 +832,14 @@ z
 <p><code class="docutils literal notranslate"><span class="pre">len</span></code> is a built-in function to obtain the length of a sequence, and thus of a string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">bike</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>len(bike)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;gazelle&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>len(&#39;gazelle&#39;)
 </pre></div>
 </div>
 </div>
@@ -847,15 +847,15 @@ z
 <p>Given the fact that the first letter is accessed via the index <code class="docutils literal notranslate"><span class="pre">0</span></code>, the last letter is accessed via <code class="docutils literal notranslate"><span class="pre">len</span> <span class="pre">-</span> <span class="pre">1</span></code> instead, as you may have expected.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">length</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bike</span><span class="p">)</span>
-<span class="n">bike</span><span class="p">[</span><span class="n">length</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>length : int = len(bike)
+bike[length]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bike</span><span class="p">[</span><span class="n">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>bike[length - 1]
 </pre></div>
 </div>
 </div>
@@ -866,7 +866,7 @@ z
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -881,11 +881,11 @@ z
 <p>The next cell contains a correct implementation for iterating over a string with a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">bike</span><span class="p">):</span>
-    <span class="n">letter</span> <span class="o">=</span> <span class="n">bike</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
-    <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>index : int = 0
+while index &lt; len(bike):
+    letter = bike[index]
+    print(letter)
+    index += 1
 </pre></div>
 </div>
 </div>
@@ -895,11 +895,11 @@ z
 <p>Below you find code that contains multiple <strong>out-of-bound</strong> errors.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="k">while</span> <span class="n">index</span> <span class="o">&lt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">bike</span><span class="p">):</span>
-    <span class="n">letter</span> <span class="o">=</span> <span class="n">bike</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
-    <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>index : int = 1
+while index &lt;= len(bike):
+    letter = bike[index]
+    print(letter)
+    index += 1
 </pre></div>
 </div>
 </div>
@@ -910,7 +910,7 @@ z
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -919,8 +919,8 @@ z
 <p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop has an implicit iterator, in the cell below represented by the variable <code class="docutils literal notranslate"><span class="pre">letter</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s2">&quot;sparta&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for letter in &quot;sparta&quot;:
+    print(letter)
 </pre></div>
 </div>
 </div>
@@ -931,11 +931,11 @@ z
 to generate a list of names in alphabetical order.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">prefixes</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;JKLMNOPQ&#39;</span>
-<span class="n">suffix</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;ack&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>prefixes : str = &#39;JKLMNOPQ&#39;
+suffix : str = &#39;ack&#39;
 
-<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">prefixes</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span> <span class="o">+</span> <span class="n">suffix</span><span class="p">)</span>
+for letter in prefixes:
+    print(letter + suffix)
 </pre></div>
 </div>
 </div>
@@ -946,9 +946,9 @@ to generate a list of names in alphabetical order.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">code</span> <span class="o">=</span> <span class="s1">&#39;Esxzcxxhyezrzy wyzyaxsz zyxbxoxrxxn yinz zyLxexxeuzwaryxdexyzn&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>code = &#39;Esxzcxxhyezrzy wyzyaxsz zyxbxoxrxxn yinz zyLxexxeuzwaryxdexyzn&#39;
 
-<span class="c1"># Remove this line and add your code here</span>
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -962,17 +962,17 @@ to generate a list of names in alphabetical order.</p>
 <p>In the next cell, we show how we can obtain the segments <code class="docutils literal notranslate"><span class="pre">Data</span></code> and <code class="docutils literal notranslate"><span class="pre">Science</span></code> from the giving string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_str</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Data Science&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ds_str : str = &#39;Data Science&#39;
 
-<span class="n">ln</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ds_str</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ln</span><span class="p">)</span>
-<span class="n">data</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ds_str</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">science</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ds_str</span><span class="p">[</span><span class="mi">5</span><span class="p">:</span><span class="n">ln</span><span class="p">]</span>
+ln : int = len(ds_str)
+print(ln)
+data : str = ds_str[0:4]
+science : str = ds_str[5:ln]
 
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">science</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">science</span><span class="p">))</span>
+print(data)
+print(len(data))
+print(science)
+print(len(science))
 </pre></div>
 </div>
 </div>
@@ -984,13 +984,13 @@ If you omit the second index, the slice goes to the end of the string.</p>
 <p>Beware, take care of the <em>start</em> and <em>end</em> indices of the string. This is a frequent source of errors.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds_str</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Data Science&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ds_str : str = &#39;Data Science&#39;
 
-<span class="n">data</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ds_str</span><span class="p">[:</span><span class="mi">4</span><span class="p">]</span>
-<span class="n">science</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ds_str</span><span class="p">[</span><span class="mi">5</span><span class="p">:]</span>
+data : str = ds_str[:4]
+science : str = ds_str[5:]
 
-<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">science</span><span class="p">)</span>
+print(data)
+print(science)
 </pre></div>
 </div>
 </div>
@@ -999,11 +999,11 @@ If you omit the second index, the slice goes to the end of the string.</p>
 by two quotation marks:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Data Science&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ds : str = &#39;Data Science&#39;
 
-<span class="n">data</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+data : str = ds[4:4]
 
-<span class="n">data</span>
+data
 </pre></div>
 </div>
 </div>
@@ -1014,7 +1014,7 @@ by two quotation marks:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1027,8 +1027,8 @@ by two quotation marks:</p>
 <p>It is not possible to change an existing string, strings are <strong>immutable</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Hello Data Scientist&#39;</span>
-<span class="n">greeting</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>greeting : str = &#39;Hello Data Scientist&#39;
+greeting[0] = &#39;h&#39;
 </pre></div>
 </div>
 </div>
@@ -1038,9 +1038,9 @@ by two quotation marks:</p>
 <p>The original string is not <em>changed</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
-<span class="n">new_greeting</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;h&#39;</span> <span class="o">+</span> <span class="n">greeting</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">new_greeting</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(greeting)
+new_greeting : str = &#39;h&#39; + greeting[1:]
+print(new_greeting)
 </pre></div>
 </div>
 </div>
@@ -1051,7 +1051,7 @@ by two quotation marks:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1063,19 +1063,19 @@ by two quotation marks:</p>
 <p>The next cell shows a few lines of code that mimicks this searching for an element by means of looking for a specific letter in a word.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">letter</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;looks at which position the letter appears first, </span>
-<span class="sd">    if the letter does not appear in the string -1 is returned&quot;&quot;&quot;</span>
-    <span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def find(word : str, letter : str) -&gt; int:
+    &quot;&quot;&quot;looks at which position the letter appears first, 
+    if the letter does not appear in the string -1 is returned&quot;&quot;&quot;
+    index : int = 0
     
-    <span class="k">while</span> <span class="n">index</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">word</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="o">==</span> <span class="n">letter</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">index</span>
-        <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+    while index &lt; len(word):
+        if word[index] == letter:
+            return index
+        index += 1
         
-    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+    return -1
 
-<span class="n">find</span><span class="p">(</span><span class="s1">&#39;data science&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span>
+find(&#39;data science&#39;, &#39;a&#39;)
 </pre></div>
 </div>
 </div>
@@ -1100,22 +1100,22 @@ are looking for— is called a <strong>search</strong>.</p>
 <p>Is it possible to write this function using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop more compact?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find</span><span class="p">(</span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">letter</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;looks at which position the letter appears first, </span>
-<span class="sd">    if the letter does not appear in the string -1 is returned&quot;&quot;&quot;</span>
-    <span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def find(word : str, letter : str) -&gt; int:
+    &quot;&quot;&quot;looks at which position the letter appears first, 
+    if the letter does not appear in the string -1 is returned&quot;&quot;&quot;
+    index : int = 0
     
-    <span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">char</span> <span class="o">==</span> <span class="n">letter</span><span class="p">:</span>
-            <span class="k">break</span>
-        <span class="n">index</span> <span class="o">+=</span> <span class="mi">1</span>
+    for char in word:
+        if char == letter:
+            break
+        index += 1
         
-    <span class="k">if</span> <span class="n">index</span> <span class="o">&gt;=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
-        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">index</span>
+    if index &gt;= len(word):
+        return -1
+    else:
+        return index
 
-<span class="n">find</span><span class="p">(</span><span class="s1">&#39;data science&#39;</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">)</span>
+find(&#39;data science&#39;, &#39;z&#39;)
 </pre></div>
 </div>
 </div>
@@ -1126,9 +1126,9 @@ are looking for— is called a <strong>search</strong>.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">info</span> <span class="o">=</span> <span class="s1">&#39;Ticket reference: 9090873982&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>info = &#39;Ticket reference: 9090873982&#39;
 
-<span class="c1"># Remove this line and add your code here</span>
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1139,14 +1139,14 @@ are looking for— is called a <strong>search</strong>.</p>
 <p>The following program counts the number of times the letter <code class="docutils literal notranslate"><span class="pre">e</span></code> appears in a string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;gazelle&#39;</span>
-<span class="n">count</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>word : str = &#39;gazelle&#39;
+count : int = 0
 
-<span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">letter</span> <span class="o">==</span> <span class="s1">&#39;e&#39;</span><span class="p">:</span>
-        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+for letter in word:
+    if letter == &#39;e&#39;:
+        count += 1
         
-<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+print(count)
 </pre></div>
 </div>
 </div>
@@ -1160,7 +1160,7 @@ are looking for— is called a <strong>search</strong>.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1172,14 +1172,14 @@ are looking for— is called a <strong>search</strong>.</p>
 as a substring in the second.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;zel&#39;</span> <span class="ow">in</span> <span class="s1">&#39;gazelle&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&#39;zel&#39; in &#39;gazelle&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;par&#39;</span> <span class="ow">in</span> <span class="s1">&#39;gazelle&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&#39;par&#39; in &#39;gazelle&#39;
 </pre></div>
 </div>
 </div>
@@ -1187,13 +1187,13 @@ as a substring in the second.</p>
 <p>For example, the following function prints all the letters from <code class="docutils literal notranslate"><span class="pre">word1</span></code> that also appear in <code class="docutils literal notranslate"><span class="pre">word2</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">in_both</span><span class="p">(</span><span class="n">word1</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">word2</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;prints letters that appear in both words&quot;&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">word1</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">word2</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def in_both(word1 : str, word2 : str):
+    &quot;&quot;&quot;prints letters that appear in both words&quot;&quot;&quot;
+    for letter in word1:
+        if letter in word2:
+            print(letter)
 
-<span class="n">in_both</span><span class="p">(</span><span class="s1">&#39;trek&#39;</span><span class="p">,</span> <span class="s1">&#39;gazelle&#39;</span><span class="p">)</span>
+in_both(&#39;trek&#39;, &#39;gazelle&#39;)
 </pre></div>
 </div>
 </div>
@@ -1204,7 +1204,7 @@ as a substring in the second.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1219,9 +1219,9 @@ such an operation.</p>
 for instance to check whether two strings are equal.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">word</span> <span class="o">==</span> <span class="s1">&#39;apple&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hmmm, an apple!&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>word : str = input(&#39;&gt; &#39;)
+if word == &#39;apple&#39;:
+    print(&#39;Hmmm, an apple!&#39;)
 </pre></div>
 </div>
 </div>
@@ -1229,13 +1229,13 @@ for instance to check whether two strings are equal.</p>
 <p>Other relational operations are useful for putting words in alphabetical order.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">word</span> <span class="o">&lt;</span> <span class="s1">&#39;apple&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your word, &#39;</span> <span class="o">+</span> <span class="n">word</span> <span class="o">+</span> <span class="s1">&#39;, comes before apple!&#39;</span><span class="p">)</span>
-<span class="k">elif</span> <span class="n">word</span> <span class="o">&gt;</span> <span class="s1">&#39;apple&#39;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Your word, &#39;</span> <span class="o">+</span> <span class="n">word</span> <span class="o">+</span> <span class="s1">&#39;, comes after apple!&#39;</span><span class="p">)</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hmmm, an apple!&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>word : str = input(&#39;&gt; &#39;)
+if word &lt; &#39;apple&#39;:
+    print(&#39;Your word, &#39; + word + &#39;, comes before apple!&#39;)
+elif word &gt; &#39;apple&#39;:
+    print(&#39;Your word, &#39; + word + &#39;, comes after apple!&#39;)
+else:
+    print(&#39;Hmmm, an apple!&#39;)
 </pre></div>
 </div>
 </div>
@@ -1251,11 +1251,11 @@ all lowercase, before doing string comparison.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word1</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;purple&#39;</span>
-<span class="n">word2</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span>
-<span class="n">word3</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>word1 : str = &#39;purple&#39;
+word2 : str = &#39;green&#39;
+word3 : str = &#39;red&#39;
 
-<span class="c1"># Remove this line and add your code here</span>
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1271,8 +1271,8 @@ all lowercase, before doing string comparison.</p>
 <p>The Python function <code class="docutils literal notranslate"><span class="pre">dir</span></code> lists all the methods available for an object. Let’s see the methods that an object of type string has.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Data Science&#39;</span>
-<span class="nb">dir</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>text : str = &#39;Data Science&#39;
+dir(text)
 </pre></div>
 </div>
 </div>
@@ -1282,9 +1282,9 @@ all lowercase, before doing string comparison.</p>
 <p>For instance, instead of the function syntax <code class="docutils literal notranslate"><span class="pre">upper(word)</span></code>, we use the method syntax <code class="docutils literal notranslate"><span class="pre">word.upper()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;gazelle&#39;</span>
-<span class="n">new_word</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
-<span class="n">new_word</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>word : str = &#39;gazelle&#39;
+new_word : str = word.upper()
+new_word
 </pre></div>
 </div>
 </div>
@@ -1298,9 +1298,9 @@ string to apply the method to, <code class="docutils literal notranslate"><span 
 function we wrote.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;gazelle&#39;</span>
-<span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;z&#39;</span><span class="p">)</span>
-<span class="n">index</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>word : str = &#39;gazelle&#39;
+index : int = word.find(&#39;z&#39;)
+index
 </pre></div>
 </div>
 </div>
@@ -1310,8 +1310,8 @@ characters.</p>
 <p>Furthermore, the method can also be directly invoked on a string <strong>object</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">index</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="s1">&#39;sparta&#39;</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;par&#39;</span><span class="p">)</span>
-<span class="n">index</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>index : int = &#39;sparta&#39;.find(&#39;par&#39;)
+index
 </pre></div>
 </div>
 </div>
@@ -1321,8 +1321,8 @@ characters.</p>
 <p>The second optional argument is the index where the search in the string object should stop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;bob&#39;</span>
-<span class="n">name</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>name : str = &#39;bob&#39;
+name.find(&#39;b&#39;, 1, 2)
 </pre></div>
 </div>
 </div>
@@ -1331,7 +1331,7 @@ characters.</p>
 <p>Searching up to, but not including, the second index makes <code class="docutils literal notranslate"><span class="pre">find</span></code> consistent with the slice operator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>name[1:2].find(&#39;b&#39;)
 </pre></div>
 </div>
 </div>
@@ -1345,19 +1345,19 @@ characters.</p>
 <p>A format sequence are markers such as <code class="docutils literal notranslate"><span class="pre">'%d'</span></code> to format an integer, <code class="docutils literal notranslate"><span class="pre">'%g'</span></code> to format floats, and <code class="docutils literal notranslate"><span class="pre">'%s'</span></code> to format strings.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">days</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">365</span>
-<span class="s1">&#39;A year has </span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">days</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>days : int = 365
+&#39;A year has %d&#39; % days
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">who</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Tom&#39;</span>
-<span class="n">budget</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.99</span>
-<span class="n">days</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">365</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>who : str = &#39;Tom&#39;
+budget : float = 1.99
+days : int = 365
 
-<span class="s1">&#39;</span><span class="si">%s</span><span class="s1"> says that he is allowed to spend </span><span class="si">%g</span><span class="s1"> euros every single day of the </span><span class="si">%d</span><span class="s1"> days of the year.&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">who</span><span class="p">,</span> <span class="n">budget</span><span class="p">,</span> <span class="n">days</span><span class="p">)</span>
+&#39;%s says that he is allowed to spend %g euros every single day of the %d days of the year.&#39; % (who, budget, days)
 </pre></div>
 </div>
 </div>
@@ -1365,11 +1365,11 @@ characters.</p>
 <p>You can get an error if your don’t write all needed elements to format the string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Monday&#39;</span>
-<span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">place</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;the park&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>day : str = &#39;Monday&#39;
+hour : int = 5
+place : str = &#39;the park&#39;
 
-<span class="s1">&#39;Se you on </span><span class="si">%s</span><span class="s1"> at </span><span class="si">%d</span><span class="s1"> in </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">day</span><span class="p">,</span> <span class="n">hour</span><span class="p">)</span>
+&#39;Se you on %s at %d in %s&#39; % (day, hour)
 </pre></div>
 </div>
 </div>
@@ -1377,11 +1377,11 @@ characters.</p>
 <p>Or when you use a wrong format sequence.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">day</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Monday&#39;</span>
-<span class="n">hour</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">place</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;the park&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>day : str = &#39;Monday&#39;
+hour : int = 5
+place : str = &#39;the park&#39;
 
-<span class="s1">&#39;Se you on </span><span class="si">%d</span><span class="s1"> at </span><span class="si">%d</span><span class="s1"> in </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">day</span><span class="p">,</span> <span class="n">hour</span><span class="p">,</span> <span class="n">place</span><span class="p">)</span>
+&#39;Se you on %d at %d in %s&#39; % (day, hour, place)
 </pre></div>
 </div>
 </div>
@@ -1397,7 +1397,7 @@ the string format method, which you can read about at
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1411,7 +1411,7 @@ the string format method, which you can read about at
 file <strong>object</strong> you can use to read the content of the file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;words.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>words = open(&#39;words.txt&#39;)
 </pre></div>
 </div>
 </div>
@@ -1419,7 +1419,7 @@ file <strong>object</strong> you can use to read the content of the file.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">file</span></code> object provides several methods for reading, including <strong>readline</strong>, which reads characters from the <code class="docutils literal notranslate"><span class="pre">file</span></code> until it gets to a newline and returns the result as a string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>words.readline()
 </pre></div>
 </div>
 </div>
@@ -1428,7 +1428,7 @@ file <strong>object</strong> you can use to read the content of the file.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">file</span></code> object keeps track of where it is in the file, so if you call <code class="docutils literal notranslate"><span class="pre">readline</span></code> again, you get the next word.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>words.readline()
 </pre></div>
 </div>
 </div>
@@ -1439,9 +1439,9 @@ annoying and inconvenient.</p>
 <p>We can get rid of these whitespace characters with the string method <code class="docutils literal notranslate"><span class="pre">strip</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">line</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">words</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-<span class="n">word</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-<span class="n">word</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>line : str = words.readline()
+word : str = line.strip()
+word
 </pre></div>
 </div>
 </div>
@@ -1450,10 +1450,10 @@ annoying and inconvenient.</p>
 <p>The following program reads <code class="docutils literal notranslate"><span class="pre">words.txt</span></code> and prints each word, one per line.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;words.txt&#39;</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-    <span class="n">s_word</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">s_word</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>words = open(&#39;words.txt&#39;)
+for word in words:
+    s_word : str = word.strip()
+    print(s_word)
 </pre></div>
 </div>
 </div>
@@ -1467,12 +1467,12 @@ annoying and inconvenient.</p>
 <p>In the body of the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop there is a test on the length of the words, after stripping the whitespace.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;words.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>words = open(&#39;words.txt&#39;)
 
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-    <span class="n">stripped_word</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">stripped_word</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">stripped_word</span><span class="p">)</span>
+for word in words:
+    stripped_word : str = word.strip()
+    if len(stripped_word) &gt; 20:
+        print(stripped_word)
 </pre></div>
 </div>
 </div>
@@ -1481,16 +1481,16 @@ annoying and inconvenient.</p>
 <p>Again we use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop, but now we need to keep a counter for counting the number of words without an <code class="docutils literal notranslate"><span class="pre">'e'</span></code> letter.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;words.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>words = open(&#39;words.txt&#39;)
 
-<span class="n">no_e_count</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+no_e_count : int = 0
 
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+for word in words:
     
-    <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="s1">&#39;e&#39;</span> <span class="ow">in</span> <span class="n">word</span><span class="p">):</span>
-        <span class="n">no_e_count</span> <span class="o">+=</span> <span class="mi">1</span>
+    if not(&#39;e&#39; in word):
+        no_e_count += 1
 
-<span class="nb">print</span><span class="p">(</span><span class="n">no_e_count</span><span class="p">)</span>
+print(no_e_count)
 </pre></div>
 </div>
 </div>
@@ -1500,21 +1500,21 @@ annoying and inconvenient.</p>
 <p>We need to keep a counter for counting the number of words with an <code class="docutils literal notranslate"><span class="pre">'e'</span></code> letter and a counter for counting all words.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;words.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>words = open(&#39;words.txt&#39;)
 
-<span class="n">count</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">no_e_count</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+count : int = 0
+no_e_count : int = 0
 
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+for word in words:
 
-    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">if</span> <span class="ow">not</span><span class="p">(</span><span class="s1">&#39;e&#39;</span> <span class="ow">in</span> <span class="n">word</span><span class="p">):</span>
-        <span class="n">no_e_count</span> <span class="o">+=</span> <span class="mi">1</span>
+    count += 1
+    if not(&#39;e&#39; in word):
+        no_e_count += 1
 
-<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">no_e_count</span><span class="p">)</span>
+print(count)
+print(no_e_count)
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Percentage is:&quot;</span><span class="p">,</span> <span class="nb">int</span><span class="p">((</span><span class="n">no_e_count</span><span class="o">/</span><span class="n">count</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span><span class="p">))</span>
+print(&quot;Percentage is:&quot;, int((no_e_count/count)*100))
 </pre></div>
 </div>
 </div>
@@ -1522,44 +1522,44 @@ annoying and inconvenient.</p>
 <p>The fourth example is how via a simple check on can determine whether forbidden letters are used in a word.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">avoids</span><span class="p">(</span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">forbidden</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;check whether the forbidden letters do not appear the word&quot;&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">forbidden</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="kc">True</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def avoids(word : str, forbidden : str) -&gt; bool:
+    &quot;&quot;&quot;check whether the forbidden letters do not appear the word&quot;&quot;&quot;
+    for letter in forbidden:
+        if letter in word:
+            return False
+    return True
 
-<span class="n">avoids</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;abcf&quot;</span><span class="p">)</span>
+avoids(&quot;foo&quot;, &quot;abcf&quot;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">forbidden_letters</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;&gt; &#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>forbidden_letters = input(&#39;&gt; &#39;)
 
-<span class="n">words</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;words.txt&#39;</span><span class="p">)</span>
+words = open(&#39;words.txt&#39;)
 
-<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">avoids</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">forbidden_letters</span><span class="p">):</span>
-        <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+count = 0
+for word in words:
+    if avoids(word, forbidden_letters):
+        count += 1
 
-<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+print(count)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">uses_only</span><span class="p">(</span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">only</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;check whether the all letters in word appear in only&quot;&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">letter</span> <span class="ow">in</span> <span class="n">only</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-    <span class="k">return</span> <span class="kc">True</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def uses_only(word : str, only : str) -&gt; bool:
+    &quot;&quot;&quot;check whether the all letters in word appear in only&quot;&quot;&quot;
+    for letter in word:
+        if not letter in only:
+            return False
+    return True
 
-<span class="n">uses_only</span><span class="p">(</span><span class="s2">&quot;foo&quot;</span><span class="p">,</span> <span class="s2">&quot;fol&quot;</span><span class="p">)</span>
+uses_only(&quot;foo&quot;, &quot;fol&quot;)
 </pre></div>
 </div>
 </div>
@@ -1574,23 +1574,23 @@ annoying and inconvenient.</p>
 <p>We are going to use a loop in combination with indices, note that a recursive solution is more <em>robust</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_reverse</span><span class="p">(</span><span class="n">word1</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">word2</span> <span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;check whether the first argument is a reverse </span>
-<span class="sd">    of the second argument</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word2</span><span class="p">):</span>
-        <span class="k">return</span> <span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def is_reverse(word1 : str, word2 :str) -&gt; bool:
+    &quot;&quot;&quot;check whether the first argument is a reverse 
+    of the second argument
+    &quot;&quot;&quot;
+    if len(word1) != len(word2):
+        return False
     
-    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">j</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word2</span><span class="p">)</span>
+    i : int = 0
+    j : int = len(word2)
     
-    <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">word1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">word2</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+    while (j &gt; 0):
+        if word1[i] != word2[j]:
+            return False
+        i += 1
+        j -= 1
         
-    <span class="k">return</span> <span class="kc">True</span>
+    return True
 </pre></div>
 </div>
 </div>
@@ -1600,7 +1600,7 @@ annoying and inconvenient.</p>
 <p>We check per character whether they appear in both words.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_reverse</span><span class="p">(</span><span class="s1">&#39;pots&#39;</span><span class="p">,</span> <span class="s1">&#39;stop&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>is_reverse(&#39;pots&#39;, &#39;stop&#39;)
 </pre></div>
 </div>
 </div>
@@ -1608,25 +1608,25 @@ annoying and inconvenient.</p>
 <p>Adding a print statement when we enter the loop to see the values of <code class="docutils literal notranslate"><span class="pre">i</span></code> and <code class="docutils literal notranslate"><span class="pre">j</span></code> gives insight in what we did wrong.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_reverse</span><span class="p">(</span><span class="n">word1</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">word2</span> <span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;check whether the first argument is a reverse of the second argument</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word2</span><span class="p">):</span>
-        <span class="k">return</span> <span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def is_reverse(word1 : str, word2 :str) -&gt; bool:
+    &quot;&quot;&quot;check whether the first argument is a reverse of the second argument
+    &quot;&quot;&quot;
+    if len(word1) != len(word2):
+        return False
     
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">j</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word2</span><span class="p">)</span>
+    i = 0
+    j = len(word2)
     
-    <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">word1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">word2</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+    while (j &gt; 0):
+        print(i, j)
+        if word1[i] != word2[j]:
+            return False
+        i += 1
+        j -= 1
         
-    <span class="k">return</span> <span class="kc">True</span>
+    return True
 
-<span class="n">is_reverse</span><span class="p">(</span><span class="s1">&#39;stop&#39;</span><span class="p">,</span> <span class="s1">&#39;pots&#39;</span><span class="p">)</span>
+is_reverse(&#39;stop&#39;, &#39;pots&#39;)
 </pre></div>
 </div>
 </div>
@@ -1634,32 +1634,32 @@ annoying and inconvenient.</p>
 <p>We did not initialized the variable <code class="docutils literal notranslate"><span class="pre">j</span></code> in a correct way.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_reverse</span><span class="p">(</span><span class="n">word1</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">word2</span> <span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;check whether the first argument is a reverse of the second argument</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">word1</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word2</span><span class="p">):</span>
-        <span class="k">return</span> <span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def is_reverse(word1 : str, word2 :str) -&gt; bool:
+    &quot;&quot;&quot;check whether the first argument is a reverse of the second argument
+    &quot;&quot;&quot;
+    if len(word1) != len(word2):
+        return False
     
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">j</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">word2</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
+    i = 0
+    j = len(word2) - 1
     
-    <span class="k">while</span> <span class="p">(</span><span class="n">j</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">word1</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">word2</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-            <span class="k">return</span> <span class="kc">False</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="n">j</span> <span class="o">-=</span> <span class="mi">1</span>
+    while (j &gt;= 0):
+        print(i, j)
+        if word1[i] != word2[j]:
+            return False
+        i += 1
+        j -= 1
         
-    <span class="k">return</span> <span class="kc">True</span>
+    return True
 
-<span class="n">is_reverse</span><span class="p">(</span><span class="s1">&#39;stop&#39;</span><span class="p">,</span> <span class="s1">&#39;pots&#39;</span><span class="p">)</span>
+is_reverse(&#39;stop&#39;, &#39;pots&#39;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">is_reverse</span><span class="p">(</span><span class="s1">&#39;stop&#39;</span><span class="p">,</span> <span class="s1">&#39;lots&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>is_reverse(&#39;stop&#39;, &#39;lots&#39;)
 </pre></div>
 </div>
 </div>

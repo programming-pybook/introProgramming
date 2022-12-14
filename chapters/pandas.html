@@ -725,7 +725,7 @@ title="Print to PDF"
 <h1>Pandas DataFrames <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#pandas-dataframes" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
 </pre></div>
 </div>
 </div>
@@ -736,14 +736,14 @@ title="Print to PDF"
 <p>To start using NumPy you need to add the following code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
@@ -759,42 +759,42 @@ title="Print to PDF"
 <p>A <code class="docutils literal notranslate"><span class="pre">Series</span></code> object can be created out from a sequence of values, a dictionary, or an array as follows. (The type of the items in the array–<code class="docutils literal notranslate"><span class="pre">dtype</span></code>–are printed after the <code class="docutils literal notranslate"><span class="pre">Series</span></code> object is printed.)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Series object out from a Python sequence</span>
-<span class="n">vowels</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">])</span>
-<span class="n">vowels</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create a Series object out from a Python sequence
+vowels: pd.Series = pd.Series([&#39;a&#39;, &#39;e&#39;, &#39;i&#39;, &#39;o&#39;, &#39;u&#39;])
+vowels
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Series object out from a Python dictionary</span>
-<span class="n">municipalities</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;drenthe&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-    <span class="s1">&#39;flevoland&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
-    <span class="s1">&#39;friesland&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
-    <span class="s1">&#39;gelderland&#39;</span><span class="p">:</span> <span class="mi">51</span><span class="p">,</span>
-    <span class="s1">&#39;groningen&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-    <span class="s1">&#39;limburg&#39;</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span>
-    <span class="s1">&#39;noord-brabant&#39;</span><span class="p">:</span> <span class="mi">61</span><span class="p">,</span>
-    <span class="s1">&#39;noord-holland&#39;</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span>
-    <span class="s1">&#39;overijssel&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
-    <span class="s1">&#39;zuid-holland&#39;</span><span class="p">:</span> <span class="mi">52</span><span class="p">,</span>
-    <span class="s1">&#39;utrecht&#39;</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
-    <span class="s1">&#39;zeeland&#39;</span><span class="p">:</span> <span class="mi">13</span>
-<span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create a Series object out from a Python dictionary
+municipalities: dict = {
+    &#39;drenthe&#39;: 12,
+    &#39;flevoland&#39;: 6,
+    &#39;friesland&#39;: 18,
+    &#39;gelderland&#39;: 51,
+    &#39;groningen&#39;: 10,
+    &#39;limburg&#39;: 31,
+    &#39;noord-brabant&#39;: 61,
+    &#39;noord-holland&#39;: 47,
+    &#39;overijssel&#39;: 25,
+    &#39;zuid-holland&#39;: 52,
+    &#39;utrecht&#39;: 26,
+    &#39;zeeland&#39;: 13
+}
 
-<span class="n">provinces</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">municipalities</span><span class="p">)</span>
-<span class="n">provinces</span>
+provinces: pd.Series = pd.Series(municipalities)
+provinces
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Series object out from a NumPy array</span>
-<span class="n">rand</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
-<span class="n">rand</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create a Series object out from a NumPy array
+rand: pd.Series = pd.Series(np.random.random(8))
+rand
 </pre></div>
 </div>
 </div>
@@ -803,16 +803,16 @@ title="Print to PDF"
 <p>To access the values of the <code class="docutils literal notranslate"><span class="pre">Series</span></code> we can use the <code class="docutils literal notranslate"><span class="pre">values</span></code> attribute, and the <code class="docutils literal notranslate"><span class="pre">index</span></code> attribute to access the index array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access only the values of the Series object</span>
-<span class="n">vowels</span><span class="o">.</span><span class="n">values</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Access only the values of the Series object
+vowels.values
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access the index array of the Series object</span>
-<span class="n">vowels</span><span class="o">.</span><span class="n">index</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Access the index array of the Series object
+vowels.index
 </pre></div>
 </div>
 </div>
@@ -820,7 +820,7 @@ title="Print to PDF"
 <p>Notice that the values of the <code class="docutils literal notranslate"><span class="pre">Series</span></code> object is a NumPy array!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">vowels</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>type(vowels.values)
 </pre></div>
 </div>
 </div>
@@ -828,7 +828,7 @@ title="Print to PDF"
 <p>However, this is not the case with the index array. This value is in fact an object of the Pandas <code class="docutils literal notranslate"><span class="pre">Index</span></code> type.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">vowels</span><span class="o">.</span><span class="n">index</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>type(vowels.index)
 </pre></div>
 </div>
 </div>
@@ -836,16 +836,16 @@ title="Print to PDF"
 <p>Moreover, to access specific items in the <code class="docutils literal notranslate"><span class="pre">Series</span></code> object or to slice it, you can proceed just as we do with NumPy arrays or Python lists.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Extract the 2nd item of the Series</span>
-<span class="n">vowels</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Extract the 2nd item of the Series
+vowels[2]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Slice the Series object</span>
-<span class="n">vowels</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Slice the Series object
+vowels[1:3]
 </pre></div>
 </div>
 </div>
@@ -854,8 +854,8 @@ title="Print to PDF"
 <p>Let us have a look at the creation of another <code class="docutils literal notranslate"><span class="pre">Series</span></code> object with a string index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linear</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">])</span>
-<span class="n">linear</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>linear: pd.Series = pd.Series(np.linspace(0, 1, 5), index=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;])
+linear
 </pre></div>
 </div>
 </div>
@@ -863,7 +863,7 @@ title="Print to PDF"
 <p>Notice that we use the <code class="docutils literal notranslate"><span class="pre">index</span></code> keyword to pass the sequence representing the index of the object. If you want to access the value <code class="docutils literal notranslate"><span class="pre">0.75</span></code>, you can refer to the corresponding index <code class="docutils literal notranslate"><span class="pre">d</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linear</span><span class="p">[</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>linear[&#39;d&#39;]
 </pre></div>
 </div>
 </div>
@@ -871,7 +871,7 @@ title="Print to PDF"
 <p>You can also apply slicing to indices that are not integers. For instance, in the following cell, we want all the items that are in between <code class="docutils literal notranslate"><span class="pre">'b'</span></code> and <code class="docutils literal notranslate"><span class="pre">'d'</span></code>. In this case, Pandas will return all the observations that appear in-between–given the order of the observations.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linear</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="s1">&#39;d&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>linear[&#39;b&#39;:&#39;d&#39;]
 </pre></div>
 </div>
 </div>
@@ -882,21 +882,21 @@ title="Print to PDF"
 <p>A <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object is the equivalent of a two-dimensional array or a matrix with flexible column names and row indices. you can think of it as a sequence of <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects (each one representing a column) that share the same index array. Let us have a look at this last property. To do so, we will consider the <code class="docutils literal notranslate"><span class="pre">municipalities</span></code> dictionary representing the number of municipalities per Dutch province presented in the previous section.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">municipalities</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;drenthe&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-    <span class="s1">&#39;flevoland&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
-    <span class="s1">&#39;friesland&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
-    <span class="s1">&#39;gelderland&#39;</span><span class="p">:</span> <span class="mi">51</span><span class="p">,</span>
-    <span class="s1">&#39;groningen&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-    <span class="s1">&#39;limburg&#39;</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span>
-    <span class="s1">&#39;noord-brabant&#39;</span><span class="p">:</span> <span class="mi">61</span><span class="p">,</span>
-    <span class="s1">&#39;noord-holland&#39;</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span>
-    <span class="s1">&#39;overijssel&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
-    <span class="s1">&#39;zuid-holland&#39;</span><span class="p">:</span> <span class="mi">52</span><span class="p">,</span>
-    <span class="s1">&#39;utrecht&#39;</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
-    <span class="s1">&#39;zeeland&#39;</span><span class="p">:</span> <span class="mi">13</span>
-<span class="p">}</span>
-<span class="n">municipalities</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>municipalities: dict = {
+    &#39;drenthe&#39;: 12,
+    &#39;flevoland&#39;: 6,
+    &#39;friesland&#39;: 18,
+    &#39;gelderland&#39;: 51,
+    &#39;groningen&#39;: 10,
+    &#39;limburg&#39;: 31,
+    &#39;noord-brabant&#39;: 61,
+    &#39;noord-holland&#39;: 47,
+    &#39;overijssel&#39;: 25,
+    &#39;zuid-holland&#39;: 52,
+    &#39;utrecht&#39;: 26,
+    &#39;zeeland&#39;: 13
+}
+municipalities
 </pre></div>
 </div>
 </div>
@@ -904,21 +904,21 @@ title="Print to PDF"
 <p>We will also create the <code class="docutils literal notranslate"><span class="pre">area</span></code> dictionary containing the total area of each province. Notice that both dictionaries share the same keys (the names of the 13 Dutch provinces).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">area</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;drenthe&#39;</span><span class="p">:</span> <span class="mi">2680</span><span class="p">,</span>
-    <span class="s1">&#39;flevoland&#39;</span><span class="p">:</span> <span class="mi">2412</span><span class="p">,</span>
-    <span class="s1">&#39;friesland&#39;</span><span class="p">:</span> <span class="mi">5749</span><span class="p">,</span>
-    <span class="s1">&#39;gelderland&#39;</span><span class="p">:</span> <span class="mi">5136</span><span class="p">,</span>
-    <span class="s1">&#39;groningen&#39;</span><span class="p">:</span> <span class="mi">2960</span><span class="p">,</span>
-    <span class="s1">&#39;limburg&#39;</span><span class="p">:</span> <span class="mi">2210</span><span class="p">,</span>
-    <span class="s1">&#39;noord-brabant&#39;</span><span class="p">:</span> <span class="mi">5082</span><span class="p">,</span>
-    <span class="s1">&#39;noord-holland&#39;</span><span class="p">:</span> <span class="mi">4092</span><span class="p">,</span>
-    <span class="s1">&#39;overijssel&#39;</span><span class="p">:</span> <span class="mi">3421</span><span class="p">,</span>
-    <span class="s1">&#39;zuid-holland&#39;</span><span class="p">:</span> <span class="mi">3308</span><span class="p">,</span>
-    <span class="s1">&#39;utrecht&#39;</span><span class="p">:</span> <span class="mi">1560</span><span class="p">,</span>
-    <span class="s1">&#39;zeeland&#39;</span><span class="p">:</span> <span class="mi">2933</span>
-<span class="p">}</span>
-<span class="n">area</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>area: dict = {
+    &#39;drenthe&#39;: 2680,
+    &#39;flevoland&#39;: 2412,
+    &#39;friesland&#39;: 5749,
+    &#39;gelderland&#39;: 5136,
+    &#39;groningen&#39;: 2960,
+    &#39;limburg&#39;: 2210,
+    &#39;noord-brabant&#39;: 5082,
+    &#39;noord-holland&#39;: 4092,
+    &#39;overijssel&#39;: 3421,
+    &#39;zuid-holland&#39;: 3308,
+    &#39;utrecht&#39;: 1560,
+    &#39;zeeland&#39;: 2933
+}
+area
 </pre></div>
 </div>
 </div>
@@ -926,18 +926,18 @@ title="Print to PDF"
 <p>Now, we will create two <code class="docutils literal notranslate"><span class="pre">Series</span></code> out of these dictionaries.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Series out from the municipalities dictionary</span>
-<span class="n">municipalities_series</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">municipalities</span><span class="p">)</span>
-<span class="n">municipalities_series</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create a Series out from the municipalities dictionary
+municipalities_series: pd.Series = pd.Series(municipalities)
+municipalities_series
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Series out from the area dictionary</span>
-<span class="n">area_series</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
-<span class="n">area_series</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create a Series out from the area dictionary
+area_series: pd.Series = pd.Series(area)
+area_series
 </pre></div>
 </div>
 </div>
@@ -945,13 +945,13 @@ title="Print to PDF"
 <p>Finally, to create our data frame, we will use the type constructor and we will pass a dictionary whose keys are the names of the matrix columns, and its values point to the two <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects <code class="docutils literal notranslate"><span class="pre">municipalities_series</span></code> and <code class="docutils literal notranslate"><span class="pre">area_series</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;municipalities&#39;</span><span class="p">:</span> <span class="n">municipalities_series</span><span class="p">,</span> 
-    <span class="s1">&#39;area&#39;</span><span class="p">:</span> <span class="n">area_series</span>
-<span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>data: dict = {
+    &#39;municipalities&#39;: municipalities_series, 
+    &#39;area&#39;: area_series
+}
     
-<span class="n">provinces</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-<span class="n">provinces</span>
+provinces: pd.DataFrame = pd.DataFrame(data)
+provinces
 </pre></div>
 </div>
 </div>
@@ -959,7 +959,7 @@ title="Print to PDF"
 <p>Just as with the <code class="docutils literal notranslate"><span class="pre">Series</span></code> objects, you can access the data frame index via the <code class="docutils literal notranslate"><span class="pre">index</span></code> attribute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">provinces</span><span class="o">.</span><span class="n">index</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>provinces.index
 </pre></div>
 </div>
 </div>
@@ -967,7 +967,7 @@ title="Print to PDF"
 <p>But also the columns of the data frame via the <code class="docutils literal notranslate"><span class="pre">columns</span></code> attribute.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">provinces</span><span class="o">.</span><span class="n">columns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>provinces.columns
 </pre></div>
 </div>
 </div>
@@ -981,32 +981,32 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">municipalities</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;drenthe&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-    <span class="s1">&#39;flevoland&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
-    <span class="s1">&#39;friesland&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
-    <span class="s1">&#39;gelderland&#39;</span><span class="p">:</span> <span class="mi">51</span><span class="p">,</span>
-    <span class="s1">&#39;groningen&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-    <span class="s1">&#39;limburg&#39;</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span>
-    <span class="s1">&#39;noord-brabant&#39;</span><span class="p">:</span> <span class="mi">61</span><span class="p">,</span>
-    <span class="s1">&#39;noord-holland&#39;</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span>
-    <span class="s1">&#39;overijssel&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
-    <span class="s1">&#39;zuid-holland&#39;</span><span class="p">:</span> <span class="mi">52</span><span class="p">,</span>
-    <span class="s1">&#39;utrecht&#39;</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
-    <span class="s1">&#39;zeeland&#39;</span><span class="p">:</span> <span class="mi">13</span>
-<span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>municipalities: dict = {
+    &#39;drenthe&#39;: 12,
+    &#39;flevoland&#39;: 6,
+    &#39;friesland&#39;: 18,
+    &#39;gelderland&#39;: 51,
+    &#39;groningen&#39;: 10,
+    &#39;limburg&#39;: 31,
+    &#39;noord-brabant&#39;: 61,
+    &#39;noord-holland&#39;: 47,
+    &#39;overijssel&#39;: 25,
+    &#39;zuid-holland&#39;: 52,
+    &#39;utrecht&#39;: 26,
+    &#39;zeeland&#39;: 13
+}
     
-<span class="c1"># Create a Series out from the municipalities dictionary</span>
-<span class="n">municipalities_series</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">municipalities</span><span class="p">)</span>
-<span class="n">municipalities_series</span>
+# Create a Series out from the municipalities dictionary
+municipalities_series: pd.Series = pd.Series(municipalities)
+municipalities_series
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create the DataFrame object out from the municipalities_series</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">municipalities_series</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;municipalities&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create the DataFrame object out from the municipalities_series
+pd.DataFrame(municipalities_series, columns=[&#39;municipalities&#39;])
 </pre></div>
 </div>
 </div>
@@ -1016,13 +1016,13 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="k">as</span> <span class="nn">rd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import random as rd
 
-<span class="n">dict1</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="n">rd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="n">rd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="n">rd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)}</span>
-<span class="n">dict2</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="n">rd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="n">rd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)}</span>
-<span class="n">dict3</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="n">rd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="n">rd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)}</span>
+dict1: dict = {&#39;a&#39;: rd.randint(0, 100), &#39;b&#39;: rd.randint(0, 100), &#39;c&#39;: rd.randint(0, 100)}
+dict2: dict = {&#39;b&#39;: rd.randint(0, 100), &#39;c&#39;: rd.randint(0, 100)}
+dict3: dict = {&#39;a&#39;: rd.randint(0, 100), &#39;b&#39;: rd.randint(0, 100)}
     
-<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">dict1</span><span class="p">,</span> <span class="n">dict2</span><span class="p">,</span> <span class="n">dict3</span><span class="p">])</span>
+pd.DataFrame([dict1, dict2, dict3])
 </pre></div>
 </div>
 </div>
@@ -1032,15 +1032,15 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> <span class="k">as</span> <span class="nn">rd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import random as rd
 
-<span class="n">values_10</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="n">rd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">])</span>
-<span class="n">values_100</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="n">rd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">])</span>
-<span class="n">values_1000</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="n">rd</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1000</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">])</span>
+values_10: pd.Series = pd.Series([rd.randint(0, 10) for _ in range(5)], index=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;])
+values_100: pd.Series = pd.Series([rd.randint(0, 100) for _ in range(5)], index=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;])
+values_1000: pd.Series = pd.Series([rd.randint(0, 1000) for _ in range(5)], index=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;])
 
-<span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;values_10&#39;</span><span class="p">:</span> <span class="n">values_10</span><span class="p">,</span> 
-              <span class="s1">&#39;values_100&#39;</span><span class="p">:</span> <span class="n">values_100</span><span class="p">,</span>
-              <span class="s1">&#39;values_1000&#39;</span><span class="p">:</span> <span class="n">values_1000</span><span class="p">})</span>
+pd.DataFrame({&#39;values_10&#39;: values_10, 
+              &#39;values_100&#39;: values_100,
+              &#39;values_1000&#39;: values_1000})
 </pre></div>
 </div>
 </div>
@@ -1050,9 +1050,9 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
-            <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;apples&#39;</span><span class="p">,</span> <span class="s1">&#39;bananas&#39;</span><span class="p">,</span> <span class="s1">&#39;pears&#39;</span><span class="p">],</span>
-            <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pd.DataFrame(np.random.randint(0, 100, (4, 3)),
+            columns=[&#39;apples&#39;, &#39;bananas&#39;, &#39;pears&#39;],
+            index=[&#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;])
 </pre></div>
 </div>
 </div>
@@ -1065,8 +1065,8 @@ title="Print to PDF"
 <p>Additionally, you can create your own <code class="docutils literal notranslate"><span class="pre">Index</span></code> object without creating a <code class="docutils literal notranslate"><span class="pre">Series</span></code> or <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object first. To do so, you can pass a sequence of values as the argument of the initializer method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ind</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
-<span class="n">ind</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ind: pd.Index = pd.Index([1, 3, 5, 7, 9])
+ind
 </pre></div>
 </div>
 </div>
@@ -1074,16 +1074,16 @@ title="Print to PDF"
 <p>You can use Python lists indexing and slicing capabilities to interact with the <code class="docutils literal notranslate"><span class="pre">Index</span></code> object values.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access index located at the 2nd position</span>
-<span class="n">ind</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Access index located at the 2nd position
+ind[2]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Slice the array: every two steps take an element starting from position 1</span>
-<span class="n">ind</span><span class="p">[</span><span class="mi">1</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Slice the array: every two steps take an element starting from position 1
+ind[1::2]
 </pre></div>
 </div>
 </div>
@@ -1091,7 +1091,7 @@ title="Print to PDF"
 <p>However, if you try to modify an element within the array you will get an error–recall that <code class="docutils literal notranslate"><span class="pre">Index</span></code> objects are immutable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ind</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ind[3] = 100
 </pre></div>
 </div>
 </div>
@@ -1099,32 +1099,32 @@ title="Print to PDF"
 <p><code class="docutils literal notranslate"><span class="pre">Index</span></code> objects count with attributes similar to the ones offered by NumPy arrays such as <code class="docutils literal notranslate"><span class="pre">size</span></code>, <code class="docutils literal notranslate"><span class="pre">shape</span></code>, <code class="docutils literal notranslate"><span class="pre">ndim</span></code>, and <code class="docutils literal notranslate"><span class="pre">dtype</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the Index object size</span>
-<span class="n">ind</span><span class="o">.</span><span class="n">size</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get the Index object size
+ind.size
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the Index object shape</span>
-<span class="n">ind</span><span class="o">.</span><span class="n">shape</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get the Index object shape
+ind.shape
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the Index object ndim (number of dimensions)</span>
-<span class="n">ind</span><span class="o">.</span><span class="n">ndim</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get the Index object ndim (number of dimensions)
+ind.ndim
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the Index object dtype (data type)</span>
-<span class="n">ind</span><span class="o">.</span><span class="n">dtype</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get the Index object dtype (data type)
+ind.dtype
 </pre></div>
 </div>
 </div>
@@ -1138,25 +1138,25 @@ title="Print to PDF"
 Let us create again a <code class="docutils literal notranslate"><span class="pre">Series</span></code> object with random numbers (from 0 to 1).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Series object with random numbers</span>
-<span class="n">rand</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">8</span><span class="p">))</span>
-<span class="n">rand</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create a Series object with random numbers
+rand: pd.Series = pd.Series(np.random.random(8))
+rand
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Slice the Series object: every two steps take an element starting from index 1 and ending at index 6</span>
-<span class="n">rand</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">6</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Slice the Series object: every two steps take an element starting from index 1 and ending at index 6
+rand[1:6:2]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Alternative to the previous code using a negative index</span>
-<span class="n">rand</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Alternative to the previous code using a negative index
+rand[1:-1:2]
 </pre></div>
 </div>
 </div>
@@ -1164,25 +1164,25 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>Let us recall how it works when dealing with non-integer indices.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Series object with random numbers</span>
-<span class="n">rand</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">(</span><span class="mi">5</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="s1">&#39;d&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">])</span>
-<span class="n">rand</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create a Series object with random numbers
+rand: pd.Series = pd.Series(np.random.random(5), index=[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;, &#39;e&#39;])
+rand
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get all items between &#39;b&#39; and &#39;e&#39;</span>
-<span class="n">rand</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="s1">&#39;e&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get all items between &#39;b&#39; and &#39;e&#39;
+rand[&#39;b&#39;:&#39;e&#39;]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Same as the previous cell but with the step value</span>
-<span class="n">rand</span><span class="p">[</span><span class="s1">&#39;b&#39;</span><span class="p">:</span><span class="s1">&#39;e&#39;</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Same as the previous cell but with the step value
+rand[&#39;b&#39;:&#39;e&#39;:2]
 </pre></div>
 </div>
 </div>
@@ -1191,8 +1191,8 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>We can also mask our data in the same way we did with NumPy.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Take all the values that are greater than 0.25 and smaller than 0.75</span>
-<span class="n">rand</span><span class="p">[(</span><span class="n">rand</span> <span class="o">&gt;</span> <span class="mf">0.25</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">rand</span> <span class="o">&lt;</span> <span class="mf">0.75</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Take all the values that are greater than 0.25 and smaller than 0.75
+rand[(rand &gt; 0.25) &amp; (rand &lt; 0.75)]
 </pre></div>
 </div>
 </div>
@@ -1200,8 +1200,8 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>The use of explicit and implicit integer indices can cause additional confusion. Let us have a look at the following example. We create the <code class="docutils literal notranslate"><span class="pre">linear</span></code> <code class="docutils literal notranslate"><span class="pre">Series</span></code> object, this time with an explicit integer index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linear</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">])</span>
-<span class="n">linear</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>linear: pd.Series = pd.Series(np.linspace(0, 1, 5), index=[1, 3, 5, 7, 9])
+linear
 </pre></div>
 </div>
 </div>
@@ -1209,7 +1209,7 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>What value will the following expression yield: <code class="docutils literal notranslate"><span class="pre">linear[1]</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linear</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>linear[1]
 </pre></div>
 </div>
 </div>
@@ -1217,7 +1217,7 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>Instead of displaying the value at <em>implicit</em> index 1 (counting from 0 to 4), it will display the value at <em>explicit</em> index 1 (for the index array <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">3,</span> <span class="pre">5,</span> <span class="pre">7,</span> <span class="pre">9]</span></code>). But what will it happen if we try the next slicing expression: <code class="docutils literal notranslate"><span class="pre">linear[1:3]</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">linear</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>linear[1:3]
 </pre></div>
 </div>
 </div>
@@ -1230,32 +1230,32 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Indexing with loc</span>
-<span class="n">linear</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Indexing with loc
+linear.loc[1]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Slicing with loc</span>
-<span class="n">linear</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Slicing with loc
+linear.loc[1:3]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Indexing with loc</span>
-<span class="n">linear</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Indexing with loc
+linear.iloc[1]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Slicing with loc</span>
-<span class="n">linear</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Slicing with loc
+linear.iloc[1:3]
 </pre></div>
 </div>
 </div>
@@ -1267,57 +1267,57 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>When selecting data from a <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object, we can follow the dictionary-style indexing that indexes based on the column name. This type of indexing will retrieve the whole column in the form of a <code class="docutils literal notranslate"><span class="pre">Series</span></code> object. To see it, let us go back to the Dutch <code class="docutils literal notranslate"><span class="pre">provinces</span></code> data frame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the data as dictionaries</span>
-<span class="n">municipalities</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;drenthe&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
-    <span class="s1">&#39;flevoland&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
-    <span class="s1">&#39;friesland&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
-    <span class="s1">&#39;gelderland&#39;</span><span class="p">:</span> <span class="mi">51</span><span class="p">,</span>
-    <span class="s1">&#39;groningen&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-    <span class="s1">&#39;limburg&#39;</span><span class="p">:</span> <span class="mi">31</span><span class="p">,</span>
-    <span class="s1">&#39;noord-brabant&#39;</span><span class="p">:</span> <span class="mi">61</span><span class="p">,</span>
-    <span class="s1">&#39;noord-holland&#39;</span><span class="p">:</span> <span class="mi">47</span><span class="p">,</span>
-    <span class="s1">&#39;overijssel&#39;</span><span class="p">:</span> <span class="mi">25</span><span class="p">,</span>
-    <span class="s1">&#39;zuid-holland&#39;</span><span class="p">:</span> <span class="mi">52</span><span class="p">,</span>
-    <span class="s1">&#39;utrecht&#39;</span><span class="p">:</span> <span class="mi">26</span><span class="p">,</span>
-    <span class="s1">&#39;zeeland&#39;</span><span class="p">:</span> <span class="mi">13</span>
-<span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get the data as dictionaries
+municipalities: dict = {
+    &#39;drenthe&#39;: 12,
+    &#39;flevoland&#39;: 6,
+    &#39;friesland&#39;: 18,
+    &#39;gelderland&#39;: 51,
+    &#39;groningen&#39;: 10,
+    &#39;limburg&#39;: 31,
+    &#39;noord-brabant&#39;: 61,
+    &#39;noord-holland&#39;: 47,
+    &#39;overijssel&#39;: 25,
+    &#39;zuid-holland&#39;: 52,
+    &#39;utrecht&#39;: 26,
+    &#39;zeeland&#39;: 13
+}
     
-<span class="n">area</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="s1">&#39;drenthe&#39;</span><span class="p">:</span> <span class="mi">2680</span><span class="p">,</span>
-    <span class="s1">&#39;flevoland&#39;</span><span class="p">:</span> <span class="mi">2412</span><span class="p">,</span>
-    <span class="s1">&#39;friesland&#39;</span><span class="p">:</span> <span class="mi">5749</span><span class="p">,</span>
-    <span class="s1">&#39;gelderland&#39;</span><span class="p">:</span> <span class="mi">5136</span><span class="p">,</span>
-    <span class="s1">&#39;groningen&#39;</span><span class="p">:</span> <span class="mi">2960</span><span class="p">,</span>
-    <span class="s1">&#39;limburg&#39;</span><span class="p">:</span> <span class="mi">2210</span><span class="p">,</span>
-    <span class="s1">&#39;noord-brabant&#39;</span><span class="p">:</span> <span class="mi">5082</span><span class="p">,</span>
-    <span class="s1">&#39;noord-holland&#39;</span><span class="p">:</span> <span class="mi">4092</span><span class="p">,</span>
-    <span class="s1">&#39;overijssel&#39;</span><span class="p">:</span> <span class="mi">3421</span><span class="p">,</span>
-    <span class="s1">&#39;zuid-holland&#39;</span><span class="p">:</span> <span class="mi">3308</span><span class="p">,</span>
-    <span class="s1">&#39;utrecht&#39;</span><span class="p">:</span> <span class="mi">1560</span><span class="p">,</span>
-    <span class="s1">&#39;zeeland&#39;</span><span class="p">:</span> <span class="mi">2933</span>
-<span class="p">}</span>
+area: dict = {
+    &#39;drenthe&#39;: 2680,
+    &#39;flevoland&#39;: 2412,
+    &#39;friesland&#39;: 5749,
+    &#39;gelderland&#39;: 5136,
+    &#39;groningen&#39;: 2960,
+    &#39;limburg&#39;: 2210,
+    &#39;noord-brabant&#39;: 5082,
+    &#39;noord-holland&#39;: 4092,
+    &#39;overijssel&#39;: 3421,
+    &#39;zuid-holland&#39;: 3308,
+    &#39;utrecht&#39;: 1560,
+    &#39;zeeland&#39;: 2933
+}
 
-<span class="c1"># Create the Series objects out from the dictionaries</span>
-<span class="n">municipalities_series</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">municipalities</span><span class="p">)</span>
-<span class="n">area_series</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">area</span><span class="p">)</span>
+# Create the Series objects out from the dictionaries
+municipalities_series: pd.Series = pd.Series(municipalities)
+area_series: pd.Series = pd.Series(area)
     
-<span class="c1"># Create the Pandas DataFrame object</span>
-<span class="n">provinces</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
-    <span class="s1">&#39;municipalities&#39;</span><span class="p">:</span> <span class="n">municipalities_series</span><span class="p">,</span> 
-    <span class="s1">&#39;area&#39;</span><span class="p">:</span> <span class="n">area_series</span>
-<span class="p">})</span>
-<span class="n">provinces</span>
+# Create the Pandas DataFrame object
+provinces: pd.DataFrame = pd.DataFrame({
+    &#39;municipalities&#39;: municipalities_series, 
+    &#39;area&#39;: area_series
+})
+provinces
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Indexing of the area column in a dictionary-style manner</span>
-<span class="n">area_s</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">provinces</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">area_s</span><span class="p">))</span>
-<span class="n">area_s</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Indexing of the area column in a dictionary-style manner
+area_s: pd.Series = provinces[&#39;area&#39;]
+print(type(area_s))
+area_s
 </pre></div>
 </div>
 </div>
@@ -1329,10 +1329,10 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Indexing of the area column in an attribute-style manner</span>
-<span class="n">area_s</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span> <span class="o">=</span> <span class="n">provinces</span><span class="o">.</span><span class="n">area</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">area_s</span><span class="p">))</span>
-<span class="n">area_s</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Indexing of the area column in an attribute-style manner
+area_s: pd.Series = provinces.area
+print(type(area_s))
+area_s
 </pre></div>
 </div>
 </div>
@@ -1340,8 +1340,8 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>You can also use indexing to create new columns in your data frame. For instance, let us imagine that we can know the area per municipality if you split equally the total province area by the number of its municipalities.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">provinces</span><span class="p">[</span><span class="s1">&#39;area_municipality&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">provinces</span><span class="p">[</span><span class="s1">&#39;area&#39;</span><span class="p">]</span> <span class="o">/</span> <span class="n">provinces</span><span class="p">[</span><span class="s1">&#39;municipalities&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">provinces</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>provinces[&#39;area_municipality&#39;] = round(provinces[&#39;area&#39;] / provinces[&#39;municipalities&#39;], 2)
+provinces
 </pre></div>
 </div>
 </div>
@@ -1350,7 +1350,7 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>We can also use the <code class="docutils literal notranslate"><span class="pre">values</span></code> attribute to access the raw data of the data frame.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">provinces</span><span class="o">.</span><span class="n">values</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>provinces.values
 </pre></div>
 </div>
 </div>
@@ -1358,7 +1358,7 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>But what happens if we type <code class="docutils literal notranslate"><span class="pre">provinces.values[0]</span></code>? Will we get the first <em>column</em> or the first <em>row</em> of the data frame?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">provinces</span><span class="o">.</span><span class="n">values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>provinces.values[0]
 </pre></div>
 </div>
 </div>
@@ -1366,7 +1366,7 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>In that line of thought, what is the output of the expression <code class="docutils literal notranslate"><span class="pre">provinces['zeeland']</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">provinces</span><span class="p">[</span><span class="s1">&#39;zeeland&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>provinces[&#39;zeeland&#39;]
 </pre></div>
 </div>
 </div>
@@ -1374,32 +1374,32 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>We get a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code>! When using the <code class="docutils literal notranslate"><span class="pre">values</span></code> attribute we get the first row, while when using dictionary-style indexing we consider columns. This gives birth to potential confusion. Fortunately, Pandas already offered us the <code class="docutils literal notranslate"><span class="pre">loc</span></code>, <code class="docutils literal notranslate"><span class="pre">iloc</span></code>, and <code class="docutils literal notranslate"><span class="pre">ix</span></code> indexers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get all rows between &#39;groningen&#39; and &#39;utrecht&#39; + all columns</span>
-<span class="n">provinces</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;groningen&#39;</span><span class="p">:</span><span class="s1">&#39;utrecht&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get all rows between &#39;groningen&#39; and &#39;utrecht&#39; + all columns
+provinces.loc[&#39;groningen&#39;:&#39;utrecht&#39;]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get all rows between &#39;groningen&#39; and &#39;utrecht&#39; + all columns unntil &#39;area&#39;</span>
-<span class="n">provinces</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;groningen&#39;</span><span class="p">:</span><span class="s1">&#39;utrecht&#39;</span><span class="p">,</span> <span class="p">:</span><span class="s1">&#39;area&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get all rows between &#39;groningen&#39; and &#39;utrecht&#39; + all columns unntil &#39;area&#39;
+provinces.loc[&#39;groningen&#39;:&#39;utrecht&#39;, :&#39;area&#39;]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get all rows between indices 4 and 10 + all columns</span>
-<span class="n">provinces</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">10</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get all rows between indices 4 and 10 + all columns
+provinces.iloc[4:10]
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get all rows between indices 1 and 10 + all columns between indices 0 and 2</span>
-<span class="n">provinces</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">10</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get all rows between indices 1 and 10 + all columns between indices 0 and 2
+provinces.iloc[4:10, :2]
 </pre></div>
 </div>
 </div>
@@ -1407,8 +1407,8 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>We can also use the <code class="docutils literal notranslate"><span class="pre">loc</span></code> indexer to apply data masking to our <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code> object as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get all cases where the number of municipalities is greater than 50</span>
-<span class="n">provinces</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">provinces</span><span class="p">[</span><span class="s1">&#39;municipalities&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="mi">50</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Get all cases where the number of municipalities is greater than 50
+provinces.loc[provinces[&#39;municipalities&#39;] &gt; 50]
 </pre></div>
 </div>
 </div>
@@ -1416,16 +1416,16 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>Moreover, any of the previous conventions can be used to modify data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">provinces</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>provinces
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Swap the municipalities values between drenthe (iloc[0, 0]) and zeeland (iloc[12, 0])</span>
-<span class="n">provinces</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">provinces</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">provinces</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">provinces</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">provinces</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">provinces</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>
-<span class="n">provinces</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Swap the municipalities values between drenthe (iloc[0, 0]) and zeeland (iloc[12, 0])
+provinces.iloc[0, 0], provinces.iloc[len(provinces) - 1, 0] = provinces.iloc[len(provinces) - 1, 0], provinces.iloc[0, 0]
+provinces
 </pre></div>
 </div>
 </div>
@@ -1433,9 +1433,9 @@ Let us create again a <code class="docutils literal notranslate"><span class="pr
 <p>The previous code written with the <code class="docutils literal notranslate"><span class="pre">iloc</span></code> indexer can be rewritten with the <code class="docutils literal notranslate"><span class="pre">loc</span></code> indexer as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Swap the municipalities values between drenthe and zeeland</span>
-<span class="n">provinces</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;drenthe&#39;</span><span class="p">,</span> <span class="s1">&#39;municipalities&#39;</span><span class="p">],</span> <span class="n">provinces</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;zeeland&#39;</span><span class="p">,</span> <span class="s1">&#39;municipalities&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">provinces</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;zeeland&#39;</span><span class="p">,</span> <span class="s1">&#39;municipalities&#39;</span><span class="p">],</span> <span class="n">provinces</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="s1">&#39;drenthe&#39;</span><span class="p">,</span> <span class="s1">&#39;municipalities&#39;</span><span class="p">]</span>
-<span class="n">provinces</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Swap the municipalities values between drenthe and zeeland
+provinces.loc[&#39;drenthe&#39;, &#39;municipalities&#39;], provinces.loc[&#39;zeeland&#39;, &#39;municipalities&#39;] = provinces.loc[&#39;zeeland&#39;, &#39;municipalities&#39;], provinces.loc[&#39;drenthe&#39;, &#39;municipalities&#39;]
+provinces
 </pre></div>
 </div>
 </div>

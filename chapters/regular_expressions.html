@@ -656,21 +656,30 @@ The library is called <code class="docutils literal notranslate"><span class="pr
 Let us see an example.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file = open(&#39;datasets/mbox-short.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+for line in file:
+    line: str = line.rstrip()
+    print(line)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
 <span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py:282,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">282</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;datasets/mbox-short.txt&#39;
 </pre></div>
@@ -679,14 +688,14 @@ Let us see an example.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">re</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import re
 
-<span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+file = open(&#39;datasets/mbox-short.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;Author:&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+for line in file:
+    line: str = line.rstrip()
+    if re.search(&#39;Author:&#39;, line):
+        print(line)
 </pre></div>
 </div>
 </div>
@@ -729,13 +738,13 @@ the search string, which allows us to more precisely control which lines match t
 string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file = open(&#39;datasets/mbox-short.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+for line in file:
+    line: str = line.rstrip()
     
-    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^Author:&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    if re.search(&#39;^Author:&#39;, line):
+        print(line)
 </pre></div>
 </div>
 </div>
@@ -749,7 +758,7 @@ This is done thanks to the use of the caret character (<code class="docutils lit
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -762,13 +771,13 @@ For instance, the <strong>period</strong> or <strong>full stop</strong> characte
 <p>Let us now print all lines that start by <code class="docutils literal notranslate"><span class="pre">X-</span></code> followed by four characters and ending with <code class="docutils literal notranslate"><span class="pre">M</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file = open(&#39;datasets/mbox-short.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+for line in file:
+    line: str = line.rstrip()
     
-    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^X-....M&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    if re.search(&#39;^X-....M&#39;, line):
+        print(line)
 </pre></div>
 </div>
 </div>
@@ -781,13 +790,13 @@ A greedy match indicates that we match the longest possible string.</p>
 <p>Let’s now print all lines that start with <code class="docutils literal notranslate"><span class="pre">X-</span></code>, that are followed by one-or-more characters and that then have the <code class="docutils literal notranslate"><span class="pre">Result</span></code> word.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file = open(&#39;datasets/mbox-short.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+for line in file:
+    line: str = line.rstrip()
     
-    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^X-.+Result&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    if re.search(&#39;^X-.+Result&#39;, line):
+        print(line)
 </pre></div>
 </div>
 </div>
@@ -798,7 +807,7 @@ A greedy match indicates that we match the longest possible string.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -813,9 +822,9 @@ In this way, we do not need to write code for each type of line.</p>
 <p>Let us see a small example before we create the whole program.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Einstein einstein@uni.edu sent an email to Ada ada@otheruni.edu about life @10&#39;</span>
-<span class="n">emails</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;\S+@\S+&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">emails</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>line: str = &#39;Einstein einstein@uni.edu sent an email to Ada ada@otheruni.edu about life @10&#39;
+emails: list = re.findall(&#39;\S+@\S+&#39;, line)
+print(emails)
 </pre></div>
 </div>
 </div>
@@ -826,15 +835,15 @@ In this way, we do not need to write code for each type of line.</p>
 <p>Now, we are ready to create a program to gather all emails within the <code class="docutils literal notranslate"><span class="pre">mbox-short.txt</span></code> file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
-<span class="n">emails</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file = open(&#39;datasets/mbox-short.txt&#39;)
+emails: list = list()
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-    <span class="n">line_emails</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;\S+@\S+&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
-    <span class="n">emails</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">line_emails</span><span class="p">)</span>
+for line in file:
+    line: str = line.rstrip()
+    line_emails = re.findall(&#39;\S+@\S+&#39;, line)
+    emails.extend(line_emails)
     
-<span class="n">emails</span>
+emails
 </pre></div>
 </div>
 </div>
@@ -851,15 +860,15 @@ Thus, we will use <strong>square brackets</strong> to define the set of characte
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
-<span class="n">emails</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file = open(&#39;datasets/mbox-short.txt&#39;)
+emails: list = list()
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-    <span class="n">line_emails</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;[a-zA-Z0-9]\S*@[a-zA-Z.]+&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
-    <span class="n">emails</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">line_emails</span><span class="p">)</span>
+for line in file:
+    line: str = line.rstrip()
+    line_emails: list = re.findall(&#39;[a-zA-Z0-9]\S*@[a-zA-Z.]+&#39;, line)
+    emails.extend(line_emails)
     
-<span class="n">emails</span>
+emails
 </pre></div>
 </div>
 </div>
@@ -1210,7 +1219,7 @@ Thus, we will use <strong>square brackets</strong> to define the set of characte
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1229,15 +1238,15 @@ Thus, we will use <strong>square brackets</strong> to define the set of characte
 <p>Before extracting the numbers, let us just print the lines that match our regular expression.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file = open(&#39;datasets/mbox-short.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
+for line in file:
+    line: str = line.rstrip()
     
-    <span class="k">if</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="s1">&#39;^X-.*: [0-9.]+&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
+    if re.search(&#39;^X-.*: [0-9.]+&#39;, line):
+        print(line)
     
-<span class="n">emails</span>
+emails
 </pre></div>
 </div>
 </div>
@@ -1253,14 +1262,14 @@ they indicate that you are interested in extracting only a portion of the string
 <p><code class="docutils literal notranslate"><span class="pre">^X-.*:</span> <span class="pre">([0-9.]+)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file = open(&#39;datasets/mbox-short.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-    <span class="n">match</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;^X-.*: ([0-9.]+)&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+for line in file:
+    line: str = line.rstrip()
+    match: list = re.findall(&#39;^X-.*: ([0-9.]+)&#39;, line)
     
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">match</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">match</span><span class="p">)</span>
+    if len(match) &gt; 0:
+        print(match)
 </pre></div>
 </div>
 </div>
@@ -1273,14 +1282,14 @@ In this example the revision number is <code class="docutils literal notranslate
 <p>We will now extract these numbers all along the file.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/mbox-short.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>file = open(&#39;datasets/mbox-short.txt&#39;)
 
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">file</span><span class="p">:</span>
-    <span class="n">line</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">rstrip</span><span class="p">()</span>
-    <span class="n">revision</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;^Details:.*rev=([0-9.]+)&#39;</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span>
+for line in file:
+    line: str = line.rstrip()
+    revision: list = re.findall(&#39;^Details:.*rev=([0-9.]+)&#39;, line)
     
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">revision</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">revision</span><span class="p">)</span>
+    if len(revision) &gt; 0:
+        print(revision)
 </pre></div>
 </div>
 </div>
@@ -1301,7 +1310,7 @@ Received: from murder (mail.umich.edu [141.211.14.46])
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1314,9 +1323,9 @@ For instance, there might be cases where we want to match the caret <code class=
 To do so, we use the escape character <code class="docutils literal notranslate"><span class="pre">\</span></code> before we type the character we want to match (e.g. <code class="docutils literal notranslate"><span class="pre">\^</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">msg</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;This is how you write 2 to the power of 2 in Java: 2^2&#39;</span>
-<span class="n">matches</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;[0-9]+\^[0-9]+&#39;</span><span class="p">,</span> <span class="n">msg</span><span class="p">)</span>
-<span class="n">matches</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>msg: str = &#39;This is how you write 2 to the power of 2 in Java: 2^2&#39;
+matches: list = re.findall(&#39;[0-9]+\^[0-9]+&#39;, msg)
+matches
 </pre></div>
 </div>
 </div>
@@ -1329,9 +1338,9 @@ If we write <code class="docutils literal notranslate"><span class="pre">[0-9.^]
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">receipt</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Chocolate $2.0, Soap $10.0, Bread $1.4, Milk $2.4&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>receipt: str = &quot;Chocolate $2.0, Soap $10.0, Bread $1.4, Milk $2.4&quot;
 
-<span class="c1"># Remove this line and add your code here</span>
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1480,7 +1489,7 @@ If we write <code class="docutils literal notranslate"><span class="pre">[0-9.^]
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>

@@ -599,41 +599,41 @@ title="Print to PDF"
 <p>The first version of <em>bubble sort</em> is a recursive version.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List
 
-<span class="k">def</span> <span class="nf">bubble_to_end</span><span class="p">(</span><span class="n">lst</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot; moves the largest element to the end of the list&quot;&quot;&quot;</span>
+def bubble_to_end(lst : List[any]) -&gt; List[any]:
+    &quot;&quot;&quot; moves the largest element to the end of the list&quot;&quot;&quot;
     
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>   <span class="c1"># Stop condition for moving</span>
-        <span class="k">return</span> <span class="n">lst</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]:</span>
-            <span class="c1"># Swap the first and second elements in the row</span>
-            <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> 
-        <span class="n">first</span> <span class="p">:</span> <span class="nb">any</span> <span class="o">=</span> <span class="n">lst</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-        <span class="k">return</span> <span class="p">[</span><span class="n">first</span><span class="p">]</span> <span class="o">+</span> <span class="n">bubble_to_end</span><span class="p">(</span><span class="n">lst</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span>
+    if len(lst) &lt;= 1:   # Stop condition for moving
+        return lst
+    else:
+        if lst[0] &gt; lst[1]:
+            # Swap the first and second elements in the row
+            lst[0], lst[1] = lst[1], lst[0] 
+        first : any = lst[0]
+        return [first] + bubble_to_end(lst[1:])
     
-<span class="k">def</span> <span class="nf">bubble_sort_r</span><span class="p">(</span><span class="n">unsorted</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot; sorts a list in a recursive way</span>
-<span class="sd">    &gt;&gt;&gt; bubble_sort([3, 4, 7, -1, 2, 5])</span>
-<span class="sd">    [-1, 2, 3, 4, 5, 7]</span>
-<span class="sd">    &gt;&gt;&gt; bubble_sort([])</span>
-<span class="sd">    []</span>
-<span class="sd">    &gt;&gt;&gt; bubble_sort([5, 4, 3, 2, 1])</span>
-<span class="sd">    [1, 2, 3, 4, 5]</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def bubble_sort_r(unsorted : List[any]) -&gt; List[any]:
+    &quot;&quot;&quot; sorts a list in a recursive way
+    &gt;&gt;&gt; bubble_sort([3, 4, 7, -1, 2, 5])
+    [-1, 2, 3, 4, 5, 7]
+    &gt;&gt;&gt; bubble_sort([])
+    []
+    &gt;&gt;&gt; bubble_sort([5, 4, 3, 2, 1])
+    [1, 2, 3, 4, 5]
+    &quot;&quot;&quot;
     
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">unsorted</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>  <span class="c1"># Stop condition for sorting</span>
-        <span class="k">return</span> <span class="n">unsorted</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">unsorted</span> <span class="o">=</span> <span class="n">bubble_to_end</span><span class="p">(</span><span class="n">unsorted</span><span class="p">)</span>    <span class="c1">#move (bubble) largest element to the end</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">unsorted</span><span class="p">)</span>
-        <span class="n">last</span> <span class="p">:</span> <span class="nb">any</span> <span class="o">=</span> <span class="n">unsorted</span><span class="o">.</span><span class="n">pop</span><span class="p">()</span>               <span class="c1">#remove last element and remember it</span>
-        <span class="n">sortedList</span> <span class="o">=</span> <span class="n">bubble_sort_r</span><span class="p">(</span><span class="n">unsorted</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">sortedList</span><span class="p">)</span>
-        <span class="k">return</span> <span class="n">sortedList</span> <span class="o">+</span> <span class="p">[</span><span class="n">last</span><span class="p">]</span>  <span class="c1">#sort the rest and concatenate last element</span>
+    if len(unsorted) &lt;= 1:  # Stop condition for sorting
+        return unsorted
+    else:
+        unsorted = bubble_to_end(unsorted)    #move (bubble) largest element to the end
+        print(unsorted)
+        last : any = unsorted.pop()               #remove last element and remember it
+        sortedList = bubble_sort_r(unsorted)
+        print(sortedList)
+        return sortedList + [last]  #sort the rest and concatenate last element
     
-<span class="nb">print</span><span class="p">(</span><span class="n">bubble_sort_r</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]))</span>
+print(bubble_sort_r([4,3,5,2,1]))
 </pre></div>
 </div>
 </div>
@@ -653,9 +653,9 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import doctest
 
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -670,7 +670,7 @@ Failed example:
     bubble_sort([3, 4, 7, -1, 2, 5])
 Exception raised:
     Traceback (most recent call last):
-      File &quot;/opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/doctest.py&quot;, line 1336, in __run
+      File &quot;/opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/doctest.py&quot;, line 1336, in __run
         exec(compile(example.source, filename, &quot;single&quot;,
       File &quot;&lt;doctest __main__.bubble_sort_r[0]&gt;&quot;, line 1, in &lt;module&gt;
         bubble_sort([3, 4, 7, -1, 2, 5])
@@ -685,7 +685,7 @@ Failed example:
     bubble_sort([])
 Exception raised:
     Traceback (most recent call last):
-      File &quot;/opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/doctest.py&quot;, line 1336, in __run
+      File &quot;/opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/doctest.py&quot;, line 1336, in __run
         exec(compile(example.source, filename, &quot;single&quot;,
       File &quot;&lt;doctest __main__.bubble_sort_r[1]&gt;&quot;, line 1, in &lt;module&gt;
         bubble_sort([])
@@ -700,7 +700,7 @@ Failed example:
     bubble_sort([5, 4, 3, 2, 1])
 Exception raised:
     Traceback (most recent call last):
-      File &quot;/opt/hostedtoolcache/Python/3.8.14/x64/lib/python3.8/doctest.py&quot;, line 1336, in __run
+      File &quot;/opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/doctest.py&quot;, line 1336, in __run
         exec(compile(example.source, filename, &quot;single&quot;,
       File &quot;&lt;doctest __main__.bubble_sort_r[2]&gt;&quot;, line 1, in &lt;module&gt;
         bubble_sort([5, 4, 3, 2, 1])
@@ -725,36 +725,36 @@ Exception raised:
 <p>The next cell shows the iterative version of <em>bubble sort</em>, it has the same time complexity.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List
 
-<span class="k">def</span> <span class="nf">bubble_sort</span><span class="p">(</span><span class="n">unsorted</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;sorts a list in a non-recursive way</span>
-<span class="sd">    &gt;&gt;&gt; bubble_sort([3, 4, 7, -1, 2, 9, 5])</span>
-<span class="sd">    [-1, 2, 3, 4, 5, 7, 9]</span>
-<span class="sd">    &gt;&gt;&gt; bubble_sort([])</span>
-<span class="sd">    []</span>
-<span class="sd">    &gt;&gt;&gt; bubble_sort([6, 5, 4, 3, 2, 1])</span>
-<span class="sd">    [1, 2, 3, 4, 5, 6]</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def bubble_sort(unsorted : List[any]) -&gt; List[any]:
+    &quot;&quot;&quot;sorts a list in a non-recursive way
+    &gt;&gt;&gt; bubble_sort([3, 4, 7, -1, 2, 9, 5])
+    [-1, 2, 3, 4, 5, 7, 9]
+    &gt;&gt;&gt; bubble_sort([])
+    []
+    &gt;&gt;&gt; bubble_sort([6, 5, 4, 3, 2, 1])
+    [1, 2, 3, 4, 5, 6]
+    &quot;&quot;&quot;
     
-    <span class="n">offset</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
-    <span class="n">swapped</span> <span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="k">while</span> <span class="n">swapped</span><span class="p">:</span>  <span class="c1">#Non-terminating loop</span>
-        <span class="n">swapped</span> <span class="o">=</span> <span class="kc">False</span>
-        <span class="c1">#move the biggest element to the end of the list</span>
-        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">unsorted</span><span class="p">)</span><span class="o">-</span><span class="n">offset</span><span class="p">):</span> 
-            <span class="k">if</span> <span class="n">unsorted</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">unsorted</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]:</span>
-                <span class="n">unsorted</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">unsorted</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">unsorted</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span> <span class="n">unsorted</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1">#swap</span>
-                <span class="n">swapped</span> <span class="o">=</span> <span class="kc">True</span>
+    offset : int = 1
+    swapped : bool = True
+    while swapped:  #Non-terminating loop
+        swapped = False
+        #move the biggest element to the end of the list
+        for i in range(len(unsorted)-offset): 
+            if unsorted[i] &gt; unsorted[i+1]:
+                unsorted[i], unsorted[i+1] = unsorted[i+1], unsorted[i] #swap
+                swapped = True
                 
-        <span class="c1"># you can ignore the last element(s) because they are sorted       </span>
-        <span class="n">offset</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="c1">#print(unsorted)</span>
-        <span class="c1">#print(offset)</span>
+        # you can ignore the last element(s) because they are sorted       
+        offset += 1
+        #print(unsorted)
+        #print(offset)
         
-    <span class="k">return</span> <span class="n">unsorted</span>
+    return unsorted
         
-<span class="nb">print</span><span class="p">(</span><span class="n">bubble_sort</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]))</span>
+print(bubble_sort([4,3,5,2,1]))
 </pre></div>
 </div>
 </div>
@@ -766,7 +766,7 @@ Exception raised:
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -819,19 +819,19 @@ Test passed.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import random
+from typing import List
 
-<span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="n">rdlst</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+i : int = 0
+rdlst : List[int] = []
     
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">:</span>
-    <span class="n">rdnr</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1000000</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">rdnr</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">rdlst</span><span class="p">:</span>
-        <span class="n">rdlst</span> <span class="o">=</span> <span class="n">rdlst</span> <span class="o">+</span> <span class="p">[</span><span class="n">rdnr</span><span class="p">]</span>
-    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+while i &lt; 10000:
+    rdnr : int = random.randint(0,1000000)
+    if rdnr not in rdlst:
+        rdlst = rdlst + [rdnr]
+    i += 1
     
-<span class="c1">#print(rdlst)</span>
+#print(rdlst)
 </pre></div>
 </div>
 </div>
@@ -839,19 +839,19 @@ Test passed.
 <p>Again some timing measurements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import time
 
-<span class="n">org_lst</span> <span class="o">=</span> <span class="n">rdlst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+org_lst = rdlst.copy()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">lst2</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">bubble_sort</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The binary search code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+lst2 : List[int] = bubble_sort(rdlst)
+t2 = time.perf_counter()
+print(&quot;The binary search code took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The binary search code took 10792.46ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The binary search code took 11651.49ms
 </pre></div>
 </div>
 </div>
@@ -869,37 +869,37 @@ Test passed.
 <p>The next cell shows a version of <em>insertion sort</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List
 
-<span class="k">def</span> <span class="nf">insertion_sort</span><span class="p">(</span><span class="n">unsorted</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;sorts the list by inserting the at the right position in the list</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; insertion_sort([3, 4, 7, -1, 2, 9, 5])</span>
-<span class="sd">    [-1, 2, 3, 4, 5, 7, 9]</span>
-<span class="sd">    &gt;&gt;&gt; insertion_sort([])</span>
-<span class="sd">    []</span>
-<span class="sd">    &gt;&gt;&gt; insertion_sort([6, 5, 4, 3, 2, 1])</span>
-<span class="sd">    [1, 2, 3, 4, 5, 6]</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-   
-    <span class="k">for</span> <span class="n">index</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">unsorted</span><span class="p">)):</span>
-        <span class="n">currentvalue</span> <span class="p">:</span> <span class="nb">any</span> <span class="o">=</span> <span class="n">unsorted</span><span class="p">[</span><span class="n">index</span><span class="p">]</span>
-        <span class="n">position</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">index</span>
-
-        <span class="c1"># print(unsorted)</span>
-        <span class="c1"># shift elements that are greater than the &quot;current value&quot; to the right and</span>
-        <span class="c1"># create an &quot;open&quot; slot in the list to insert the &quot;current value&quot;.</span>
-        <span class="k">while</span> <span class="n">position</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">unsorted</span><span class="p">[</span><span class="n">position</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">currentvalue</span><span class="p">:</span>
-            <span class="n">unsorted</span><span class="p">[</span><span class="n">position</span><span class="p">]</span> <span class="o">=</span> <span class="n">unsorted</span><span class="p">[</span><span class="n">position</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-            <span class="n">position</span> <span class="o">-=</span> <span class="mi">1</span>
-        <span class="c1">#print(unsorted)</span>
-        <span class="n">unsorted</span><span class="p">[</span><span class="n">position</span><span class="p">]</span> <span class="o">=</span> <span class="n">currentvalue</span>
+def insertion_sort(unsorted: List[any]) -&gt; List[any]:
+    &quot;&quot;&quot;sorts the list by inserting the at the right position in the list
     
-    <span class="k">return</span> <span class="n">unsorted</span>
+    &gt;&gt;&gt; insertion_sort([3, 4, 7, -1, 2, 9, 5])
+    [-1, 2, 3, 4, 5, 7, 9]
+    &gt;&gt;&gt; insertion_sort([])
+    []
+    &gt;&gt;&gt; insertion_sort([6, 5, 4, 3, 2, 1])
+    [1, 2, 3, 4, 5, 6]
+    &quot;&quot;&quot;
+   
+    for index in range(1, len(unsorted)):
+        currentvalue : any = unsorted[index]
+        position : int = index
 
-<span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">93</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">44</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">20</span><span class="p">]</span>
-<span class="n">sortedList</span> <span class="o">=</span> <span class="n">insertion_sort</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sortedList</span><span class="p">)</span>
+        # print(unsorted)
+        # shift elements that are greater than the &quot;current value&quot; to the right and
+        # create an &quot;open&quot; slot in the list to insert the &quot;current value&quot;.
+        while position &gt; 0 and unsorted[position-1] &gt; currentvalue:
+            unsorted[position] = unsorted[position-1]
+            position -= 1
+        #print(unsorted)
+        unsorted[position] = currentvalue
+    
+    return unsorted
+
+alist = [54,26,93,17,77,31,44,55,20]
+sortedList = insertion_sort(alist)
+print(sortedList)
 </pre></div>
 </div>
 </div>
@@ -911,9 +911,9 @@ Test passed.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import doctest
 
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -982,32 +982,32 @@ Test passed.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import time
 
-<span class="n">rdlst</span> <span class="o">=</span> <span class="n">org_lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+rdlst = org_lst.copy()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">lst1</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">bubble_sort</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The binary search code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+lst1 : List[int] = bubble_sort(rdlst)
+t2 = time.perf_counter()
+print(&quot;The binary search code took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="n">rdlst</span> <span class="o">=</span> <span class="n">org_lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+rdlst = org_lst.copy()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">lst2</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">insertion_sort</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The insertion search code took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+lst2 : List[int] = insertion_sort(rdlst)
+t2 = time.perf_counter()
+print(&quot;The insertion search code took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="k">if</span> <span class="n">lst1</span> <span class="o">==</span> <span class="n">lst2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lst1 == lst2&quot;</span><span class="p">)</span>
+if lst1 == lst2:
+    print(&quot;lst1 == lst2&quot;)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The binary search code took 11369.89ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The binary search code took 11818.00ms
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion search code took 6500.16ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion search code took 6467.80ms
 lst1 == lst2
 </pre></div>
 </div>
@@ -1032,61 +1032,61 @@ the resulting two ‘sorted lists’ are merged into <code class="docutils liter
 <p>The  version of <em>merge sort</em> is a recursive version.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List
 
-<span class="k">def</span> <span class="nf">merging</span><span class="p">(</span><span class="n">leftSorted</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">],</span> <span class="n">rightSorted</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;both lists into a merged list</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def merging(leftSorted : List[any], rightSorted : List[any]) -&gt; List[any]:
+    &quot;&quot;&quot;both lists into a merged list
+    &quot;&quot;&quot;
     
-    <span class="n">sortedList</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="n">j</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">leftSorted</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">rightSorted</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">leftSorted</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;</span> <span class="n">rightSorted</span><span class="p">[</span><span class="n">j</span><span class="p">]:</span>
-            <span class="n">sortedList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">leftSorted</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">sortedList</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">rightSorted</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
-            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    sortedList : List[any] = []
+    i : int = 0
+    j : int = 0
+    while i &lt; len(leftSorted) and j &lt; len(rightSorted):
+        if leftSorted[i] &lt; rightSorted[j]:
+            sortedList.append(leftSorted[i])
+            i += 1
+        else:
+            sortedList.append(rightSorted[j])
+            j += 1
 
-    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">leftSorted</span><span class="p">):</span>
-        <span class="n">sortedList</span> <span class="o">+=</span> <span class="n">leftSorted</span><span class="p">[</span><span class="n">i</span><span class="p">:]</span>
+    if i &lt; len(leftSorted):
+        sortedList += leftSorted[i:]
 
-    <span class="k">if</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">rightSorted</span><span class="p">):</span>
-        <span class="n">sortedList</span> <span class="o">+=</span> <span class="n">rightSorted</span><span class="p">[</span><span class="n">j</span><span class="p">:]</span>
+    if j &lt; len(rightSorted):
+        sortedList += rightSorted[j:]
 
-<span class="c1">#    print(&quot;Merging &quot;, sortedList)</span>
-    <span class="k">return</span> <span class="n">sortedList</span>
+#    print(&quot;Merging &quot;, sortedList)
+    return sortedList
 
-<span class="k">def</span> <span class="nf">merge_sort</span><span class="p">(</span><span class="n">unsorted</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;sorts a list by means of divide and conquer</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; merge_sort([3, 4, 7, -1, 2, 9, 5])</span>
-<span class="sd">    [-1, 2, 3, 4, 5, 7, 9]</span>
-<span class="sd">    &gt;&gt;&gt; merge_sort([])</span>
-<span class="sd">    []</span>
-<span class="sd">    &gt;&gt;&gt; merge_sort([6, 5, 4, 3, 2, 1])</span>
-<span class="sd">    [1, 2, 3, 4, 5, 6]</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def merge_sort(unsorted : List[any]) -&gt; List[any]:
+    &quot;&quot;&quot;sorts a list by means of divide and conquer
     
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">unsorted</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-        <span class="n">middle</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">unsorted</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
-        <span class="n">leftUnsorted</span> <span class="o">=</span> <span class="n">unsorted</span><span class="p">[:</span><span class="n">middle</span><span class="p">]</span>
-        <span class="n">rightUnsorted</span> <span class="o">=</span> <span class="n">unsorted</span><span class="p">[</span><span class="n">middle</span><span class="p">:]</span>
+    &gt;&gt;&gt; merge_sort([3, 4, 7, -1, 2, 9, 5])
+    [-1, 2, 3, 4, 5, 7, 9]
+    &gt;&gt;&gt; merge_sort([])
+    []
+    &gt;&gt;&gt; merge_sort([6, 5, 4, 3, 2, 1])
+    [1, 2, 3, 4, 5, 6]
+    &quot;&quot;&quot;
+    
+    if len(unsorted) &gt; 1:
+        middle = len(unsorted) // 2
+        leftUnsorted = unsorted[:middle]
+        rightUnsorted = unsorted[middle:]
 
-        <span class="n">leftSorted</span> <span class="o">=</span> <span class="n">merge_sort</span><span class="p">(</span><span class="n">leftUnsorted</span><span class="p">)</span>
-        <span class="n">rightSorted</span> <span class="o">=</span> <span class="n">merge_sort</span><span class="p">(</span><span class="n">rightUnsorted</span><span class="p">)</span>
+        leftSorted = merge_sort(leftUnsorted)
+        rightSorted = merge_sort(rightUnsorted)
 
-        <span class="k">return</span> <span class="n">merging</span><span class="p">(</span><span class="n">leftSorted</span><span class="p">,</span> <span class="n">rightSorted</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">unsorted</span>
+        return merging(leftSorted, rightSorted)
+    else:
+        return unsorted
     
 
-<span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">93</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">44</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">20</span><span class="p">]</span>
-<span class="c1">#alist = [4, 3, 5, 2, 1]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
-<span class="n">sList</span> <span class="o">=</span> <span class="n">merge_sort</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sList</span><span class="p">)</span>
+alist = [54,26,93,17,77,31,44,55,20]
+#alist = [4, 3, 5, 2, 1]
+print(alist)
+sList = merge_sort(alist)
+print(sList)
 </pre></div>
 </div>
 </div>
@@ -1099,9 +1099,9 @@ the resulting two ‘sorted lists’ are merged into <code class="docutils liter
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import doctest
 
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -1188,43 +1188,43 @@ Test passed.
 <p><em>merge sort</em> is more efficient than <em>bubble sort</em> because of the <em>divide-and-conquer</em> strategy, however the creation of intermediate lists may be problematic.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import time
 
-<span class="n">rdlst</span> <span class="o">=</span> <span class="n">org_lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+rdlst = org_lst.copy()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">lst1</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">bubble_sort</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The bubble sort took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+lst1 : List[int] = bubble_sort(rdlst)
+t2 = time.perf_counter()
+print(&quot;The bubble sort took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="n">rdlst</span> <span class="o">=</span> <span class="n">org_lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+rdlst = org_lst.copy()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">lst2</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">insertion_sort</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The insertion sort took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+lst2 : List[int] = insertion_sort(rdlst)
+t2 = time.perf_counter()
+print(&quot;The insertion sort took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="n">rdlst</span> <span class="o">=</span> <span class="n">org_lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+rdlst = org_lst.copy()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">lst3</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_sort</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The merge sort took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+lst3 : List[int] = merge_sort(rdlst)
+t2 = time.perf_counter()
+print(&quot;The merge sort took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="k">if</span> <span class="n">lst1</span> <span class="o">==</span> <span class="n">lst2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lst1 == lst2&quot;</span><span class="p">)</span>
+if lst1 == lst2:
+    print(&quot;lst1 == lst2&quot;)
 
-<span class="k">if</span> <span class="n">lst1</span> <span class="o">==</span> <span class="n">lst3</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lst1 == lst3&quot;</span><span class="p">)</span>
+if lst1 == lst3:
+    print(&quot;lst1 == lst3&quot;)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bubble sort took 11460.43ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bubble sort took 11427.45ms
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion sort took 6243.48ms
-The merge sort took 57.20ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion sort took 6166.92ms
+The merge sort took 53.31ms
 lst1 == lst2
 lst1 == lst3
 </pre></div>
@@ -1248,71 +1248,71 @@ than the pivot are moved to the right of the pivot.</p>
 <p>The challenge is to find the right pivot. The better the pivot the faster the algorithm, because the sublist (left and right of the pivot) will be more or less of the same length.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">partition</span><span class="p">(</span><span class="n">arr</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">],</span> <span class="n">low</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">high</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span> 
-    <span class="sd">&quot;&quot;&quot; Reshuffles the elements of the list according to a pivot.</span>
-<span class="sd">    The arbitrary chosen pivot is the last element of the list.</span>
-<span class="sd">    The pivot is moved to the &quot;middle&quot; of the list.</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; L = [1]</span>
-<span class="sd">    &gt;&gt;&gt; partition(L, 0, 0)</span>
-<span class="sd">    0</span>
-<span class="sd">    &gt;&gt;&gt; L = [5, 4, 2, 1, 3]</span>
-<span class="sd">    &gt;&gt;&gt; partition(L, 0, 4)</span>
-<span class="sd">    2</span>
-<span class="sd">    &gt;&gt;&gt; L = [5, 4, 3, 2, 1]</span>
-<span class="sd">    &gt;&gt;&gt; partition(L, 0, 4)</span>
-<span class="sd">    0</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def partition(arr : List[any], low : int, high : int) -&gt; int: 
+    &quot;&quot;&quot; Reshuffles the elements of the list according to a pivot.
+    The arbitrary chosen pivot is the last element of the list.
+    The pivot is moved to the &quot;middle&quot; of the list.
     
-    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span>  <span class="o">=</span> <span class="n">low</span><span class="o">-</span><span class="mi">1</span>             <span class="c1"># index of smaller element </span>
-    <span class="n">pivot</span> <span class="p">:</span> <span class="nb">any</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">high</span><span class="p">]</span>     <span class="c1"># choose a pivot </span>
+    &gt;&gt;&gt; L = [1]
+    &gt;&gt;&gt; partition(L, 0, 0)
+    0
+    &gt;&gt;&gt; L = [5, 4, 2, 1, 3]
+    &gt;&gt;&gt; partition(L, 0, 4)
+    2
+    &gt;&gt;&gt; L = [5, 4, 3, 2, 1]
+    &gt;&gt;&gt; partition(L, 0, 4)
+    0
+    &quot;&quot;&quot;
+    
+    i : int  = low-1             # index of smaller element 
+    pivot : any = arr[high]     # choose a pivot 
   
-    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">low</span> <span class="p">,</span> <span class="n">high</span><span class="p">):</span> 
+    for j in range(low , high): 
   
-        <span class="c1"># If current element is smaller than or equal to pivot </span>
-        <span class="k">if</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">pivot</span><span class="p">:</span> 
-            <span class="c1"># increment index of smaller element and swap elements</span>
-            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span> 
-            <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> 
+        # If current element is smaller than or equal to pivot 
+        if arr[j] &lt;= pivot: 
+            # increment index of smaller element and swap elements
+            i += 1 
+            arr[i],arr[j] = arr[j],arr[i] 
             
-    <span class="c1"># move the pivot to the right position</span>
-    <span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">],</span><span class="n">arr</span><span class="p">[</span><span class="n">high</span><span class="p">]</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">high</span><span class="p">],</span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span> 
+    # move the pivot to the right position
+    arr[i+1],arr[high] = arr[high],arr[i+1] 
     
-    <span class="k">return</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> 
+    return i+1 
   
-<span class="c1"># The main function that implements QuickSort </span>
-<span class="c1"># arr[] --&gt; Array to be sorted, </span>
-<span class="c1"># low  --&gt; Starting index, </span>
-<span class="c1"># high  --&gt; Ending index </span>
+# The main function that implements QuickSort 
+# arr[] --&gt; Array to be sorted, 
+# low  --&gt; Starting index, 
+# high  --&gt; Ending index 
   
-<span class="c1"># Function to do Quick sort </span>
-<span class="k">def</span> <span class="nf">quick_sort</span><span class="p">(</span><span class="n">arr</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">],</span> <span class="n">low</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">high</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span> 
-    <span class="sd">&quot;&quot;&quot; the list is sorted by partition the list in two parts,</span>
-<span class="sd">    a part with elements smaller than a pivot and elements greater</span>
-<span class="sd">    than the pivot.</span>
-<span class="sd">    The partitioned parts are recursively sorted.</span>
-<span class="sd">    </span>
-<span class="sd">    &gt;&gt;&gt; L = [3, 4, 7, -1, 2, 5]</span>
-<span class="sd">    &gt;&gt;&gt; quick_sort(L, 0, 5)</span>
-<span class="sd">    &gt;&gt;&gt; L</span>
-<span class="sd">    [-1, 2, 3, 4, 5, 7]</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">low</span> <span class="o">&lt;</span> <span class="n">high</span><span class="p">:</span> 
+# Function to do Quick sort 
+def quick_sort(arr : List[any], low : int, high : int) -&gt; None: 
+    &quot;&quot;&quot; the list is sorted by partition the list in two parts,
+    a part with elements smaller than a pivot and elements greater
+    than the pivot.
+    The partitioned parts are recursively sorted.
+    
+    &gt;&gt;&gt; L = [3, 4, 7, -1, 2, 5]
+    &gt;&gt;&gt; quick_sort(L, 0, 5)
+    &gt;&gt;&gt; L
+    [-1, 2, 3, 4, 5, 7]
+    &quot;&quot;&quot;
+    if low &lt; high: 
   
-        <span class="c1"># pi is partitioning index, arr[p] is now </span>
-        <span class="c1"># at right place </span>
-        <span class="n">pi</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">partition</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span> 
+        # pi is partitioning index, arr[p] is now 
+        # at right place 
+        pi : int = partition(arr, low, high) 
   
-        <span class="c1"># Separately sort elements before </span>
-        <span class="c1"># partition and after partition </span>
-        <span class="n">quick_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">low</span><span class="p">,</span> <span class="n">pi</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> 
-        <span class="n">quick_sort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">pi</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">high</span><span class="p">)</span> 
+        # Separately sort elements before 
+        # partition and after partition 
+        quick_sort(arr, low, pi-1) 
+        quick_sort(arr, pi+1, high) 
         
-<span class="n">alist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span><span class="mi">26</span><span class="p">,</span><span class="mi">93</span><span class="p">,</span><span class="mi">17</span><span class="p">,</span><span class="mi">77</span><span class="p">,</span><span class="mi">31</span><span class="p">,</span><span class="mi">44</span><span class="p">,</span><span class="mi">55</span><span class="p">,</span><span class="mi">20</span><span class="p">]</span>
-<span class="c1">#alist = [4, 3, 5, 2, 1]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
-<span class="n">quick_sort</span><span class="p">(</span><span class="n">alist</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">alist</span><span class="p">)</span>
+alist = [54,26,93,17,77,31,44,55,20]
+#alist = [4, 3, 5, 2, 1]
+print(alist)
+quick_sort(alist, 0, len(alist)-1)
+print(alist)
 </pre></div>
 </div>
 </div>
@@ -1325,9 +1325,9 @@ than the pivot are moved to the right of the pivot.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">doctest</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import doctest
 
-<span class="n">doctest</span><span class="o">.</span><span class="n">testmod</span><span class="p">(</span><span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>  <span class="c1"># with details</span>
+doctest.testmod(verbose=True)  # with details
 </pre></div>
 </div>
 </div>
@@ -1455,65 +1455,65 @@ Test passed.
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import time
 
-<span class="n">rdlst</span> <span class="o">=</span> <span class="n">org_lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+rdlst = org_lst.copy()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">lst1</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">bubble_sort</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The bubble sort took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+lst1 : List[int] = bubble_sort(rdlst)
+t2 = time.perf_counter()
+print(&quot;The bubble sort took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="n">rdlst</span> <span class="o">=</span> <span class="n">org_lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+rdlst = org_lst.copy()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">lst2</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">insertion_sort</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The insertion sort took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+lst2 : List[int] = insertion_sort(rdlst)
+t2 = time.perf_counter()
+print(&quot;The insertion sort took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="n">rdlst</span> <span class="o">=</span> <span class="n">org_lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+rdlst = org_lst.copy()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">lst3</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="n">merge_sort</span><span class="p">(</span><span class="n">rdlst</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The merge sort took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+lst3 : List[int] = merge_sort(rdlst)
+t2 = time.perf_counter()
+print(&quot;The merge sort took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="n">rdlst1</span> <span class="o">=</span> <span class="n">org_lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+rdlst1 = org_lst.copy()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">quick_sort</span><span class="p">(</span><span class="n">rdlst1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">rdlst1</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The quick sort took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+quick_sort(rdlst1, 0, len(rdlst1)-1)
+t2 = time.perf_counter()
+print(&quot;The quick sort took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="n">rdlst2</span> <span class="o">=</span> <span class="n">org_lst</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+rdlst2 = org_lst.copy()
 
-<span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="n">rdlst2</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
-<span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The python sort took </span><span class="si">{:.2f}</span><span class="s2">ms&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">((</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">))</span>
+t1 = time.perf_counter()
+rdlst2.sort()
+t2 = time.perf_counter()
+print(&quot;The python sort took {:.2f}ms&quot;.format((t2 - t1) * 1000))
 
-<span class="k">if</span> <span class="n">lst1</span> <span class="o">==</span> <span class="n">lst2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lst1 == lst2&quot;</span><span class="p">)</span>
+if lst1 == lst2:
+    print(&quot;lst1 == lst2&quot;)
 
-<span class="k">if</span> <span class="n">lst1</span> <span class="o">==</span> <span class="n">lst3</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lst1 == lst3&quot;</span><span class="p">)</span>
+if lst1 == lst3:
+    print(&quot;lst1 == lst3&quot;)
 
-<span class="k">if</span> <span class="n">lst1</span> <span class="o">==</span> <span class="n">rdlst1</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lst1 == rdlst1&quot;</span><span class="p">)</span>
+if lst1 == rdlst1:
+    print(&quot;lst1 == rdlst1&quot;)
 
-<span class="k">if</span> <span class="n">lst1</span> <span class="o">==</span> <span class="n">rdlst2</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;lst1 == rdlst2&quot;</span><span class="p">)</span>
+if lst1 == rdlst2:
+    print(&quot;lst1 == rdlst2&quot;)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bubble sort took 11269.90ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The bubble sort took 11292.56ms
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion sort took 6788.99ms
-The merge sort took 55.63ms
-The quick sort took 32.63ms
-The python sort took 1.46ms
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>The insertion sort took 5997.59ms
+The merge sort took 53.13ms
+The quick sort took 29.15ms
+The python sort took 1.70ms
 lst1 == lst2
 lst1 == lst3
 lst1 == rdlst1
@@ -1528,9 +1528,9 @@ lst1 == rdlst2
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lst</span> <span class="o">=</span> <span class="p">[</span><span class="mi">54</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">93</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">77</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">55</span><span class="p">,</span> <span class="mi">20</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>lst = [54, 26, 93, 17, 77, 31, 44, 55, 20]
 
-<span class="c1"># Remove this line and add your code here</span>
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>

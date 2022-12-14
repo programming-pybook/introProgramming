@@ -711,7 +711,7 @@ title="Print to PDF"
 <p>To start using NumPy you need to add the following code.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import numpy as np
 </pre></div>
 </div>
 </div>
@@ -726,11 +726,11 @@ title="Print to PDF"
 <p>When creating NumPy arrays out from Python lists you first need to create a Python list. For example, in the following cell, we create a Python list that contains prime numbers greater than 0 and less than 30.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create Python list</span>
-<span class="n">primes</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create Python list
+primes: list = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29]
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">primes</span><span class="p">))</span>
-<span class="n">primes</span>
+print(type(primes))
+primes
 </pre></div>
 </div>
 </div>
@@ -746,11 +746,11 @@ title="Print to PDF"
 <p>We notice that all elements within the <code class="docutils literal notranslate"><span class="pre">primes</span></code> list are integers. Therefore, we can create a NumPy array with integer values out from this list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creat NummPy array out from Pyton list</span>
-<span class="n">np_primes</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Creat NummPy array out from Pyton list
+np_primes: np.ndarray = np.array(primes)
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">np_primes</span><span class="p">))</span>
-<span class="n">np_primes</span>
+print(type(np_primes))
+np_primes
 </pre></div>
 </div>
 </div>
@@ -766,9 +766,9 @@ title="Print to PDF"
 <p>If it happens that your list contains different types, NumPy will attempt to upcast them. For instance, the following list has both integers and float point numbers. Integers can then be upcasted to floats.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mf">9.6</span><span class="p">,</span> <span class="mf">4.3</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mf">7.1</span><span class="p">,</span> <span class="mf">6.1</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-<span class="n">np_scores</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span>
-<span class="n">np_scores</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>scores: list = [10, 9.6, 4.3, 8, 7.1, 6.1, 8]
+np_scores: np.ndarray = np.array(scores)
+np_scores
 </pre></div>
 </div>
 </div>
@@ -782,9 +782,9 @@ title="Print to PDF"
 <p>In the following cell, we take the list of integers <code class="docutils literal notranslate"><span class="pre">scale</span></code>, and we convert it into a NumPy array with floating-point numbers.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scale</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">np_scale</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">scale</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;float_&#39;</span><span class="p">)</span>
-<span class="n">np_scale</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>scale: list = [1, 2, 3, 4, 5]
+np_scale: np.ndarray = np.array(scale, dtype=&#39;float_&#39;)
+np_scale
 </pre></div>
 </div>
 </div>
@@ -801,9 +801,9 @@ title="Print to PDF"
 <p>For instance, you can use the <code class="docutils literal notranslate"><span class="pre">zeros()</span></code> function, which creates an array with <code class="docutils literal notranslate"><span class="pre">n</span></code> number of zeros. In the following cell, we create an array with <code class="docutils literal notranslate"><span class="pre">8</span></code> zeros. Notice that by default the numbers are created as floats. If you want to change the type you can also use the <code class="docutils literal notranslate"><span class="pre">dtype</span></code> keyword.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create an array with 8 zeros</span>
-<span class="n">zeros</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
-<span class="n">zeros</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create an array with 8 zeros
+zeros: np.ndarray = np.zeros(8)
+zeros
 </pre></div>
 </div>
 </div>
@@ -816,8 +816,8 @@ title="Print to PDF"
 <p>The <code class="docutils literal notranslate"><span class="pre">ones()</span></code> function works similar to the <code class="docutils literal notranslate"><span class="pre">zeros()</span></code> one, the only difference is that it creates <code class="docutils literal notranslate"><span class="pre">1</span></code>s instead of <code class="docutils literal notranslate"><span class="pre">0</span></code>s.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ones</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;int&#39;</span><span class="p">)</span>
-<span class="n">ones</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ones: np.ndarray = np.ones(8, dtype=&#39;int&#39;)
+ones
 </pre></div>
 </div>
 </div>
@@ -830,8 +830,8 @@ title="Print to PDF"
 <p>You can also pick a specific number to fill in your array using the <code class="docutils literal notranslate"><span class="pre">full()</span></code> function. Look into the following cell. The first parameter of the function receives the number of items of the array; while the second parameter gets the value that should be copied in each location of the array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pi_numbers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mf">3.1418</span><span class="p">)</span>
-<span class="n">pi_numbers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pi_numbers: np.ndarray = np.full(8, 3.1418)
+pi_numbers
 </pre></div>
 </div>
 </div>
@@ -849,8 +849,8 @@ title="Print to PDF"
 <p>For instance, in the following cell, we use again the <code class="docutils literal notranslate"><span class="pre">full()</span></code> function to create the <code class="docutils literal notranslate"><span class="pre">pi_matrix</span></code>, which consists of 4 rows and 8 columns. Therefore, instead of passing an integer as the first argument, we pass a tuple whose first item is the number of <strong>rows</strong> (i.e. <code class="docutils literal notranslate"><span class="pre">4</span></code>) and the number of <strong>columns</strong> (i.e. <code class="docutils literal notranslate"><span class="pre">8</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pi_matrix</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">((</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="mf">3.1418</span><span class="p">)</span>
-<span class="n">pi_matrix</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pi_matrix: np.ndarray = np.full((4, 8), 3.1418)
+pi_matrix
 </pre></div>
 </div>
 </div>
@@ -866,10 +866,10 @@ title="Print to PDF"
 <p>You can also create an array out of regular Python nested lists: inner lists become rows in the matrix.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nested_lists</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">nested_lists</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>nested_lists: list = [list(range(i, i + 3)) for i in [1, 4, 7]]
+print(nested_lists)
 
-<span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">nested_lists</span><span class="p">)</span>
+np.array(nested_lists)
 </pre></div>
 </div>
 </div>
@@ -890,8 +890,8 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates a linear sequence between 0 and 10. It steps by 2.</span>
-<span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Creates a linear sequence between 0 and 10. It steps by 2.
+np.arange(0, 10, 2)
 </pre></div>
 </div>
 </div>
@@ -906,8 +906,8 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates an array of 5 items, evenly spaced between 0 and 1.</span>
-<span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Creates an array of 5 items, evenly spaced between 0 and 1.
+np.linspace(0, 1, 5)
 </pre></div>
 </div>
 </div>
@@ -922,15 +922,15 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates a matrix (3 rows and 4 columns) with random numbers between 0 and 1.</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Creates a matrix (3 rows and 4 columns) with random numbers between 0 and 1.
+np.random.random((3, 4))
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.866483  , 0.48983953, 0.10861485, 0.62078112],
-       [0.7189415 , 0.63572083, 0.07178102, 0.98405009],
-       [0.19425972, 0.26323948, 0.25991855, 0.16312482]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[0.13363701, 0.99362962, 0.97300943, 0.54765562],
+       [0.91034495, 0.43253602, 0.35299575, 0.88411254],
+       [0.80615379, 0.66965457, 0.59958189, 0.70693394]])
 </pre></div>
 </div>
 </div>
@@ -940,16 +940,16 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates a 4x4 matrix with random integers between 0 and 100</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">100</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Creates a 4x4 matrix with random integers between 0 and 100
+np.random.randint(0, 100, (4, 4))
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[12, 87, 24,  8],
-       [89, 77, 74, 71],
-       [69, 71, 74, 79],
-       [ 6, 23, 45, 21]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[57, 97, 14, 12],
+       [79, 31, 72, 91],
+       [44,  7, 40, 63],
+       [53, 62, 56,  1]])
 </pre></div>
 </div>
 </div>
@@ -959,17 +959,17 @@ title="Print to PDF"
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Creates a normally distributed 4x4 matrix with random numbers. </span>
-<span class="c1"># The mean is set to 0 and the standard deviation to 1.</span>
-<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">normal</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Creates a normally distributed 4x4 matrix with random numbers. 
+# The mean is set to 0 and the standard deviation to 1.
+np.random.normal(0, 1, (4, 4))
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 2.64047429, -1.03117304, -1.19365011,  0.27032813],
-       [-0.77203993, -0.27716026,  1.3543866 ,  0.95059777],
-       [ 0.95123895,  0.10609415, -1.04072359, -0.5264721 ],
-       [ 1.46141231, -0.3699793 ,  0.54569056,  0.59257216]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[ 0.58061831,  0.58318746,  1.21056307, -0.1901337 ],
+       [-0.6671066 , -0.61409586, -1.22014473,  0.58456918],
+       [ 0.46053161,  0.41043132,  0.59166852, -0.98816464],
+       [ 0.47863717, -0.22797891, -0.06205173, -1.07746419]])
 </pre></div>
 </div>
 </div>
@@ -1008,49 +1008,49 @@ title="Print to PDF"
 <p>Hereafter, we will create three different arrays (one-dimensional, two-dimensional, and three-dimensional arrays) to see the output of these attributes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># One-dimensional array</span>
-<span class="n">one_dim</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
-<span class="n">one_dim</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># One-dimensional array
+one_dim: np.ndarray = np.random.randint(10, size=6)
+one_dim
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 1, 9, 7, 0, 7])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([7, 8, 5, 1, 8, 7])
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Two-dimensional array</span>
-<span class="n">two_dim</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">two_dim</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Two-dimensional array
+two_dim: np.ndarray = np.random.randint(10, size=(2, 6))
+two_dim
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[3, 9, 0, 5, 3, 2],
-       [7, 2, 6, 8, 9, 7]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[1, 9, 4, 1, 8, 7],
+       [5, 6, 0, 6, 7, 8]])
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Three-dimensional array</span>
-<span class="n">three_dim</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="n">three_dim</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Three-dimensional array
+three_dim: np.ndarray = np.random.randint(10, size=(2, 3, 6))
+three_dim
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[2, 9, 8, 2, 8, 2],
-        [5, 1, 4, 7, 9, 3],
-        [6, 5, 8, 9, 5, 6]],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[[0, 8, 4, 4, 8, 3],
+        [0, 8, 3, 5, 3, 0],
+        [4, 4, 8, 0, 2, 4]],
 
-       [[8, 5, 8, 7, 7, 7],
-        [1, 7, 7, 6, 9, 1],
-        [8, 7, 5, 6, 6, 2]]])
+       [[9, 4, 5, 2, 0, 8],
+        [3, 0, 8, 2, 2, 1],
+        [7, 0, 8, 9, 5, 5]]])
 </pre></div>
 </div>
 </div>
@@ -1058,9 +1058,9 @@ title="Print to PDF"
 <p>Let us explore now the <code class="docutils literal notranslate"><span class="pre">ndim</span></code>, <code class="docutils literal notranslate"><span class="pre">shape</span></code>, and <code class="docutils literal notranslate"><span class="pre">size</span></code> attributes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;One-dimensional array: ndim=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s1">, shape=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">, size=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Two-dimensional array: ndim=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s1">, shape=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">, size=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Three-dimensional array: ndim=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">ndim</span><span class="si">}</span><span class="s1">, shape=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s1">, size=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">size</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&#39;One-dimensional array: ndim={one_dim.ndim}, shape={one_dim.shape}, size={one_dim.size}&#39;)
+print(f&#39;Two-dimensional array: ndim={two_dim.ndim}, shape={two_dim.shape}, size={two_dim.size}&#39;)
+print(f&#39;Three-dimensional array: ndim={three_dim.ndim}, shape={three_dim.shape}, size={three_dim.size}&#39;)
 </pre></div>
 </div>
 </div>
@@ -1075,9 +1075,9 @@ Three-dimensional array: ndim=3, shape=(2, 3, 6), size=36
 <p>What about the <code class="docutils literal notranslate"><span class="pre">dtype</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;One-dimensional array: dtype=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Two-dimensional array: dtype=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Three-dimensional array: dtype=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">dtype</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&#39;One-dimensional array: dtype={one_dim.dtype}&#39;)
+print(f&#39;Two-dimensional array: dtype={two_dim.dtype}&#39;)
+print(f&#39;Three-dimensional array: dtype={three_dim.dtype}&#39;)
 </pre></div>
 </div>
 </div>
@@ -1093,9 +1093,9 @@ Three-dimensional array: dtype=int64
 <p>Finally, let us look into the <code class="docutils literal notranslate"><span class="pre">itemsize</span></code> and <code class="docutils literal notranslate"><span class="pre">nbytes</span></code> attributes. Notice that <code class="docutils literal notranslate"><span class="pre">nbytes</span></code> is equal to <span class="math notranslate nohighlight">\(itemsize \times size\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;One-dimensional array: itemsize=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">itemsize</span><span class="si">}</span><span class="s1"> bytes, nbytes=</span><span class="si">{</span><span class="n">one_dim</span><span class="o">.</span><span class="n">nbytes</span><span class="si">}</span><span class="s1"> bytes&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Two-dimensional array: itemsize=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">itemsize</span><span class="si">}</span><span class="s1"> bytes, nbytes=</span><span class="si">{</span><span class="n">two_dim</span><span class="o">.</span><span class="n">nbytes</span><span class="si">}</span><span class="s1"> bytes&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Three-dimensional array: itemsize=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">itemsize</span><span class="si">}</span><span class="s1"> bytes, nbytes=</span><span class="si">{</span><span class="n">three_dim</span><span class="o">.</span><span class="n">nbytes</span><span class="si">}</span><span class="s1"> bytes&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(f&#39;One-dimensional array: itemsize={one_dim.itemsize} bytes, nbytes={one_dim.nbytes} bytes&#39;)
+print(f&#39;Two-dimensional array: itemsize={two_dim.itemsize} bytes, nbytes={two_dim.nbytes} bytes&#39;)
+print(f&#39;Three-dimensional array: itemsize={three_dim.itemsize} bytes, nbytes={three_dim.nbytes} bytes&#39;)
 </pre></div>
 </div>
 </div>
@@ -1113,8 +1113,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>Indexing in NumPy arrays is pretty similar to Python list indexing. Actually, when dealing with one-dimensional arrays there is no difference at all. To see this, let us redefine and use the <code class="docutils literal notranslate"><span class="pre">primes</span></code> array–now as a NumPy array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">])</span>
-<span class="n">primes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>primes: list = np.array([2, 3, 5, 7, 11, 13, 17, 19, 23, 29])
+primes
 </pre></div>
 </div>
 </div>
@@ -1127,7 +1127,7 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>If we want to access the first element in the array, we can use the <code class="docutils literal notranslate"><span class="pre">0</span></code> value between the squared brackets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>primes[0]
 </pre></div>
 </div>
 </div>
@@ -1140,7 +1140,7 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>To access, the last item in the array, we refer to the length of the array minus one position. Otherwise, we will get an out-of-bounds index error.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>primes[len(primes) - 1]
 </pre></div>
 </div>
 </div>
@@ -1153,7 +1153,7 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>We can also opt for accessing items backwards by using negative indices. For instance, if we want to access the last item in the array, we can employ the <code class="docutils literal notranslate"><span class="pre">-1</span></code> index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>primes[-1]
 </pre></div>
 </div>
 </div>
@@ -1166,8 +1166,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>When dealing with <strong>multi-dimensional arrays</strong>, you need to specify a comma-separated sequence of indices. To see how it works, let us create the <code class="docutils literal notranslate"><span class="pre">integers</span></code> two-dimensional array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
-<span class="n">integers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>integers: np.ndarray = np.array([list(range(i, i + 3)) for i in [1, 4, 7]])
+integers
 </pre></div>
 </div>
 </div>
@@ -1182,7 +1182,7 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>If we want to access the item located in the first row of the matrix, second column (i.e. <code class="docutils literal notranslate"><span class="pre">2</span></code>), we use the <code class="docutils literal notranslate"><span class="pre">[0,</span> <span class="pre">1]</span></code> index (remember that we start counting from 0).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>integers[0, 1]
 </pre></div>
 </div>
 </div>
@@ -1195,13 +1195,13 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>To access the element placed at the middle of the <code class="docutils literal notranslate"><span class="pre">integers</span></code> matrix (i.e. <code class="docutils literal notranslate"><span class="pre">5</span></code>), we can find the middle point of each dimension as follows. (Notice that the following code will only work for a matrix whose dimension sizes are both odd!)</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">integers</span><span class="o">.</span><span class="n">shape</span>
-<span class="n">middle_rows</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">rows</span> <span class="o">//</span> <span class="mi">2</span>
-<span class="n">middle_columns</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">columns</span> <span class="o">//</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rows, columns = integers.shape
+middle_rows: int = rows // 2
+middle_columns: int = columns // 2
     
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Middle index rows: </span><span class="si">{</span><span class="n">middle_rows</span><span class="si">}</span><span class="s1">, Middle index columns: </span><span class="si">{</span><span class="n">middle_columns</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+print(f&#39;Middle index rows: {middle_rows}, Middle index columns: {middle_columns}&#39;)
 
-<span class="n">integers</span><span class="p">[</span><span class="n">middle_rows</span><span class="p">,</span> <span class="n">middle_columns</span><span class="p">]</span>
+integers[middle_rows, middle_columns]
 </pre></div>
 </div>
 </div>
@@ -1217,18 +1217,21 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>Finally, to access the last item in the two-dimensional array–that is, the element in the bottom-right corner (i.e. <code class="docutils literal notranslate"><span class="pre">9</span></code>), we can consider the size of each element and subtract <code class="docutils literal notranslate"><span class="pre">1</span></code> unit to each one of them. Then we use these new values as part of the sequence of indices.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rows</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">integers</span><span class="o">.</span><span class="n">shape</span>
-<span class="n">last_rows</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">rows</span> <span class="o">-</span> <span class="mi">1</span>
-<span class="n">last_columns</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">columns</span> <span class="o">-</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>rows, columns = integers.shape
+last_rows: int = rows - 1
+last_columns: int = columns - 1
     
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Last index rows: </span><span class="si">{</span><span class="n">last_rows</span><span class="si">}</span><span class="s1">, Last index columns: </span><span class="si">{</span><span class="n">last_columns</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+print(f&#39;Last index rows: {last_rows}, Last index columns: {last_columns}&#39;)
 
-<span class="n">integers</span><span class="p">[</span><span class="n">last_rows</span><span class="p">,</span> <span class="n">last_columns</span><span class="p">]</span>
+integers[last_rows, last_columns]
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Last index rows: 2, Last index columns: 2
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>
 </pre></div>
 </div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>9
@@ -1239,8 +1242,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>NumPy arrays are mutable, meaning that you can directly modify their values. In the following cell, we modify the first element of the matrix <code class="docutils literal notranslate"><span class="pre">integers</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">integers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>integers[0, 0] = 100
+integers
 </pre></div>
 </div>
 </div>
@@ -1283,8 +1286,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>Now, let us go back to our <code class="docutils literal notranslate"><span class="pre">primes</span></code> array and let us slice it in different ways.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">primes</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">11</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">29</span><span class="p">])</span>
-<span class="n">primes</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>primes: np.ndarray = np.array([2, 3, 5, 7, 11, 13, 17, 19, 23, 29])
+primes
 </pre></div>
 </div>
 </div>
@@ -1297,8 +1300,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>In the following cell, we only consider the first five items of the <code class="docutils literal notranslate"><span class="pre">primes</span></code> array. Notice that the element placed at the 5<span class="math notranslate nohighlight">\(^{th}\)</span> position won’t be included.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_five</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
-<span class="n">first_five</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>first_five: np.ndarray = primes[:5]
+first_five
 </pre></div>
 </div>
 </div>
@@ -1311,9 +1314,9 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>Computing the middle point manually might be error-prone. We can, therefore, compute the index in an integer variable (a.k.a. <code class="docutils literal notranslate"><span class="pre">middle</span></code>), and use it to define where half of the array starts. In the following cell, we consider all items placed in the second half of the array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">middle</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> 
-<span class="n">last_half</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="n">middle</span><span class="p">:]</span>
-<span class="n">last_half</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>middle: int = len(primes) // 2 
+last_half: np.ndarray = primes[middle:]
+last_half
 </pre></div>
 </div>
 </div>
@@ -1326,8 +1329,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>In the following cell, we specify both the <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">stop</span></code> attributes to take the two middle values of the array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">two_middle</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">]</span>
-<span class="n">two_middle</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>two_middle: np.ndarray = primes[4:6]
+two_middle
 </pre></div>
 </div>
 </div>
@@ -1340,8 +1343,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>Finally, we can start using the <code class="docutils literal notranslate"><span class="pre">step</span></code> attribute. If we set it to <code class="docutils literal notranslate"><span class="pre">2</span></code> without specifying any other value for the <code class="docutils literal notranslate"><span class="pre">start</span></code> and <code class="docutils literal notranslate"><span class="pre">stop</span></code> attributes, we will get every two elements from the array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">every_two</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[::</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">every_two</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>every_two: np.ndarray = primes[::2]
+every_two
 </pre></div>
 </div>
 </div>
@@ -1354,9 +1357,9 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>We can go further and decide to consider every two elements only in the last half of the array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">middle</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">primes</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> 
-<span class="n">every_two_half</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">primes</span><span class="p">[</span><span class="n">middle</span><span class="p">::</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">every_two_half</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>middle: int = len(primes) // 2 
+every_two_half: np.ndarray = primes[middle::2]
+every_two_half
 </pre></div>
 </div>
 </div>
@@ -1374,8 +1377,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>Let us have a look at the <code class="docutils literal notranslate"><span class="pre">integers</span></code> matrix.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
-<span class="n">integers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>integers: np.ndarray = np.array([list(range(i, i + 3)) for i in [1, 4, 7]])
+integers
 </pre></div>
 </div>
 </div>
@@ -1389,8 +1392,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick first two rows and first two columns</span>
-<span class="n">integers</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Pick first two rows and first two columns
+integers[:2, :2]
 </pre></div>
 </div>
 </div>
@@ -1403,8 +1406,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick last two rows and last two columns</span>
-<span class="n">integers</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span> <span class="mi">1</span><span class="p">:]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Pick last two rows and last two columns
+integers[1:, 1:]
 </pre></div>
 </div>
 </div>
@@ -1417,8 +1420,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick all rows and column in position 2 (last column)</span>
-<span class="n">integers</span><span class="p">[:,</span> <span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Pick all rows and column in position 2 (last column)
+integers[:, 2]
 </pre></div>
 </div>
 </div>
@@ -1430,8 +1433,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick first row and all columns</span>
-<span class="n">integers</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Pick first row and all columns
+integers[0, :]
 </pre></div>
 </div>
 </div>
@@ -1443,8 +1446,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick first row and all columns (another way)</span>
-<span class="n">integers</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Pick first row and all columns (another way)
+integers[0]
 </pre></div>
 </div>
 </div>
@@ -1456,8 +1459,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pick all rows and every two steps pick a column</span>
-<span class="n">integers</span><span class="p">[:,</span> <span class="p">::</span><span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Pick all rows and every two steps pick a column
+integers[:, ::2]
 </pre></div>
 </div>
 </div>
@@ -1475,8 +1478,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>A difference of foremost importance between NumPy arrays and Python lists is that array slices return <strong>views</strong> instead of <strong>copies</strong> of the data. This means that if you modify the array slices you are actually modifying the underlying data. This property is very useful especially when dealing with large datasets: we can focus on the data we need to modify and there is no need to handle extra copies.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sub_integers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">integers</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span>
-<span class="n">sub_integers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sub_integers: np.ndarray = integers[:2, :2]
+sub_integers
 </pre></div>
 </div>
 </div>
@@ -1489,9 +1492,9 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Change the first value of the view</span>
-<span class="n">sub_integers</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">sub_integers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Change the first value of the view
+sub_integers[0, 0] = 100
+sub_integers
 </pre></div>
 </div>
 </div>
@@ -1504,8 +1507,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># the integers matrix has been also updated</span>
-<span class="n">integers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># the integers matrix has been also updated
+integers
 </pre></div>
 </div>
 </div>
@@ -1520,8 +1523,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>However, the <em>views</em> property comes at a cost: if you just wanted to experiment with your data without really aiming at modifying it, you can end up with a polluted dataset. If you prefer to work with a copy, you need to be explicit about it. Luckily, NumPy provides the method <code class="docutils literal notranslate"><span class="pre">copy()</span></code>, which will help you in this regard.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">3</span><span class="p">))</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">]])</span>
-<span class="n">integers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>integers: np.ndarray = np.array([list(range(i, i + 3)) for i in [1, 4, 7]])
+integers
 </pre></div>
 </div>
 </div>
@@ -1535,9 +1538,9 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a copy instead</span>
-<span class="n">sub_integers</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span> <span class="o">=</span> <span class="n">integers</span><span class="p">[:</span><span class="mi">2</span><span class="p">,</span> <span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-<span class="n">sub_integers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Create a copy instead
+sub_integers: np.ndarray = integers[:2, :2].copy()
+sub_integers
 </pre></div>
 </div>
 </div>
@@ -1550,9 +1553,9 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Update first item of the copy</span>
-<span class="n">sub_integers</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span>
-<span class="n">sub_integers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Update first item of the copy
+sub_integers[0, 0] = 100
+sub_integers
 </pre></div>
 </div>
 </div>
@@ -1565,8 +1568,8 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># The integers matrix is intact</span>
-<span class="n">integers</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># The integers matrix is intact
+integers
 </pre></div>
 </div>
 </div>
@@ -1585,7 +1588,7 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>We can use Boolean arrays to mask (or filter) values in the array. Suppose that we would like to get all values from the <code class="docutils literal notranslate"><span class="pre">integers</span></code> array that are greater than or equal to 5. Let us first create the Boolean array and see how it looks like.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span> <span class="o">&gt;=</span> <span class="mi">5</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>integers &gt;= 5
 </pre></div>
 </div>
 </div>
@@ -1601,7 +1604,7 @@ Three-dimensional array: itemsize=8 bytes, nbytes=288 bytes
 <p>Now, if we want to mask the <code class="docutils literal notranslate"><span class="pre">integers</span></code> array and consider the subset of data points that are greater than or equal to 5, we need to use the Boolean array to index on the boolean condition.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">integers</span><span class="p">[</span><span class="n">integers</span> <span class="o">&gt;=</span> <span class="mi">5</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>integers[integers &gt;= 5]
 </pre></div>
 </div>
 </div>

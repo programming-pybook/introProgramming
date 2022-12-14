@@ -702,7 +702,7 @@ of instructions over and over again, without copying-and-pasting these instructi
 <p>We have already seen examples of <strong>function calls</strong>, for instance:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>type(42)
 </pre></div>
 </div>
 </div>
@@ -725,7 +725,7 @@ is called the <strong>return value</strong>.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">int</span></code> function takes any value and converts it to an integer, if it can, or it will give an error message otherwise:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;32&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>int(&#39;32&#39;)
 </pre></div>
 </div>
 </div>
@@ -737,14 +737,14 @@ is called the <strong>return value</strong>.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="s1">&#39;Integer&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>int(&#39;Integer&#39;)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">int</span><span class="p">(</span><span class="s1">&#39;Integer&#39;</span><span class="p">)</span>
 
 <span class="ne">ValueError</span>: invalid literal for int() with base 10: &#39;Integer&#39;
@@ -756,7 +756,7 @@ is called the <strong>return value</strong>.</p>
 fraction part:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">int</span><span class="p">(</span><span class="mf">3.9999</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>int(3.9999)
 </pre></div>
 </div>
 </div>
@@ -769,14 +769,14 @@ fraction part:</p>
 <p><code class="docutils literal notranslate"><span class="pre">float</span></code> converts strings and integers into floats.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="mi">32</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>float(32)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">float</span><span class="p">(</span><span class="s1">&#39;3.14159&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>float(&#39;3.14159&#39;)
 </pre></div>
 </div>
 </div>
@@ -784,7 +784,7 @@ fraction part:</p>
 <p><code class="docutils literal notranslate"><span class="pre">str</span></code> converts its argument into a string:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">str</span><span class="p">(</span><span class="mf">3.14159</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>str(3.14159)
 </pre></div>
 </div>
 </div>
@@ -792,7 +792,7 @@ fraction part:</p>
 <p>There are other functions to compute the largest and smallest element in a list or string: <code class="docutils literal notranslate"><span class="pre">max</span></code> and <code class="docutils literal notranslate"><span class="pre">min</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="s1">&#39;I am a data scientist&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>max(&#39;I am a data scientist&#39;)
 </pre></div>
 </div>
 </div>
@@ -804,7 +804,7 @@ fraction part:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">min</span><span class="p">(</span><span class="s1">&#39;I am a data scientist&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>min(&#39;I am a data scientist&#39;)
 </pre></div>
 </div>
 </div>
@@ -817,7 +817,7 @@ fraction part:</p>
 <p>Another common function is <code class="docutils literal notranslate"><span class="pre">len</span></code>, which returns the length of a list or a string.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="s1">&#39;I am a data scientist&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>len(&#39;I am a data scientist&#39;)
 </pre></div>
 </div>
 </div>
@@ -834,7 +834,7 @@ fraction part:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -856,7 +856,7 @@ fraction part:</p>
 <p>Before we can use the functions in a module, we have to import it with an import statement:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import math
 </pre></div>
 </div>
 </div>
@@ -865,7 +865,7 @@ fraction part:</p>
 get some information about it:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>math
 </pre></div>
 </div>
 </div>
@@ -881,11 +881,11 @@ get some information about it:</p>
 function, separated by a dot (also known as a period). This format is called <strong>dot notation</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">signal_power</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="n">noise_power</span> <span class="p">:</span> <span class="nb">int</span>  <span class="o">=</span> <span class="mi">5</span>
-<span class="n">ratio</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">signal_power</span> <span class="o">/</span> <span class="n">noise_power</span>
-<span class="n">decibels</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">ratio</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">decibels</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>signal_power : int = 25
+noise_power : int  = 5
+ratio : float = signal_power / noise_power
+decibels : float = 10 * math.log10(ratio)
+print(decibels)
 </pre></div>
 </div>
 </div>
@@ -900,7 +900,7 @@ function, separated by a dot (also known as a period). This format is called <st
 <p>Its value is a floating point approximation of π in 15 digits.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(math.pi)
 </pre></div>
 </div>
 </div>
@@ -916,7 +916,7 @@ function, separated by a dot (also known as a period). This format is called <st
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -946,13 +946,13 @@ function, separated by a dot (also known as a period). This format is called <st
 <p>The following function generates 5 pseudorandom numbers by using the <code class="docutils literal notranslate"><span class="pre">random</span></code> function. Run it multiple times to check its output:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import random
 
-<span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">:</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+i : int = 0
+while i &lt; 5:
+    x = random.random()
+    print(x)
+    i+=1
     
 </pre></div>
 </div>
@@ -973,7 +973,7 @@ function, separated by a dot (also known as a period). This format is called <st
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -984,11 +984,11 @@ function, separated by a dot (also known as a period). This format is called <st
 <p>The program:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">signal_power</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">25</span>
-<span class="n">noise_power</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="n">ratio</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">signal_power</span> <span class="o">/</span> <span class="n">noise_power</span>
-<span class="n">decibels</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">ratio</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">decibels</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>signal_power : int = 25
+noise_power : int = 5
+ratio : float = signal_power / noise_power
+decibels : float = 10 * math.log10(ratio)
+print(decibels)
 </pre></div>
 </div>
 </div>
@@ -1002,9 +1002,9 @@ more complicated expression.</p>
 kind of expression, including arithmetic operators:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">degrees</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">45.0</span>
-<span class="n">x</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">degrees</span> <span class="o">/</span> <span class="mf">360.0</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>degrees : float = 45.0
+x : float = math.sin(degrees / 360.0 * 2 * math.pi)
+print(x)
 </pre></div>
 </div>
 </div>
@@ -1012,8 +1012,8 @@ kind of expression, including arithmetic operators:</p>
 <p>And even function calls:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x : float = math.exp(math.log(x+1))
+print(x)
 </pre></div>
 </div>
 </div>
@@ -1023,10 +1023,10 @@ the left side of an assignment statement has to be a variable name. Any other
 expression on the left side is a syntax error (we will see exceptions to this rule later).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hours</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">minutes</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">hours</span> <span class="o">*</span> <span class="mi">60</span> <span class="c1"># correct</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>hours : int = 2
+minutes : int = hours * 60 # correct
 
-<span class="n">minutes</span>
+minutes
 </pre></div>
 </div>
 </div>
@@ -1038,7 +1038,7 @@ expression on the left side is a syntax error (we will see exceptions to this ru
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">hours</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">=</span> <span class="n">minutes</span> <span class="c1"># wrong</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>hours * 60 = minutes # wrong
 </pre></div>
 </div>
 </div>
@@ -1063,7 +1063,7 @@ the priorities (PEDMAS) into consideration.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1084,10 +1084,10 @@ if you copy and paste five or more statements please create a function.</p>
 sequence of statements that run when the function is called.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_hello</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_hello():
+    print(&quot;Hello&quot;)
     
-<span class="n">print_hello</span><span class="p">()</span>
+print_hello()
 </pre></div>
 </div>
 </div>
@@ -1116,7 +1116,7 @@ with the same name.</p>
 <p>Defining a function creates a <strong>function object</strong>, which has type function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">print_hello</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(print_hello)
 </pre></div>
 </div>
 </div>
@@ -1128,7 +1128,7 @@ with the same name.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="n">print_hello</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>type(print_hello)
 </pre></div>
 </div>
 </div>
@@ -1140,7 +1140,7 @@ with the same name.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_hello</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print_hello()
 </pre></div>
 </div>
 </div>
@@ -1153,10 +1153,10 @@ with the same name.</p>
 <p>You can define another function <code class="docutils literal notranslate"><span class="pre">print_name</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_data_scientists</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data Scientists&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_data_scientists():
+    print(&quot;Data Scientists&quot;)
     
-<span class="n">print_data_scientists</span><span class="p">()</span>
+print_data_scientists()
 </pre></div>
 </div>
 </div>
@@ -1169,16 +1169,16 @@ with the same name.</p>
 <p>You can define a new function <code class="docutils literal notranslate"><span class="pre">print_greeting</span></code> that calls the other 2 functions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_greeting</span><span class="p">():</span>
-    <span class="n">print_hello</span><span class="p">()</span>
-    <span class="n">print_data_scientists</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_greeting():
+    print_hello()
+    print_data_scientists()
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_greeting</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print_greeting()
 </pre></div>
 </div>
 </div>
@@ -1195,7 +1195,7 @@ Data Scientists
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1207,13 +1207,13 @@ Data Scientists
 short for “documentation”).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_squares</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot; prints the squares of 1 up to 5</span>
-<span class="sd">        and it does not return a value.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;1, 4, 9, 16, 25&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_squares():
+    &quot;&quot;&quot; prints the squares of 1 up to 5
+        and it does not return a value.
+    &quot;&quot;&quot;
+    print(&quot;1, 4, 9, 16, 25&quot;)
     
-<span class="n">print_squares</span><span class="p">()</span>
+print_squares()
 </pre></div>
 </div>
 </div>
@@ -1235,16 +1235,16 @@ what type each parameter should be (if it is not obvious).</p>
 of your functions, maybe the interface could be improved.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_squares</span><span class="p">():</span>
-    <span class="sd">&quot;&quot;&quot; prints the squares of 1 up to 5.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_squares():
+    &quot;&quot;&quot; prints the squares of 1 up to 5.
+    &quot;&quot;&quot;
+    i : int = 1
         
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    while i &lt; 6:
+        print(i**2)
+        i += 1
         
-<span class="n">print_squares</span><span class="p">()</span>
+print_squares()
 </pre></div>
 </div>
 </div>
@@ -1264,17 +1264,17 @@ of your functions, maybe the interface could be improved.</p>
 <p>Pulling together the code fragments from the previous section, you get the following program.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_data_scientists</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data Scientists&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_data_scientists():
+    print(&quot;Data Scientists&quot;)
     
-<span class="k">def</span> <span class="nf">print_hello</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+def print_hello():
+    print(&quot;Hello&quot;)
     
-<span class="k">def</span> <span class="nf">print_greeting</span><span class="p">():</span>
-    <span class="n">print_hello</span><span class="p">()</span>
-    <span class="n">print_data_scientists</span><span class="p">()</span>
+def print_greeting():
+    print_hello()
+    print_data_scientists()
     
-<span class="n">print_greeting</span><span class="p">()</span>
+print_greeting()
 </pre></div>
 </div>
 </div>
@@ -1290,7 +1290,7 @@ function definition generates no output.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1319,9 +1319,9 @@ function definition generates no output.</p>
 <p>In this course, you are <strong>required</strong> to provide the types of the arguments of a function explicitly by means of <em>type hints</em> when they are known in advance!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_text_twice</span><span class="p">(</span><span class="n">text_arg</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">text_arg</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">text_arg</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_text_twice(text_arg : str):
+    print(text_arg)
+    print(text_arg)
 </pre></div>
 </div>
 </div>
@@ -1330,9 +1330,9 @@ function definition generates no output.</p>
 <p>In the next cell we do not know the type of the arguments, so we  provide the type <code class="docutils literal notranslate"><span class="pre">any</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_twice</span><span class="p">(</span><span class="n">text_arg</span> <span class="p">:</span> <span class="nb">any</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">text_arg</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">text_arg</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_twice(text_arg : any):
+    print(text_arg)
+    print(text_arg)
 </pre></div>
 </div>
 </div>
@@ -1342,7 +1342,7 @@ function definition generates no output.</p>
 <p>This function works with any value that can be printed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_twice</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print_twice(42)
 </pre></div>
 </div>
 </div>
@@ -1355,7 +1355,7 @@ function definition generates no output.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_twice</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print_twice(math.pi)
 </pre></div>
 </div>
 </div>
@@ -1368,7 +1368,7 @@ function definition generates no output.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_twice</span><span class="p">(</span><span class="s1">&#39;Data Science &#39;</span> <span class="o">*</span> <span class="mi">6</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print_twice(&#39;Data Science &#39; * 6)
 </pre></div>
 </div>
 </div>
@@ -1384,9 +1384,9 @@ Data Science Data Science Data Science Data Science Data Science Data Science
 <p>The name of the variable is independent of the name of the argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cs_str</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Computer Science&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>cs_str : str = &#39;Computer Science&#39;
 
-<span class="n">print_twice</span><span class="p">(</span><span class="n">cs_str</span><span class="p">)</span>
+print_twice(cs_str)
 </pre></div>
 </div>
 </div>
@@ -1403,11 +1403,11 @@ Computer Science
 <p>It is possible to create a local variable inside a function, which means that it only exists inside the function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">concat</span><span class="p">(</span><span class="n">part1</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">part2</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="n">cc_result</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">part1</span> <span class="o">+</span> <span class="n">part2</span>
-    <span class="n">print_twice</span><span class="p">(</span><span class="n">cc_result</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def concat(part1 : str, part2 : str):
+    cc_result : str = part1 + part2
+    print_twice(cc_result)
     
-<span class="n">concat</span><span class="p">(</span><span class="s1">&#39;Data &#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">)</span>
+concat(&#39;Data &#39;, &#39;Science&#39;)
 </pre></div>
 </div>
 </div>
@@ -1421,7 +1421,7 @@ Data Science
 <p>You cannot use the local variables outside the function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">cc_result</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(cc_result)
 </pre></div>
 </div>
 </div>
@@ -1439,7 +1439,7 @@ Data Science
 <p>Local variables and parameters are invisible outside the function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">part1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(part1)
 </pre></div>
 </div>
 </div>
@@ -1457,12 +1457,12 @@ Data Science
 <p>Which value will the following code print?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">greeting</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Hello!&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>greeting : str = &quot;Hello!&quot;
 
-<span class="k">def</span> <span class="nf">print_greeting</span><span class="p">():</span>
-    <span class="n">greeting</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;Hoi!&quot;</span>
+def print_greeting():
+    greeting : str = &quot;Hoi!&quot;
     
-<span class="nb">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+print(greeting)
 </pre></div>
 </div>
 </div>
@@ -1482,8 +1482,8 @@ Data Science
 <p>A <strong>void function</strong> is a function that returns nothing.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
-<span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import math
+math.sqrt(5)
 </pre></div>
 </div>
 </div>
@@ -1496,8 +1496,8 @@ Data Science
 <p>In order to “capture” the value you have to assign the result of the function to a variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>result : float = math.sqrt(5)
+print(result)
 </pre></div>
 </div>
 </div>
@@ -1514,7 +1514,7 @@ do not have a return value.</p>
 called <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ai</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">print_twice</span><span class="p">(</span><span class="s1">&#39;Artifial Intelligence&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>ai : str = print_twice(&#39;Artifial Intelligence&#39;)
 </pre></div>
 </div>
 </div>
@@ -1527,7 +1527,7 @@ Artifial Intelligence
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">ai</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(ai)
 </pre></div>
 </div>
 </div>
@@ -1543,20 +1543,20 @@ Artifial Intelligence
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def sum(x: int, y: int) -&gt; int:
+    return x + y
 
-<span class="nb">print</span><span class="p">(</span><span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+print(sum(1, 2))
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">+</span> <span class="n">y</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def sum(x: int, y: int) -&gt; None:
+    print(x + y)
 
-<span class="nb">sum</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+sum(1, 2)
 </pre></div>
 </div>
 </div>
@@ -1568,16 +1568,16 @@ Artifial Intelligence
 <p>Functions can also return booleans.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_divisible</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates whether x is divisible by y&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def is_divisible(x : int, y : int) -&gt; bool:
+    &quot;&quot;&quot;calculates whether x is divisible by y&quot;&quot;&quot;
     
-    <span class="nb">print</span><span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">y</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">%</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
+    print(x % y)
+    if x % y == 0:
+        return True
+    else:
+        return False
     
-<span class="n">is_divisible</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+is_divisible(6, 3)
 </pre></div>
 </div>
 </div>
@@ -1593,12 +1593,12 @@ Artifial Intelligence
 <p>The result of the <code class="docutils literal notranslate"><span class="pre">==</span></code> operator is a boolean, so the <code class="docutils literal notranslate"><span class="pre">is_divisible</span></code> function can be more concise.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">is_divisible</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;caculates whether x is divisible by y&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def is_divisible(x : int, y : int) -&gt; bool:
+    &quot;&quot;&quot;caculates whether x is divisible by y&quot;&quot;&quot;
     
-    <span class="k">return</span> <span class="n">x</span> <span class="o">%</span> <span class="n">y</span> <span class="o">==</span> <span class="mi">0</span>
+    return x % y == 0
 
-<span class="n">is_divisible</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+is_divisible(6, 3)
 </pre></div>
 </div>
 </div>
@@ -1611,10 +1611,10 @@ Artifial Intelligence
 <p>Functions return boolean values can be used in conditional expressions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="n">y</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span>
-<span class="k">if</span> <span class="n">is_divisible</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x is divisible by y&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x : int = 10
+y : int = 5
+if is_divisible(x, y):
+    print(&#39;x is divisible by y&#39;)
 </pre></div>
 </div>
 </div>
@@ -1631,7 +1631,7 @@ Artifial Intelligence
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1645,17 +1645,17 @@ Artifial Intelligence
 <p>The first example is the function <code class="docutils literal notranslate"><span class="pre">area</span></code>, which returns the area of a circle with the given radius:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import math
 
-<span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">radius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates the size of a circle given its radius</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def area(radius : int) -&gt; float:
+    &quot;&quot;&quot;calculates the size of a circle given its radius
+    &quot;&quot;&quot;
     
-    <span class="n">sz</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
-    <span class="k">return</span> <span class="n">sz</span>
+    sz : float = math.pi * radius**2
+    return sz
 
-<span class="n">size</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">area</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">size</span><span class="p">)</span>
+size : float = area(5)
+print(size)
 </pre></div>
 </div>
 </div>
@@ -1673,12 +1673,12 @@ and use the following expression as a return value.”</p>
 complicated, so we could have written this function more concisely:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">area</span><span class="p">(</span><span class="n">radius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates the size of a circle given its radius</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">radius</span><span class="o">**</span><span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def area(radius : int) -&gt; float:
+    &quot;&quot;&quot;calculates the size of a circle given its radius
+    &quot;&quot;&quot;
+    return math.pi * radius**2
 
-<span class="nb">print</span><span class="p">(</span><span class="n">area</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+print(area(5))
 </pre></div>
 </div>
 </div>
@@ -1699,18 +1699,18 @@ complicated, so we could have written this function more concisely:</p>
 <p>Some programmers, and I am one of them, have a different opinion, they claim that for understandability it is better to have just one <code class="docutils literal notranslate"><span class="pre">return</span></code> statement in a function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">absolute_value</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;transforms a negative value into a positive value</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def absolute_value(x : int) -&gt; int:
+    &quot;&quot;&quot;transforms a negative value into a positive value
+    &quot;&quot;&quot;
     
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="o">-</span><span class="n">x</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">x</span>
+    if x &lt; 0:
+        return -x
+    else:
+        return x
     
 
-<span class="n">y</span> <span class="o">=</span> <span class="n">absolute_value</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+y = absolute_value(-10)
+print(y)
 </pre></div>
 </div>
 </div>
@@ -1727,16 +1727,16 @@ of execution cannot reach, is called <strong>dead code</strong>.</p>
 <p>In a fruitful function, it is a good idea to ensure that every possible path through the program hits a <code class="docutils literal notranslate"><span class="pre">return</span></code> statement</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">absolute_value</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;transforms a negative value into a positive value</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="o">-</span><span class="n">x</span>
-    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">x</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def absolute_value(x : int) -&gt; int:
+    &quot;&quot;&quot;transforms a negative value into a positive value
+    &quot;&quot;&quot;
+    if x &lt; 0:
+        return -x
+    if x &gt; 0:
+        return x
     
-<span class="n">x</span> <span class="o">=</span> <span class="n">absolute_value</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="o">+</span><span class="n">x</span><span class="p">)</span>
+x = absolute_value(-10)
+print(x+x)
 </pre></div>
 </div>
 </div>
@@ -1751,8 +1751,8 @@ function ends without reaching a <code class="docutils literal notranslate"><spa
 <p>If the flow of execution gets to the end of a function, the return value is <code class="docutils literal notranslate"><span class="pre">None</span></code>, which is not the absolute value of 0.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">val</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">absolute_value</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>val : int = absolute_value(0)
+print(val)
 </pre></div>
 </div>
 </div>
@@ -1768,25 +1768,25 @@ of the circle and a point on the perimeter.</p>
 <p>We have created the two relevant functions <code class="docutils literal notranslate"><span class="pre">distance</span></code> and <code class="docutils literal notranslate"><span class="pre">circle_area</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">distance</span><span class="p">(</span><span class="n">x1</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y1</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">x2</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y2</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates the distance between 2 2-dimensional point</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def distance(x1 : int, y1 : int, x2 : int, y2 : int) -&gt; float:
+    &quot;&quot;&quot;calculates the distance between 2 2-dimensional point
+    &quot;&quot;&quot;
     
-    <span class="n">dx</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">x2</span> <span class="o">-</span> <span class="n">x1</span>
-    <span class="n">dy</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">y2</span> <span class="o">-</span> <span class="n">y1</span>
-    <span class="n">dsquared</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">dx</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">dy</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">result</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">dsquared</span><span class="p">)</span>
+    dx : int = x2 - x1
+    dy : int = y2 - y1
+    dsquared : int = dx**2 + dy**2
+    result : float = math.sqrt(dsquared)
     
-    <span class="k">return</span> <span class="n">result</span>
+    return result
 
-<span class="k">def</span> <span class="nf">circle_area</span><span class="p">(</span><span class="n">xc</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">yc</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">xp</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">yp</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates the area of a circle based on the center and</span>
-<span class="sd">    a point on the circle&quot;&quot;&quot;</span>
-    <span class="n">radius</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">distance</span><span class="p">(</span><span class="n">xc</span><span class="p">,</span> <span class="n">yc</span><span class="p">,</span> <span class="n">xp</span><span class="p">,</span> <span class="n">yp</span><span class="p">)</span>
-    <span class="n">result</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">area</span><span class="p">(</span><span class="n">radius</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">result</span>
+def circle_area(xc : int, yc : int, xp : int, yp : int) -&gt; float:
+    &quot;&quot;&quot;calculates the area of a circle based on the center and
+    a point on the circle&quot;&quot;&quot;
+    radius : float = distance(xc, yc, xp, yp)
+    result : float = area(radius)
+    return result
 
-<span class="n">circle_area</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+circle_area(1, 3, 4, 6)
 </pre></div>
 </div>
 </div>
@@ -1799,13 +1799,13 @@ of the circle and a point on the perimeter.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">circle_area</span></code> function can be refactor in order to get rid of the local variables.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">circle_area</span><span class="p">(</span><span class="n">xc</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">yc</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">xp</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">yp</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates the area of a circle based on the center and</span>
-<span class="sd">    a point on the circle&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def circle_area(xc : int, yc : int, xp : int, yp : int) -&gt; float:
+    &quot;&quot;&quot;calculates the area of a circle based on the center and
+    a point on the circle&quot;&quot;&quot;
     
-    <span class="k">return</span> <span class="n">area</span><span class="p">(</span><span class="n">distance</span><span class="p">(</span><span class="n">xc</span><span class="p">,</span> <span class="n">yc</span><span class="p">,</span> <span class="n">xp</span><span class="p">,</span> <span class="n">yp</span><span class="p">))</span>
+    return area(distance(xc, yc, xp, yp))
 
-<span class="n">circle_area</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+circle_area(1, 3, 4, 6)
 </pre></div>
 </div>
 </div>
@@ -1818,19 +1818,19 @@ of the circle and a point on the perimeter.</p>
 to ensure that the given argument does not lead to unwanted behaviour.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">countdown</span><span class="p">(</span><span class="n">nr</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;print numbers in a decreasing order&quot;&quot;&quot;</span>
-    <span class="k">while</span> <span class="p">(</span><span class="n">nr</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">nr</span><span class="p">)</span>
-        <span class="n">nr</span> <span class="o">-=</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done!&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def countdown(nr : int) -&gt; None:
+    &quot;&quot;&quot;print numbers in a decreasing order&quot;&quot;&quot;
+    while (nr != 0):
+        print(nr)
+        nr -= 1
+    print(&quot;Done!&quot;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countdown</span><span class="p">(</span><span class="mi">15</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>countdown(15)
 </pre></div>
 </div>
 </div>
@@ -1857,14 +1857,14 @@ Done!
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countdown</span><span class="p">(</span><span class="o">-</span><span class="mi">15</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>countdown(-15)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countdown</span><span class="p">(</span><span class="mf">1.5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>countdown(1.5)
 </pre></div>
 </div>
 </div>
@@ -1875,25 +1875,25 @@ Done!
 <p>We can solve this problem by checking the type of the argument of <code class="docutils literal notranslate"><span class="pre">countdown</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">countdown</span><span class="p">(</span><span class="n">nr</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;print numbers in a decreasing order&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def countdown(nr : int) -&gt; None:
+    &quot;&quot;&quot;print numbers in a decreasing order&quot;&quot;&quot;
     
-    <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">nr</span><span class="p">,</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;countdown is only defined for integers.&#39;</span><span class="p">)</span>
-    <span class="k">elif</span> <span class="n">nr</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;countdown is not defined for negative integers.&#39;</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="k">while</span> <span class="p">(</span><span class="n">nr</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">):</span>
-            <span class="nb">print</span><span class="p">(</span><span class="n">nr</span><span class="p">)</span>
-            <span class="n">nr</span> <span class="o">-=</span> <span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Done!&quot;</span><span class="p">)</span>
+    if not isinstance(nr, int):
+        print(&#39;countdown is only defined for integers.&#39;)
+    elif nr &lt; 0:
+        print(&#39;countdown is not defined for negative integers.&#39;)
+    else:
+        while (nr != 0):
+            print(nr)
+            nr -= 1
+    print(&quot;Done!&quot;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">countdown</span><span class="p">(</span><span class="o">-</span><span class="mf">1.5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>countdown(-1.5)
 </pre></div>
 </div>
 </div>

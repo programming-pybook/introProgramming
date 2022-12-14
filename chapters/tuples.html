@@ -613,8 +613,8 @@ title="Print to PDF"
 <h1>Tuples <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#tuples" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import Dict, List, Tuple
+import random
 </pre></div>
 </div>
 </div>
@@ -630,9 +630,9 @@ title="Print to PDF"
 <p>The following cells show a tuple with 5 elements, in the second cell <em>parentheses</em> are used to denote the tuple.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;computer&#39;</span><span class="p">,</span> <span class="s1">&#39;science&#39;</span><span class="p">,</span> <span class="s1">&#39;artificial&#39;</span><span class="p">,</span> <span class="s1">&#39;intelligence&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t : tuple = &#39;data&#39;, &#39;computer&#39;, &#39;science&#39;, &#39;artificial&#39;, &#39;intelligence&#39;
+print(t)
+type(t)
 </pre></div>
 </div>
 </div>
@@ -651,7 +651,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -660,10 +660,10 @@ title="Print to PDF"
 to add a comma as terminator</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t1</span> <span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="s1">&#39;programming&#39;</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t1 : tuple = &#39;programming&#39;,
 
-<span class="nb">print</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">t1</span><span class="p">)</span>
+print(t1)
+type(t1)
 </pre></div>
 </div>
 </div>
@@ -679,10 +679,10 @@ to add a comma as terminator</p>
 <p>A single value between parantheses is <em>not</em> a tuple.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t2</span> <span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;statistics&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t2 : tuple = (&#39;statistics&#39;)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">t2</span><span class="p">)</span>
+print(t2)
+type(t2)
 </pre></div>
 </div>
 </div>
@@ -701,7 +701,7 @@ to add a comma as terminator</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -709,10 +709,10 @@ to add a comma as terminator</p>
 <p>You can create a tuple via the built-in function <code class="docutils literal notranslate"><span class="pre">tuple</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t : tuple = tuple()
 
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+print(t)
+type(t)
 </pre></div>
 </div>
 </div>
@@ -728,10 +728,10 @@ to add a comma as terminator</p>
 <p>If the argument of the <code class="docutils literal notranslate"><span class="pre">tuple</span></code> function is a sequence (string, list, or tuple), the result is a tuple with the elements of the sequence.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="s1">&#39;engineering&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t : tuple = tuple(&#39;engineering&#39;)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+print(t)
+type(t)
 </pre></div>
 </div>
 </div>
@@ -750,8 +750,8 @@ to add a comma as terminator</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">artists</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;John Lennon&#39;</span><span class="p">,</span> <span class="s1">&#39;Amy Winehouse&#39;</span><span class="p">,</span> <span class="s1">&#39;Adele&#39;</span><span class="p">,</span> <span class="s1">&#39;Bon Jovi&#39;</span><span class="p">,</span> <span class="s1">&#39;The Rolling Stones&#39;</span><span class="p">]</span>
-<span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>artists = [&#39;John Lennon&#39;, &#39;Amy Winehouse&#39;, &#39;Adele&#39;, &#39;Bon Jovi&#39;, &#39;The Rolling Stones&#39;]
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -760,8 +760,8 @@ to add a comma as terminator</p>
 <p>Most list operators also work on tuples. The bracket operator indexes an element.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="s1">&#39;computer&#39;</span><span class="p">,</span> <span class="s1">&#39;science&#39;</span><span class="p">,</span> <span class="s1">&#39;artificial&#39;</span><span class="p">,</span> <span class="s1">&#39;intelligence&#39;</span><span class="p">)</span>
-<span class="n">t</span><span class="p">[</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t : tuple = (&#39;data&#39;, &#39;computer&#39;, &#39;science&#39;, &#39;artificial&#39;, &#39;intelligence&#39;)
+t[len(t) - 1]
 </pre></div>
 </div>
 </div>
@@ -774,7 +774,7 @@ to add a comma as terminator</p>
 <p>The slice operator allows you to select a range of elements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="mi">2</span><span class="p">:</span><span class="mi">4</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t[2:4]
 </pre></div>
 </div>
 </div>
@@ -790,7 +790,7 @@ to add a comma as terminator</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -798,14 +798,14 @@ to add a comma as terminator</p>
 <p>Tuples are immutable, so if you try to assign a value to a tuple element, you will get an error message.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Data&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t[0] = &#39;Data&#39;
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">13</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;Data&#39;</span>
 
 <span class="ne">TypeError</span>: &#39;tuple&#39; object does not support item assignment
@@ -817,9 +817,9 @@ to add a comma as terminator</p>
 <p>So, <em>tuples</em> have a strong resemblance with <em>strings</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="n">t</span> <span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;Data&#39;</span><span class="p">,)</span> <span class="o">+</span> <span class="n">t</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(t)
+t : tuple = (&#39;Data&#39;,) + t[1:]
+print(t)
 </pre></div>
 </div>
 </div>
@@ -837,7 +837,7 @@ to add a comma as terminator</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -853,7 +853,7 @@ so on, until it finds elements that differ.</p>
 they are really big).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,)</span> <span class="o">==</span> <span class="p">(</span><span class="s1">&#39;abc&#39;</span><span class="p">,</span><span class="s1">&#39;def&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>(&#39;abc&#39;,) == (&#39;abc&#39;,&#39;def&#39;)
 </pre></div>
 </div>
 </div>
@@ -865,7 +865,7 @@ they are really big).</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span> <span class="o">&lt;</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">40000</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>(0, 3, 20) &lt; (0, 3, 40000)
 </pre></div>
 </div>
 </div>
@@ -886,15 +886,15 @@ If there is a tie it considers the second one, and so on.</p>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poem</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;My tactic is to talk to you and listen to you and construct with words an indestructible bridge&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>poem : str = &#39;My tactic is to talk to you and listen to you and construct with words an indestructible bridge&#39;
 
-<span class="n">words</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">poem</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-<span class="n">length_words</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+words : list = poem.split()
+length_words : list = list()
 
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-    <span class="n">length_words</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">),</span> <span class="n">word</span><span class="p">))</span>
+for word in words:
+    length_words.append((len(word), word))
     
-<span class="n">length_words</span>
+length_words
 </pre></div>
 </div>
 </div>
@@ -928,9 +928,9 @@ If there is a tie it considers the second one, and so on.</p>
 With this we <em>decorate</em> the original sequence of words.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">length_words</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>length_words.sort(reverse=True)
 
-<span class="n">length_words</span>
+length_words
 </pre></div>
 </div>
 </div>
@@ -960,12 +960,12 @@ With this we <em>decorate</em> the original sequence of words.</p>
 <p>Afterwards, we <em>sort</em> the list of tuples (i.e. <code class="docutils literal notranslate"><span class="pre">length_words</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sort_words</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sort_words : list = list()
 
-<span class="k">for</span> <span class="n">length</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">length_words</span><span class="p">:</span>
-    <span class="n">sort_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+for length, word in length_words:
+    sort_words.append(word)
     
-<span class="nb">print</span><span class="p">(</span><span class="n">sort_words</span><span class="p">)</span>
+print(sort_words)
 </pre></div>
 </div>
 </div>
@@ -982,8 +982,8 @@ With this we <em>decorate</em> the original sequence of words.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">poem</span> <span class="o">=</span> <span class="s1">&#39;My tactic is to talk to you and listen to you and construct with words an indestructible bridge&#39;</span>
-<span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>poem = &#39;My tactic is to talk to you and listen to you and construct with words an indestructible bridge&#39;
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -996,12 +996,12 @@ With this we <em>decorate</em> the original sequence of words.</p>
 <p>We usually omit the use of parentheses on the left side of an assignment statement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">my_list</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>my_list : list = [&#39;Data&#39;, &#39;Science&#39;]
 
-<span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">my_list</span>
+a, b = my_list
 
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+print(a)
+print(b)
 </pre></div>
 </div>
 </div>
@@ -1015,15 +1015,15 @@ Science
 <p>If you want to swap the value of two variables you can use a temporary variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Data&#39;</span>
-<span class="n">b</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Computer&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a : str = &#39;Data&#39;
+b : str = &#39;Computer&#39;
 
-<span class="n">tmp</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">a</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">b</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">tmp</span>
+tmp : str = a
+a = b
+b = tmp
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+print(&#39;a =&#39;, a)
+print(&#39;b =&#39;, b)
 </pre></div>
 </div>
 </div>
@@ -1037,15 +1037,15 @@ b = Data
 <p>You can also use the <strong>tuple assignment</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Data&#39;</span>
-<span class="n">b</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Computer&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a : str = &#39;Data&#39;
+b : str = &#39;Computer&#39;
 
-<span class="nb">print</span><span class="p">((</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">))</span>
+print((b, a))
 
-<span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">=</span> <span class="p">(</span><span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
+(a, b) = (b, a)
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+print(&#39;a =&#39;, a)
+print(&#39;b =&#39;, b)
 </pre></div>
 </div>
 </div>
@@ -1071,9 +1071,9 @@ before any of the assignments.</p>
 </aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="s1">&#39;Computer&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a, b = &#39;Data&#39;, &#39;Computer&#39;
 
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+print(b)
 </pre></div>
 </div>
 </div>
@@ -1088,9 +1088,9 @@ before any of the assignments.</p>
 to split an email address into a user name and a domain, you could write:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">uname</span><span class="p">,</span> <span class="n">domain</span> <span class="o">=</span> <span class="s1">&#39;monty@python.org&#39;</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;@&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>uname, domain = &#39;monty@python.org&#39;.split(&#39;@&#39;)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">domain</span><span class="p">)</span>
+print(domain)
 </pre></div>
 </div>
 </div>
@@ -1103,8 +1103,8 @@ to split an email address into a user name and a domain, you could write:</p>
 <p>The return value from split is a list with two elements; the first element is assigned to <code class="docutils literal notranslate"><span class="pre">uname</span></code>, the second to <code class="docutils literal notranslate"><span class="pre">domain</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;uname =&#39;</span><span class="p">,</span> <span class="n">uname</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;domain =&#39;</span><span class="p">,</span> <span class="n">domain</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&#39;uname =&#39;, uname)
+print(&#39;domain =&#39;, domain)
 </pre></div>
 </div>
 </div>
@@ -1121,8 +1121,8 @@ domain = python.org
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">artist</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Rolling&#39;</span><span class="p">,</span> <span class="s1">&#39;Stones&#39;</span><span class="p">,</span> <span class="s1">&#39;The&#39;</span><span class="p">]</span>
-<span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>artist = [&#39;Rolling&#39;, &#39;Stones&#39;, &#39;The&#39;]
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1137,10 +1137,10 @@ domain = python.org
 <p>It is better to compute them both at the same time via the function <code class="docutils literal notranslate"><span class="pre">divmod</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="p">(</span><span class="n">quot</span><span class="p">,</span> <span class="n">rem</span><span class="p">)</span> <span class="o">=</span> <span class="n">t</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;quotient =&#39;</span><span class="p">,</span> <span class="n">quot</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;remainder =&#39;</span><span class="p">,</span> <span class="n">rem</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t : tuple = divmod(7, 3)
+(quot, rem) = t
+print(&#39;quotient =&#39;, quot)
+print(&#39;remainder =&#39;, rem)
 </pre></div>
 </div>
 </div>
@@ -1154,9 +1154,9 @@ remainder = 1
 <p>Using the tuple assignment you can obtain the results separately.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="n">quot</span><span class="p">,</span> <span class="n">rem</span><span class="p">)</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;quotient =&#39;</span><span class="p">,</span> <span class="n">quot</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;remainder =&#39;</span><span class="p">,</span> <span class="n">rem</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>(quot, rem) = divmod(7, 3)
+print(&#39;quotient =&#39;, quot)
+print(&#39;remainder =&#39;, rem)
 </pre></div>
 </div>
 </div>
@@ -1171,15 +1171,15 @@ remainder = 1
 <code class="docutils literal notranslate"><span class="pre">min</span></code> and <code class="docutils literal notranslate"><span class="pre">max</span></code> are built-in functions for finding the smallest and largest elements of a sequence.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Tuple
 
-<span class="k">def</span> <span class="nf">min_max</span><span class="p">(</span><span class="n">t</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Tuple</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;given a list return the min and the max value in the list</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def min_max(t : List[int]) -&gt; Tuple:
+    &quot;&quot;&quot;given a list return the min and the max value in the list
+    &quot;&quot;&quot;
     
-    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+    return min(t), max(t)
 
-<span class="n">min_max</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">9</span><span class="p">])</span>
+min_max([2,5,1,7,4,9])
 </pre></div>
 </div>
 </div>
@@ -1195,9 +1195,9 @@ remainder = 1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;What&#39;</span><span class="p">,</span> <span class="s1">&#39;matters&#39;</span><span class="p">,</span> <span class="s1">&#39;in&#39;</span><span class="p">,</span> <span class="s1">&#39;life&#39;</span><span class="p">,</span> <span class="s1">&#39;is&#39;</span><span class="p">,</span> <span class="s1">&#39;not&#39;</span><span class="p">,</span> <span class="s1">&#39;what&#39;</span><span class="p">,</span> <span class="s1">&#39;happens&#39;</span><span class="p">,</span> <span class="s1">&#39;to&#39;</span><span class="p">,</span>
-         <span class="s1">&#39;you&#39;</span><span class="p">,</span> <span class="s1">&#39;but&#39;</span><span class="p">,</span> <span class="s1">&#39;what&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">,</span> <span class="s1">&#39;remember&#39;</span><span class="p">,</span> <span class="s1">&#39;and&#39;</span><span class="p">,</span> <span class="s1">&#39;how&#39;</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">,</span> <span class="s1">&#39;remember&#39;</span><span class="p">,</span> <span class="s1">&#39;it&#39;</span><span class="p">]</span>
-<span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>words = [&#39;What&#39;, &#39;matters&#39;, &#39;in&#39;, &#39;life&#39;, &#39;is&#39;, &#39;not&#39;, &#39;what&#39;, &#39;happens&#39;, &#39;to&#39;,
+         &#39;you&#39;, &#39;but&#39;, &#39;what&#39;, &#39;you&#39;, &#39;remember&#39;, &#39;and&#39;, &#39;how&#39;, &#39;you&#39;, &#39;remember&#39;, &#39;it&#39;]
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1210,10 +1210,10 @@ remainder = 1
 <p>The <code class="docutils literal notranslate"><span class="pre">gather</span></code> argument can have any name, but often the name <code class="docutils literal notranslate"><span class="pre">args</span></code> is used.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_all</span><span class="p">(</span><span class="o">*</span><span class="n">args</span> <span class="p">:</span> <span class="nb">any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_all(*args : any) -&gt; None:
+    print(args)
     
-<span class="n">print_all</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="kc">True</span><span class="p">,</span> <span class="s1">&#39;42&#39;</span><span class="p">)</span>
+print_all(1, True, &#39;42&#39;)
 </pre></div>
 </div>
 </div>
@@ -1226,11 +1226,11 @@ remainder = 1
 <p>The inverse of the gather is <strong>scatter</strong>, it splits the tuple in separate elements.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t : tuple = (7, 3)
 
-<span class="c1">#type(t)</span>
+#type(t)
 
-<span class="nb">divmod</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+divmod(t)
 </pre></div>
 </div>
 </div>
@@ -1249,9 +1249,9 @@ remainder = 1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">:</span> <span class="nb">tuple</span> <span class="o">=</span> <span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t : tuple = (7, 3)
 
-<span class="nb">divmod</span><span class="p">(</span><span class="o">*</span><span class="n">t</span><span class="p">)</span>
+divmod(*t)
 </pre></div>
 </div>
 </div>
@@ -1264,7 +1264,7 @@ remainder = 1
 <p>A number of built-in functions use variable-length argument tuples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">max</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">8</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>max(1, 4, 7, 1, 25, 8)
 </pre></div>
 </div>
 </div>
@@ -1277,7 +1277,7 @@ remainder = 1
 <p>An exception is the <code class="docutils literal notranslate"><span class="pre">sum</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">sum</span><span class="p">((</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>sum((1, 2, 3), 0)
 </pre></div>
 </div>
 </div>
@@ -1289,12 +1289,12 @@ remainder = 1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">sum_all</span><span class="p">(</span><span class="o">*</span><span class="n">args</span> <span class="p">:</span> <span class="n">Tuple</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">args</span><span class="p">))</span>
-    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def sum_all(*args : Tuple) -&gt; int:
+    print(type(args))
+    return sum(args, 0)
     
-<span class="n">x</span> <span class="o">=</span> <span class="n">sum_all</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+x = sum_all(1,2,3,4,5,6,7,8,9)
+print(x)
 </pre></div>
 </div>
 </div>
@@ -1311,7 +1311,7 @@ remainder = 1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1323,11 +1323,11 @@ remainder = 1
 <p>The name of the function refers to a zipper.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;abc&#39;</span>
-<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>s = &#39;abc&#39;
+t = [0, 1, 2]
 
-<span class="n">z</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+z = zip(s, t)
+print(z)
 </pre></div>
 </div>
 </div>
@@ -1341,8 +1341,8 @@ remainder = 1
 <p>The best way is to use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for pair in zip(s, t):
+    print(pair)
 </pre></div>
 </div>
 </div>
@@ -1358,15 +1358,15 @@ remainder = 1
 <p>The variable <code class="docutils literal notranslate"><span class="pre">z</span></code> does not contain a value representing the list of tuples, but the zip object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pair</span> <span class="ow">in</span> <span class="n">z</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">pair</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for pair in z:
+    print(pair)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>z[0]
 </pre></div>
 </div>
 </div>
@@ -1390,7 +1390,7 @@ remainder = 1
 <p>If you want to use list operators and methods, you can use a zip object to make a list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">t</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>list(zip(s, t))
 </pre></div>
 </div>
 </div>
@@ -1404,7 +1404,7 @@ remainder = 1
 <p>If the lists you are zipping have not the same length, the result is a zip object with the length of the shortest list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="s1">&#39;Computer&#39;</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>list(zip(&#39;Data&#39;, &#39;Computer&#39;))
 </pre></div>
 </div>
 </div>
@@ -1412,10 +1412,10 @@ remainder = 1
 <p>You can use <strong>tuple assignment</strong> in a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to traverse a list of tuples.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t : list = [(&#39;a&#39;, 0), (&#39;b&#39;, 1), (&#39;c&#39;, 2)]
 
-<span class="k">for</span> <span class="n">letter</span><span class="p">,</span> <span class="n">number</span> <span class="ow">in</span> <span class="n">t</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">,</span> <span class="n">letter</span><span class="p">)</span>
+for letter, number in t:
+    print(number, letter)
 </pre></div>
 </div>
 </div>
@@ -1431,18 +1431,18 @@ remainder = 1
 <p>The function <code class="docutils literal notranslate"><span class="pre">has_match()</span></code> takes two sequences, <code class="docutils literal notranslate"><span class="pre">t1</span></code> and <code class="docutils literal notranslate"><span class="pre">t2</span></code>, and returns <code class="docutils literal notranslate"><span class="pre">True</span></code> if there is an index <code class="docutils literal notranslate"><span class="pre">i</span></code> such that <code class="docutils literal notranslate"><span class="pre">t1[i]</span> <span class="pre">==</span> <span class="pre">t2[i]</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List
 
-<span class="k">def</span> <span class="nf">has_perfect_match</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">],</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;checks whether there is at least one matching element</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def has_perfect_match(t1 : List[any], t2 : List[any]) -&gt; bool:
+    &quot;&quot;&quot;checks whether there is at least one matching element
+    &quot;&quot;&quot;
     
-    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-    <span class="k">return</span> <span class="kc">False</span>
+    for x, y in zip(t1, t2):
+        if x == y:
+            return True
+    return False
 
-<span class="n">has_perfect_match</span><span class="p">([</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">,</span> <span class="s1">&#39;Statistics&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Computer&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">,</span> <span class="s2">&quot;Programming&quot;</span><span class="p">])</span>
+has_perfect_match([&#39;Data&#39;, &#39;Science&#39;, &#39;Statistics&#39;], [&#39;Computer&#39;, &#39;Science&#39;, &quot;Programming&quot;])
 </pre></div>
 </div>
 </div>
@@ -1455,19 +1455,19 @@ remainder = 1
 <p>The following cell shows the code if you want the index to be returned instead of a boolean value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List
 
-<span class="k">def</span> <span class="nf">has_match</span><span class="p">(</span><span class="n">t1</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">],</span> <span class="n">t2</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;checks whether there is at least one matching element</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">t1</span><span class="p">,</span> <span class="n">t2</span><span class="p">):</span>
-        <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="n">y</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">i</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="o">-</span><span class="mi">1</span>
+def has_match(t1 : List[any], t2 : List[any]) -&gt; int:
+    &quot;&quot;&quot;checks whether there is at least one matching element
+    &quot;&quot;&quot;
+    i = 0
+    for x, y in zip(t1, t2):
+        if x == y:
+            return i
+        i += 1
+    return -1
 
-<span class="n">has_match</span><span class="p">([</span><span class="s1">&#39;Data&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">,</span> <span class="s1">&#39;Statistics&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;Computer&#39;</span><span class="p">,</span> <span class="s1">&#39;Science&#39;</span><span class="p">,</span> <span class="s2">&quot;Programming&quot;</span><span class="p">])</span>
+has_match([&#39;Data&#39;, &#39;Science&#39;, &#39;Statistics&#39;], [&#39;Computer&#39;, &#39;Science&#39;, &quot;Programming&quot;])
 </pre></div>
 </div>
 </div>
@@ -1483,9 +1483,9 @@ remainder = 1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nums1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">nums2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>nums1 = [2, 3, 4, 4, 5]
+nums2 = [5, 5, 3, 2, 5]
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1496,8 +1496,8 @@ remainder = 1
 <p>Each pair contains an index (starting from 0) and an element from the given sequence.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">element</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="s1">&#39;abcdef&#39;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">element</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for index, element in enumerate(&#39;abcdef&#39;):
+    print(index, element)
 </pre></div>
 </div>
 </div>
@@ -1518,7 +1518,7 @@ remainder = 1
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1532,10 +1532,10 @@ remainder = 1
 <p>This function returns a sequence of tuples, where each tuple is a key-value pair.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>d : dict = {&#39;a&#39;: 0, &#39;b&#39;: 1, &#39;c&#39;: 2}
 
-<span class="n">t</span> <span class="o">=</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
-<span class="n">t</span>    
+t = d.items()
+t    
 </pre></div>
 </div>
 </div>
@@ -1548,8 +1548,8 @@ remainder = 1
 <p>The <code class="docutils literal notranslate"><span class="pre">dict_items</span></code> is an iterator that iterates over the key-value pairs.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">d</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>for key, value in d.items():
+    print(key, value)
 </pre></div>
 </div>
 </div>
@@ -1564,9 +1564,9 @@ c 2
 <p>You can use a list of tuples to create a dictionary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[(</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span>
-<span class="n">d</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="n">d</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t : list = [(&#39;a&#39;, 0), (&#39;c&#39;, 2), (&#39;b&#39;, 1)]
+d : dict = dict(t)
+d
 </pre></div>
 </div>
 </div>
@@ -1579,8 +1579,8 @@ c 2
 <p>Combining <code class="docutils literal notranslate"><span class="pre">dict</span></code> with <code class="docutils literal notranslate"><span class="pre">zip</span></code> yields a concise way to create a dictionary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">d</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="s1">&#39;abcdef&#39;</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">)))</span>
-<span class="n">d</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>d : dict = dict(zip(&#39;abcdef&#39;, range(6)))
+d
 </pre></div>
 </div>
 </div>
@@ -1596,13 +1596,13 @@ c 2
 <p>Assuming that we have defined <code class="docutils literal notranslate"><span class="pre">last</span></code>, <code class="docutils literal notranslate"><span class="pre">first</span></code> and <code class="docutils literal notranslate"><span class="pre">number</span></code>, we could write the following statement.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">directory</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-<span class="n">directory</span><span class="p">[</span><span class="s1">&#39;van den Brand&#39;</span><span class="p">,</span> <span class="s1">&#39;Mark&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;2727&#39;</span>
-<span class="n">directory</span><span class="p">[</span><span class="s1">&#39;Ochoa&#39;</span><span class="p">,</span> <span class="s1">&#39;Lina&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;2728&#39;</span>
-<span class="n">directory</span><span class="p">[</span><span class="s1">&#39;Seraj&#39;</span><span class="p">,</span> <span class="s1">&#39;Mazyar&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;2729&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>directory : dict = dict()
+directory[&#39;van den Brand&#39;, &#39;Mark&#39;] = &#39;2727&#39;
+directory[&#39;Ochoa&#39;, &#39;Lina&#39;] = &#39;2728&#39;
+directory[&#39;Seraj&#39;, &#39;Mazyar&#39;] = &#39;2729&#39;
 
-<span class="k">for</span> <span class="n">last</span><span class="p">,</span> <span class="n">first</span> <span class="ow">in</span> <span class="n">directory</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">first</span><span class="p">,</span> <span class="n">last</span><span class="p">,</span> <span class="n">directory</span><span class="p">[</span><span class="n">last</span><span class="p">,</span> <span class="n">first</span><span class="p">])</span>
+for last, first in directory:
+    print(first, last, directory[last, first])
 </pre></div>
 </div>
 </div>
@@ -1613,8 +1613,8 @@ c 2
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng_sp</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;hello&#39;</span> <span class="p">:</span> <span class="s1">&#39;hola&#39;</span><span class="p">,</span> <span class="s1">&#39;dog&#39;</span> <span class="p">:</span> <span class="s1">&#39;perro&#39;</span><span class="p">,</span> <span class="s1">&#39;cat&#39;</span><span class="p">:</span> <span class="s1">&#39;gato&#39;</span><span class="p">,</span> <span class="s1">&#39;love&#39;</span><span class="p">:</span> <span class="s1">&#39;amor&#39;</span><span class="p">,</span> <span class="s1">&#39;sport&#39;</span> <span class="p">:</span> <span class="s1">&#39;deporte&#39;</span><span class="p">}</span>
-<span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>eng_sp = {&#39;hello&#39; : &#39;hola&#39;, &#39;dog&#39; : &#39;perro&#39;, &#39;cat&#39;: &#39;gato&#39;, &#39;love&#39;: &#39;amor&#39;, &#39;sport&#39; : &#39;deporte&#39;}
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>

@@ -629,15 +629,15 @@ can also say that each key “maps to” a value.</p>
 <p><code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">typing</span> <span class="pre">import</span> <span class="pre">Dict</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import Dict
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">eng2dut</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>eng2dut : Dict = dict()
+print(eng2dut)
 </pre></div>
 </div>
 </div>
@@ -651,7 +651,7 @@ can also say that each key “maps to” a value.</p>
 <p>To add items to the dictionary, you can use square brackets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span><span class="p">[</span><span class="s1">&#39;one&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;een&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>eng2dut[&#39;one&#39;] = &#39;een&#39;
 </pre></div>
 </div>
 </div>
@@ -660,7 +660,7 @@ can also say that each key “maps to” a value.</p>
 <p>If we print our dictionary we will see one key-value pair, where the key and value are separated by a colon.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">eng2dut</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(eng2dut)
 </pre></div>
 </div>
 </div>
@@ -673,8 +673,8 @@ can also say that each key “maps to” a value.</p>
 <p>You can also create a dictionary as follows.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;one&#39;</span><span class="p">:</span> <span class="s1">&#39;een&#39;</span><span class="p">,</span> <span class="s1">&#39;two&#39;</span><span class="p">:</span> <span class="s1">&#39;twee&#39;</span><span class="p">,</span> <span class="s1">&#39;three&#39;</span><span class="p">:</span> <span class="s1">&#39;drie&#39;</span><span class="p">,</span> <span class="s1">&#39;four&#39;</span><span class="p">:</span> <span class="s2">&quot;vier&quot;</span><span class="p">}</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">eng2dut</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>eng2dut : Dict = {&#39;one&#39;: &#39;een&#39;, &#39;two&#39;: &#39;twee&#39;, &#39;three&#39;: &#39;drie&#39;, &#39;four&#39;: &quot;vier&quot;}
+print(eng2dut)
 </pre></div>
 </div>
 </div>
@@ -690,7 +690,7 @@ can also say that each key “maps to” a value.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -698,8 +698,8 @@ can also say that each key “maps to” a value.</p>
 <p>We can add via the <em>key</em> index a <em>value</em> to the dictionary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span><span class="p">[</span><span class="s1">&#39;five&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;vijf&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">eng2dut</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>eng2dut[&#39;five&#39;] = &#39;vijf&#39;
+print(eng2dut)
 </pre></div>
 </div>
 </div>
@@ -715,7 +715,7 @@ can also say that each key “maps to” a value.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -725,7 +725,7 @@ can also say that each key “maps to” a value.</p>
 <p>The order is no issue, because the retrieval of values is done via the keys and <strong>not</strong> via indices.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span><span class="p">[</span><span class="s1">&#39;two&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>eng2dut[&#39;two&#39;]
 </pre></div>
 </div>
 </div>
@@ -738,14 +738,14 @@ can also say that each key “maps to” a value.</p>
 <p>If you try to retrieve a value for a non-existing key, you will get a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> exception.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">eng2dut</span><span class="p">[</span><span class="s1">&#39;six&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>eng2dut[&#39;six&#39;]
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">10</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">eng2dut</span><span class="p">[</span><span class="s1">&#39;six&#39;</span><span class="p">]</span>
 
 <span class="ne">KeyError</span>: &#39;six&#39;
@@ -756,7 +756,7 @@ can also say that each key “maps to” a value.</p>
 <p>The function <code class="docutils literal notranslate"><span class="pre">len</span></code> will give you the number of key-value pairs in the dictionary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">len</span><span class="p">(</span><span class="n">eng2dut</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>len(eng2dut)
 </pre></div>
 </div>
 </div>
@@ -765,14 +765,14 @@ can also say that each key “maps to” a value.</p>
 <p>It tells you whether something is used as a key.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;one&#39;</span> <span class="ow">in</span> <span class="n">eng2dut</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&#39;one&#39; in eng2dut
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;een&#39;</span> <span class="ow">in</span> <span class="n">eng2dut</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&#39;een&#39; in eng2dut
 </pre></div>
 </div>
 </div>
@@ -780,10 +780,10 @@ can also say that each key “maps to” a value.</p>
 <p>If you want to check whether a <strong>value</strong> is stored in the dictionary, you have first to retrieve all values through the <code class="docutils literal notranslate"><span class="pre">values()</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dutch_words</span> <span class="o">=</span> <span class="n">eng2dut</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dutch_words = eng2dut.values()
 
-<span class="nb">print</span><span class="p">(</span><span class="n">dutch_words</span><span class="p">)</span>
-<span class="s1">&#39;twee&#39;</span> <span class="ow">in</span> <span class="n">dutch_words</span>
+print(dutch_words)
+&#39;twee&#39; in dutch_words
 </pre></div>
 </div>
 </div>
@@ -797,7 +797,7 @@ can also say that each key “maps to” a value.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -837,27 +837,27 @@ do not have to know ahead of time which letters appear in the string and we only
 make room for the letters that do appear.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">histogram</span><span class="p">(</span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Creates a dictionary for counting the number of letters in a word</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def histogram(word : str) -&gt; Dict:
+    &quot;&quot;&quot;Creates a dictionary for counting the number of letters in a word
+    &quot;&quot;&quot;
     
-    <span class="n">dct</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">ch</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">:</span>
-            <span class="n">dct</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">dct</span><span class="p">[</span><span class="n">ch</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">dct</span>
+    dct : Dict = dict()
+    for ch in word:
+        if ch not in dct:
+            dct[ch] = 1
+        else:
+            dct[ch] += 1
+    return dct
 
-<span class="n">letter_hist</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="s1">&#39;datascience&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">)</span>
+letter_hist : Dict = histogram(&#39;datascience&#39;)
+print(letter_hist)
 </pre></div>
 </div>
 </div>
@@ -867,18 +867,18 @@ make room for the letters that do appear.</p>
 <p>If the <code class="docutils literal notranslate"><span class="pre">key</span></code> is not found in the dictionary, an <em>item</em> is created with the first argument is <code class="docutils literal notranslate"><span class="pre">key</span></code> and the second argument as <code class="docutils literal notranslate"><span class="pre">value</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">histogram</span><span class="p">(</span><span class="n">word</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Creates a dictionary for counting the number of letters in a word</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def histogram(word : str) -&gt; Dict:
+    &quot;&quot;&quot;Creates a dictionary for counting the number of letters in a word
+    &quot;&quot;&quot;
     
-    <span class="n">dct</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">word</span><span class="p">:</span>
-        <span class="n">dct</span><span class="p">[</span><span class="n">c</span><span class="p">]</span> <span class="o">=</span> <span class="n">dct</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">dct</span>
+    dct : Dict = dict()
+    for c in word:
+        dct[c] = dct.get(c, 0) + 1
+    return dct
 
-<span class="n">letter_hist</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="s1">&#39;computerscience&#39;</span><span class="p">)</span>
+letter_hist : Dict = histogram(&#39;computerscience&#39;)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">)</span>
+print(letter_hist)
 </pre></div>
 </div>
 </div>
@@ -893,16 +893,16 @@ make room for the letters that do appear.</p>
 <p>In this case we use <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code> and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> libraries.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the relevant libraries, see </span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># import the relevant libraries, see 
+import matplotlib.pyplot as plt
+import pandas as pd
 
-<span class="o">%</span><span class="k">matplotlib</span> inline
+%matplotlib inline
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+import pandas as pd
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;index&quot;</span><span class="p">)</span>
-<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+df = pd.DataFrame.from_dict(letter_hist, orient=&quot;index&quot;)
+df.plot.bar(color=&quot;r&quot;)
 </pre></div>
 </div>
 </div>
@@ -913,7 +913,7 @@ make room for the letters that do appear.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -925,22 +925,22 @@ make room for the letters that do appear.</p>
 <p>For this task we will consider a piece of text taken from <em>Romeo and Julliet</em> by William Shakespeare. This text has been altered in the sense that it does not include any punctuation.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
-    <span class="n">fhand</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/romeo.txt&#39;</span><span class="p">)</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;File cannot be opened:&#39;</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
-    <span class="n">exit</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>try:
+    fhand : str = open(&#39;datasets/romeo.txt&#39;)
+except:
+    print(&#39;File cannot be opened:&#39;, fname)
+    exit()
     
-<span class="n">romeo_dict</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fhand</span><span class="p">:</span>
-    <span class="n">words</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">romeo_dict</span><span class="p">:</span>
-            <span class="n">romeo_dict</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">romeo_dict</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+romeo_dict : Dict = dict()
+for line in fhand:
+    words : list = line.split()
+    for word in words:
+        if word not in romeo_dict:
+            romeo_dict[word] = 1
+        else:
+            romeo_dict[word] += 1
             
-<span class="nb">print</span><span class="p">(</span><span class="n">romeo_dict</span><span class="p">)</span>
+print(romeo_dict)
 </pre></div>
 </div>
 </div>
@@ -956,34 +956,34 @@ make room for the letters that do appear.</p>
 <p>We will also use the string constant <code class="docutils literal notranslate"><span class="pre">punctuation</span></code>, which defines the list of punctuation marks. We will need to import the module <code class="docutils literal notranslate"><span class="pre">string</span></code> to have access to this value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import string
+print(string.punctuation)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import string
 
-<span class="k">try</span><span class="p">:</span>
-    <span class="n">fhand</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;datasets/romeo-full.txt&#39;</span><span class="p">)</span>
-<span class="k">except</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;File cannot be opened:&#39;</span><span class="p">,</span> <span class="n">fname</span><span class="p">)</span>
-    <span class="n">exit</span><span class="p">()</span>
+try:
+    fhand : str = open(&#39;datasets/romeo-full.txt&#39;)
+except:
+    print(&#39;File cannot be opened:&#39;, fname)
+    exit()
     
-<span class="n">romeof_dict</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-<span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fhand</span><span class="p">:</span>
-    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">translate</span><span class="p">(</span><span class="n">line</span><span class="o">.</span><span class="n">maketrans</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">))</span>
-    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-    <span class="n">words</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">romeof_dict</span><span class="p">:</span>
-            <span class="n">romeof_dict</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">romeof_dict</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+romeof_dict : Dict = dict()
+for line in fhand:
+    line = line.translate(line.maketrans(&#39;&#39;, &#39;&#39;, string.punctuation))
+    line = line.lower()
+    words : list = line.split()
+    for word in words:
+        if word not in romeof_dict:
+            romeof_dict[word] = 1
+        else:
+            romeof_dict[word] += 1
             
-<span class="nb">print</span><span class="p">(</span><span class="n">romeof_dict</span><span class="p">)</span>
+print(romeof_dict)
 </pre></div>
 </div>
 </div>
@@ -996,15 +996,15 @@ make room for the letters that do appear.</p>
 <p>In fact, you invert the dictionary, creating a dictionary that maps frequencies to letters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">invert_dict</span><span class="p">(</span><span class="n">dct</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-    <span class="n">inv_dct</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">:</span>
-        <span class="n">val</span> <span class="o">=</span> <span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">val</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">inv_dct</span><span class="p">:</span>
-            <span class="n">inv_dct</span><span class="p">[</span><span class="n">val</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">key</span><span class="p">]</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">inv_dct</span><span class="p">[</span><span class="n">val</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">inv_dct</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def invert_dict(dct: Dict) -&gt; Dict:
+    inv_dct : Dict = dict()
+    for key in dct:
+        val = dct[key]
+        if val not in inv_dct:
+            inv_dct[val] = [key]
+        else:
+            inv_dct[val].append(key)
+    return inv_dct
 </pre></div>
 </div>
 </div>
@@ -1015,9 +1015,9 @@ initialize it with a <strong>singleton</strong> (a list that contains a single e
 <p>Otherwise we have seen this value before, so we append the corresponding key to the list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">new_dct</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">invert_dict</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">)</span>
-<span class="c1">#print(letter_hist)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">new_dct</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>new_dct : Dict = invert_dict(letter_hist)
+#print(letter_hist)
+print(new_dct)
 </pre></div>
 </div>
 </div>
@@ -1025,9 +1025,9 @@ initialize it with a <strong>singleton</strong> (a list that contains a single e
 <p>Lists can be values in a dictionary, as this example shows, but they cannot be keys.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">d</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-<span class="n">d</span><span class="p">[</span><span class="n">t</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;oops&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>t : list = [1, 2, 3]
+d : Dict = dict()
+d[t] = &#39;oops&#39;
 </pre></div>
 </div>
 </div>
@@ -1050,7 +1050,7 @@ or you might not be able to find a key.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1062,13 +1062,13 @@ or you might not be able to find a key.</p>
 <p>Consider the following <code class="docutils literal notranslate"><span class="pre">print_histogram</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_histogram</span><span class="p">(</span><span class="n">hst</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;prints the dictionary</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">hst</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">hst</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_histogram(hst : Dict) -&gt; None:
+    &quot;&quot;&quot;prints the dictionary
+    &quot;&quot;&quot;
+    for key in hst:
+        print(key, hst[key])
         
-<span class="n">print_histogram</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">)</span>
+print_histogram(letter_hist)
 </pre></div>
 </div>
 </div>
@@ -1077,14 +1077,14 @@ or you might not be able to find a key.</p>
 <p>The built-in function <code class="docutils literal notranslate"><span class="pre">sorted</span></code> can be used if you want the keys to be sorted.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_histogram</span><span class="p">(</span><span class="n">hst</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;prints the dictionary in a sorted manner</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_histogram(hst : Dict) -&gt; None:
+    &quot;&quot;&quot;prints the dictionary in a sorted manner
+    &quot;&quot;&quot;
     
-    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">hst</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="n">hst</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+    for key in sorted(hst):
+        print(key, hst[key])
         
-<span class="n">print_histogram</span><span class="p">(</span><span class="n">letter_hist</span><span class="p">)</span>
+print_histogram(letter_hist)
 </pre></div>
 </div>
 </div>
@@ -1095,7 +1095,7 @@ or you might not be able to find a key.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1114,24 +1114,24 @@ Depending on the application, you might be able to pick one, or you create a lis
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse_lookup</span><span class="p">(</span><span class="n">dct</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">val</span> <span class="p">:</span> <span class="nb">any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">any</span><span class="p">:</span>
-    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">key</span>
-    <span class="k">raise</span> <span class="ne">LookupError</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def reverse_lookup(dct : Dict, val : any) -&gt; any:
+    for key in dct:
+        if dct[key] == val:
+            return key
+    raise LookupError()
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse_lookup</span><span class="p">(</span><span class="n">dct</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">val</span> <span class="p">:</span> <span class="nb">any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]:</span>
-    <span class="n">rlist</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">dct</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">dct</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
-            <span class="n">rlist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def reverse_lookup(dct : Dict, val : any) -&gt; List[any]:
+    rlist : List[any] = []
+    for key in dct:
+        if dct[key] == val:
+            rlist.append(key)
     
-    <span class="k">return</span> <span class="n">rlist</span>
+    return rlist
 </pre></div>
 </div>
 </div>
@@ -1142,18 +1142,18 @@ we <strong>raise</strong> an exception.</p>
 exception to indicate that a lookup operation failed.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">his</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="s1">&#39;programming&#39;</span><span class="p">)</span>
-<span class="n">key</span> <span class="o">=</span> <span class="n">reverse_lookup</span><span class="p">(</span><span class="n">his</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">key</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>his : Dict = histogram(&#39;programming&#39;)
+key = reverse_lookup(his, 2)
+key
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">his</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="s1">&#39;programming&#39;</span><span class="p">)</span>
-<span class="n">key</span> <span class="o">=</span> <span class="n">reverse_lookup</span><span class="p">(</span><span class="n">his</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="n">key</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>his : Dict = histogram(&#39;programming&#39;)
+key = reverse_lookup(his, 4)
+key
 </pre></div>
 </div>
 </div>
@@ -1171,7 +1171,7 @@ traceback and an error message.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1188,13 +1188,13 @@ function ends, global variables persist from one function call to the next.</p>
 control the level of detail in the output.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">verbose</span> <span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>verbose : bool = True
 
-<span class="k">def</span> <span class="nf">example1</span><span class="p">():</span>
-    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Running example1&#39;</span><span class="p">)</span>
+def example1():
+    if verbose:
+        print(&#39;Running example1&#39;)
         
-<span class="n">example1</span><span class="p">()</span>
+example1()
 </pre></div>
 </div>
 </div>
@@ -1202,15 +1202,15 @@ control the level of detail in the output.</p>
 <p>You can not just reassign a global variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">been_called</span> <span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>been_called : bool = False
 
-<span class="k">def</span> <span class="nf">example2</span><span class="p">():</span>
-    <span class="n">been_called</span> <span class="o">=</span> <span class="kc">True</span>       <span class="c1"># WRONG</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
+def example2():
+    been_called = True       # WRONG
+    print(been_called)
     
-<span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
-<span class="n">example2</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
+print(been_called)
+example2()
+print(been_called)
 </pre></div>
 </div>
 </div>
@@ -1223,16 +1223,16 @@ away when the function ends, and has no effect on the global variable.</p>
 you use it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">been_called</span> <span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>been_called : bool = False
 
-<span class="k">def</span> <span class="nf">example2</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">been_called</span>
-    <span class="n">been_called</span> <span class="o">=</span> <span class="kc">True</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
+def example2():
+    global been_called
+    been_called = True
+    print(been_called)
     
-<span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
-<span class="n">example2</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">been_called</span><span class="p">)</span>
+print(been_called)
+example2()
+print(been_called)
 </pre></div>
 </div>
 </div>
@@ -1242,29 +1242,29 @@ you use it.</p>
 <p>Another example is presented in the following cell.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>count : int = 0
 
-<span class="k">def</span> <span class="nf">example3</span><span class="p">():</span> 
-    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>       <span class="c1"># WRONG</span>
+def example3(): 
+    count += 1       # WRONG
 
-<span class="n">example3</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+example3()
+print(count)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">count</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>count : int = 0
 
-<span class="k">def</span> <span class="nf">example3</span><span class="p">():</span> 
-    <span class="k">global</span> <span class="n">count</span>
-    <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+def example3(): 
+    global count
+    count += 1
 
     
-<span class="n">example3</span><span class="p">()</span>
-<span class="n">example3</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">count</span><span class="p">)</span>
+example3()
+example3()
+print(count)
 </pre></div>
 </div>
 </div>
@@ -1272,40 +1272,40 @@ you use it.</p>
 <p>How about the following, is this correct?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">known</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>known : Dict = dict()
 
-<span class="k">def</span> <span class="nf">example5</span><span class="p">():</span>
-    <span class="n">known</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+def example5():
+    known[&quot;a&quot;] = 1
     
-<span class="n">example5</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">known</span><span class="p">)</span>
+example5()
+print(known)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">known</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="p">{}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>known : Dict = {}
 
-<span class="k">def</span> <span class="nf">example5</span><span class="p">():</span>
-    <span class="n">known</span><span class="p">[</span><span class="s2">&quot;a&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+def example5():
+    known[&quot;a&quot;] = 1
     
-<span class="n">example5</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">known</span><span class="p">)</span>
+example5()
+print(known)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">known</span> <span class="p">:</span> <span class="n">Dict</span> <span class="o">=</span> <span class="p">[]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>known : Dict = []
 
-<span class="k">def</span> <span class="nf">example5</span><span class="p">():</span>
-<span class="c1">#    known = [&#39;b&#39;]</span>
-    <span class="n">known</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+def example5():
+#    known = [&#39;b&#39;]
+    known.append(&#39;a&#39;)
     
-<span class="n">example5</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">known</span><span class="p">)</span>
+example5()
+print(known)
 </pre></div>
 </div>
 </div>

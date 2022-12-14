@@ -663,14 +663,14 @@ function.</p>
 <p>If you want to re-use statements, you have to capture them in a function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_important_message</span><span class="p">():</span>
-    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">7</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Computer science is important&#39;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data science is more important&#39;</span><span class="p">)</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_important_message():
+    i : int = 0
+    while i &lt; 7:
+        print(&#39;Computer science is important&#39;)
+        print(&#39;Data science is more important&#39;)
+        i += 1
         
-<span class="n">print_important_message</span><span class="p">()</span>
+print_important_message()
 </pre></div>
 </div>
 </div>
@@ -714,15 +714,15 @@ We are going to define explicitly the type of the arguments, in case of <code cl
 <p>Suppose we want to re-use the function <code class="docutils literal notranslate"><span class="pre">important_message</span></code>, but with a different number of printed messages.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_important_message</span><span class="p">(</span><span class="n">freq</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">freq</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Computer science is important&#39;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Data science is more important&#39;</span><span class="p">)</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_important_message(freq : int) -&gt; None:
+    i : int = 0
+    while i &lt; freq:
+        print(&#39;Computer science is important&#39;)
+        print(&#39;Data science is more important&#39;)
+        i += 1
         
-<span class="n">print_important_message</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
-<span class="n">print_important_message</span><span class="p">(</span><span class="mi">17</span><span class="p">)</span>
+print_important_message(6)
+print_important_message(17)
 </pre></div>
 </div>
 </div>
@@ -783,14 +783,14 @@ can be any number.</p>
 <p>Another step in the generalization is to make the disciplines flexible.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_important_message</span><span class="p">(</span><span class="n">freq</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">discipline1</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">discipline2</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
-    <span class="n">i</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span>  <span class="n">freq</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">discipline1</span> <span class="o">+</span> <span class="s1">&#39; is important&#39;</span><span class="p">)</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">discipline2</span><span class="p">,</span> <span class="s1">&#39;is more important&#39;</span><span class="p">)</span>
-        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_important_message(freq : int, discipline1 : str, discipline2 : str):
+    i : int = 0
+    while i &lt;  freq:
+        print(discipline1 + &#39; is important&#39;)
+        print(discipline2, &#39;is more important&#39;)
+        i += 1
         
-<span class="n">print_important_message</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;Artificial intelligence&#39;</span><span class="p">,</span> <span class="s1">&#39;Statistics&#39;</span><span class="p">)</span>
+print_important_message(3, &#39;Artificial intelligence&#39;, &#39;Statistics&#39;)
 </pre></div>
 </div>
 </div>
@@ -817,7 +817,7 @@ important_message(freq=7, discipline1=’Computer science’, discipline2=’Sta
 and parameters work: when you call a function, the arguments are assigned to the parameters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_important_message</span><span class="p">(</span><span class="n">freq</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">discipline1</span><span class="o">=</span><span class="s1">&#39;Computer science&#39;</span><span class="p">,</span> <span class="n">discipline2</span><span class="o">=</span><span class="s1">&#39;Statistics&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print_important_message(freq=7, discipline1=&#39;Computer science&#39;, discipline2=&#39;Statistics&#39;)
 </pre></div>
 </div>
 </div>
@@ -904,13 +904,13 @@ lets you design as you go along.</p>
 the two cylinders and their heights, the result is a floating-point value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
-<span class="sd">    on the radius of the outer and inner cylinder&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def volume(outerRadius : int, innerRadius : int, height : int) -&gt; float:
+    &quot;&quot;&quot;calculates the volume of a hollow cylinder based 
+    on the radius of the outer and inner cylinder&quot;&quot;&quot;
     
-    <span class="k">return</span> <span class="mf">0.0</span>
+    return 0.0
 
-<span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+volume(3, 1, 3)
 </pre></div>
 </div>
 </div>
@@ -929,30 +929,30 @@ the height.</p>
 <p>Furthermore we add a <code class="docutils literal notranslate"><span class="pre">print</span></code> statement to see whether the values make sense.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
-<span class="sd">    on the radius of the outer and inner cylinder&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def volume(outerRadius : int, innerRadius : int, height : int) -&gt; float:
+    &quot;&quot;&quot;calculates the volume of a hollow cylinder based 
+    on the radius of the outer and inner cylinder&quot;&quot;&quot;
     
-    <span class="n">surfaceC1</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">outerRadius</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">surfaceC2</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">innerRadius</span><span class="o">**</span><span class="mi">2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;surfaceC1 is&#39;</span><span class="p">,</span> <span class="n">surfaceC1</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;surfaceC2 is&#39;</span><span class="p">,</span> <span class="n">surfaceC2</span><span class="p">)</span>
+    surfaceC1 : float = math.pi * outerRadius**2
+    surfaceC2 : float = math.pi * innerRadius**2
+    print(&#39;surfaceC1 is&#39;, surfaceC1)
+    print(&#39;surfaceC2 is&#39;, surfaceC2)
     
-    <span class="k">return</span> <span class="mf">0.0</span>
+    return 0.0
 
-<span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+volume(3, 1, 4)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">12</span>
 <span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;surfaceC2 is&#39;</span><span class="p">,</span> <span class="n">surfaceC2</span><span class="p">)</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="k">return</span> <span class="mf">0.0</span>
 <span class="ne">---&gt; </span><span class="mi">12</span> <span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
 
-<span class="nn">Cell In [6], line 5,</span> in <span class="ni">volume</span><span class="nt">(outerRadius, innerRadius, height)</span>
+<span class="nn">Cell In[6], line 5,</span> in <span class="ni">volume</span><span class="nt">(outerRadius, innerRadius, height)</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span><span class="sd">     on the radius of the outer and inner cylinder&quot;&quot;&quot;</span>
@@ -968,18 +968,18 @@ the height.</p>
 <p>The next step is to calculate the difference of the surfaces.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
-<span class="sd">    on the radius of the outer and inner cylinder&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def volume(outerRadius : int, innerRadius : int, height : int) -&gt; float:
+    &quot;&quot;&quot;calculates the volume of a hollow cylinder based 
+    on the radius of the outer and inner cylinder&quot;&quot;&quot;
     
-    <span class="n">surfaceC1</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">outerRadius</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">surfaceC2</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">innerRadius</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">diffSurfaces</span> <span class="o">=</span> <span class="n">surfaceC1</span> <span class="o">-</span> <span class="n">surfaceC2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;diffSurfaces is&#39;</span><span class="p">,</span> <span class="n">diffSurfaces</span><span class="p">)</span>
+    surfaceC1 : float = math.pi * outerRadius**2
+    surfaceC2 : float = math.pi * innerRadius**2
+    diffSurfaces = surfaceC1 - surfaceC2
+    print(&#39;diffSurfaces is&#39;, diffSurfaces)
     
-    <span class="k">return</span> <span class="mf">0.0</span>
+    return 0.0
 
-<span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+volume(3, 1, 4)
 </pre></div>
 </div>
 </div>
@@ -987,18 +987,18 @@ the height.</p>
 <p>Then, we add a statement for multiplying the obtained difference with the height.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
-<span class="sd">    on the radius of the outer and inner cylinder&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def volume(outerRadius : int, innerRadius : int, height : int) -&gt; float:
+    &quot;&quot;&quot;calculates the volume of a hollow cylinder based 
+    on the radius of the outer and inner cylinder&quot;&quot;&quot;
     
-    <span class="n">surfaceC1</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">outerRadius</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">surfaceC2</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">innerRadius</span><span class="o">**</span><span class="mi">2</span>
-    <span class="n">diffSurfaces</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">surfaceC1</span> <span class="o">-</span> <span class="n">surfaceC2</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;diffSurfaces is&#39;</span><span class="p">,</span> <span class="n">diffSurfaces</span><span class="p">)</span>
+    surfaceC1 : float = math.pi * outerRadius**2
+    surfaceC2 : float = math.pi * innerRadius**2
+    diffSurfaces : float = surfaceC1 - surfaceC2
+    print(&#39;diffSurfaces is&#39;, diffSurfaces)
         
-    <span class="k">return</span> <span class="n">height</span> <span class="o">*</span> <span class="n">diffSurfaces</span>
+    return height * diffSurfaces
 
-<span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+volume(3, 1, 4)
 </pre></div>
 </div>
 </div>
@@ -1006,25 +1006,25 @@ the height.</p>
 <p>The last step is to make sure that if the outer radius is smaller than the inner radius. Thus, we return <code class="docutils literal notranslate"><span class="pre">0</span></code> instead of a negative volume and print an error message.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">volume</span><span class="p">(</span><span class="n">outerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">innerRadius</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">height</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates the volume of a hollow cylinder based </span>
-<span class="sd">    on the radius of the outer and inner cylinder, using</span>
-<span class="sd">    outerRadius &gt;= innerRadius&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def volume(outerRadius : int, innerRadius : int, height : int) -&gt; float:
+    &quot;&quot;&quot;calculates the volume of a hollow cylinder based 
+    on the radius of the outer and inner cylinder, using
+    outerRadius &gt;= innerRadius&quot;&quot;&quot;
     
-    <span class="k">if</span> <span class="n">outerRadius</span> <span class="o">&gt;=</span> <span class="n">innerRadius</span><span class="p">:</span>
-        <span class="n">surfaceC1</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">outerRadius</span><span class="o">**</span><span class="mi">2</span>
-        <span class="n">surfaceC2</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">innerRadius</span><span class="o">**</span><span class="mi">2</span>
-        <span class="n">diffSurfaces</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">surfaceC1</span> <span class="o">-</span> <span class="n">surfaceC2</span>
+    if outerRadius &gt;= innerRadius:
+        surfaceC1 : float = math.pi * outerRadius**2
+        surfaceC2 : float = math.pi * innerRadius**2
+        diffSurfaces : float = surfaceC1 - surfaceC2
         
-        <span class="n">volumeCylinder</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">height</span> <span class="o">*</span> <span class="n">diffSurfaces</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The outer cylinder should be larger than the inner cylinder&quot;</span><span class="p">)</span>
+        volumeCylinder : float = height * diffSurfaces
+    else:
+        print(&quot;The outer cylinder should be larger than the inner cylinder&quot;)
         
-        <span class="n">volumeCylinder</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">0</span>
+        volumeCylinder : float = 0
         
-    <span class="k">return</span> <span class="n">volumeCylinder</span>
+    return volumeCylinder
 
-<span class="n">volume</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+volume(3, 1, 4)
 </pre></div>
 </div>
 </div>

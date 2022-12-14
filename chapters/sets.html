@@ -627,8 +627,8 @@ title="Print to PDF"
 <h1>Sets <a class="footnote-reference brackets" href="#intro" id="id1">1</a><a class="headerlink" href="#sets" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Tuple</span>
-<span class="kn">import</span> <span class="nn">random</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import Dict, List, Tuple
+import random
 </pre></div>
 </div>
 </div>
@@ -665,8 +665,8 @@ which takes a sequence and returns an iterator that traverses the list in revers
 <p>We can create a set by listing its elements within curly braces (i.e. <code class="docutils literal notranslate"><span class="pre">{}</span></code>).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits</span> <span class="p">:</span> <span class="nb">set</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;pear&#39;</span><span class="p">,</span> <span class="s1">&#39;papaya&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="p">,</span> <span class="s1">&#39;banana&#39;</span><span class="p">,</span> <span class="s1">&#39;apple&#39;</span><span class="p">}</span>
-<span class="n">fruits</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fruits : set = {&#39;apple&#39;, &#39;pear&#39;, &#39;papaya&#39;, &#39;mango&#39;, &#39;banana&#39;, &#39;apple&#39;}
+fruits
 </pre></div>
 </div>
 </div>
@@ -680,8 +680,8 @@ which takes a sequence and returns an iterator that traverses the list in revers
 <p>To create a set we can use the <code class="docutils literal notranslate"><span class="pre">set()</span></code> function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">candies</span> <span class="p">:</span> <span class="nb">set</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
-<span class="nb">type</span><span class="p">(</span><span class="n">candies</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>candies : set = set()
+type(candies)
 </pre></div>
 </div>
 </div>
@@ -694,10 +694,10 @@ which takes a sequence and returns an iterator that traverses the list in revers
 <p>To add a new element to the set, we use the <code class="docutils literal notranslate"><span class="pre">add()</span></code> method.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">candies</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;chocolate&#39;</span><span class="p">)</span>
-<span class="n">candies</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;chocolate&#39;</span><span class="p">)</span>
-<span class="n">candies</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="s1">&#39;marshmallow&#39;</span><span class="p">)</span>
-<span class="n">candies</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>candies.add(&#39;chocolate&#39;)
+candies.add(&#39;chocolate&#39;)
+candies.add(&#39;marshmallow&#39;)
+candies
 </pre></div>
 </div>
 </div>
@@ -713,7 +713,7 @@ which takes a sequence and returns an iterator that traverses the list in revers
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -722,17 +722,17 @@ which takes a sequence and returns an iterator that traverses the list in revers
 <p>To compute the <strong>union</strong> between sets, we use the <code class="docutils literal notranslate"><span class="pre">union()</span></code> method or the <code class="docutils literal notranslate"><span class="pre">|</span></code> operator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">food_fun</span> <span class="p">:</span> <span class="nb">set</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">union</span><span class="p">(</span><span class="n">candies</span><span class="p">)</span>
-<span class="n">food_op</span> <span class="p">:</span> <span class="nb">set</span> <span class="o">=</span> <span class="n">fruits</span> <span class="o">|</span> <span class="n">candies</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>food_fun : set = fruits.union(candies)
+food_op : set = fruits | candies
 
-<span class="nb">print</span><span class="p">(</span><span class="n">food_fun</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">food_op</span><span class="p">)</span>
+print(food_fun)
+print(food_op)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;mango&#39;, &#39;banana&#39;, &#39;chocolate&#39;, &#39;pear&#39;, &#39;papaya&#39;, &#39;marshmallow&#39;, &#39;apple&#39;}
-{&#39;mango&#39;, &#39;banana&#39;, &#39;chocolate&#39;, &#39;pear&#39;, &#39;papaya&#39;, &#39;marshmallow&#39;, &#39;apple&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;pear&#39;, &#39;mango&#39;, &#39;marshmallow&#39;, &#39;apple&#39;, &#39;chocolate&#39;, &#39;papaya&#39;, &#39;banana&#39;}
+{&#39;pear&#39;, &#39;mango&#39;, &#39;marshmallow&#39;, &#39;apple&#39;, &#39;chocolate&#39;, &#39;papaya&#39;, &#39;banana&#39;}
 </pre></div>
 </div>
 </div>
@@ -740,18 +740,18 @@ which takes a sequence and returns an iterator that traverses the list in revers
 <p>To compute the <strong>intersection</strong> between sets, we can use the <code class="docutils literal notranslate"><span class="pre">intersection()</span></code> method or the <code class="docutils literal notranslate"><span class="pre">&amp;</span></code> operator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits2</span> <span class="p">:</span> <span class="nb">set</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;apple&#39;</span><span class="p">,</span> <span class="s1">&#39;mango&#39;</span><span class="p">,</span> <span class="s1">&#39;pineapple&#39;</span><span class="p">,</span> <span class="s1">&#39;lemon&#39;</span><span class="p">}</span>
-<span class="n">fruits_inter_fun</span> <span class="p">:</span> <span class="nb">set</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">fruits2</span><span class="p">)</span>
-<span class="n">fruits_inter_op</span> <span class="p">:</span> <span class="nb">set</span> <span class="o">=</span> <span class="n">fruits</span> <span class="o">&amp;</span> <span class="n">fruits2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fruits2 : set = {&#39;apple&#39;, &#39;mango&#39;, &#39;pineapple&#39;, &#39;lemon&#39;}
+fruits_inter_fun : set = fruits.intersection(fruits2)
+fruits_inter_op : set = fruits &amp; fruits2
 
-<span class="nb">print</span><span class="p">(</span><span class="n">fruits_inter_fun</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fruits_inter_op</span><span class="p">)</span>
+print(fruits_inter_fun)
+print(fruits_inter_op)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;mango&#39;, &#39;apple&#39;}
-{&#39;mango&#39;, &#39;apple&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;apple&#39;, &#39;mango&#39;}
+{&#39;apple&#39;, &#39;mango&#39;}
 </pre></div>
 </div>
 </div>
@@ -759,17 +759,17 @@ which takes a sequence and returns an iterator that traverses the list in revers
 <p>And to compute the <strong>difference</strong> between sets, we can use the <code class="docutils literal notranslate"><span class="pre">difference()</span></code> method or the <code class="docutils literal notranslate"><span class="pre">–</span></code> operator.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fruits_diff_fun</span> <span class="p">:</span> <span class="nb">set</span> <span class="o">=</span> <span class="n">fruits</span><span class="o">.</span><span class="n">difference</span><span class="p">(</span><span class="n">fruits2</span><span class="p">)</span>
-<span class="n">fruits_diff_op</span> <span class="p">:</span> <span class="nb">set</span> <span class="o">=</span> <span class="n">fruits</span> <span class="o">-</span> <span class="n">fruits2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fruits_diff_fun : set = fruits.difference(fruits2)
+fruits_diff_op : set = fruits - fruits2
 
-<span class="nb">print</span><span class="p">(</span><span class="n">fruits_diff_fun</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">fruits_diff_op</span><span class="p">)</span>
+print(fruits_diff_fun)
+print(fruits_diff_op)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;papaya&#39;, &#39;banana&#39;, &#39;pear&#39;}
-{&#39;papaya&#39;, &#39;banana&#39;, &#39;pear&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;pear&#39;, &#39;papaya&#39;, &#39;banana&#39;}
+{&#39;pear&#39;, &#39;papaya&#39;, &#39;banana&#39;}
 </pre></div>
 </div>
 </div>
@@ -778,19 +778,19 @@ which takes a sequence and returns an iterator that traverses the list in revers
 <p>For example, let us consider a program that uses two dictionaries to find the words that appear in one dictionary but not in the other dictionary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words1</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;because&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;mine&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;not&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;look&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;die&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;love&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>words1 : dict = {&#39;because&#39;: 3, &#39;you&#39;: 5, &#39;are&#39;: 2, &#39;mine&#39;: 2, &#39;not&#39;: 3,
+    &#39;I&#39;: 2, &#39;look&#39;: 1, &#39;die&#39;: 1, &#39;love&#39;: 1}
 
-<span class="n">words2</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;you&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;look&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;die&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;looking&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+words2 : dict = {&#39;you&#39;: 5, &#39;look&#39;: 1, &#39;die&#39;: 1, &#39;looking&#39;: 2}
 
 
-<span class="n">res</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+res : dict = dict()
     
-<span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words1</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">words2</span><span class="p">:</span>
-        <span class="n">res</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+for word in words1:
+    if word not in words2:
+        res[word] = None
         
-<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+print(res)
 </pre></div>
 </div>
 </div>
@@ -804,12 +804,12 @@ which takes a sequence and returns an iterator that traverses the list in revers
 <p>There is a better way to solve this problem with sets.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">words1</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;because&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;you&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;are&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;mine&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;not&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
-    <span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;look&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;die&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;love&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>words1 : dict = {&#39;because&#39;: 3, &#39;you&#39;: 5, &#39;are&#39;: 2, &#39;mine&#39;: 2, &#39;not&#39;: 3,
+    &#39;I&#39;: 2, &#39;look&#39;: 1, &#39;die&#39;: 1, &#39;love&#39;: 1}
 
-<span class="n">words2</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;you&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span> <span class="s1">&#39;look&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;die&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;looking&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">}</span>
+words2 : dict = {&#39;you&#39;: 5, &#39;look&#39;: 1, &#39;die&#39;: 1, &#39;looking&#39;: 2}
 
-<span class="nb">set</span><span class="p">(</span><span class="n">words1</span><span class="p">)</span> <span class="o">-</span> <span class="nb">set</span><span class="p">(</span><span class="n">words2</span><span class="p">)</span>
+set(words1) - set(words2)
 </pre></div>
 </div>
 </div>
@@ -823,25 +823,25 @@ which takes a sequence and returns an iterator that traverses the list in revers
 <p>Let us see another example. Suppose we want to check if a list has duplicates. One way of doing it is using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop where we have an additional list to check wether the item is inlcuded there or not.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">has_duplicates</span><span class="p">(</span><span class="n">lst</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Check for duplicate elements in the list</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def has_duplicates(lst: List[any]) -&gt; bool:
+    &quot;&quot;&quot; Check for duplicate elements in the list
+    &quot;&quot;&quot;
     
-    <span class="n">lst_alt</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">]</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    lst_alt : List[any] = list()
     
-    <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">lst</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">lst_alt</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">lst_alt</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">elem</span><span class="p">)</span>
+    for elem in lst:
+        if elem in lst_alt:
+            return True
+        else:
+            lst_alt.append(elem)
 
-    <span class="k">return</span> <span class="kc">False</span>
+    return False
 
-<span class="n">lst1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">lst2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+lst1 = [1, 2, 3, 4, 5, 6, 2, 3]
+lst2 = [1, 2, 3, 4, 5, 6, 7, 8]
 
-<span class="nb">print</span><span class="p">(</span><span class="n">has_duplicates</span><span class="p">(</span><span class="n">lst1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">has_duplicates</span><span class="p">(</span><span class="n">lst2</span><span class="p">))</span>
+print(has_duplicates(lst1))
+print(has_duplicates(lst2))
 </pre></div>
 </div>
 </div>
@@ -855,17 +855,17 @@ False
 <p>This function can be way simpler by using sets: we just need to check if the length of the list converted in a set is the same as the original list. Let’s try.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">has_duplicates</span><span class="p">(</span><span class="n">lst</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot; Check for duplicate elements in the list</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def has_duplicates(lst: List[any]) -&gt; bool:
+    &quot;&quot;&quot; Check for duplicate elements in the list
+    &quot;&quot;&quot;
     
-    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">lst</span><span class="p">))</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">lst</span><span class="p">)</span>
+    return len(set(lst)) &lt; len(lst)
 
-<span class="n">lst1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span>
-<span class="n">lst2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
+lst1 = [1, 2, 3, 4, 5, 6, 2, 3]
+lst2 = [1, 2, 3, 4, 5, 6, 7, 8]
 
-<span class="nb">print</span><span class="p">(</span><span class="n">has_duplicates</span><span class="p">(</span><span class="n">lst1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">has_duplicates</span><span class="p">(</span><span class="n">lst2</span><span class="p">))</span>
+print(has_duplicates(lst1))
+print(has_duplicates(lst2))
 </pre></div>
 </div>
 </div>
@@ -882,9 +882,9 @@ False
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dict1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;a&#39;</span> <span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">}</span>
-<span class="n">dict2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;b&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;z&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">}</span>
-<span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dict1 = {&#39;a&#39; : 1, &#39;b&#39;: 2, &#39;c&#39;: 3}
+dict2 = {&#39;b&#39;: 1, &#39;z&#39;: 2, &#39;y&#39;: 3, &#39;c&#39;: 4}
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -905,8 +905,8 @@ False
 <p>The <code class="docutils literal notranslate"><span class="pre">string</span></code> module provides a predefined string <code class="docutils literal notranslate"><span class="pre">whitespace</span></code> that contains <code class="docutils literal notranslate"><span class="pre">space</span></code>, <code class="docutils literal notranslate"><span class="pre">tab</span></code>, <code class="docutils literal notranslate"><span class="pre">newline</span></code>, etc.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
-<span class="n">string</span><span class="o">.</span><span class="n">whitespace</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import string
+string.whitespace
 </pre></div>
 </div>
 </div>
@@ -919,8 +919,8 @@ False
 <p>Furthermore, it contains a string <code class="docutils literal notranslate"><span class="pre">punctuation</span></code>, that contains punctuation characters.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
-<span class="n">string</span><span class="o">.</span><span class="n">punctuation</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import string
+string.punctuation
 </pre></div>
 </div>
 </div>
@@ -934,15 +934,24 @@ False
 punctuation from the words, and converts them to lowercase.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;text.txt&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>text = open(&#39;text.txt&#39;)
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">text</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;text.txt&#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/IPython/core/interactiveshell.py:282,</span> in <span class="ni">_modified_open</span><span class="nt">(file, *args, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">275</span> <span class="k">if</span> <span class="n">file</span> <span class="ow">in</span> <span class="p">{</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">}:</span>
+<span class="g g-Whitespace">    </span><span class="mi">276</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">277</span>         <span class="sa">f</span><span class="s2">&quot;IPython won&#39;t let you open fd=</span><span class="si">{</span><span class="n">file</span><span class="si">}</span><span class="s2"> by default &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">278</span>         <span class="s2">&quot;as it is likely to crash IPython. If you know what you are doing, &quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="s2">&quot;you can use builtins&#39; open.&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">280</span>     <span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">282</span> <span class="k">return</span> <span class="n">io_open</span><span class="p">(</span><span class="n">file</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
 <span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;text.txt&#39;
 </pre></div>
@@ -951,59 +960,59 @@ punctuation from the words, and converts them to lowercase.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">List</span><span class="p">,</span> <span class="n">Dict</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import List, Dict
 
-<span class="k">def</span> <span class="nf">split_text</span><span class="p">(</span><span class="n">text_arg</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Splits a text into words which is returned as a list.</span>
-<span class="sd">    The words are decapitalized (lower) and punctuation is stripped.&quot;&quot;&quot;</span>
+def split_text(text_arg : str) -&gt; List[str]:
+    &quot;&quot;&quot;Splits a text into words which is returned as a list.
+    The words are decapitalized (lower) and punctuation is stripped.&quot;&quot;&quot;
     
-    <span class="n">body</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">text_arg</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+    body : str = text_arg.read()
     
-    <span class="n">stripped_words</span> <span class="p">:</span> <span class="nb">list</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">words</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="n">body</span><span class="o">.</span><span class="n">split</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">w</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-        <span class="n">lower_w</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">w</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-        <span class="n">stripped_w</span> <span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">lower_w</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span><span class="p">)</span>
-        <span class="n">stripped_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">stripped_w</span><span class="p">)</span>
+    stripped_words : list = []
+    words : List[str] = body.split()
+    for w in words:
+        lower_w : str = w.lower()
+        stripped_w : str = lower_w.strip(string.punctuation)
+        stripped_words.append(stripped_w)
         
-    <span class="k">return</span> <span class="n">stripped_words</span>
+    return stripped_words
 
-<span class="k">def</span> <span class="nf">histogram</span><span class="p">(</span><span class="n">words</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;transforms the list of words into dictionary</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def histogram(words : List[str]) -&gt; Dict:
+    &quot;&quot;&quot;transforms the list of words into dictionary
+    &quot;&quot;&quot;
     
-    <span class="n">word_hist</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">word_hist</span><span class="p">:</span>
-            <span class="n">word_hist</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">word_hist</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">return</span> <span class="n">word_hist</span>
+    word_hist : dict = dict()
+    for word in words:
+        if word not in word_hist:
+            word_hist[word] = 1
+        else:
+            word_hist[word] += 1
+    return word_hist
  
-<span class="n">text</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;text.txt&#39;</span><span class="p">)</span> 
+text = open(&#39;text.txt&#39;) 
 
-<span class="n">words</span> <span class="o">=</span> <span class="n">split_text</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
+words = split_text(text)
+print(len(words))
 
-<span class="n">word_histo</span> <span class="o">=</span> <span class="n">histogram</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">word_histo</span><span class="p">)</span>
+word_histo = histogram(words)
+print(word_histo)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import the relevant libraries, see </span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># import the relevant libraries, see 
+import matplotlib.pyplot as plt
+import pandas as pd
 
-<span class="o">%</span><span class="k">matplotlib</span> inline
+%matplotlib inline
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+import pandas as pd
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="o">.</span><span class="n">from_dict</span><span class="p">(</span><span class="n">word_histo</span><span class="p">,</span> <span class="n">orient</span><span class="o">=</span><span class="s2">&quot;index&quot;</span><span class="p">)</span>
+df = pd.DataFrame.from_dict(word_histo, orient=&quot;index&quot;)
 
-<span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">color</span><span class="o">=</span><span class="s2">&quot;r&quot;</span><span class="p">)</span>
+df.plot.bar(color=&quot;r&quot;)
 </pre></div>
 </div>
 </div>
@@ -1014,32 +1023,32 @@ punctuation from the words, and converts them to lowercase.</p>
 <p>The next cell contains a collection of functions to read a file and build a histogram.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">process_file</span><span class="p">(</span><span class="n">filename</span> <span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;transforms the content of the given file into a dictionary of words </span>
-<span class="sd">    where the frequencies is counted</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def process_file(filename : str) -&gt; Dict:
+    &quot;&quot;&quot;transforms the content of the given file into a dictionary of words 
+    where the frequencies is counted
+    &quot;&quot;&quot;
     
-    <span class="n">word_histo</span> <span class="p">:</span> <span class="nb">dict</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
-    <span class="n">fp</span>  <span class="p">:</span> <span class="n">TextIO</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+    word_histo : dict = dict()
+    fp  : TextIO = open(filename)
     
-    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">fp</span><span class="p">:</span>
-        <span class="n">process_line</span><span class="p">(</span><span class="n">line</span><span class="p">,</span> <span class="n">word_histo</span><span class="p">)</span>
+    for line in fp:
+        process_line(line, word_histo)
         
-    <span class="k">return</span> <span class="n">word_histo</span>
+    return word_histo
 
-<span class="k">def</span> <span class="nf">process_line</span><span class="p">(</span><span class="n">line</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">histo</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;add the words of a single line, after preprocessing, to the dictionary</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+def process_line(line : str, histo : Dict) -&gt; Dict:
+    &quot;&quot;&quot;add the words of a single line, after preprocessing, to the dictionary
+    &quot;&quot;&quot;
     
-    <span class="n">line</span> <span class="o">=</span> <span class="n">line</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)</span>
+    line = line.replace(&#39;-&#39;, &#39; &#39;)
     
-    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="p">():</span>
-        <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="n">string</span><span class="o">.</span><span class="n">punctuation</span> <span class="o">+</span> <span class="n">string</span><span class="o">.</span><span class="n">whitespace</span><span class="p">)</span>
-        <span class="n">word</span> <span class="o">=</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
-        <span class="n">histo</span><span class="p">[</span><span class="n">word</span><span class="p">]</span> <span class="o">=</span> <span class="n">histo</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+    for word in line.split():
+        word = word.strip(string.punctuation + string.whitespace)
+        word = word.lower()
+        histo[word] = histo.get(word, 0) + 1
 
-<span class="n">hist</span> <span class="o">=</span> <span class="n">process_file</span><span class="p">(</span><span class="s1">&#39;emma.txt&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">hist</span><span class="p">)</span>
+hist = process_file(&#39;emma.txt&#39;)
+print(hist)
 </pre></div>
 </div>
 </div>
@@ -1052,13 +1061,13 @@ punctuation from the words, and converts them to lowercase.</p>
 <p>To count the total number of words in the file, we can add up the frequencies in the histogram.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">total_words</span><span class="p">(</span><span class="n">hist</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;counts the total number of words in the dictionary and thus original file</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def total_words(hist : Dict) -&gt; int:
+    &quot;&quot;&quot;counts the total number of words in the dictionary and thus original file
+    &quot;&quot;&quot;
     
-    <span class="k">return</span> <span class="nb">sum</span><span class="p">(</span><span class="n">hist</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+    return sum(hist.values())
 
-<span class="nb">print</span><span class="p">(</span><span class="n">total_words</span><span class="p">(</span><span class="n">hist</span><span class="p">))</span>
+print(total_words(hist))
 </pre></div>
 </div>
 </div>
@@ -1066,13 +1075,13 @@ punctuation from the words, and converts them to lowercase.</p>
 <p>The number of different words is just the number of items in the dictionary.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">different_words</span><span class="p">(</span><span class="n">hist</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;counts the number of distinct words in the dictionary and thus original file</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def different_words(hist : Dict) -&gt; int:
+    &quot;&quot;&quot;counts the number of distinct words in the dictionary and thus original file
+    &quot;&quot;&quot;
     
-    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">hist</span><span class="p">)</span>
+    return len(hist)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">different_words</span><span class="p">(</span><span class="n">hist</span><span class="p">))</span>
+print(different_words(hist))
 </pre></div>
 </div>
 </div>
@@ -1083,20 +1092,20 @@ punctuation from the words, and converts them to lowercase.</p>
 <p>To find the most common words, we can make a list of tuples, where each tuple contains a word and its frequency, and sort it.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>from typing import Tuple
 
-<span class="k">def</span> <span class="nf">most_common</span><span class="p">(</span><span class="n">hist</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;transforms the dictionary in a list and sorts the list on most values</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">frequencies</span> <span class="o">=</span> <span class="p">[]</span>
+def most_common(hist : Dict) -&gt; List[Tuple]:
+    &quot;&quot;&quot;transforms the dictionary in a list and sorts the list on most values
+    &quot;&quot;&quot;
+    frequencies = []
     
-    <span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">hist</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">frequencies</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">value</span><span class="p">,</span> <span class="n">key</span><span class="p">))</span>
+    for key, value in hist.items():
+        frequencies.append((value, key))
         
-    <span class="n">frequencies</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-    <span class="c1">#frequencies.sort()</span>
+    frequencies.sort(reverse=True)
+    #frequencies.sort()
     
-    <span class="k">return</span> <span class="n">frequencies</span>
+    return frequencies
 </pre></div>
 </div>
 </div>
@@ -1104,11 +1113,11 @@ punctuation from the words, and converts them to lowercase.</p>
 <p>In each tuple, the frequency appears first, so the resulting list is sorted by frequency.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">frequencies</span> <span class="o">=</span> <span class="n">most_common</span><span class="p">(</span><span class="n">hist</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The most common words are:&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>frequencies = most_common(hist)
+print(&#39;The most common words are:&#39;)
 
-<span class="k">for</span> <span class="n">freq</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">frequencies</span><span class="p">[:</span><span class="mi">10</span><span class="p">]:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+for freq, word in frequencies[:10]:
+    print(word, freq, sep=&#39;\t&#39;)
 </pre></div>
 </div>
 </div>
@@ -1124,14 +1133,14 @@ you can read about it at <a class="reference external" href="https://wiki.python
 <p>The next cell contains a function that prints the most common words in a histogram.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_most_common</span><span class="p">(</span><span class="n">hist</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">num</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;prints the top of the most common words, default number is 10</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">t</span> <span class="o">=</span> <span class="n">most_common</span><span class="p">(</span><span class="n">hist</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The most common words are:&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_most_common(hist : Dict, num : int = 10) -&gt; None:
+    &quot;&quot;&quot;prints the top of the most common words, default number is 10
+    &quot;&quot;&quot;
+    t = most_common(hist)
+    print(&#39;The most common words are:&#39;)
     
-    <span class="k">for</span> <span class="n">freq</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">t</span><span class="p">[:</span><span class="n">num</span><span class="p">]:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">freq</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\t</span><span class="s1">&#39;</span><span class="p">)</span>
+    for freq, word in t[:num]:
+        print(word, freq, sep=&#39;\t&#39;)
 </pre></div>
 </div>
 </div>
@@ -1140,7 +1149,7 @@ you can read about it at <a class="reference external" href="https://wiki.python
 <p>The default value of <code class="docutils literal notranslate"><span class="pre">num</span></code> is <code class="docutils literal notranslate"><span class="pre">10</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_most_common</span><span class="p">(</span><span class="n">hist</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print_most_common(hist, 5)
 </pre></div>
 </div>
 </div>
@@ -1148,7 +1157,7 @@ you can read about it at <a class="reference external" href="https://wiki.python
 <p><code class="docutils literal notranslate"><span class="pre">num</span></code> gets the default value, unless you provide a second argument.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_most_common</span><span class="p">(</span><span class="n">hist</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print_most_common(hist, 20)
 </pre></div>
 </div>
 </div>
@@ -1162,20 +1171,20 @@ you can read about it at <a class="reference external" href="https://wiki.python
 <p>To choose a random word from the histogram, the simplest algorithm is to build a list with multiple copies of each word, according to the observed frequency, and then choose from the list.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">random</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import random 
 
-<span class="k">def</span> <span class="nf">random_word</span><span class="p">(</span><span class="n">hist</span> <span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;chooses a random word from a dictionary</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">word_lst</span> <span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
+def random_word(hist : Dict) -&gt; str:
+    &quot;&quot;&quot;chooses a random word from a dictionary
+    &quot;&quot;&quot;
+    word_lst : List[str] = []
     
-    <span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">freq</span> <span class="ow">in</span> <span class="n">hist</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
-        <span class="n">word_lst</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">word</span><span class="p">]</span> <span class="o">*</span> <span class="n">freq</span><span class="p">)</span> <span class="c1"># the word is added to the list as often as the frequency</span>
+    for word, freq in hist.items():
+        word_lst.extend([word] * freq) # the word is added to the list as often as the frequency
     
-    <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word_lst</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">word_lst</span><span class="p">)</span>
+    print(len(word_lst))
+    return random.choice(word_lst)
 
-<span class="nb">print</span><span class="p">(</span><span class="n">random_word</span><span class="p">(</span><span class="n">hist</span><span class="p">))</span>
+print(random_word(hist))
 </pre></div>
 </div>
 </div>

@@ -709,7 +709,7 @@ Some values are 42, 42.0, and ‘Hello, Data Scientists!’.</p>
 the function <code class="docutils literal notranslate"><span class="pre">type</span></code> takes a value as argument and returns its corresponding type.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>type(42)
 </pre></div>
 </div>
 </div>
@@ -721,7 +721,7 @@ the function <code class="docutils literal notranslate"><span class="pre">type</
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mf">42.0</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>type(42.0)
 </pre></div>
 </div>
 </div>
@@ -733,7 +733,7 @@ the function <code class="docutils literal notranslate"><span class="pre">type</
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;Hello Data Scientists!&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>type(&#39;Hello Data Scientists!&#39;)
 </pre></div>
 </div>
 </div>
@@ -746,7 +746,7 @@ the function <code class="docutils literal notranslate"><span class="pre">type</
 <p>Observe the difference between <code class="docutils literal notranslate"><span class="pre">type(42)</span></code> and <code class="docutils literal notranslate"><span class="pre">type('42')</span></code>!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="s1">&#39;42&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>type(&#39;42&#39;)
 </pre></div>
 </div>
 </div>
@@ -763,7 +763,7 @@ the function <code class="docutils literal notranslate"><span class="pre">type</
 <p>A value all by itself is considered an expression, and so is a variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">42</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>42
 </pre></div>
 </div>
 </div>
@@ -775,8 +775,8 @@ the function <code class="docutils literal notranslate"><span class="pre">type</
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">17</span>
-<span class="n">n</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n = 17
+n
 </pre></div>
 </div>
 </div>
@@ -788,8 +788,8 @@ the function <code class="docutils literal notranslate"><span class="pre">type</
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="mi">27</span>
-<span class="n">m</span> <span class="o">+</span> <span class="mi">25</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>m = 27
+m + 25
 </pre></div>
 </div>
 </div>
@@ -801,8 +801,8 @@ the function <code class="docutils literal notranslate"><span class="pre">type</
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k</span> <span class="o">=</span> <span class="mi">9</span>
-<span class="n">k</span> <span class="o">*</span> <span class="mi">37</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>k = 9
+k * 37
 </pre></div>
 </div>
 </div>
@@ -819,14 +819,14 @@ it calculates the value of the expression and displays it.</p>
 <p>On the other hand, a <strong>statement</strong> is an instruction that has an effect, like creating a variable or displaying a value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="mi">17</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>n = 17
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(n)
 </pre></div>
 </div>
 </div>
@@ -856,16 +856,16 @@ The latter can be done via an assignment statement.
 An <strong>assignment statement</strong> creates a new variable with a given name and assigns it a value.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">magicnumber</span> <span class="o">=</span> <span class="mi">40</span> <span class="o">+</span> <span class="mi">2</span>    
-<span class="n">pi</span> <span class="o">=</span> <span class="mf">3.141592653589793</span>  
-<span class="n">message</span> <span class="o">=</span> <span class="s1">&#39;Data is eating the world&#39;</span>  
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>magicnumber = 40 + 2    
+pi = 3.141592653589793  
+message = &#39;Data is eating the world&#39;  
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">magicnumber</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(magicnumber)
 </pre></div>
 </div>
 </div>
@@ -889,10 +889,10 @@ In this way, they document what the variable is used for.</p>
 </aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can add type hints to your variables too</span>
-<span class="n">magicnumber</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">40</span> <span class="o">+</span> <span class="mi">2</span>   <span class="c1"># An integer</span>
-<span class="n">pi</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">3.141592653589793</span> <span class="c1"># A float</span>
-<span class="n">message</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Data is eating the world&#39;</span> <span class="c1"># A string</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># You can add type hints to your variables too
+magicnumber: int = 40 + 2   # An integer
+pi: float = 3.141592653589793 # A float
+message: str = &#39;Data is eating the world&#39; # A string
 </pre></div>
 </div>
 </div>
@@ -903,7 +903,7 @@ In this way, they document what the variable is used for.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -914,7 +914,7 @@ In this way, they document what the variable is used for.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -922,14 +922,14 @@ In this way, they document what the variable is used for.</p>
 <p>Beware that there is no checking of types (<em>type checking</em>) in Python, so a variable to which you have assigned an integer may be re-used as a float, even if we provide <em>type-hints</em>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">magicnumber</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">40</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1"># An integer </span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">magicnumber</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>magicnumber: int = 40 + 2 # An integer 
+print(type(magicnumber))
 
-<span class="n">magicnumber</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mf">3.141592653589793</span> <span class="c1"># A float</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">magicnumber</span><span class="p">))</span>
+magicnumber: int = 3.141592653589793 # A float
+print(type(magicnumber))
 
-<span class="n">magicnumber</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="s2">&quot;Hello&quot;</span> <span class="c1"># A string</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">magicnumber</span><span class="p">))</span>
+magicnumber: int = &quot;Hello&quot; # A string
+print(type(magicnumber))
 </pre></div>
 </div>
 </div>
@@ -964,7 +964,7 @@ If you are developing software in a team, which will be very likely in the futur
 <p>By choosing the right variables names you make the code self-documenting, what is better the variable <code class="docutils literal notranslate"><span class="pre">v</span></code> or <code class="docutils literal notranslate"><span class="pre">velocity</span></code>?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">velocity</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span> <span class="c1"># in meters/second.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>velocity: int = 5 # in meters/second.
 </pre></div>
 </div>
 </div>
@@ -972,12 +972,12 @@ If you are developing software in a team, which will be very likely in the futur
 <p>The following are examples of invalid variable names.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">99</span><span class="n">ballons</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Nena&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>99ballons: str = &#39;Nena&#39;
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="g g-Whitespace">    </span><span class="mi">99</span><span class="n">ballons</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;Nena&#39;</span>
       <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -1016,16 +1016,16 @@ Python 3 has the following keywords:</p>
 <p><code class="docutils literal notranslate"><span class="pre">except</span></code> <code class="docutils literal notranslate"><span class="pre">in</span></code> <code class="docutils literal notranslate"><span class="pre">raise</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Wrong variable name</span>
-<span class="k">while</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;while&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Wrong variable name
+while: str = &#39;while&#39;
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Correct variable name</span>
-<span class="n">while_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;while&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Correct variable name
+while_name: str = &#39;while&#39;
 </pre></div>
 </div>
 </div>
@@ -1038,11 +1038,11 @@ This process is called <strong>reassignment</strong>.
 As soon as you assign a value to a variable, the old value is lost.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>x: int = 42
+print(x)
 
-<span class="n">x</span> <span class="o">=</span> <span class="mi">43</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+x = 43
+print(x)
 </pre></div>
 </div>
 </div>
@@ -1050,16 +1050,16 @@ As soon as you assign a value to a variable, the old value is lost.</p>
 <p>The assignment of a variable to another variable, for instance <code class="docutils literal notranslate"><span class="pre">b</span> <span class="pre">=</span> <span class="pre">a</span></code> does not imply that if <code class="docutils literal notranslate"><span class="pre">a</span></code> is reassigned then <code class="docutils literal notranslate"><span class="pre">b</span></code> changes as well.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="n">b</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">a</span> <span class="c1"># a and b have now the same value</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>a: int = 42
+b: int = a # a and b have now the same value
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;a =&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;b =&#39;</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+print(&#39;a =&#39;, a)
+print(&#39;b =&#39;, b)
 
-<span class="n">a</span> <span class="o">=</span> <span class="mi">43</span> <span class="c1"># a and b are no longer equal</span>
+a = 43 # a and b are no longer equal
 
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+print(a)
+print(b)
 </pre></div>
 </div>
 </div>
@@ -1085,7 +1085,7 @@ As pointed out earlier, the type of the reassigned value does not need to have t
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1096,10 +1096,10 @@ As pointed out earlier, the type of the reassigned value does not need to have t
 <p>A frequently used reassignment is for <strong>updating</strong> puposes: the value of a variable depends on the previous value of the variable.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(x)
+x = x + 1
 
-<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+print(x)
 </pre></div>
 </div>
 </div>
@@ -1108,8 +1108,8 @@ As pointed out earlier, the type of the reassigned value does not need to have t
 <p>Beware, that the variable should be initialized first, usually with a simple assignment.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y = y + 1
+print(y)
 </pre></div>
 </div>
 </div>
@@ -1120,16 +1120,16 @@ As pointed out earlier, the type of the reassigned value does not need to have t
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">y</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>   <span class="c1"># integer</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>y: int = 0   # integer
+y = y + 1
+print(y)
 </pre></div>
 </div>
 </div>
@@ -1137,17 +1137,17 @@ As pointed out earlier, the type of the reassigned value does not need to have t
 <p>Updating a variable by adding <code class="docutils literal notranslate"><span class="pre">1</span></code> is called an <strong>increment</strong>; subtracting <code class="docutils literal notranslate"><span class="pre">1</span></code> is called a <strong>decrement</strong>. A shorthand way of doing is using <code class="docutils literal notranslate"><span class="pre">+=</span></code> and <code class="docutils literal notranslate"><span class="pre">-=</span></code>, which stands for <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">...</span></code> and <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">-</span> <span class="pre">...</span></code> respectively.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">0</span>    <span class="c1"># integer</span>
-<span class="n">z</span> <span class="o">+=</span> <span class="mi">100</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>z: int = 0    # integer
+z += 100
+print(z)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">-=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>z -= 1
+print(z)
 </pre></div>
 </div>
 </div>
@@ -1173,66 +1173,66 @@ The acronym PEMDAS is a useful way to remember the rules:</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parentheses 1</span>
-<span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Parentheses 1
+2 * (3 - 1) 
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Parentheses 2</span>
-<span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span><span class="o">**</span><span class="p">(</span><span class="mi">5</span> <span class="o">-</span> <span class="mi">2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Parentheses 2
+(1 + 1)**(5 - 2)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exponentiation 1</span>
-<span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="o">**</span><span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Exponentiation 1
+1 + 2**3
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Exponentiation 2</span>
-<span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span><span class="o">**</span><span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Exponentiation 2
+2 * 3**2
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># MDAS 1</span>
-<span class="mi">2</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">-</span> <span class="mi">1</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># MDAS 1
+2 * 3 - 1
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># MDAS 2</span>
-<span class="mi">6</span> <span class="o">+</span> <span class="mi">4</span> <span class="o">/</span> <span class="mi">2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># MDAS 2
+6 + 4 / 2
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Same precedence 1</span>
-<span class="n">degrees</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">180</span>
-<span class="n">pi</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">3.141592653589793</span>
-<span class="n">degrees</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Same precedence 1
+degrees: int = 180
+pi: float = 3.141592653589793
+degrees / 2 * pi
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Same precedence 2</span>
-<span class="n">degrees</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">pi</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Same precedence 2
+degrees / 2 / pi
 </pre></div>
 </div>
 </div>
@@ -1246,8 +1246,8 @@ You might want to know how long that is in hours.</p>
 <p>Conventional division returns a floating-point number.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minutes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">555</span>
-<span class="n">minutes</span> <span class="o">/</span> <span class="mi">60</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>minutes: int = 555
+minutes / 60
 </pre></div>
 </div>
 </div>
@@ -1256,9 +1256,9 @@ You might want to know how long that is in hours.</p>
 Floor division returns the integer number of hours, dropping the fraction part.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">minutes</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">555</span>
-<span class="n">hours</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">minutes</span> <span class="o">//</span> <span class="mi">60</span>
-<span class="n">hours</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>minutes: int = 555
+hours: int = minutes // 60
+hours
 </pre></div>
 </div>
 </div>
@@ -1270,8 +1270,8 @@ Floor division returns the integer number of hours, dropping the fraction part.<
 <p>The <strong>modulus operator</strong> <code class="docutils literal notranslate"><span class="pre">%</span></code> works on integer values. It computes the remainder when dividing the first integer by the second one.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">remainder</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">minutes</span> <span class="o">%</span> <span class="mi">60</span>
-<span class="n">remainder</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>remainder: int = minutes % 60
+remainder
 </pre></div>
 </div>
 </div>
@@ -1284,7 +1284,7 @@ Floor division returns the integer number of hours, dropping the fraction part.<
 <p>In general, you cannot perform mathematical operations on strings, even if the strings look like numbers, so the following operations are illegal: <code class="docutils literal notranslate"><span class="pre">'2'-'1'</span></code> <code class="docutils literal notranslate"><span class="pre">'eggs'/'easy'</span></code> <code class="docutils literal notranslate"><span class="pre">'third'*'a</span> <span class="pre">charm'</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;2&#39;</span> <span class="o">-</span> <span class="s1">&#39;1&#39;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&#39;2&#39; - &#39;1&#39;
 </pre></div>
 </div>
 </div>
@@ -1303,10 +1303,10 @@ Floor division returns the integer number of hours, dropping the fraction part.<
 <p>The <code class="docutils literal notranslate"><span class="pre">+</span></code> operator performs string concatenation, which means it joins the strings by linking them end-to-end.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;data&#39;</span>
-<span class="n">second</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span>
-<span class="n">third</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s1">&#39;science&#39;</span>
-<span class="n">first</span> <span class="o">+</span> <span class="p">((</span><span class="n">second</span><span class="p">)</span> <span class="o">+</span> <span class="n">third</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>first: str = &#39;data&#39;
+second: str = &#39; &#39;
+third: str = &#39;science&#39;
+first + ((second) + third)
 </pre></div>
 </div>
 </div>
@@ -1319,7 +1319,7 @@ Floor division returns the integer number of hours, dropping the fraction part.<
 <p>The <code class="docutils literal notranslate"><span class="pre">*</span></code> operator also works on strings; it performs repetition.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="s1">&#39;Data&#39;</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span><span class="p">)</span> <span class="o">*</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>(&#39;Data&#39; + &#39; &#39;) * 3
 </pre></div>
 </div>
 </div>
@@ -1335,11 +1335,11 @@ Floor division returns the integer number of hours, dropping the fraction part.<
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">arriba</span> <span class="o">=</span> <span class="s2">&quot;Arriba&quot;</span>
-<span class="n">andale</span> <span class="o">=</span> <span class="s2">&quot;Andale&quot;</span>
-<span class="n">yepa</span> <span class="o">=</span> <span class="s2">&quot;Yepa&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>arriba = &quot;Arriba&quot;
+andale = &quot;Andale&quot;
+yepa = &quot;Yepa&quot;
 
-<span class="c1"># Remove this line and add your code here</span>
+# Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1354,8 +1354,8 @@ Once the user types the value and presses <code class="docutils literal notransl
 <p>Try it out!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">inp</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-<span class="n">inp</span> <span class="o">*</span> <span class="mi">3</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>inp = input()
+inp * 3
 </pre></div>
 </div>
 </div>
@@ -1385,8 +1385,8 @@ Once the user types the value and presses <code class="docutils literal notransl
 </aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">food</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your favourite food? </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;I love &#39;</span> <span class="o">+</span> <span class="n">food</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>food = input(&#39;What is your favourite food? \n&#39;)
+print(&#39;I love &#39; + food)
 </pre></div>
 </div>
 </div>
@@ -1403,9 +1403,9 @@ To do so, you use the functions <code class="docutils literal notranslate"><span
 But be careful, the user might introduce a value that cannot be converted to the type you required.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">age</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s1">&#39;What is your age? &#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">age</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>age = input(&#39;What is your age? &#39;)
+print(int(age))
+print(float(age))
 </pre></div>
 </div>
 </div>
@@ -1423,7 +1423,7 @@ But be careful, the user might introduce a value that cannot be converted to the
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>

@@ -659,8 +659,8 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 <p>The following cell shows the class definition for <code class="docutils literal notranslate"><span class="pre">Point</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a point in 2-D space.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Point:
+    &quot;&quot;&quot;Represents a point in 2-D space.&quot;&quot;&quot;
 </pre></div>
 </div>
 </div>
@@ -672,7 +672,7 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -682,7 +682,7 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 <p>Defining a class named <code class="docutils literal notranslate"><span class="pre">Point</span></code> creates a <strong>class object</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Point</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Point
 </pre></div>
 </div>
 </div>
@@ -697,13 +697,13 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 <p>To create a Point, you call <code class="docutils literal notranslate"><span class="pre">Point</span></code> as if it were a function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pnt</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
-<span class="n">pnt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pnt = Point()
+pnt
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7f55b66c8d90&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Point at 0x7fb678a7f910&gt;
 </pre></div>
 </div>
 </div>
@@ -718,7 +718,7 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -730,8 +730,8 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 <p>The next step is to assign values to an instance of the class <code class="docutils literal notranslate"><span class="pre">Point</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pnt</span><span class="o">.</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">3.0</span>
-<span class="n">pnt</span><span class="o">.</span><span class="n">y</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">4.0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pnt.x : float = 3.0
+pnt.y : float = 4.0
 </pre></div>
 </div>
 </div>
@@ -765,7 +765,7 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 </aside>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pnt</span><span class="o">.</span><span class="n">z</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">5.0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>pnt.z : float = 5.0
 </pre></div>
 </div>
 </div>
@@ -776,7 +776,7 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -784,11 +784,11 @@ units to the right and <span class="math notranslate nohighlight">\(y\)</span> u
 <p>You can read the value of an attribute using the same syntax.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;x =&#39;</span><span class="p">,</span> <span class="n">pnt</span><span class="o">.</span><span class="n">x</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&#39;x =&#39;, pnt.x)
 
-<span class="n">y</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">pnt</span><span class="o">.</span><span class="n">y</span>
+y : float = pnt.y
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;y =&#39;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+print(&#39;y =&#39;, y)
 </pre></div>
 </div>
 </div>
@@ -807,7 +807,7 @@ they live in 2 different worlds.</p>
 <p>You can use dot notation as part of any expression, as we can see in the cells below.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;(</span><span class="si">%g</span><span class="s1">, </span><span class="si">%g</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pnt</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">pnt</span><span class="o">.</span><span class="n">y</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>&#39;(%g, %g)&#39; % (pnt.x, pnt.y)
 </pre></div>
 </div>
 </div>
@@ -819,10 +819,10 @@ they live in 2 different worlds.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">math</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import math
 
-<span class="n">distance</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">pnt</span><span class="o">.</span><span class="n">x</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">pnt</span><span class="o">.</span><span class="n">y</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">distance</span>
+distance : float = math.sqrt(pnt.x**2 + pnt.y**2)
+distance
 </pre></div>
 </div>
 </div>
@@ -838,12 +838,12 @@ they live in 2 different worlds.</p>
 <p>The argument of the function has the type <code class="docutils literal notranslate"><span class="pre">Point</span></code>, the <em>type-hints</em> are very important to really document and understand the function.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_point</span><span class="p">(</span><span class="n">p</span> <span class="p">:</span> <span class="n">Point</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;prints a point object</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;(</span><span class="si">%g</span><span class="s1">, </span><span class="si">%g</span><span class="s1">)&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">x</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">y</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def print_point(p : Point) -&gt; None:
+    &quot;&quot;&quot;prints a point object
+    &quot;&quot;&quot;
+    print(&#39;(%g, %g)&#39; % (p.x, p.y))
     
-<span class="n">print_point</span><span class="p">(</span><span class="n">pnt</span><span class="p">)</span>
+print_point(pnt)
 </pre></div>
 </div>
 </div>
@@ -860,7 +860,7 @@ they live in 2 different worlds.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -876,14 +876,14 @@ init, and then two more underscores).</p>
 <p>An <code class="docutils literal notranslate"><span class="pre">init</span></code> method for the <code class="docutils literal notranslate"><span class="pre">Point</span></code> class is shown in the next cell.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Point</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a point in 2-D space.&quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Point:
+    &quot;&quot;&quot;Represents a point in 2-D space.&quot;&quot;&quot;
     
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Point object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">x</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">y</span> <span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">y</span>
+    def __init__(self, x=0, y=0):
+        &quot;&quot;&quot; creates a new Point object and initializes it
+        &quot;&quot;&quot;
+        self.x : int = x
+        self.y : int = y
 </pre></div>
 </div>
 </div>
@@ -903,19 +903,19 @@ init, and then two more underscores).</p>
 <p>At this point it is hard to say whether one is better than the other, so we will implement the first case, just as an example, so the combination of one corner with width and height.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Rectangle</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;Represents a rectangle.</span>
-<span class="sd">    </span>
-<span class="sd">    attributes: width, height, corner.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>class Rectangle:
+    &quot;&quot;&quot;Represents a rectangle.
+    
+    attributes: width, height, corner.
+    &quot;&quot;&quot;
     
         
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">w</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">h</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot; creates a new Point object and initializes it</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">width</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">w</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">height</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">h</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">corner</span> <span class="p">:</span> <span class="n">Point</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+    def __init__(self, w=0, h=0, x=0, y=0):
+        &quot;&quot;&quot; creates a new Point object and initializes it
+        &quot;&quot;&quot;
+        self.width : float = w
+        self.height : float = h
+        self.corner : Point(x,y)
 </pre></div>
 </div>
 </div>
@@ -934,7 +934,7 @@ init, and then two more underscores).</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -942,12 +942,12 @@ init, and then two more underscores).</p>
 <p>To represent a rectangle, you have to instantiate a Rectangle object and assign values to the attributes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box</span> <span class="p">:</span> <span class="n">Rectangle</span> <span class="o">=</span> <span class="n">Rectangle</span><span class="p">(</span><span class="mf">100.0</span><span class="p">,</span> <span class="mf">100.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">box</span><span class="o">.</span><span class="n">width</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">100.0</span>
-<span class="n">box</span><span class="o">.</span><span class="n">height</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">200.0</span>
-<span class="n">box</span><span class="o">.</span><span class="n">corner</span> <span class="p">:</span> <span class="n">Point</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
-<span class="n">box</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
-<span class="n">box</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">y</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>box : Rectangle = Rectangle(100.0, 100.0, 0, 0)
+box.width : float = 100.0
+box.height : float = 200.0
+box.corner : Point = Point()
+box.corner.x : float = 0.0
+box.corner.y : float = 0.0
 </pre></div>
 </div>
 </div>
@@ -987,7 +987,7 @@ init, and then two more underscores).</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1000,7 +1000,7 @@ init, and then two more underscores).</p>
 <p>Class <code class="docutils literal notranslate"><span class="pre">object</span></code> has the following <em>attributes</em> (attributes are elements inside a class that refer to methods, functions, variables, or even other classes).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="nb">object</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dir(object)
 </pre></div>
 </div>
 </div>
@@ -1034,7 +1034,7 @@ init, and then two more underscores).</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>dir(Rectangle)
 </pre></div>
 </div>
 </div>
@@ -1073,7 +1073,7 @@ init, and then two more underscores).</p>
 <p>We can even get <em>help</em> on our <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code> class.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">Rectangle</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>help(Rectangle)
 </pre></div>
 </div>
 </div>
@@ -1110,7 +1110,7 @@ class Rectangle(builtins.object)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1123,14 +1123,14 @@ class Rectangle(builtins.object)
 and returns a <code class="docutils literal notranslate"><span class="pre">Point</span></code> that contains the coordinates of the center of the Rectangle.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">find_center</span><span class="p">(</span><span class="n">rect</span> <span class="p">:</span> <span class="n">Rectangle</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Point</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;calculates the center of a rectangle</span>
-<span class="sd">    &quot;&quot;&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def find_center(rect : Rectangle) -&gt; Point:
+    &quot;&quot;&quot;calculates the center of a rectangle
+    &quot;&quot;&quot;
     
-    <span class="n">p</span> <span class="p">:</span> <span class="n">Point</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">x</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span>
-    <span class="n">p</span><span class="o">.</span><span class="n">y</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="n">rect</span><span class="o">.</span><span class="n">corner</span><span class="o">.</span><span class="n">y</span> <span class="o">+</span> <span class="n">rect</span><span class="o">.</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span>
-    <span class="k">return</span> <span class="n">p</span>
+    p : Point = Point()
+    p.x : float = rect.corner.x + rect.width/2
+    p.y : float = rect.corner.y + rect.height/2
+    return p
 </pre></div>
 </div>
 </div>
@@ -1138,8 +1138,8 @@ and returns a <code class="docutils literal notranslate"><span class="pre">Point
 <p>Here is an example that passes <code class="docutils literal notranslate"><span class="pre">box</span></code> as an argument and assigns the resulting <code class="docutils literal notranslate"><span class="pre">Point</span></code> to center.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">center</span> <span class="p">:</span> <span class="n">Point</span> <span class="o">=</span> <span class="n">find_center</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
-<span class="n">print_point</span><span class="p">(</span><span class="n">center</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>center : Point = find_center(box)
+print_point(center)
 </pre></div>
 </div>
 </div>
@@ -1155,7 +1155,7 @@ and returns a <code class="docutils literal notranslate"><span class="pre">Point
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1168,8 +1168,8 @@ and returns a <code class="docutils literal notranslate"><span class="pre">Point
 <p>In the cell below, the <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> are adapted.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box</span><span class="o">.</span><span class="n">width</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">width</span> <span class="o">+</span> <span class="mi">50</span>
-<span class="n">box</span><span class="o">.</span><span class="n">height</span> <span class="o">=</span> <span class="n">box</span><span class="o">.</span><span class="n">height</span> <span class="o">+</span> <span class="mi">100</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>box.width = box.width + 50
+box.height = box.height + 100
 </pre></div>
 </div>
 </div>
@@ -1180,11 +1180,11 @@ and returns a <code class="docutils literal notranslate"><span class="pre">Point
 <code class="docutils literal notranslate"><span class="pre">width</span></code> and <code class="docutils literal notranslate"><span class="pre">height</span></code> of the rectangle.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">grow_rectangle</span><span class="p">(</span><span class="n">rect</span> <span class="p">:</span> <span class="n">Rectangle</span><span class="p">,</span> <span class="n">dwidth</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">dheight</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;increases the size of the rectangle</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">rect</span><span class="o">.</span><span class="n">width</span> <span class="o">+=</span> <span class="n">dwidth</span>
-    <span class="n">rect</span><span class="o">.</span><span class="n">height</span> <span class="o">+=</span> <span class="n">dheight</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>def grow_rectangle(rect : Rectangle, dwidth : int, dheight : int) -&gt; None:
+    &quot;&quot;&quot;increases the size of the rectangle
+    &quot;&quot;&quot;
+    rect.width += dwidth
+    rect.height += dheight
 </pre></div>
 </div>
 </div>
@@ -1192,12 +1192,12 @@ and returns a <code class="docutils literal notranslate"><span class="pre">Point
 <p>The next cell shows how to use this function and demonstrates its effect.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;width = &#39;</span><span class="p">,</span> <span class="n">box</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;height = &#39;</span><span class="p">,</span> <span class="n">box</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print(&#39;width = &#39;, box.width)
+print(&#39;height = &#39;, box.height)
 
-<span class="n">grow_rectangle</span><span class="p">(</span><span class="n">box</span><span class="p">,</span> <span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;width = &#39;</span><span class="p">,</span> <span class="n">box</span><span class="o">.</span><span class="n">width</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;height = &#39;</span><span class="p">,</span> <span class="n">box</span><span class="o">.</span><span class="n">height</span><span class="p">)</span>
+grow_rectangle(box, 50, 100)
+print(&#39;width = &#39;, box.width)
+print(&#39;height = &#39;, box.height)
 </pre></div>
 </div>
 </div>
@@ -1218,7 +1218,7 @@ changes as well.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
@@ -1234,12 +1234,12 @@ refer to a given object and being changed unindented.</p>
 called <code class="docutils literal notranslate"><span class="pre">copy</span></code> that can duplicate any object.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="p">:</span> <span class="n">Point</span> <span class="o">=</span> <span class="n">Point</span><span class="p">()</span>
-<span class="n">p1</span><span class="o">.</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">3.0</span>
-<span class="n">p1</span><span class="o">.</span><span class="n">y</span> <span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">4.0</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p1 : Point = Point()
+p1.x : float = 3.0
+p1.y : float = 4.0
 
-<span class="kn">import</span> <span class="nn">copy</span>
-<span class="n">p2</span> <span class="p">:</span> <span class="n">Point</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+import copy
+p2 : Point = copy.copy(p1)
 </pre></div>
 </div>
 </div>
@@ -1247,10 +1247,10 @@ called <code class="docutils literal notranslate"><span class="pre">copy</span><
 <p><code class="docutils literal notranslate"><span class="pre">p1</span></code> and <code class="docutils literal notranslate"><span class="pre">p2</span></code> contain the same data, but are different objects.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">print_point</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
-<span class="n">print_point</span><span class="p">(</span><span class="n">p2</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>print_point(p1)
+print_point(p2)
 
-<span class="n">p1</span> <span class="ow">is</span> <span class="n">p2</span>
+p1 is p2
 </pre></div>
 </div>
 </div>
@@ -1271,7 +1271,7 @@ programmer-defined types the <code class="docutils literal notranslate"><span cl
 same data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p1</span> <span class="o">==</span> <span class="n">p2</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>p1 == p2
 </pre></div>
 </div>
 </div>
@@ -1284,8 +1284,8 @@ same data.</p>
 <p>If you use <code class="docutils literal notranslate"><span class="pre">copy.copy</span></code> to duplicate a <code class="docutils literal notranslate"><span class="pre">Rectangle</span></code>, you will find that it copies the Rectangle object but not the embedded Point.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box2</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">copy</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
-<span class="n">box2</span> <span class="ow">is</span> <span class="n">box</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>box2 = copy.copy(box)
+box2 is box
 </pre></div>
 </div>
 </div>
@@ -1297,7 +1297,7 @@ same data.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box2</span><span class="o">.</span><span class="n">corner</span> <span class="ow">is</span> <span class="n">box</span><span class="o">.</span><span class="n">corner</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>box2.corner is box.corner
 </pre></div>
 </div>
 </div>
@@ -1351,8 +1351,8 @@ objects.</p>
 <p>In order to do that you need to use the <code class="docutils literal notranslate"><span class="pre">copy.deepcopy</span></code> function, this function implements the <strong>deep copy</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box3</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">box</span><span class="p">)</span>
-<span class="n">box3</span> <span class="ow">is</span> <span class="n">box</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>box3 = copy.deepcopy(box)
+box3 is box
 </pre></div>
 </div>
 </div>
@@ -1364,7 +1364,7 @@ objects.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">box3</span><span class="o">.</span><span class="n">corner</span> <span class="ow">is</span> <span class="n">box</span><span class="o">.</span><span class="n">corner</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>box3.corner is box.corner
 </pre></div>
 </div>
 </div>
@@ -1376,12 +1376,12 @@ objects.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nd">@Mark</span><span class="p">:</span> <span class="n">make</span> <span class="n">a</span> <span class="n">view</span> <span class="n">cells</span> <span class="n">on</span> <span class="n">the</span> <span class="n">effect</span> <span class="n">of</span> <span class="n">changing</span> <span class="n">copies</span><span class="o">.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>@Mark: make a view cells on the effect of changing copies.
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">37</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span>  <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">37</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
     <span class="nd">@Mark</span><span class="p">:</span> <span class="n">make</span> <span class="n">a</span> <span class="n">view</span> <span class="n">cells</span> <span class="n">on</span> <span class="n">the</span> <span class="n">effect</span> <span class="n">of</span> <span class="n">changing</span> <span class="n">copies</span><span class="o">.</span>
          <span class="o">^</span>
 <span class="ne">SyntaxError</span>: invalid syntax
@@ -1395,7 +1395,7 @@ objects.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Remove this line and add your code here</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Remove this line and add your code here
 </pre></div>
 </div>
 </div>
